@@ -7,158 +7,48 @@
 </view>
 <view class='cate_content'>
   <scroll-view scroll-y="true" scroll-top="0" class='cate_left'>
-    <view class='cate_text'>
-      <text>品质方案</text>
+    <view class='cate_text {{index==idx?"active":"_active"}}' wx:for='{{firstCate}}' wx:key='{{item.id}}' bindtap='selectCate' data-index="{{index}}" data-cate-id="{{item.id}}">
+      <text class=''>{{item.type_name}}</text>
     </view>
-    <view class='cate_text'>
-      <text>品质方案</text>
-    </view>
-    <view class='cate_text'>
-      <text>品质方案</text>
-    </view>
-    <view class='cate_text'>
-      <text>品质方案</text>
-    </view>
-    <view class='cate_text'>
-      <text>品质方案</text>
-    </view>
-    <view class='cate_text'>
-      <text>品质方案</text>
-    </view>
-    <view class='cate_text'>
-      <text>品质方案</text>
-    </view>
-    <view class='cate_text'>
-      <text>品质方案</text>
-    </view>
-    <view class='cate_text'>
-      <text>品质方案</text>
-    </view>
+    
   </scroll-view>
   <scroll-view scroll-y="true" scroll-top="0" class='cate_right'>
     <view class='image'>
       <image src='images/cate.jpg' style='height:200rpx;width:500rpx'></image>
     </view>
-    <view class='wai'>
-    <view class='cate_two'>
-      <view><text class='cate_title'>品质方案</text></view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-    </view>
-    </view>
-
-    <view class='wai'>
-    <view class='cate_two'>
-      <view><text class='cate_title'>品质方案</text></view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-    </view>
+    <view class='wai' wx:for='{{secondCate}}' wx:key='{{item.id}}'>
+      <view class='cate_two'>
+        <view><text class='cate_title'>{{item.type_name}}</text></view>
+          <view class='cate_three' >
+            <image class='cate_banner' src='images/three.png'></image>
+            <view class='cate_three_title'>品质方案</view>
+          </view>
+          <view class='cate_three' >
+            <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
+            <view class='cate_three_title'>品质方案</view>
+          </view>
+          <view class='cate_three' >
+            <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
+            <view class='cate_three_title'>品质方案</view>
+          </view>
+          <view class='cate_three' >
+            <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
+            <view class='cate_three_title'>品质方案</view>
+          </view>
+          <view class='cate_three' >
+            <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
+            <view class='cate_three_title'>品质方案</view>
+          </view>
+          <view class='cate_three' >
+            <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
+            <view class='cate_three_title'>品质方案</view>
+          </view>
+          <view class='cate_three' >
+            <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
+            <view class='cate_three_title'>品质方案</view>
+          </view>
+      </view>
     </view>
 
-    <view class='wai'>
-    <view class='cate_two'>
-      <view><text class='cate_title'>品质方案</text></view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-        <view class='cate_three' >
-          <image style='width:166rpx;height:166rpx;'  src='images/three.png'></image>
-          <view class='cate_three_title'>品质方案</view>
-        </view>
-    </view>
-    </view>  
   </scroll-view>
 </view>
