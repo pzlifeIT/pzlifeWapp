@@ -1,1 +1,147 @@
 /* pages/my/my.wxss */
+
+page {
+    background-color: #f7f7f7;
+}
+
+.userheader {
+    position: relative;
+    height: 240rpx;
+}
+
+.userBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.headPhoto {
+    width: 116rpx;
+    height: 116rpx;
+    margin: 62rpx 20rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.headPhoto image {
+    width: 100%;
+    height: 100%;
+}
+
+.userLogin {
+    line-height: 40rpx;
+    font-size: 32rpx;
+    margin: 100rpx auto;
+    color: #fff;
+}
+
+.userCost {
+    width: 100%;
+    height: 140rpx;
+    background-color: #fff;
+}
+
+.userCoupon,
+.userIntegral,
+.userMoney {
+    display: inline-block;
+    float: left;
+    width: 250rpx;
+    height: 140rpx;
+}
+
+.ucIcon {
+    display: inline-block;
+    float: left;
+    width: 40rpx;
+    height: 40rpx;
+    margin: 20rpx 105rpx 15rpx;
+}
+
+.userText {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    font-size: 26rpx;
+    color: #404040;
+    text-align: center;
+}
+
+.userorder {
+    width: 750rpx;
+    margin: 10rpx 0;
+    background-color: #fff;
+}
+
+.uoHeader {
+    width: 100%;
+    height: 68rpx;
+    line-height: 68rpx;
+}
+
+.uoHeaderText {
+    margin-left: 10rpx;
+    color: #202020;
+    font-size: 28rpx;
+}
+
+.uoHeaderLook {
+    color: #b6b6b6;
+    font-size: 24rpx;
+}
+
+.uoimg {
+    width: 13rpx;
+    height: 23rpx;
+    margin: 22.5rpx 10rpx;
+}
+
+.uoList {
+    width: 100%;
+    overflow: auto;
+}
+
+.uoLi {
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    width: 250rpx;
+    height: 169rpx;
+    border-top: 1px solid #f7f7f7;
+    border-right: 1px solid #f7f7f7;
+}
+
+.uoIcon {
+    display: inline-block;
+    float: left;
+    width: 68rpx;
+    height: 58rpx;
+    margin: 33rpx 84rpx 15rpx;
+}
+
+.nobr {
+    border-right: none;
+}
+
+.userFnLi {
+    width: 750rpx;
+    height: 80rpx;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.userFnLi text {
+    line-height: 80rpx;
+    margin-left: 10rpx;
+    font-size: 28rpx;
+    color: #202020;
+}
+
+.ulimg {
+    width: 13rpx;
+    height: 23rpx;
+    margin: 28.5rpx 10rpx;
+}
