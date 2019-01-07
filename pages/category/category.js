@@ -1,18 +1,48 @@
 // pages/category/category.js
+const url = require("../../config.js").url;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    category:"",
+    firstCate:[],
+    secondCate:[],
+    thirdCate:{
+      "title":"",
+      "image":""
+    }
   },
 
+  listenCategory:function(e){
+    this.data.category = e.detail.value;
+  },
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+      wx.request({
+        url: url+'index/category/getfirstcate',
+        method:"post",
+        data:{},
+        header:{
+          'content-type':'application/json'
+        },
+        dataType:'json',
+        success(res){
+          
+        var first = res.data
+        that.setData({
+          firstCate:first
+          
+        })
+          console.log(that.data.firstCate)
+        }
+      })
+      
   },
 
   /**
