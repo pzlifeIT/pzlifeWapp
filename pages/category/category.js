@@ -12,11 +12,33 @@ Page({
     thirdCate:{
       "title":"",
       "image":""
-    }
+    },
+    idx:0
   },
+//选择一级分类
+  selectCate:function(e){
+    var idx = e.currentTarget.dataset.index;
+    var id = e.currentTarget.dataset.cateId;
+    // console.log(id)
+    var that = this
+    wx.request({
+      url: url + 'index/category/getsecondcate',
+      method: "post",
+      data: {id:id},
+      header: {
+        "content-type": "application/json"
+      },
+      dataType: "json",
+      success(res) {
+        // console.log(res.data.data)
+        var second = res.data.data
+        that.setData({
+          secondCate: second,
+          idx:idx
+        })
+      }
+    })
 
-  listenCategory:function(e){
-    this.data.category = e.detail.value;
   },
   
   /**
@@ -24,6 +46,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this
+  
       wx.request({
         url: url+'index/category/getfirstcate',
         method:"post",
@@ -34,12 +57,14 @@ Page({
         dataType:'json',
         success(res){
           
-        var first = res.data
+        var first = res.data.data
+        var id = res.data.data.id
         that.setData({
-          firstCate:first
+          firstCate:first,
           
         })
-          console.log(that.data.firstCate)
+  
+          // console.log(index)
         }
       })
       
