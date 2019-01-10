@@ -1,2 +1,5 @@
 <!--pages/collect/collect.wxml-->
-<text>pages/collect/collect.wxml</text>
+<view class='collect_top'>
+    <view class='collect_shop'><text>收藏的店铺</text></view>
+    <view class='collect_goods'><text>收藏的商品</text></view>
+</view>

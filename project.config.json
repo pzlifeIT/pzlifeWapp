@@ -28,13 +28,30 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "goods",
+					"pathName": "pages/goods/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cate_goods",
+					"pathName": "pages/category/goods/goods",
+					"query": ""
+				}
+			]
 		}
 	}
 }
