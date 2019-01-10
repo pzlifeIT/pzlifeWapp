@@ -21,23 +21,23 @@ Page({
     var id = e.currentTarget.dataset.cateId;
     // console.log(id)
     var that = this
-    wx.request({
-      url: url + 'index/category/getsecondcate',
-      method: "post",
-      data: {id:id},
-      header: {
-        "content-type": "application/json"
-      },
-      dataType: "json",
-      success(res) {
-        // console.log(res.data.data)
-        var second = res.data.data
-        that.setData({
-          secondCate: second,
-          idx:idx
-        })
-      }
-    })
+    // wx.request({
+    //   url: url + 'index/category/getsecondcate',
+    //   method: "post",
+    //   data: {id:id},
+    //   header: {
+    //     "content-type": "application/json"
+    //   },
+    //   dataType: "json",
+    //   success(res) {
+    //     // console.log(res.data.data)
+    //     var second = res.data.data
+    //     that.setData({
+    //       secondCate: second,
+    //       idx:idx
+    //     })
+    //   }
+    // })
 
   },
   
@@ -57,14 +57,14 @@ Page({
         dataType:'json',
         success(res){
           
-        var first = res.data.data
-        var id = res.data.data.id
-        that.setData({
-          firstCate:first,
+        // var first = res.data.data
+        // var id = res.data.data.id
+        // that.setData({
+        //   firstCate:first,
           
-        })
+        // })
   
-          // console.log(index)
+          console.log(res.data.data)
         }
       })
       
