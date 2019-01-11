@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -10,4 +10,19 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-</view>
+</view> -->
+<view class="header">
+    <image class="logo din fl" src="../images/images/logo.png" />
+    <view class="index-search din fl">
+      <icon type="search" size="34rpx" />
+      <input class="search-inp din fr" type="text" placeholder="输入您当前要搜索的商品" />
+    </view>
+    
+  </view>
+  <swiper class='pz-swiper' autoplay='true'  indicator-dots="true" circular='true'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>

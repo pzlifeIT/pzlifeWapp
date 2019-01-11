@@ -1,0 +1,11 @@
+<!--pages/order/order.wxml-->
+
+<view class="or-header">
+    <view class="or-head-li {{orhead == 1?'active':''}}" bindtap="headtap" data-num="1" >全部</view>
+    <view class="or-head-li {{orhead == 2?'active':''}}" bindtap="headtap" data-num="2">待付款</view>
+    <view class="or-head-li {{orhead == 3?'active':''}}" bindtap="headtap" data-num="3">待发货</view>
+    <view class="or-head-li {{orhead == 4?'active':''}}" bindtap="headtap" data-num="4">待收货</view>
+    <view class="or-head-li {{orhead == 5?'active':''}}" bindtap="headtap" data-num="5">待评价</view>
+    <i class="wire"><s></s></i>
+</view>
+

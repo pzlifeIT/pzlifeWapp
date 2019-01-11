@@ -129,7 +129,7 @@ page {
 .userFnLi {
     width: 750rpx;
     height: 80rpx;
-    background-color: #ffffff;
+    background-color: #fff;
     border-bottom: 1px solid #f7f7f7;
 }
 
