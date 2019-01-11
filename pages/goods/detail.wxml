@@ -1,0 +1,137 @@
+<!--pages/goods/detail.wxml-->
+<swiper  autoplay='true' interval='3000' circular='true'>
+  <block>
+    <swiper-item wx:for="{{[1,2,3,4,5]}}" wx:for-item="i">
+      <image class='img' src='images/slider.png'></image>
+      <view class='num'>{{i}}/5</view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='desc'>
+  <view class='text'>
+    <text class='title'>柚见家月</text>
+    <text class='subtitle'>五仁叉烧500g</text>
+    <text class='price'>￥69.00</text>
+  </view>
+  <view class='collect'>
+    <icon type=''></icon>
+    <text >收藏</text>
+  </view>
+</view>
+
+<view class='content'>
+  <view class='spec' bindtap='showModel'>
+    <text class='fix'>已选择：</text><text class='fix_desc'>500g;x1</text>
+  </view>
+  <view class='ticket'>
+    <text class='fix'>领券：</text><text class='fix_desc'>全场满39减9</text>
+  </view>
+  <view class='integral'>
+    <text class='fix'>积分：</text><text class='fix_desc'>赠送48积分</text>
+  </view>
+  <view class='freight'>
+    <text class='fix'>运费：</text><text class='fix_desc'>免运费</text>
+  </view>
+</view>
+<!-- 选择规格弹出层 -->
+<view class='mask' catchtouchmove='preventTouchMove' bindtap='hideModel' wx:if='{{showModel}}'></view>
+<view class='pop' wx:if='{{showModel}}'>
+  <view class='goods_data'>
+    <view class='goods_thumb'>
+      <image src=''></image>
+    </view>
+    <view class='goods_desc'>
+      <text class='pop_price'>价格：￥96</text>
+      <text class='selected'>已选择：M\r\t黑色</text>
+      <text class='present'>赠送积分：178分</text>
+    </view>
+  </view>
+  <view class='param'>
+    <view  wx:for="{{spec}}" wx:key="{{index}}">
+      <view class='spec_name'><text>{{item.spec}}</text></view>
+      <view class='attr'>
+        <view wx:for="{{item.attrs}}" class='attr_name {{idx == item.id ? "selected_active":""}}'  wx:key="{{index}}"  bindtap='selectAttr' data-index="{{item.id}}">{{item.attrname}}</view>
+      
+      </view>
+    </view>
+     
+  </view>
+  <view class='amount'>
+    <view class='num_title'>数量</view>
+    <view class='amount_num'>
+    <view class='jian' bindtap='jian'>-</view><input class='num' type='text' value='{{buyNum}}' bindinput='getnum' /><view class='jia' bindtap='jia'>+</view>
+    </view>
+    
+  </view>
+</view>
+<!-- 领券弹出层 -->
+<!-- <scroll-view class='coupon_pop'>
+  <view class='pop_title'><text>领券列表</text></view>
+  <view class='coupon'>
+    <view class='coupon_left'>
+      <view class='coupon_price'>
+        <text class='symbol'>￥</text><text class='sum'>18</text>
+      </view>
+      <view class='coupon_rule'><text>满39可用</text></view>
+    </view>
+    <view class='coupon_mid'>
+      <text class='coupon_title'>新人专属优惠券</text>
+      <text class='coupon_subtitle'>全场通用</text>
+      <text class='coupon_time'>2018.09.05-2019.11.06</text>
+    </view>
+    <view class='coupon_right'><text>点击领取</text></view>
+  </view>
+</scroll-view> -->
+<view class='goods_content'>
+  <view class='tab'>
+    <!-- <view class='one active'><text>商品评价</text></view>
+    <view class='two'><text>搭配知道</text></view>
+    <view class='three'><text>使用指南</text></view> -->
+    <view class='four active'><text>商品详情</text></view>
+  </view>
+
+  
+    <!-- <view class='one_cont'>
+      <view class='one_top'>
+      
+      </view>
+    </view>
+    <view class='two_cont'>
+
+    </view>
+    <view class='three_cont'>
+    
+    </view> -->
+    <view class='four_cont'>
+      <view class='detail_img'>
+        <image class='img_one' src=''></image>
+        <image class='img_two' src=''></image>
+        <image class='img_three' src=''></image>
+        <image class='img_four' src=''></image>
+  
+      </view>
+    </view>
+</view>
+<!-- 底部固定区域 -->
+<view class='footer'>
+  <view class='home'>
+    <icon></icon>
+    <text>首页</text>
+  </view>
+  <view class='kefu'>
+    <icon></icon>
+    <text>客服</text>
+  </view>
+  <view class='cart'>
+    <icon></icon>
+    <text>购物车</text>
+  </view>
+  <view class='buy'>
+    <text>立即购买</text>
+  </view>
+  <view class='join_cart'>
+    <text>加入购物车</text>
+  </view>
+</view>
+

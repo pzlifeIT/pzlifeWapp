@@ -13,6 +13,8 @@ Page({
         },
         idx: 0
     },
+
+
     //选择一级分类
     selectCate: function(e) {
         console.log(this.classify)

@@ -19,49 +19,12 @@
     <view class='wai' wx:for='{{secondCate}}' wx:key='{{item.id}}'>
       <view class='cate_two'>
         <view><text class='cate_title'>{{item.type_name}}</text></view>
+        <navigator url='/pages/category/goods/goods'>
           <view class='cate_three' >
             <image class='cate_banner' src='images/three.png'></image>
             <text class='cate_three_title'>品质方案</text>
           </view>
-          <view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
-          </view>
-          <view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
-          </view>
-          <view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
-          </view>
-          <view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
-          </view>
-          <view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
-          </view>
-          <view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
-          </view><view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
-          </view><view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
-          </view><view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
-          </view><view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
-          </view><view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
-          </view>
+       </navigator>
       </view>
     </view>
   </scroll-view>

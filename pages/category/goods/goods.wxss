@@ -1,0 +1,45 @@
+/* pages/category/goods/goods.wxss */
+page{
+  background-color: rgb(247, 247, 247)
+}
+.one_goods{
+  width: 370rpx;
+  height: 386rpx;
+  float: left;
+  margin: 2rpx;
+  background-color: rgb(255, 255, 255)
+}
+.one_goods .goods_img{
+  width: 236rpx;
+  height: 199rpx;
+  
+}
+.img{
+  text-align: center;
+  margin-top: 31rpx;
+  
+}
+.one_goods text{
+  display: block;
+  text-align: center;
+
+}
+.one_goods .title{
+ font-size: 29rpx;
+ color: rgb(34, 34, 34);
+
+}
+.one_goods .subtitle{
+  font-size: 24rpx;
+  color: rgb(182, 182, 182);
+  margin: 5rpx 0 5rpx 0;
+}
+.one_goods .price{
+  font-size: 30rpx;
+  color: rgb(230, 31, 24);
+}
+
+
+
+
+
