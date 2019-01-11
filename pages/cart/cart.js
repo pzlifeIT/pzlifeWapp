@@ -5,9 +5,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    mask:false
   },
 
+  jian:function(e){
+
+  },
+  jia:function(e){
+
+  },
+  del:function(e){
+    this.setData({
+      mask:true
+    })
+  },
+  preventTouchMove:function(e){
+
+  },
+  hidemask:function(e){
+    this.setData({
+      mask:false
+    })
+  },
+  none:function(e){
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
