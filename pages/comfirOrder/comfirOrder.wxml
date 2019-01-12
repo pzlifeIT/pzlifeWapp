@@ -1,0 +1,37 @@
+<!--pages/comfirOrder/comfirOrder.wxml-->
+<view class='addres'>
+  <view class='addres_outer'>
+    <view class='name_phone'>
+      <text class='name'>鲜鲜鲜鲜</text>
+      <text class='phone'>18811019933</text>
+    </view>
+    <view class='addres_detail'>
+      <text class='default'>默认</text>
+      <text class='location'>上海市静安区石门二路33弄3号楼17C</text>
+    </view>
+    </view>
+    <view class='jt'>
+      <image src='/pages/images/images/jt_18.png'></image>
+    </view>
+    <image class='blue_red' src='/pages/images/images/add.png'></image>
+</view>
+<view class='goods'>
+  <view class='goods_info'>
+    <view class='goods_img'><image src=''></image></view>
+    <view class='goods_detail'>
+      <text class='goods_title'>柚见家月</text>
+      <text class='goods_subtitle'>五仁叉烧 500克</text>
+      <text class='price'>￥69.00</text>
+    </view>
+    <view class='sum'>x1</view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+

@@ -7,7 +7,8 @@
     "pages/cart/cart",
     "pages/my/my",
     "pages/category/goods/goods",
-    "pages/goods/detail"
+    "pages/goods/detail",
+    "pages/comfirOrder/comfirOrder"
   ],
   "window":{
     "backgroundTextStyle":"light",
