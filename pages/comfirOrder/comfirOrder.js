@@ -5,9 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isShow:false
+  },
+  maopao:function(e){
 
   },
-
+  hideModel:function(e){
+    this.setData({
+      isShow:false
+    })
+  },
+  showModel:function(e){
+    this.setData({
+      isShow:true
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
