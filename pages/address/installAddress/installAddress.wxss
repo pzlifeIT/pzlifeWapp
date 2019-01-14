@@ -1,0 +1,60 @@
+/* pages/address/installAddress/installAddress.wxss */
+
+page {
+    background-color: #f7f7f7;
+}
+
+.installAddress {
+    font-size: 30rpx;
+}
+
+.ia-input {
+    background-color: #fff;
+}
+
+.ia-hint {
+    display: block;
+    line-height: 47rpx;
+    font-size: 28rpx;
+    color: #e61f18;
+    text-indent: 10rpx;
+}
+
+.ia-input input {
+    line-height: 60rpx;
+    padding: 10rpx;
+}
+
+.ia-default {
+    height: 72rpx;
+    overflow: hidden;
+}
+
+.unsel {
+    width: 32rpx;
+    height: 32rpx;
+    border: 1px solid #b6b6b6;
+    border-radius: 50%;
+}
+
+.unsel,
+.sel {
+    margin: 19rpx 10rpx;
+}
+
+.ia-d-text {
+    line-height: 70rpx;
+    color: #888;
+}
+
+.save-btn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 90rpx;
+    font-size: 28rpx;
+    color: #fffefe;
+    text-align: center;
+    line-height: 90rpx;
+    background-color: #e61f18;
+}

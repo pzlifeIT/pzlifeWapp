@@ -1,0 +1,64 @@
+/* pages/order/order.wxss */
+
+page {
+    background-color: #f7f7f7;
+}
+
+.or-header {
+    position: fixed;
+    width: 100%;
+    overflow: auto;
+    background-color: #fff;
+}
+
+.or-head-li {
+    display: inline-block;
+    float: left;
+    width: 20%;
+    line-height: 86rpx;
+    font-size: 30rpx;
+    color: #404040;
+    text-align: center;
+}
+
+.or-head-li.active {
+    color: #e61f18;
+}
+
+.wire {
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    width: 20%;
+    height: 3px;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+}
+
+.wire s {
+    display: block;
+    width: 150rpx;
+    height: 3rpx;
+    margin: 0 auto;
+    background-color: #e61f18
+}
+
+.or-head-li:nth-of-type(1).active~.wire {
+    transform: translate3d(0, 0, 0);
+}
+
+.or-head-li:nth-of-type(2).active~.wire {
+    transform: translate3d(100%, 0, 0);
+}
+
+.or-head-li:nth-of-type(3).active~.wire {
+    transform: translate3d(200%, 0, 0);
+}
+
+.or-head-li:nth-of-type(4).active~.wire {
+    transform: translate3d(300%, 0, 0);
+}
+
+.or-head-li:nth-of-type(5).active~.wire {
+    transform: translate3d(400%, 0, 0);
+}
