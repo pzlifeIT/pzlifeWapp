@@ -162,7 +162,7 @@
   </view>
 </view>
 <view class='obscuration' wx:if="{{mask}}" catchtouchmove='preventTouchMove' bindtap='hidemask'></view>
-<view class='mask' wx:if="{{mask}}" bindtap='hidemask'>
+<view class='mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>
   <view class='pop' catchtap='none'>
     <view class='hint'>是否删除该商品</view>
     <view class='collect'>收藏</view>
