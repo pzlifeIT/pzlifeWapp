@@ -1,12 +1,16 @@
 <!--pages/goods/detail.wxml-->
-<swiper  autoplay='true' interval='3000' circular='true'>
-  <block>
-    <swiper-item wx:for="{{[1,2,3,4,5]}}" wx:for-item="i">
-      <image class='img' src='images/slider.png'></image>
-      <view class='num'>{{i}}/5</view>
-    </swiper-item>
-  </block>
-</swiper>
+<view class="detail-swiper" >
+  <swiper  autoplay='true' interval='3000' bindchange="changeSwiper" circular='true'>
+    <block>
+      <swiper-item wx:for="{{[1,2,3,4,5]}}" wx:for-item="i">
+        <image class='swiper-img' src='http://imagecache.pzlife.vip/o_1cujhmrcm1rbbg9198smgt1br5h.jpg?imageMogr2/thumbnail/720x'></image>
+        
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='swipercur'>{{swipercur}}/5</view>
+</view>
+
 
 <view class='desc'>
   <view class='text'>
@@ -24,9 +28,9 @@
   <view class='spec' bindtap='showModel'>
     <text class='fix'>已选择：</text><text class='fix_desc'>500g;x1</text>
   </view>
-  <view class='ticket'>
+  <!-- <view class='ticket'>
     <text class='fix'>领券：</text><text class='fix_desc'>全场满39减9</text>
-  </view>
+  </view> -->
   <view class='integral'>
     <text class='fix'>积分：</text><text class='fix_desc'>赠送48积分</text>
   </view>
@@ -115,17 +119,17 @@
 </view>
 <!-- 底部固定区域 -->
 <view class='footer'>
-  <view class='home'>
-    <icon></icon>
-    <text>首页</text>
-  </view>
+  <navigator class='home' url="../index/index" open-type="switchTab">
+    <image class="dl-ficon" src="../images/images/icon_03.png" />
+    <text class="ft-text">首页</text>
+  </navigator>
   <view class='kefu'>
-    <icon></icon>
-    <text>客服</text>
+    <image class="dl-ficon" src="../images/images/icon_05.png" />
+    <text  class="ft-text">客服</text>
   </view>
   <view class='cart'>
-    <icon></icon>
-    <text>购物车</text>
+    <image class="dl-ficon" src="../images/images/icon_07.png" />
+    <text  class="ft-text">购物车</text>
   </view>
   <view class='buy'>
     <text>立即购买</text>

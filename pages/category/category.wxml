@@ -1,8 +1,8 @@
 <!--pages/category/category.wxml-->
 <view class='search_head'>
   <view class='search'>
-    <icon type='search' class='search_icon' size='20px'/>
-    <input class='search_cate' type='text' placeholder='搜索品质生活方案' bindinput=''/>
+    <icon type='search' class='search_icon fl' size='34rpx'/>
+    <text class="search_cate din fl" >搜索品质生活方案</text>
   </view>
 </view>
 <view class='cate_content'>
@@ -19,10 +19,10 @@
     <view class='wai' wx:for='{{secondCate}}' wx:key='{{item.id}}'>
       <view class='cate_two'>
         <view><text class='cate_title'>{{item.type_name}}</text></view>
-        <navigator url='/pages/category/goods/goods'>
+        <navigator url='goods/goods' wx:for="{{item._child}}" >
           <view class='cate_three' >
-            <image class='cate_banner' src='images/three.png'></image>
-            <text class='cate_three_title'>品质方案</text>
+            <image class='cate_banner' src='http://imagecache.pzlife.vip/o_1cujhrkh9vm024fh9f8vr17arc.jpg?imageMogr2/thumbnail/120x'></image>
+            <text class='cate_three_title'>{{item.type_name}}</text>
           </view>
        </navigator>
       </view>

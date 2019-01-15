@@ -1,13 +1,17 @@
 {
     "pages": [
+        "pages/category/category",
         "pages/index/index",
         "pages/logs/logs",
-        "pages/category/category",
+        
         "pages/collect/collect",
         "pages/cart/cart",
         "pages/my/my",
         "pages/category/goods/goods",
-        "pages/goods/detail"
+"pages/goods/detail",
+        "pages/address/address",
+        "pages/address/installAddress/installAddress",
+        "pages/order/order"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -61,3 +65,4 @@
             "selectIconPath": "选中时的图标"
         }
     }
+}
