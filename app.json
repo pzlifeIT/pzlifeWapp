@@ -8,7 +8,10 @@
     "pages/my/my",
     "pages/category/goods/goods",
     "pages/goods/detail",
-    "pages/comfirOrder/comfirOrder"
+    "pages/comfirOrder/comfirOrder",
+		"pages/order/orderDetail/orderDetail",
+    "pages/order/order",
+		"pages/order/logisticsInfo/logisticsInfo"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -31,12 +34,6 @@
         "text": "分类",
         "iconPath":"pages/images/class.png",
         "selectedIconPath":"pages/images/class1.png"
-      },
-      {
-        "pagePath":"pages/collect/collect",
-        "text":"收藏",
-        "iconPath":"pages/images/shore.png",
-        "selectedIconPath": "pages/images/shore1.png"
       },
       {
         "pagePath":"pages/cart/cart",

@@ -2,13 +2,14 @@
 page{
   background-color: #f7f7f7;
   height: 100%;
+  width: 100%;
 }
 radio{
   transform: scale(0.8);
 }
 .cart_goods,.lose{
-  width: 750rpx;
-  background-color: #ffffff;
+  width: 100%;
+  /* background-color: #ffffff; */
   float: left;
   margin-top: 9rpx;
 }
@@ -19,6 +20,7 @@ radio{
   color: #202020;
   font-size: 30rpx;
   line-height: 76rpx;
+  background: #fff;
 }
 radio-group,lose_title{
   display: inline-block;
@@ -140,17 +142,21 @@ radio-group,lose_title{
 .lose_goods{
   padding-top: 20rpx;
 }
+.lose .goods_data{
+  padding-top: 22rpx;
+}
 .lose_radio{
   width: 58rpx;
   height: 100%;
   font-size: 22rpx;
   color: #888;
 }
-.lose_shop_name{
+.lose .lose_shop_name{
   padding-left: 11rpx;
+  width: 739rpx;
 }
 .footer{
-  width: 750rpx;
+  width: 100%;
   height: 90rpx;
   background-color: #ffffff;
   position: fixed;
@@ -250,10 +256,48 @@ radio-group,lose_title{
   display: inline-block;
   border-bottom-right-radius: 15rpx;
 }
-
-
-
-
+.goods_data .lose_img{
+  height: 172rpx;
+}
+.empty{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content:center; 
+  align-items:center;
+}
+.msg{
+  width: 220rpx;
+  height: 346rpx;
+}
+.masg .icon{
+  width: 100%;
+ /* text-align: center; */
+ display:flex;
+ justify-content: right;
+}
+.icon image{
+  width: 192rpx;
+  height: 192rpx;
+  margin-left: 14rpx;
+}
+.text{
+  color: #d6d6d6;
+  font-size: 28rpx;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 19rpx;
+}
+.go{
+  width: 220rpx;
+  height: 68rpx;
+  background-color: #e61f18;
+  border-radius: 2rpx;
+  font-size: 28rpx;
+  color: #fefefe;
+  text-align: center;
+  line-height: 68rpx;
+}
 
 
 

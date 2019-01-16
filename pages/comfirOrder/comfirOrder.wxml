@@ -34,6 +34,42 @@
     </view>
     <view class='sum'>x1</view>
   </view>
+  <view class='goods_info'>
+    <view class='goods_img'><image src=''></image></view>
+    <view class='goods_detail'>
+      <text class='goods_title'>柚见家月</text>
+      <text class='goods_subtitle'>五仁叉烧 500克</text>
+      <text class='price'>￥69.00</text>
+    </view>
+    <view class='sum'>x1</view>
+  </view>
+  <view class='goods_info'>
+    <view class='goods_img'><image src=''></image></view>
+    <view class='goods_detail'>
+      <text class='goods_title'>柚见家月</text>
+      <text class='goods_subtitle'>五仁叉烧 500克</text>
+      <text class='price'>￥69.00</text>
+    </view>
+    <view class='sum'>x1</view>
+  </view>
+  <view class='goods_info'>
+    <view class='goods_img'><image src=''></image></view>
+    <view class='goods_detail'>
+      <text class='goods_title'>柚见家月</text>
+      <text class='goods_subtitle'>五仁叉烧 500克</text>
+      <text class='price'>￥69.00</text>
+    </view>
+    <view class='sum'>x1</view>
+  </view>
+  <view class='goods_info'>
+    <view class='goods_img'><image src=''></image></view>
+    <view class='goods_detail'>
+      <text class='goods_title'>柚见家月</text>
+      <text class='goods_subtitle'>五仁叉烧 500克</text>
+      <text class='price'>￥69.00</text>
+    </view>
+    <view class='sum'>x1</view>
+  </view>
 </view>
 <view class='stat'>
   <view class='summation'><text class='sum_text'>含运费</text><text class='sum_price'>￥6.00</text></view>

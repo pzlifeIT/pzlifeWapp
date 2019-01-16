@@ -1,5 +1,6 @@
 <!--pages/cart/cart.wxml-->
-<view class='cart_goods'>
+<view wx:if="{{goods}}">
+<view class='cart_goods' >
   <view class='shop_name'>
     <radio-group>
       <radio checked='' color='#e61f18' /><text>洋洋岛</text>
@@ -137,8 +138,8 @@
         失效
       </view>
     </view>
-    <view class='goods_img'>
-      <image src=''></image>
+    <view class='goods_img '>
+      <image class='lose_img'  src=''></image>
     </view>
     <view class='goods_desc lose_goods'>
       <text class='goods_title'>柚见家月柚见家月柚见家月</text>
@@ -148,6 +149,7 @@
       <image src='/pages/images/images/del.png'></image>
     </view>
   </view>
+  
 </view>
 
 <view class='footer'>
@@ -157,9 +159,11 @@
     </radio-group>
     <view class='total'><text class='total_text'>合计：</text><text class='total_price'>￥929.00</text></view>
   </view>
-  <view class='pay'>
-    <text>去结算</text>
-  </view>
+  <navigator url='/pages/comfirOrder/comfirOrder'>
+    <view class='pay'>
+      <text>去结算</text>
+    </view>
+  </navigator>
 </view>
 <view class='obscuration' wx:if="{{mask}}" catchtouchmove='preventTouchMove' bindtap='hidemask'></view>
 <view class='mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>
@@ -169,4 +173,23 @@
     <view class='delete'>删除</view>
   </view>
 </view>
+</view>
+<!-- 空购物车 -->
+<view class='empty' >
+  <view class='msg' wx:if="{{goods == false}}">
+    <view class='icon'><image src='/pages/images/images/emptycart.png'></image></view>
+    <view class='text'><text>购物车空空如也</text></view>
+    <view class='go'>去逛逛吧</view>
+  </view>
+
+</view>
+
+
+
+
+
+
+
+
+
 

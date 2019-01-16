@@ -5,7 +5,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        orhead: '1'
+        orhead: '1',
+        order:true,
+        orderStatus:1
     },
 
     /**
@@ -32,7 +34,8 @@ Page({
         console.log(e.currentTarget.dataset.num)
         let n = e.currentTarget.dataset.num
         this.setData({
-            orhead: n
+            orhead: n,
+            orderStatus:n
         })
     },
     /**

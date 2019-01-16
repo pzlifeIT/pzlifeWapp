@@ -115,7 +115,7 @@ page{
 .stat{
   width: 750rpx;
   position: relative;
- 
+  padding-bottom: 100rpx;
 }
 .stat .summation{
   width: 750rpx;

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    mask:false
+    mask:false,
+    goods:false
   },
 
   jian:function(e){
