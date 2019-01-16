@@ -1,0 +1,155 @@
+<!--pages/comfirOrder/comfirOrder.wxml-->
+<view class='addres' bindtap='showModel'>
+  <view class='addres_outer'>
+    <view class='name_phone'>
+      <text class='name'>鲜鲜鲜鲜</text>
+      <text class='phone'>18811019933</text>
+    </view>
+    <view class='addres_detail'>
+      <text class='default'>默认</text>
+      <text class='location'>上海市静安区石门二路33弄3号楼17C</text>
+    </view>
+    </view>
+    <view class='jt'>
+      <image src='/pages/images/images/jt_18.png'></image>
+    </view>
+    <image class='blue_red' src='/pages/images/images/add.png'></image>
+</view>
+<view class='goods'>
+  <view class='goods_info'>
+    <view class='goods_img'><image src=''></image></view>
+    <view class='goods_detail'>
+      <text class='goods_title'>柚见家月</text>
+      <text class='goods_subtitle'>五仁叉烧 500克</text>
+      <text class='price'>￥69.00</text>
+    </view>
+    <view class='sum'>x1</view>
+  </view>
+  <view class='goods_info'>
+    <view class='goods_img'><image src=''></image></view>
+    <view class='goods_detail'>
+      <text class='goods_title'>柚见家月</text>
+      <text class='goods_subtitle'>五仁叉烧 500克</text>
+      <text class='price'>￥69.00</text>
+    </view>
+    <view class='sum'>x1</view>
+  </view>
+  <view class='goods_info'>
+    <view class='goods_img'><image src=''></image></view>
+    <view class='goods_detail'>
+      <text class='goods_title'>柚见家月</text>
+      <text class='goods_subtitle'>五仁叉烧 500克</text>
+      <text class='price'>￥69.00</text>
+    </view>
+    <view class='sum'>x1</view>
+  </view>
+  <view class='goods_info'>
+    <view class='goods_img'><image src=''></image></view>
+    <view class='goods_detail'>
+      <text class='goods_title'>柚见家月</text>
+      <text class='goods_subtitle'>五仁叉烧 500克</text>
+      <text class='price'>￥69.00</text>
+    </view>
+    <view class='sum'>x1</view>
+  </view>
+  <view class='goods_info'>
+    <view class='goods_img'><image src=''></image></view>
+    <view class='goods_detail'>
+      <text class='goods_title'>柚见家月</text>
+      <text class='goods_subtitle'>五仁叉烧 500克</text>
+      <text class='price'>￥69.00</text>
+    </view>
+    <view class='sum'>x1</view>
+  </view>
+  <view class='goods_info'>
+    <view class='goods_img'><image src=''></image></view>
+    <view class='goods_detail'>
+      <text class='goods_title'>柚见家月</text>
+      <text class='goods_subtitle'>五仁叉烧 500克</text>
+      <text class='price'>￥69.00</text>
+    </view>
+    <view class='sum'>x1</view>
+  </view>
+</view>
+<view class='stat'>
+  <view class='summation'><text class='sum_text'>含运费</text><text class='sum_price'>￥6.00</text></view>
+  <view class='summation'><text class='sum_text'>钻石返利</text><text class='sum_price'>￥6.00</text></view>
+  <view class='summation'><text class='sum_text'>共计2件商品</text><text class='sum_price'>合计￥69.00</text></view>
+</view>
+
+<view class='footer'>
+  <view class='total'><text class='total_text'>总计金额：</text><text class='total_price'>￥138.00</text></view>
+  <view class='back'>
+    <image src='/pages/images/che.png'></image>
+    <text>返回购物车</text>
+  </view>
+  <view class='pay'>去付款</view>
+</view>
+<view class='mask' bindtap='hideModel' wx:if="{{isShow}}">
+  <view class='addres_pop' catchtap='maopao'>
+    <scroll-view class='addres_list' scroll-y="true" >
+    <view class='scroll'>
+      <view class='one_addres'>
+        <view class='name_phone_detail'>
+          <view class='name_phone'>
+            <text class='name'>鲜鲜</text><text class='phone'>18811101993</text>
+          </view>
+          <view class='addres_detail'>上海市静安区石门二路333弄3号楼17c</view>
+        </view>
+        <radio-group>
+          <radio color='#e61f18'></radio>
+        </radio-group>
+      </view>
+      <view class='one_addres'>
+        <view class='name_phone_detail'>
+          <view class='name_phone'>
+            <text class='name'>鲜鲜</text><text class='phone'>18811101993</text>
+          </view>
+          <view class='addres_detail'>上海市静安区石门二路333弄3号楼17c石门二路333弄3号楼17c</view>
+        </view>
+        <radio-group>
+          <radio color='#e61f18'></radio>
+        </radio-group>
+      </view>
+      <view class='one_addres'>
+        <view class='name_phone_detail'>
+          <view class='name_phone'>
+            <text class='name'>鲜鲜</text><text class='phone'>18811101993</text>
+          </view>
+          <view class='addres_detail'>上海市静安区石门二路333弄3号楼17c石门二路333弄3号楼17c</view>
+        </view>
+        <radio-group>
+          <radio color='#e61f18'></radio>
+        </radio-group>
+      </view>
+      <view class='one_addres'>
+        <view class='name_phone_detail'>
+          <view class='name_phone'>
+            <text class='name'>鲜鲜</text><text class='phone'>18811101993</text>
+          </view>
+          <view class='addres_detail'>上海市静安区石门二路333弄3号楼17c石门二路333弄3号楼17c</view>
+        </view>
+        <radio-group>
+          <radio color='#e61f18'></radio>
+        </radio-group>
+      </view>
+      <view class='one_addres'>
+        <view class='name_phone_detail'>
+          <view class='name_phone'>
+            <text class='name'>鲜鲜</text><text class='phone'>18811101993</text>
+          </view>
+          <view class='addres_detail'>上海市静安区石门二路333弄3号楼17c石门二路333弄3号楼17c</view>
+        </view>
+        <radio-group>
+          <radio color='#e61f18'></radio>
+        </radio-group>
+      </view>
+    </view>
+    </scroll-view>
+    <view class='add_addres'>+新建地址</view>
+  </view>
+</view>
+
+
+
+

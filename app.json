@@ -1,63 +1,63 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/logs/logs",
-        "pages/category/category",
-        "pages/collect/collect",
-        "pages/cart/cart",
-        "pages/my/my",
-        "pages/category/goods/goods",
-        "pages/goods/detail"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "WeChat",
-        "navigationBarTextStyle": "black"
-    },
-    "tabBar": {
-        "color": "#000",
-        "selectedColor": "#FF0000",
-        "list": [{
-                "pagePath": "pages/index/index",
-                "text": "首页",
-                "iconPath": "pages/images/index.png",
-                "selectedIconPath": "pages/images/index1.png"
-            },
-            {
-                "pagePath": "pages/category/category",
-                "text": "分类",
-                "iconPath": "pages/images/class.png",
-                "selectedIconPath": "pages/images/class1.png"
-            },
-            {
-                "pagePath": "pages/collect/collect",
-                "text": "收藏",
-                "iconPath": "pages/images/shore.png",
-                "selectedIconPath": "pages/images/shore1.png"
-            },
-            {
-                "pagePath": "pages/cart/cart",
-                "text": "购物车",
-                "iconPath": "pages/images/cart.png",
-                "selectedIconPath": "pages/images/cart1.png"
-            },
-            {
-                "pagePath": "pages/my/my",
-                "text": "我",
-                "iconPath": "pages/images/my.png",
-                "selectedIconPath": "pages/images/my1.png"
-            }
-        ]
-    },
-    "annotation": {
-        "content": "这里写注释，键名是字段，键值是注释",
-        "tabBar": {
-            "tabBar": "底部导航栏",
-            "list": "导航栏列表",
-            "pagePath": "页面路径",
-            "text": "导航栏文字",
-            "iconPath": "导航栏图标",
-            "selectIconPath": "选中时的图标"
-        }
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/category/category",
+    "pages/collect/collect",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/category/goods/goods",
+    "pages/goods/detail",
+    "pages/comfirOrder/comfirOrder",
+		"pages/order/orderDetail/orderDetail",
+    "pages/order/order",
+		"pages/order/logisticsInfo/logisticsInfo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"#000",
+    "selectedColor":"#FF0000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"pages/images/index.png",
+        "selectedIconPath":"pages/images/index1.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath":"pages/images/class.png",
+        "selectedIconPath":"pages/images/class1.png"
+      },
+      {
+        "pagePath":"pages/cart/cart",
+        "text":"购物车",
+        "iconPath":"pages/images/cart.png",
+        "selectedIconPath":"pages/images/cart1.png"
+      },
+      {
+        "pagePath":"pages/my/my",
+        "text":"我",
+        "iconPath":"pages/images/my.png",
+        "selectedIconPath":"pages/images/my1.png"
+      }
+    ]
+  },
+  "annotation":{
+    "content":"这里写注释，键名是字段，键值是注释",
+    "tabBar":{
+      "tabBar":"底部导航栏",
+      "list": "导航栏列表",
+      "pagePath": "页面路径",
+      "text": "导航栏文字",
+      "iconPath": "导航栏图标",
+      "selectIconPath": "选中时的图标"
     }
+  }
+}

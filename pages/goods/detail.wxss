@@ -1,6 +1,11 @@
 /* pages/goods/detail.wxss */
 page{
   background: #f7f7f7;
+  overflow: hidden;
+  width: 750rpx;
+}
+:root{
+  overflow-x:auto;
 }
 swiper{
   width: 750rpx;
