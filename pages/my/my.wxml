@@ -26,10 +26,12 @@
 </view>
 
 <view class="userorder">
-  <view  class="uoHeader">
-    <text  class="uoHeaderText" >我的订单</text>
-    <navigator url="../order/order" class="uoHeaderLook din fr" >查看全部<image class="uoimg din fr" src="../images/images/jt_18.png" alt=""/></navigator>
-  </view>
+  <navigator url='/pages/order/order'>
+    <view  class="uoHeader">
+      <text  class="uoHeaderText" >我的订单</text>
+      <view class="uoHeaderLook din fr" >查看全部<image class="uoimg din fr" src="../images/images/jt_18.png" alt=""/></view>
+    </view>
+  </navigator>
   <view class="uoList">
     <view class="uoLi" >
       <image class="uoIcon" src="../images/images/444_08.png"  />

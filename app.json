@@ -3,15 +3,15 @@
         "pages/category/category",
         "pages/index/index",
         "pages/logs/logs",
-        
         "pages/collect/collect",
         "pages/cart/cart",
         "pages/my/my",
         "pages/category/goods/goods",
-"pages/goods/detail",
+        "pages/goods/detail",
         "pages/address/address",
         "pages/address/installAddress/installAddress",
-        "pages/order/order"
+        "pages/order/order",
+        "pages/comfirOrder/comfirOrder"
     ],
     "window": {
         "backgroundTextStyle": "light",

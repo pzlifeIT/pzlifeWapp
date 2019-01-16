@@ -8,4 +8,130 @@
     <view class="or-head-li {{orhead == 5?'active':''}}" bindtap="headtap" data-num="5">待评价</view>
     <i class="wire"><s></s></i>
 </view>
-
+<!-- 没有订单 -->
+<view class='empty' wx:if="{{!order}}">
+  <view class='or-empty'>
+    <view class='icon'><image src='/pages/images/images/emptyorder.png'></image></view>
+    <view class='text'>你还没有订单哦!</view>
+  </view>
+</view>
+<view class="top"></view>
+<!-- 待付款 -->
+<view class='obligation' wx:if="{{orderStatus == 2 || orderStatus == 1}}">
+  <view class='order-number'><text class='number'>订单号：SN201809111913571204</text><text class='status'>待付款</text></view>
+  <navigator url='/pages/order/orderDetail/orderDetail'>
+    <view class='one-goods'>
+      <view class="goods-wai">
+        <view class='goods-image'><image src=''></image></view>
+        <view class='goods-info'>
+          <text class='goods-title'>柚见家月</text>
+          <text class='goods-subtitle'>五仁叉烧 500克</text>
+        </view>
+        <view class='price-num'>
+          <text class='price'>￥69.00</text>
+          <text class='num'>x1</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+	<view class="jf">
+		<text class="jf-text">送积分</text><text class="jf-num">20</text>
+	</view>
+	<view class="jf">
+		<text class="jf-text">含运费</text><text class="jf-num">￥20.00</text>
+	</view>
+	<view class="or-footer">
+		<view class="footer-left"><text class="sum">共2件 共付：<text class="total">￥138.00</text></text></view>
+		<view class="footer-right">
+			<view class="pay">去付款</view>
+		</view>
+	</view>
+</view>
+<!-- 待发货 -->
+<view class='obligation' wx:if="{{orderStatus == 3 || orderStatus == 1}}">
+  <view class='order-number'><text class='number'>订单号：SN201809111913571204</text><text class='status'>待发货</text></view>
+  <view class='one-goods'>
+		<view class="goods-wai">
+			<view class='goods-image'><image src=''></image></view>
+			<view class='goods-info'>
+				<text class='goods-title'>柚见家月</text>
+				<text class='goods-subtitle'>五仁叉烧 500克</text>
+			</view>
+			<view class='price-num'>
+				<text class='price'>￥69.00</text>
+				<text class='num'>x1</text>
+			</view>
+		</view>
+  </view>
+	<view class="jf">
+		<text class="jf-text">送积分</text><text class="jf-num">20</text>
+	</view>
+	<view class="jf">
+		<text class="jf-text">含运费</text><text class="jf-num">￥20.00</text>
+	</view>
+	<view class="or-footer">
+		<view class="footer-left"><text class="sum">共2件 共付：<text class="total">￥138.00</text></text></view>
+		<view class="footer-right">
+			<!-- <view class="pay">去付款</view> -->
+		</view>
+	</view>
+</view>
+<!-- 待收货 -->
+<view class='obligation' wx:if="{{orderStatus == 4 || orderStatus == 1}}">
+  <view class='order-number'><text class='number'>订单号：SN201809111913571204</text><text class='status'>待收货</text></view>
+  <view class='one-goods'>
+		<view class="goods-wai">
+			<view class='goods-image'><image src=''></image></view>
+			<view class='goods-info'>
+				<text class='goods-title'>柚见家月</text>
+				<text class='goods-subtitle'>五仁叉烧 500克</text>
+			</view>
+			<view class='price-num'>
+				<text class='price'>￥69.00</text>
+				<text class='num'>x1</text>
+			</view>
+		</view>
+  </view>
+	<view class="jf">
+		<text class="jf-text">送积分</text><text class="jf-num">20</text>
+	</view>
+	<view class="jf">
+		<text class="jf-text">含运费</text><text class="jf-num">￥20.00</text>
+	</view>
+	<view class="or-footer">
+		<view class="footer-left"><text class="sum">共2件 共付：<text class="total">￥138.00</text></text></view>
+		<view class="footer-right">
+			<view class="pay check">查看物流</view>
+			<view class="pay">确定收货</view>
+		</view>
+	</view>
+</view>
+<!-- 待评价 -->
+<view class='obligation' wx:if="{{orderStatus == 5 || orderStatus == 1}}">
+  <view class='order-number'><text class='number'>订单号：SN201809111913571204</text><text class='status'>待评价</text></view>
+  <view class='one-goods'>
+		<view class="goods-wai">
+			<view class='goods-image'><image src=''></image></view>
+			<view class='goods-info'>
+				<text class='goods-title'>柚见家月</text>
+				<text class='goods-subtitle'>五仁叉烧 500克</text>
+			</view>
+			<view class='price-num'>
+				<text class='price'>￥69.00</text>
+				<text class='num'>x1</text>
+			</view>
+		</view>
+  </view>
+	<view class="jf">
+		<text class="jf-text">送积分</text><text class="jf-num">20</text>
+	</view>
+	<view class="jf">
+		<text class="jf-text">含运费</text><text class="jf-num">￥20.00</text>
+	</view>
+	<view class="or-footer">
+		<view class="footer-left"><text class="sum">共2件 共付：<text class="total">￥138.00</text></text></view>
+		<view class="footer-right">
+			<view class="pay">去评价</view>
+		</view>
+	</view>
+</view>

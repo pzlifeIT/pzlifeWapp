@@ -1,35 +1,24 @@
-// pages/cart/cart.js
+// pages/comfirOrder/comfirOrder.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    mask:false,
-    goods:false
+    isShow:false
   },
-
-  jian:function(e){
+  maopao:function(e){
 
   },
-  jia:function(e){
-
-  },
-  del:function(e){
+  hideModel:function(e){
     this.setData({
-      mask:true
+      isShow:false
     })
   },
-  preventTouchMove:function(e){
-
-  },
-  hidemask:function(e){
+  showModel:function(e){
     this.setData({
-      mask:false
+      isShow:true
     })
-  },
-  none:function(e){
-    
   },
   /**
    * 生命周期函数--监听页面加载
