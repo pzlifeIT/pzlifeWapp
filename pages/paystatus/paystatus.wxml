@@ -1,0 +1,27 @@
+<!--pages/paystatus/paystatus.wxml-->
+<view class="status">
+	<view class="pay-status fail" wx:if="{{status == 2}}">支付失败</view>
+	<view class="pay-status success" wx:if="{{status == 1}}">支付成功</view>
+	<view class="botton">
+		<view class="bo-left">查看订单</view>
+		<view class="bo-right" wx:if="{{status == 2}}">重新支付</view>
+		<view class="bo-right" wx:if="{{status == 1}}">返回首页</view>
+	</view>
+</view>
+<view class="order-address">
+	<view class="address">
+		<view class="name-phone">
+			<text class="name">鲜鲜</text>
+			<text class="phone">13865264587</text>
+		</view>
+		<view class="add-detail">上海市静安区石门二路333弄3号楼17c上海市静安区石门二路333弄3号楼17c</view>
+		<view class="money">
+			<text class="mon-text">实付：</text>
+			<text class="price">￥69.00</text>
+		</view>
+	</view>
+</view>
+<view class="hint" wx:if="{{status == 1}}">订单正在给您处理，请保持手机畅通，注意查收~</view>
+
+
+

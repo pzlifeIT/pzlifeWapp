@@ -1,0 +1,9 @@
+<!--pages/login/login.wxml-->
+<view class="centert">
+	<view class="logo">
+		<image src="/pages/images/images/logo1.png"></image>
+	</view>
+	<view class="wechat">微信登录</view>
+	<view class="phone">手机号登录</view>
+	<view class="phone-login">手机号注册</view>
+</view>

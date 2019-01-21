@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 10,
 			"list": [
 				{
 					"id": 0,
@@ -72,7 +72,38 @@
 				{
 					"id": -1,
 					"name": "wuliu",
-					"pathName": "pages/order/logisticsInfo/logisticsInfo"
+					"pathName": "pages/order/logisticsInfo/logisticsInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "logi",
+					"pathName": "pages/login/register/register",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "captcha",
+					"pathName": "pages/login/captchaLogin/captchaLogin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pass",
+					"pathName": "pages/login/passLogin/passLogin",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "pay",
+					"pathName": "pages/paystatus/paystatus",
+					"query": ""
 				}
 			]
 		}

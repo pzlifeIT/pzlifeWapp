@@ -179,7 +179,9 @@
   <view class='msg' wx:if="{{goods == false}}">
     <view class='icon'><image src='/pages/images/images/emptycart.png'></image></view>
     <view class='text'><text>购物车空空如也</text></view>
-    <view class='go'>去逛逛吧</view>
+    <navigator url='/pages/category/category'>
+      <view class='go'>去逛逛吧</view>
+    </navigator>
   </view>
 
 </view>

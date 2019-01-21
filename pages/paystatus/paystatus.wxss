@@ -1,0 +1,107 @@
+page{
+	background: #F7F7F7;
+	
+}
+.status{
+	width: 750rpx;
+	height: 460rpx;
+	background: #fff;
+	overflow: hidden;
+}
+.pay-status{
+	width: 100%;
+	font-size: 36rpx;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 146rpx;
+}
+.fail{
+	color: #E61F18;
+}
+.success{
+	color: #51a938;
+}
+.botton{
+	width: 100%;
+	height: 68rpx;
+	margin-top: 134rpx;
+	display: flex;
+	justify-content: center;
+}
+.bo-left{
+	width: 188rpx;
+	height: 66rpx;
+	border: 1rpx solid #888888;
+	text-align: center;
+	line-height: 66rpx;
+	color: #202020;
+	font-size: 28rpx;
+	margin-right: 20rpx;
+}
+.bo-right{
+	width: 188rpx;
+	height: 66rpx;
+	border: 1rpx solid #E61F18;
+	color: #E61F18;
+	font-size: 28rpx;
+	text-align: center;
+	line-height: 66rpx;
+	margin-left: 20rpx;
+}
+.order-address{
+	width: 750rpx;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 9rpx;
+	padding-top: 24rpx;
+	padding-bottom: 25rpx;
+}
+.address{
+	width: 697rpx;
+	
+}
+.name{
+	color: #404040;
+	font-size: 30rpx;
+	margin-right: 39rpx;
+}
+.phone{
+	color: #404040;
+	font-size: 30rpx;
+}
+.add-detail{
+	width: 100%;
+	color: #404040;
+	font-size: 30rpx;
+	line-height: 50rpx;
+}
+.mon-text{
+	color: #888888;
+	font-size: 26rpx;
+}
+.price{
+	color: #404040;
+	font-size: 26rpx;
+}
+.hint{
+	width: 730rpx;
+	height: 72rpx;
+	line-height: 72rpx;
+	color: #E61F18;
+	font-size: 26rpx;
+	margin-top: 2rpx;
+	background: #fff;
+	padding-left: 20rpx;
+}
+
+
+
+
+
+
+
+
+
+

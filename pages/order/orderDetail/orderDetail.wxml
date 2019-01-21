@@ -1,0 +1,48 @@
+<!--pages/order/orderDetail/orderDetail.wxml-->
+<view class="address">
+	<view class="address-info">
+		<text class="info-text">收货地址：</text>
+		<text class="info-name-phone">鲜鲜 18882452220</text>
+	</view>
+	<view class="address-detail">
+		<text class="detail-text">收货地址：</text>
+		<text class="detail-info">上海市闵行区爱博二村355弄95号</text>
+	</view>
+</view>
+<view class='obligation'>
+  <view class='order-number'><text class='number'>订单号：SN201809111913571204</text><text class='status'>待付款</text></view>
+  <view class='one-goods'>
+		<view class="goods-wai">
+			<view class='goods-image'><image src=''></image></view>
+			<view class='goods-info'>
+				<text class='goods-title'>柚见家月</text>
+				<text class='goods-subtitle'>五仁叉烧 500克</text>
+			</view>
+			<view class='price-num'>
+				<text class='price'>￥69.00</text>
+				<text class='num'>x1</text>
+			</view>
+		</view>
+  </view>
+	<view class="jf">
+		<text class="jf-text">送积分</text><text class="jf-num">20</text>
+	</view>
+	<view class="jf">
+		<text class="jf-text">含运费</text><text class="jf-num">￥20.00</text>
+	</view>
+	<view class="jf">
+		<text class="jf-text">支付方式：</text><text class="jf-num rest">红包支付69.00元</text>
+	</view>
+	<view class="jf">
+		<text class="jf-text">订单编号：</text><text class="jf-num rest">SN201809031629458067</text>
+	</view>
+	<view class="jf">
+		<text class="jf-text">创建时间：</text><text class="jf-num rest">2018-09-03 16:29:45</text>
+	</view>
+	<view class="or-footer">
+		<view class="footer-left"><text class="sum">共件 共付：<text class="total">￥69.00</text></text></view>
+		<view class="footer-right">
+			<view class="pay check">查看物流</view>
+		</view>
+	</view>
+</view>

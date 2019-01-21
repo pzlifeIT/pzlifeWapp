@@ -1,0 +1,17 @@
+<!--pages/login/captchaLogin/captchaLogin.wxml-->
+<!--pages/login/register/register.wxml-->
+<view class="centert">
+	<view class="logo">
+		<image src="/pages/images/images/logo1.png"></image>
+	</view>
+	<view class="phone">
+		<input class="input-phone" type="number" placeholder="请输入手机号" maxlength="11" placeholder-class="input-place" adjust-position="true" />
+	</view>
+	<view class="phone">
+		<input class="input-captcha" type="number" placeholder="请输入验证码" placeholder-class="input-place" adjust-position="true" />
+		<view class="get-captcha">获取验证码</view>
+	</view>
+	<view class="checkout">密码登录</view>
+	<view class="register">登录</view>
+</view>
+

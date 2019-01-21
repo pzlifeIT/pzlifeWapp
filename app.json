@@ -11,7 +11,13 @@
     "pages/comfirOrder/comfirOrder",
 		"pages/order/orderDetail/orderDetail",
     "pages/order/order",
-		"pages/order/logisticsInfo/logisticsInfo"
+		"pages/order/logisticsInfo/logisticsInfo",
+    "pages/login/login",
+    "pages/login/register/register",
+    "pages/login/captchaLogin/captchaLogin",
+    "pages/login/passLogin/passLogin",
+    "pages/paystatus/paystatus"
+   
   ],
   "window":{
     "backgroundTextStyle":"light",
