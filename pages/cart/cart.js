@@ -1,4 +1,5 @@
 // pages/cart/cart.js
+const app = getApp();
 Page({
 
   /**
@@ -6,7 +7,8 @@ Page({
    */
   data: {
     mask:false,
-    goods:false
+    valid:[],
+		failure:[]
   },
 
   jian:function(e){
@@ -21,7 +23,7 @@ Page({
     })
   },
   preventTouchMove:function(e){
-
+		//弹出层防止界面滑动
   },
   hidemask:function(e){
     this.setData({
@@ -35,9 +37,39 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+			this.getCartGoodsList()
   },
-
+	getCartGoodsList:function(e){
+		let that = this
+		app.wxrequest({
+			url:"index/cart/getUserCart",
+			data:{paramUid:"RVYvaEw2Wk1TeXlnUjdlb2RHc3ZEZz09"},
+			success(res){
+				console.log(res);return;
+				that.setData({
+					valid:res.valid,
+					failure:res.failure
+				})
+			},
+			error(res){
+				if(res == 5000){
+					wx.showModal({
+						title:"请先登录",
+						content:"是否确定去登录",
+						showCancel:true,
+						confirmColor:"#E61F18",
+						success(res){
+							if(res.confirm){//点击确定
+								wx.navigateTo({
+									url:"/pages/login/login"
+								})
+							}
+						}
+					})
+				}
+			}
+		})
+	},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

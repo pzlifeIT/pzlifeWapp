@@ -145,3 +145,51 @@ page {
     height: 23rpx;
     margin: 28.5rpx 10rpx;
 }
+.ucNum{
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	margin-top: 25rpx;
+}
+.ucNum .num{
+	font-size: 40rpx;
+	color: #E61F18;
+}
+.ucNum .text{
+	font-size: 24rpx;
+	color: 30rpx;
+	display: inline-block;
+	line-height: 60rpx;
+	height: 52rpx;
+	margin-left: 10rpx;
+}
+.vid{
+	/* width: 68rpx; */
+	overflow: hidden;
+	height: 28rpx;
+	border-radius: 10rpx;
+	background: #ffffff;
+	font-size: 22rpx;
+	color: #E61F18;
+	display: inline-block;
+	float: left;
+	margin: 106rpx auto;
+	margin-left: 10rpx;
+}
+.vid text{
+	margin: 0 12rpx;
+}
+.diamond-card{
+	width: 215rpx;
+	height: 192rpx;
+	position: absolute;
+	bottom: -80rpx;
+	right: 0;
+	z-index: -1;
+}
+.diamond-card image{
+	width: 215rpx;
+	height: 192rpx;
+}

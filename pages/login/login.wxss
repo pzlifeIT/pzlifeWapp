@@ -28,6 +28,7 @@ image{
 	color: #fff;
 	font-size: 28rpx;
 	margin-bottom: 40rpx;
+	border-radius: 0;
 }
 .phone{
 	width: 707rpx;

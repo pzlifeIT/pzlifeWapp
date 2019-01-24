@@ -1,7 +1,7 @@
 {
 	"pages": [
-		"pages/category/category",
 		"pages/index/index",
+    "pages/category/category",
 		"pages/logs/logs",
 		"pages/collect/collect",
 		"pages/cart/cart",
@@ -18,7 +18,9 @@
 		"pages/login/captchaLogin/captchaLogin",
 		"pages/login/passLogin/passLogin",
 		"pages/paystatus/paystatus",
-		"pages/comfirOrder/comfirOrder"
+		"pages/comfirOrder/comfirOrder",
+    "pages/search/search",
+    "pages/my/myInfo/myInfo"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

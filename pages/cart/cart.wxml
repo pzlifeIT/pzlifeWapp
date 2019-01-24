@@ -1,12 +1,12 @@
 <!--pages/cart/cart.wxml-->
-<view wx:if="{{goods}}">
-<view class='cart_goods' >
+<view wx:if="{{valid || failure}}">
+<view class='cart_goods' wx:for="{{valid}}" wx:key="index">
   <view class='shop_name'>
     <radio-group>
-      <radio checked='' color='#e61f18' /><text>洋洋岛</text>
+      <radio checked='' color='#e61f18' /><text>{{item.shop_name}}</text>
     </radio-group>
   </view>
-  <view class='goods_data'>
+  <view class='goods_data' wx:for="{{item.goods}}" wx:for-index="goods-index" wx:for-item="goods" wx:key="goods-index">
     <view class='radio'>
       <radio-group class="goods_radio">
         <radio checked='' color='#e61f18' />
@@ -14,19 +14,19 @@
     </view>
   
     <view class='goods_img'>
-      <image src=''></image>
-      <view class='supplier_name'><text>黄家月月饼</text></view>
+      <image src='{{goods.sku_image}}'></image>
+      <view class='supplier_name'><text>{{goods.supplier_name}}</text></view>
     </view>
     <view class='goods_desc'>
-      <text class='goods_title'>柚见家月</text>
-      <text class='goods_subtitle'>五仁叉烧 500g</text>
-      <text class='goods_price'>￥69.00</text>
+      <text class='goods_title'>{{goods.goods_name}}</text>
+      <text class='goods_subtitle'>{{goods.subtitle}}</text>
+      <text class='goods_price'>￥{{goods.retail_price}}</text>
       <text class='rebate'>钻石返利</text><text class='rebate_money'>￥8.00</text>
     </view>
     <view class='sum'>
       <view class='border'>
         <view class='jian' bindtap='jian'>-</view>
-        <input class='num' type='text' value='1' />
+        <input class='num' type='text' value='{{goods.buy_num}}' />
         <view class='jia' bindtap='jia'>+</view>
       </view>
     </view>
@@ -34,100 +34,7 @@
       <image src='/pages/images/images/del.png'></image>
     </view>
   </view>
-    <view class='goods_data'>
-    <view class='radio'>
-      <radio-group class="goods_radio">
-        <radio checked='' color='#e61f18' />
-      </radio-group>
-    </view>
-  
-    <view class='goods_img'>
-      <image src=''></image>
-      <view class='supplier_name'><text>黄家月月饼</text></view>
-    </view>
-    <view class='goods_desc'>
-      <text class='goods_title'>柚见家月</text>
-      <text class='goods_subtitle'>五仁叉烧 500g</text>
-      <text class='goods_price'>￥69.00</text>
-      <text class='rebate'>钻石返利</text><text class='rebate_money'>￥8.00</text>
-    </view>
-    <view class='sum'>
-      <view class='border'>
-        <view class='jian'>-</view>
-        <input class='num' type='text' value='1' />
-        <view class='jia'>+</view>
-      </view>
-    </view>
-    <view class='del' bindtap='del'>
-      <image src='/pages/images/images/del.png'></image>
-    </view>
-  </view>
 </view>
-
-<view class='cart_goods'>
-  <view class='shop_name'>
-    <radio-group>
-      <radio checked='' color='#e61f18' /><text>洋洋岛</text>
-    </radio-group>
-  </view>
-  <view class='goods_data'>
-    <view class='radio'>
-      <radio-group class="goods_radio">
-        <radio checked='' color='#e61f18' />
-      </radio-group>
-    </view>
-  
-    <view class='goods_img'>
-      <image src=''></image>
-      <view class='supplier_name'><text>黄家月月饼</text></view>
-    </view>
-    <view class='goods_desc'>
-      <text class='goods_title'>柚见家月</text>
-      <text class='goods_subtitle'>五仁叉烧 500g</text>
-      <text class='goods_price'>￥69.00</text>
-      <text class='rebate'>钻石返利</text><text class='rebate_money'>￥8.00</text>
-    </view>
-    <view class='sum'>
-      <view class='border'>
-        <view class='jian'>-</view>
-        <input class='num' type='text' value='1' />
-        <view class='jia'>+</view>
-      </view>
-    </view>
-    <view class='del'>
-      <image src='/pages/images/images/del.png'></image>
-    </view>
-  </view>
-  <view class='goods_data'>
-    <view class='radio'>
-      <radio-group class="goods_radio">
-        <radio checked='' color='#e61f18' />
-      </radio-group>
-    </view>
-  
-    <view class='goods_img'>
-      <image src=''></image>
-      <view class='supplier_name'><text>黄家月月饼</text></view>
-    </view>
-    <view class='goods_desc'>
-      <text class='goods_title'>柚见家月</text>
-      <text class='goods_subtitle'>五仁叉烧 500g</text>
-      <text class='goods_price'>￥69.00</text>
-      <text class='rebate'>钻石返利</text><text class='rebate_money'>￥8.00</text>
-    </view>
-    <view class='sum'>
-      <view class='border'>
-        <view class='jian'>-</view>
-        <input class='num' type='text' value='1' />
-        <view class='jia'>+</view>
-      </view>
-    </view>
-    <view class='del' bindtap='del'>
-      <image src='/pages/images/images/del.png'></image>
-    </view>
-  </view>
-</view>
-
 <view class='lose'>
   <view class='shop_name lose_shop_name'>
       <view class='lose_title'><text>已下架商品</text></view>

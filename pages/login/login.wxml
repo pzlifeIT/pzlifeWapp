@@ -3,7 +3,11 @@
 	<view class="logo">
 		<image src="/pages/images/images/logo1.png"></image>
 	</view>
-	<view class="wechat">微信登录</view>
-	<view class="phone">手机号登录</view>
-	<view class="phone-login">手机号注册</view>
+	<button class="wechat" open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo' lang="zh_CN" >微信登录</button>
+  <navigator url='/pages/login/captchaLogin/captchaLogin' hover-class="none">
+    <view class="phone">手机号登录</view>
+  </navigator>
+  <navigator url='/pages/login/register/register' hover-class="none">
+    	<view class="phone-login">手机号注册</view>
+  </navigator>
 </view>

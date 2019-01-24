@@ -40,7 +40,7 @@
 </view>
 <!-- 选择规格弹出层 -->
 <view class='mask' catchtouchmove='preventTouchMove' bindtap='hideModel' wx:if='{{showModel}}'></view>
-<view class='pop' wx:if='{{showModel}}'>
+<view class='pop' wx:if='{{showModel}}' catchtouchmove='preventTouchMove'>
   <view class='goods_data'>
     <view class='goods_thumb'>
       <image src=''></image>
@@ -51,6 +51,7 @@
       <text class='present'>赠送积分：178分</text>
     </view>
   </view>
+  <scroll-view class='pop-scroll' scroll-y="true">
   <view class='param'>
     <view  wx:for="{{spec}}" wx:key="{{index}}">
       <view class='spec_name'><text>{{item.spec}}</text></view>
@@ -68,6 +69,7 @@
     </view>
     
   </view>
+  </scroll-view>
 </view>
 <!-- 领券弹出层 -->
 <!-- <scroll-view class='coupon_pop'>

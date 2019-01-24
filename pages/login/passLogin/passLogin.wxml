@@ -9,7 +9,9 @@
 	<view class="phone">
 		<input class="input-captcha" type="number" placeholder="请输入验证码" placeholder-class="input-place" adjust-position="true" />
 	</view>
-	<view class="checkout">验证码登录</view>
+  <navigator url='/pages/login/captchaLogin/captchaLogin' hover-class="none" >
+    <view class="checkout">验证码登录</view>
+  </navigator>
 	<view class="register">登录</view>
 </view>
 

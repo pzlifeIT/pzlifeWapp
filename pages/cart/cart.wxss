@@ -1,7 +1,7 @@
 /* pages/cart/cart.wxss */
 page{
   background-color: #f7f7f7;
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
 }
 radio{
@@ -82,6 +82,8 @@ radio-group,lose_title{
   background: #ffe4aa;
   color: #f99f36;
   font-size: 24rpx;
+  text-align: center;
+  line-height: 30rpx;
 }
 .goods_desc .rebate_money{
   font-size: 26rpx;
@@ -120,15 +122,15 @@ radio-group,lose_title{
   color: #202020;
 }
 .del{
-  width: 28rpx;
-  height: 34rpx;
+  width: 50rpx;
+  height: 50rpx;
   position: absolute;
   right: 30rpx;
   bottom: 15rpx;
 }
 .del image{
-  width: 100%;
-  height: 100%;
+  width: 28rpx;
+  height: 34rpx;
 }
 .radio{
   float: left;

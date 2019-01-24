@@ -47,12 +47,6 @@
 				},
 				{
 					"id": -1,
-					"name": "cate_goods",
-					"pathName": "pages/category/goods/goods",
-					"query": ""
-				},
-				{
-					"id": -1,
 					"name": "cart",
 					"pathName": "pages/cart/cart",
 					"query": ""
@@ -67,12 +61,6 @@
 					"id": -1,
 					"name": "orderDetail",
 					"pathName": "pages/order/orderDetail/orderDetail",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "wuliu",
-					"pathName": "pages/order/logisticsInfo/logisticsInfo",
 					"query": ""
 				},
 				{
@@ -104,6 +92,17 @@
 					"name": "pay",
 					"pathName": "pages/paystatus/paystatus",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "info",
+					"pathName": "pages/my/myInfo/myInfo"
 				}
 			]
 		}

@@ -13,10 +13,12 @@
 </view> -->
 <view class="header">
 	<image class="logo din fl" src="../images/images/logo.png" />
+  <navigator url='/pages/search/search'>
 	<view class="index-search din fl">
 		<icon type="search" size="34rpx" />
-		<input class="search-inp din fr" type="text" placeholder="输入您当前要搜索的商品" />
+		<input class="search-inp din fr" type="text" placeholder="输入您当前要搜索的商品" disabled='disabled' />
 	</view>
+  </navigator>
 </view>
 <!-- 轮播图 -->
 <swiper class='pz-swiper' autoplay='true' indicator-dots="true" circular='true'>

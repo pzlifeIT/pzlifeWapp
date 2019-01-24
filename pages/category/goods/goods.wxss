@@ -27,7 +27,9 @@ page{
 .one_goods .title{
  font-size: 29rpx;
  color: rgb(34, 34, 34);
-
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .one_goods .subtitle{
   font-size: 24rpx;

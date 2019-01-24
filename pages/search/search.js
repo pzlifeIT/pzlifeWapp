@@ -1,16 +1,13 @@
-// pages/login/login.js
-const app = getApp();
+// pages/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-	canIUse:wx.canIUse("button.open-type.getUserInfo")
+
   },
-  bindGetUserInfo:function(e){
-	  app.getUserInfo()
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
