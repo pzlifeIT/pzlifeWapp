@@ -39,7 +39,7 @@ App({
 	},
 	wxrequest: function(obj) {
 		wx.request({
-			url: 'http://wwwapi.pzlife.vip/' + obj.url,
+      url: 'http://wwwapi.pzlife.vip/' + obj.url,
 			data: obj.data || {},
 			method: obj.method || 'POST',
 			dataType: JSON,
@@ -70,15 +70,6 @@ App({
 	getUserInfo:function(e){
 		wx.login({
 			success(res) {
-// 				if(res.code){
-// 					this.wxrequest({
-// 						url:"",
-// 						data:{code:res.code},
-// 						success(res){
-// 							
-// 						}
-// 					})
-// 				}
 console.log(res)
 		wx.getUserInfo({
 			success(reslut) {

@@ -1,38 +1,15 @@
 <!--pages/category/goods/goods.wxml-->
 <view class='goods'>
-<navigator url='/pages/goods/detail'>
-  <view class='one_goods'>
-    <view class='img'>
-      <image class='goods_img' src='../images/mang.png'></image>
-    </view> 
-    <text class='title'>海派充油拌面海派充油拌面海派充油拌面</text>
-    <text class='subtitle'>2人份316g</text>
-    <text class='price'>￥69.00</text>
-  </view>
-</navigator>
-  <view class='one_goods'>
-    <view class='img'>
-      <image class='goods_img' src='../images/mang.png'></image>
-    </view> 
-    <text class='title'>海派充油拌面</text>
-    <text class='subtitle'>2人份316g</text>
-    <text class='price'>￥69.00</text>
-  </view>
-  <view class='one_goods'>
-    <view class='img'>
-      <image class='goods_img' src='../images/mang.png'></image>
-    </view> 
-    <text class='title'>海派充油拌面</text>
-    <text class='subtitle'>2人份316g</text>
-    <text class='price'>￥69.00</text>
-  </view>
-  <view class='one_goods'>
-    <view class='img'>
-      <image class='goods_img' src='../images/mang.png'></image>
-    </view> 
-    <text class='title'>海派充油拌面</text>
-    <text class='subtitle'>2人份316g</text>
-    <text class='price'>￥69.00</text>
+
+  <view class='one_goods' wx:for="{{goods}}" wx:key="{{item.id}}">
+		<navigator url='/pages/goods/detail?id={{item.id}}' hover-class="none">
+			<view class='img'>
+				<image class='goods_img' src='{{item.image}}'></image>
+			</view> 
+			<text class='title'>{{item.goods_name}}</text>
+			<text class='subtitle'>{{item.subtitle}}</text>
+			<text class='price'>￥{{item.min_retail_price}}</text>
+		</navigator>
   </view>
 </view>
 

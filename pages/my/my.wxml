@@ -23,7 +23,7 @@
 	<view class="diamond-card" wx:if="{{userInfo.user_identity == 1}}">
 		<image src="../images/images/diamond.png"></image>
 	</view>
-</view>
+</view> 
 
 <view class="userCost" >
   <view class="userCoupon" >

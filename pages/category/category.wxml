@@ -1,12 +1,17 @@
 <!--pages/category/category.wxml-->
 <view class='search_head'>
-  <view class='search'>
-    <icon type='search' class='search_icon fl' size='34rpx'/>
-    <text class="search_cate din fl" >搜索品质生活方案</text>
-  </view>
+	<navigator url="/pages/search/search" hover-class="none">
+		<view class='search'>
+			<icon type='search' class='search_icon fl' size='34rpx'/>
+			<text class="search_cate din fl" >搜索品质生活方案</text>
+		</view>
+	</navigator>
 </view>
 <view class='cate_content'>
   <scroll-view scroll-y="true" scroll-top="0" class='cate_left'>
+		<view class='cate_text {{item.id == ind?"active":"_active"}}' id="{{ind}}" wx:for='{{firstSub}}' wx:key='{{item.id}}' bindtap='selectSub' data-sub-id="{{item.id}}">
+		  <text class=''>{{item.subject}}</text>
+		</view>
     <view class='cate_text {{item.id==idx?"active":"_active"}}' wx:for='{{firstCate}}' wx:key='{{item.id}}' bindtap='selectCate' data-cate-id="{{item.id}}">
       <text class=''>{{item.type_name}}</text>
     </view>
@@ -19,7 +24,7 @@
     <view class='wai' wx:for='{{secondCate}}' wx:key='{{item.id}}'>
       <view class='cate_two'>
         <view><text class='cate_title'>{{item.type_name}}</text></view>
-        <navigator url='goods/goods' wx:for="{{item._child}}" >
+        <navigator url='goods/goods?cate_id={{item.id}}' wx:for="{{item._child}}" hover-class="none">
           <view class='cate_three' >
             <image class='cate_banner' src='http://imagecache.pzlife.vip/o_1cujhrkh9vm024fh9f8vr17arc.jpg?imageMogr2/thumbnail/120x'></image>
             <text class='cate_three_title'>{{item.type_name}}</text>
@@ -27,6 +32,18 @@
        </navigator>
       </view>
     </view>
+		
+		<view class='wai' wx:for='{{showSub}}' wx:key='{{item.id}}'>
+		  <view class='cate_two'>
+		    <view><text class='cate_title'>{{item.subject}}</text></view>
+		    <navigator url='goods/goods?sub_id={{item.id}}' wx:for="{{item._child}}" hover-class="none">
+		      <view class='cate_three' >
+		        <image class='cate_banner' src='http://pzlifeimage.pzlife.vip{{item.goods_subject_image}}'></image>
+		        <text class='cate_three_title'>{{item.subject}}</text>
+		      </view>
+		   </navigator>
+		  </view>
+		</view>
   </scroll-view>
 
 </view>

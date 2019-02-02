@@ -43,7 +43,7 @@ Page({
 		let that = this
 		app.wxrequest({
 			url:"index/cart/getUserCart",
-			data:{paramUid:"RVYvaEw2Wk1TeXlnUjdlb2RHc3ZEZz09"},
+			data:{code:"RVYvaEw2Wk1TeXlnUjdlb2RHc3ZEZz09"},
 			success(res){
 				console.log(res);return;
 				that.setData({
@@ -52,6 +52,8 @@ Page({
 				})
 			},
 			error(res){
+				console.log(res)
+				return;
 				if(res == 5000){
 					wx.showModal({
 						title:"请先登录",

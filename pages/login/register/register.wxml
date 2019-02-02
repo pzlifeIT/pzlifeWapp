@@ -3,12 +3,13 @@
 	<view class="logo">
 		<image src="/pages/images/images/logo1.png"></image>
 	</view>
+	<form></form>
 	<view class="phone">
-		<input class="input-phone" type="number" placeholder="请输入手机号" maxlength="11" placeholder-class="input-place" adjust-position="true" />
+		<input class="input-phone" type="number" placeholder="请输入手机号" maxlength="11" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="phone"/>
 	</view>
 	<view class="phone">
-		<input class="input-captcha" type="number" placeholder="请输入验证码" placeholder-class="input-place" adjust-position="true" />
-		<view class="get-captcha">获取验证码</view>
+		<input class="input-captcha" type="number" placeholder="请输入验证码" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="code"/>
+		<button class="get-captcha" hover-class="none" bindtap="getCaptcha" disabled="{{disabled}}">{{getCode}}</button>
 	</view>
 	<view class="phone">
 		<input class="input-phone" type="text" password="true" placeholder="请输入密码" placeholder-class="input-place" adjust-position="true" />

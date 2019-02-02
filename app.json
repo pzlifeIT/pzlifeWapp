@@ -56,16 +56,5 @@
 				"selectedIconPath": "pages/images/my1.png"
 			}
 		]
-	},
-	"annotation": {
-		"content": "这里写注释，键名是字段，键值是注释",
-		"tabBar": {
-			"tabBar": "底部导航栏",
-			"list": "导航栏列表",
-			"pagePath": "页面路径",
-			"text": "导航栏文字",
-			"iconPath": "导航栏图标",
-			"selectIconPath": "选中时的图标"
-		}
 	}
 }

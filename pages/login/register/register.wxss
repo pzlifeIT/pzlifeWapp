@@ -41,11 +41,24 @@ input{
 	display: inline-block;
 }
 .get-captcha{
+	width: 150rpx;
+	height: 88rpx;
 	line-height: 88rpx;
 	color: #E61F18;
 	font-size: 30rpx;
 	float: right;
 	display: inline-block;
+	outline: none;
+	padding: 0;
+	background: #FFFFFF;
+}
+.get-captcha[disabled]:not([type]) {
+	color: #E61F18;
+	background: #FFFFFF;
+}
+
+.get-captcha::after{
+	border: none;
 }
 .register{
 	width: 710rpx;
