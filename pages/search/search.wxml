@@ -1,0 +1,68 @@
+ <!--pages/search/search.wxml-->
+<view class='search_head'>
+  <view class='search'>
+    <icon type='search' class='search_icon fl' size='34rpx'/>
+    <input class="search_cate din fl" placeholder="搜索品质方案" placeholder-class="pl-class"/>
+  </view>
+  <view class="sea-button">
+	  搜索
+  </view>
+</view>
+<!-- 搜索历史 -->
+<view class="history-wai">
+	<view class="history">
+		<view class="history-head">
+			<text class="head-left">最近搜索</text>
+			<view class="del">
+				<image class="del-img" src="../images/images/del.png"></image>
+			</view>
+		</view>
+		<view class="history-list">
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">月饼</text></view> 
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">月饼</text></view>
+		</view>
+	</view>
+</view>
+<!-- 大家都在搜 -->
+<view class="history-wai">
+	<view class="history">
+		<view class="history-head">
+			<text class="head-left">大家都在搜</text>
+		</view>
+		<view class="history-list">
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">中秋月饼</text></view>
+			<view class="history-one"><text class="text">月饼</text></view>
+		</view>
+	</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+

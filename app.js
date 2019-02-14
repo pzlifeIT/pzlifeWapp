@@ -10,6 +10,7 @@ App({
         wx.login({
                 success: res => {
                     // 发送 res.code 到后台换取 openId, sessionKey, unionId
+
                 }
             })
             // 获取用户信息
@@ -37,19 +38,26 @@ App({
         userInfo: null
     },
     wxrequest: function(obj) {
-        let data = obj.data || {}
-        data.source = '4'
         wx.request({
             url: 'http://wwwapi.pzlife.vip/' + obj.url,
-            data: data,
+            data: obj.data || {},
             method: obj.method || 'POST',
             dataType: JSON,
             header: {
                 'content-type': 'application/json' // 默认值
             },
             success(res) {
-                if (typeof obj.success == 'function') {
-                    obj.success(JSON.parse(res.data))
+                // 				console.log(res.data)
+                // 				return;
+                let result = JSON.parse(res.data);
+                if (result.code == 200) {
+                    if (typeof obj.success == 'function') {
+                        obj.success(result)
+                    }
+                } else {
+                    if (typeof obj.error == 'function') {
+                        obj.error(result.code)
+                    }
                 }
             },
             fail(err) {
@@ -58,5 +66,14 @@ App({
                 }
             }
         })
+    },
+    getUserInfo: function(e) {
+        let logincode, info
+        wx.login({
+            success(res) {
+                logincode = res.code
+            }
+        })
+        return logincode
     }
 })

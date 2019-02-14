@@ -1,0 +1,111 @@
+/* pages/search/search.wxss */
+
+page {
+	height: 100%;
+	overflow: hidden;
+}
+
+.search_head {
+	height: 80rpx;
+	margin-bottom: 10rpx;
+	overflow: auto;
+	border-bottom: 1rpx solid #f7f7f7;
+}
+
+.search {
+	width: 644rpx;
+	height: 60rpx;
+	margin: 10rpx;
+	border-radius: 2rpx;
+	background-color: #f7f7f7;
+	float: left;
+}
+
+.search .search_icon {
+	margin: 13rpx 8rpx 13rpx 18rpx;
+}
+
+.search .search_cate {
+	line-height: 60rpx;
+	font-size: 30rpx;
+	width: 582rpx;
+	margin-top: 5rpx;
+}
+
+.pl-class {
+	font-size: 30rpx;
+	color: #B6B6B6;
+}
+.sea-button{
+	height: 60rpx;
+	width: 86rpx;
+	font-size: 30rpx;
+	color: #202020;
+	float: left;
+	text-align: center;
+	line-height: 60rpx;
+	margin-top: 10rpx;
+}
+.history-wai{
+	width: 750rpx;
+	overflow: hidden;
+}
+.history{
+	width: 736rpx;
+	overflow: hidden;
+	padding: 0 7rpx;
+	margin-top: 44rpx;
+}
+.history-head{
+	width: 750rpx;
+	height: 60rpx;
+	overflow: hidden;
+	margin-bottom: 20rpx;
+}
+.head-left{
+	font-size: 30rpx;
+	color: #202020;
+	margin-left: 19rpx;
+}
+.del{
+	width: 60rpx;
+	height: 60rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: right;
+}
+.del-img{
+	width: 25rpx;
+	height: 28rpx;
+}
+.history-list{
+	width: 100%;
+	overflow: hidden;
+}
+.history-one{
+	height: 48rpx;
+	overflow: hidden;
+	background: #F7F7F7;
+	text-align: center;
+	line-height: 48rpx;
+	color: #404040;
+	font-size: 28rpx;
+	margin: 0 15rpx 30rpx 15rpx;
+	float: left;
+	
+}
+.text{
+	margin: 0 19rpx;
+}
+
+
+
+
+
+
+
+
+
+
+

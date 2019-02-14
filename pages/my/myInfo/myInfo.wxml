@@ -1,0 +1,21 @@
+<!--pages/my/myInfo/myInfo.wxml-->
+<view class="user-info">
+	<text class="title">用户名</text>
+	<input class="cont" placeholder-class=""  value="{{name}}" disabled="disabled"/>
+</view>
+<view class="user-info">
+	<text class="title">买主号</text>
+	<input class="cont" placeholder-class=""  value="A21431" disabled="disabled"/>
+</view>
+<view class="user-info">
+	<text class="title">账号</text>
+	<input class="cont" placeholder-class=""  value="微信" disabled="disabled"/>
+</view>
+<view class="user-info">
+	<text class="title">手机号</text>
+	<input class="cont" placeholder-class=""  value="{{mobile}}" disabled="disabled"/>
+</view>
+<view class="footer">
+	<view class="left" bindtap='back'>取消</view>
+	<view class="right">保存</view>
+</view>

@@ -465,3 +465,8 @@ swiper-item {
     padding: 27rpx 40rpx 33rpx 41rpx;
     writing-mode: vertical-lr;
 }
+::-webkit-scrollbar{
+  width: 0rpx;
+  height: 0rpx;
+  color: transparent;
+}

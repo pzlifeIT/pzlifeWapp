@@ -1,0 +1,19 @@
+<!--pages/login/captchaLogin/captchaLogin.wxml-->
+<!--pages/login/register/register.wxml-->
+<view class="centert">
+	<view class="logo">
+		<image src="/pages/images/images/logo1.png"></image>
+	</view>
+	<view class="phone">
+		<input class="input-phone" type="number" placeholder="请输入手机号" maxlength="11" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="phone" />
+	</view>
+	<view class="phone">
+		<input class="input-captcha" type="number" placeholder="请输入验证码" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="code"/>
+		<button class="get-captcha" bindtap="getcode" disabled="{{disabled}}">{{getcode}}</button>
+	</view>
+  <navigator url='/pages/login/passLogin/passLogin' hover-class="none">
+    <view class="checkout">密码登录</view>
+  </navigator>
+	<button class="register" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
+</view>
+

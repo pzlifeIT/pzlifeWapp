@@ -101,8 +101,10 @@
 	<view class="or-footer">
 		<view class="footer-left"><text class="sum">共2件 共付：<text class="total">￥138.00</text></text></view>
 		<view class="footer-right">
-			<view class="pay check">查看物流</view>
-			<view class="pay">确定收货</view>
+			<navigator url="/pages/order/logisticsInfo/logisticsInfo">
+				<view class="pay check">查看物流</view>
+			</navigator>
+				<view class="pay" bindtap="comfir">确定收货</view>
 		</view>
 	</view>
 </view>
@@ -135,3 +137,24 @@
 		</view>
 	</view>
 </view>
+<!-- 删除弹框 -->
+<view class='obscuration' wx:if="{{mask}}" catchtouchmove='preventTouchMove' bindtap='hidemask'></view>
+<view class='mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>
+  <view class='pop' catchtap='none'>
+    <view class='hint'>是否确定收货</view>
+    <view class='collect' bindtap="hidemask">取消</view>
+    <view class='delete'>确定</view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+

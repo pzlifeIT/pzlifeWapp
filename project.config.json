@@ -37,18 +37,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 13,
 			"list": [
 				{
 					"id": 0,
 					"name": "goods",
 					"pathName": "pages/goods/detail",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "cate_goods",
-					"pathName": "pages/category/goods/goods",
 					"query": ""
 				},
 				{
@@ -71,8 +65,65 @@
 				},
 				{
 					"id": -1,
-					"name": "wuliu",
-					"pathName": "pages/order/logisticsInfo/logisticsInfo"
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "logi",
+					"pathName": "pages/login/register/register",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "captcha",
+					"pathName": "pages/login/captchaLogin/captchaLogin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pass",
+					"pathName": "pages/login/passLogin/passLogin",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "pay",
+					"pathName": "pages/paystatus/paystatus",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "info",
+					"pathName": "pages/my/myInfo/myInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/login/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"scene": null
 				}
 			]
 		}

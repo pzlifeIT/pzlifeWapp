@@ -2,31 +2,49 @@
 <view >
 
 </view>
-<view class="userheader" >
-  <view class="headPhoto din fl" >
-    <image src="../images/images/logo_03.png" />
-  </view>
-  <text class="userLogin din fl">请登录</text>
+<view class="userheader" wx:if="{{!loginStatus}}">
+  <navigator url='/pages/login/login' hover-class="none">
+    <view class="headPhoto din fl" >
+      <image src="../images/images/logo_03.png" />
+    </view>
+    <text class="userLogin din fl">请登录</text>
+  </navigator>
   <image class="userBack" src="../images/images/myback_02.png" />
 </view>
+<view class="userheader" wx:if="{{loginStatus}}">
+  <navigator url='/pages/my/myInfo/myInfo?name={{userInfo.nick_name}}&phone={{userInfo.mobile}}' hover-class="none">
+    <view class="headPhoto din fl" >
+      <image src="{{userInfo.avatar}}" />
+    </view>
+    <text class="userLogin din fl">{{userInfo.nick_name}}</text>
+		<view class="vid"><text>{{userInfo.user_vid}}</text></view>
+  </navigator>
+  <image class="userBack" src="../images/images/myback_02.png" />
+	<view class="diamond-card" wx:if="{{userInfo.user_identity == 1}}">
+		<image src="../images/images/diamond.png"></image>
+	</view>
+</view> 
 
 <view class="userCost" >
   <view class="userCoupon" >
-    <image class="ucIcon" src="../images/images/12121_05.png" />
+    <image class="ucIcon" src="../images/images/12121_05.png" wx:if="{{loginStatus == false}}"/>
+		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">0</text><text class="text">张</text></view>
     <text class="userText" >优惠券</text>
   </view>
   <view class="userIntegral" >
-    <image  class="ucIcon" src="../images/images/12121_07.png"  />
+    <image  class="ucIcon" src="../images/images/12121_07.png" wx:if="{{loginStatus === false}}" />
+		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">{{userInfo.integral}}</text><text class="text">分</text></view>
     <text class="userText" >购物积分</text>
   </view>
   <view class="userMoney" >
-    <image  class="ucIcon" src="../images/images/12121_10.png"  />
+    <image  class="ucIcon" src="../images/images/12121_10.png" wx:if="{{loginStatus ==false}}" />
+		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">{{userInfo.balance}}</text><text class="text">元</text></view>
     <text class="userText" >我的商票</text>
   </view>
 </view>
 
 <view class="userorder">
-  <navigator url='/pages/order/order'>
+  <navigator url='/pages/order/order' hover-class="none">
     <view  class="uoHeader">
       <text  class="uoHeaderText" >我的订单</text>
       <view class="uoHeaderLook din fr" >查看全部<image class="uoimg din fr" src="../images/images/jt_18.png" alt=""/></view>

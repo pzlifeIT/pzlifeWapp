@@ -1,0 +1,18 @@
+
+<view class="centert">
+	<view class="logo">
+		<image src="/pages/images/images/logo1.png"></image>
+	</view>
+	<view class="phone">
+		<input class="input-phone" type="number" placeholder="请输入手机号" maxlength="11" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="phone" />
+	</view>
+	<view class="phone">
+		<input class="input-captcha" type="number" placeholder="请输入密码" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="pass" />
+	</view>
+  <navigator url='/pages/login/captchaLogin/captchaLogin' hover-class="none" >
+    <view class="checkout">验证码登录</view>
+  </navigator>
+	<view class="register" bindtap="login">登录</view>
+</view>
+
+

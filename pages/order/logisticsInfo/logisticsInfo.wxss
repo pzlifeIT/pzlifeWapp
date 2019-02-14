@@ -1,0 +1,169 @@
+/* pages/order/logisticsInfo/logisticsInfo.wxss */
+page{
+	background: #F7F7F7;
+}
+.address{
+	width: 742rpx;
+	height: 120rpx;
+	background: #fff;
+	padding-left: 8rpx;
+	margin-top: 19rpx;
+}
+.address-info .info-text{
+	font-size: 28rpx;
+	color: #888888;
+}
+.address-info .info-name-phone{
+	font-size: 28rpx;
+	color: #202020;
+}
+.address-detail .detail-text{
+	font-size: 28rpx;
+	color: #888888;
+}
+.address-detail .detail-info{
+	font-size: 28rpx;
+	color: #202020;
+}
+.exp-info{
+	width: 750rpx;
+	display: flex;
+	justify-content: center;
+	margin-top: 70rpx;
+}
+.info{
+	width: 555rpx;
+}
+
+.new-text{
+	width: 555rpx;
+	position: relative;
+}
+.status{
+	width: 50rpx;
+	float: left;
+}
+.status-shou{
+	width: 50rpx;
+	height: 50rpx;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+	transform: rotate(45deg);
+	background: #E61F18;
+	color: #fff;
+	font-size: 28rpx;
+	text-align: center;
+	line-height: 50rpx;
+	position: absolute;
+	top: 30%;
+	left: 0;
+}
+.wenzi{
+	display: inline-block;
+	width: 50rpx;
+	height: 50rpx;
+	transform: rotate(-45deg);
+}
+.status-fa{
+	width: 48rpx;
+	height: 48rpx;
+	background: #E61F18;
+	color: #fff;
+	font-size: 28rpx;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 48rpx;
+}
+.yuan{
+	width: 32rpx;
+	height: 32rpx;
+	border-radius: 50%;
+	background: #404040;
+}
+.status-text{
+	width: 555rpx;
+	float: left;
+	/* position: relative; */
+	margin-bottom: 50rpx;
+}
+.shou{
+	position: relative;
+}
+.dian{
+	position: relative;
+}
+.dian::before{
+	content: "";
+	width: 32rpx;
+	height: 32rpx;
+	border-radius:50% ;
+	background: #404040;
+	/* margin-right: 31rpx; */
+	display: inline-block;
+	position: absolute;
+	top: 30%;
+	left: 10rpx;
+}
+.faa{
+	position: relative;
+}
+.new-text .faa::before{
+	content: "发";
+	text-align: center;
+	line-height: 50rpx;
+	color: #fff;
+	width: 50rpx;
+	height: 50rpx;
+	border-radius: 50%;
+	background: #E61F18;
+	/* margin-right: 21rpx; */
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 30%;
+}
+/* .hidden{
+	width: 29rpx;
+	height: 50rpx;
+	/* float: left; 
+	display: inline-block;
+} */
+.text-model{
+	/* float: left; */
+	margin-left: 70rpx;
+	display: inline-block;
+}
+.shou{
+	color: #E61F18;
+	font-size: 28rpx;
+}
+.new{
+	font-size: 28rpx;
+	color: #404040;
+}
+.old{
+	font-size: 28rpx;
+	color: #888888;
+}
+.new-text{
+	float: left;
+}
+.exp-time{
+	display: block;
+}
+.line{
+	height: 73%;
+	background: #B6B6B6;
+	border: 1rpx solid #B6B6B6;
+	position: absolute;
+	left: 25rpx;
+	top: 10%;
+}
+
+
+
+
+
+
+

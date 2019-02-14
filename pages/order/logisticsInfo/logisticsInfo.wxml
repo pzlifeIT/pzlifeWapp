@@ -1,0 +1,55 @@
+<!--pages/order/logisticsInfo/logisticsInfo.wxml-->
+<view class="address">
+	<view class="address-info">
+		<text class="info-text">运单号：</text>
+		<text class="info-name-phone">12345678952432361545</text>
+	</view>
+	<view class="address-detail">
+		<text class="detail-text">快递公司：</text>
+		<text class="detail-info">圆通快递</text>
+	</view>
+</view>
+<view class="exp-info">
+	<view class="info">
+		<view class="status"></view>
+		<view class="new-text">
+			<view class="line"></view>
+			<view class="status-text shou">
+				<view class="shou-line"></view>
+				<view class="status-shou"><text class="wenzi">收</text></view>	
+				<view class="text-model">
+					<text class="track">[收货地址]上海市闵行区宁虹路申滨路爱博二村36号601</text>
+					<text class="exp-time">2018-09-15 12:06:50</text>
+				</view>
+			</view>
+			<view class="status-text new dian">
+				<view class="dian-line"></view>
+				<view class="text-model">
+					<text class="track">[收货地址]上海市闵行区宁虹路申滨路</text>
+					<text class="exp-time">2018-09-15 12:06:50</text>
+				</view>
+			</view>
+			<view class="status-text old dian">
+				<view class="dian-line"></view>
+				<view class="text-model">
+					<text class="track">[收货地址]上海市闵行区宁虹路申滨路爱博二村36号601</text>
+					<text class="exp-time">2018-09-15 12:06:50</text>
+				</view>
+			</view>
+			<view class="status-text old dian">
+				<view class="dian-line"></view>
+				<view class="text-model">
+					<text class="track">[收货地址]上海市闵行区宁虹路申滨路爱博二村36号601</text>
+					<text class="exp-time">2018-09-15 12:06:50</text>
+				</view>
+			</view>
+			<view class="status-text old faa">
+				<view class="fa-line"></view>
+				<view class="text-model">
+					<text class="track">[收货地址]上海市闵行区宁虹路申滨路爱博二村36号601</text>
+					<text class="exp-time">2018-09-15 12:06:50</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,6 +1,6 @@
 /**index.wxss**/
 
-.userinfo {
+/* .userinfo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,12 @@
 .usermotto {
     margin-top: 200px;
 }
-
+ */
+page{
+	background: #F7F7F7;
+	width: 100%;
+	height: 100%;
+}
 .header {
     width: 100%;
     overflow: auto;
@@ -65,4 +70,238 @@
 .pz-swiper image {
     width: 100%;
     height: 375rpx;
+}
+.icon-bar{
+	width: 750rpx;
+	height: 211rpx;
+	background: #fff;
+}
+.slogan{
+	width: 750rpx;
+	height: 44rpx;
+}
+.slogan-one{
+	width: 33.333%;
+	height: 44rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+}
+.slogan-one image{
+	width: 30rpx;
+	height: 30rpx;
+	margin-right: 8rpx;
+	margin-top: 7rpx;
+}
+.slogan-one .slogan-text{
+	font-size: 26rpx;
+	color: #E61F18;
+}
+.icon-botton{
+	width: 750rpx;
+	height: 168rpx;
+}
+.botton-one{
+	width: 25%;
+	height: 168rpx;
+	float: left;
+}
+.icon-img{
+	display: flex;
+	justify-content: center;
+	margin-top: 25rpx;
+}
+.icon-img image{
+	width: 110rpx;
+	height: 98rpx;
+}
+.icon-text{
+	color: #404040;
+	font-size: 28rpx;
+	width: 100%;
+	text-align: center;
+	line-height: 27rpx;
+}
+.scheme{
+	width: 750rpx;
+	overflow: hidden;
+}
+.scheme-title{
+	width: 750rpx;
+	height: 80rpx;
+	text-align: center;
+	line-height: 80rpx;
+	color: #404040;
+	font-size: 32rpx;
+}
+.scheme-lump{
+	width: 750rpx;
+}
+.scheme-main{
+	width: 750rpx;
+	height: 240rpx;
+	margin-bottom: 2rpx;
+}
+.scheme-main image{
+	width: 750rpx;
+	height: 240rpx;
+}
+.scheme-list{
+	width: 750rpx;
+	height: 280rpx;
+	/* overflow: hidden; */
+}
+.scheme-one{
+	width: 248rpx;
+	height: 280rpx;
+	float: left;
+}
+.two{
+	margin: 0 3rpx;
+}
+.scheme-one image{
+	width: 248rpx;
+	height: 280rpx;
+}
+.lump{
+	width: 750rpx;
+	overflow: hidden;
+}
+.lump-one{
+	width: 373rpx;
+	height: 320rpx;
+	margin: 1rpx;
+	float: left;
+}
+.lump-one image{
+	width: 373rpx;
+	height: 320rpx;
+}
+.subject-img{
+	width: 750rpx;
+	
+}
+.subject-img image{
+	width: 750rpx;
+	height: 260rpx;
+}
+.goods-list{
+	width: 750rpx;
+	overflow: hidden;
+}
+.goods-one{
+	width: 186rpx;
+	height: 296rpx;
+	background: #fff;
+	float: left;
+	/* border-right: 1rpx solid #F7F7F7; */
+}
+.goods-img{
+	width: 186rpx;
+	height: 200rpx;
+	display: flex;
+	justify-content: center;
+}
+.goods-img image{
+	width: 186rpx;
+	height: 200rpx;
+}
+.goods-title{
+	width: 100%;
+	font-size: 28rpx;
+	color: #222222;
+	text-align: center;
+	/* line-height: 28rpx; */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 19rpx;
+}
+.goods-price{
+	width: 100%;
+	font-size: 28rpx;
+	color: #E61F18;
+	text-align: center;
+}
+.more{
+	width: 100%;
+	height: 75rpx;
+	display: flex;
+	justify-content: center;
+	background: #fff;
+}
+.more-text{
+	width: 55%;
+	height: 100%;
+	color: #7F7F7F;
+	font-size: 24rpx;
+	text-align: right;
+	line-height: 75rpx;
+}
+.more-img{
+	width: 45%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.more image{
+	width: 34rpx;
+	height: 38rpx;
+	margin-left: 10rpx;
+}
+.left-img{
+	width: 240rpx;
+	height: 462rpx;
+	float: left;
+}
+.left-img image{
+	width: 240rpx;
+	height: 462rpx; 
+}
+.right-goods{
+	overflow: hidden;
+}
+.right-goods-one{
+	width: 251rpx;
+	height: 230rpx;
+	background: #fff;
+	float: left;
+	margin: 1rpx;
+}
+.right-goods-one::before{
+	clear: all;
+}
+.one-img{
+	width: 251rpx;
+	height: 125rpx;
+	display: flex;
+	justify-content: center;
+}
+.one-img image{
+	width: 100%;
+	height: 100%;
+}
+.cate image{
+	width: 374rpx;
+	height: 180rpx;
+}
+.cate-left{
+	margin-right: 1rpx;
+}
+.cate-right{
+	margin-left: 1rpx;
+}
+.like{
+	width: 100%;
+	overflow: hidden;
+}
+.like-one{
+	width: 374rpx;
+	float: left;
+	overflow: hidden;
+}
+.like-img image{
+	width: 374rpx;
+	height: 320rpx;
 }

@@ -7,9 +7,22 @@ Page({
     data: {
         orhead: '1',
         order:true,
-        orderStatus:1
+        orderStatus:1,
+		mask:false
     },
-
+	comfir:function(e){
+		this.setData({
+			mask:true
+		})
+	},
+	 preventTouchMove:function(e){
+	
+	},
+	hidemask:function(e){
+	  this.setData({
+	    mask:false
+	  })
+	},
     /**
      * 生命周期函数--监听页面加载
      */

@@ -1,0 +1,21 @@
+<!--pages/login/register/register.wxml-->
+<view class="centert">
+	<view class="logo">
+		<image src="/pages/images/images/logo1.png"></image>
+	</view>
+	<form></form>
+	<view class="phone">
+		<input class="input-phone" type="number" placeholder="请输入手机号" maxlength="11" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="phone" />
+	</view>
+	<view class="phone">
+		<input class="input-captcha" type="number" placeholder="请输入验证码" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="code"/>
+		<button class="get-captcha" hover-class="none" bindtap="getCaptcha" disabled="{{disabled}}">{{getcode}}</button>
+	</view>
+	<view class="phone">
+		<input class="input-phone" type="text" password="true" placeholder="请输入密码" placeholder-class="input-place" adjust-position="true"  bindinput="inputwacth" data-model="pass" />
+	</view>
+	<view class="phone pass">
+		<input class="input-phone" type="text" password="true" placeholder="请确认密码" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="checkpass" />
+	</view>
+	<button class="register" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">注册</button>
+</view>

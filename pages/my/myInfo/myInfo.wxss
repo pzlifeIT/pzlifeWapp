@@ -1,0 +1,62 @@
+/* pages/my/myInfo/myInfo.wxss */
+page{
+	height: 100%;
+	background: #F7F7F7;
+	position: relative;
+}
+.user-info{
+	width: 731rpx;
+	height: 80rpx;
+	background: #FFFFFF;
+	margin-bottom: 1rpx;
+	padding-left: 19rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.title{
+	height: 80rpx;
+	display: inline-block;
+	width: 30%;
+	color: #202020;
+	font-size: 30rpx;
+	text-align:left;
+	line-height: 80rpx;
+}
+.cont{
+	height: 80rpx;
+	outline: none;
+	width: 70%;
+	color: #888888;
+	font-size: 30rpx;
+}
+.footer{
+	width: 750rpx;
+	height: 92rpx;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.left{
+	height: 92rpx;
+	width: 50%;
+	text-align: center;
+	line-height: 92rpx;
+	float: left;
+	color: #202020;
+	font-size: 28rpx;
+	background: #fff;
+	border-top: 1rpx solid #E2E2E2;
+}
+.right{
+	height: 92rpx;
+	width: 50%;
+	text-align: center;
+	line-height: 92rpx;
+	float: left;
+	background: #E61F18;
+	color: #fff;
+	font-size: 28rpx;
+}
+
+
