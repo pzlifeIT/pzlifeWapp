@@ -41,7 +41,7 @@ input{
 	display: inline-block;
 }
 .get-captcha{
-	width: 150rpx;
+	width: 170rpx;
 	height: 88rpx;
 	line-height: 88rpx;
 	color: #E61F18;

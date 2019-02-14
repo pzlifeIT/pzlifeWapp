@@ -7,15 +7,21 @@ Page({
    */
   data: {
 	loginStatus:false,
-	userInfo:{}
+	userInfo:{},
+	con_id:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-	// console.log(app)
-	// this.getUser()
+	  //获取con_id
+	  this.getStorage()
+	  //判断是否登陆,没有登录就不获取用户信息了
+	  // this.checkLogin()
+	  //获取用户信息
+	  // this.getUser()
+/**
 	this.setData({
 		userInfo:app.globalData.userInfo
 	})
@@ -39,12 +45,30 @@ Page({
 	  		loginStatus:false
 	  	})
 	  }
+	  */
   },
-  getUser:function(){
-	  let that = this;
+  /**
+   * 判断是否存在con_id
+   */
+  checkLogin:function(con_id){
+	  //存在就登陆不存在就无登录
+	  if(con_id){
+		  this.getUser(con_id)
+		  this.setData({
+			  loginStatus:true
+		  })
+	  }else{
+		  this.setData({
+			  loginStatus:false
+		  })
+		  return
+	  }
+  },
+  getUser:function(con_id){
+	  let that = this
 	  app.wxrequest({
 		  url:"index/user/getuser",
-		  data:{uid:"RVYvaEw2Wk1TeXlnUjdlb2RHc3ZEZz09"},
+		  data:{con_id:con_id},
 		  success(res){  
 				  let userInfo = res.data
 				  switch(parseInt( userInfo.user_identity)){
@@ -73,6 +97,22 @@ Page({
 		  error(code){
 			  console.log(code)
 		  }
+	  })
+  },
+  /**
+   * 获取con_id
+   */
+  getStorage:function(){
+	  let that = this
+	  wx.getStorage({
+	  	key:"con_id",
+		success(res) {
+			that.checkLogin(res.data)
+			console.log(res)
+// 			that.setData({
+// 				con_id:res.data
+// 			})
+		}
 	  })
   },
   /**

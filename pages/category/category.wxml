@@ -38,7 +38,7 @@
 		    <view><text class='cate_title'>{{item.subject}}</text></view>
 		    <navigator url='goods/goods?sub_id={{item.id}}' wx:for="{{item._child}}" hover-class="none">
 		      <view class='cate_three' >
-		        <image class='cate_banner' src='http://pzlifeimage.pzlife.vip{{item.goods_subject_image}}'></image>
+		        <image class='cate_banner' src='{{item.goods_subject_image}}'></image>
 		        <text class='cate_three_title'>{{item.subject}}</text>
 		      </view>
 		   </navigator>

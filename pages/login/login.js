@@ -6,10 +6,54 @@ Page({
    * 页面的初始数据
    */
   data: {
-	canIUse:wx.canIUse("button.open-type.getUserInfo")
+	
   },
   bindGetUserInfo:function(e){
-	  app.getUserInfo()
+	 wx.login({
+	 	success(res) {
+			if(res.code){
+				app.wxrequest({
+					url:"index/user/loginuserbywx",
+					data:{code:res.code},
+					success(res){
+						wx.reLaunch({
+							url:"/pages/index/index"
+						})
+					},
+					error(res){
+						if (res == 3000) {
+							wx.showToast({
+								title: "用户不存在",
+								icon: "none",
+								duration: 2000
+							})
+						} else if (res == 3001) {
+							wx.showToast({
+								title: "code码错误",
+								icon: "none",
+								duration: 2000
+							})
+						} else if (res == 3002) {
+							wx.showToast({
+								title: "无手机号，请先注册",
+								icon: "none",
+								duration: 2000
+							})
+						} else if (res == 3003) {
+							wx.showToast({
+								title: "登录失败",
+								icon: "none",
+								duration: 2000
+							})
+						} 
+					},
+					fail(res){
+						
+					}
+				})
+			}
+	 	}
+	 })
   },
   /**
    * 生命周期函数--监听页面加载

@@ -27,18 +27,18 @@
 
 <view class="userCost" >
   <view class="userCoupon" >
-    <image class="ucIcon" src="../images/images/12121_05.png" wx:if="{{loginStatus == fasle}}"/>
-		<view class="ucNum"><text class="num">0</text><text class="text">张</text></view>
+    <image class="ucIcon" src="../images/images/12121_05.png" wx:if="{{loginStatus == false}}"/>
+		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">0</text><text class="text">张</text></view>
     <text class="userText" >优惠券</text>
   </view>
   <view class="userIntegral" >
-    <image  class="ucIcon" src="../images/images/12121_07.png" wx:if="{{loginStatus == fasle}}" />
-		<view class="ucNum"><text class="num">{{userInfo.integral}}</text><text class="text">分</text></view>
+    <image  class="ucIcon" src="../images/images/12121_07.png" wx:if="{{loginStatus === false}}" />
+		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">{{userInfo.integral}}</text><text class="text">分</text></view>
     <text class="userText" >购物积分</text>
   </view>
   <view class="userMoney" >
-    <image  class="ucIcon" src="../images/images/12121_10.png" wx:if="{{loginStatus ==fasle}}" />
-		<view class="ucNum"><text class="num">{{userInfo.balance}}</text><text class="text">元</text></view>
+    <image  class="ucIcon" src="../images/images/12121_10.png" wx:if="{{loginStatus ==false}}" />
+		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">{{userInfo.balance}}</text><text class="text">元</text></view>
     <text class="userText" >我的商票</text>
   </view>
 </view>
