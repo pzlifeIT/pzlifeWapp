@@ -37,9 +37,11 @@ App({
         userInfo: null
     },
     wxrequest: function(obj) {
+        let data = obj.data || {}
+        data.source = '4'
         wx.request({
             url: 'http://wwwapi.pzlife.vip/' + obj.url,
-            data: obj.data || {},
+            data: data,
             method: obj.method || 'POST',
             dataType: JSON,
             header: {

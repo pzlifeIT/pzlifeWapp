@@ -2,21 +2,21 @@
 <view class="detail-swiper" >
   <swiper  autoplay='true' interval='3000' bindchange="changeSwiper" circular='true'>
     <block>
-      <swiper-item wx:for="{{[1,2,3,4,5]}}" wx:for-item="i">
-        <image class='swiper-img' src='http://imagecache.pzlife.vip/o_1cujhmrcm1rbbg9198smgt1br5h.jpg?imageMogr2/thumbnail/720x'></image>
+      <swiper-item wx:for="{{goodInfo.goods_banner}}">
+        <image class='swiper-img' src='{{item.image_path}}'></image>
         
       </swiper-item>
     </block>
   </swiper>
-  <view class='swipercur'>{{swipercur}}/5</view>
+  <view class='swipercur'>{{swipercur}}/{{goodInfo.goods_banner.length}}</view>
 </view>
 
 
 <view class='desc'>
   <view class='text'>
-    <text class='title'>柚见家月</text>
-    <text class='subtitle'>五仁叉烧500g</text>
-    <text class='price'>￥69.00</text>
+    <text class='title'>{{goodInfo.goods_data.goods_name}}</text>
+    <text class='subtitle'>{{goodInfo.goods_data.subtitle}}</text>
+    <text class='price'>￥{{goodInfo.goods_data.title}}</text>
   </view>
   <view class='collect'>
     <icon type=''></icon>
@@ -35,40 +35,45 @@
     <text class='fix'>积分：</text><text class='fix_desc'>赠送48积分</text>
   </view>
   <view class='freight'>
-    <text class='fix'>运费：</text><text class='fix_desc'>免运费</text>
+    <text class='fix'>运费：</text><text class='fix_desc'>{{goodInfo.goods_data.supplier_desc}}</text>
   </view>
 </view>
 <!-- 选择规格弹出层 -->
-<view class='mask' catchtouchmove='preventTouchMove' bindtap='hideModel' wx:if='{{showModel}}'></view>
-<view class='pop' wx:if='{{showModel}}'>
-  <view class='goods_data'>
-    <view class='goods_thumb'>
-      <image src=''></image>
-    </view>
-    <view class='goods_desc'>
-      <text class='pop_price'>价格：￥96</text>
-      <text class='selected'>已选择：M\r\t黑色</text>
-      <text class='present'>赠送积分：178分</text>
-    </view>
-  </view>
-  <view class='param'>
-    <view  wx:for="{{spec}}" wx:key="{{index}}">
-      <view class='spec_name'><text>{{item.spec}}</text></view>
-      <view class='attr'>
-        <view wx:for="{{item.attrs}}" class='attr_name {{idx == item.id ? "selected_active":""}}'  wx:key="{{index}}"  bindtap='selectAttr' data-index="{{item.id}}">{{item.attrname}}</view>
-      
+ <view class="popout" wx:if='{{showModel}}'>
+  <view class='mask' catchtouchmove='preventTouchMove' bindtap='hideModel' ></view>
+  <view class='pop'>
+    <view class='goods_data' >
+      <view class='goods_thumb fl'>
+        <image src='{{goodData.sku_image}}' wx:if="{{buy}}"></image>
+        <image src='{{goodInfo.goods_data.image}}' wx:else></image>
+      </view>
+      <view class='goods_desc fl' wx:if="{{repertory}}">
+        <text class='pop_price' wx:if="{{buy}}">价格：￥{{goodData.sku_price}}</text>
+        <text class='pop_price' wx:else >价格：￥{{goodInfo.goods_data.max_retail_price}}-￥{{goodInfo.goods_data.min_retail_price}}</text>
+        <text class='selected'>已选择：M\r\t黑色</text>
+        <text class='present'>赠送积分：178分</text>
+      </view>
+      <view class='goods_desc fl' wx:else>
+        <text class='pop_price'>暂无库存</text>
       </view>
     </view>
-     
+    <view class='param'>
+      <view  wx:for="{{goodInfo.goods_spec}}" wx:for-index="idx" wx:key="{{item.id}}">
+      <view class='spec_name'><text>{{item.spe_name}}</text></view>
+      <view class='attr'>
+        <view wx:for="{{item.list}}" wx:for-item="item1" class='attr_name {{ item1.id == attr[idx]?"active":"" }}'  wx:key="{{item1.id}}"  bindtap='selectAttr' data-idx='{{idx}}'  data-id="{{item1.id}}">{{item1.attr_name}}</view>
+      </view>
+    </view>
   </view>
+
   <view class='amount'>
     <view class='num_title'>数量</view>
     <view class='amount_num'>
     <view class='jian' bindtap='jian'>-</view><input class='num' type='text' value='{{buyNum}}' bindinput='getnum' /><view class='jia' bindtap='jia'>+</view>
     </view>
-    
+    </view>
   </view>
-</view>
+ </view>
 <!-- 领券弹出层 -->
 <!-- <scroll-view class='coupon_pop'>
   <view class='pop_title'><text>领券列表</text></view>
@@ -109,11 +114,7 @@
     </view> -->
     <view class='four_cont'>
       <view class='detail_img'>
-        <image class='img_one' src=''></image>
-        <image class='img_two' src=''></image>
-        <image class='img_three' src=''></image>
-        <image class='img_four' src=''></image>
-  
+        <image wx:for="{{goodInfo.goods_details}}" class='imgDetails' src='{{item.image_path}}' mode="widthFix"></image>
       </view>
     </view>
 </view>
@@ -131,7 +132,7 @@
     <image class="dl-ficon" src="../images/images/icon_07.png" />
     <text  class="ft-text">购物车</text>
   </view>
-  <view class='buy'>
+  <view class='buy' bindtap="showModel" >
     <text>立即购买</text>
   </view>
   <view class='join_cart'>

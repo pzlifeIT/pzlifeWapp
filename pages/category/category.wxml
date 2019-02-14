@@ -19,7 +19,7 @@
     <view class='wai' wx:for='{{secondCate}}' wx:key='{{item.id}}'>
       <view class='cate_two'>
         <view><text class='cate_title'>{{item.type_name}}</text></view>
-        <navigator url='goods/goods' wx:for="{{item._child}}" >
+        <navigator url='goods/goods?id={{item.id}}' wx:for="{{item._child}}" >
           <view class='cate_three' >
             <image class='cate_banner' src='http://imagecache.pzlife.vip/o_1cujhrkh9vm024fh9f8vr17arc.jpg?imageMogr2/thumbnail/120x'></image>
             <text class='cate_three_title'>{{item.type_name}}</text>

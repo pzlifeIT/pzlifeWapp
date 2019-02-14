@@ -213,6 +213,7 @@ swiper-item {
 
 .detail_img {
     width: 750rpx;
+    margin-bottom: 100rpx;
     float: left;
 }
 
@@ -220,42 +221,32 @@ swiper-item {
     display: block;
 }
 
-.img_one {
+.imgDetails {
     width: 100%;
-    height: 500rpx;
-    background-color: pink;
+    height: auto;
+    overflow: auto;
 }
 
-.img_two {
+.popout {
     width: 100%;
-    height: 500rpx;
-    background-color: palegoldenrod;
-}
-
-.img_three {
-    width: 100%;
-    height: 500rpx;
-    background-color: paleturquoise;
-}
-
-.img_four {
-    width: 100%;
-    height: 500rpx;
-    background-color: purple;
+    height: 100%;
+    overflow: hidden;
 }
 
 .pop {
-    width: 750rpx;
     position: fixed;
+    width: 750rpx;
     bottom: 98rpx;
     left: 0;
     z-index: 999;
     background-color: white;
-    padding: 20rpx;
 }
 
 .pop .goods_data {
-    width: 750rpx;
+    width: 710rpx;
+    height: auto;
+    margin: 20rpx;
+    overflow: hidden;
 }
 
 .pop .goods_data .goods_thumb {
@@ -267,7 +258,6 @@ swiper-item {
 .goods_thumb image {
     width: 100%;
     height: 100%;
-    background-color: peachpuff;
 }
 
 .pop .goods_data .goods_desc {
@@ -295,7 +285,8 @@ swiper-item {
 }
 
 .param {
-    width: 750rpx;
+    width: 710rpx;
+    margin: 20rpx;
 }
 
 .param .spec_name {
@@ -317,8 +308,14 @@ swiper-item {
     margin: 10rpx;
 }
 
+.param .attr .attr_name.active {
+    border: 1rpx #e61f18 solid;
+    color: #e61f18;
+}
+
 .pop .amount {
-    width: 100%;
+    width: 710rpx;
+    margin: 20rpx;
 }
 
 .pop .amount .num_title {
@@ -366,11 +363,6 @@ swiper-item {
     width: 306rpx;
     height: 66rpx;
     position: relative;
-}
-
-.param .attr .selected_active {
-    border: 1rpx #e61f18 solid;
-    color: #e61f18;
 }
 
 .mask {
