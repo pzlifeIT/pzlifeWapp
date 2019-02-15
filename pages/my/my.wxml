@@ -89,6 +89,11 @@
   <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
 </navigator>
 
+<navigator url="/pages/my/newpassword/newpassword" open-type="navigate" hover-class="other-navigator-hover" class="userFnLi" >
+  <text >修改密码</text>
+  <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
+</navigator>
+
 <navigator  class="userFnLi" >
   <text >我的收藏</text>
   <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>

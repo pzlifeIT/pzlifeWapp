@@ -17,35 +17,6 @@ Page({
   onLoad: function (options) {
 	  //获取con_id
 	  this.getStorage()
-	  //判断是否登陆,没有登录就不获取用户信息了
-	  // this.checkLogin()
-	  //获取用户信息
-	  // this.getUser()
-/**
-	this.setData({
-		userInfo:app.globalData.userInfo
-	})
-	let that = this;
-	wx.getSetting({
-		// let that = this;
-		success(res) {
-			console.log(res.authSetting["scope.userInfo"])	//用户授权结果
-			that.checkLogin(res.authSetting["scope.userInfo"])
-		}
-	})
-  },
-  checkLogin:function(status){
-	  let that = this;
-	  if(status){
-	  	this.setData({
-	  		loginStatus:true
-	  	})
-	  }else{
-	  	this.setData({
-	  		loginStatus:false
-	  	})
-	  }
-	  */
   },
   /**
    * 判断是否存在con_id

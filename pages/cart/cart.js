@@ -12,7 +12,8 @@ Page({
 		total: 0,
 		selectAll: true,
 		sku_id:0,
-		con_id:""
+		con_id:"",
+		shop_id:0
 	},
 	/**
 	 * 全选
@@ -125,28 +126,53 @@ Page({
 			})
 	},
 	jian: function(e) {
+		let that = this
 		const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标
 		let goods = e.currentTarget.dataset.goods, //商品数据
 			num = goods[goodsIndex].buy_num, //购买数量
 			valid = this.data.valid,
+			con_id  = this.data.con_id,
+			sku_id = goods[goodsIndex].id,
+			track_id = goods[goodsIndex].track_id,
 			validIndex = e.currentTarget.dataset.validIndex //有效商品下标
 		if (num <= 1) {
 			return false
 		}
 		num = num - 1
 		goods[goodsIndex].buy_num = num
+		app.wxrequest({
+			url:"index/cart/addUserCart",
+			data:{con_id:con_id,goods_skuid:sku_id,goods_num:-1,track_id:track_id},
+			success(res){
+				valid[validIndex].goods = goods
+				that.setData({
+					valid: valid
+				});
+				that.getTotal(valid)
+			},
+			error(res){
+				
+			},
+			fail(res){
+				
+			}
+		})
 		//在获取大的数组和下标然后把这个goods放进大数组中替换掉原有的元素
-		valid[validIndex].goods = goods
-		this.setData({
-			valid: valid
-		});
-		this.getTotal(valid)
+// 		valid[validIndex].goods = goods
+// 		this.setData({
+// 			valid: valid
+// 		});
+		
 	},
 	jia: function(e) {
+		let that = this
 		const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标
 		let goods = e.currentTarget.dataset.goods, //商品数据
 			num = goods[goodsIndex].buy_num, //购买数量
 			valid = this.data.valid,
+			con_id = this.data.con_id,
+			sku_id = goods[goodsIndex].id,
+			track_id = goods[goodsIndex].track_id,
 			validIndex = e.currentTarget.dataset.validIndex, //有效商品下标
 			stock = goods[goodsIndex].stock
 		// console.log(e)
@@ -156,29 +182,60 @@ Page({
 		}
 		num = num + 1
 		goods[goodsIndex].buy_num = num
+		app.wxrequest({
+			url:"index/cart/addUserCart",
+			data:{con_id:con_id,goods_skuid:sku_id,goods_num:1,track_id:track_id},
+			success(res){
+				valid[validIndex].goods = goods
+				that.setData({
+					valid: valid
+				});
+				that.getTotal(valid)
+			},
+			error(res){
+				
+			},
+			fail(res){
+				
+			}
+		})
 		//在获取大的数组和下标然后把这个goods放进大数组中替换掉原有的元素
-		valid[validIndex].goods = goods
-		this.setData({
-				valid: valid
-			}),
-		this.getTotal(valid)
+// 		valid[validIndex].goods = goods
+// 		this.setData({
+// 				valid: valid
+// 			}),
+		
 	},
 	del: function(e) {
 		console.log(e)
-		let sku_id = e.currentTarget.dataset.sku
+		let goods = e.currentTarget.dataset.goods,
+			goodsIndex = e.currentTarget.dataset.goodsIndex,
+			sku_id = goods[goodsIndex].id,
+			shop_id = goods[goodsIndex].track_id
 		this.setData({
 			mask: true,
-			sku_id:sku_id
+			sku_id:sku_id,
+			shop_id:shop_id
 		})
 	},
 	confirmDel:function(){
-		let sku_id = this.data.sku_id,
-			con_id = this.data.con_id
+		let	con_id = this.data.con_id,
+			sku_id = this.data.sku_id,
+			shop_id = this.data.shop_id,
+			that = this
 		app.wxrequest({
 			url:"index/cart/editUserCart",
-			data:{con_id:con_id,del_skuid:sku_id},
+			data:{con_id:con_id,del_skuid:sku_id,del_shopid:shop_id},
 			success(res){
-				console.log(res)
+				that.setData({
+					mask:false
+				});
+				wx.showToast({
+					title:"删除成功",
+					icon:"none",
+					duration:1500
+				});
+				that.getStorage()
 			},
 			error(res){
 				console.log(res)

@@ -1,4 +1,5 @@
 // pages/comfirOrder/comfirOrder.js
+const app = getApp()
 Page({
 
   /**
@@ -20,6 +21,12 @@ Page({
       isShow:true
     })
   },
+	getOrderInfo:function(){
+		app.wxrequest({
+			url:"index/order/createsettlement",
+			data:{}
+		})
+	},
   /**
    * 生命周期函数--监听页面加载
    */

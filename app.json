@@ -1,7 +1,7 @@
 {
 	"pages": [
 		"pages/index/index",
-    "pages/category/category",
+		"pages/category/category",
 		"pages/logs/logs",
 		"pages/collect/collect",
 		"pages/cart/cart",
@@ -10,7 +10,7 @@
 		"pages/goods/detail",
 		"pages/address/address",
 		"pages/address/installAddress/installAddress",
-    "pages/order/orderDetail/orderDetail",
+		"pages/order/orderDetail/orderDetail",
 		"pages/order/order",
 		"pages/order/logisticsInfo/logisticsInfo",
 		"pages/login/login",
@@ -19,8 +19,9 @@
 		"pages/login/passLogin/passLogin",
 		"pages/paystatus/paystatus",
 		"pages/comfirOrder/comfirOrder",
-    "pages/search/search",
-    "pages/my/myInfo/myInfo"
+		"pages/search/search",
+		"pages/my/myInfo/myInfo",
+		"pages/my/newpassword/newpassword"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

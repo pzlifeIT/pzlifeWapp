@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 13,
+			"current": 14,
 			"list": [
 				{
 					"id": 0,
@@ -123,6 +123,13 @@
 					"id": -1,
 					"name": "cart",
 					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "newpass",
+					"pathName": "pages/my/newpassword/newpassword",
 					"scene": null
 				}
 			]
