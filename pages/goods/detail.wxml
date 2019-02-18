@@ -69,7 +69,7 @@
   <view class='amount'>
     <view class='num_title'>数量</view>
     <view class='amount_num'>
-    <view class='jian' bindtap='jian'>-</view><input class='num' type='text' value='{{buyNum}}' bindinput='getnum' /><view class='jia' bindtap='jia'>+</view>
+    <view class='jian' bindtap='jian'>-</view><input class='num' disabled type='text' value='{{buyNum}}' bindinput='getnum' /><view class='jia' bindtap='jia'>+</view>
     </view>
     </view>
   </view>
@@ -99,18 +99,13 @@
     <view class='three'><text>使用指南</text></view> -->
     <view class='four active'><text>商品详情</text></view>
   </view>
-
-  
     <!-- <view class='one_cont'>
       <view class='one_top'>
-      
       </view>
     </view>
     <view class='two_cont'>
-
     </view>
     <view class='three_cont'>
-    
     </view> -->
     <view class='four_cont'>
       <view class='detail_img'>
@@ -132,10 +127,10 @@
     <image class="dl-ficon" src="../images/images/icon_07.png" />
     <text  class="ft-text">购物车</text>
   </view>
-  <view class='buy' bindtap="showModel" >
+  <view bindtap="buyGood"  class='buy' >
     <text>立即购买</text>
   </view>
-  <view class='join_cart'>
+  <view bindtap="joinCart" class='join_cart'>
     <text>加入购物车</text>
   </view>
 </view>

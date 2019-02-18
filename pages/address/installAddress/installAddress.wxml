@@ -1,0 +1,27 @@
+<view class="installAddress" >
+  <input class="ia-input" type="text" placeholder="姓名" value="{{name}}" bindinput="bindname" />
+  <text class="ia-hint" >因快递实名政策，请填写真实名字</text>
+  <input  class="ia-input" type="number"  placeholder="手机号码" value="{{mobile}}" bindinput="bindmobile"  />
+  <!-- <view class="provinces" >
+    <text class="provinces-tit din fl" >省份、城市、县区</text>
+    <view class="provinces-text din fl" >
+      <text class="provinces-text-con" >省份省份省份、城市城市城市城市城市、县区县区县区县区</text>
+    </view>
+  </view> -->
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" >
+    <view class="provinces" >
+      <text class="provinces-tit din fl" >省份、城市、县区</text>
+      <view class="provinces-text din fl" >
+        <text class="provinces-text-con" wx:if="{{region.length > 0}}" >{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+      </view>
+    </view>
+  </picker>
+  <input  class="ia-input" type="text" value="{{address}}" bindinput="bindaddress" placeholder="详细地址,如楼道、楼盘号等" />
+  <!-- <view class="ia-default" >
+    <icon type="success" class="sel fl" size="34rpx" />
+    <view class="unsel fl"></view>
+    <text class="ia-d-text din fl">设为默认地址</text>
+  </view> -->
+   
+  <view class="save-btn" bindtap="save" >保存</view>
+</view>

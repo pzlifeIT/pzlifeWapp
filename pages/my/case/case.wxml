@@ -3,7 +3,7 @@
 	<view class="balance-text">商票余额</view>
 	<view class="balance-num">10000<text>元</text></view>
 	<view class="total">总额：20000元</view>
-	<view class="used">已用：800元</view>
+	<view class="used">已使用：800元</view>
 </view>
 <view class="button" wx:if="{{case.length>=1}}">
 	<view class="left">发商票</view>
@@ -19,62 +19,6 @@
 				<view class="time">2019-10-15 10:26:50</view>
 			</view>
 			<view class="list-right">-60元</view>
-		</view>
-		<view class="detail-one">
-			<view class="list-left">
-				<view class="title">订单消费</view>
-				<view class="order">订单号：16161361320321610321051651</view>
-				<view class="time">2019-10-15 10:26:50</view>
-			</view>
-			<view class="list-right active">+60元</view>
-		</view>
-		<view class="detail-one">
-			<view class="list-left">
-				<view class="title">订单消费</view>
-				<view class="order">订单号：16161361320321610321051651</view>
-				<view class="time">2019-10-15 10:26:50</view>
-			</view>
-			<view class="list-right active">+60元</view>
-		</view>
-		<view class="detail-one">
-			<view class="list-left">
-				<view class="title">订单消费</view>
-				<view class="order">订单号：16161361320321610321051651</view>
-				<view class="time">2019-10-15 10:26:50</view>
-			</view>
-			<view class="list-right active">+60元</view>
-		</view>
-		<view class="detail-one">
-			<view class="list-left">
-				<view class="title">订单消费</view>
-				<view class="order">订单号：16161361320321610321051651</view>
-				<view class="time">2019-10-15 10:26:50</view>
-			</view>
-			<view class="list-right active">+60元</view>
-		</view>
-		<view class="detail-one">
-			<view class="list-left">
-				<view class="title">订单消费</view>
-				<view class="order">订单号：16161361320321610321051651</view>
-				<view class="time">2019-10-15 10:26:50</view>
-			</view>
-			<view class="list-right active">+60元</view>
-		</view>
-		<view class="detail-one">
-			<view class="list-left">
-				<view class="title">订单消费</view>
-				<view class="order">订单号：16161361320321610321051651</view>
-				<view class="time">2019-10-15 10:26:50</view>
-			</view>
-			<view class="list-right active">+60元</view>
-		</view>
-		<view class="detail-one">
-			<view class="list-left">
-				<view class="title">订单消费</view>
-				<view class="order">订单号：16161361320321610321051651</view>
-				<view class="time">2019-10-15 10:26:50</view>
-			</view>
-			<view class="list-right active">+60元</view>
 		</view>
 	</scroll-view>
 </view>

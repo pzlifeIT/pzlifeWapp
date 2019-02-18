@@ -1,0 +1,19 @@
+<!--pages/comfirOrder/address/address.wxml-->
+<image class="ad-image" src="/pages/images/images/add.png" />
+
+<view class="ad-list" wx:for="{{address}}" >
+  <view class="al-icon din fl" bindtap="setsite" data-id="{{item.id}}" >
+    <icon class="icon" wx:if="{{item.id == siteid}}"  type="success" color="#e61f18"  />
+    <view class="noicon" wx:else ></view>
+  </view>
+  <view class="al-con din fl"  bindtap="setsite" data-id="{{item.id}}">
+    <view class="al-con-name din fl" >{{item.name}}</view>
+    <view class="al-con-info din fl" >
+      <text class="al-con-mobile din">{{item.mobile}}</text>
+      <text class="al-con-address din">{{item.province_name}} {{item.city_name}} {{item.area_name}} {{item.address}}</text>
+    </view>
+  </view>
+  <view class="al-conple din fl" >
+    <text class="al-conple-text din fr" >编辑</text>
+  </view>
+</view>

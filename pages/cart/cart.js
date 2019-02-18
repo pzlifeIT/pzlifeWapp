@@ -406,6 +406,123 @@ Page({
 	onReady: function() {
 
 	},
+    /**
+     * 去结算
+     */
+    buyGoods: function() {
+        let valid = this.data.valid,
+            len = valid.length,
+            len1, x, y, skus = ''
+        for (x = 0; x < len; x++) {
+            len1 = valid[x].goods.length
+            for (y = 0; y < len1; y++) {
+                if (valid[x].goods[y].selectStatus) {
+                    skus += valid[x].goods[y].id + ','
+                }
+            }
+        }
+        skus = skus.substring(0, skus.length - 1);
+        console.log(skus)
+        wx.navigateTo({
+            url: '/pages/comfirOrder/comfirOrder?skus=' + skus
+        })
+    },
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function(options) {
+        // this.getCartGoodsList()
+        // this.getStorage()
+    },
+    /**
+     * 添加选择状态字段
+     */
+    addText: function(data) {
+        for (let i = 0; i < data.length; i++) {
+            data[i].selectStatus = true
+            for (let j = 0; j < data[i].goods.length; j++) {
+                data[i].goods[j].selectStatus = true
+            }
+        }
+        return data
+    },
+    getCartGoodsList: function(con_id) {
+        let that = this
+        app.wxrequest({
+            url: "index/cart/getUserCart",
+            data: {
+                con_id: con_id
+            },
+            success(res) {
+                let valid = that.addText(res.valid)
+                that.setData({
+                    valid: valid,
+                    failure: res.failure
+                });
+                that.getTotal(valid)
+            },
+            error(res) {
+                console.log(456)
+                if (res == 5000) {
+                    wx.showModal({
+                        title: "请先登录",
+                        content: "是否确定去登录",
+                        showCancel: true,
+                        confirmColor: "#E61F18",
+                        success(res) {
+                            if (res.confirm) { //点击确定
+                                wx.navigateTo({
+                                    url: "/pages/login/login"
+                                })
+                            }
+                        }
+                    })
+                } else if (res == 3000) {
+                    that.setData({
+                        valid: [],
+                        failure: []
+                    })
+                }
+            }
+        })
+    },
+    /**
+     * 获取con_id
+     */
+    getStorage: function() {
+        let that = this
+        wx.getStorage({
+            key: "con_id",
+            success(res) {
+                that.getCartGoodsList(res.data)
+                console.log(res)
+                that.setData({
+                    con_id: res.data
+                })
+            },
+            fail(res) {
+                wx.showModal({
+                    title: "请先登录",
+                    content: "是否确定去登录",
+                    showCancel: true,
+                    confirmColor: "#E61F18",
+                    success(res) {
+                        if (res.confirm) { //点击确定
+                            wx.navigateTo({
+                                url: "/pages/login/login"
+                            })
+                        }
+                    }
+                })
+            }
+        })
+    },
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+    onReady: function() {
+
+    },
 
 	/**
 	 * 生命周期函数--监听页面显示

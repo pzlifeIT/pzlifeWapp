@@ -1,4 +1,4 @@
-// pages/address/address.js
+// pages/comfirOrder/address/address.js
 const app = getApp();
 Page({
 
@@ -6,6 +6,8 @@ Page({
      * 页面的初始数据
      */
     data: {
+        siteid: '',
+        skus: '',
         address: []
     },
 
@@ -13,25 +15,21 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        // this.getUserAddress()
-        // this.createMemberOrder()
-    },
-    createMemberOrder: function() {
-        let that = this
-        app.wxrequest({
-            url: 'index/order/createMemberOrder',
-            data: {
-                user_type: 2
-            },
-            success: function(res) {}
+        this.setData({
+            siteid: options.siteid,
+            skus: options.skus
         })
+        this.getUserAddress()
     },
-    redirect: function(e) {
-        console.log(e.currentTarget.dataset.id)
+    setsite: function(e) {
+        console.log(e.currentTarget.dataset)
         wx.redirectTo({
-            url: 'installAddress/installAddress?id=' + e.currentTarget.dataset.id
+            url: '../comfirOrder?skus=' + this.data.skus + '&siteid=' + e.currentTarget.dataset.id
         })
     },
+    /**
+     * 获取所有用户地址接口
+     */
     getUserAddress: function() {
         let that = this
         app.wxrequest({
@@ -57,8 +55,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-        this.getUserAddress()
-        this.createMemberOrder()
+
     },
 
     /**

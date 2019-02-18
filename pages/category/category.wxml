@@ -9,12 +9,12 @@
 </view>
 <view class='cate_content'>
   <scroll-view scroll-y="true" scroll-top="0" class='cate_left'>
-		<view class='cate_text {{item.id == ind?"active":"_active"}}' id="{{ind}}" wx:for='{{firstSub}}' wx:key='{{item.id}}' bindtap='selectSub' data-sub-id="{{item.id}}">
+		<view class='cate_text {{item.id == ind?"active":""}}' id="{{ind}}" wx:for='{{firstSub}}' wx:key='{{item.id}}' bindtap='selectSub' data-sub-id="{{item.id}}">
 		  <text class=''>{{item.subject}}</text>
 		</view>
-    <!-- <view class='cate_text {{item.id==idx?"active":"_active"}}' wx:for='{{firstCate}}' wx:key='{{item.id}}' bindtap='selectCate' data-cate-id="{{item.id}}">
+    <view class='cate_text {{item.id==idx?"active":""}}' wx:for='{{firstCate}}' wx:key='{{item.id}}' bindtap='selectCate' data-cate-id="{{item.id}}">
       <text class=''>{{item.type_name}}</text>
-    </view> -->
+    </view> 
   </scroll-view>
 
   <scroll-view scroll-y="true" scroll-top="0" class='cate_right'>

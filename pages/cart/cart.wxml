@@ -69,11 +69,11 @@
 			</radio-group>
 			<view class='total'><text class='total_text'>合计：</text><text class='total_price'>￥{{total}}</text></view>
 		</view>
-		<navigator url='/pages/comfirOrder/comfirOrder'>
-			<view class='pay'>
+		<!-- <navigator url='/pages/comfirOrder/comfirOrder'> -->
+			<view bindtap="buyGoods" class='pay'>
 				<text>去结算</text>
 			</view>
-		</navigator>
+		<!-- </navigator> -->
 	</view>
 	<view class='obscuration' wx:if="{{mask}}" catchtouchmove='preventTouchMove' bindtap='hidemask'></view>
 	<view class='mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>

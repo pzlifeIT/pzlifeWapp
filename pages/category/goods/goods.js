@@ -30,9 +30,11 @@ Page({
         app.wxrequest({
             url: "index/goods/getCategoryGoods",
             data: { cate_id: id },
+            haveCom: false,
             success(res) {
+                console.log(res)
                 that.setData({
-                    goods: res.data
+                    goodsList: res.data
                 })
             },
             error(res) {

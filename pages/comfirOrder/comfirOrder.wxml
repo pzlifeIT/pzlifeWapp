@@ -1,91 +1,110 @@
 <!--pages/comfirOrder/comfirOrder.wxml-->
-<view class='addres' bindtap='showModel'>
+<view class='addres nullad' wx:if="{{siteid == ''}}" bindtap="selsite"  >
+  <view >
+    <text class="ad-hint din" >你的收货地址为空，点击添加收货地址</text>
+    <image class="jt" src="/pages/images/images/jt_18.png" />
+  </view>
+  <image class='blue_red' src='/pages/images/images/add.png'></image>
+</view>
+
+<view class='addres' wx:else bindtap="selsite">
   <view class='addres_outer'>
     <view class='name_phone'>
-      <text class='name'>鲜鲜鲜鲜</text>
-      <text class='phone'>18811019933</text>
+      <text class='name'>{{site.name}}</text>
+      <text class='phone'>{{site.mobile}}</text>
     </view>
     <view class='addres_detail'>
       <text class='default'>默认</text>
-      <text class='location'>上海市静安区石门二路33弄3号楼17C</text>
+      <text class='location'>{{site.province_name}} {{site.city_name}} {{site.area_name}} {{site.address}}</text>
     </view>
-    </view>
-    <view class='jt'>
-      <image src='/pages/images/images/jt_18.png'></image>
-    </view>
-    <image class='blue_red' src='/pages/images/images/add.png'></image>
+  </view>
+  <view class='jt'>
+    <image src='/pages/images/images/jt_18.png'></image>
+  </view>
+  <image class='blue_red' src='/pages/images/images/add.png'></image>
 </view>
+
 <view class='goods'>
-  <view class='goods_info'>
-    <view class='goods_img'><image src=''></image></view>
-    <view class='goods_detail'>
-      <text class='goods_title'>柚见家月</text>
-      <text class='goods_subtitle'>五仁叉烧 500克</text>
-      <text class='price'>￥69.00</text>
+  <view wx:for="{{datalist}}" >
+    <view class="s-name" ><image class="icon-img fl" src="{{item.image}}" /> <text >{{item.name}}</text> </view>
+    <view wx:for="{{item.shop_list}}" >
+      <view class="s-name"><image class="icon-img fl" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKaDzYXdWR9qicAo8ICyp17XOtZQy2lkTkpYqg3hWAjicMmVSTKFsKYiarWllK0wG7YM6hnib1yP1E1jw/132?imageMogr2/thumbnail/120x" /> <text >{{item.shop_name}}</text>店铺名称</view>
+      <view wx:for="{{item.goods_list}}" >
+        <view class='goods_info' >
+          <view class='goods_img'><image src='{{item.sku_image}}'></image></view>
+          <view class='goods_detail'>
+            <text class='goods_title'>{{item.goods_name}}</text>
+            <text class='goods_subtitle'>{{item.subtitle}}</text>
+            <text class='price'>￥{{item.retail_price}}</text>
+          </view>
+          <view class='sum'>x{{item.buySum}}</view>
+        </view>
+      </view>
     </view>
-    <view class='sum'>x1</view>
-  </view>
-  <view class='goods_info'>
-    <view class='goods_img'><image src=''></image></view>
-    <view class='goods_detail'>
-      <text class='goods_title'>柚见家月</text>
-      <text class='goods_subtitle'>五仁叉烧 500克</text>
-      <text class='price'>￥69.00</text>
-    </view>
-    <view class='sum'>x1</view>
-  </view>
-  <view class='goods_info'>
-    <view class='goods_img'><image src=''></image></view>
-    <view class='goods_detail'>
-      <text class='goods_title'>柚见家月</text>
-      <text class='goods_subtitle'>五仁叉烧 500克</text>
-      <text class='price'>￥69.00</text>
-    </view>
-    <view class='sum'>x1</view>
-  </view>
-  <view class='goods_info'>
-    <view class='goods_img'><image src=''></image></view>
-    <view class='goods_detail'>
-      <text class='goods_title'>柚见家月</text>
-      <text class='goods_subtitle'>五仁叉烧 500克</text>
-      <text class='price'>￥69.00</text>
-    </view>
-    <view class='sum'>x1</view>
-  </view>
-  <view class='goods_info'>
-    <view class='goods_img'><image src=''></image></view>
-    <view class='goods_detail'>
-      <text class='goods_title'>柚见家月</text>
-      <text class='goods_subtitle'>五仁叉烧 500克</text>
-      <text class='price'>￥69.00</text>
-    </view>
-    <view class='sum'>x1</view>
-  </view>
-  <view class='goods_info'>
-    <view class='goods_img'><image src=''></image></view>
-    <view class='goods_detail'>
-      <text class='goods_title'>柚见家月</text>
-      <text class='goods_subtitle'>五仁叉烧 500克</text>
-      <text class='price'>￥69.00</text>
-    </view>
-    <view class='sum'>x1</view>
   </view>
 </view>
 <view class='stat'>
-  <view class='summation'><text class='sum_text'>含运费</text><text class='sum_price'>￥6.00</text></view>
-  <view class='summation'><text class='sum_text'>钻石返利</text><text class='sum_price'>￥6.00</text></view>
-  <view class='summation'><text class='sum_text'>共计2件商品</text><text class='sum_price'>合计￥69.00</text></view>
+  <view class='summation'><text class='sum_text'>含运费</text><text class='sum_price'>￥{{stat.total_freight_price}}</text></view>
+  <view class='summation'><text class='sum_text'>钻石返利</text><text class='sum_price'>￥{{stat.rebate_all}}</text></view>
+  <view class='summation'><text class='sum_text'>共计{{stat.goods_count}}件商品</text><text class='sum_price'>合计￥{{stat.total_goods_price}}</text></view>
 </view>
 
 <view class='footer'>
-  <view class='total'><text class='total_text'>总计金额：</text><text class='total_price'>￥138.00</text></view>
+  <view class='total'><text class='total_text'>总计金额：</text><text class='total_price'>￥{{stat.total_price}}</text></view>
   <view class='back'>
     <image src='/pages/images/che.png'></image>
     <text>返回购物车</text>
   </view>
-  <view class='pay'>去付款</view>
+  <view class='pay' bindtap="showaddres" >去付款</view>
 </view>
-<view class='mask' bindtap='hideModel' wx:if="{{isShow}}">
+
+<view class="hint-popup" wx:if="{{addressshow}}">
+  <view class="fill" bindtap="hideaddress" ></view>
+  <view class="hp-cen" >
+    <view class="b_xie" ><image class="b-image" src="/pages/images/images/b_xie.png" /></view>
+    <view class="hp-con" >
+      <view class="hp-info" >
+        <text class="hp-info-name">{{site.name}}</text>
+        <text class="hp-info-moblie">{{site.mobile}}</text>
+      </view>
+      <view class="hp-address" >{{site.province_name}} {{site.city_name}} {{site.area_name}} {{site.address}}</view>
+    </view>
+    <view >
+      <button class="hp-else din fl" plain="true" bindtap="selsite"  >选择其他</button>
+      <button bindtap="suborder" class="hp-confirm din fl" >确定</button>
+    </view>
+  </view>
+</view>
+
+<view >
+  <view class="fill" bindtap="hidepay" ></view>
+  <view >
+    <view ></view>
+    <view >
+      <view ><image src="" /></view>
+      <view >
+        <text >商票抵扣</text>
+        <text >余额: ￥0 </text>
+      </view>
+      <view >
+        <view ></view>
+        <icon type="success" size="34rpx" />
+      </view>
+    </view>
+    <view >
+      <view ><image src="" /></view>
+      <view >
+        <text >微信支付</text>
+        <text >余额: ￥0 </text>
+      </view>
+      <view >
+        <view ></view>
+        <icon type="success" size="34rpx" />
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <view class='mask' bindtap='hideModel' wx:if="{{isShow}}">
   <view class='addres_pop' catchtap='maopao'>
     <scroll-view class='addres_list' scroll-y="true" >
     <view class='scroll'>
@@ -94,61 +113,16 @@
           <view class='name_phone'>
             <text class='name'>鲜鲜</text><text class='phone'>18811101993</text>
           </view>
-          <view class='addres_detail'>上海市静安区石门二路333弄3号楼17c</view>
+          <view class='addres_detail'>上海市静安区石门二路333弄3号楼17sdfdsfdsfdsfc</view>
         </view>
-        <radio-group>
-          <radio color='#e61f18'></radio>
-        </radio-group>
-      </view>
-      <view class='one_addres'>
-        <view class='name_phone_detail'>
-          <view class='name_phone'>
-            <text class='name'>鲜鲜</text><text class='phone'>18811101993</text>
-          </view>
-          <view class='addres_detail'>上海市静安区石门二路333弄3号楼17c石门二路333弄3号楼17c</view>
-        </view>
-        <radio-group>
-          <radio color='#e61f18'></radio>
-        </radio-group>
-      </view>
-      <view class='one_addres'>
-        <view class='name_phone_detail'>
-          <view class='name_phone'>
-            <text class='name'>鲜鲜</text><text class='phone'>18811101993</text>
-          </view>
-          <view class='addres_detail'>上海市静安区石门二路333弄3号楼17c石门二路333弄3号楼17c</view>
-        </view>
-        <radio-group>
-          <radio color='#e61f18'></radio>
-        </radio-group>
-      </view>
-      <view class='one_addres'>
-        <view class='name_phone_detail'>
-          <view class='name_phone'>
-            <text class='name'>鲜鲜</text><text class='phone'>18811101993</text>
-          </view>
-          <view class='addres_detail'>上海市静安区石门二路333弄3号楼17c石门二路333弄3号楼17c</view>
-        </view>
-        <radio-group>
-          <radio color='#e61f18'></radio>
-        </radio-group>
-      </view>
-      <view class='one_addres'>
-        <view class='name_phone_detail'>
-          <view class='name_phone'>
-            <text class='name'>鲜鲜</text><text class='phone'>18811101993</text>
-          </view>
-          <view class='addres_detail'>上海市静安区石门二路333弄3号楼17c石门二路333弄3号楼17c</view>
-        </view>
-        <radio-group>
-          <radio color='#e61f18'></radio>
-        </radio-group>
+        <view class="ad-check uncheck" ></view>
+        <icon class="ad-check" type="success" size="34rpx" color="#e61f18" />
       </view>
     </view>
     </scroll-view>
     <view class='add_addres'>+新建地址</view>
   </view>
-</view>
+</view> -->
 
 
 

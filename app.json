@@ -19,6 +19,7 @@
 		"pages/login/passLogin/passLogin",
 		"pages/paystatus/paystatus",
 		"pages/comfirOrder/comfirOrder",
+        "pages/comfirOrder/address/address",
 		"pages/search/search",
 		"pages/my/myInfo/myInfo",
 		"pages/my/newpassword/newpassword",
