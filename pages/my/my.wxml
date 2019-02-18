@@ -84,27 +84,27 @@
   <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
 </navigator>
 
-<navigator url="../address/address" open-type="navigate" hover-class="other-navigator-hover" class="userFnLi" >
+<view  bindtap="toaddress" hover-class="other-navigator-hover" class="userFnLi" >
   <text >地址管理</text>
   <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
-</navigator>
+</view>
 
-<navigator url="/pages/my/newpassword/newpassword" open-type="navigate" hover-class="other-navigator-hover" class="userFnLi" >
+<view bindtap="tonewpassword"  hover-class="other-navigator-hover" class="userFnLi" >
   <text >修改密码</text>
   <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
-</navigator>
-
+</view>
+<!-- 
 <navigator  class="userFnLi" >
   <text >我的收藏</text>
   <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
-</navigator>
+</navigator> -->
 
-<view class="userFnLi" >
+<view class="userFnLi" bindtap="call" >
   <text >投诉专线</text>
   <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
 </view>
 
-<navigator class="userFnLi" >
+<!-- <navigator class="userFnLi" >
   <text >买主要求</text>
   <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
-</navigator>
+</navigator> -->

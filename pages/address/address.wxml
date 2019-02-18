@@ -7,10 +7,10 @@
   </view>
   <text class="al-text" >{{item.province_name}}{{item.city_name}}{{item.area_name}}{{item.address}}</text>
   <view class="al-operate" >
-    <view class="al-default" >
+    <!-- <view class="al-default" >
       <icon class="icon fl" type="success" size="34rpx" color="red" />
       <text class="text din fl" >默认地址</text>
-    </view>
+    </view> -->
     <view class="al-o-btn din fr" >
       <navigator url="installAddress/installAddress?id={{item.id}}" class="al-btn-amend din" >
       <!-- <view class="al-btn-amend din" bindtap="redirect" data-id="{{item.id}}" > -->

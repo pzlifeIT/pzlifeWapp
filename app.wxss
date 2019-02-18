@@ -12,6 +12,10 @@
     display: inline-block;
 }
 
+.db {
+    display: block;
+}
+
 .fl {
     float: left;
 }

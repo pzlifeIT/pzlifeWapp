@@ -72,3 +72,16 @@
     line-height: 160rpx;
     margin-right: 20rpx;
 }
+
+.address-new {
+    position: fixed;
+    bottom: 0;
+    width: 750rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 28rpx;
+    color: #fefefe;
+    text-align: center;
+    z-index: 20;
+    background-color: #e61f18;
+}
