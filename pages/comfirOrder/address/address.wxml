@@ -13,7 +13,12 @@
       <text class="al-con-address din">{{item.province_name}} {{item.city_name}} {{item.area_name}} {{item.address}}</text>
     </view>
   </view>
-  <view class="al-conple din fl" >
+  <navigator url="/pages/address/installAddress/installAddress?id={{item.id}}">
+  <view class="al-conple din fl" bindtap="" >
     <text class="al-conple-text din fr" >编辑</text>
   </view>
+  </navigator>
 </view>
+<navigator url="/pages/address/installAddress/installAddress" >
+  <view  class="address-new" >新建</view>
+</navigator>

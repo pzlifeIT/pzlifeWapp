@@ -16,10 +16,10 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
-            siteid: options.siteid,
-            skus: options.skus
-        })
-        this.getUserAddress()
+                siteid: options.siteid,
+                skus: options.skus
+            })
+            // this.getUserAddress()
     },
     setsite: function(e) {
         console.log(e.currentTarget.dataset)
@@ -55,7 +55,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-
+        this.getUserAddress()
     },
 
     /**

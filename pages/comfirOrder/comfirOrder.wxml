@@ -71,36 +71,42 @@
     </view>
     <view >
       <button class="hp-else din fl" plain="true" bindtap="selsite"  >选择其他</button>
-      <button bindtap="suborder" class="hp-confirm din fl" >确定</button>
+      <button bindtap="showbuypup" class="hp-confirm din fl" >确定</button>
     </view>
   </view>
 </view>
 
-<view >
+<view class="cobuy" wx:if="{{buypup}}">
   <view class="fill" bindtap="hidepay" ></view>
-  <view >
-    <view ></view>
-    <view >
-      <view ><image src="" /></view>
-      <view >
-        <text >商票抵扣</text>
-        <text >余额: ￥0 </text>
+  <view class="buymoney">
+    <view class="bm-tit" >支付方式</view>
+    <view class="bm-mode" bindtap="selpaytype"  data-type="2">
+      <view class="din fl" ><image class="buyIcon" src="/pages/images/images/pay_03.png" /></view>
+      <view  class="bm-info din fl" >
+        <text class="db">商票抵扣</text>
+        <text class="db bm-balance">余额: ￥{{stat.balance}} </text>
       </view>
-      <view >
-        <view ></view>
-        <icon type="success" size="34rpx" />
+      <view  class="din fr" >
+        <icon class="bm-btn" wx:if="{{paytype == 2}}" type="success" size="50rpx" />
+        <view class="bm-btn no-btn" wx:else ></view>
       </view>
     </view>
-    <view >
-      <view ><image src="" /></view>
-      <view >
-        <text >微信支付</text>
-        <text >余额: ￥0 </text>
+    <view class="bm-mode" bindtap="selpaytype"  data-type="1">
+      <view class="din fl" ><image class="buyIcon" src="/pages/images/images/pay_08.png" /></view>
+      <view class="bm-info din fl" >
+        <text class="db">微信支付</text>
       </view>
-      <view >
-        <view ></view>
-        <icon type="success" size="34rpx" />
+      <view class=" din fr" >
+        <icon class="bm-btn" wx:if="{{paytype == 1}}" type="success" size="50rpx" />
+        <view class="bm-btn no-btn" wx:else  ></view>
       </view>
+    </view>
+    <view class="bm-affirm">
+      <view class="bm-money fl" >
+        <view class="din hb fl" wx:if="{{paytype == 2}}"  >商票<text>￥<text class="moneynum">{{paymoney.redmoney}}</text></text></view>
+        <view class="din wxmoney fr">微信<text>￥<text class="moneynum">{{paymoney.wxpay}}</text></text></view>
+      </view>
+      <view bindtap="gobuy" class="ba-btn din fr" >去付款</view>
     </view>
   </view>
 </view>
