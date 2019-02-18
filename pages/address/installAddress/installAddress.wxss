@@ -8,8 +8,28 @@ page {
     font-size: 30rpx;
 }
 
-.ia-input {
+.provinces {
+    height: 100rpx;
+    line-height: 100rpx;
     background-color: #fff;
+    border-bottom: 1rpx solid #f7f7f7;
+}
+
+.provinces-tit {
+    width: 260rpx;
+    margin-left: 20rpx;
+    color: #888;
+}
+
+.provinces-text {
+    width: 450rpx;
+    height: 100rpx;
+    text-align: center;
+    overflow: auto;
+}
+
+.provinces-text-con {
+    white-space: nowrap
 }
 
 .ia-hint {
@@ -17,12 +37,15 @@ page {
     line-height: 47rpx;
     font-size: 28rpx;
     color: #e61f18;
-    text-indent: 10rpx;
+    text-indent: 20rpx;
 }
 
-.ia-input input {
+.ia-input {
     line-height: 60rpx;
-    padding: 10rpx;
+    padding: 20rpx;
+    font-size: 30rpx;
+    background-color: #fff;
+    border-bottom: 1rpx solid #f7f7f7;
 }
 
 .ia-default {
@@ -39,7 +62,7 @@ page {
 
 .unsel,
 .sel {
-    margin: 19rpx 10rpx;
+    margin: 19rpx 20rpx;
 }
 
 .ia-d-text {
@@ -57,4 +80,10 @@ page {
     text-align: center;
     line-height: 90rpx;
     background-color: #e61f18;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
 }

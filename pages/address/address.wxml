@@ -1,123 +1,28 @@
 <!--pages/address/address.wxml-->
 <view class="address-list" >
-<view class="address-li" >
+<view class="address-li" wx:for="{{address}}" >
   <view class="al-name" >
-    <text class="fl" >鲜鲜</text>
-    <text class="fr" >18881101993</text>
+    <text class="fl" >{{item.name}}</text>
+    <text class="fr" >{{item.mobile}}</text>
   </view>
-  <text class="al-text" >上海市静安区石门二路333弄3号楼17C二路333弄3号楼17C门二路333弄3号楼</text>
+  <text class="al-text" >{{item.province_name}}{{item.city_name}}{{item.area_name}}{{item.address}}</text>
   <view class="al-operate" >
     <view class="al-default" >
       <icon class="icon fl" type="success" size="34rpx" color="red" />
       <text class="text din fl" >默认地址</text>
     </view>
     <view class="al-o-btn din fr" >
-      <view class="al-btn-amend din" ><image src="../images/images/xie.png"  /></view>
+      <navigator url="installAddress/installAddress?id={{item.id}}" class="al-btn-amend din" >
+      <!-- <view class="al-btn-amend din" bindtap="redirect" data-id="{{item.id}}" > -->
+        <image src="../images/images/xie.png"  />
+      <!-- </view> -->
+      </navigator>
       <view  class="al-btn-del din"><image src="../images/images/del.png" /></view>
     </view>
   </view>
 </view>
-<view class="address-li" >
-  <view class="al-name" >
-    <text class="fl" >鲜鲜</text>
-    <text class="fr" >18881101993</text>
-  </view>
-  <text class="al-text" >上海市静安区石门二路333弄3号楼17C二路333弄3号楼17C门二路333弄3号楼</text>
-  <view class="al-operate" >
-    <view class="al-default" >
-      <icon class="icon fl" type="success" size="34rpx" color="red" />
-      <text class="text din fl" >默认地址</text>
-    </view>
-    <view class="al-o-btn din fr" >
-      <view class="al-btn-amend din" ><image src="../images/images/xie.png"  /></view>
-      <view  class="al-btn-del din"><image src="../images/images/del.png" /></view>
-    </view>
-  </view>
+
 </view>
-<view class="address-li" >
-  <view class="al-name" >
-    <text class="fl" >鲜鲜</text>
-    <text class="fr" >18881101993</text>
-  </view>
-  <text class="al-text" >上海市静安区石门二路333弄3号楼17C二路333弄3号楼17C门二路333弄3号楼</text>
-  <view class="al-operate" >
-    <view class="al-default" >
-      <icon class="icon fl" type="success" size="34rpx" color="red" />
-      <text class="text din fl" >默认地址</text>
-    </view>
-    <view class="al-o-btn din fr" >
-      <view class="al-btn-amend din" ><image src="../images/images/xie.png"  /></view>
-      <view  class="al-btn-del din"><image src="../images/images/del.png" /></view>
-    </view>
-  </view>
-</view>
-<view class="address-li" >
-  <view class="al-name" >
-    <text class="fl" >鲜鲜</text>
-    <text class="fr" >18881101993</text>
-  </view>
-  <text class="al-text" >上海市静安区石门二路333弄3号楼17C二路333弄3号楼17C门二路333弄3号楼</text>
-  <view class="al-operate" >
-    <view class="al-default" >
-      <icon class="icon fl" type="success" size="34rpx" color="red" />
-      <text class="text din fl" >默认地址</text>
-    </view>
-    <view class="al-o-btn din fr" >
-      <view class="al-btn-amend din" ><image src="../images/images/xie.png"  /></view>
-      <view  class="al-btn-del din"><image src="../images/images/del.png" /></view>
-    </view>
-  </view>
-</view>
-<view class="address-li" >
-  <view class="al-name" >
-    <text class="fl" >鲜鲜</text>
-    <text class="fr" >18881101993</text>
-  </view>
-  <text class="al-text" >上海市静安区石门二路333弄3号楼17C二路333弄3号楼17C门二路333弄3号楼</text>
-  <view class="al-operate" >
-    <view class="al-default" >
-      <icon class="icon fl" type="success" size="34rpx" color="red" />
-      <text class="text din fl" >默认地址</text>
-    </view>
-    <view class="al-o-btn din fr" >
-      <view class="al-btn-amend din" ><image src="../images/images/xie.png"  /></view>
-      <view  class="al-btn-del din"><image src="../images/images/del.png" /></view>
-    </view>
-  </view>
-</view>
-<view class="address-li" >
-  <view class="al-name" >
-    <text class="fl" >鲜鲜</text>
-    <text class="fr" >18881101993</text>
-  </view>
-  <text class="al-text" >上海市静安区石门二路333弄3号楼17C二路333弄3号楼17C门二路333弄3号楼</text>
-  <view class="al-operate" >
-    <view class="al-default" >
-      <icon class="icon fl" type="success" size="34rpx" color="red" />
-      <text class="text din fl" >默认地址</text>
-    </view>
-    <view class="al-o-btn din fr" >
-      <view class="al-btn-amend din" ><image src="../images/images/xie.png"  /></view>
-      <view  class="al-btn-del din"><image src="../images/images/del.png" /></view>
-    </view>
-  </view>
-</view>
-<view class="address-li" >
-  <view class="al-name" >
-    <text class="fl" >鲜鲜</text>
-    <text class="fr" >18881101993</text>
-  </view>
-  <text class="al-text" >上海市静安区石门二路333弄3号楼17C二路333弄3号楼17C门二路333弄3号楼</text>
-  <view class="al-operate" >
-    <view class="al-default" >
-      <icon class="icon fl" type="success" size="34rpx" color="red" />
-      <text class="text din fl" >默认地址</text>
-    </view>
-    <view class="al-o-btn din fr" >
-      <view class="al-btn-amend din" ><image src="../images/images/xie.png"  /></view>
-      <view  class="al-btn-del din"><image src="../images/images/del.png" /></view>
-    </view>
-  </view>
-</view>
-</view>
-<view class="address-new" >新建</view>
+<navigator url="installAddress/installAddress" >
+  <view  class="address-new" >新建</view>
+</navigator>

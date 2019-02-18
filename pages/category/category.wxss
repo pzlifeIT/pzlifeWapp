@@ -64,6 +64,7 @@ page {
     margin-bottom: 1px;
     text-align: center;
     background-color: #F7F7F7;
+    overflow: hidden;
 }
 
 .cate_text.active {

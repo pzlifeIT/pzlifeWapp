@@ -8,12 +8,13 @@ Page({
     data: {
         goodid: '',
         goodInfo: {},
-        showModel: true,
+        showModel: false,
         attr: [],
         price: '',
         goodData: {},
         buy: false,
-        repertory: true
+        repertory: true,
+        buyNum: 1
     },
     showModel: function() {
         this.setData({
@@ -28,11 +29,6 @@ Page({
     hideModel: function() {
         this.setData({
             showModel: false
-        })
-    },
-    showModel: function() {
-        this.setData({
-            showModel: true
         })
     },
     preventTouchMove: function() {
@@ -80,18 +76,22 @@ Page({
                     if (sku[i].stock > 0) {
                         goodData.sku_price = sku[i].retail_price
                         goodData.sku_image = sku[i].sku_image
+                        goodData.id = sku[i].id
                     } else {
+                        console.log('')
                         buy = false
                         repertory = false
+                        goodData = {}
                     }
                     break;
                 }
             }
-
+            console.log(goodData)
             this.setData({
                 goodData: goodData
             })
         }
+        console.log(this.data.goodData)
         this.setData({
             buy: buy,
             repertory: repertory
@@ -140,6 +140,64 @@ Page({
             buyNum: newnum
         })
     },
+    buyGood: function() {
+        if (!this.data.showModel) {
+            this.setData({
+                showModel: true
+            })
+            return
+        }
+        if (!this.data.buy) {
+            wx.showToast({
+                title: '请选择规格',
+                icon: 'none',
+                duration: 2000
+            })
+            return
+        }
+
+    },
+    joinCart: function() {
+        console.log(this.data.goodData)
+        if (!this.data.showModel) {
+            this.setData({
+                showModel: true
+            })
+            return
+        }
+        if (!this.data.buy) {
+            wx.showToast({
+                title: '请选择规格',
+                icon: 'none',
+                duration: 2000
+            })
+            return
+        }
+        this.addUserCart({
+            goods_skuid: this.data.goodData.id,
+            goods_num: this.data.buyNum,
+            track_id: 1
+        })
+    },
+    /**
+     * 加入购物车接口
+     */
+    addUserCart: function(data) {
+        let that = this
+        app.wxrequest({
+            url: 'index/cart/addUserCart',
+            data: {
+                goods_skuid: data.goods_skuid,
+                goods_num: data.goods_num,
+                track_id: data.track_id
+            },
+            success: function(res) {
+                that.setData({
+                    showModel: false
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -149,21 +207,25 @@ Page({
         })
         this.getGoodInfo(this.data.goodid)
     },
+    /**
+     * 获取商品详情
+     */
     getGoodInfo: function(id) {
         let t = this,
             goodData = {}
         app.wxrequest({
             url: 'index/goods/getGoods',
             data: {
-                goods_id: id
+                goods_id: id,
+                source: 4
             },
+            nocon: true,
             success: function(res) {
                 goodData.sku_image = res.goods_data.image
                 t.setData({
                     goodInfo: res,
                     goodData: goodData
                 })
-
             }
         })
     },

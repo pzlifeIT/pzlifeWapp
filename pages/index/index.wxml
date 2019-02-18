@@ -71,6 +71,7 @@
 		</view>
 	</view>
 </view>
+
 <!-- 推荐方案 -->
 <view class="scheme">
 	<view class="scheme-title">推荐方案</view>

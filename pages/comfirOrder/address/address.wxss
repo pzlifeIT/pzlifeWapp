@@ -1,0 +1,74 @@
+/* pages/comfirOrder/address/address.wxss */
+
+.ad-image {
+    width: 750rpx;
+    height: 6rpx;
+}
+
+.ad-list {
+    font-size: 30rpx;
+    border-bottom: 2rpx solid #f7f7f7;
+    overflow: auto;
+}
+
+.al-icon {
+    width: 105rpx;
+    min-height: 160rpx;
+}
+
+.al-icon .icon,
+.al-icon .noicon {
+    margin: 50rpx 20rpx;
+}
+
+.al-icon .icon {
+    width: 34rpx;
+    height: 34rpx;
+}
+
+.al-icon .noicon {
+    width: 34rpx;
+    height: 34rpx;
+    border: 1rpx solid #b6b6b6;
+    border-radius: 50%;
+}
+
+.al-con {
+    width: 500rpx;
+}
+
+.al-con-name {
+    width: 100rpx;
+    margin-top: 10rpx;
+    color: #404040;
+}
+
+.al-con-info {
+    width: 400rpx;
+}
+
+.al-con-mobile {
+    width: 100%;
+    margin-top: 10rpx;
+    line-height: 40rpx;
+    color: #404040;
+}
+
+.al-con-address {
+    width: 100%;
+    line-height: 45rpx;
+    color: #888888;
+    font-size: 26rpx;
+}
+
+.al-conple {
+    width: 145rpx;
+    height: 100%;
+    min-height: 160rpx;
+    color: #888888;
+}
+
+.al-conple-text {
+    line-height: 160rpx;
+    margin-right: 20rpx;
+}

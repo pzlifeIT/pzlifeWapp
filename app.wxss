@@ -21,3 +21,9 @@
 .fr {
     float: right;
 }
+
+::-webkit-scrollbar {
+    width: 0rpx;
+    height: 0rpx;
+    color: transparent;
+}

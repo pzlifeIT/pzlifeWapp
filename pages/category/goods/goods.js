@@ -6,7 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        goods: [],
+        goodsList: [],
     },
 
     /**
@@ -30,9 +30,11 @@ Page({
         app.wxrequest({
             url: "index/goods/getCategoryGoods",
             data: { cate_id: id },
+            haveCom: false,
             success(res) {
+                console.log(res)
                 that.setData({
-                    goods: res.data
+                    goodsList: res.data
                 })
             },
             error(res) {
@@ -51,7 +53,7 @@ Page({
             success(res) {
                 console.log(res)
                 that.setData({
-                    goods: res.data
+                    goodsList: res.data
                 })
             },
             error(res) {
