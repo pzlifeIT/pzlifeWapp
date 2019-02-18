@@ -26,17 +26,17 @@
 </view> 
 
 <view class="userCost" >
-  <view class="userCoupon" >
+  <view class="userCoupon" bindtap="coupon">
     <image class="ucIcon" src="../images/images/12121_05.png" wx:if="{{loginStatus == false}}"/>
 		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">0</text><text class="text">张</text></view>
     <text class="userText" >优惠券</text>
   </view>
-  <view class="userIntegral" >
+  <view class="userIntegral" bindtap="inte">
     <image  class="ucIcon" src="../images/images/12121_07.png" wx:if="{{loginStatus === false}}" />
 		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">{{userInfo.integral}}</text><text class="text">分</text></view>
     <text class="userText" >购物积分</text>
   </view>
-  <view class="userMoney" >
+  <view class="userMoney" bindtap="money">
     <image  class="ucIcon" src="../images/images/12121_10.png" wx:if="{{loginStatus ==false}}" />
 		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">{{userInfo.balance}}</text><text class="text">元</text></view>
     <text class="userText" >我的商票</text>

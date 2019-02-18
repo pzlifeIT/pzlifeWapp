@@ -1,0 +1,81 @@
+<!--pages/my/case/case.wxml-->
+<view class="balance">
+	<view class="balance-text">积分余额</view>
+	<view class="balance-num">100<text>积分</text></view>
+</view>
+<view class="detail" wx:if="{{inte.length>=1}}">
+	<view class="detail-head">积分明细</view>
+	<scroll-view class="detali-list" scroll-y="true" style="height: {{scroll_height}}rpx;">
+		<view class="detail-one">
+			<view class="list-left">
+				<view class="title">订单消费</view>
+				<view class="order">订单号：16161361320321610321051651</view>
+				<view class="time">2019-10-15 10:26:50</view>
+			</view>
+			<view class="list-right">-60积分</view>
+		</view>
+		<view class="detail-one">
+			<view class="list-left">
+				<view class="title">订单消费</view>
+				<view class="order">订单号：16161361320321610321051651</view>
+				<view class="time">2019-10-15 10:26:50</view>
+			</view>
+			<view class="list-right active">+60积分</view>
+		</view>
+		<view class="detail-one">
+			<view class="list-left">
+				<view class="title">订单消费</view>
+				<view class="order">订单号：16161361320321610321051651</view>
+				<view class="time">2019-10-15 10:26:50</view>
+			</view>
+			<view class="list-right active">+60积分</view>
+		</view>
+		<view class="detail-one">
+			<view class="list-left">
+				<view class="title">订单消费</view>
+				<view class="order">订单号：16161361320321610321051651</view>
+				<view class="time">2019-10-15 10:26:50</view>
+			</view>
+			<view class="list-right active">+60积分</view>
+		</view>
+		<view class="detail-one">
+			<view class="list-left">
+				<view class="title">订单消费</view>
+				<view class="order">订单号：16161361320321610321051651</view>
+				<view class="time">2019-10-15 10:26:50</view>
+			</view>
+			<view class="list-right active">+60积分</view>
+		</view>
+		<view class="detail-one">
+			<view class="list-left">
+				<view class="title">订单消费</view>
+				<view class="order">订单号：16161361320321610321051651</view>
+				<view class="time">2019-10-15 10:26:50</view>
+			</view>
+			<view class="list-right active">+60积分</view>
+		</view>
+		<view class="detail-one">
+			<view class="list-left">
+				<view class="title">订单消费</view>
+				<view class="order">订单号：16161361320321610321051651</view>
+				<view class="time">2019-10-15 10:26:50</view>
+			</view>
+			<view class="list-right active">+60积分</view>
+		</view>
+		<view class="detail-one">
+			<view class="list-left">
+				<view class="title">订单消费</view>
+				<view class="order">订单号：16161361320321610321051651</view>
+				<view class="time">2019-10-15 10:26:50</view>
+			</view>
+			<view class="list-right active">+60积分</view>
+		</view>
+	</scroll-view>
+</view>
+
+<view class="not" wx:if="{{inte.length == 0}}">
+	<view class="not-case">
+		<image src="../../images/images/jf.png"></image>
+		<view class="text">暂无积分</view>
+	</view>
+</view>

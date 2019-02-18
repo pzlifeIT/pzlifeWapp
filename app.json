@@ -1,6 +1,5 @@
 {
     "pages": [
-      
         "pages/index/index",
         "pages/category/category",
         "pages/logs/logs",
@@ -24,7 +23,9 @@
         "pages/search/search",
         "pages/my/myInfo/myInfo",
         "pages/my/newpassword/newpassword",
-        "pages/my/case/case"
+        "pages/coupon/coupon",
+        "pages/my/case/case",
+        "pages/my/integ/integ"
     ],
     "window": {
         "backgroundTextStyle": "light",
