@@ -70,6 +70,45 @@ Page({
 		  }
 	  })
   },
+  coupon:function(){
+		if(con_id == true){
+			wx.navigateTo({
+				url:"pages/coupon/coupon?con_id="+con_id
+			})
+		}else{
+			wx.showToast({
+				title:"请先登录",
+				icon:"none",
+				duration:1500
+			})
+		}
+  },
+  money:function(){
+	  if(con_id == true){
+	  	wx.navigateTo({
+	  		url:"pages/my/case/case?con_id="+con_id
+	  	})
+	  }else{
+	  	wx.showToast({
+	  		title:"请先登录",
+	  		icon:"none",
+	  		duration:1500
+	  	})
+	  }
+  },
+  inte:function(){
+	  if(con_id == true){
+	  	wx.navigateTo({
+	  		url:"pages/my/integ/integ?con_id="+con_id
+	  	})
+	  }else{
+	  	wx.showToast({
+	  		title:"请先登录",
+	  		icon:"none",
+	  		duration:1500
+	  	})
+	  }
+  },
   /**
    * 获取con_id
    */
@@ -80,9 +119,9 @@ Page({
 		success(res) {
 			that.checkLogin(res.data)
 			console.log(res)
-// 			that.setData({
-// 				con_id:res.data
-// 			})
+			that.setData({
+				con_id:res.data
+			})
 		}
 	  })
   },

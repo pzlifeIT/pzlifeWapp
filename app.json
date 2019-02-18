@@ -23,7 +23,8 @@
 		"pages/my/myInfo/myInfo",
 		"pages/my/newpassword/newpassword",
     "pages/coupon/coupon",
-    "pages/my/case/case"
+    "pages/my/case/case",
+    "pages/my/integ/integ"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

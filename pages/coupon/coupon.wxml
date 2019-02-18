@@ -1,0 +1,208 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="head">
+	<view class="state-text {{head == 1 ?'active':''}}" bindtap="select" data-num="1">未使用(5)</view>
+	<view class="state-text {{head == 2 ?'active':''}}" bindtap="select" data-num="2">已使用(5)</view>
+	<view class="state-text {{head == 3 ?'active':''}}" bindtap="select" data-num="3">已过期(5)</view>
+	<i class="line"><s></s></i>
+</view>
+<view class="convert">
+	<input type="text" class="convert-input" placeholder="请输入优惠码" placeholder-class="place" />
+	<view class="button-convert">兑换</view>
+</view>
+
+<view class="getCoupon" wx:if="{{coupon.length>=1}}">
+	<image src="../images/images/12121_05.png" class="coupon-icon"></image>
+	<text class="get-text">领券中心</text>
+	<image src="../images/images/jt_18.png" class="jt-icon"></image>
+</view>
+
+<view class="coupon-list {{head == 1?'a1':''}}" wx:if="{{head == 1 && coupon.length>=1}}">
+	<view class="coupon">
+		<view class="left">
+			<view class="sy-pr"><text class="symbol">￥</text><text class="price">9</text></view>
+			<view class="rule">满39元使用</view>
+			<view class="top-right"></view>
+			<view class="bottom-right"></view>
+
+		</view>
+		<view class="mid">
+			<view class="title">新人专属优惠券</view>
+			<view class="subtitle">仅限水果专场使用</view>
+			<view class="usetime">2018.09.05-2019.05.09</view>
+			<view class="top-left"></view>
+			<view class="bottom-left"></view>
+		</view>
+		<view class="right">
+			立即使用
+		</view>
+	</view>
+	<view class="coupon">
+		<view class="left">
+			<view class="sy-pr"><text class="symbol">￥</text><text class="price">9</text></view>
+			<view class="rule">满39元使用</view>
+			<view class="top-right"></view>
+			<view class="bottom-right"></view>
+
+		</view>
+		<view class="mid">
+			<view class="title">新人专属优惠券</view>
+			<view class="subtitle">仅限水果专场使用</view>
+			<view class="usetime">2018.09.05-2019.05.09</view>
+			<view class="top-left"></view>
+			<view class="bottom-left"></view>
+		</view>
+		<view class="right">
+			立即使用
+		</view>
+	</view>
+	<view class="coupon">
+		<view class="left">
+			<view class="sy-pr"><text class="symbol">￥</text><text class="price">9</text></view>
+			<view class="rule">满39元使用</view>
+			<view class="top-right"></view>
+			<view class="bottom-right"></view>
+
+		</view>
+		<view class="mid">
+			<view class="title">新人专属优惠券</view>
+			<view class="subtitle">仅限水果专场使用</view>
+			<view class="usetime">2018.09.05-2019.05.09</view>
+			<view class="top-left"></view>
+			<view class="bottom-left"></view>
+		</view>
+		<view class="right">
+			立即使用
+		</view>
+	</view>
+</view>
+
+<view class="coupon-list {{head == 2?'a2':''}}" wx:if="{{head == 2}}">
+	<view class="coupon">
+		<view class="left">
+			<view class="sy-pr"><text class="symbol">￥</text><text class="price">10</text></view>
+			<view class="rule">满39元使用</view>
+			<view class="top-right"></view>
+			<view class="bottom-right"></view>
+
+		</view>
+		<view class="mid">
+			<view class="title">新人专属优惠券</view>
+			<view class="subtitle">仅限水果专场使用</view>
+			<view class="usetime">2018.09.05-2019.05.09</view>
+			<view class="top-left"></view>
+			<view class="bottom-left"></view>
+		</view>
+		<view class="right used">
+			已使用
+		</view>
+	</view>
+	<view class="coupon">
+		<view class="left">
+			<view class="sy-pr"><text class="symbol">￥</text><text class="price">90</text></view>
+			<view class="rule">满39元使用</view>
+			<view class="top-right"></view>
+			<view class="bottom-right"></view>
+
+		</view>
+		<view class="mid">
+			<view class="title">新人专属优惠券</view>
+			<view class="subtitle">仅限水果专场使用</view>
+			<view class="usetime">2018.09.05-2019.05.09</view>
+			<view class="top-left"></view>
+			<view class="bottom-left"></view>
+		</view>
+		<view class="right used">
+			已使用
+		</view>
+	</view>
+	<view class="coupon">
+		<view class="left">
+			<view class="sy-pr"><text class="symbol">￥</text><text class="price">79</text></view>
+			<view class="rule">满39元使用</view>
+			<view class="top-right"></view>
+			<view class="bottom-right"></view>
+
+		</view>
+		<view class="mid">
+			<view class="title">新人专属优惠券</view>
+			<view class="subtitle">仅限水果专场使用</view>
+			<view class="usetime">2018.09.05-2019.05.09</view>
+			<view class="top-left"></view>
+			<view class="bottom-left"></view>
+		</view>
+		<view class="right used">
+			已使用
+		</view>
+	</view>
+</view>
+
+<view class="coupon-list {{head == 3? '':''}}" wx:if="{{head == 3}}">
+	<view class="coupon">
+		<view class="left">
+			<view class="sy-pr over"><text class="symbol">￥</text><text class="price">30</text></view>
+			<view class="rule">满39元使用</view>
+			<view class="top-right"></view>
+			<view class="bottom-right"></view>
+
+		</view>
+		<view class="mid">
+			<view class="title">新人专属优惠券</view>
+			<view class="subtitle">仅限水果专场使用</view>
+			<view class="usetime">2018.09.05-2019.05.09</view>
+			<view class="top-left"></view>
+			<view class="bottom-left"></view>
+		</view>
+		<view class="right used">
+			已过期
+		</view>
+	</view>
+	<view class="coupon">
+		<view class="left">
+			<view class="sy-pr over"><text class="symbol">￥</text><text class="price">95</text></view>
+			<view class="rule">满39元使用</view>
+			<view class="top-right"></view>
+			<view class="bottom-right"></view>
+
+		</view>
+		<view class="mid">
+			<view class="title">新人专属优惠券</view>
+			<view class="subtitle">仅限水果专场使用</view>
+			<view class="usetime">2018.09.05-2019.05.09</view>
+			<view class="top-left"></view>
+			<view class="bottom-left"></view>
+		</view>
+		<view class="right used">
+			已过期
+		</view>
+	</view>
+	<view class="coupon">
+		<view class="left">
+			<view class="sy-pr over"><text class="symbol">￥</text><text class="price">96</text></view>
+			<view class="rule">满39元使用</view>
+			<view class="top-right"></view>
+			<view class="bottom-right"></view>
+
+		</view>
+		<view class="mid">
+			<view class="title">新人专属优惠券</view>
+			<view class="subtitle">仅限水果专场使用</view>
+			<view class="usetime">2018.09.05-2019.05.09</view>
+			<view class="top-left"></view>
+			<view class="bottom-left"></view>
+		</view>
+		<view class="right used">
+			已过期
+		</view>
+	</view>
+</view>
+
+
+
+<!-- 无优惠券 -->
+<view class="not" wx:if="{{coupon.length == 0}}">
+	<view class="not-coupon">
+		<image src="../images/images/not.png"></image>
+		<view class="not-text">暂无优惠券</view>
+		<view class="button">前往领券中心</view>
+	</view>
+</view>

@@ -125,6 +125,7 @@ Page({
 			total: total
 		})
 	},
+	
 	jian: function(e) {
 		let that = this
 		const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标

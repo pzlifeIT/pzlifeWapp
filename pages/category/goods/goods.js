@@ -6,7 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        goods: [],
+        goodsList: [],
     },
 
     /**
@@ -51,7 +51,7 @@ Page({
             success(res) {
                 console.log(res)
                 that.setData({
-                    goods: res.data
+                    goodsList: res.data
                 })
             },
             error(res) {

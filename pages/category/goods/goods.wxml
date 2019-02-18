@@ -1,6 +1,6 @@
 <!--pages/category/goods/goods.wxml-->
 <view class='goods'>
-<navigator url='/pages/goods/detail?goodid={{item.id}}' wx:for='{{goods}}' wx:key='{{item.id}}'>
+<navigator url='/pages/goods/detail?goodid={{item.id}}' wx:for='{{goodsList}}' wx:key='{{item.id}}'>
   <view class='one_goods'>
     <view class='img'>
       <image class='goods_img' src='{{item.image}}'></image>
