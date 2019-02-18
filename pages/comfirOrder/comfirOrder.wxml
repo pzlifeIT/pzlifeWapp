@@ -71,11 +71,39 @@
     </view>
     <view >
       <button class="hp-else din fl" plain="true" bindtap="selsite"  >选择其他</button>
-      <button class="hp-confirm din fl" >确定</button>
+      <button bindtap="suborder" class="hp-confirm din fl" >确定</button>
     </view>
   </view>
 </view>
 
+<view >
+  <view class="fill" bindtap="hidepay" ></view>
+  <view >
+    <view ></view>
+    <view >
+      <view ><image src="" /></view>
+      <view >
+        <text >商票抵扣</text>
+        <text >余额: ￥0 </text>
+      </view>
+      <view >
+        <view ></view>
+        <icon type="success" size="34rpx" />
+      </view>
+    </view>
+    <view >
+      <view ><image src="" /></view>
+      <view >
+        <text >微信支付</text>
+        <text >余额: ￥0 </text>
+      </view>
+      <view >
+        <view ></view>
+        <icon type="success" size="34rpx" />
+      </view>
+    </view>
+  </view>
+</view>
 <!-- <view class='mask' bindtap='hideModel' wx:if="{{isShow}}">
   <view class='addres_pop' catchtap='maopao'>
     <scroll-view class='addres_list' scroll-y="true" >

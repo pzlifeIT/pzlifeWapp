@@ -1,11 +1,10 @@
 {
     "pages": [
-        "pages/cart/cart",
         "pages/index/index",
         "pages/category/category",
         "pages/logs/logs",
         "pages/collect/collect",
-        
+        "pages/cart/cart",
         "pages/my/my",
         "pages/category/goods/goods",
         "pages/goods/detail",
@@ -22,7 +21,9 @@
         "pages/comfirOrder/comfirOrder",
         "pages/comfirOrder/address/address",
         "pages/search/search",
-        "pages/my/myInfo/myInfo"
+        "pages/my/myInfo/myInfo",
+        "pages/my/newpassword/newpassword",
+        "pages/my/case/case"
     ],
     "window": {
         "backgroundTextStyle": "light",

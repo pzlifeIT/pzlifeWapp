@@ -14,14 +14,14 @@
 		</view>
     <view class='cate_text {{item.id==idx?"active":""}}' wx:for='{{firstCate}}' wx:key='{{item.id}}' bindtap='selectCate' data-cate-id="{{item.id}}">
       <text class=''>{{item.type_name}}</text>
-    </view>
+    </view> 
   </scroll-view>
 
   <scroll-view scroll-y="true" scroll-top="0" class='cate_right'>
     <!-- <view class='image'>
       <image src='images/cate.jpg' style='height:200rpx;width:560rpx'></image>
     </view> -->
-    <view class='wai' wx:for='{{secondCate}}' wx:key='{{item.id}}'>
+    <!-- <view class='wai' wx:for='{{secondCate}}' wx:key='{{item.id}}'>
       <view class='cate_two'>
         <view><text class='cate_title'>{{item.type_name}}</text></view>
         <navigator url='goods/goods?cate_id={{item.id}}' wx:for="{{item._child}}" hover-class="none">
@@ -31,7 +31,7 @@
           </view>
        </navigator>
       </view>
-    </view>
+    </view> -->
 		
 		<view class='wai' wx:for='{{showSub}}' wx:key='{{item.id}}'>
 		  <view class='cate_two'>

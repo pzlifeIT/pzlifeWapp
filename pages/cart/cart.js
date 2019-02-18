@@ -12,7 +12,8 @@ Page({
         total: 0,
         selectAll: true,
         sku_id: 0,
-        con_id: ""
+        con_id: "",
+        shop_id: 0
     },
     /**
      * 全选
@@ -125,28 +126,77 @@ Page({
         })
     },
     jian: function(e) {
+        let that = this
         const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标
         let goods = e.currentTarget.dataset.goods, //商品数据
             num = goods[goodsIndex].buy_num, //购买数量
             valid = this.data.valid,
+            con_id = this.data.con_id,
+            sku_id = goods[goodsIndex].id,
+            track_id = goods[goodsIndex].track_id,
             validIndex = e.currentTarget.dataset.validIndex //有效商品下标
         if (num <= 1) {
             return false
         }
-        num = num - 1
-        goods[goodsIndex].buy_num = num
+        app.wxrequest({
+                url: "index/cart/addUserCart",
+                data: {
+                    con_id: con_id,
+                    goods_skuid: sku_id,
+                    goods_num: -1,
+                    track_id: track_id
+                },
+                success(res) {
+                    num = num - 1
+                    goods[goodsIndex].buy_num = num
+                    valid[validIndex].goods = goods
+                    that.setData({
+                        valid: valid
+                    });
+                    // that.getTotal(valid)
+                    that.getStorage()
+                },
+                error(res) {
+                    if (res == 3000) {
+                        wx.showToast({
+                            title: "未获取到数据",
+                            icon: "none",
+                            duration: 1500
+                        });
+                    } else if (res == 3001) {
+                        wx.showToast({
+                            title: "con_id错误",
+                            icon: "none",
+                            duration: 1500
+                        });
+                    } else if (res == 3002) {
+                        wx.showToast({
+                            title: "缺少参数",
+                            icon: "none",
+                            duration: 1500
+                        });
+                    }
+                },
+                fail(res) {
+
+                }
+            })
             //在获取大的数组和下标然后把这个goods放进大数组中替换掉原有的元素
-        valid[validIndex].goods = goods
-        this.setData({
-            valid: valid
-        });
-        this.getTotal(valid)
+            // 		valid[validIndex].goods = goods
+            // 		this.setData({
+            // 			valid: valid
+            // 		});
+
     },
     jia: function(e) {
+        let that = this
         const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标
         let goods = e.currentTarget.dataset.goods, //商品数据
             num = goods[goodsIndex].buy_num, //购买数量
             valid = this.data.valid,
+            con_id = this.data.con_id,
+            sku_id = goods[goodsIndex].id,
+            track_id = goods[goodsIndex].track_id,
             validIndex = e.currentTarget.dataset.validIndex, //有效商品下标
             stock = goods[goodsIndex].stock
             // console.log(e)
@@ -154,31 +204,91 @@ Page({
         if (num > stock) {
             return false
         }
-        num = num + 1
-        goods[goodsIndex].buy_num = num
+
+        app.wxrequest({
+                url: "index/cart/addUserCart",
+                data: {
+                    con_id: con_id,
+                    goods_skuid: sku_id,
+                    goods_num: 1,
+                    track_id: track_id
+                },
+                success(res) {
+                    num = num + 1
+                    goods[goodsIndex].buy_num = num
+                    valid[validIndex].goods = goods
+                    that.setData({
+                        valid: valid
+                    });
+                    // that.getTotal(valid)
+                    that.getStorage()
+                },
+                error(res) {
+                    if (res == 3000) {
+                        wx.showToast({
+                            title: "未获取到数据",
+                            icon: "none",
+                            duration: 1500
+                        });
+                    } else if (res == 3001) {
+                        wx.showToast({
+                            title: "con_id错误",
+                            icon: "none",
+                            duration: 1500
+                        });
+                    } else if (res == 3002) {
+                        wx.showToast({
+                            title: "缺少参数",
+                            icon: "none",
+                            duration: 1500
+                        });
+                    }
+                },
+                fail(res) {
+
+                }
+            })
             //在获取大的数组和下标然后把这个goods放进大数组中替换掉原有的元素
-        valid[validIndex].goods = goods
-        this.setData({
-                valid: valid
-            }),
-            this.getTotal(valid)
+            // 		valid[validIndex].goods = goods
+            // 		this.setData({
+            // 				valid: valid
+            // 			}),
+
     },
     del: function(e) {
         console.log(e)
-        let sku_id = e.currentTarget.dataset.sku
+        let goods = e.currentTarget.dataset.goods,
+            goodsIndex = e.currentTarget.dataset.goodsIndex,
+            sku_id = goods[goodsIndex].id,
+            shop_id = goods[goodsIndex].track_id
         this.setData({
             mask: true,
-            sku_id: sku_id
+            sku_id: sku_id,
+            shop_id: shop_id
         })
     },
     confirmDel: function() {
-        let sku_id = this.data.sku_id,
-            con_id = this.data.con_id
+        let con_id = this.data.con_id,
+            sku_id = this.data.sku_id,
+            shop_id = this.data.shop_id,
+            that = this
         app.wxrequest({
             url: "index/cart/editUserCart",
-            data: { con_id: con_id, del_skuid: sku_id },
+            data: {
+                con_id: con_id,
+                del_skuid: sku_id,
+                del_shopid: shop_id
+            },
             success(res) {
-                console.log(res)
+                that.setData({
+                    mask: false
+                });
+                wx.showToast({
+                    title: "删除成功",
+                    icon: "none",
+                    duration: 1500
+                });
+                that.getStorage()
             },
             error(res) {
                 console.log(res)
@@ -197,6 +307,102 @@ Page({
         })
     },
     none: function(e) {
+
+    },
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function(options) {
+        // this.getCartGoodsList()
+        // this.getStorage()
+    },
+    /**
+     * 添加选择状态字段
+     */
+    addText: function(data) {
+        for (let i = 0; i < data.length; i++) {
+            data[i].selectStatus = true
+            for (let j = 0; j < data[i].goods.length; j++) {
+                data[i].goods[j].selectStatus = true
+            }
+        }
+        return data
+    },
+    getCartGoodsList: function(con_id) {
+        let that = this
+        app.wxrequest({
+            url: "index/cart/getUserCart",
+            data: {
+                con_id: con_id
+            },
+            success(res) {
+                let valid = that.addText(res.valid)
+                that.setData({
+                    valid: valid,
+                    failure: res.failure
+                });
+                that.getTotal(valid)
+            },
+            error(res) {
+                console.log(456)
+                if (res == 5000) {
+                    wx.showModal({
+                        title: "请先登录",
+                        content: "是否确定去登录",
+                        showCancel: true,
+                        confirmColor: "#E61F18",
+                        success(res) {
+                            if (res.confirm) { //点击确定
+                                wx.navigateTo({
+                                    url: "/pages/login/login"
+                                })
+                            }
+                        }
+                    })
+                } else if (res == 3000) {
+                    that.setData({
+                        valid: [],
+                        failure: []
+                    })
+                }
+            }
+        })
+    },
+    /**
+     * 获取con_id
+     */
+    getStorage: function() {
+        let that = this
+        wx.getStorage({
+            key: "con_id",
+            success(res) {
+                that.getCartGoodsList(res.data)
+                console.log(res)
+                that.setData({
+                    con_id: res.data
+                })
+            },
+            fail(res) {
+                wx.showModal({
+                    title: "请先登录",
+                    content: "是否确定去登录",
+                    showCancel: true,
+                    confirmColor: "#E61F18",
+                    success(res) {
+                        if (res.confirm) { //点击确定
+                            wx.navigateTo({
+                                url: "/pages/login/login"
+                            })
+                        }
+                    }
+                })
+            }
+        })
+    },
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+    onReady: function() {
 
     },
     /**

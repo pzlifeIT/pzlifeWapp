@@ -22,7 +22,7 @@
 					<text class='goods_title'>{{goods.goods_name}}</text>
 					<text class='goods_subtitle'>{{goods.subtitle}}</text>
 					<text class='goods_price'>￥{{goods.retail_price}}</text>
-					<text class='rebate'>钻石返利</text><text class='rebate_money'>￥8.00</text>
+					<text class='rebate'>钻石返利</text><text class='rebate_money'>￥{{goods.brokerage}}</text>
 				</view>
 				<view class='sum'>
 					<view class='border'>
@@ -31,7 +31,7 @@
 						<view class='jia' bindtap='jia' data-goods="{{item.goods}}" data-goods-index="{{goodsIndex}}" data-valid-index="{{validIndex}}">+</view>
 					</view>
 				</view>
-				<view class='del' bindtap='del' data-sku="{{goods.id}}">
+				<view class='del' bindtap='del' data-goods="{{item.goods}}" data-goods-index="{{goodsIndex}}">
 					<image src='/pages/images/images/del.png'></image>
 				</view>
 			</view>
@@ -42,7 +42,7 @@
 			<view class='lose_title'><text>已下架商品</text></view>
 		</view>
 		<block wx:for="{{failure}}" wx:key="index">
-			<view class='goods_data' wx:for="{{item.goods}}" wx:for-item="goods" wx:key="index">
+			<view class='goods_data' wx:for="{{item.goods}}" wx:for-item="goods" wx:for-index="goodsIndex" wx:key="index">
 				<view class='radio'>
 					<view class="goods_radio lose_radio">
 						失效
@@ -55,7 +55,7 @@
 					<text class='goods_title'>{{goods.goods_name}}</text>
 					<text class='goods_subtitle'>{{goods.subtitle}}</text>
 				</view>
-				<view class='del' bindtap='del'>
+				<view class='del' bindtap='del' data-goods="{{item.goods}}" data-goods-index="{{goodsIndex}}">
 					<image src='/pages/images/images/del.png'></image>
 				</view>
 			</view>

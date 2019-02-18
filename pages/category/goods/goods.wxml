@@ -6,8 +6,8 @@
       <image class='goods_img' src='{{item.image}}'></image>
     </view> 
     <text class='title'>{{item.goods_name}}</text>
-    <text class='subtitle'>{{item.title}}</text>
-    <text class='price'>￥{{item.id}}</text>
+    <text class='subtitle'>{{item.subtitle}}</text>
+    <text class='price'>￥{{item.min_retail_price}}</text>
   </view>
 </navigator>
   
