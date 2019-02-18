@@ -1,3 +1,4 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+	"navigationBarTitleText": "验证码登录"
 }

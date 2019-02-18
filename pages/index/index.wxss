@@ -169,7 +169,7 @@ page{
 	overflow: hidden;
 }
 .lump-one{
-	width: 373rpx;
+	width: 372rpx;
 	height: 320rpx;
 	margin: 1rpx;
 	float: left;

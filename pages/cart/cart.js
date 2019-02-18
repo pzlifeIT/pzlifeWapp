@@ -11,29 +11,29 @@ Page({
 		failure: [],
 		total: 0,
 		selectAll: true,
-		sku_id:0,
-		con_id:"",
-		shop_id:0
+		sku_id: 0,
+		con_id: "",
+		shop_id: 0
 	},
 	/**
 	 * 全选
 	 */
 	selectAll: function() {
 		let valid = this.data.valid,
-			selectAll = !this.data.selectAll			
-		for(let i=0;i<valid.length;i++){
+			selectAll = !this.data.selectAll
+		for (let i = 0; i < valid.length; i++) {
 			valid[i].selectStatus = selectAll
-			for(let j=0;j<valid[i].goods.length;j++){
+			for (let j = 0; j < valid[i].goods.length; j++) {
 				valid[i].goods[j].selectStatus = selectAll
-				if(valid[i].goods[j].selectStatus == false){
-					 selectAll = false
+				if (valid[i].goods[j].selectStatus == false) {
+					selectAll = false
 				}
 			}
 		}
-		
+
 		this.setData({
-			valid:valid,
-			selectAll:selectAll
+			valid: valid,
+			selectAll: selectAll
 		});
 		this.getTotal(valid)
 	},
@@ -45,24 +45,24 @@ Page({
 			validIndex = e.currentTarget.dataset.validIndex,
 			selectShop = !valid[validIndex].selectStatus,
 			select = []
-		for(let i=0;i<valid[validIndex].goods.length;i++){
+		for (let i = 0; i < valid[validIndex].goods.length; i++) {
 			valid[validIndex].goods[i].selectStatus = selectShop
 			select[i] = valid[validIndex].goods[i].selectStatus
 		}
 		let status = false
 		let have = select.indexOf(status)
-		if(have<0){//如果没有false
+		if (have < 0) { //如果没有false
 			this.setData({
-				selectAll:true
+				selectAll: true
 			})
-		}else{
+		} else {
 			this.setData({
-				selectAll:false
+				selectAll: false
 			})
 		}
 		valid[validIndex].selectStatus = selectShop
 		this.setData({
-			valid:valid
+			valid: valid
 		});
 		this.getTotal(valid)
 	},
@@ -74,56 +74,56 @@ Page({
 			goods = e.currentTarget.dataset.goods,
 			selectStatus = !goods[goodsIndex].selectStatus,
 			validIndex = e.currentTarget.dataset.validIndex,
-			valid = this.data.valid	
-			console.log(goods)
-			console.log(valid)
+			valid = this.data.valid
+		console.log(goods)
+		console.log(valid)
 		goods[goodsIndex].selectStatus = selectStatus
 		valid[validIndex].goods = goods
 		let select = []
-		for(let i=0;i<goods.length;i++){
+		for (let i = 0; i < goods.length; i++) {
 			//必须所有的都是true全选才是true
 			//把所有的状态都存进一个数组里，如果数组元素有一个是false就不能是true
 			select[i] = goods[i].selectStatus
 		}
 		let status = false
 		let have = select.indexOf(status)
-		if(have<0){//如果没有false
+		if (have < 0) { //如果没有false
 			this.setData({
-				selectAll:true
+				selectAll: true
 			})
-		}else{
+		} else {
 			this.setData({
-				selectAll:false
+				selectAll: false
 			})
 		}
 		let haveTrue = select.indexOf(true)
-		if(haveTrue >= 0){
+		if (haveTrue >= 0) {
 			valid[validIndex].selectStatus = true
-		}else{
+		} else {
 			valid[validIndex].selectStatus = false
 		}
 		this.setData({
-			valid:valid
+			valid: valid
 		});
 		this.getTotal(valid)
 	},
 	/**
 	 * 计算总价
 	 */
-	getTotal:function(valid){
-		 // valid = this.data.valid,
-		let	total = 0
-			for(let i=0;i<valid.length;i++){
-				for(let j=0;j<valid[i].goods.length;j++){
-					if(valid[i].goods[j].selectStatus){
-						total += valid[i].goods[j].buy_num * valid[i].goods[j].retail_price
-					}
+	getTotal: function(valid) {
+		// valid = this.data.valid,
+		let total = 0
+		for (let i = 0; i < valid.length; i++) {
+			for (let j = 0; j < valid[i].goods.length; j++) {
+				if (valid[i].goods[j].selectStatus) {
+					total += valid[i].goods[j].buy_num * valid[i].goods[j].retail_price
 				}
 			}
-			this.setData({
-				// valid:valid,
-				total:total
-			})
+		}
+		this.setData({
+			// valid:valid,
+			total: total
+		})
 	},
 	jian: function(e) {
 		let that = this
@@ -131,38 +131,62 @@ Page({
 		let goods = e.currentTarget.dataset.goods, //商品数据
 			num = goods[goodsIndex].buy_num, //购买数量
 			valid = this.data.valid,
-			con_id  = this.data.con_id,
+			con_id = this.data.con_id,
 			sku_id = goods[goodsIndex].id,
 			track_id = goods[goodsIndex].track_id,
 			validIndex = e.currentTarget.dataset.validIndex //有效商品下标
 		if (num <= 1) {
 			return false
 		}
-		num = num - 1
-		goods[goodsIndex].buy_num = num
 		app.wxrequest({
-			url:"index/cart/addUserCart",
-			data:{con_id:con_id,goods_skuid:sku_id,goods_num:-1,track_id:track_id},
-			success(res){
+			url: "index/cart/addUserCart",
+			data: {
+				con_id: con_id,
+				goods_skuid: sku_id,
+				goods_num: -1,
+				track_id: track_id
+			},
+			success(res) {
+				num = num - 1
+				goods[goodsIndex].buy_num = num
 				valid[validIndex].goods = goods
 				that.setData({
 					valid: valid
 				});
-				that.getTotal(valid)
+				// that.getTotal(valid)
+				that.getStorage()
 			},
-			error(res){
-				
+			error(res) {
+				if (res == 3000) {
+					wx.showToast({
+						title: "未获取到数据",
+						icon: "none",
+						duration: 1500
+					});
+				} else if (res == 3001) {
+					wx.showToast({
+						title: "con_id错误",
+						icon: "none",
+						duration: 1500
+					});
+				} else if (res == 3002) {
+					wx.showToast({
+						title: "缺少参数",
+						icon: "none",
+						duration: 1500
+					});
+				}
 			},
-			fail(res){
-				
+			fail(res) {
+
 			}
 		})
 		//在获取大的数组和下标然后把这个goods放进大数组中替换掉原有的元素
-// 		valid[validIndex].goods = goods
-// 		this.setData({
-// 			valid: valid
-// 		});
-		
+		// 		valid[validIndex].goods = goods
+		// 		this.setData({
+		// 			valid: valid
+		// 		});
+
 	},
 	jia: function(e) {
 		let that = this
@@ -180,31 +204,56 @@ Page({
 		if (num > stock) {
 			return false
 		}
-		num = num + 1
-		goods[goodsIndex].buy_num = num
+
 		app.wxrequest({
-			url:"index/cart/addUserCart",
-			data:{con_id:con_id,goods_skuid:sku_id,goods_num:1,track_id:track_id},
-			success(res){
+			url: "index/cart/addUserCart",
+			data: {
+				con_id: con_id,
+				goods_skuid: sku_id,
+				goods_num: 1,
+				track_id: track_id
+			},
+			success(res) {
+				num = num + 1
+				goods[goodsIndex].buy_num = num
 				valid[validIndex].goods = goods
 				that.setData({
 					valid: valid
 				});
-				that.getTotal(valid)
+				// that.getTotal(valid)
+				that.getStorage()
 			},
-			error(res){
-				
+			error(res) {
+				if (res == 3000) {
+					wx.showToast({
+						title: "未获取到数据",
+						icon: "none",
+						duration: 1500
+					});
+				} else if (res == 3001) {
+					wx.showToast({
+						title: "con_id错误",
+						icon: "none",
+						duration: 1500
+					});
+				} else if (res == 3002) {
+					wx.showToast({
+						title: "缺少参数",
+						icon: "none",
+						duration: 1500
+					});
+				}
 			},
-			fail(res){
-				
+			fail(res) {
+
 			}
 		})
 		//在获取大的数组和下标然后把这个goods放进大数组中替换掉原有的元素
-// 		valid[validIndex].goods = goods
-// 		this.setData({
-// 				valid: valid
-// 			}),
-		
+		// 		valid[validIndex].goods = goods
+		// 		this.setData({
+		// 				valid: valid
+		// 			}),
+
 	},
 	del: function(e) {
 		console.log(e)
@@ -214,33 +263,37 @@ Page({
 			shop_id = goods[goodsIndex].track_id
 		this.setData({
 			mask: true,
-			sku_id:sku_id,
-			shop_id:shop_id
+			sku_id: sku_id,
+			shop_id: shop_id
 		})
 	},
-	confirmDel:function(){
-		let	con_id = this.data.con_id,
+	confirmDel: function() {
+		let con_id = this.data.con_id,
 			sku_id = this.data.sku_id,
 			shop_id = this.data.shop_id,
 			that = this
 		app.wxrequest({
-			url:"index/cart/editUserCart",
-			data:{con_id:con_id,del_skuid:sku_id,del_shopid:shop_id},
-			success(res){
+			url: "index/cart/editUserCart",
+			data: {
+				con_id: con_id,
+				del_skuid: sku_id,
+				del_shopid: shop_id
+			},
+			success(res) {
 				that.setData({
-					mask:false
+					mask: false
 				});
 				wx.showToast({
-					title:"删除成功",
-					icon:"none",
-					duration:1500
+					title: "删除成功",
+					icon: "none",
+					duration: 1500
 				});
 				that.getStorage()
 			},
-			error(res){
+			error(res) {
 				console.log(res)
 			},
-			fail(res){
+			fail(res) {
 				console.log(res)
 			}
 		})
@@ -266,10 +319,10 @@ Page({
 	/**
 	 * 添加选择状态字段
 	 */
-	addText:function(data){
-		for(let i = 0;i<data.length;i++){
+	addText: function(data) {
+		for (let i = 0; i < data.length; i++) {
 			data[i].selectStatus = true
-			for(let j = 0;j<data[i].goods.length;j++){
+			for (let j = 0; j < data[i].goods.length; j++) {
 				data[i].goods[j].selectStatus = true
 			}
 		}
@@ -326,7 +379,7 @@ Page({
 				that.getCartGoodsList(res.data)
 				console.log(res)
 				that.setData({
-					con_id:res.data
+					con_id: res.data
 				})
 			},
 			fail(res) {

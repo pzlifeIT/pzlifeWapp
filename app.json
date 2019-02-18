@@ -21,7 +21,9 @@
 		"pages/comfirOrder/comfirOrder",
 		"pages/search/search",
 		"pages/my/myInfo/myInfo",
-		"pages/my/newpassword/newpassword"
+		"pages/my/newpassword/newpassword",
+    "pages/coupon/coupon",
+    "pages/my/case/case"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
