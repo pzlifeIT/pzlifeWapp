@@ -1,11 +1,12 @@
 {
     "pages": [
+      "pages/my/my",
         "pages/index/index",
         "pages/category/category",
         "pages/logs/logs",
         "pages/collect/collect",
         "pages/cart/cart",
-        "pages/my/my",
+        
         "pages/category/goods/goods",
         "pages/goods/detail",
         "pages/address/address",

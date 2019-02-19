@@ -72,10 +72,8 @@ Page({
     },
     showaddres: function(e) {
         if (!this.data.siteid) {
-            wx.showToast({
-                title: '请选择地址',
-                icon: 'none',
-                duration: 2000
+            app.toast({
+                title: '请选择地址'
             })
             return
         }
@@ -138,7 +136,18 @@ Page({
             },
             nocon: true,
             success: function(res) {
+                let parameters = res.parameters
+                wx.requestPayment({
+                    timeStamp: parameters.timeStamp,
+                    nonceStr: parameters.nonceStr,
+                    package: parameters.package,
+                    signType: parameters.signType,
+                    paySign: parameters.paySign,
+                    success(res) {
 
+                    },
+                    fail(res) {}
+                })
             }
         })
     },

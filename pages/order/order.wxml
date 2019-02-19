@@ -1,13 +1,14 @@
 <!--pages/order/order.wxml-->
 
 <view class="or-header">
-    <view class="or-head-li {{orhead == 1?'active':''}}" bindtap="headtap" data-num="1" >全部</view>
-    <view class="or-head-li {{orhead == 2?'active':''}}" bindtap="headtap" data-num="2">待付款</view>
-    <view class="or-head-li {{orhead == 3?'active':''}}" bindtap="headtap" data-num="3">待发货</view>
-    <view class="or-head-li {{orhead == 4?'active':''}}" bindtap="headtap" data-num="4">待收货</view>
-    <view class="or-head-li {{orhead == 5?'active':''}}" bindtap="headtap" data-num="5">待评价</view>
+    <view class="or-head-li {{orhead == ''?'active':''}}" bindtap="headtap" data-num="" >全部</view>
+    <view class="or-head-li {{orhead == 1?'active':''}}" bindtap="headtap" data-num="1">待付款</view>
+    <view class="or-head-li {{orhead == 4?'active':''}}" bindtap="headtap" data-num="4">待发货</view>
+    <view class="or-head-li {{orhead == 5?'active':''}}" bindtap="headtap" data-num="5">待收货</view>
+    <view class="or-head-li {{orhead == 7?'active':''}}" bindtap="headtap" data-num="7">待评价</view>
     <i class="wire"><s></s></i>
 </view>
+<view class="top"></view>
 <!-- 没有订单 -->
 <view class='empty' wx:if="{{!order}}">
   <view class='or-empty'>
@@ -15,25 +16,29 @@
     <view class='text'>你还没有订单哦!</view>
   </view>
 </view>
-<view class="top"></view>
-<!-- 待付款 -->
-<view class='obligation' wx:if="{{orderStatus == 2 || orderStatus == 1}}">
-  <view class='order-number'><text class='number'>订单号：SN201809111913571204</text><text class='status'>待付款</text></view>
-  <navigator url='/pages/order/orderDetail/orderDetail'>
+
+<!-- 订单 -->
+<view class='obligation' wx:for="{{order_list}}" >
+  <view class='order-number'><text class='number'>订单号：{{item.order_no}}</text>
+    <text class='status'>{{item.order_status_text}}</text>
+  </view>
+  <view class="" wx:for="{{item.order_child}}" >
+  <navigator wx:for="{{item.order_goods}}" url='/pages/order/orderDetail/orderDetail'>
     <view class='one-goods'>
       <view class="goods-wai">
         <view class='goods-image'><image src=''></image></view>
         <view class='goods-info'>
-          <text class='goods-title'>柚见家月</text>
-          <text class='goods-subtitle'>五仁叉烧 500克</text>
+          <text class='goods-title'>{{item.goods_name}}</text>
+          <text class='goods-subtitle'>{{}}</text>
         </view>
         <view class='price-num'>
-          <text class='price'>￥69.00</text>
-          <text class='num'>x1</text>
+          <text class='price'>￥{{item.goods_price}}</text>
+          <text class='num'>x{{item.goods_num}}</text>
         </view>
       </view>
     </view>
   </navigator>
+  </view>
 	<view class="jf">
 		<text class="jf-text">送积分</text><text class="jf-num">20</text>
 	</view>
@@ -47,96 +52,7 @@
 		</view>
 	</view>
 </view>
-<!-- 待发货 -->
-<view class='obligation' wx:if="{{orderStatus == 3 || orderStatus == 1}}">
-  <view class='order-number'><text class='number'>订单号：SN201809111913571204</text><text class='status'>待发货</text></view>
-  <view class='one-goods'>
-		<view class="goods-wai">
-			<view class='goods-image'><image src=''></image></view>
-			<view class='goods-info'>
-				<text class='goods-title'>柚见家月</text>
-				<text class='goods-subtitle'>五仁叉烧 500克</text>
-			</view>
-			<view class='price-num'>
-				<text class='price'>￥69.00</text>
-				<text class='num'>x1</text>
-			</view>
-		</view>
-  </view>
-	<view class="jf">
-		<text class="jf-text">送积分</text><text class="jf-num">20</text>
-	</view>
-	<view class="jf">
-		<text class="jf-text">含运费</text><text class="jf-num">￥20.00</text>
-	</view>
-	<view class="or-footer">
-		<view class="footer-left"><text class="sum">共2件 共付：<text class="total">￥138.00</text></text></view>
-		<view class="footer-right">
-			<!-- <view class="pay">去付款</view> -->
-		</view>
-	</view>
-</view>
-<!-- 待收货 -->
-<view class='obligation' wx:if="{{orderStatus == 4 || orderStatus == 1}}">
-  <view class='order-number'><text class='number'>订单号：SN201809111913571204</text><text class='status'>待收货</text></view>
-  <view class='one-goods'>
-		<view class="goods-wai">
-			<view class='goods-image'><image src=''></image></view>
-			<view class='goods-info'>
-				<text class='goods-title'>柚见家月</text>
-				<text class='goods-subtitle'>五仁叉烧 500克</text>
-			</view>
-			<view class='price-num'>
-				<text class='price'>￥69.00</text>
-				<text class='num'>x1</text>
-			</view>
-		</view>
-  </view>
-	<view class="jf">
-		<text class="jf-text">送积分</text><text class="jf-num">20</text>
-	</view>
-	<view class="jf">
-		<text class="jf-text">含运费</text><text class="jf-num">￥20.00</text>
-	</view>
-	<view class="or-footer">
-		<view class="footer-left"><text class="sum">共2件 共付：<text class="total">￥138.00</text></text></view>
-		<view class="footer-right">
-			<navigator url="/pages/order/logisticsInfo/logisticsInfo">
-				<view class="pay check">查看物流</view>
-			</navigator>
-				<view class="pay" bindtap="comfir">确定收货</view>
-		</view>
-	</view>
-</view>
-<!-- 待评价 -->
-<view class='obligation' wx:if="{{orderStatus == 5 || orderStatus == 1}}">
-  <view class='order-number'><text class='number'>订单号：SN201809111913571204</text><text class='status'>待评价</text></view>
-  <view class='one-goods'>
-		<view class="goods-wai">
-			<view class='goods-image'><image src=''></image></view>
-			<view class='goods-info'>
-				<text class='goods-title'>柚见家月</text>
-				<text class='goods-subtitle'>五仁叉烧 500克</text>
-			</view>
-			<view class='price-num'>
-				<text class='price'>￥69.00</text>
-				<text class='num'>x1</text>
-			</view>
-		</view>
-  </view>
-	<view class="jf">
-		<text class="jf-text">送积分</text><text class="jf-num">20</text>
-	</view>
-	<view class="jf">
-		<text class="jf-text">含运费</text><text class="jf-num">￥20.00</text>
-	</view>
-	<view class="or-footer">
-		<view class="footer-left"><text class="sum">共2件 共付：<text class="total">￥138.00</text></text></view>
-		<view class="footer-right">
-			<view class="pay">去评价</view>
-		</view>
-	</view>
-</view>
+
 <!-- 删除弹框 -->
 <view class='obscuration' wx:if="{{mask}}" catchtouchmove='preventTouchMove' bindtap='hidemask'></view>
 <view class='mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>

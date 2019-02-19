@@ -76,10 +76,8 @@ Page({
                 url: "pages/coupon/coupon?con_id=" + con_id
             })
         } else {
-            wx.showToast({
-                title: "请先登录",
-                icon: "none",
-                duration: 1500
+            app.toast({
+                title: '请先登录'
             })
         }
     },
@@ -89,16 +87,42 @@ Page({
             phoneNumber: '15736884734'
         })
     },
+    pay: function(data) {
+        app.wxrequest({
+            url: 'pay/pay/pay',
+            data: {
+                // order_no: data.order_no,
+                // payment: data.payment,
+                // platform: data.platform
+                order_no: 'odr19021817062852575049',
+                payment: '1',
+                platform: '1'
+            },
+            nocon: true,
+            success: function(res) {
+                let parameters = res.parameters
+                wx.requestPayment({
+                    timeStamp: parameters.timeStamp,
+                    nonceStr: parameters.nonceStr,
+                    package: parameters.package,
+                    signType: parameters.signType,
+                    paySign: parameters.paySign,
+                    success(res) {
+                        console.log(res)
+                    },
+                    fail(res) {}
+                })
+            }
+        })
+    },
     money: function() {
         if (con_id == true) {
             wx.navigateTo({
                 url: "pages/my/case/case?con_id=" + con_id
             })
         } else {
-            wx.showToast({
-                title: "请先登录",
-                icon: "none",
-                duration: 1500
+            app.toast({
+                title: '请先登录'
             })
         }
     },
@@ -108,10 +132,8 @@ Page({
                 url: "pages/my/integ/integ?con_id=" + con_id
             })
         } else {
-            wx.showToast({
-                title: "请先登录",
-                icon: "none",
-                duration: 1500
+            app.toast({
+                title: '请先登录'
             })
         }
     },
