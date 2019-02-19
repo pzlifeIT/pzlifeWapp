@@ -4,7 +4,7 @@
     <icon type='search' class='search_icon fl' size='34rpx'/>
     <input class="search_cate din fl" focus="{{true}}" placeholder="搜索品质方案" confirm-type="search" placeholder-class="pl-class"/>
   </view>
-  <view class="sea-button">
+  <view class="sea-button" bindtap="">
 	  搜索
   </view>
 </view>
@@ -56,6 +56,9 @@
 	</view>
 </view>
 
+<view>
+
+</view>
 
 
 

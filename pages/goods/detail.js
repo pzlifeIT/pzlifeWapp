@@ -148,10 +148,8 @@ Page({
             return
         }
         if (!this.data.buy) {
-            wx.showToast({
-                title: '请选择规格',
-                icon: 'none',
-                duration: 2000
+            app.toast({
+                title: '请选择规格'
             })
             return
         }
@@ -166,10 +164,8 @@ Page({
             return
         }
         if (!this.data.buy) {
-            wx.showToast({
-                title: '请选择规格',
-                icon: 'none',
-                duration: 2000
+            app.toast({
+                title: '请选择规格'
             })
             return
         }

@@ -1,35 +1,114 @@
 // pages/order/order.js
+const app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        orhead: '1',
-        order:true,
-        orderStatus:1,
-		mask:false
+        orhead: '',
+        order: true,
+        orderStatus: 1,
+        mask: false,
+        order_list: []
     },
-	comfir:function(e){
-		this.setData({
-			mask:true
-		})
-	},
-	 preventTouchMove:function(e){
-	
-	},
-	hidemask:function(e){
-	  this.setData({
-	    mask:false
-	  })
-	},
+    comfir: function(e) {
+        this.setData({
+            mask: true
+        })
+    },
+    preventTouchMove: function(e) {
+
+    },
+    hidemask: function(e) {
+        this.setData({
+            mask: false
+        })
+    },
+    headtap: function(e) {
+        console.log(e.currentTarget.dataset.num)
+        let n = e.currentTarget.dataset.num
+        this.setData({
+            orhead: n,
+            orderStatus: n
+        })
+        this.getUserOrderList({
+            order_status: n
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
+        this.getUserOrderList({
 
+        })
     },
-
+    disorder: function(data) {
+        let arr = data,
+            len = arr.length,
+            i;
+        console.log(data)
+        for (i = 0; i < len; i++) {
+            switch (parseInt(arr[i].order_status)) {
+                case 1:
+                    arr[i].order_status_text = '待付款 '
+                    break;
+                case 2:
+                    arr[i].order_status_text = '订单已取消'
+                    break;
+                case 3:
+                    arr[i].order_status_text = '订单已关闭'
+                    break;
+                case 4:
+                    arr[i].order_status_text = '已付款'
+                    break;
+                case 5:
+                    arr[i].order_status_text = '已发货'
+                    break;
+                case 6:
+                    arr[i].order_status_text = '已收货'
+                    break;
+                case 7:
+                    arr[i].order_status_text = '待评价'
+                    break;
+                case 8:
+                    arr[i].order_status_text = '退款申请中'
+                    break;
+                case 9:
+                    arr[i].order_status_text = '退款中'
+                    break;
+                case 10:
+                    arr[i].order_status_text = '退款成功'
+                    break;
+                default:
+                    arr[i].order_status_text = '未知状态'
+            }
+        }
+        console.log(arr)
+        return arr
+    },
+    /**
+     * 获取订单
+     */
+    getUserOrderList: function(data) {
+        let that = this
+        app.wxrequest({
+            url: 'index/order/getUserOrderList',
+            data: {
+                order_status: data.order_status || '',
+                page: data.page || 1,
+                pagenum: data.pagenum || 10
+            },
+            success: function(res) {
+                let order_list = that.disorder(res.order_list)
+                that.setData({
+                    order_list: order_list,
+                    order: true
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -42,14 +121,6 @@ Page({
      */
     onShow: function() {
 
-    },
-    headtap: function(e) {
-        console.log(e.currentTarget.dataset.num)
-        let n = e.currentTarget.dataset.num
-        this.setData({
-            orhead: n,
-            orderStatus:n
-        })
     },
     /**
      * 生命周期函数--监听页面隐藏

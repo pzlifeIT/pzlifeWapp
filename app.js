@@ -35,6 +35,13 @@ App({
             })
             //本地缓存
         let that = this
+
+    },
+    globalData: {
+        userInfo: null,
+        con_id: ''
+    },
+    getconid: function() {
         wx.getStorage({
             key: "con_id",
             success(res) {
@@ -42,9 +49,12 @@ App({
             }
         })
     },
-    globalData: {
-        userInfo: null,
-        con_id: ''
+    toast: function(data) {
+        wx.showToast({
+            title: data.title,
+            icon: data.icon || "none",
+            duration: data.duration || 2000
+        })
     },
     wxrequest: function(obj) {
         let that = this
