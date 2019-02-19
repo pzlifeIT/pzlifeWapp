@@ -73,7 +73,7 @@ Page({
 	checkOrder:function(){
 		if (this.data.con_id) {
 		    wx.navigateTo({
-		        url: "pages/order/order?con_id=" + con_id
+		        url: "/pages/order/order"
 		    })
 		} else {
 		    wx.showToast({
@@ -86,7 +86,7 @@ Page({
 	myQr:function(){
 		if (this.data.con_id) {
 		    wx.navigateTo({
-		        url: "pages/coupon/coupon?con_id=" + con_id
+		        url: "/pages/coupon/coupon"
 		    })
 		} else {
 		    wx.showToast({
@@ -125,7 +125,7 @@ Page({
 	tonewpassword:function(){
 		if (this.data.con_id) {
 		    wx.navigateTo({
-		        url: ""
+		        url: "/pages/newpassword/newpassword"
 		    })
 		} else {
 		    wx.showToast({
@@ -138,7 +138,7 @@ Page({
     coupon: function() {
         if (this.data.con_id) {
             wx.navigateTo({
-                url: "pages/coupon/coupon?con_id=" + con_id
+                url: "/pages/coupon/coupon"
             })
         } else {
             wx.showToast({
@@ -156,8 +156,9 @@ Page({
     },
     money: function() {
         if (this.data.con_id) {
+			let caseMoney = this.data.userInfo.balance
             wx.navigateTo({
-                url: "pages/my/case/case?con_id=" + con_id
+                url: "/pages/my/case/case?caseMoney="+caseMoney
             })
         } else {
             wx.showToast({
@@ -169,8 +170,9 @@ Page({
     },
     inte: function() {
         if (this.data.con_id) {
+			let integral = this.data.userInfo.integral
             wx.navigateTo({
-                url: "pages/my/integ/integ?con_id=" + con_id
+                url: "/pages/my/integ/integ?integ="+integral
             })
         } else {
             wx.showToast({

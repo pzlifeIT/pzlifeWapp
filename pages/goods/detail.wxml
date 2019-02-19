@@ -16,7 +16,7 @@
   <view class='text'>
     <text class='title'>{{goodInfo.goods_data.goods_name}}</text>
     <text class='subtitle'>{{goodInfo.goods_data.subtitle}}</text>
-    <text class='price'>￥{{goodInfo.goods_data.title}}</text>
+    <text class='price'>￥{{goodInfo.goods_data.price}}</text>
   </view>
   <view class='collect'>
     <icon type=''></icon>

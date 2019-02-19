@@ -1,7 +1,7 @@
 <!--pages/my/case/case.wxml-->
 <view class="balance">
 	<view class="balance-text">积分余额</view>
-	<view class="balance-num">100<text>积分</text></view>
+	<view class="balance-num">{{integ}}<text>积分</text></view>
 </view>
 <view class="detail" wx:if="{{inte.length>=1}}">
 	<view class="detail-head">积分明细</view>
