@@ -1,15 +1,15 @@
 <!--pages/my/case/case.wxml-->
 <view class="balance">
 	<view class="balance-text">商票余额</view>
-	<view class="balance-num">10000<text>元</text></view>
-	<view class="total">总额：20000元</view>
-	<view class="used">已使用：800元</view>
+	<view class="balance-num">{{caseMoney}}<text>元</text></view>
+	<!-- <view class="total">总额：20000元</view>
+	<view class="used">已使用：800元</view> -->
 </view>
-<view class="button" wx:if="{{case.length>=1}}">
+<view class="button" wx:if="{{caseList.length>=1}}">
 	<view class="left">发商票</view>
 	<view class="right">发放记录</view>
 </view>
-<view class="detail" wx:if="{{case.length>=1}}">
+<view class="detail" wx:if="{{caseList.length>=1}}">
 	<view class="detail-head">商票明细</view>
 	<scroll-view class="detali-list" scroll-y="true" style="height: {{scroll_height}}rpx;">
 		<view class="detail-one">

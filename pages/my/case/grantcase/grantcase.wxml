@@ -1,0 +1,6 @@
+<!--pages/my/case/grantcase/grantcase.wxml-->
+<view class="caseTotal"><text>当前账户商票</text><text>99.123 元</text></view>
+<view class="onePeople"><text>每人领取商票</text><input type="digit" placeholder="0.00" bindinput="inputwacth" data-model="price" /><text>元</text></view>
+<view class="onePeople"><text>领取人数设置</text><input type="number" placeholder="填写人数" bindinput="inputwacth" data-model="people" /><text>人</text></view>
+<view class="onePeople"><text>发放商票总额</text><text>{{total}} 元</text></view>
+<view class="button">确定分享发放</view>
