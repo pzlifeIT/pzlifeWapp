@@ -70,8 +70,73 @@ Page({
             }
         })
     },
+	checkOrder:function(){
+		if (this.data.con_id) {
+		    wx.navigateTo({
+		        url: "pages/order/order?con_id=" + con_id
+		    })
+		} else {
+		    wx.showToast({
+		        title: "请先登录",
+		        icon: "none",
+		        duration: 1500
+		    })
+		}
+	},
+	myQr:function(){
+		if (this.data.con_id) {
+		    wx.navigateTo({
+		        url: "pages/coupon/coupon?con_id=" + con_id
+		    })
+		} else {
+		    wx.showToast({
+		        title: "请先登录",
+		        icon: "none",
+		        duration: 1500
+		    })
+		}
+	},
+	bindPhone:function(){
+		if (this.data.con_id) {
+		    wx.navigateTo({
+		        url: ""
+		    })
+		} else {
+		    wx.showToast({
+		        title: "请先登录",
+		        icon: "none",
+		        duration: 1500
+		    })
+		}
+	},
+	toaddress:function(){
+		if (this.data.con_id) {
+		    wx.navigateTo({
+		        url: "/pages/address/address"
+		    })
+		} else {
+		    wx.showToast({
+		        title: "请先登录",
+		        icon: "none",
+		        duration: 1500
+		    })
+		}
+	},
+	tonewpassword:function(){
+		if (this.data.con_id) {
+		    wx.navigateTo({
+		        url: ""
+		    })
+		} else {
+		    wx.showToast({
+		        title: "请先登录",
+		        icon: "none",
+		        duration: 1500
+		    })
+		}
+	},
     coupon: function() {
-        if (con_id == true) {
+        if (this.data.con_id) {
             wx.navigateTo({
                 url: "pages/coupon/coupon?con_id=" + con_id
             })
@@ -116,7 +181,7 @@ Page({
         })
     },
     money: function() {
-        if (con_id == true) {
+        if (this.data.con_id) {
             wx.navigateTo({
                 url: "pages/my/case/case?con_id=" + con_id
             })
@@ -127,7 +192,7 @@ Page({
         }
     },
     inte: function() {
-        if (con_id == true) {
+        if (this.data.con_id) {
             wx.navigateTo({
                 url: "pages/my/integ/integ?con_id=" + con_id
             })
