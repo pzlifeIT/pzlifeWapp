@@ -14,7 +14,8 @@ Page({
         goodData: {},
         buy: false,
         repertory: true,
-        buyNum: 1
+        buyNum: 1,
+        swipercur: 1
     },
     showModel: function() {
         this.setData({
@@ -33,6 +34,11 @@ Page({
     },
     preventTouchMove: function() {
         //防止用户操作弹出层外界面
+    },
+    call: function() {
+        wx.makePhoneCall({
+            phoneNumber: '15736884573'
+        })
     },
     selectAttr: function(e) { //选择规格
         let dataset = e.currentTarget.dataset,
@@ -191,6 +197,7 @@ Page({
                 that.setData({
                     showModel: false
                 })
+                app.toast({ title: '加入成功' })
             }
         })
     },

@@ -245,7 +245,6 @@ Page({
 
     },
     del: function(e) {
-        console.log(e)
         let goods = e.currentTarget.dataset.goods,
             goodsIndex = e.currentTarget.dataset.goodsIndex,
             sku_id = goods[goodsIndex].id,
@@ -300,8 +299,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        // this.getCartGoodsList()
-        // this.getStorage()
+        app.getconid()
+        console.log('onLoad')
+            // this.getCartGoodsList()
+            // this.getStorage()
     },
     /**
      * 添加选择状态字段
@@ -414,13 +415,6 @@ Page({
         })
     },
     /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function(options) {
-        // this.getCartGoodsList()
-        // this.getStorage()
-    },
-    /**
      * 添加选择状态字段
      */
     addText: function(data) {
@@ -436,9 +430,6 @@ Page({
         let that = this
         app.wxrequest({
             url: "index/cart/getUserCart",
-            data: {
-                con_id: con_id
-            },
             success(res) {
                 let valid = that.addText(res.valid)
                 that.setData({
@@ -487,6 +478,7 @@ Page({
                 })
             },
             fail(res) {
+              console.log(111)
                 wx.showModal({
                     title: "请先登录",
                     content: "是否确定去登录",

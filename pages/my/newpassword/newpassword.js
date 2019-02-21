@@ -18,6 +18,7 @@ Page({
      */
     inputwacth: function(e) {
         let item = e.currentTarget.dataset.model
+        let pa = /^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){4,19}$/
         this.setData({
             [item]: e.detail.value
         })
