@@ -15,6 +15,9 @@ Page({
 	onLoad: function(options) {
 
 	},
+	/**
+	 * 下拉刷新
+	 */
 	onPullDownRefresh: function() {
 		wx.showNavigationBarLoading() //在标题栏中显示加载
 		//模拟加载
@@ -48,13 +51,6 @@ Page({
 	 * 生命周期函数--监听页面卸载
 	 */
 	onUnload: function() {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function() {
 
 	},
 

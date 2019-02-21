@@ -13,14 +13,7 @@ Page({
 		selectAll: true,
 		sku_id: 0,
 		con_id: "",
-		shop_id: 0,
-		validNum: "0"
-	},
-	setNum: function() {
-		wx.setTabBarBadge({
-			index: 2,
-			text: this.data.validNum
-		})
+		shop_id: 0
 	},
 	/**
 	 * 全选
@@ -183,12 +176,6 @@ Page({
 
 			}
 		})
-		//在获取大的数组和下标然后把这个goods放进大数组中替换掉原有的元素
-		// 		valid[validIndex].goods = goods
-		// 		this.setData({
-		// 			valid: valid
-		// 		});
-
 	},
 	jia: function(e) {
 		let that = this
@@ -307,91 +294,7 @@ Page({
 		// this.getCartGoodsList()
 		// this.getStorage()
 	},
-	/**
-	 * 添加选择状态字段
-	 */
-	addText: function(data) {
-		for (let i = 0; i < data.length; i++) {
-			data[i].selectStatus = true
-			for (let j = 0; j < data[i].goods.length; j++) {
-				data[i].goods[j].selectStatus = true
-			}
-		}
-		return data
-	},
-	getCartGoodsList: function(con_id) {
-		let that = this
-		app.wxrequest({
-			url: "index/cart/getUserCart",
-			data: {
-				con_id: con_id
-			},
-			success(res) {
-				let valid = that.addText(res.valid)
-				that.setData({
-					valid: valid,
-					failure: res.failure,
-					validNum: valid.length
-				});
-				that.getTotal(valid)
-				that.setNum()
-			},
-			error(res) {
-				console.log(456)
-				if (res == 5000) {
-					wx.showModal({
-						title: "请先登录",
-						content: "是否确定去登录",
-						showCancel: true,
-						confirmColor: "#E61F18",
-						success(res) {
-							if (res.confirm) { //点击确定
-								wx.navigateTo({
-									url: "/pages/login/login"
-								})
-							}
-						}
-					})
-				} else if (res == 3000) {
-					that.setData({
-						valid: [],
-						failure: []
-					})
-				}
-			}
-		})
-	},
-	/**
-	 * 获取con_id
-	 */
-	getStorage: function() {
-		let that = this
-		wx.getStorage({
-			key: "con_id",
-			success(res) {
-				that.getCartGoodsList(res.data)
-				console.log(res)
-				that.setData({
-					con_id: res.data
-				})
-			},
-			fail(res) {
-				wx.showModal({
-					title: "请先登录",
-					content: "是否确定去登录",
-					showCancel: true,
-					confirmColor: "#E61F18",
-					success(res) {
-						if (res.confirm) { //点击确定
-							wx.navigateTo({
-								url: "/pages/login/login"
-							})
-						}
-					}
-				})
-			}
-		})
-	},
+	
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
@@ -442,7 +345,8 @@ Page({
 				let valid = that.addText(res.valid)
 				that.setData({
 					valid: valid,
-					failure: res.failure
+					failure: res.failure,
+					validNum:valid.length+''
 				});
 				that.getTotal(valid)
 			},
@@ -503,18 +407,10 @@ Page({
 		})
 	},
 	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function() {
-
-	},
-
-	/**
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function() {
 		this.getStorage()
-		this.setNum()
 	},
 
 	/**
