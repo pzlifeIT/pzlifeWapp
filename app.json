@@ -26,7 +26,8 @@
         "pages/my/newpassword/newpassword",
         "pages/coupon/coupon",
         "pages/my/case/case",
-        "pages/my/integ/integ"
+        "pages/my/integ/integ",
+        "pages/my/case/grantcase/grantcase"
     ],
     "window": {
         "backgroundTextStyle": "dark",

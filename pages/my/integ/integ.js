@@ -6,7 +6,8 @@ Page({
 	 */
 	data: {
 		scroll_height:0,
-		inte:[]
+		inte:[],
+		integ:0
 	},
 
 	/**
@@ -14,9 +15,11 @@ Page({
 	 */
 	onLoad: function(options) {
 		let windowHeight = wx.getSystemInfoSync().windowHeight,
-			windowWidth = wx.getSystemInfoSync().windowWidth
+			windowWidth = wx.getSystemInfoSync().windowWidth,
+			integ = options.integ
 		this.setData({
-			scroll_height: windowHeight * 750 / windowWidth - 308 - 30
+			scroll_height: windowHeight * 750 / windowWidth - 308 - 30,
+			integ:integ
 		})
 	},
 

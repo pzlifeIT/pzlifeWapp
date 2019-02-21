@@ -138,8 +138,9 @@ Page({
     },
     money: function() {
         if (this.data.con_id) {
+            let caseMoney = this.data.userInfo.balance
             wx.navigateTo({
-                url: "/pages/my/case/case"
+                url: "/pages/my/case/case?caseMoney=" + caseMoney
             })
         } else {
             app.toast({
@@ -149,8 +150,9 @@ Page({
     },
     inte: function() {
         if (this.data.con_id) {
+            let integral = this.data.userInfo.integral
             wx.navigateTo({
-                url: "/pages/my/integ/integ"
+                url: "/pages/my/integ/integ?integ=" + integral
             })
         } else {
             app.toast({
