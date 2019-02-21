@@ -1,12 +1,11 @@
 {
-    "pages": [
-      "pages/my/my",
+    "pages": [      
         "pages/index/index",
         "pages/category/category",
         "pages/logs/logs",
         "pages/collect/collect",
         "pages/cart/cart",
-        
+        "pages/my/my",
         "pages/category/goods/goods",
         "pages/goods/detail",
         "pages/address/address",
@@ -27,7 +26,8 @@
         "pages/coupon/coupon",
         "pages/my/case/case",
         "pages/my/integ/integ",
-        "pages/my/case/grantcase/grantcase"
+        "pages/my/case/grantcase/grantcase",
+        "pages/coupon/getcoupon/getcoupon"
     ],
     "window": {
         "backgroundTextStyle": "light",

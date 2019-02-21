@@ -16,6 +16,7 @@ Page({
      */
     onLoad: function(options) {
         //获取con_id
+		app.getconid()
         this.getStorage()
     },
     /**
@@ -39,7 +40,6 @@ Page({
         let that = this
         app.wxrequest({
             url: "index/user/getuser",
-            data: { con_id: con_id },
             success(res) {
                 let userInfo = res.data
                 switch (parseInt(userInfo.user_identity)) {
@@ -125,7 +125,7 @@ Page({
 	tonewpassword:function(){
 		if (this.data.con_id) {
 		    wx.navigateTo({
-		        url: "/pages/newpassword/newpassword"
+		        url: "/pages/my/newpassword/newpassword"
 		    })
 		} else {
 		    wx.showToast({

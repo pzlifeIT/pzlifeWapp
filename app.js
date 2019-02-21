@@ -42,6 +42,7 @@ App({
         con_id: ''
     },
     getconid: function() {
+		let that = this
         wx.getStorage({
             key: "con_id",
             success(res) {

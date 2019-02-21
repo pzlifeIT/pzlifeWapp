@@ -1,1 +1,164 @@
 /* pages/collect/collect.wxss */
+page{
+	width: 100%;
+	height: 100%;
+	background: #F7F7F7;
+}
+.collect_top{
+	width: 750rpx;
+	height: 86rpx;
+	position: relative;
+	margin-bottom: 10rpx;
+}
+.collect{
+	width: 50%;
+	height: 86rpx;
+	color: #202020;
+	font-size: 30rpx;
+	display: inline-block;
+	text-align: center;
+	line-height: 86rpx;
+	background: #fff;
+}
+.line{
+	width: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: all 0.3s ease-in-out; 
+}
+.line s{
+	display: block;
+	width: 160rpx;
+	height: 2rpx;
+	background: #E61F18;
+	margin: 0 auto;
+}
+.active{
+	color: #E61F18;
+}
+.collect:nth-last-of-type(1).active~.line{
+	transform: translate3d(0,0,0);
+}
+.collect:nth-of-type(2).active~.line{
+	transform: translate3d(100%,0,0);
+}
+.goods{
+	width: 750rpx;
+	height: 180rpx;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 1rpx;
+}
+.goods-img{
+	width: 180rpx;
+	height: 180rpx;
+	display: inline-block;
+}
+.goods-img image{
+	width: 140rpx;
+	height: 140rpx;
+	background: #EEE8AA;
+	margin: 20rpx;
+}
+.goods-info{
+	width: 80%;
+	height: 180rpx;
+	display: inline-block;
+}
+.title{
+	color: #202020;
+	font-size: 29rpx;
+	margin-top: 20rpx;
+	margin-bottom: 10rpx;
+}
+.subtitle{
+	color: #B6B6B6;
+	font-size: 24rpx;
+	margin-bottom: 10rpx;
+}
+.price{
+	color: #E61F18;
+	font-size: 30rpx;
+}
+.xiajia{
+	color: #B6B6B6;
+	font-size: 28rpx;
+}
+.button{
+	width: 120rpx;
+	height: 42rpx;
+	border: 1rpx solid #404040;
+	font-size: 28rpx;
+	color: #404040;
+	text-align: center;
+	line-height: 42rpx;
+	border-radius: 10rpx;
+	position: absolute;
+	right: 15rpx;
+	bottom: 20rpx;
+}
+.shop{
+	width: 750rpx;
+	height: 190rpx;
+	background: #fff;
+	margin-bottom: 1rpx;
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+}
+.shop-img{
+	width: 188rpx;
+	height: 100%;
+	display: inline-block;
+}
+.shop-img image{
+	width: 150rpx;
+	height: 150rpx;
+	margin: 20rpx;
+	background: #EEE8AA;
+}
+.shop-info{
+	width: 65%;
+	height: 100%;
+	display: inline-block;
+}
+.icon{
+	height: 180rpx;
+	margin-top: 20rpx;
+	margin-left: 20rpx;
+}
+.noicon{
+	width: 36rpx;
+	height: 36rpx;
+	border: 1rpx solid #888;
+	border-radius: 50%;
+}
+.not{
+	width: 750rpx;
+	height: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.not-center{
+	width: 256rpx;
+	height: 269rpx;
+}
+.not-center image{
+	width: 256rpx;
+	height: 200rpx;
+}
+.not-text{
+	width: 256rpx;
+	height:69rpx;
+	color: #B6B6B6;
+	font-size: 28rpx;
+	text-align: center;
+	line-height: 100rpx;
+}
+

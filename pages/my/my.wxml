@@ -87,7 +87,7 @@
   <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
 </view>
 
-<view bindtap="pay"  hover-class="other-navigator-hover" class="userFnLi" >
+<view bindtap="tonewpassword"  hover-class="other-navigator-hover" class="userFnLi" >
   <text >修改密码</text>
   <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
 </view>

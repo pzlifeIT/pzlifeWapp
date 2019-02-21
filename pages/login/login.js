@@ -16,9 +16,14 @@ Page({
                         url: "index/user/loginuserbywx",
                         data: { code: res.code },
                         success(res) {
+                          wx.setStorage({
+                            key: "con_id",
+                            data: res.con_id
+                          })
                             wx.reLaunch({
                                 url: "/pages/index/index"
                             })
+                          app.getconid()
                         },
                         error(res) {
                             if (res.code == 3000) {
