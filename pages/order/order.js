@@ -6,10 +6,11 @@ Page({
      * 页面的初始数据
      */
     data: {
-        orhead: '',
+        status: '',
         order: true,
-        orderStatus: 1,
+        page: 1,
         mask: false,
+        reach: true,
         order_list: []
     },
     comfir: function(e) {
@@ -26,23 +27,90 @@ Page({
         })
     },
     headtap: function(e) {
-        console.log(e.currentTarget.dataset.num)
         let n = e.currentTarget.dataset.num
         this.setData({
-            orhead: n,
-            orderStatus: n
+            status: n,
+            page: 1,
+            reach: true,
+            order_list: []
         })
         this.getUserOrderList({
-            order_status: n
+            orderStatus: n
         })
+    },
+    /**
+     * 支付
+     */
+    gopay: function(e) {
+        console.log(e.currentTarget.dataset.orderno)
+        app.wxrequest({
+            url: 'pay/pay/pay',
+            data: {
+                order_no: e.currentTarget.dataset.orderno,
+                payment: '1',
+                platform: '1'
+            },
+            nocon: true,
+            success: function(res) {
+                let parameters = res.parameters
+                wx.requestPayment({
+                    timeStamp: parameters.timeStamp,
+                    nonceStr: parameters.nonceStr,
+                    package: parameters.package,
+                    signType: parameters.signType,
+                    paySign: parameters.paySign,
+                    success(res) {
+
+                    },
+                    fail(res) {}
+                })
+            }
+        })
+    },
+    cancelorder: function(e) {
+        console.log(e.currentTarget.dataset.orderno)
+        let that = this
+        app.modal({
+            title: '提示',
+            content: '是否取消订单',
+            success: function() {
+                app.wxrequest({
+                    url: 'index/order/cancelorder',
+                    data: {
+                        order_no: e.currentTarget.dataset.orderno
+                    },
+                    success: function(res) {
+                        that.setData({
+                            page: 1,
+                            reach: true,
+                            order_list: []
+                        })
+                        that.getUserOrderList({
+                            orderStatus: that.data.status
+                        })
+
+                        app.toast({ title: '取消成功！', duration: 1500 })
+                    }
+                })
+            },
+            cancel: function() {
+
+            }
+        })
+
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        this.getUserOrderList({
-
+        this.setData({
+            status: options.status
         })
+        console.log(this.data.status)
+        this.getUserOrderList({
+            orderStatus: options.status
+        })
+
     },
     disorder: function(data) {
         let arr = data,
@@ -96,16 +164,26 @@ Page({
         app.wxrequest({
             url: 'index/order/getUserOrderList',
             data: {
-                order_status: data.order_status || '',
+                orderStatus: parseInt(data.orderStatus) || '',
                 page: data.page || 1,
                 pagenum: data.pagenum || 10
             },
             success: function(res) {
-                let order_list = that.disorder(res.order_list)
-                that.setData({
-                    order_list: order_list,
-                    order: true
-                })
+                console.log(res.order_list.length)
+                if (res.order_list.length < 10) {
+                    that.setData({
+                        reach: false
+                    })
+                }
+                if (res.order_list.length > 0) {
+                    let order_list = that.data.order_list
+                    order_list.push(that.disorder(res.order_list))
+                    that.setData({
+                        order_list: order_list,
+                        order: true,
+                        page: that.data.page + 1
+                    })
+                }
             }
         })
     },
@@ -146,6 +224,12 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function() {
+        if (this.data.reach) {
+            this.getUserOrderList({
+                orderStatus: this.data.status,
+                page: this.data.page
+            })
+        }
 
     },
 

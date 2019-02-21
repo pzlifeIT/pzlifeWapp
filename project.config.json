@@ -37,9 +37,9 @@
 			"list": []
 		},
 		"miniprogram": {
+            "current": 18,
 			"current": 20,
-			"list": [
-				{
+            "list": [{
 					"id": 0,
 					"name": "goods",
 					"pathName": "pages/goods/detail",
@@ -156,8 +156,9 @@
 				},
 				{
 					"id": -1,
-					"name": "fa 商票",
-					"pathName": "pages/my/case/grantcase/grantcase",
+                    "name": "支付结果",
+                    "pathName": "pages/paystatus/paystatus",
+                    "query": "status=1&orderno=odr19021917314210157100",
 					"query": "",
 					"scene": null
 				},

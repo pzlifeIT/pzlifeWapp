@@ -56,7 +56,7 @@ Page({
                 paym.wxpay = '0'
             } else {
                 paym.redmoney = stat.balance
-                paym.wxpay = parseFloat(stat.total_price) - parseFloat(stat.balance)
+                paym.wxpay = (parseFloat(stat.total_price) - parseFloat(stat.balance)).toFixed(2)
             }
         }
         this.setData({
@@ -144,9 +144,15 @@ Page({
                     signType: parameters.signType,
                     paySign: parameters.paySign,
                     success(res) {
-
+                        wx.redirectTo({
+                            url: '/pages/paystatus/paystatus?status=1&orderno=' + data.order_no
+                        })
                     },
-                    fail(res) {}
+                    fail(res) {
+                        wx.redirectTo({
+                            url: '/pages/paystatus/paystatus?status=2&orderno=' + data.order_no
+                        })
+                    }
                 })
             }
         })

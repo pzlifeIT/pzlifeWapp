@@ -12,7 +12,7 @@ App({
                     // 发送 res.code 到后台换取 openId, sessionKey, unionId
 
                 }
-            })
+        });
             // 获取用户信息
         wx.getSetting({
                 success: res => {
@@ -42,10 +42,11 @@ App({
         con_id: ''
     },
     getconid: function() {
-		let that = this
+        let that = this
         wx.getStorage({
             key: "con_id",
             success(res) {
+                console.log('sdf ' + res)
                 that.globalData.con_id = res.data
             }
         })
@@ -56,6 +57,22 @@ App({
             icon: data.icon || "none",
             duration: data.duration || 2000
         })
+    },
+    modal: function(data) {
+        wx.showModal({
+            title: '',
+            content: data.content,
+            success(res) {
+                if (res.confirm) {
+                    console.log('用户点击确定')
+                    data.success()
+                } else if (res.cancel) {
+                    data.cancel()
+                    console.log('用户点击取消')
+                }
+            }
+        })
+
     },
     wxrequest: function(obj) {
         let that = this

@@ -162,7 +162,7 @@ Page({
 					valid: valid
 				});
 				// that.getTotal(valid)
-				that.getStorage()
+				// that.getStorage()
 			},
 			error(res) {
 				if (res == 3000) {
@@ -223,7 +223,7 @@ Page({
 					valid: valid
 				});
 				// that.getTotal(valid)
-				that.getStorage()
+				// that.getStorage()
 			},
 			error(res) {
 				if (res == 3000) {
@@ -244,11 +244,6 @@ Page({
 
 			}
 		})
-		//在获取大的数组和下标然后把这个goods放进大数组中替换掉原有的元素
-		// 		valid[validIndex].goods = goods
-		// 		this.setData({
-		// 				valid: valid
-		// 			}),
 
 	},
 	del: function(e) {
@@ -307,6 +302,8 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
+		 app.getconid()
+        console.log('onLoad')
 		// this.getCartGoodsList()
 		// this.getStorage()
 	},
@@ -421,13 +418,6 @@ Page({
 		wx.navigateTo({
 			url: '/pages/comfirOrder/comfirOrder?skus=' + skus
 		})
-	},
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
-	onLoad: function(options) {
-		// this.getCartGoodsList()
-		// this.getStorage()
 	},
 	/**
 	 * 添加选择状态字段

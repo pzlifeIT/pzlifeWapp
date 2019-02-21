@@ -16,7 +16,7 @@ Page({
      */
     onLoad: function(options) {
         //获取con_id
-		app.getconid()
+        app.getconid()
         this.getStorage()
     },
     /**
@@ -25,7 +25,7 @@ Page({
     checkLogin: function(con_id) {
         //存在就登陆不存在就无登录
         if (con_id) {
-            this.getUser(con_id)
+            this.getUser()
             this.setData({
                 loginStatus: true
             })
@@ -33,10 +33,9 @@ Page({
             this.setData({
                 loginStatus: false
             })
-            return
         }
     },
-    getUser: function(con_id) {
+    getUser: function() {
         let that = this
         app.wxrequest({
             url: "index/user/getuser",
@@ -67,72 +66,57 @@ Page({
             },
             error(code) {
                 console.log(code)
+                that.setData({
+                    loginStatus: false
+                })
             }
         })
     },
-	checkOrder:function(){
+    checkOrder: function(e) {
 		if (this.data.con_id) {
 		    wx.navigateTo({
-		        url: "/pages/order/order"
+                url: "/pages/order/order?status=" + e.currentTarget.dataset.status
 		    })
 		} else {
-		    wx.showToast({
-		        title: "请先登录",
-		        icon: "none",
-		        duration: 1500
-		    })
+            app.toast({ title: "请先登录" })
 		}
 	},
-	myQr:function(){
+    myQr: function() {
 		if (this.data.con_id) {
 		    wx.navigateTo({
 		        url: "/pages/coupon/coupon"
 		    })
 		} else {
-		    wx.showToast({
-		        title: "请先登录",
-		        icon: "none",
-		        duration: 1500
-		    })
+            app.toast({ title: "请先登录" })
 		}
 	},
-	bindPhone:function(){
+    bindPhone: function() {
 		if (this.data.con_id) {
+
 		    wx.navigateTo({
 		        url: ""
 		    })
 		} else {
-		    wx.showToast({
-		        title: "请先登录",
-		        icon: "none",
-		        duration: 1500
-		    })
+            app.toast({ title: "请先登录" })
 		}
 	},
-	toaddress:function(){
+    toaddress: function() {
+        console.log(this.data.con_id)
 		if (this.data.con_id) {
 		    wx.navigateTo({
 		        url: "/pages/address/address"
 		    })
 		} else {
-		    wx.showToast({
-		        title: "请先登录",
-		        icon: "none",
-		        duration: 1500
-		    })
+            app.toast({ title: "请先登录" })
 		}
 	},
-	tonewpassword:function(){
+    tonewpassword: function() {
 		if (this.data.con_id) {
 		    wx.navigateTo({
-		        url: "/pages/my/newpassword/newpassword"
+                url: "newpassword/newpassword"
 		    })
 		} else {
-		    wx.showToast({
-		        title: "请先登录",
-		        icon: "none",
-		        duration: 1500
-		    })
+            app.toast({ title: "请先登录" })
 		}
 	},
     coupon: function() {
@@ -152,39 +136,11 @@ Page({
             phoneNumber: '15736884734'
         })
     },
-    pay: function(data) {
-        app.wxrequest({
-            url: 'pay/pay/pay',
-            data: {
-                // order_no: data.order_no,
-                // payment: data.payment,
-                // platform: data.platform
-                order_no: 'odr19021817062852575049',
-                payment: '1',
-                platform: '1'
-            },
-            nocon: true,
-            success: function(res) {
-                let parameters = res.parameters
-                wx.requestPayment({
-                    timeStamp: parameters.timeStamp,
-                    nonceStr: parameters.nonceStr,
-                    package: parameters.package,
-                    signType: parameters.signType,
-                    paySign: parameters.paySign,
-                    success(res) {
-                        console.log(res)
-                    },
-                    fail(res) {}
-                })
-            }
-        })
-    },
     money: function() {
         if (this.data.con_id) {
 			let caseMoney = this.data.userInfo.balance
             wx.navigateTo({
-                url: "/pages/my/case/case?caseMoney="+caseMoney
+                url: "/pages/my/case/case?caseMoney=" + caseMoney
             })
         } else {
             app.toast({
@@ -196,7 +152,7 @@ Page({
         if (this.data.con_id) {
 			let integral = this.data.userInfo.integral
             wx.navigateTo({
-                url: "/pages/my/integ/integ?integ="+integral
+                url: "/pages/my/integ/integ?integ=" + integral
             })
         } else {
             app.toast({
@@ -213,12 +169,16 @@ Page({
             key: "con_id",
             success(res) {
                 that.checkLogin(res.data)
-                console.log(res)
                 that.setData({
                     con_id: res.data
                 })
+            },
+            error() {
+                console.log('000')
             }
-        })
+        });
+
+
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
