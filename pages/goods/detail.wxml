@@ -16,7 +16,9 @@
   <view class='text'>
     <text class='title'>{{goodInfo.goods_data.goods_name}}</text>
     <text class='subtitle'>{{goodInfo.goods_data.subtitle}}</text>
-    <text class='price'>￥{{goodInfo.goods_data.title}}</text>
+    <view class='price'>
+      <text class="din fl" >￥{{goodInfo.goods_data.min_retail_price}}</text>
+      <text class="din fl" wx:if="{{goodInfo.goods_data.min_retail_price != goodInfo.goods_data.max_retail_price}}" > -￥{{goodInfo.goods_data.max_retail_price}}</text> </view>
   </view>
   <view class='collect'>
     <icon type=''></icon>
@@ -119,14 +121,16 @@
     <image class="dl-ficon" src="../images/images/icon_03.png" />
     <text class="ft-text">首页</text>
   </navigator>
-  <view class='kefu'>
+  <view class='kefu' bindtap="call">
     <image class="dl-ficon" src="../images/images/icon_05.png" />
     <text  class="ft-text">客服</text>
   </view>
+  <navigator url="../cart/cart" open-type="switchTab" >
   <view class='cart'>
     <image class="dl-ficon" src="../images/images/icon_07.png" />
     <text  class="ft-text">购物车</text>
   </view>
+  </navigator>
   <view bindtap="buyGood"  class='buy' >
     <text>立即购买</text>
   </view>

@@ -1,12 +1,12 @@
 {
     "pages": [
-      "pages/my/my",
+        "pages/my/my",
         "pages/index/index",
         "pages/category/category",
         "pages/logs/logs",
         "pages/collect/collect",
         "pages/cart/cart",
-        
+
         "pages/category/goods/goods",
         "pages/goods/detail",
         "pages/address/address",
@@ -29,7 +29,7 @@
         "pages/my/integ/integ"
     ],
     "window": {
-        "backgroundTextStyle": "light",
+        "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "WeChat",
         "navigationBarTextStyle": "black"
