@@ -157,6 +157,7 @@ page {
 }
 
 .goods-info {
+    width: 400rpx;
     height: 100%;
     display: inline-block;
     margin-left: 49rpx;
@@ -168,6 +169,9 @@ page {
     font-size: 28rpx;
     margin-top: 34rpx;
     margin-bottom: 17rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .goods-info .goods-subtitle {

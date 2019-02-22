@@ -46,7 +46,6 @@ App({
         wx.getStorage({
             key: "con_id",
             success(res) {
-                console.log('sdf ' + res)
                 that.globalData.con_id = res.data
             }
         })
@@ -60,8 +59,8 @@ App({
     },
     modal: function(data) {
         wx.showModal({
-            title: '',
-            content: data.content,
+            title: data.title || '',
+            content: data.content || '',
             success(res) {
                 if (res.confirm) {
                     console.log('用户点击确定')

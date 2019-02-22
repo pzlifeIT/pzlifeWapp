@@ -19,7 +19,25 @@ Page({
         })
 
     },
+    goorder: function(e) {
+        let n
+        if (this.data.status == 1) {
+            n = 4
+        } else if (this.data.status == 2) {
+            n = 1
+        }
+        wx.navigateTo({
+            url: '/page/order/order?status=' + n
+        })
+    },
+    gopay: function(e) {
 
+    },
+    goindex: function(e) {
+        wx.switchTab({
+            url: '/page/index/index'
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
