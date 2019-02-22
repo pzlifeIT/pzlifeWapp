@@ -82,6 +82,8 @@ Page({
                     if (sku[i].stock > 0) {
                         goodData.sku_price = sku[i].retail_price
                         goodData.sku_image = sku[i].sku_image
+                        goodData.integral_active = sku[i].integral_active
+                        goodData.sku_name = sku[i].sku_name
                         goodData.id = sku[i].id
                     } else {
                         console.log('')
@@ -101,6 +103,12 @@ Page({
         this.setData({
             buy: buy,
             repertory: repertory
+        })
+    },
+    previewImage: function(e) {
+        wx.previewImage({
+            current: e.currentTarget.dataset.img, // 当前显示图片的http链接
+            urls: [e.currentTarget.dataset.img] // 需要预览的图片http链接列表
         })
     },
     /**
@@ -198,6 +206,22 @@ Page({
                     showModel: false
                 })
                 app.toast({ title: '加入成功' })
+            },
+            error: function(code) {
+                if (code == 5000) {
+                    app.modal({
+                        title: "请先登录",
+                        content: "是否确定去登录",
+                        success: function() {
+                            wx.navigateTo({
+                                url: "/pages/login/login"
+                            })
+                        },
+                        cancel: function() {
+
+                        }
+                    })
+                }
             }
         })
     },
@@ -209,6 +233,7 @@ Page({
             goodid: options.goodid
         })
         this.getGoodInfo(this.data.goodid)
+        app.getconid()
     },
     /**
      * 获取商品详情

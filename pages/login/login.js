@@ -14,7 +14,7 @@ Page({
                 if (res.code) {
                     app.wxrequest({
                         url: "index/user/loginuserbywx",
-                        data: { code: res.code },
+                        data: { code: res.code, buid: '621' },
                         success(res) {
                             wx.setStorage({
                                 key: "con_id",

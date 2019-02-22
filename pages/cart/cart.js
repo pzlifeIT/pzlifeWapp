@@ -478,7 +478,7 @@ Page({
                 })
             },
             fail(res) {
-              console.log(111)
+                console.log(111)
                 wx.showModal({
                     title: "请先登录",
                     content: "是否确定去登录",

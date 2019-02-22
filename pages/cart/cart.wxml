@@ -91,7 +91,7 @@
 			<image src='/pages/images/images/emptycart.png'></image>
 		</view>
 		<view class='text'><text>购物车空空如也</text></view>
-		<navigator url='/pages/category/category'>
+		<navigator url='/pages/category/category' open-type="switchTab">
 			<view class='go'>去逛逛吧</view>
 		</navigator>
 	</view>

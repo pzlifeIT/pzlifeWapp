@@ -31,7 +31,7 @@
         <view class='goods-image'><image src=''></image></view>
         <view class='goods-info'>
           <text class='goods-title'>{{item.goods_name}}</text>
-          <text class='goods-subtitle'>{{}}</text>
+          <text class='goods-subtitle'>{{item.sku_json}}</text>
         </view>
         <view class='price-num'>
           <text class='price'>￥{{item.goods_price}}</text>
@@ -48,7 +48,7 @@
 		<text class="jf-text">含运费</text><text class="jf-num">￥20.00</text>
 	</view>
 	<view class="or-footer">
-		<view class="footer-left"><text class="sum">共2件 共付：<text class="total">￥138.00</text></text></view>
+		<view class="footer-left"><text class="sum">共付：<text class="total">￥{{item.pay_money}}</text></text></view>
 		<view class="footer-right">
 			<view bindtap="gopay" data-orderno="{{item.order_no}}" class="or-btn red" wx:if="{{item.order_status == 1}}">去付款</view>
       <view bindtap="cancelorder" data-orderno="{{item.order_no}}" class="or-btn black" wx:if="{{item.order_status == 1}}">取消订单</view>

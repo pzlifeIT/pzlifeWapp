@@ -111,7 +111,9 @@ Page({
             },
             success: function(res) {
                 if (res.is_pay == '1') {
-
+                    wx.redirectTo({
+                        url: '/pages/paystatus/paystatus?status=1&orderno=' + res.order_no
+                    })
                 } else {
                     that.pay({
                         order_no: res.order_no,
@@ -206,6 +208,33 @@ Page({
                     datalist: res.supplier_list,
                     stat: stat
                 })
+            },
+            error: function(code) {
+                switch (parseInt(code)) {
+                    case 3001:
+                        app.toast({ title: '未选择商品' })
+                        break;
+                    case 3002:
+                        app.toast({ title: '未登录' })
+                        break;
+                    case 3003:
+                        app.toast({ title: '地址错误' })
+                        break;
+                    case 3004:
+                        app.toast({ title: '商品售罄' })
+                        break;
+                    case 3005:
+                        app.toast({ title: '商品未加入购物车' })
+                        break;
+                    case 3006:
+                        app.toast({ title: '商品不支持配送' })
+                        break;
+                    case 3007:
+                        app.toast({ title: '商品库存不够' })
+                        break;
+                    default:
+                        app.toast({ title: '意料之外的错误' })
+                }
             }
         })
     },

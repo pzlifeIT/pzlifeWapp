@@ -1,166 +1,181 @@
 {
-    "description": "项目配置文件",
-    "packOptions": {
-        "ignore": []
-    },
-    "setting": {
-        "urlCheck": false,
-        "es6": true,
-        "postcss": true,
-        "minified": true,
-        "newFeature": true,
-        "autoAudits": false
-    },
-    "compileType": "miniprogram",
-    "libVersion": "2.4.3",
-    "appid": "wxa8c604ce63485956",
-    "projectname": "pzlifeWapp",
-    "debugOptions": {
-        "hidedInDevtools": []
-    },
-    "isGameTourist": false,
-    "condition": {
-        "search": {
-            "current": -1,
-            "list": []
-        },
-        "conversation": {
-            "current": -1,
-            "list": []
-        },
-        "plugin": {
-            "current": -1,
-            "list": []
-        },
-        "game": {
-            "currentL": -1,
-            "list": []
-        },
-        "miniprogram": {
-            "current": 18,
-            "list": [{
-                    "id": 0,
-                    "name": "goods",
-                    "pathName": "pages/goods/detail",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "cart",
-                    "pathName": "pages/cart/cart",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "确认订单",
-                    "pathName": "pages/comfirOrder/comfirOrder",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "orderDetail",
-                    "pathName": "pages/order/orderDetail/orderDetail",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "login",
-                    "pathName": "pages/login/login",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "logi",
-                    "pathName": "pages/login/register/register",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "captcha",
-                    "pathName": "pages/login/captchaLogin/captchaLogin",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "pass",
-                    "pathName": "pages/login/passLogin/passLogin",
-                    "query": ""
-                },
-                {
-                    "id": 10,
-                    "name": "pay",
-                    "pathName": "pages/paystatus/paystatus",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "search",
-                    "pathName": "pages/search/search",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "info",
-                    "pathName": "pages/my/myInfo/myInfo",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "注册",
-                    "pathName": "pages/login/register/register",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "my",
-                    "pathName": "pages/my/my",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "cart",
-                    "pathName": "pages/cart/cart",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "newpass",
-                    "pathName": "pages/my/newpassword/newpassword",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "优惠券",
-                    "pathName": "pages/coupon/coupon",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "商票",
-                    "pathName": "pages/my/case/case",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "积分",
-                    "pathName": "pages/my/integ/integ",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "支付结果",
-                    "pathName": "pages/paystatus/paystatus",
-                    "query": "status=1&orderno=odr19021917314210157100",
-                    "scene": null
-                }
-            ]
-        }
-    }
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
+	"appid": "wxa8c604ce63485956",
+	"projectname": "pzlifeWapp",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 20,
+			"list": [
+				{
+					"id": 0,
+					"name": "goods",
+					"pathName": "pages/goods/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "确认订单",
+					"pathName": "pages/comfirOrder/comfirOrder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "orderDetail",
+					"pathName": "pages/order/orderDetail/orderDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "logi",
+					"pathName": "pages/login/register/register",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "captcha",
+					"pathName": "pages/login/captchaLogin/captchaLogin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pass",
+					"pathName": "pages/login/passLogin/passLogin",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "pay",
+					"pathName": "pages/paystatus/paystatus",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "info",
+					"pathName": "pages/my/myInfo/myInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/login/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "newpass",
+					"pathName": "pages/my/newpassword/newpassword",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "优惠券",
+					"pathName": "pages/coupon/coupon",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商票",
+					"pathName": "pages/my/case/case",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分",
+					"pathName": "pages/my/integ/integ",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付结果",
+					"pathName": "pages/paystatus/paystatus",
+					"query": "status=1&orderno=odr19021917314210157100",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "goods",
+					"pathName": "pages/goods/detail",
+					"query": "goodid=18",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "goods",
+					"pathName": "pages/goods/detail",
+					"query": "goodid=18",
+					"scene": null
+				}
+			]
+		}
+	}
 }

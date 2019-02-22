@@ -110,7 +110,6 @@ Page({
         this.getUserOrderList({
             orderStatus: options.status
         })
-
     },
     disorder: function(data) {
         let arr = data,

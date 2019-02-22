@@ -3,7 +3,7 @@
   <swiper  autoplay='true' interval='3000' bindchange="changeSwiper" circular='true'>
     <block>
       <swiper-item wx:for="{{goodInfo.goods_banner}}">
-        <image class='swiper-img' src='{{item.image_path}}'></image>
+        <image bindtap="previewImage" data-img="{{item.image_path}}" class='swiper-img' src='{{item.image_path}}'></image>
         
       </swiper-item>
     </block>
@@ -20,21 +20,24 @@
       <text class="din fl" >￥{{goodInfo.goods_data.min_retail_price}}</text>
       <text class="din fl" wx:if="{{goodInfo.goods_data.min_retail_price != goodInfo.goods_data.max_retail_price}}" > -￥{{goodInfo.goods_data.max_retail_price}}</text> </view>
   </view>
-  <view class='collect'>
+  <!-- <view class='collect'>
     <icon type=''></icon>
     <text >收藏</text>
-  </view>
+  </view> -->
 </view>
 
 <view class='content'>
-  <view class='spec' bindtap='showModel'>
-    <text class='fix'>已选择：</text><text class='fix_desc'>500g;x1</text>
+  <view class='spec' bindtap='showModel'  wx:if="{{buy}}">
+    <text class='fix'>已选择：</text><text class='fix_desc'>{{goodData.sku_name}};x{{buyNum}}</text>
+  </view>
+  <view class='spec' bindtap='showModel' wx:else>
+    <text class='fix'>未选择：</text>
   </view>
   <!-- <view class='ticket'>
     <text class='fix'>领券：</text><text class='fix_desc'>全场满39减9</text>
   </view> -->
   <view class='integral'>
-    <text class='fix'>积分：</text><text class='fix_desc'>赠送48积分</text>
+    <text class='fix'>积分：</text><text class='fix_desc'>赠送<text >{{goodInfo.goods_data.min_integral_active}}</text><text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">-{{goodInfo.goods_data.max_integral_active}}</text>积分</text>
   </view>
   <view class='freight'>
     <text class='fix'>运费：</text><text class='fix_desc'>{{goodInfo.goods_data.supplier_desc}}</text>
@@ -52,8 +55,10 @@
       <view class='goods_desc fl' wx:if="{{repertory}}">
         <text class='pop_price' wx:if="{{buy}}">价格：￥{{goodData.sku_price}}</text>
         <text class='pop_price' wx:else >价格：￥{{goodInfo.goods_data.max_retail_price}}-￥{{goodInfo.goods_data.min_retail_price}}</text>
-        <text class='selected'>已选择：M\r\t黑色</text>
-        <text class='present'>赠送积分：178分</text>
+        <text class='selected' wx:if="{{buy}}">已选择：{{goodData.sku_name}}</text>
+        <text class='selected' wx:else>未选择规格</text>
+        <text class='present' wx:if="{{buy}}">赠送积分：{{goodData.integral_active}}分</text>
+        <text class='present'  wx:else >赠送积分：<text >{{goodInfo.goods_data.min_integral_active}}</text><text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">-{{goodInfo.goods_data.max_integral_active}}</text>分</text>
       </view>
       <view class='goods_desc fl' wx:else>
         <text class='pop_price'>暂无库存</text>
@@ -111,7 +116,7 @@
     </view> -->
     <view class='four_cont'>
       <view class='detail_img'>
-        <image wx:for="{{goodInfo.goods_details}}" class='imgDetails' src='{{item.image_path}}' mode="widthFix"></image>
+        <image wx:for="{{goodInfo.goods_details}}" class='imgDetails'  bindtap="previewImage" data-img="{{item.image_path}}" src='{{item.image_path}}' mode="widthFix"></image>
       </view>
     </view>
 </view>
