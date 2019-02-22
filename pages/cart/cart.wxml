@@ -49,7 +49,7 @@
 					</view>
 				</view>
 				<view class='goods_img '>
-					<image class='lose_img' src='{{goods.image}}'></image>
+					<image class='lose_img' src='{{goods.sku_image}}'></image>
 				</view>
 				<view class='goods_desc lose_goods'>
 					<text class='goods_title'>{{goods.goods_name}}</text>

@@ -19,12 +19,11 @@ Page({
                             wx.setStorage({
                                 key: "con_id",
                                 data: res.con_id
-                            })
-                            app.getconid()
+                            });
                             wx.reLaunch({
                                 url: "/pages/index/index"
-                            })
-
+                            });
+                          app.getconid()
                         },
                         error(res) {
                             if (res.code == 3000) {

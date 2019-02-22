@@ -1,0 +1,54 @@
+<!--pages/coupon/getcoupon/getcoupon.wxml-->
+<view class="top">
+	<input type="text" placeholder="请输入优惠码" />
+	<view class="button active">兑换</view>
+</view>
+<view class="couponList" wx:if="{{couponList.length>=1}}">
+	<view class="coupon">
+		<view class="left">
+			<view class="price"><text class="symbol">￥</text>9</view>
+			<view class="rule">满39元使用</view>
+			<view class="right-top"></view>
+			<view class="right-bottom"></view>
+		</view>
+		<view class="mid">
+			<view class="title">新人专属优惠券</view>
+			<view class="subtitle">全场通用</view>
+			<view class="time">2018.09.05-2019.03.04</view>
+			<view class="left-top"></view>
+			<view class="left-bottom"></view>
+		</view>
+		<view class="right">
+			<view>点击领取</view>
+		</view>
+	</view>
+	<view class="coupon">
+		<view class="left">
+			<view class="price"><text class="symbol">￥</text>9</view>
+			<view class="rule">满39元使用</view>
+			<view class="right-top"></view>
+			<view class="right-bottom"></view>
+		</view>
+		<view class="mid">
+			<view class="title">新人专属优惠券</view>
+			<view class="subtitle">全场通用</view>
+			<view class="time">2018.09.05-2019.03.04</view>
+			<view class="left-top"></view>
+			<view class="left-bottom"></view>
+		</view>
+		<view class="right {{click ? '':'use'}}">
+			<view wx:if="{{click}}">点击领取</view>
+			<view wx:else>立即使用</view>
+		</view>
+	</view>
+</view>
+
+<view class="not" wx:if="{{couponList.length==0}}">
+	<view class="icon-button">
+		<image src="../../images/images/not.png"></image>
+		<view class="not-text">暂无优惠券可领</view>
+		<view class="not-button">去挑选商品</view>
+	</view>
+</view>
+
+<view class="footer">查看已有优惠券</view>

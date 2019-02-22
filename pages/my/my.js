@@ -73,52 +73,52 @@ Page({
         })
     },
     checkOrder: function(e) {
-        if (this.data.con_id) {
-            wx.navigateTo({
+		if (this.data.con_id) {
+		    wx.navigateTo({
                 url: "/pages/order/order?status=" + e.currentTarget.dataset.status
-            })
-        } else {
+		    })
+		} else {
             app.toast({ title: "请先登录" })
-        }
-    },
+		}
+	},
     myQr: function() {
-        if (this.data.con_id) {
-            wx.navigateTo({
-                url: "/pages/coupon/coupon"
-            })
-        } else {
+		if (this.data.con_id) {
+		    wx.navigateTo({
+		        url: "/pages/coupon/coupon"
+		    })
+		} else {
             app.toast({ title: "请先登录" })
-        }
-    },
+		}
+	},
     bindPhone: function() {
-        if (this.data.con_id) {
+		if (this.data.con_id) {
 
-            wx.navigateTo({
-                url: ""
-            })
-        } else {
+		    wx.navigateTo({
+		        url: ""
+		    })
+		} else {
             app.toast({ title: "请先登录" })
-        }
-    },
+		}
+	},
     toaddress: function() {
         console.log(this.data.con_id)
-        if (this.data.con_id) {
-            wx.navigateTo({
-                url: "/pages/address/address"
-            })
-        } else {
+		if (this.data.con_id) {
+		    wx.navigateTo({
+		        url: "/pages/address/address"
+		    })
+		} else {
             app.toast({ title: "请先登录" })
-        }
-    },
+		}
+	},
     tonewpassword: function() {
-        if (this.data.con_id) {
-            wx.navigateTo({
+		if (this.data.con_id) {
+		    wx.navigateTo({
                 url: "newpassword/newpassword"
-            })
-        } else {
+		    })
+		} else {
             app.toast({ title: "请先登录" })
-        }
-    },
+		}
+	},
     coupon: function() {
         if (this.data.con_id) {
             wx.navigateTo({
@@ -138,7 +138,7 @@ Page({
     },
     money: function() {
         if (this.data.con_id) {
-            let caseMoney = this.data.userInfo.balance
+			let caseMoney = this.data.userInfo.balance
             wx.navigateTo({
                 url: "/pages/my/case/case?caseMoney=" + caseMoney
             })
@@ -150,7 +150,7 @@ Page({
     },
     inte: function() {
         if (this.data.con_id) {
-            let integral = this.data.userInfo.integral
+			let integral = this.data.userInfo.integral
             wx.navigateTo({
                 url: "/pages/my/integ/integ?integ=" + integral
             })

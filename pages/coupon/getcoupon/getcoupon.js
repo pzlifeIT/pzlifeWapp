@@ -1,33 +1,31 @@
-// pages/collect/collect.js
+// pages/coupon/getcoupon/getcoupon.js
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		collect: 1,
-		selectShop: false,
-		collectGoods:[]
+		couponList: [1],
+		click: false
 	},
-	select: function(e) {
-		let num = e.currentTarget.dataset.num
-		this.setData({
-			collect: num
-		})
-	},
-	selectShop: function() {
-		let status = !this.data.selectShop
-		this.setData({
-			selectShop:status
-		})
-	},
+
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
 
 	},
-
+	/**
+	 * 下拉刷新
+	 */
+	onPullDownRefresh: function() {
+		wx.showNavigationBarLoading() //在标题栏中显示加载
+		//模拟加载
+		setTimeout(function() {
+			wx.hideNavigationBarLoading() //完成停止加载
+			wx.stopPullDownRefresh() //停止下拉刷新
+		}, 1500);
+	},
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
@@ -53,13 +51,6 @@ Page({
 	 * 生命周期函数--监听页面卸载
 	 */
 	onUnload: function() {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function() {
 
 	},
 
