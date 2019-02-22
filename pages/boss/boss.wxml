@@ -1,2 +1,52 @@
 <!--pages/boss/boss.wxml-->
-<text>pages/boss/boss.wxml</text>
+<view class="background">
+	<view class="boss-info">
+		<view class="head-img">
+			<image src=""></image>
+		</view>
+		<view class="nickname">
+			<view class="name">梦比糖果甜</view>
+			<view class="identity">BOSS</view>
+			<view class="shop-id">店铺ID：122345</view>
+		</view>
+	</view>
+	<image class="sz" src="../images/images/sz.png"></image>
+</view>
+<view class="statistics">
+	<view class="earnings">
+		<view class="div after">
+			<view class="title">奖金收益</view>
+			<view class="num">100<text>元</text></view>
+		</view>
+		<view class="div after">
+			<view class="title">本月销售额</view>
+			<view class="num">100<text>元</text></view>
+		</view>
+		<view class="div">
+			<view class="title">店铺市场资源</view>
+			<view class="num">100<text>人</text></view>
+		</view>
+	</view>
+	<view class="icon">
+		<view class="one icon-after">
+			<image src="../images/images/dpfq.png"></image>
+			<view class="icon-text">店铺发券</view>
+		</view>
+		<view class="one icon-after">
+			<image src="../images/images/sphc.png"></image>
+			<view class="icon-text">商品货仓</view>
+		</view>
+		<view class="one">
+			<image src="../images/images/kdyq.png"></image>
+			<view class="icon-text">开店邀请</view>
+		</view>
+		<view class="one icon-after">
+			<image src="../images/images/zshy.png"></image>
+			<view class="icon-text">钻石会员</view>
+		</view>
+		<view class="one icon-after">
+			<image src="../images/images/xjq.png"></image>
+			<view class="icon-text">现金券</view>
+		</view>
+	</view>
+</view>

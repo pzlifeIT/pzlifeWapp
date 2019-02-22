@@ -26,21 +26,19 @@ Page({
                           app.getconid()
                         },
                         error(res) {
-                            if (res.code == 3000) {
+                            if (res.code == 3000 ||res.code == 3002) {
                                 app.toast({
-                                    title: "用户未注册",
-                                })
-                            } else if (res.code == 3001) {
-                                app.toast({
-                                    title: "code码错误",
-                                })
-                            } else if (res.code == 3002) {
-                                app.toast({
-                                    title: "无手机号，请先注册",
-                                })
+                                    title: "用户未绑定手机号,1.5秒后跳转去快捷登录",
+                                });
+								let timer = setTimeout(function(){
+									wx.navigateTo({
+										url:"/pages/login/captchaLogin/captchaLogin"
+									})
+								},1500);
+								clearTimeout(timer)
                             } else if (res.code == 3003) {
                                 app.toast({
-                                    title: "登录失败",
+                                    title: "登录失败,请稍后重试",
                                 })
                             }
                         },

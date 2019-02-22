@@ -154,7 +154,7 @@ Page({
 				that.setData({
 					valid: valid
 				});
-				// that.getTotal(valid)
+				that.getTotal(valid)
 				// that.getStorage()
 			},
 			error(res) {
@@ -190,7 +190,10 @@ Page({
 			stock = goods[goodsIndex].stock
 		// console.log(e)
 		// 		return
-		if (num > stock) {
+		if (num >= stock) {
+			app.toast({
+				title:"库存不足"
+			});
 			return false
 		}
 
@@ -209,7 +212,7 @@ Page({
 				that.setData({
 					valid: valid
 				});
-				// that.getTotal(valid)
+				that.getTotal(valid)
 				// that.getStorage()
 			},
 			error(res) {
