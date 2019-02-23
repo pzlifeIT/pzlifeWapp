@@ -45,7 +45,7 @@
 		<text class="jf-text">送积分</text><text class="jf-num">20</text>
 	</view>
 	<view class="jf">
-		<text class="jf-text">含运费</text><text class="jf-num">￥20.00</text>
+		<text class="jf-text">含运费</text><text class="jf-num">￥{{item.express_money}}</text>
 	</view>
 	<view class="or-footer">
 		<view class="footer-left"><text class="sum">共付：<text class="total">￥{{item.pay_money}}</text></text></view>

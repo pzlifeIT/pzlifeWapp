@@ -1,4 +1,5 @@
 // pages/paystatus/paystatus.js
+const app = getApp()
 Page({
 
     /**
@@ -6,18 +7,38 @@ Page({
      */
     data: {
         status: 1,
-        order_no: ''
+        order_no: '',
+        siteid: '',
+        site: {},
+        price: ''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
+        let opt = options
         this.setData({
-            status: options.status,
-            orderno: options.orderno
+            status: opt.status,
+            orderno: opt.orderno,
+            siteid: opt.siteid,
+            price: opt.price
         })
-
+        this.getsite(opt.siteid)
+    },
+    getsite: function(id) {
+        let that = this
+        app.wxrequest({
+            url: 'index/user/getUserAddress',
+            data: {
+                address_id: id
+            },
+            success: function(res) {
+                that.setData({
+                    site: res.data || {}
+                })
+            }
+        })
     },
     goorder: function(e) {
         let n
@@ -27,15 +48,44 @@ Page({
             n = 1
         }
         wx.navigateTo({
-            url: '/page/order/order?status=' + n
+            url: '/pages/order/order?status=' + n
         })
     },
-    gopay: function(e) {
-
+    gopay: function() {
+        let that = this
+        app.wxrequest({
+            url: 'pay/pay/pay',
+            data: {
+                order_no: that.data.orderno,
+                payment: '1',
+                platform: '1'
+            },
+            nocon: true,
+            success: function(res) {
+                let parameters = res.parameters
+                wx.requestPayment({
+                    timeStamp: parameters.timeStamp,
+                    nonceStr: parameters.nonceStr,
+                    package: parameters.package,
+                    signType: parameters.signType,
+                    paySign: parameters.paySign,
+                    success(res) {
+                        this.setData({
+                            status: 1
+                        })
+                    },
+                    fail(res) {
+                        this.setData({
+                            status: 2
+                        })
+                    }
+                })
+            }
+        })
     },
     goindex: function(e) {
         wx.switchTab({
-            url: '/page/index/index'
+            url: '/pages/index/index'
         })
     },
     /**

@@ -111,8 +111,9 @@ Page({
             },
             success: function(res) {
                 if (res.is_pay == '1') {
-                    wx.redirectTo({
-                        url: '/pages/paystatus/paystatus?status=1&orderno=' + res.order_no
+                    that.gopaystatus({
+                        order_no: res.order_no,
+                        status: 1
                     })
                 } else {
                     that.pay({
@@ -125,10 +126,17 @@ Page({
             }
         })
     },
+    gopaystatus: function(data) {
+        let that = this
+        wx.redirectTo({
+            url: '/pages/paystatus/paystatus?status=' + data.status + '&orderno=' + data.order_no + '&siteid=' + that.data.siteid + '&price=' + that.data.stat.total_price
+        })
+    },
     /**
      * 支付
      */
     pay: function(data) {
+        let that = this
         app.wxrequest({
             url: 'pay/pay/pay',
             data: {
@@ -146,16 +154,21 @@ Page({
                     signType: parameters.signType,
                     paySign: parameters.paySign,
                     success(res) {
-                        wx.redirectTo({
-                            url: '/pages/paystatus/paystatus?status=1&orderno=' + data.order_no
+                        that.gopaystatus({
+                            order_no: data.order_no,
+                            status: 1
                         })
                     },
                     fail(res) {
-                        wx.redirectTo({
-                            url: '/pages/paystatus/paystatus?status=2&orderno=' + data.order_no
+                        that.gopaystatus({
+                            order_no: data.order_no,
+                            status: 2
                         })
                     }
                 })
+            },
+            error: function(code) {
+
             }
         })
     },

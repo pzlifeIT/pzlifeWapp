@@ -1,45 +1,16 @@
 //app.js
 App({
-    onLaunch: function() {
+    onLaunch: function(opt) {
         // 展示本地存储能力
-        var logs = wx.getStorageSync('logs') || []
-        logs.unshift(Date.now())
-        wx.setStorageSync('logs', logs)
-        console.log('运行几次')
-            // 登录
-        wx.login({
-                success: res => {
-                    // 发送 res.code 到后台换取 openId, sessionKey, unionId
 
-                }
-        });
-            // 获取用户信息
-        wx.getSetting({
-                success: res => {
-                    if (res.authSetting['scope.userInfo']) {
-                        // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-                        wx.getUserInfo({
-                            success: res => {
-                                // 可以将 res 发送给后台解码出 unionId
-                                this.globalData.userInfo = res.userInfo
-
-                                // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-                                // 所以此处加入 callback 以防止这种情况
-                                if (this.userInfoReadyCallback) {
-                                    this.userInfoReadyCallback(res)
-                                }
-                            }
-                        })
-                    }
-                }
-            })
-            //本地缓存
+        //本地缓存
         let that = this
 
     },
     globalData: {
-        userInfo: null,
-        con_id: ''
+        userInfo: {},
+        con_id: '',
+        pid: ''
     },
     getconid: function() {
         let that = this
@@ -56,6 +27,23 @@ App({
             icon: data.icon || "none",
             duration: data.duration || 2000
         })
+    },
+    share: function(data) {
+        let sharejson = {
+            title: data.title || '品质生活商城',
+            path: data.path || '/page/index/index?pid=',
+            imageUrl: data.imageUrl,
+            success: function(shareTickets) {
+
+            },
+            fail: function(res) {
+
+            },
+            complete: function(res) {
+
+            }
+        }
+        return sharejson
     },
     modal: function(data) {
         wx.showModal({
@@ -79,6 +67,9 @@ App({
         if (!obj.nocon) {
             obj.data.con_id = that.globalData.con_id
         }
+        wx.showLoading({
+            title: '加载中',
+        })
         wx.request({
             url: 'http://wwwapi.pzlife.vip/' + obj.url,
             data: obj.data || {},
@@ -88,18 +79,22 @@ App({
                 'content-type': 'application/json' // 默认值
             },
             success(res) {
-                // 			console.log(res.data)
-                // 				return;
-                let result = JSON.parse(res.data);
-                if (result.code == 200) {
-                    if (typeof obj.success == 'function') {
-                        obj.success(result)
+                wx.hideLoading()
+                if (res.statusCode == 200) {
+                    let result = JSON.parse(res.data);
+                    if (result.code == 200) {
+                        if (typeof obj.success == 'function') {
+                            obj.success(result)
+                        }
+                    } else {
+                        if (typeof obj.error == 'function') {
+                            obj.error(result.code)
+                        }
                     }
                 } else {
-                    if (typeof obj.error == 'function') {
-                        obj.error(result.code)
-                    }
+                    that.networkerror(res.statusCode)
                 }
+
             },
             fail(err) {
                 if (typeof obj.fail == 'function') {
@@ -107,6 +102,69 @@ App({
                 }
             }
         })
+    },
+    networkerror: function(code) {
+        let text = ''
+        switch (parseInt(code)) {
+            case 201:
+            case 202:
+            case 203:
+            case 204:
+            case 205:
+            case 206:
+                text = '服务器无响应'
+                break;
+            case 400:
+                text = '错误请求'
+                break;
+            case 401:
+                text = '身份验证错误'
+                break;
+            case 403:
+                text = '服务器拒绝请求'
+                break;
+            case 404:
+            case 410:
+                text = '404错误'
+                break;
+            case 405:
+                text = '方法禁用'
+                break;
+            case 406:
+                text = '不接受请求'
+                break;
+            case 407:
+                text = '需要代理授权'
+                break;
+            case 408:
+                text = '请求超时'
+                break;
+            case 409:
+            case 411:
+            case 412:
+            case 415:
+            case 416:
+            case 417:
+                text = '请求格式出错'
+                break;
+            case 413:
+                text = '请求实体过大'
+                break;
+            case 414:
+                text = '请求的 URI 过长'
+                break;
+            case 500:
+            case 501:
+            case 502:
+            case 503:
+            case 504:
+            case 505:
+                text = '服务器错误'
+                break;
+            default:
+                text = '意料之外的网络错误'
+        }
+        this.toast({ title: text })
     },
     getUserInfo: function(e) {
         let logincode, info
@@ -116,5 +174,9 @@ App({
             }
         })
         return logincode
+    },
+    onShow: function(opt) {
+        console.log('onshow', opt.query.pid)
+        this.globalData.pid = opt.query.pid
     }
 })

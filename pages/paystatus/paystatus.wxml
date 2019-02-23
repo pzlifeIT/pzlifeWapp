@@ -3,21 +3,21 @@
 	<view class="pay-status fail" wx:if="{{status == 2}}">支付失败</view>
 	<view class="pay-status success" wx:if="{{status == 1}}">支付成功</view>
 	<view class="botton">
-		<view class="bo-left">查看订单</view>
-		<view class="bo-right" wx:if="{{status == 2}}">重新支付</view>
-		<view class="bo-right" wx:if="{{status == 1}}">返回首页</view>
+		<view class="bo-left" bindtap="goorder">查看订单</view>
+		<view class="bo-right" bindtap="gopay" wx:if="{{status == 2}}">重新支付</view>
+		<view class="bo-right" bindtap="goindex"  wx:if="{{status == 1}}">返回首页</view>
 	</view>
 </view>
 <view class="order-address">
 	<view class="address">
 		<view class="name-phone">
-			<text class="name">鲜鲜</text>
-			<text class="phone">13865264587</text>
+			<text class="name">{{site.name}}</text>
+			<text class="phone">{{site.mobile}}</text>
 		</view>
-		<view class="add-detail">上海市静安区石门二路333弄3号楼17c上海市静安区石门二路333弄3号楼17c</view>
+		<view class="add-detail">{{site.province_name}} {{site.city_name}} {{site.area_name}} {{site.address}} </view>
 		<view class="money">
-			<text class="mon-text">实付：</text>
-			<text class="price">￥69.00</text>
+			<text class="mon-text">金额：</text>
+			<text class="price">￥{{price}}</text>
 		</view>
 	</view>
 </view>

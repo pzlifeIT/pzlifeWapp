@@ -16,7 +16,7 @@
     <view class='addres_detail'>
       <text class='default'>默认</text>
       <text class='location'>{{site.province_name}} {{site.city_name}} {{site.area_name}} {{site.address}}</text>
-    </view>
+    </view> 
   </view>
   <view class='jt'>
     <image src='/pages/images/images/jt_18.png'></image>

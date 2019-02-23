@@ -186,7 +186,7 @@ Page({
         this.addUserCart({
             goods_skuid: this.data.goodData.id,
             goods_num: this.data.buyNum,
-            track_id: 1
+            parent_id: 1
         })
     },
     /**
@@ -199,7 +199,7 @@ Page({
             data: {
                 goods_skuid: data.goods_skuid,
                 goods_num: data.goods_num,
-                track_id: data.track_id
+                parent_id: data.parent_id
             },
             success: function(res) {
                 that.setData({
@@ -303,6 +303,12 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function() {
-
+        let that = this,
+            share = app.share({
+                title: that.data.goodInfo.goods_data.goods_name,
+                path: '/pages/goods/detail?goodid=' + that.data.goodid,
+                imageUrl: that.data.goodInfo.goods_data.image,
+            })
+        return share
     }
 })
