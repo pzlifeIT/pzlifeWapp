@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 21,
+			"current": 22,
 			"list": [
 				{
 					"id": 0,
@@ -179,6 +179,13 @@
 					"id": -1,
 					"name": "店铺管理",
 					"pathName": "pages/boss/boss",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新建优惠券",
+					"pathName": "pages/boss/addcoupon/addcoupon",
 					"scene": null
 				}
 			]

@@ -1,0 +1,15 @@
+<!--pages/boss/addcoupon/addcoupon.wxml-->
+<view class="coupon">
+	<view class="example">
+		<view class="left">
+			<view class="right-top"></view>
+			<view class="right-bottom"></view>
+			<view class="price"><text class="symbol">￥</text>9</view>
+			<view class="rule">满39元使用</view>
+		</view>
+		<view class="right">
+			<view class="left-top"></view>
+			<view class="left-bottom"></view>
+		</view>
+	</view>
+</view>
