@@ -1,0 +1,77 @@
+/* pages/boss/addcoupon/addcoupon.wxss */
+page{
+	width: 100%;
+	height: 100%;
+	background: #F7F7F7;
+}
+.coupon{
+	width: 750rpx;
+	height: 208rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.example{
+	width: 650rpx;
+	height: 178rpx;
+}
+.left{
+	width: 221rpx;
+	height: 178rpx;
+	background: #fff;
+	box-sizing: border-box;
+	border-right: 5rpx dashed #F7F7F7;
+	float: left;
+	position: relative;
+	/* text-align: center; */
+}
+.right{
+	width: 429rpx;
+	height: 178rpx;
+	background: #fff;
+	float: left;
+	position: relative;
+}
+.left-top,.left-bottom,.right-bottom,.right-top{
+	width: 20rpx;
+	height: 20rpx;
+	background: #F7F7F7;
+	position: absolute;
+}
+.left-top{
+	left:0;
+	top: 0;
+	border-radius: 0 0 20rpx 0;
+}
+.left-bottom{
+	left: 0;
+	bottom: 0;
+	border-radius:0 20rpx 0 0 ;
+}
+.right-top{
+	right: 0;
+	top: 0;
+	border-radius: 0 0 0 20rpx;
+}
+.right-bottom{
+	right: 0;
+	bottom: 0;
+	border-radius: 20rpx 0 0 0;
+}
+.price{
+	color: #E61F18;
+	font-size: 80rpx;
+	text-align: center;
+	margin-top: 18rpx;
+}
+.price .symbol{
+	color: #202020;
+	font-size: 22rpx;
+	width: 100%;
+}
+.rule{
+	color: #404040;
+	font-size: 26rpx;
+	width: 100%;
+	text-align: center;
+}
