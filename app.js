@@ -45,6 +45,26 @@ App({
         }
         return sharejson
     },
+    getUserInfo: function(e) {
+        let logincode, info
+        wx.login({
+            success(res) {
+                logincode = res.code
+            }
+        })
+        return logincode
+    },
+    indexmain: function(id) {
+        this.wxrequest({
+            url: 'index/user/indexmain',
+            data: {
+                buid: id
+            },
+            success: function(res) {
+
+            }
+        })
+    },
     modal: function(data) {
         wx.showModal({
             title: data.title || '',
@@ -65,11 +85,13 @@ App({
         let that = this
         obj.data = obj.data || {}
         if (!obj.nocon) {
+            if (that.globalData.con_id == '') {
+                console.log('con_id为空')
+                return
+            }
             obj.data.con_id = that.globalData.con_id
         }
-        wx.showLoading({
-            title: '加载中',
-        })
+        wx.showLoading({ title: '加载中' })
         wx.request({
             url: 'http://wwwapi.pzlife.vip/' + obj.url,
             data: obj.data || {},
@@ -97,6 +119,8 @@ App({
 
             },
             fail(err) {
+                wx.hideLoading()
+                that.toast({ title: '网络错误' })
                 if (typeof obj.fail == 'function') {
                     obj.fail(err)
                 }
@@ -151,7 +175,7 @@ App({
                 text = '请求实体过大'
                 break;
             case 414:
-                text = '请求的 URI 过长'
+                text = '请求的URI过长'
                 break;
             case 500:
             case 501:
@@ -166,17 +190,9 @@ App({
         }
         this.toast({ title: text })
     },
-    getUserInfo: function(e) {
-        let logincode, info
-        wx.login({
-            success(res) {
-                logincode = res.code
-            }
-        })
-        return logincode
-    },
     onShow: function(opt) {
-        console.log('onshow', opt.query.pid)
-        this.globalData.pid = opt.query.pid
+        this.globalData.pid = opt.query.pid || ''
+        if (this.globalData.pid == '') return
+        this.indexmain(this.globalData.pid)
     }
 })

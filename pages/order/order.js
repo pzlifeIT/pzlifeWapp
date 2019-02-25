@@ -43,6 +43,7 @@ Page({
      */
     gopay: function(e) {
         console.log(e.currentTarget.dataset.orderno)
+        let that = this
         app.wxrequest({
             url: 'pay/pay/pay',
             data: {
@@ -60,10 +61,50 @@ Page({
                     signType: parameters.signType,
                     paySign: parameters.paySign,
                     success(res) {
-
+                        that.setData({
+                            page: 1,
+                            reach: true,
+                            order_list: []
+                        })
+                        that.getUserOrderList({
+                            orderStatus: that.data.status
+                        })
                     },
-                    fail(res) {}
+                    fail(res) {
+                        app.toast({ title: '支付失败' })
+                    }
                 })
+            },
+            error: function(code) {
+                switch (parseInt(code)) {
+                    case 3000:
+                        app.toast({ title: '不存在需要支付的订单' })
+                        break;
+                    case 3001:
+                        app.toast({ title: '订单号错误' })
+                        break;
+                    case 3002:
+                        app.toast({ title: '订单类型错误' })
+                        break;
+                    case 3004:
+                        app.toast({ title: '订单已取消' })
+                        break;
+                    case 3005:
+                        app.toast({ title: '订单已关闭' })
+                        break;
+                    case 3006:
+                        app.toast({ title: '订单已付款' })
+                        break;
+                    case 3007:
+                        app.toast({ title: '订单已过期' })
+                        break;
+                    case 3010:
+                        app.toast({ title: '支付失败' })
+                        break;
+                    default:
+                        app.toast({ title: '意料之外的网络错误' })
+                }
+
             }
         })
     },
@@ -90,6 +131,9 @@ Page({
                         })
 
                         app.toast({ title: '取消成功！', duration: 1500 })
+                    },
+                    error: function(code) {
+                        app.toast({ title: '取消失败' })
                     }
                 })
             },
@@ -106,7 +150,6 @@ Page({
         this.setData({
             status: options.status
         })
-        console.log(this.data.status)
         this.getUserOrderList({
             orderStatus: options.status
         })
@@ -168,7 +211,6 @@ Page({
                 pagenum: data.pagenum || 10
             },
             success: function(res) {
-                console.log(res.order_list.length)
                 if (res.order_list.length < 10) {
                     that.setData({
                         reach: false

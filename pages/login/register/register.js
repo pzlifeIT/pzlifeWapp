@@ -6,8 +6,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-        phone: null,
-        code: null,
+        phone: '',
+        code: '',
         pass: "",
         checkpass: "",
         getcode: "获取验证码",
@@ -26,28 +26,32 @@ Page({
      * 获取输入的值
      */
     inputwacth: function(e) {
-        console.log(e)
         let item = e.currentTarget.dataset.model
-            // console.log(item)
         this.setData({
-                [item]: e.detail.value
-            }),
-            console.log(this.data.pass)
-        console.log(this.data.checkpass)
+            [item]: e.detail.value
+        })
     },
     /**
      * 获取短信验证码
      */
     getCaptcha: function(e) {
-        console.log("huoqule")
-        let phone = parseInt(this.data.phone),
+        let phone = this.data.phone,
             that = this
+        if (phone == '') {
+            app.toast({ title: '请填写手机号码' })
+            return
+        }
+        if (phone.length > 11 || phone.length < 11) {
+            app.toast({ title: '请填写11位手机号码' })
+            return
+        }
         app.wxrequest({
             url: "index/user/sendvercode",
             data: {
                 mobile: phone,
                 stype: 1
             },
+            nocon: true,
             success(res) {
                 that.timeOut()
             },
@@ -66,9 +70,7 @@ Page({
                     })
                 }
             },
-            fail(res) {
-                console.log(res)
-            }
+            fail(res) {}
         })
     },
     timeOut: function() {
@@ -102,6 +104,26 @@ Page({
             password = this.data.pass,
             checkpass = this.data.checkpass,
             code = this.data.logcode
+        if (code == '') {
+            app.toast({ title: '微信授权失败' })
+            return
+        }
+        if (mobile == '') {
+            app.toast({ title: '请填写手机号码' })
+            return
+        }
+        if (mobile.length > 11 || mobile.length < 11) {
+            app.toast({ title: '请填写11位手机号码' })
+            return
+        }
+        if (password == '') {
+            app.toast({ title: '请输入密码' })
+            return
+        }
+        if (checkpass == '') {
+            app.toast({ title: '请输入确认密码' })
+            return
+        }
         if (password != checkpass) {
             app.toast({
                 title: '两次密码不一致'
@@ -115,8 +137,10 @@ Page({
                 iv: iv,
                 vercode: vercode,
                 password: password,
-                code: code
+                code: code,
+                buid: app.globalData.pid
             },
+            nocon: true,
             success(res) {
                 app.toast({
                     title: '注册成功'
@@ -126,7 +150,7 @@ Page({
                 if (res == 3001) {
                     app.toast({ title: '手机格式有误' })
                 } else if (res == 3002) {
-                    app.toast({ title: 'code码错误' })
+                    app.toast({ title: '用户未授权,无法注册' })
                 } else if (res == 3004) {
                     app.toast({ title: '验证码格式有误' })
                 } else if (res == 3005) {

@@ -5,7 +5,7 @@
     <text class="fl" >{{item.name}}</text>
     <text class="fr" >{{item.mobile}}</text>
   </view>
-  <text class="al-text" >{{item.province_name}}{{item.city_name}}{{item.area_name}}{{item.address}}</text>
+  <text class="al-text" >{{item.province_name}} {{item.city_name}} {{item.area_name}} {{item.address}}</text>
   <view class="al-operate" >
     <!-- <view class="al-default" >
       <icon class="icon fl" type="success" size="34rpx" color="red" />
@@ -17,7 +17,7 @@
         <image src="../images/images/xie.png"  />
       <!-- </view> -->
       </navigator>
-      <view  class="al-btn-del din"><image src="../images/images/del.png" /></view>
+      <!-- <view  class="al-btn-del din"><image src="../images/images/del.png" /></view> -->
     </view>
   </view>
 </view>

@@ -14,7 +14,8 @@ Page({
                 if (res.code) {
                     app.wxrequest({
                         url: "index/user/loginuserbywx",
-                        data: { code: res.code, buid: '621' },
+                        data: { code: res.code, buid: app.globalData.pid },
+                        nocon: true,
                         success(res) {
                             wx.setStorage({
                                 key: "con_id",
@@ -23,27 +24,28 @@ Page({
                             wx.reLaunch({
                                 url: "/pages/index/index"
                             });
-                          app.getconid()
+                            app.getconid()
                         },
                         error(res) {
-                            if (res.code == 3000 ||res.code == 3002) {
+                            if (res.code == 3000 || res.code == 3002) {
                                 app.toast({
                                     title: "用户未绑定手机号,1.5秒后跳转去快捷登录",
                                 });
-								let timer = setTimeout(function(){
-									wx.navigateTo({
-										url:"/pages/login/captchaLogin/captchaLogin"
-									})
-								},1500);
-								clearTimeout(timer)
+                                let timer = setTimeout(function() {
+                                    wx.navigateTo({
+                                        url: "/pages/login/captchaLogin/captchaLogin"
+                                    })
+                                }, 1500);
+                                clearTimeout(timer)
                             } else if (res.code == 3003) {
                                 app.toast({
                                     title: "登录失败,请稍后重试",
                                 })
+                            } else if (res.code == 3001) {
+                                app.toast({
+                                    title: "用户授权失败",
+                                })
                             }
-                        },
-                        fail(res) {
-
                         }
                     })
                 }

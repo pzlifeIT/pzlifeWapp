@@ -64,6 +64,9 @@ Page({
             },
             fail(err) {
                 console.log(err)
+                that.setData({
+                    loginStatus: false
+                })
             },
             error(code) {
                 console.log(code)

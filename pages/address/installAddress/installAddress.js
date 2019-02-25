@@ -41,9 +41,11 @@ Page({
         })
     },
     bindmobile: function(e) {
-        console.log(e.detail.value)
+        console.log()
+        let mobile = e.detail.value
+        mobile = mobile.replace(/[^\d]/g, '')
         this.setData({
-            mobile: e.detail.value
+            mobile: mobile
         })
     },
     bindaddress: function(e) {
@@ -58,8 +60,30 @@ Page({
             region: e.detail.value
         })
     },
+
     save: function() {
         let data = this.data
+        if (data.name == '') {
+            app.toast({ title: '请填写姓名' })
+            return
+        }
+        data.mobile = data.mobile.replace(/\s+/g, "")
+        if (data.mobile == '') {
+            app.toast({ title: '请填写手机号码' })
+            return
+        }
+        if (data.mobile.length > 11 || data.mobile.length < 11) {
+            app.toast({ title: '请填写11位手机号码' })
+            return
+        }
+        if (data.region.length == 0) {
+            app.toast({ title: '请选择省市区' })
+            return
+        }
+        if (data.address == '') {
+            app.toast({ title: '请填写详细地址' })
+            return
+        }
         if (this.data.id) {
             this.updateUserAddress({
                 address_id: this.data.id,
@@ -96,6 +120,7 @@ Page({
                 name: data.name
             },
             success: function(res) {
+                app.toast({ title: '添加地址成功' })
                 wx.navigateBack()
             }
         })

@@ -94,12 +94,10 @@ Page({
                     break;
                 }
             }
-            console.log(goodData)
             this.setData({
                 goodData: goodData
             })
         }
-        console.log(this.data.goodData)
         this.setData({
             buy: buy,
             repertory: repertory
@@ -132,7 +130,6 @@ Page({
     },
     getnum: function(e) {
         var num = e.detail.value;
-        console.log(num)
         this.setData({
             buyNum: num
         });
@@ -170,7 +167,6 @@ Page({
 
     },
     joinCart: function() {
-        console.log(this.data.goodData)
         if (!this.data.showModel) {
             this.setData({
                 showModel: true
@@ -183,10 +179,16 @@ Page({
             })
             return
         }
+        if (parseInt(this.data.buyNum) < 1) {
+            app.toast({
+                title: '数量不能小于1'
+            })
+            return
+        }
         this.addUserCart({
             goods_skuid: this.data.goodData.id,
             goods_num: this.data.buyNum,
-            parent_id: 1
+            parent_id: app.globalData.pid
         })
     },
     /**
@@ -205,7 +207,7 @@ Page({
                 that.setData({
                     showModel: false
                 })
-                app.toast({ title: '加入成功' })
+                app.toast({ title: '加入购物车成功' })
             },
             error: function(code) {
                 if (code == 5000) {
@@ -254,6 +256,10 @@ Page({
                     goodInfo: res,
                     goodData: goodData
                 })
+            },
+            error: function(code) {
+                app.toast({ title: '未获取到商品信息' })
+                wx.navigateBack({})
             }
         })
     },

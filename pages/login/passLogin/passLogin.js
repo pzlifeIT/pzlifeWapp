@@ -29,10 +29,11 @@ Page({
                     key: "con_id",
                     data: res.con_id
                 })
+                app.getconid()
                 wx.reLaunch({
                     url: "/pages/index/index"
                 })
-                app.getconid()
+
             },
             fail(res) {
 
@@ -40,28 +41,16 @@ Page({
             error(res) {
                 if (res == 3002) {
                     app.toast({
-                        title: '账号不存在，请使用快捷登录'
+                        title: '账号不存在'
                     });
-					let timer = setTimeout(function(){
-						wx.navigateTo({
-							url:"/pages/login/captchaLogin/captchaLogin"
-						})
-					},1000);
-					clearTimeout(timer)
                 } else if (res == 3001) {
                     app.toast({
                         title: '手机号码格式有误'
                     })
                 } else if (res == 3003) {
                     app.toast({
-                        title: '密码错误，1.5秒后跳去快捷登录'
+                        title: '密码错误'
                     });
-					let timer = setTimeout(function(){
-						wx.navigateTo({
-							url:"/pages/login/captchaLogin/captchaLogin"
-						})
-					},1500);
-					clearTimeout(timer)
                 } else if (res == 3004) {
                     app.toast({
                         title: '登录失败'

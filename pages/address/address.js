@@ -14,17 +14,6 @@ Page({
      */
     onLoad: function(options) {
         // this.getUserAddress()
-        // this.createMemberOrder()
-    },
-    createMemberOrder: function() {
-        let that = this
-        app.wxrequest({
-            url: 'index/order/createMemberOrder',
-            data: {
-                user_type: 2
-            },
-            success: function(res) {}
-        })
     },
     redirect: function(e) {
         console.log(e.currentTarget.dataset.id)
@@ -58,7 +47,6 @@ Page({
      */
     onShow: function() {
         this.getUserAddress()
-        this.createMemberOrder()
     },
 
     /**

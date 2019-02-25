@@ -17,27 +17,36 @@ Page({
      * 获取输入的值
      */
     inputwacth: function(e) {
-        let item = e.currentTarget.dataset.model
+        let item = e.currentTarget.dataset.model,
+            mobile = e.detail.value
+        mobile = mobile.replace(/[^\d]/g, '')
         this.setData({
-            [item]: e.detail.value
+            [item]: mobile
         })
     },
     /**
      * 获取短信验证码
      */
     getcode: function(e) {
-        console.log("huoqule")
-        let phone = parseInt(this.data.phone),
+        let phone = this.data.phone,
             that = this
+        if (phone == '' || phone == null) {
+            app.toast({ title: '请填写手机号码' })
+            return
+        }
+        if (phone.length < 11) {
+            app.toast({ title: '请填写11位手机号码' })
+            return
+        }
         app.wxrequest({
             url: "index/user/sendvercode",
             data: {
                 mobile: phone,
                 stype: 3
             },
+            nocon: true,
             success(res) {
                 that.timeOut()
-
             },
             error(res) {
                 if (res == 3004) {
@@ -53,9 +62,6 @@ Page({
                         title: '一分钟内不能重复发送'
                     })
                 }
-            },
-            fail(res) {
-                console.log(res)
             }
         })
     },
@@ -90,6 +96,18 @@ Page({
             mobile = this.data.phone,
             vercode = this.data.code,
             code = this.data.logcode
+        if (mobile == '') {
+            app.toast({ title: '请填写手机号码' })
+            return
+        }
+        if (phone.length < 11) {
+            app.toast({ title: '请填写11位手机号码' })
+            return
+        }
+        if (code == '') {
+            app.toast({ title: '请输入验证码' })
+            return
+        }
         app.wxrequest({
             url: "index/user/quicklogin",
             data: {
@@ -101,38 +119,32 @@ Page({
             },
             nocon: true,
             success(res) {
-                console.log(res)
-                    //登录完成后将con_id存入本地缓存
+                //登录完成后将con_id存入本地缓存
                 wx.setStorage({
                     key: "con_id",
                     data: res.con_id
                 })
+                app.getconid()
                 wx.reLaunch({
                     url: "/pages/index/index"
                 })
-                app.getconid()
             },
-            error(res) {
-                if (res == 3001) {
-                    app.toast({
-                        title: '手机格式有误'
-                    })
-                } else if (res == 3002) {
-                    app.toast({
-                        title: '登录失败'
-                    })
-                } else if (res == 3004) {
-                    app.toast({
-                        title: '验证码格式有误'
-                    })
-                } else if (res == 3006) {
-                    app.toast({
-                        title: '验证码错误'
-                    })
+            error(code) {
+                switch (parseInt(code)) {
+                    case 3001:
+                        app.toast({ title: '手机格式有误' })
+                        break;
+                    case 3004:
+                    case 3006:
+                        app.toast({ title: '验证码错误' })
+                        break;
+                    case 3009:
+                        app.toast({ title: '该微信号已绑定手机号' })
+                        break;
+                    default:
+                        app.toast({ title: '意料之外的错误' })
+                        break;
                 }
-            },
-            fail(res) {
-
             }
         })
     },

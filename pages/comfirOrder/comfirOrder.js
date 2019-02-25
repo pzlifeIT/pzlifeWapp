@@ -64,6 +64,14 @@ Page({
         })
     },
     gobuy: function() {
+        if (this.data.paytype == 0) {
+            app.toast({ title: '请选择支付方式' })
+            return
+        }
+        if (this.data.siteid == '') {
+            app.toast({ title: '请选择地址' })
+            return
+        }
         this.createorder({
             sku_id_list: this.data.skus,
             user_address_id: this.data.siteid,
@@ -123,6 +131,34 @@ Page({
                     })
                 }
 
+            },
+            error: function(code) {
+                switch (parseInt(code)) {
+                    case 3000:
+                    case 3001:
+                    case 3002:
+                    case 3003:
+                        app.toast({ title: '商品信息出错' })
+                        break;
+                    case 3004:
+                        app.toast({ title: '商品已售完' })
+                        break;
+                    case 3005:
+                        app.toast({ title: '商品未加入购物车' })
+                        wx.switchTab({
+                            url: '/pages/cart/cart'
+                        })
+                        break;
+                    case 3006:
+                        app.toast({ title: '商品不支持配送' })
+                        break;
+                    case 3007:
+                        app.toast({ title: '商品库存不够' })
+                        break;
+                    default:
+                        app.toast({ title: '意料之外的网络错误' })
+                }
+
             }
         })
     },
@@ -168,6 +204,37 @@ Page({
                 })
             },
             error: function(code) {
+                switch (parseInt(code)) {
+                    case 3000:
+                        app.toast({ title: '不存在需要支付的订单' })
+                        break;
+                    case 3001:
+                        app.toast({ title: '订单号错误' })
+                        break;
+                    case 3002:
+                        app.toast({ title: '订单类型错误' })
+                        break;
+                    case 3004:
+                        app.toast({ title: '订单已取消' })
+                        break;
+                    case 3005:
+                        app.toast({ title: '订单已关闭' })
+                        break;
+                    case 3006:
+                        app.toast({ title: '订单已付款' })
+                        break;
+                    case 3007:
+                        app.toast({ title: '订单已过期' })
+                        break;
+                    case 3010:
+                        app.toast({ title: '支付失败' })
+                        wx.switchTab({
+                            url: '/pages/cart/cart'
+                        })
+                        break;
+                    default:
+                        app.toast({ title: '意料之外的网络错误' })
+                }
 
             }
         })
@@ -194,7 +261,7 @@ Page({
                 that.setData({
                     site: res.data || {}
                 })
-            }
+            },
         })
     },
     /**
@@ -238,9 +305,12 @@ Page({
                         break;
                     case 3005:
                         app.toast({ title: '商品未加入购物车' })
+                        wx.switchTab({
+                            url: '/pages/cart/cart'
+                        })
                         break;
                     case 3006:
-                        app.toast({ title: '商品不支持配送' })
+                        app.toast({ title: '该地区商品不支持配送' })
                         break;
                     case 3007:
                         app.toast({ title: '商品库存不够' })

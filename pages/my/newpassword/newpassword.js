@@ -18,7 +18,6 @@ Page({
      */
     inputwacth: function(e) {
         let item = e.currentTarget.dataset.model
-        let pa = /^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){4,19}$/
         this.setData({
             [item]: e.detail.value
         })
@@ -27,9 +26,16 @@ Page({
      * 获取短信验证码
      */
     getcode: function(e) {
-        console.log("huoqule")
-        let phone = parseInt(this.data.phone),
+        let phone = this.data.phone,
             that = this
+        if (phone == '') {
+            app.toast({ title: '请填写手机号码' })
+            return
+        }
+        if (phone.length > 11 || phone.length < 11) {
+            app.toast({ title: '请填写11位手机号码' })
+            return
+        }
         app.wxrequest({
             url: "index/user/sendvercode",
             data: {
@@ -38,7 +44,6 @@ Page({
             },
             success(res) {
                 that.timeOut()
-
             },
             error(res) {
                 if (res == 3004) {
@@ -58,6 +63,22 @@ Page({
         let phone = this.data.phone,
             code = this.data.code,
             newpass = this.data.newpass
+        if (phone == '') {
+            app.toast({ title: '请填写手机号码' })
+            return
+        }
+        if (phone.length > 11 || phone.length < 11) {
+            app.toast({ title: '请填写11位手机号码' })
+            return
+        }
+        if (code == '') {
+            app.toast({ title: '验证码不能为空' })
+            return
+        }
+        if (newpass == '') {
+            app.toast({ title: '密码不能为空' })
+            return
+        }
         app.wxrequest({
             url: "index/user/resetpassword",
             data: {
@@ -72,9 +93,7 @@ Page({
                 })
             },
             error(res) {
-                if (res == 3004) {
-                    app.toast({ title: '短信发送失败' })
-                } else if (res == 3001) {
+                if (res == 3001) {
                     app.toast({ title: '手机号码格式有误' })
                 } else if (res == 3003) {
                     app.toast({ title: '更新失败' })

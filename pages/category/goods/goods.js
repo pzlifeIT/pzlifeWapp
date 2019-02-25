@@ -30,7 +30,7 @@ Page({
         app.wxrequest({
             url: "index/goods/getCategoryGoods",
             data: { cate_id: id },
-            haveCom: false,
+            nocon: true,
             success(res) {
                 console.log(res)
                 that.setData({
@@ -50,6 +50,7 @@ Page({
         app.wxrequest({
             url: "index/goods/getSubjectGoods",
             data: { subject_id: id },
+            nocon: true,
             success(res) {
                 console.log(res)
                 that.setData({
