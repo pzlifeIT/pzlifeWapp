@@ -147,11 +147,12 @@ Page({
 				con_id: con_id,
 				goods_skuid: sku_id,
 				goods_num: -1,
-				parent_id: track_id
+				parent_id: app.globalData.pid
 			},
 			success(res) {
-				brokerage = brokerage - (brokerage / num)
+				brokerage = brokerage / num
 				num = num - 1
+				brokerage = brokerage * num
 				goods[goodsIndex].buy_num = num
 				goods[goodsIndex].brokerage = brokerage
 				valid[validIndex].goods = goods
@@ -208,11 +209,12 @@ Page({
 				con_id: con_id,
 				goods_skuid: sku_id,
 				goods_num: 1,
-				parent_id: track_id
+				parent_id: app.globalData.pid
 			},
 			success(res) {
-				brokerage = brokerage + (brokerage / num)
+				brokerage = brokerage / num
 				num = num + 1
+				brokerage = brokerage * num
 				goods[goodsIndex].buy_num = num
 				goods[goodsIndex].brokerage = brokerage
 				valid[validIndex].goods = goods
