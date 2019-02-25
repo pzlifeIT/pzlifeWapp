@@ -120,6 +120,7 @@ Page({
 				}
 			}
 		}
+		total = parseFloat(total.toFixed(2))
 		this.setData({
 			// valid:valid,
 			total: total
@@ -135,7 +136,8 @@ Page({
 			con_id = this.data.con_id,
 			sku_id = goods[goodsIndex].id,
 			track_id = goods[goodsIndex].track_id,
-			validIndex = e.currentTarget.dataset.validIndex //有效商品下标
+			validIndex = e.currentTarget.dataset.validIndex, //有效商品下标
+			brokerage = goods[goodsIndex].brokerage
 		if (num <= 1) {
 			return false
 		}
@@ -145,11 +147,14 @@ Page({
 				con_id: con_id,
 				goods_skuid: sku_id,
 				goods_num: -1,
-				track_id: track_id
+				parent_id: app.globalData.pid
 			},
 			success(res) {
+				brokerage = brokerage / num
 				num = num - 1
+				brokerage = brokerage * num
 				goods[goodsIndex].buy_num = num
+				goods[goodsIndex].brokerage = brokerage
 				valid[validIndex].goods = goods
 				that.setData({
 					valid: valid
@@ -187,7 +192,8 @@ Page({
 			sku_id = goods[goodsIndex].id,
 			track_id = goods[goodsIndex].track_id,
 			validIndex = e.currentTarget.dataset.validIndex, //有效商品下标
-			stock = goods[goodsIndex].stock
+			stock = goods[goodsIndex].stock,
+			brokerage = goods[goodsIndex].brokerage
 		// console.log(e)
 		// 		return
 		if (num >= stock) {
@@ -203,11 +209,14 @@ Page({
 				con_id: con_id,
 				goods_skuid: sku_id,
 				goods_num: 1,
-				track_id: track_id
+				parent_id: app.globalData.pid
 			},
 			success(res) {
+				brokerage = brokerage / num
 				num = num + 1
+				brokerage = brokerage * num
 				goods[goodsIndex].buy_num = num
+				goods[goodsIndex].brokerage = brokerage
 				valid[validIndex].goods = goods
 				that.setData({
 					valid: valid
@@ -414,6 +423,9 @@ Page({
 	 */
 	onShow: function() {
 		this.getStorage()
+		this.setData({
+			selectAll:true
+		})
 	},
 
 	/**

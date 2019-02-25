@@ -115,19 +115,33 @@ Page({
                 encrypteddata: encrypteddata,
                 iv: iv,
                 vercode: vercode,
-                code: code
+                code: code,
+                buid: app.globalData.pid
             },
             nocon: true,
             success(res) {
-                //登录完成后将con_id存入本地缓存
+                let pages = getCurrentPages();
+                let prevpage = pages[pages.length - 3]
+                let str = "pages/goods/detail"
+                console.log(pages)
+                console.log(prevpage)
+                    //登录完成后将con_id存入本地缓存
                 wx.setStorage({
-                    key: "con_id",
-                    data: res.con_id
-                })
+                        key: "con_id",
+                        data: res.con_id
+                    })
+                    //从商品详情页跳来的
+                if (prevpage.route == str) {
+                    wx.navigateBack({
+                        delta: pages.indexOf(prevpage)
+                    })
+                } else {
+                    console.log(123)
+                    wx.reLaunch({
+                        url: "/" + prevpage.route
+                    })
+                }
                 app.getconid()
-                wx.reLaunch({
-                    url: "/pages/index/index"
-                })
             },
             error(code) {
                 switch (parseInt(code)) {
@@ -163,6 +177,11 @@ Page({
      */
     onLoad: function(options) {
         this.getCode()
+        if (options.goodid) {
+            this.setData({
+                goodid: options.goodid
+            })
+        }
     },
 
     /**

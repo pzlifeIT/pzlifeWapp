@@ -11,7 +11,7 @@
 		<input class="input-captcha" type="number" placeholder="请输入验证码" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" value="{{code}}" data-model="code"/>
 		<button class="get-captcha" bindtap="getcode" disabled="{{disabled}}">{{getcode}}</button>
 	</view>
-  <navigator url='/pages/login/passLogin/passLogin' hover-class="none">
+  <navigator url='/pages/login/passLogin/passLogin' open-type="redirect" hover-class="none">
     <view class="checkout">密码登录</view>
   </navigator>
 	<button class="register" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>

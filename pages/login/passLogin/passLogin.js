@@ -7,7 +7,8 @@ Page({
      */
     data: {
         phone: "",
-        pass: ""
+        pass: "",
+        goodid: 0
     },
     /**
      * 获取输入的值
@@ -23,17 +24,31 @@ Page({
             password = this.data.pass
         app.wxrequest({
             url: "index/user/login",
-            data: { mobile: mobile, password: password },
+            data: { mobile: mobile, password: password, buid: app.globalData.pid },
             success(res) {
+                let pages = getCurrentPages();
+                let prevpage = pages[pages.length - 3]
+                let str = "pages/goods/detail"
+                console.log(pages)
+                console.log(prevpage)
+                console.log(pages.indexOf(prevpage))
+                console.log(prevpage.route)
                 wx.setStorage({
-                    key: "con_id",
-                    data: res.con_id
-                })
+                        key: "con_id",
+                        data: res.con_id
+                    })
+                    //从商品详情页跳来的
+                if (prevpage.route == str) {
+                    wx.navigateBack({
+                        delta: pages.indexOf(prevpage)
+                    })
+                } else {
+                    console.log(123)
+                    wx.reLaunch({
+                        url: "/" + prevpage.route
+                    })
+                }
                 app.getconid()
-                wx.reLaunch({
-                    url: "/pages/index/index"
-                })
-
             },
             fail(res) {
 

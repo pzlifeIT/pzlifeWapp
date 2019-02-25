@@ -216,7 +216,7 @@ Page({
                         content: "是否确定去登录",
                         success: function() {
                             wx.navigateTo({
-                                url: "/pages/login/login"
+                                url: "/pages/login/login?goodid"+that.data.goodid
                             })
                         },
                         cancel: function() {
