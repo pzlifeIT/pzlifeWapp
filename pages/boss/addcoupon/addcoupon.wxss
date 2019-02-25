@@ -75,3 +75,66 @@ page{
 	width: 100%;
 	text-align: center;
 }
+.right-nei{
+	margin-left: 36rpx;
+	margin-top: 34rpx;
+}
+.title{
+	color: #E61F18;
+	font-size: 30rpx;
+}
+.subtitle,.time{
+	color: #888;
+	font-size: 24rpx;
+	margin-top: 12rpx;
+}
+.setting{
+
+}
+.coupon-title{
+	width: 750rpx;
+	height: 120rpx;
+	background: #fff;
+}
+.title-text{
+	height: 120rpx;
+	line-height: 120rpx;
+	color: #202020;
+	font-size: 30rpx;
+	margin-left: 20rpx;
+	display: inline-block;
+}
+.input{
+	width: 420rpx;
+	height: 120rpx;
+	float: right;
+	margin-right: 20rpx;
+	position: relative;
+}
+.input input{
+	width: 412rpx;
+	height: 80rpx;
+	color: #404040;
+	font-size: 28rpx;
+	border: 1rpx solid #B6B6B6;
+	border-radius: 10rpx;
+	margin-top: 20rpx;
+	padding-left: 8rpx;
+}
+.input picker{
+	display: inline-block;
+	position: absolute;
+	right: 20rpx;
+	top: 40rpx;
+	height: 42rpx;
+	width: 42rpx;
+	z-index: 555;
+}
+.input picker image{
+	width: 42rpx;
+	height: 42rpx;
+}
+
+
+
+

@@ -97,7 +97,8 @@ Page({
                 encrypteddata: encrypteddata,
                 iv: iv,
                 vercode: vercode,
-                code: code
+                code: code,
+				buid:app.globalData.pid
             },
             nocon: true,
             success(res) {

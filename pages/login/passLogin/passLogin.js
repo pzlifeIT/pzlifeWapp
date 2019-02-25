@@ -23,7 +23,7 @@ Page({
             password = this.data.pass
         app.wxrequest({
             url: "index/user/login",
-            data: { mobile: mobile, password: password },
+            data: { mobile: mobile, password: password, buid:app.globalData.pid },
             success(res) {
                 wx.setStorage({
                     key: "con_id",

@@ -8,8 +8,46 @@
 			<view class="rule">满39元使用</view>
 		</view>
 		<view class="right">
-			<view class="left-top"></view>
-			<view class="left-bottom"></view>
+			<view class="right-nei">
+				<view class="title">新人专属优惠券</view>
+				<view class="subtitle">仅限“猫山榴莲王”使用</view>
+				<view class="time">有效期：2018.09.01-2019.03.01</view>
+				<view class="left-top"></view>
+				<view class="left-bottom"></view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="setting">
+	<view class="coupon-title">
+		<view class="title-text">优惠券名称:</view>
+		<view class="input">
+			<input type="text"  placeholder="输入优惠券名称"/>
+		</view>
+	</view>
+	<view class="coupon-title">
+		<view class="title-text">使用范围:</view>
+		<view class="input">
+			<input type="text"  placeholder="输入使用范围"/>
+		</view>
+	</view>
+	<view class="coupon-title">
+		<view class="title-text">开始时间:</view>
+		<view class="input">
+			<input type="text"  placeholder="开始时间" disabled="true"/>
+			<picker mode="date" start="1870-01-01" end="2019-12-31" bindchange="selectData">
+				<image src="../../images/images/date.png"></image>
+			</picker>
+		</view>
+	</view>
+	<view class="coupon-title">
+		<view class="title-text">结束时间:</view>
+		<view class="input">
+			<input type="text"  placeholder="结束时间" disabled="true"/>
+			<picker mode="date" start="1870-01-01" end="2019-12-31" bindchange="selectData">
+				<image src="../../images/images/date.png"></image>
+			</picker>
 		</view>
 	</view>
 </view>

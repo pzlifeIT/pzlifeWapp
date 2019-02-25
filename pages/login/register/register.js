@@ -115,7 +115,8 @@ Page({
                 iv: iv,
                 vercode: vercode,
                 password: password,
-                code: code
+                code: code,
+				buid:app.globalData.pid
             },
             success(res) {
                 app.toast({
