@@ -25,13 +25,15 @@ Page({
             url: "index/user/login",
             data: { mobile: mobile, password: password, buid:app.globalData.pid },
             success(res) {
+				let pages = getCurrentPages();
+				let prevpage = pages[pages.length - 3]
                 wx.setStorage({
                     key: "con_id",
                     data: res.con_id
                 })
-                wx.reLaunch({
-                    url: "/pages/index/index"
-                })
+                wx.navigateBack({
+                	delta:prevpage
+                });
                 app.getconid()
             },
             fail(res) {

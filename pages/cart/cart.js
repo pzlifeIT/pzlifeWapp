@@ -147,7 +147,7 @@ Page({
 				con_id: con_id,
 				goods_skuid: sku_id,
 				goods_num: -1,
-				track_id: track_id
+				parent_id: track_id
 			},
 			success(res) {
 				brokerage = brokerage - (brokerage / num)
@@ -181,16 +181,6 @@ Page({
 			}
 		})
 	},
-	cart:function(num,goods,goodsIndex,validIndex){
-		let that =this,
-			valid = this.data.valid,
-			con_id = this.data.con_id,
-			buy_num = goods[goodsIndex].buy_num,
-			sku_id = goods[goodsIndex].id,
-			track_id = goods[goodsIndex].track_id,
-			stock = goods[goodsIndex].stock,
-			brokerage = goods[goodsIndex].brokerage
-	},
 	jia: function(e) {
 		let that = this
 		const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标
@@ -218,7 +208,7 @@ Page({
 				con_id: con_id,
 				goods_skuid: sku_id,
 				goods_num: 1,
-				track_id: track_id
+				parent_id: track_id
 			},
 			success(res) {
 				brokerage = brokerage + (brokerage / num)

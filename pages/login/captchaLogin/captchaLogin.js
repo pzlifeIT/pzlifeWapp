@@ -102,15 +102,18 @@ Page({
             },
             nocon: true,
             success(res) {
-                console.log(res)
+				let pages = getCurrentPages();
+				let prevpage = pages[pages.length - 3]
+				console.log(pages)
+				console.log(prevpage)
                     //登录完成后将con_id存入本地缓存
                 wx.setStorage({
                     key: "con_id",
                     data: res.con_id
                 })
-                wx.reLaunch({
-                    url: "/pages/index/index"
-                })
+                wx.navigateBack({
+                	delta:prevpage
+                });
                 app.getconid()
             },
             error(res) {

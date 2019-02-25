@@ -50,4 +50,24 @@
 			</picker>
 		</view>
 	</view>
+	<view class="coupon-title vigor">
+		<view class="title-text">优惠力度:</view>
+		<view class="input you">
+			<view class="man">满</view>
+			<input type="text"  placeholder="元"/>
+			<view class="jian">减</view>
+			<input type="text" placeholder="元" />
+		</view>
+		<view  class="hint">优惠券最高金额请勿超过毛利</view>
+	</view>
+	<view class="coupon-title">
+		<view class="title-text">发放数量:</view>
+		<view class="input grant">
+			<input type="number" />
+		</view>
+	</view>
+</view>
+<view class="footer">
+	<view class="footer-left">取消</view>
+	<view class="footer-right">保存</view>
 </view>

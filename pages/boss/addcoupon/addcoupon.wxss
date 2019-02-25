@@ -95,6 +95,7 @@ page{
 	width: 750rpx;
 	height: 120rpx;
 	background: #fff;
+	margin-bottom: 1rpx;
 }
 .title-text{
 	height: 120rpx;
@@ -134,7 +135,62 @@ page{
 	width: 42rpx;
 	height: 42rpx;
 }
-
-
-
-
+.vigor{
+	height: 136rpx;
+}
+.vigor input{
+	width: 120rpx;
+	height: 80rpx;
+	display: inline-block;
+	margin: 0;
+	float: right;
+	margin-right: 8rpx;
+}
+.man,.jian{
+	color: #404040;
+	font-size: 30rpx;
+	display: inline-block;
+	float: right;
+	margin-right: 8rpx;
+}
+.vigor .title-text{
+	height: 90rpx;
+}
+.you{
+	display: flex;
+	align-items: center;
+	width: 316rpx;
+}
+.hint{
+	color: #E61F18;
+	font-size: 24rpx;
+	width: 311rpx;
+	margin-left: 20rpx;
+}
+.grant input{
+	width: 120rpx;
+	float: right;
+}
+.footer{
+	width: 750rpx;
+	height: 92rpx;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.footer-left,.footer-right{
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	line-height: 92rpx;
+	font-size: 28rpx;
+	display: inline-block;
+}
+.footer-left{
+	color: #202020;
+	background: #FFFFFF;
+}
+.footer-right{
+	color: #FFFFFF;
+	background: #E61F18;
+}
