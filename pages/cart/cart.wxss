@@ -16,6 +16,7 @@ radio {
     /* background-color: #ffffff; */
     float: left;
     margin-top: 9rpx;
+	margin-bottom: 90rpx;
 }
 
 .shop_name {
