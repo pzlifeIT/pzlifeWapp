@@ -13,33 +13,35 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        let cate_id = options.cate_id
+        let search = options.search
         let sub_id = options.sub_id
-        if (cate_id) {
-            this.getCateGoodsList(cate_id)
-        }
         if (sub_id) {
             this.getSubGoodsList(sub_id)
-        }
+        } else if(search){
+			this.getSearchGoods(search)
+		}
+		
     },
     /**
      * 获取分类商品列表
      */
-    getCateGoodsList: function(id) {
-        let that = this
+    getSearchGoods: function(search) {
+		let that = this
         app.wxrequest({
-            url: "index/goods/getCategoryGoods",
-            data: { cate_id: id },
-            nocon: true,
-            success(res) {
-                console.log(res)
-                that.setData({
-                    goodsList: res.data
-                })
-            },
-            error(res) {
-                console.log(res)
-            }
+        	url:"index/goods/getSearchGoods",
+        	data:{search:search},
+        	 nocon: true,
+        	success(res){
+        		that.setData({
+					goodsList:res.goods_data
+				})
+        	},
+        	error(res){
+        		
+        	},
+        	fail(res){
+        		
+        	}
         })
     },
     /**
