@@ -7,7 +7,7 @@
 		<input class="input-phone" type="number" placeholder="请输入手机号" maxlength="11" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="phone" />
 	</view>
 	<view class="phone">
-		<input class="input-captcha" type="number" placeholder="请输入密码" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="pass" />
+		<input class="input-captcha" type="password" placeholder="请输入密码" placeholder-class="input-place" adjust-position="true" bindinput="inputwacth" data-model="pass" />
 	</view>
   <navigator url='/pages/login/captchaLogin/captchaLogin' open-type="redirect" hover-class="none" >
     <view class="checkout">验证码登录</view>

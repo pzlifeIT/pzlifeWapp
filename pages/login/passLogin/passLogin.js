@@ -25,14 +25,11 @@ Page({
         app.wxrequest({
             url: "index/user/login",
             data: { mobile: mobile, password: password, buid: app.globalData.pid },
+			nocon:true,
             success(res) {
                 let pages = getCurrentPages();
                 let prevpage = pages[pages.length - 3]
                 let str = "pages/goods/detail"
-                console.log(pages)
-                console.log(prevpage)
-                console.log(pages.indexOf(prevpage))
-                console.log(prevpage.route)
                 wx.setStorage({
                         key: "con_id",
                         data: res.con_id

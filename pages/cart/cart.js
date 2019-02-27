@@ -150,11 +150,11 @@ Page({
 				parent_id: app.globalData.pid
 			},
 			success(res) {
-				brokerage = brokerage / num
+				brokerage =parseFloat(brokerage / num) 
 				num = num - 1
-				brokerage = brokerage * num
+				brokerage =parseFloat(brokerage * num) 
 				goods[goodsIndex].buy_num = num
-				goods[goodsIndex].brokerage = brokerage
+				goods[goodsIndex].brokerage =parseFloat(brokerage.toFixed(2)) 
 				valid[validIndex].goods = goods
 				that.setData({
 					valid: valid
@@ -212,11 +212,11 @@ Page({
 				parent_id: app.globalData.pid
 			},
 			success(res) {
-				brokerage = brokerage / num
+				brokerage =parseFloat(brokerage / num) 
 				num = num + 1
-				brokerage = brokerage * num
+				brokerage =parseFloat(brokerage * num) 
 				goods[goodsIndex].buy_num = num
-				goods[goodsIndex].brokerage = brokerage
+				goods[goodsIndex].brokerage =parseFloat(brokerage.toFixed(2)) 
 				valid[validIndex].goods = goods
 				that.setData({
 					valid: valid

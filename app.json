@@ -30,7 +30,9 @@
         "pages/coupon/getcoupon/getcoupon",
         "pages/boss/boss",
         "pages/boss/addcoupon/addcoupon",
-        "pages/activity/activity"
+        "pages/activity/activity",
+        "pages/activity/buyvip/buyvip",
+        "pages/activity/getvip/getvip"
     ],
     "window": {
         "backgroundTextStyle": "dark",

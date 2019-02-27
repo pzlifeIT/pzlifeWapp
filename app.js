@@ -14,12 +14,14 @@ App({
     },
     getconid: function() {
         let that = this
+		console.log("执行了")
         wx.getStorage({
             key: "con_id",
             success(res) {
                 that.globalData.con_id = res.data
             }
-        })
+        });
+		console.log(that.globalData.con_id)
     },
     toast: function(data) {
         wx.showToast({

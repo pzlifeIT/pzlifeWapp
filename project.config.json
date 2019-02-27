@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 22,
+			"current": 24,
 			"list": [
 				{
 					"id": 0,
@@ -186,6 +186,20 @@
 					"id": -1,
 					"name": "新建优惠券",
 					"pathName": "pages/boss/addcoupon/addcoupon",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动",
+					"pathName": "pages/activity/activity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购买钻石会员",
+					"pathName": "pages/activity/buyvip/buyvip",
 					"scene": null
 				}
 			]

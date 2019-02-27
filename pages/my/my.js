@@ -85,6 +85,15 @@ Page({
             app.toast({ title: "请先登录" })
         }
     },
+	activity: function(e) {
+	    if (this.data.con_id) {
+	        wx.navigateTo({
+	            url: "/pages/activity/activity?ident=" + this.data.userInfo.user_identity
+	        })
+	    } else {
+	        app.toast({ title: "请先登录" })
+	    }
+	},
     myQr: function() {
         if (this.data.con_id) {
             wx.navigateTo({
