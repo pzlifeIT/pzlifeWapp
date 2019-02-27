@@ -28,13 +28,13 @@
   <view wx:for="{{datalist}}" >
     <view class="s-name" ><image class="icon-img fl" src="{{item.image}}" /> <text >{{item.name}}</text> </view>
     <view wx:for="{{item.shop_list}}" >
-      <view class="s-name"><image class="icon-img fl" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKaDzYXdWR9qicAo8ICyp17XOtZQy2lkTkpYqg3hWAjicMmVSTKFsKYiarWllK0wG7YM6hnib1yP1E1jw/132?imageMogr2/thumbnail/120x" /> <text >{{item.shop_name}}</text>店铺名称</view>
+      <view class="s-name"><image class="icon-img fl" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKaDzYXdWR9qicAo8ICyp17XOtZQy2lkTkpYqg3hWAjicMmVSTKFsKYiarWllK0wG7YM6hnib1yP1E1jw/132?imageMogr2/thumbnail/120x" /> <text >{{item.shop_name}}</text></view>
       <view wx:for="{{item.goods_list}}" >
         <view class='goods_info' >
           <view class='goods_img'><image src='{{item.sku_image}}'></image></view>
           <view class='goods_detail'>
             <text class='goods_title'>{{item.goods_name}}</text>
-            <text class='goods_subtitle'>{{item.subtitle}}</text>
+            <text class='goods_subtitle'>{{item.attr}}</text>
             <text class='price'>￥{{item.retail_price}}</text>
           </view>
           <view class='sum'>x{{item.buySum}}</view>

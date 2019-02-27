@@ -29,14 +29,8 @@ Page({
                 let pages = getCurrentPages();
                 let prevpage = pages[pages.length - 3]
                 let str = "pages/goods/detail"
-                console.log(pages)
-                console.log(prevpage)
-                console.log(pages.indexOf(prevpage))
-                console.log(prevpage.route)
-                wx.setStorage({
-                        key: "con_id",
-                        data: res.con_id
-                    })
+
+                app.setconid(res.con_id)
                     //从商品详情页跳来的
                 if (prevpage.route == str) {
                     wx.navigateBack({
@@ -48,7 +42,6 @@ Page({
                         url: "/" + prevpage.route
                     })
                 }
-                app.getconid()
             },
             fail(res) {
 

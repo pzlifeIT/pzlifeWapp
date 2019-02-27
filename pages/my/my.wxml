@@ -61,7 +61,7 @@
       <image class="uoIcon" src="../images/images/444_05.png" />
       <text class="userText" >待收货</text>
     </view>
-    <view class="uoLi"  bindtap="checkOrder" data-status="7">
+    <view class="uoLi"  bindtap="checkOrder" data-status="6">
       <image class="uoIcon" src="../images/images/444_14.png" />
       <text class="userText" >待评价</text>
     </view>

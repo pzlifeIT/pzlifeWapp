@@ -1,5 +1,5 @@
 {
-    "pages": [      
+    "pages": [  
         "pages/index/index",
         "pages/category/category",
         "pages/logs/logs",
@@ -13,6 +13,7 @@
         "pages/order/orderDetail/orderDetail",
         "pages/order/order",
         "pages/order/logisticsInfo/logisticsInfo",
+        "pages/order/logisticslist/logisticslist",
         "pages/login/login",
         "pages/login/register/register",
         "pages/login/captchaLogin/captchaLogin",
@@ -29,8 +30,7 @@
         "pages/my/case/grantcase/grantcase",
         "pages/coupon/getcoupon/getcoupon",
         "pages/boss/boss",
-        "pages/boss/addcoupon/addcoupon",
-        "pages/activity/activity"
+        "pages/boss/addcoupon/addcoupon"
     ],
     "window": {
         "backgroundTextStyle": "dark",

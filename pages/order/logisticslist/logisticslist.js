@@ -1,16 +1,14 @@
-// pages/comfirOrder/address/address.js
-const app = getApp();
+// pages/order/logisticslist/logisticslist.js
+const app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        siteid: '',
-        skus: '',
-        address: [],
-        num: 1,
-        quick: false
+        num: 0,
+        order_no: '',
+        order_subpackage: []
     },
 
     /**
@@ -18,32 +16,21 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
-                siteid: options.siteid,
-                skus: options.skus,
-                quick: options.quick,
-                num: options.num
-            })
-            // this.getUserAddress()
-    },
-    setsite: function(e) {
-        console.log(e.currentTarget.dataset)
-        wx.redirectTo({
-            url: '../comfirOrder?skus=' + this.data.skus + '&siteid=' + e.currentTarget.dataset.id + '&num=' + this.data.num + '&quick=' + this.data.quick
+            order_no: options.orderno
         })
+        this.getOrderSubpackage(options.orderno)
     },
-    /**
-     * 获取所有用户地址接口
-     */
-    getUserAddress: function() {
+    getOrderSubpackage: function(orderno) {
         let that = this
         app.wxrequest({
-            url: 'index/user/getUserAddress',
+            url: 'index/order/getOrderSubpackage',
             data: {
-                address_id: ''
+                order_no: orderno
             },
             success: function(res) {
                 that.setData({
-                    address: res.data || []
+                    num: res.package_num,
+                    order_subpackage: res.order_subpackage || []
                 })
             }
         })
@@ -59,7 +46,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-        this.getUserAddress()
+
     },
 
     /**
