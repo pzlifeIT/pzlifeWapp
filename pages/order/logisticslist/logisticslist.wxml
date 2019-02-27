@@ -1,0 +1,16 @@
+<!--pages/order/logisticslist/logisticslist.wxml-->
+<view class="ll-header" >以下商品被拆成{{num}}个包裹</view>
+
+<view class="ll-info" wx:for="{{order_subpackage}}" >
+  <view class="ll-sub-head" >
+    <text class="ll-number" >{{item.express_name}}：{{item.express_no}}</text>
+    <view class="ll-btn fr" data-express="{{item.express_no}}">查看物流详情</view>
+  </view>
+  <view class="ll-good" wx:for="{{item.express_goods}}" >
+    <view class="ll-good-img din fl" ><image src="" /></view>
+    <view class="ll-good-info din fl" >
+      <text class="db ll-good-name" >{{item.goods_name}}</text>
+      <text class="db ll-good-tit" >{{item.sku_json}}</text>
+    </view>
+  </view>
+</view>
