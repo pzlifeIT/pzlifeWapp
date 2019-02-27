@@ -164,8 +164,13 @@ Page({
             })
             return
         }
-        wx.navigateTo({
-            url: "/pages/comfirOrder/comfirOrder?skus=" + this.data.goodData.id + '&num=' + this.data.buyNum + '&quick=' + 1
+        let that = this
+        app.judgelogin({
+            success(res) {
+                wx.navigateTo({
+                    url: "/pages/comfirOrder/comfirOrder?skus=" + that.data.goodData.id + '&num=' + that.data.buyNum + '&quick=' + 1
+                })
+            }
         })
     },
     joinCart: function() {
@@ -221,7 +226,6 @@ Page({
             goodid: options.goodid
         })
         this.getGoodInfo(this.data.goodid)
-        app.getconid()
     },
     /**
      * 获取商品详情

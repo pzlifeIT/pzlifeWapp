@@ -145,6 +145,7 @@ Page({
                 app.toast({
                     title: '注册成功'
                 })
+                app.setconid(res.con_id)
             },
             error(res) {
                 if (res == 3001) {

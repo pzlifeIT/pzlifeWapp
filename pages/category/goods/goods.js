@@ -16,8 +16,8 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        let search = options.search
-        let sub_id = options.sub_id
+        let search = options.search,
+            sub_id = options.sub_id
         if (sub_id) {
             this.getSubGoodsList(sub_id)
         } else if (search) {
@@ -50,12 +50,12 @@ Page({
     /**
      * 获取专题商品
      */
-    getSubGoodsList: function(data) {
+    getSubGoodsList: function(sub_id) {
         let that = this
         app.wxrequest({
             url: "index/goods/getSubjectGoods",
             data: {
-                subject_id: data.sub_id,
+                subject_id: sub_id,
                 page: that.data.page || 1,
                 page_num: that.data.page_num || 10
             },

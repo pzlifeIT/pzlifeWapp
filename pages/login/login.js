@@ -19,14 +19,11 @@ Page({
                         success(res) {
                             let pages = getCurrentPages();
                             let prevpage = pages[pages.length - 2]
-                            wx.setStorage({
-                                key: "con_id",
-                                data: res.con_id
-                            });
+                            app.setconid(res.con_id)
                             wx.navigateBack({
                                 delta: prevpage
                             });
-                            app.getconid()
+
                         },
                         error(res) {
                             if (res.code == 3000 || res.code == 3002) {

@@ -18,10 +18,16 @@ App({
         wx.getStorage({
             key: "con_id",
             success(res) {
-                console.log(res)
                 that.globalData.con_id = res.data
             }
         })
+    },
+    setconid: function(conid) {
+        wx.setStorage({
+            key: "con_id",
+            data: conid
+        })
+        this.globalData.con_id = conid
     },
     toast: function(data) {
         wx.showToast({
@@ -31,9 +37,10 @@ App({
         })
     },
     share: function(data) {
+
         let sharejson = {
             title: data.title || '品质生活商城',
-            path: data.path || '/page/index/index?pid=',
+            path: data.path || '/page/index/index?pid=' + this.globalData.pid,
             imageUrl: data.imageUrl,
             success: function(shareTickets) {
 
@@ -56,6 +63,14 @@ App({
         })
         return logincode
     },
+    judgelogin: function(data) {
+        this.wxrequest({
+            url: "index/user/getuser",
+            success(res) {
+                typeof obj.success == 'function' ? obj.success(res) : ''
+            }
+        })
+    },
     indexmain: function(id) {
         console.log(this.globalData.con_id)
         this.wxrequest({
@@ -63,9 +78,8 @@ App({
             data: {
                 buid: id
             },
-            success: function(res) {
-
-            }
+            indexmain: true,
+            success: function(res) {}
         })
     },
     modal: function(data) {
@@ -82,19 +96,32 @@ App({
                 }
             }
         })
-
+    },
+    login: function() {
+        this.modal({
+            title: "请先登录",
+            content: "是否确定去登录",
+            success() {
+                wx.navigateTo({
+                    url: "/pages/login/login"
+                })
+            }
+        })
     },
     wxrequest: function(obj) {
         let that = this
         obj.data = obj.data || {}
         if (!obj.nocon) {
             if (that.globalData.con_id == '') {
-                console.log('con_id为空')
+                if (obj.indexmain) return
+                that.login()
                 return
             }
             obj.data.con_id = that.globalData.con_id
         }
-        wx.showLoading({ title: '加载中' })
+        if (!obj.noloading) {
+            wx.showLoading({ title: '加载中' })
+        }
         wx.request({
             url: 'http://wwwapi.pzlife.vip/' + obj.url,
             data: obj.data || {},
@@ -114,13 +141,7 @@ App({
                     } else {
                         if (typeof obj.error == 'function') {
                             if (result.code == 5000) {
-                                that.modal({
-                                    success() {
-                                        wx.navigateTo({
-                                            url: "/pages/login/login"
-                                        })
-                                    }
-                                })
+                                that.login()
                             } else {
                                 obj.error(result.code)
                             }
