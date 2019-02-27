@@ -6,6 +6,9 @@ Page({
      * 页面的初始数据
      */
     data: {
+        sub_id: '',
+        page: 1,
+        reach: true,
         goodsList: [],
     },
 
@@ -13,13 +16,15 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        let cate_id = options.cate_id
-        let sub_id = options.sub_id
-        if (cate_id) {
-            this.getCateGoodsList(cate_id)
-        }
+        let cate_id = options.cate_id,
+            sub_id = options.sub_id
+        this.setData({
+            sub_id: sub_id
+        })
         if (sub_id) {
-            this.getSubGoodsList(sub_id)
+            this.getSubGoodsList({
+                sub_id: sub_id
+            })
         }
     },
     /**
@@ -45,20 +50,33 @@ Page({
     /**
      * 获取专题商品
      */
-    getSubGoodsList: function(id) {
+    getSubGoodsList: function(data) {
         let that = this
         app.wxrequest({
             url: "index/goods/getSubjectGoods",
-            data: { subject_id: id },
+            data: {
+                subject_id: data.sub_id,
+                page: that.data.page || 1,
+                page_num: that.data.page_num || 10
+            },
             nocon: true,
             success(res) {
-                console.log(res)
-                that.setData({
-                    goodsList: res.data
-                })
+                if (res.data.length < 10) {
+                    that.setData({
+                        reach: false
+                    })
+                }
+                if (res.data.length > 0) {
+                    let goodsList = that.data.goodsList
+                    goodsList.push(res.data)
+                    that.setData({
+                        goodsList: goodsList,
+                        page: that.data.page + 1
+                    })
+                }
             },
-            error(res) {
-                console.log(res)
+            error(code) {
+                console.log(code)
             }
         })
     },
@@ -101,7 +119,10 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function() {
-
+        if (!this.data.reach) return
+        this.getSubGoodsList({
+            sub_id: this.data.sub_id
+        })
     },
 
     /**

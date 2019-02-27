@@ -26,6 +26,13 @@ Page({
             mask: false
         })
     },
+    gologistics: function(e) {
+        let that = this,
+            orderno = e.currentTarget.dataset.orderno
+        wx.navigateTo({
+            url: '/pages/order/logisticslist/logisticslist?orderno=' + orderno
+        })
+    },
     headtap: function(e) {
         let n = e.currentTarget.dataset.num
         this.setData({
@@ -36,6 +43,26 @@ Page({
         })
         this.getUserOrderList({
             orderStatus: n
+        })
+    },
+    confirmOrder: function(e) {
+        let that = this
+        let orderno = e.currentTarget.dataset.orderno
+        app.wxrequest({
+            url: 'index/order/confirmOrder',
+            data: {
+                order_no: orderno
+            },
+            success: function(res) {
+                that.setData({
+                    page: 1,
+                    reach: true,
+                    order_list: []
+                })
+                that.getUserOrderList({
+                    orderStatus: that.data.status
+                })
+            }
         })
     },
     /**
@@ -177,7 +204,7 @@ Page({
                     arr[i].order_status_text = '已发货'
                     break;
                 case 6:
-                    arr[i].order_status_text = '已收货'
+                    arr[i].order_status_text = '待评价'
                     break;
                 case 7:
                     arr[i].order_status_text = '待评价'
@@ -271,7 +298,6 @@ Page({
                 page: this.data.page
             })
         }
-
     },
 
     /**

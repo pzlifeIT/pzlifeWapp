@@ -5,7 +5,7 @@
     <view class="or-head-li {{status == 1?'active':''}}" bindtap="headtap" data-num="1">待付款</view>
     <view class="or-head-li {{status == 4?'active':''}}" bindtap="headtap" data-num="4">待发货</view>
     <view class="or-head-li {{status == 5?'active':''}}" bindtap="headtap" data-num="5">待收货</view>
-    <view class="or-head-li {{status == 7?'active':''}}" bindtap="headtap" data-num="7">待评价</view>
+    <view class="or-head-li {{status == 6?'active':''}}" bindtap="headtap" data-num="6">待评价</view>
     <i class="wire"><s></s></i>
 </view>
 <view class="top"></view>
@@ -20,15 +20,15 @@
 <!-- 订单 -->
 <view wx:for="{{order_list}}">
 
-<view class='obligation' wx:for="{{item}}" >
-  <view class='order-number'><text class='number'>订单号：{{item.order_no}}</text>
-    <text class='status'>{{item.order_status_text}}</text>
+<view class='obligation' wx:for="{{item}}"  wx:for-item="item1">
+  <view class='order-number'><text class='number'>订单号：{{item1.order_no}}</text>
+    <text class='status'>{{item1.order_status_text}}</text>
   </view>
-  <view class="" wx:for="{{item.order_child}}" >
-  <navigator wx:for="{{item.order_goods}}" url='/pages/order/orderDetail/orderDetail'>
+  <view class="" wx:for="{{item1.order_child}}" >
+  <navigator wx:for="{{item.order_goods}}" url='/pages/order/orderDetail/orderDetail?orderno={{item1.order_no}}'>
     <view class='one-goods'>
       <view class="goods-wai">
-        <view class='goods-image'><image src=''></image></view>
+        <view class='goods-image'><image src='{{item.sku_image}}'></image></view>
         <view class='goods-info'>
           <text class='goods-title'>{{item.goods_name}}</text>
           <text class='goods-subtitle'>{{item.sku_json}}</text>
@@ -42,17 +42,18 @@
   </navigator>
   </view>
 	<view class="jf">
-		<text class="jf-text">送积分</text><text class="jf-num">20</text>
+		<text class="jf-text">送积分</text><text class="jf-num">{{item1.integral}}</text>
 	</view>
 	<view class="jf">
-		<text class="jf-text">含运费</text><text class="jf-num">￥{{item.express_money}}</text>
+		<text class="jf-text">含运费</text><text class="jf-num">￥{{item1.express_money}}</text>
 	</view>
 	<view class="or-footer">
-		<view class="footer-left"><text class="sum">共付：<text class="total">￥{{item.pay_money}}</text></text></view>
+		<view class="footer-left"><text class="sum">共付：<text class="total">￥{{item1.pay_money}}</text></text></view>
 		<view class="footer-right">
-			<view bindtap="gopay" data-orderno="{{item.order_no}}" class="or-btn red" wx:if="{{item.order_status == 1}}">去付款</view>
-      <view bindtap="cancelorder" data-orderno="{{item.order_no}}" class="or-btn black" wx:if="{{item.order_status == 1}}">取消订单</view>
-      <view bindtap="" data-orderno="{{item.order_no}}" class="or-btn black" wx:if="{{item.order_status == 5}}">查看物流</view>
+			<view bindtap="gopay" data-orderno="{{item1.order_no}}" class="or-btn red" wx:if="{{item1.order_status == 1}}">去付款</view>
+      <view bindtap="cancelorder" data-orderno="{{item1.order_no}}" class="or-btn black" wx:if="{{item1.order_status == 1}}">取消订单</view>
+      <view bindtap="gologistics" data-orderno="{{item1.order_no}}" class="or-btn black" wx:if="{{item1.order_status == 5 || item1.order_status == 6}}">查看物流</view>
+      <view bindtap="confirmOrder" data-orderno="{{item1.order_no}}" class="or-btn red" wx:if="{{item1.order_status == 5}}">确认收货</view>
 		</view>
 	</view>
 </view>

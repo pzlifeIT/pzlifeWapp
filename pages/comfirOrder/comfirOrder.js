@@ -15,10 +15,9 @@ Page({
         site: {},
         buypup: false,
         paytype: 0,
-        paymoney: {}
-    },
-    maopao: function(e) {
-
+        paymoney: {},
+        num: 1,
+        quick: 0
     },
     hideModel: function(e) {
         this.setData({
@@ -72,11 +71,11 @@ Page({
             app.toast({ title: '请选择地址' })
             return
         }
-        this.createorder({
-            sku_id_list: this.data.skus,
-            user_address_id: this.data.siteid,
-            pay_type: this.data.paytype
-        })
+        if (this.data.quick == 1) {
+            this.quickcreateorder()
+        } else {
+            this.createorder()
+        }
     },
     showaddres: function(e) {
         if (!this.data.siteid) {
@@ -100,10 +99,10 @@ Page({
     onLoad: function(options) {
         this.setData({
             skus: options.skus,
-            siteid: options.siteid || ''
+            siteid: options.siteid || '',
+            num: options.num || 1,
+            quick: options.quick || 0
         })
-        console.log(this.data.skus)
-
     },
     /**
      * 创建订单接口
@@ -113,21 +112,19 @@ Page({
         app.wxrequest({
             url: 'index/order/createorder',
             data: {
-                sku_id_list: data.sku_id_list,
-                user_address_id: data.user_address_id,
-                pay_type: data.pay_type
+                sku_id_list: that.data.skus,
+                user_address_id: that.data.siteid,
+                pay_type: that.data.paytype
             },
             success: function(res) {
-                if (res.is_pay == '1') {
+                if (res.is_pay == 1) {
                     that.gopaystatus({
                         order_no: res.order_no,
                         status: 1
                     })
                 } else {
                     that.pay({
-                        order_no: res.order_no,
-                        payment: '1',
-                        platform: '1'
+                        order_no: res.order_no
                     })
                 }
 
@@ -150,7 +147,7 @@ Page({
                         })
                         break;
                     case 3006:
-                        app.toast({ title: '商品不支持配送' })
+                        app.toast({ title: '该地区商品不支持配送' })
                         break;
                     case 3007:
                         app.toast({ title: '商品库存不够' })
@@ -159,6 +156,52 @@ Page({
                         app.toast({ title: '意料之外的网络错误' })
                 }
 
+            }
+        })
+    },
+    quickcreateorder: function(data) {
+        let that = this
+        app.wxrequest({
+            url: 'index/order/quickcreateorder',
+            data: {
+                buid: app.globalData.pid,
+                sku_id: that.data.skus,
+                user_address_id: that.data.siteid,
+                pay_type: that.data.paytype,
+                num: that.data.num
+            },
+            success: function(res) {
+                if (res.is_pay == 1) {
+                    that.gopaystatus({
+                        order_no: res.order_no,
+                        status: 1
+                    })
+                } else {
+                    that.pay({
+                        order_no: res.order_no
+                    })
+                }
+            },
+            error(code) {
+                switch (parseInt(code)) {
+                    case 3000:
+                    case 3001:
+                    case 3002:
+                    case 3003:
+                        app.toast({ title: '商品信息出错' })
+                        break;
+                    case 3004:
+                        app.toast({ title: '商品已售完' })
+                        break;
+                    case 3006:
+                        app.toast({ title: '该地区商品不支持配送' })
+                        break;
+                    case 3007:
+                        app.toast({ title: '商品库存不够' })
+                        break;
+                    default:
+                        app.toast({ title: '意料之外的网络错误' })
+                }
             }
         })
     },
@@ -177,8 +220,8 @@ Page({
             url: 'pay/pay/pay',
             data: {
                 order_no: data.order_no,
-                payment: data.payment,
-                platform: data.platform
+                payment: '1',
+                platform: '1'
             },
             nocon: true,
             success: function(res) {
@@ -244,7 +287,7 @@ Page({
      */
     selsite: function() {
         wx.navigateTo({
-            url: 'address/address?siteid=' + this.data.siteid + '&skus=' + this.data.skus
+            url: 'address/address?siteid=' + this.data.siteid + '&skus=' + this.data.skus + '&num=' + this.data.num + '&quick=' + this.data.quick
         })
     },
     /**
@@ -272,8 +315,8 @@ Page({
         app.wxrequest({
             url: "index/order/createsettlement",
             data: {
-                sku_id_list: data.sku_id_list,
-                user_address_id: data.city_id
+                sku_id_list: that.data.skus,
+                user_address_id: that.data.siteid
             },
             success(res) {
                 let stat = {
@@ -321,6 +364,56 @@ Page({
             }
         })
     },
+    quickSettlement: function(data) {
+        let that = this
+        app.wxrequest({
+            url: "index/order/quicksettlement",
+            data: {
+                buid: app.globalData.pid,
+                sku_id: that.data.skus,
+                num: that.data.num,
+                user_address_id: that.data.siteid
+            },
+            success(res) {
+                let stat = {
+                    goods_count: res.goods_count,
+                    rebate_all: res.rebate_all,
+                    total_freight_price: res.total_freight_price,
+                    total_goods_price: res.total_goods_price,
+                    total_price: res.total_price,
+                    balance: res.balance
+                }
+                that.setData({
+                    datalist: res.supplier_list,
+                    stat: stat
+                })
+            },
+            error: function(code) {
+                switch (parseInt(code)) {
+                    case 3001:
+                        app.toast({ title: '未选择商品' })
+                        break;
+                    case 3002:
+                        app.toast({ title: '未登录' })
+                        break;
+                    case 3003:
+                        app.toast({ title: '地址错误' })
+                        break;
+                    case 3004:
+                        app.toast({ title: '商品售罄' })
+                        break;
+                    case 3006:
+                        app.toast({ title: '该地区商品不支持配送' })
+                        break;
+                    case 3007:
+                        app.toast({ title: '商品库存不够' })
+                        break;
+                    default:
+                        app.toast({ title: '意料之外的错误' })
+                }
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -332,10 +425,13 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function(o) {
-        this.createsettlement({
-            sku_id_list: this.data.skus,
-            city_id: this.data.siteid
-        })
+        if (this.data.quick == 1) {
+            this.quickSettlement()
+        } else {
+            this.createsettlement()
+        }
+
+        if (!this.data.siteid) return
         this.getUserAddress({
             address_id: this.data.siteid
         })

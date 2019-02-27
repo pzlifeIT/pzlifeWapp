@@ -5,7 +5,8 @@ App({
 
         //本地缓存
         let that = this
-
+        that.globalData.con_id = wx.getStorageSync('con_id') || ''
+        this.getconid()
     },
     globalData: {
         userInfo: {},
@@ -17,6 +18,7 @@ App({
         wx.getStorage({
             key: "con_id",
             success(res) {
+                console.log(res)
                 that.globalData.con_id = res.data
             }
         })
@@ -55,6 +57,7 @@ App({
         return logincode
     },
     indexmain: function(id) {
+        console.log(this.globalData.con_id)
         this.wxrequest({
             url: 'index/user/indexmain',
             data: {
@@ -110,7 +113,18 @@ App({
                         }
                     } else {
                         if (typeof obj.error == 'function') {
-                            obj.error(result.code)
+                            if (result.code == 5000) {
+                                that.modal({
+                                    success() {
+                                        wx.navigateTo({
+                                            url: "/pages/login/login"
+                                        })
+                                    }
+                                })
+                            } else {
+                                obj.error(result.code)
+                            }
+
                         }
                     }
                 } else {

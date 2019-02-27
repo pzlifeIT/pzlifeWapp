@@ -164,7 +164,9 @@ Page({
             })
             return
         }
-
+        wx.navigateTo({
+            url: "/pages/comfirOrder/comfirOrder?skus=" + this.data.goodData.id + '&num=' + this.data.buyNum + '&quick=' + 1
+        })
     },
     joinCart: function() {
         if (!this.data.showModel) {
@@ -208,22 +210,6 @@ Page({
                     showModel: false
                 })
                 app.toast({ title: '加入购物车成功' })
-            },
-            error: function(code) {
-                if (code == 5000) {
-                    app.modal({
-                        title: "请先登录",
-                        content: "是否确定去登录",
-                        success: function() {
-                            wx.navigateTo({
-                                url: "/pages/login/login?goodid"+that.data.goodid
-                            })
-                        },
-                        cancel: function() {
-
-                        }
-                    })
-                }
             }
         })
     },

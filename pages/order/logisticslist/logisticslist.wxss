@@ -1,0 +1,72 @@
+/* pages/order/logisticslist/logisticslist.wxss */
+
+page {
+    font-size: 28rpx;
+    background-color: #f7f7f7;
+}
+
+.ll-header {
+    width: 100%;
+    height: 75rpx;
+    line-height: 75rpx;
+    text-align: center;
+    color: #b6b6b6;
+}
+
+.ll-info {
+    overflow: auto;
+    background-color: #fff;
+}
+
+.ll-sub-head {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.ll-number {
+    margin-left: 20rpx;
+    color: #b6b6b6;
+}
+
+.ll-btn {
+    width: 180rpx;
+    height: 50rpx;
+    margin: 20rpx 10rpx 25rpx 0;
+    line-height: 50rpx;
+    text-align: center;
+    border: solid 1rpx #f99f36;
+    color: #f99f36;
+}
+
+.ll-good {
+    height: 180rpx;
+    overflow: hidden;
+}
+
+.ll-good-img {
+    width: 136rpx;
+    height: 136rpx;
+    margin: 22rpx 10rpx;
+    overflow: hidden;
+}
+
+.ll-good-img image {
+    width: 136rpx;
+    height: 136rpx;
+}
+
+.ll-good-info {
+    margin-left: 40rpx;
+}
+
+.ll-good-name {
+    margin-top: 50rpx;
+    color: #202020;
+}
+
+.ll-good-tit {
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    color: #888;
+}
