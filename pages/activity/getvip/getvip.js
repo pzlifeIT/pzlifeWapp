@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-	mask:true,
+	mask:false,
 	imgUrls:[
 		"http://pnkp5i8sb.bkt.clouddn.com/solitairebanner1.jpg",
 		"http://pnkp5i8sb.bkt.clouddn.com/solitairebanner3.jpg",
@@ -17,6 +17,9 @@ Page({
 		this.setData({
 			mask:mask
 		})
+	},
+	preventTouchMove: function() {
+	    //防止用户操作弹出层外界面
 	},
   /**
    * 生命周期函数--监听页面加载
