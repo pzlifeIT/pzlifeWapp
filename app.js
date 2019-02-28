@@ -65,7 +65,7 @@ App({
         })
         return logincode
     },
-    judgelogin: function(data) {
+    judgelogin: function(obj) {
         this.wxrequest({
             url: "index/user/getuser",
             success(res) {
