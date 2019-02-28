@@ -5,7 +5,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		mask: false,
+		mask: true,
 		imgUrls: [
 			"http://pnkp5i8sb.bkt.clouddn.com/solitairebanner1.jpg",
 			"http://pnkp5i8sb.bkt.clouddn.com/solitairebanner3.jpg",

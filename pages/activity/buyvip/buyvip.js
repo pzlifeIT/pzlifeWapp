@@ -40,8 +40,8 @@ Page({
 				that.pay(res.order_data.order_no)
 			},
 			error(res) {
-				app.modal({
-					title: ""
+				app.toast({
+					title:"发起支付失败"
 				})
 			}
 		})
