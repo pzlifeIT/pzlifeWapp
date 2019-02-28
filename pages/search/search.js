@@ -63,6 +63,11 @@ Page({
 	        data: { search: search },
 	        nocon: true,
 	        success(res) {
+				if(res.goods_data.length<=0){
+					app.toast({
+						title:"未搜索到商品"
+					})
+				}
 	            that.setData({
 	                goodsList: res.goods_data
 	            })

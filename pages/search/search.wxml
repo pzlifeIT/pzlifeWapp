@@ -10,7 +10,7 @@
 	</view>
 </view>
 <!-- 搜索历史 -->
-<view class="history-wai" wx:if="{{goodsList.length<=0}}">
+<view class="history-wai" wx:if="{{goodsList.length<=0 || search==''}}">
 	<view class="history">
 		<view class="history-head">
 			<text class="head-left">最近搜索</text>
@@ -46,7 +46,7 @@
 		</view>
 	</view>
 </view> -->
-<view class='goods' wx:for='{{goodsList}}' wx:if="{{goodsList.length>=1}}">
+<view class='goods' wx:for='{{goodsList}}' wx:if="{{goodsList.length>=1 && search!=''}}">
 <navigator url='/pages/goods/detail?goodid={{item.id}}' >
   <view class='one_goods'>
     <view class='img'>
