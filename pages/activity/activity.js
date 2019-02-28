@@ -56,6 +56,8 @@ Page({
 			this.setData({
 				uid:options.uid
 			})
+		}else{
+			this.getuserinfo()
 		}
 		if(options.ident){
 			this.setData({
@@ -116,6 +118,11 @@ Page({
 			success(res){
 				wx.redirectTo({
 					url:"/pages/activity/getvip/getvip"
+				})
+			},
+			error(res){
+				wx.redirectTo({
+					url:"/pages/activity/buyvip/buyvip"
 				})
 			}
 		})

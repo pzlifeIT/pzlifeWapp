@@ -1,15 +1,16 @@
- <!--pages/search/search.wxml-->
+<!--pages/search/search.wxml-->
 <view class='search_head'>
-  <view class='search'>
-    <icon type='search' class='search_icon fl' size='34rpx'/>
-    <input class="search_cate din fl" focus="{{true}}" placeholder="搜索品质方案" confirm-type="search" placeholder-class="pl-class" bindinput="inputwacth" />
-  </view>
-  <view class="sea-button" bindtap="getSearchGoods">
-	  搜索
-  </view>
+	<view class='search'>
+		<icon type='search' class='search_icon fl' size='34rpx' />
+		<input class="search_cate din fl" focus="{{true}}" placeholder="搜索品质方案" value="{{search}}" confirm-type="search" placeholder-class="pl-class"
+		 bindinput="inputwacth" />
+	</view>
+	<view class="sea-button" bindtap="getSearchGoods">
+		搜索
+	</view>
 </view>
 <!-- 搜索历史 -->
-<view class="history-wai">
+<view class="history-wai" wx:if="{{goodsList.length<=0}}">
 	<view class="history">
 		<view class="history-head">
 			<text class="head-left">最近搜索</text>
@@ -18,12 +19,13 @@
 			</view>
 		</view>
 		<view class="history-list">
-			<view class="history-one" wx:for="{{searchList}}" wx:key="index" bindtap="clickSearch" data-keyword="{{item}}"><text class="text">{{item}}</text></view>
+			<view class="history-one" wx:for="{{searchList}}" wx:key="index" bindtap="clickSearch" data-keyword="{{item}}"><text
+				 class="text">{{item}}</text></view>
 		</view>
 	</view>
 </view>
 <!-- 大家都在搜 -->
-<view class="history-wai">
+<!-- <view class="history-wai">
 	<view class="history">
 		<view class="history-head">
 			<text class="head-left">大家都在搜</text>
@@ -43,18 +45,16 @@
 			<view class="history-one"><text class="text">月饼</text></view>
 		</view>
 	</view>
+</view> -->
+<view class='goods' wx:for='{{goodsList}}' wx:if="{{goodsList.length>=1}}">
+<navigator url='/pages/goods/detail?goodid={{item.id}}' >
+  <view class='one_goods'>
+    <view class='img'>
+      <image class='goods_img' src='{{item.image}}'></image>
+    </view> 
+    <text class='title'>{{item.goods_name}}</text>
+    <text class='subtitle'>{{item.subtitle}}</text>
+    <text class='price'>￥{{item.min_retail_price}}</text>
+  </view>
+</navigator>
 </view>
-
-<view>
-
-</view>
-
-
-
-
-
-
-
-
-
-

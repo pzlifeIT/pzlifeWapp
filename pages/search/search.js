@@ -7,8 +7,8 @@ Page({
 	 */
 	data: {
 		search: '',
-		searchList: [],
-		arr: []
+		searchList:[],
+		goodsList:[]
 	},
 
 	/**
@@ -30,10 +30,9 @@ Page({
 	mid:function(keyword =""){
 		//获取数组
 		let arr = this.data.searchList
-		console.log(arr)
+		console.log(this.data.searchList)
 		//将搜索的词放进数组中
 		let search = this.data.search.replace(/\s*/g, "");
-		console.log(keyword)
 		if (keyword) {
 			search = keyword.replace(/\s*/g, "")
 		}
@@ -52,9 +51,29 @@ Page({
 		}
 		//将搜索的词存进全局变量
 		wx.setStorageSync("searchList", arr)
-		wx.navigateTo({
-			url: "/pages/category/goods/goods?search=" + search
-		})
+		this.getSearchGood(search)
+	},
+	/**
+	 * 请求搜索
+	 */
+	getSearchGood: function(search) {
+	    let that = this
+	    app.wxrequest({
+	        url: "index/goods/getSearchGoods",
+	        data: { search: search },
+	        nocon: true,
+	        success(res) {
+	            that.setData({
+	                goodsList: res.goods_data
+	            })
+	        },
+	        error(res) {
+	
+	        },
+	        fail(res) {
+	
+	        }
+	    })
 	},
 	/**
 	 * 点击搜索按钮
@@ -67,6 +86,9 @@ Page({
 		let keyword = e.currentTarget.dataset.keyword
 		console.log(keyword)
 		this.mid(keyword)
+		this.setData({
+			search:keyword
+		})
 	},
 	del:function(){
 		let that =this
@@ -96,7 +118,7 @@ Page({
 	onShow: function() {
 		// 		获取搜索历史
 		this.setData({
-			searchList: wx.getStorageSync("searchList")
+			searchList:  wx.getStorageSync("searchList") || []
 		})
 	},
 
