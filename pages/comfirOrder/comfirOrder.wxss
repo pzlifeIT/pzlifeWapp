@@ -18,7 +18,7 @@ page {
 }
 
 .addres::after {
-    background-image: url("/pages/images/images/add.png");
+    background-image: url("http://pnkp5i8sb.bkt.clouddn.com/add.png");
     /* content: "123"; */
 }
 

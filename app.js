@@ -1,28 +1,27 @@
 //app.js
+const config = require('config/config.js')
 App({
     onLaunch: function(opt) {
         // 展示本地存储能力
-
         //本地缓存
         let that = this
         that.globalData.con_id = wx.getStorageSync('con_id') || ''
-        this.getconid()
+        that.globalData.host = config
     },
     globalData: {
         userInfo: {},
         con_id: '',
-        pid: ''
+        pid: '',
+        host: {}
     },
     getconid: function() {
         let that = this
-        console.log("执行了")
         wx.getStorage({
             key: "con_id",
             success(res) {
                 that.globalData.con_id = res.data
             }
         });
-        console.log(that.globalData.con_id)
     },
     setconid: function(conid) {
         wx.setStorage({
@@ -30,6 +29,7 @@ App({
             data: conid
         })
         this.globalData.con_id = conid
+        this.getUserInfo()
     },
     toast: function(data) {
         wx.showToast({
@@ -39,10 +39,18 @@ App({
         })
     },
     share: function(data) {
-
+        let path = ''
+        if (!data.path) {
+            path = '/page/index/index'
+        }
+        if (data.path.indexOf('?') == -1) {
+            path = data.path + '?pid=' + this.globalData.pid
+        } else {
+            path = data.path + '&pid=' + this.globalData.pid
+        }
         let sharejson = {
             title: data.title || '品质生活商城',
-            path: data.path || '/page/index/index?pid=' + this.globalData.pid,
+            path: path,
             imageUrl: data.imageUrl,
             success: function(shareTickets) {
 
@@ -56,14 +64,14 @@ App({
         }
         return sharejson
     },
-    getUserInfo: function(e) {
-        let logincode, info
-        wx.login({
+    getUserInfo: function() {
+        let that = this
+        this.wxrequest({
+            url: "index/user/getuser",
             success(res) {
-                logincode = res.code
+                that.globalData.userInfo = res.data
             }
         })
-        return logincode
     },
     judgelogin: function(obj) {
         this.wxrequest({
@@ -126,7 +134,7 @@ App({
             wx.showLoading({ title: '加载中' })
         }
         wx.request({
-            url: 'http://wwwapi.pzlife.vip/' + obj.url,
+            url: config.apiHost + obj.url,
             data: obj.data || {},
             method: obj.method || 'POST',
             dataType: JSON,
@@ -134,19 +142,16 @@ App({
                 'content-type': 'application/json' // 默认值
             },
             success(res) {
-                console.log(res)
                 wx.hideLoading()
                 if (res.statusCode == 200) {
                     let result = JSON.parse(res.data);
-                    console.log(result)
                     if (result.code == 200) {
                         if (typeof obj.success == 'function') {
                             obj.success(result)
                         }
                     } else {
-                        console.log(result.code)
-                        console.log(result.code == 5000)
                         if (result.code == 5000) {
+                            if (obj.indexmain) return
                             that.login()
                         } else if (typeof obj.error == 'function') {
                             obj.error(result.code)
@@ -231,6 +236,7 @@ App({
     },
     onShow: function(opt) {
         this.getconid()
+        this.globalData.host = config
         this.globalData.pid = opt.query.pid || ''
         if (this.globalData.pid == '') return
         this.indexmain(this.globalData.pid)
