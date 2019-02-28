@@ -48,13 +48,13 @@ Page({
 	    })
 	},
 	pay:function(order_no){
+		let that = this
 		app.wxrequest({
 			url:"pay/pay/pay",
 			data:{order_no:order_no,payment:'2',platform:'1'},
 			nocon:true,
 			success(res){
-				let parameters = res.parameters,
-					that = this
+				let parameters = res.parameters					
 				wx.requestPayment({
 				    timeStamp: parameters.timeStamp,
 				    nonceStr: parameters.nonceStr,
