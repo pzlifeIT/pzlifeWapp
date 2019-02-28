@@ -88,7 +88,7 @@ Page({
 	activity: function(e) {
 	    if (this.data.con_id) {
 	        wx.navigateTo({
-	            url: "/pages/activity/activity?ident=" + this.data.userInfo.user_identity
+	            url:"/pages/activity/activity?ident=" + this.data.userInfo.user_identity+"&uid="+this.data.userInfo.uid
 	        })
 	    } else {
 	        app.toast({ title: "请先登录" })

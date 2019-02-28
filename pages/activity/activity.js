@@ -13,7 +13,8 @@ Page({
 		identity: 0,
 		share_id: '',
 		share: 0,
-		isover: 0
+		isover: 0,
+		uid:""
 	},
 	cha:function(){
 		let isvip = !this.data.isvip
@@ -51,13 +52,27 @@ Page({
 				share_id: share_id
 			})
 		}
+		if(options.uid){
+			this.setData({
+				uid:options.uid
+			})
+		}
 		if(options.ident){
 			this.setData({
 				identity:options.ident
 			})
 		}
 	},
-
+	getuserinfo:function(){
+		let that = this
+		app.judgelogin({
+			success(res){
+				that.setData({
+					udi:res.data.uid
+				})
+			}
+		})
+	},
 	/**
 	 * 个人中心进来
 	 */
@@ -235,7 +250,7 @@ Page({
 		let that = this,
 			share = app.share({
 				title: "恭喜获得钻石会员卡",
-				path: '/pages/activity/activity?share_id=' + app.globalData.con_id,
+				path: '/pages/activity/activity?share_id=' + this.data.uid,
 				imageUrl: "http://pnkp5i8sb.bkt.clouddn.com/nomember01.png"
 			})
 		return share
