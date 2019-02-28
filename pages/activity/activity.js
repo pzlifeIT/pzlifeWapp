@@ -107,19 +107,30 @@ Page({
                 }
             })
         } else {
-            wx.redirectTo({
-                url: "/pages/activity/buyvip/buyvip"
-            })
+            app.toast({
+                title: "权限不够"
+            });
+            let timer = setTimeout(function() {
+                wx.navigateBack({
+                    delta: 1
+                })
+            }, 1500);
+            clearTimeout(timer)
         }
     },
-    lingvip: function(share_id) {
+    lingvip: function(share_id, uid) {
         app.wxrequest({
             url: "index/rights/receiveDiamondvip",
             data: { parent_id: share_id },
             nocon: false,
             success(res) {
                 wx.redirectTo({
-                    url: "/pages/activity/getvip/getvip"
+                    url: "/pages/activity/getvip/getvip?uid=" + uid
+                })
+            },
+            error(res) {
+                wx.redirectTo({
+                    url: "/pages/activity/buyvip/buyvip?share_id=" + share_id + "&con_id=" + app.globalData.con_id + "&uid=" + res.data.uid
                 })
             }
         })
@@ -145,12 +156,12 @@ Page({
                             nocon: true,
                             success(result) {
                                 //如果有就领取
-                                that.lingvip(share_id)
+                                that.lingvip(share_id, res.data.uid)
                             },
-                            error(res) {
+                            error(result) {
                                 //没有
                                 wx.navigateTo({
-                                    url: "/pages/activity/buyvip/buyvip?share_id=" + share_id + "&con_id=" + app.globalData.con_id
+                                    url: "/pages/activity/buyvip/buyvip?share_id=" + share_id + "&con_id=" + app.globalData.con_id + "&uid=" + res.data.uid
                                 })
                             }
                         })
@@ -205,6 +216,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function() {
+
 
     },
 

@@ -25,28 +25,7 @@ Page({
         }
 
     },
-    /**
-     * 获取分类商品列表
-     */
-    getSearchGoods: function(search) {
-        let that = this
-        app.wxrequest({
-            url: "index/goods/getSearchGoods",
-            data: { search: search },
-            nocon: true,
-            success(res) {
-                that.setData({
-                    goodsList: res.goods_data
-                })
-            },
-            error(res) {
-
-            },
-            fail(res) {
-
-            }
-        })
-    },
+    
     /**
      * 获取专题商品
      */
