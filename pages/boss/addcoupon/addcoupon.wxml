@@ -37,7 +37,7 @@
 		<view class="input">
 			<input type="text"  placeholder="开始时间" disabled="true"/>
 			<picker mode="date" start="1870-01-01" end="2019-12-31" bindchange="selectData">
-				<image src="http://pnkp5i8sb.bkt.clouddn.com/date.png"></image>
+				<image lazy-load="true" src="{{imgHost}}date.png"></image>
 			</picker>
 		</view>
 	</view>
@@ -46,7 +46,7 @@
 		<view class="input">
 			<input type="text"  placeholder="结束时间" disabled="true"/>
 			<picker mode="date" start="1870-01-01" end="2019-12-31" bindchange="selectData">
-				<image src="http://pnkp5i8sb.bkt.clouddn.com/date.png"></image>
+				<image lazy-load="true" src="{{imgHost}}date.png"></image>
 			</picker>
 		</view>
 	</view>

@@ -1,4 +1,5 @@
 // pages/collect/collect.js
+const app = getApp()
 Page({
 
 	/**
@@ -7,7 +8,8 @@ Page({
 	data: {
 		collect: 1,
 		selectShop: false,
-		collectGoods:[]
+		collectGoods: [],
+		imgHost: ''
 	},
 	select: function(e) {
 		let num = e.currentTarget.dataset.num
@@ -18,14 +20,16 @@ Page({
 	selectShop: function() {
 		let status = !this.data.selectShop
 		this.setData({
-			selectShop:status
+			selectShop: status
 		})
 	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
-
+		this.setData({
+			imgHost: app.globalData.host.imgHost
+		})
 	},
 
 	/**

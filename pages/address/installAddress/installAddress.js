@@ -10,13 +10,17 @@ Page({
         name: '',
         mobile: '',
         address: '',
-        region: []
+        region: [],
+		imgHost:""
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
+		this.setData({
+		    imgHost: app.globalData.host.imgHost
+		})
         if (options.id) {
             this.setData({
                 id: options.id

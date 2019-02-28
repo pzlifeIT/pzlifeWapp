@@ -14,7 +14,8 @@ Page({
         firstSub: [],
         subData: [],
         showSub: [],
-        ind: 0
+        ind: 0,
+		imgHost:''
     },
 
 
@@ -46,6 +47,9 @@ Page({
     onLoad: function(options) {
         // this.getClassify()
         this.getSubject()
+		this.setData({
+		    imgHost: app.globalData.host.imgHost
+		})
     },
     /**
      * 获取分类

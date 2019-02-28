@@ -7,7 +7,7 @@
 <view class="goodslist" wx:if="{{collect == 2&&collectGoods.length>=1}}">
 	<view class="goods">
 		<view class="goods-img">
-			<image src=""></image>
+			<image lazy-load="true" src=""></image>
 		</view>
 		<view class="goods-info">
 			<view class="title">平和百香果</view>
@@ -18,7 +18,7 @@
 	</view>
 	<view class="goods">
 		<view class="goods-img">
-			<image src=""></image>
+			<image lazy-load="true" src=""></image>
 		</view>
 		<view class="goods-info">
 			<view class="title">平和百香果</view>
@@ -29,7 +29,7 @@
 	</view>
 	<view class="goods">
 		<view class="goods-img">
-			<image src=""></image>
+			<image lazy-load="true" src=""></image>
 		</view>
 		<view class="goods-info">
 			<view class="title">平和百香果</view>
@@ -40,7 +40,7 @@
 	</view>
 	<view class="goods">
 		<view class="goods-img">
-			<image src=""></image>
+			<image lazy-load="true" src=""></image>
 		</view>
 		<view class="goods-info">
 			<view class="title">平和百香果</view>
@@ -54,7 +54,7 @@
 <view class="shoplist" wx:if="{{collect == 1}}">
 	<view class="shop ">
 		<view class="shop-img">
-			<image src=""></image>
+			<image lazy-load="true" src=""></image>
 		</view>
 		<view class="shop-info">
 			<view class="title">品质生活广场</view>
@@ -69,7 +69,7 @@
 
 <view class="not" wx:if="{{collect == 2 && collectGoods.length == 0}}">
 	<view class="not-center">
-		<image src="http://pnkp5i8sb.bkt.clouddn.com/wjx.png"></image>
+		<image lazy-load="true" src="{{imgHost}}wjx.png"></image>
 		<view class="not-text">暂无商品收藏</view>
 	</view>
 </view>

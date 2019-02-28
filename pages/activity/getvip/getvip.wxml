@@ -7,19 +7,19 @@
 	</block>
 </swiper>
 <view class="bg">
-	<image src="http://pnkp5i8sb.bkt.clouddn.com/member01.png"></image>
-	<image class="di" src="http://pnkp5i8sb.bkt.clouddn.com/member02.png"></image>
+	<image src="{{imgHost}}member01.png"></image>
+	<image class="di" src="{{imgHost}}member02.png"></image>
 	<view class="buy">立即购买</view>
 </view>
 
 <view class="mask" wx:if="{{mask}}" catchtouchmove='preventTouchMove'>
-	<image class="shou" src="http://pnkp5i8sb.bkt.clouddn.com/shou.png"></image>
+	<image class="shou" src="{{imgHost}}shou.png"></image>
 	<view class="hint">
 		<view class="status">
 			<view class="success">领取成功</view>
 			<view class="isvip">恭喜成为钻石会员</view>
 		</view>
-		<image src="http://pnkp5i8sb.bkt.clouddn.com/hint_03.png"></image>
+		<image src="{{imgHost}}hint_03.png"></image>
 		<view class="button">
 			<view>我知道了</view>
 		</view>

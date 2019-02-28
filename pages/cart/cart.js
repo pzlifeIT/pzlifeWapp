@@ -13,7 +13,8 @@ Page({
 		selectAll: true,
 		sku_id: 0,
 		con_id: "",
-		shop_id: 0
+		shop_id: 0,
+		imgHost:''
 	},
 	/**
 	 * 全选
@@ -303,6 +304,9 @@ Page({
 	onLoad: function(options) {
 		 app.getconid()
         console.log('onLoad')
+		this.setData({
+		    imgHost: app.globalData.host.imgHost
+		})
 		// this.getCartGoodsList()
 		// this.getStorage()
 	},

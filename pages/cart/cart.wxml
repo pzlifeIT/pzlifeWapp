@@ -15,7 +15,7 @@
 				</view>
 
 				<view class='goods_img'>
-					<image src='{{goods.sku_image}}'></image>
+					<image lazy-load="true" src='{{goods.sku_image}}'></image>
 					<view class='supplier_name'><text>{{goods.supplier_name}}</text></view>
 				</view>
 				<view class='goods_desc'>
@@ -32,7 +32,7 @@
 					</view>
 				</view>
 				<view class='del' bindtap='del' data-goods="{{item.goods}}" data-goods-index="{{goodsIndex}}">
-					<image src='http://pnkp5i8sb.bkt.clouddn.com/del.png'></image>
+					<image lazy-load="true" src='{{imgHost}}del.png'></image>
 				</view>
 			</view>
 		</view>
@@ -49,14 +49,14 @@
 					</view>
 				</view>
 				<view class='goods_img '>
-					<image class='lose_img' src='{{goods.sku_image}}'></image>
+					<image lazy-load="true" class='lose_img' src='{{goods.sku_image}}'></image>
 				</view>
 				<view class='goods_desc lose_goods'>
 					<text class='goods_title'>{{goods.goods_name}}</text>
 					<text class='goods_subtitle'>{{goods.subtitle}}</text>
 				</view>
 				<view class='del' bindtap='del' data-goods="{{item.goods}}" data-goods-index="{{goodsIndex}}">
-					<image src='http://pnkp5i8sb.bkt.clouddn.com/del.png'></image>
+					<image lazy-load="true" src='{{imgHost}}del.png'></image>
 				</view>
 			</view>
 		</block>
@@ -88,7 +88,7 @@
 <view class='empty' wx:if="{{valid.length==0 && failure.length==0}}">
 	<view class='msg'>
 		<view class='icon'>
-			<image src='http://pnkp5i8sb.bkt.clouddn.com/emptycart.png'></image>
+			<image lazy-load="true"  src='{{imgHost}}emptycart.png'></image>
 		</view>
 		<view class='text'><text>购物车空空如也</text></view>
 		<navigator url='/pages/category/category' open-type="switchTab">
