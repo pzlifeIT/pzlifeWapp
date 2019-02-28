@@ -142,24 +142,23 @@ Page({
             },
             nocon: true,
             success(res) {
-				let pages = getCurrentPages();
-				let prevpage = pages[pages.length - 3]
-				let str = "pages/goods/detail"
+                let pages = getCurrentPages();
+                let prevpage = pages[pages.length - 3]
+                let str = "pages/goods/detail";
                 app.toast({
                     title: '注册成功'
-                })
+                });
                 app.setconid(res.con_id)
-				     //从商品详情页跳来的
-				if (prevpage.route == str) {
-				    wx.navigateBack({
-				        delta: pages.indexOf(prevpage)
-				    })
-				} else {
-				    console.log(123)
-				    wx.reLaunch({
-				        url: "/" + prevpage.route
-				    })
-				}
+                    //从商品详情页跳来的
+                if (prevpage.route == str) {
+                    wx.navigateBack({
+                        delta: pages.indexOf(prevpage)
+                    })
+                } else {
+                    wx.reLaunch({
+                        url: "/" + prevpage.route
+                    })
+                }
             },
             error(res) {
                 if (res == 3001) {

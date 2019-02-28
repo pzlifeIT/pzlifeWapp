@@ -8,7 +8,8 @@ Page({
     data: {
         loginStatus: false,
         userInfo: {},
-        con_id: ""
+        con_id: "",
+        imgHost: ''
     },
 
     /**
@@ -16,8 +17,9 @@ Page({
      */
     onLoad: function(options) {
         //获取con_id
-        app.getconid()
-
+        this.setData({
+            imgHost: app.globalData.host.imgHost
+        })
     },
     /**
      * 判断是否存在con_id
@@ -26,9 +28,7 @@ Page({
         //存在就登陆不存在就无登录
         if (con_id) {
             this.getUser()
-            this.setData({
-                loginStatus: true
-            })
+
         } else {
             this.setData({
                 loginStatus: false
@@ -41,7 +41,6 @@ Page({
             url: "index/user/getuser",
             success(res) {
                 let userInfo = res.data
-                app.globalData.userInfo = userInfo
                 switch (parseInt(userInfo.user_identity)) {
                     case 1:
                         userInfo.user_vid = "普通会员"
@@ -59,7 +58,8 @@ Page({
                         userInfo.user_vid = "普通会员"
                 }
                 that.setData({
-                    userInfo: userInfo
+                    userInfo: userInfo,
+                    loginStatus: true
                 })
             },
             fail(err) {
@@ -85,15 +85,15 @@ Page({
             app.toast({ title: "请先登录" })
         }
     },
-	activity: function(e) {
-	    if (this.data.con_id) {
-	        wx.navigateTo({
-	            url:"/pages/activity/activity?ident=" + this.data.userInfo.user_identity+"&uid="+this.data.userInfo.uid
-	        })
-	    } else {
-	        app.toast({ title: "请先登录" })
-	    }
-	},
+    activity: function(e) {
+        if (this.data.con_id) {
+            wx.navigateTo({
+                url: "/pages/activity/activity?ident=" + this.data.userInfo.user_identity + "&uid=" + this.data.userInfo.uid
+            })
+        } else {
+            app.toast({ title: "请先登录" })
+        }
+    },
     myQr: function() {
         if (this.data.con_id) {
             wx.navigateTo({

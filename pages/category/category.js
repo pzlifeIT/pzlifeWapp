@@ -1,5 +1,4 @@
 // pages/category/category.js
-const url = require("../../config.js").url;
 const app = getApp()
 Page({
     data: {

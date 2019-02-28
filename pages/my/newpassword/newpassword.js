@@ -11,7 +11,8 @@ Page({
         newpass: "",
         time: 60,
         getcode: "获取验证码",
-        disabled: false
+        disabled: false,
+        imgHost: ''
     },
     /**
      * 获取输入的值
@@ -143,6 +144,9 @@ Page({
      */
     onLoad: function(options) {
         this.getCode()
+        this.setData({
+            imgHost: app.globalData.host.imgHost
+        })
     },
 
     /**

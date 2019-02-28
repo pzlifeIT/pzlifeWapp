@@ -25,22 +25,18 @@ Page({
         app.wxrequest({
             url: "index/user/login",
             data: { mobile: mobile, password: password, buid: app.globalData.pid },
-			nocon:true,
+            nocon: true,
             success(res) {
                 let pages = getCurrentPages();
                 let prevpage = pages[pages.length - 3]
-                let str = "pages/goods/detail"
-                wx.setStorage({
-                        key: "con_id",
-                        data: res.con_id
-                    })
+                let str = "pages/goods/detail";
+                app.setconid(res.con_id)
                     //从商品详情页跳来的
                 if (prevpage.route == str) {
                     wx.navigateBack({
                         delta: pages.indexOf(prevpage)
                     })
                 } else {
-                    console.log(123)
                     wx.reLaunch({
                         url: "/" + prevpage.route
                     })

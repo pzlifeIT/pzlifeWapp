@@ -13,13 +13,13 @@
 </view>
 
 <view class="mask" wx:if="{{mask}}" catchtouchmove='preventTouchMove'>
-	<image class="shou" src="../../images/images/shou.png"></image>
+	<image class="shou" src="http://pnkp5i8sb.bkt.clouddn.com/shou.png"></image>
 	<view class="hint">
 		<view class="status">
 			<view class="success">领取成功</view>
 			<view class="isvip">恭喜成为钻石会员</view>
 		</view>
-		<image src="../../images/images/hint_03.png"></image>
+		<image src="http://pnkp5i8sb.bkt.clouddn.com/hint_03.png"></image>
 		<view class="button">
 			<view>我知道了</view>
 		</view>
