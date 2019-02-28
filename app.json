@@ -1,5 +1,5 @@
 {
-    "pages": [      
+    "pages": [
         "pages/index/index",
         "pages/category/category",
         "pages/logs/logs",
@@ -46,26 +46,26 @@
         "list": [{
                 "pagePath": "pages/index/index",
                 "text": "首页",
-                "iconPath": "pages/images/index.png",
-                "selectedIconPath": "pages/images/index1.png"
+                "iconPath": "/pages/images/index.png",
+                "selectedIconPath": "/pages/images/index1.png"
             },
             {
                 "pagePath": "pages/category/category",
                 "text": "分类",
-                "iconPath": "pages/images/class.png",
-                "selectedIconPath": "pages/images/class1.png"
+                "iconPath": "/pages/images/class.png",
+                "selectedIconPath": "/pages/images/class1.png"
             },
             {
                 "pagePath": "pages/cart/cart",
                 "text": "购物车",
-                "iconPath": "pages/images/cart.png",
-                "selectedIconPath": "pages/images/cart1.png"
+                "iconPath": "/pages/images/cart.png",
+                "selectedIconPath": "/pages/images/cart1.png"
             },
             {
                 "pagePath": "pages/my/my",
                 "text": "我",
-                "iconPath": "pages/images/my.png",
-                "selectedIconPath": "pages/images/my1.png"
+                "iconPath": "/pages/images/my.png",
+                "selectedIconPath": "/pages/images/my1.png"
             }
         ]
     }

@@ -10,7 +10,7 @@
 			<view class="shop-id">店铺ID：122345</view>
 		</view>
 	</view>
-	<image class="sz" src="../images/images/sz.png"></image>
+	<image class="sz" src="http://pnkp5i8sb.bkt.clouddn.com/sz.png"></image>
 </view>
 <view class="statistics">
 	<view class="earnings">
@@ -29,23 +29,23 @@
 	</view>
 	<view class="icon">
 		<view class="one icon-after">
-			<image src="../images/images/dpfq.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/dpfq.png"></image>
 			<view class="icon-text">店铺发券</view>
 		</view>
 		<view class="one icon-after">
-			<image src="../images/images/sphc.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/sphc.png"></image>
 			<view class="icon-text">商品货仓</view>
 		</view>
 		<view class="one">
-			<image src="../images/images/kdyq.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/kdyq.png"></image>
 			<view class="icon-text">开店邀请</view>
 		</view>
 		<view class="one icon-after">
-			<image src="../images/images/zshy.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/zshy.png"></image>
 			<view class="icon-text">钻石会员</view>
 		</view>
 		<view class="one icon-after">
-			<image src="../images/images/xjq.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/xjq.png"></image>
 			<view class="icon-text">现金券</view>
 		</view>
 	</view>

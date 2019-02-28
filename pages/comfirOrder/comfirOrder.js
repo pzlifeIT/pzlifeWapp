@@ -133,7 +133,6 @@ Page({
                 switch (parseInt(code)) {
                     case 3000:
                     case 3001:
-                    case 3002:
                     case 3003:
                         app.toast({ title: '商品信息出错' })
                         break;
@@ -150,7 +149,7 @@ Page({
                         app.toast({ title: '该地区商品不支持配送' })
                         break;
                     case 3007:
-                        app.toast({ title: '商品库存不够' })
+                        app.toast({ title: '商品库存不足' })
                         break;
                     default:
                         app.toast({ title: '意料之外的网络错误' })
@@ -186,7 +185,6 @@ Page({
                 switch (parseInt(code)) {
                     case 3000:
                     case 3001:
-                    case 3002:
                     case 3003:
                         app.toast({ title: '商品信息出错' })
                         break;
@@ -337,9 +335,6 @@ Page({
                     case 3001:
                         app.toast({ title: '未选择商品' })
                         break;
-                    case 3002:
-                        app.toast({ title: '未登录' })
-                        break;
                     case 3003:
                         app.toast({ title: '地址错误' })
                         break;
@@ -392,9 +387,6 @@ Page({
                 switch (parseInt(code)) {
                     case 3001:
                         app.toast({ title: '未选择商品' })
-                        break;
-                    case 3002:
-                        app.toast({ title: '未登录' })
                         break;
                     case 3003:
                         app.toast({ title: '地址错误' })

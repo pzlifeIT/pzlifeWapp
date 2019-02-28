@@ -50,15 +50,15 @@
     </view>
   <view class="uoList">
     <view class="uoLi" bindtap="checkOrder" data-status="1" >
-      <image class="uoIcon" src="../images/images/444_08.png"  />
+      <image class="uoIcon" src="http://pnkp5i8sb.bkt.clouddn.com/444_08.png"  />
       <text class="userText" >待付款</text>
     </view>
     <view class="uoLi" bindtap="checkOrder" data-status="4">
-      <image class="uoIcon" src="../images/images/444_03.png" />
+      <image class="uoIcon" src="http://pnkp5i8sb.bkt.clouddn.com/444_03.png" />
       <text class="userText" >待发货</text>
     </view>
     <view class="uoLi nobr"  bindtap="checkOrder" data-status="5">
-      <image class="uoIcon" src="../images/images/444_05.png" />
+      <image class="uoIcon" src="http://pnkp5i8sb.bkt.clouddn.com/444_05.png" />
       <text class="userText" >待收货</text>
     </view>
     <view class="uoLi"  bindtap="checkOrder" data-status="6">

@@ -123,16 +123,16 @@
 <!-- 底部固定区域 -->
 <view class='footer'>
   <navigator class='home' url="../index/index" open-type="switchTab">
-    <image class="dl-ficon" src="../images/images/icon_03.png" />
+    <image class="dl-ficon" src="http://pnkp5i8sb.bkt.clouddn.com/icon_03.png" />
     <text class="ft-text">首页</text>
   </navigator>
   <view class='kefu' bindtap="call">
-    <image class="dl-ficon" src="../images/images/icon_05.png" />
+    <image class="dl-ficon" src="http://pnkp5i8sb.bkt.clouddn.com/icon_05.png" />
     <text  class="ft-text">客服</text>
   </view>
   <navigator url="../cart/cart" open-type="switchTab" >
   <view class='cart'>
-    <image class="dl-ficon" src="../images/images/icon_07.png" />
+    <image class="dl-ficon" src="http://pnkp5i8sb.bkt.clouddn.com/icon_07.png" />
     <text  class="ft-text">购物车</text>
   </view>
   </navigator>

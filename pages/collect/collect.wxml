@@ -69,7 +69,7 @@
 
 <view class="not" wx:if="{{collect == 2 && collectGoods.length == 0}}">
 	<view class="not-center">
-		<image src="../images/images/wjx.png"></image>
+		<image src="http://pnkp5i8sb.bkt.clouddn.com/wjx.png"></image>
 		<view class="not-text">暂无商品收藏</view>
 	</view>
 </view>

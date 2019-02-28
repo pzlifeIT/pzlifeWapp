@@ -45,7 +45,7 @@
 
 <view class="not" wx:if="{{couponList.length==0}}">
 	<view class="icon-button">
-		<image src="../../images/images/not.png"></image>
+		<image src="http://pnkp5i8sb.bkt.clouddn.com/not.png"></image>
 		<view class="not-text">暂无优惠券可领</view>
 		<view class="not-button">去挑选商品</view>
 	</view>
