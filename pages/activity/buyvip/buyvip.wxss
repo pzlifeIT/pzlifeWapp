@@ -29,6 +29,8 @@ page{
 	font-size: 30rpx;
 	color: #292929;
 	font-weight: bold;
+	position: fixed;
+	bottom: 0;
 }
 .mask{
 	width: 100%;

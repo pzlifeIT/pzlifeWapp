@@ -38,11 +38,13 @@ Page({
             over: over
         })
     },
+    preventTouchMove: function() {
+        //防止用户操作弹出层外界面
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        console.log(options)
         if (options.share_id) {
             let share_id = options.share_id
             this.setData({
@@ -109,6 +111,7 @@ Page({
     clickLink: function() {
         //需要判断进来的用户有没有登录，登录了就获取他的身份，还要获取分享者的身份
         let share_id = this.data.share_id
+        console.log(share_id)
         let that = this
         app.judgelogin({
             success(res) {

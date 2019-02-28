@@ -12,7 +12,7 @@
 	<view class="buy" bindtap="buy">立即购买</view>
 </view>
 
-<view class="mask" wx:if="{{mask}}">
+<view class="mask" wx:if="{{mask}}" catchtouchmove='preventTouchMove'>
 	<image class="shou" src="../../images/images/shou.png"></image>
 	<view class="hint">
 		<view class="status">

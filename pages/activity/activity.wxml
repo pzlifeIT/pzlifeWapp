@@ -2,7 +2,7 @@
 	<image src="http://pnkp5i8sb.bkt.clouddn.com/nomember01.png"></image>
 	<image src="http://pnkp5i8sb.bkt.clouddn.com/nomember02.png"></image>
 </view>
-<view class="mask" wx:if="{{mask}}">
+<view class="mask" wx:if="{{mask}}" catchtouchmove='preventTouchMove'>
 	<image class="shou" src="../images/images/shou.png"></image>
 	<view class="centert">
 		<image class="text" src="../images/images/text_03.png"></image>
@@ -12,7 +12,7 @@
 	</view>
 </view>
 
-<view class="mask over" wx:if="{{over}}">
+<view class="mask over" wx:if="{{over}}" catchtouchmove='preventTouchMove'>
 	<view class="pop">
 		<view class="content">您的免费钻石卡已经被领完，您的朋友再领取需要支付100元。（您可再向公司申请免费钻石卡额度）
 			<view class="phone" bindtap="call">拨打15502123212</view>
@@ -24,7 +24,7 @@
 	</view>
 </view>
 
-<view class="mask isvip" wx:if="{{isvip}}">
+<view class="mask isvip" wx:if="{{isvip}}" catchtouchmove='preventTouchMove'>
 	<image class="shou" src="../images/images/shou.png"></image>
 	<view class="pop-isvip">
 		<image class="hint" src="../images/images/pop_03.png"></image>

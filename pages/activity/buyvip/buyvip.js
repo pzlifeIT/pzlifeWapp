@@ -15,6 +15,9 @@ Page({
 	share_id:"",
 	con_id:""
   },
+  preventTouchMove: function() {
+      //防止用户操作弹出层外界面
+  },
 	button:function(){
 		let maks = !this.data.mask
 		this.setData({
@@ -45,13 +48,13 @@ Page({
 	    })
 	},
 	pay:function(order_no){
+		let that = this
 		app.wxrequest({
 			url:"pay/pay/pay",
 			data:{order_no:order_no,payment:'2',platform:'1'},
 			nocon:true,
 			success(res){
-				let parameters = res.parameters,
-					that = this
+				let parameters = res.parameters					
 				wx.requestPayment({
 				    timeStamp: parameters.timeStamp,
 				    nonceStr: parameters.nonceStr,
@@ -70,6 +73,36 @@ Page({
 				        })
 				    }
 				})
+			},
+			error(code){
+				switch (parseInt(code)) {
+				    case 3000:
+				        app.toast({ title: '不存在需要支付的订单' })
+				        break;
+				    case 3001:
+				        app.toast({ title: '订单号错误' })
+				        break;
+				    case 3002:
+				        app.toast({ title: '订单类型错误' })
+				        break;
+				    case 3004:
+				        app.toast({ title: '订单已取消' })
+				        break;
+				    case 3005:
+				        app.toast({ title: '订单已关闭' })
+				        break;
+				    case 3006:
+				        app.toast({ title: '订单已付款' })
+				        break;
+				    case 3007:
+				        app.toast({ title: '订单已过期' })
+				        break;
+				    case 3010:
+				        app.toast({ title: '支付失败' })
+				        break;
+				    default:
+				        app.toast({ title: '意料之外的网络错误' })
+				}
 			}
 		})
 	},
