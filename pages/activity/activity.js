@@ -103,9 +103,15 @@ Page({
 				}
 			})
 		}else {
-			wx.redirectTo({
-				url:"/pages/activity/buyvip/buyvip?share_id="+share_id+"&con_id="+app.globalData.con_id+"&uid="+res.data.uid
-			})
+			app.toast({
+				title:"权限不够"
+			});
+			let timer = setTimeout(function(){
+				wx.navigateBack({
+					delta:1
+				})
+			},1500);
+			clearTimeout(timer)
 		}
 	},
 	lingvip:function(share_id,uid){
