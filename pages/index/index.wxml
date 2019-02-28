@@ -12,7 +12,7 @@
   </view>
 </view> -->
 <view class="header">
-	<image class="logo din fl" src="../images/images/logo.png" />
+	<image class="logo din fl" src="http://pnkp5i8sb.bkt.clouddn.com/logo.png" />
   <navigator url='/pages/search/search' hover-class="none">
 	<view class="index-search din fl">
 		<icon type="search" size="34rpx" />

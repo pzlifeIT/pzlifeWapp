@@ -1,5 +1,5 @@
 <!--pages/comfirOrder/address/address.wxml-->
-<image class="ad-image" src="/pages/images/images/add.png" />
+<image class="ad-image" src="http://pnkp5i8sb.bkt.clouddn.com/add.png" />
 
 <view class="ad-list" wx:for="{{address}}" >
   <view class="al-icon din fl" bindtap="setsite" data-id="{{item.id}}" >

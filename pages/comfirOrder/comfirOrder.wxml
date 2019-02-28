@@ -2,9 +2,9 @@
 <view class='addres nullad' wx:if="{{siteid == ''}}" bindtap="selsite"  >
   <view >
     <text class="ad-hint din" >你的收货地址为空，点击添加收货地址</text>
-    <image class="jt" src="/pages/images/images/jt_18.png" />
+    <image class="jt" src="http://pnkp5i8sb.bkt.clouddn.com/jt_18.png" />
   </view>
-  <image class='blue_red' src='/pages/images/images/add.png'></image>
+  <image class='blue_red' src='http://pnkp5i8sb.bkt.clouddn.com/add.png'></image>
 </view>
 
 <view class='addres' wx:else bindtap="selsite">
@@ -19,16 +19,16 @@
     </view> 
   </view>
   <view class='jt'>
-    <image src='/pages/images/images/jt_18.png'></image>
+    <image src='http://pnkp5i8sb.bkt.clouddn.com/jt_18.png'></image>
   </view>
-  <image class='blue_red' src='/pages/images/images/add.png'></image>
+  <image class='blue_red' src='http://pnkp5i8sb.bkt.clouddn.com/add.png'></image>
 </view>
 
 <view class='goods'>
   <view wx:for="{{datalist}}" >
     <view class="s-name" ><image class="icon-img fl" src="{{item.image}}" /> <text >{{item.name}}</text> </view>
     <view wx:for="{{item.shop_list}}" >
-      <view class="s-name"><image class="icon-img fl" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKaDzYXdWR9qicAo8ICyp17XOtZQy2lkTkpYqg3hWAjicMmVSTKFsKYiarWllK0wG7YM6hnib1yP1E1jw/132?imageMogr2/thumbnail/120x" /> <text >{{item.shop_name}}</text></view>
+      <view class="s-name"><image class="icon-img fl" src="{{item.shop_image}}" /> <text >{{item.shop_name}}</text></view>
       <view wx:for="{{item.goods_list}}" >
         <view class='goods_info' >
           <view class='goods_img'><image src='{{item.sku_image}}'></image></view>
@@ -52,7 +52,7 @@
 <view class='footer'>
   <view class='total'><text class='total_text'>总计金额：</text><text class='total_price'>￥{{stat.total_price}}</text></view>
   <view class='back'>
-    <image src='/pages/images/che.png'></image>
+    <image src='http://pnkp5i8sb.bkt.clouddn.com/che.png'></image>
     <text>返回购物车</text>
   </view>
   <view class='pay' bindtap="showaddres" >去付款</view>
@@ -61,7 +61,7 @@
 <view class="hint-popup" wx:if="{{addressshow}}">
   <view class="fill" bindtap="hideaddress" ></view>
   <view class="hp-cen" >
-    <view class="b_xie" ><image class="b-image" src="/pages/images/images/b_xie.png" /></view>
+    <view class="b_xie" ><image class="b-image" src="http://pnkp5i8sb.bkt.clouddn.com/b_xie.png" /></view>
     <view class="hp-con" >
       <view class="hp-info" >
         <text class="hp-info-name">{{site.name}}</text>
@@ -81,7 +81,7 @@
   <view class="buymoney">
     <view class="bm-tit" >支付方式</view>
     <view class="bm-mode" bindtap="selpaytype"  data-type="2">
-      <view class="din fl" ><image class="buyIcon" src="/pages/images/images/pay_03.png" /></view>
+      <view class="din fl" ><image class="buyIcon" src="http://pnkp5i8sb.bkt.clouddn.com/pay_03.png" /></view>
       <view  class="bm-info din fl" >
         <text class="db">商票抵扣</text>
         <text class="db bm-balance">余额: ￥{{stat.balance}} </text>
@@ -92,7 +92,7 @@
       </view>
     </view>
     <view class="bm-mode" bindtap="selpaytype"  data-type="1">
-      <view class="din fl" ><image class="buyIcon" src="/pages/images/images/pay_08.png" /></view>
+      <view class="din fl" ><image class="buyIcon" src="http://pnkp5i8sb.bkt.clouddn.com/pay_08.png" /></view>
       <view class="bm-info din fl" >
         <text class="db">微信支付</text>
       </view>

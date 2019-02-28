@@ -109,6 +109,7 @@ Page({
      * 添加地址接口
      */
     addUserAddress: function(data) {
+        let that = this
         app.wxrequest({
             url: 'index/user/addUserAddress',
             data: {
@@ -122,13 +123,41 @@ Page({
             success: function(res) {
                 app.toast({ title: '添加地址成功' })
                 wx.navigateBack()
+            },
+            error(code) {
+                that.hintcode(code)
             }
         })
+    },
+    hintcode: function(code) {
+        switch (parseInt(code)) {
+            case 3003:
+                app.toast({ title: '手机格式有误' })
+                break;
+            case 3004:
+            case 3005:
+            case 3006:
+                app.toast({ title: '错误的省市区级名称' })
+                break;
+            case 3007:
+                app.toast({ title: '请填写详细街道地址' })
+                break;
+            case 3008:
+                app.toast({ title: '添加失败' })
+                break;
+            case 3010:
+                app.toast({ title: '请填写收货人姓名' })
+                break;
+            default:
+                app.toast({ title: '意料之外的错误' })
+                break;
+        }
     },
     /**
      * 修改地址接口
      */
     updateUserAddress: function(data) {
+        let that = this
         app.wxrequest({
             url: 'index/user/updateUserAddress',
             data: {
@@ -142,6 +171,9 @@ Page({
             },
             success: function(res) {
                 wx.navigateBack()
+            },
+            error(code) {
+                that.hintcode(code)
             }
         })
     },

@@ -63,7 +63,7 @@ App({
         })
         return logincode
     },
-    judgelogin: function(data) {
+    judgelogin: function(obj) {
         this.wxrequest({
             url: "index/user/getuser",
             success(res) {
@@ -226,6 +226,7 @@ App({
         this.toast({ title: text })
     },
     onShow: function(opt) {
+        this.getconid()
         this.globalData.pid = opt.query.pid || ''
         if (this.globalData.pid == '') return
         this.indexmain(this.globalData.pid)

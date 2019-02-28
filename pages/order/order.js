@@ -136,10 +136,8 @@ Page({
         })
     },
     cancelorder: function(e) {
-        console.log(e.currentTarget.dataset.orderno)
         let that = this
         app.modal({
-            title: '提示',
             content: '是否取消订单',
             success: function() {
                 app.wxrequest({
@@ -222,7 +220,6 @@ Page({
                     arr[i].order_status_text = '未知状态'
             }
         }
-        console.log(arr)
         return arr
     },
     /**
