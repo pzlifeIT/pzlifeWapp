@@ -12,7 +12,7 @@
   <image class="userBack" src="../images/images/myback_02.png" />
 </view>
 <view class="userheader" wx:if="{{loginStatus}}">
-  <navigator url='/pages/my/myInfo/myInfo?name={{userInfo.nick_name}}&phone={{userInfo.mobile}}' hover-class="none">
+  <navigator url='/pages/my/myInfo/myInfo?name={{userInfo.nick_name}}&phone={{userInfo.mobile}}' hover-class="none" open-type="navigate">
     <view class="headPhoto din fl" >
       <image src="{{userInfo.avatar}}" />
     </view>
@@ -70,6 +70,11 @@
     <view class="uoLi nobr" >
     </view>
   </view>
+</view>
+
+<view class="userFnLi" bindtap="activity" wx:if="{{userInfo.user_identity !=1}}">
+  <text >钻石接龙</text>
+  <image class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
 </view>
 
 <view class="userFnLi" bindtap="myQr">
