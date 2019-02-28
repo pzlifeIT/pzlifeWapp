@@ -10,6 +10,8 @@ page {
 	margin-bottom: 10rpx;
 	overflow: auto;
 	border-bottom: 1rpx solid #f7f7f7;
+	position: fixed;
+	top: 0;
 }
 
 .search {
@@ -49,6 +51,7 @@ page {
 .history-wai{
 	width: 750rpx;
 	overflow: hidden;
+	margin-top: 90rpx;
 }
 .history{
 	width: 736rpx;
@@ -98,12 +101,17 @@ page {
 .text{
 	margin: 0 19rpx;
 }
+.goods{
+	overflow: hidden;
+	margin-top: 90rpx;
+}
 .one_goods{
   width: 370rpx;
   height: 386rpx;
   float: left;
   margin: 2rpx;
   background-color: rgb(255, 255, 255)
+	
 }
 .one_goods .goods_img{
   width: 236rpx;

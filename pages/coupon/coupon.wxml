@@ -11,9 +11,9 @@
 </view>
 
 <view class="getCoupon" wx:if="{{coupon.length>=1}}">
-	<image lazy-load="true"  src="{{imgHost}}12121_05.png" class="coupon-icon"></image>
+	<image lazy-load="true" src="{{imgHost}}12121_05.png" class="coupon-icon"></image>
 	<text class="get-text">领券中心</text>
-	<image lazy-load="true"  src="{{imgHost}}jt_18.png" class="jt-icon"></image>
+	<image lazy-load="true" src="{{imgHost}}jt_18.png" class="jt-icon"></image>
 </view>
 
 <view class="coupon-list {{head == 1?'a1':''}}" wx:if="{{head == 1 && coupon.length>=1}}">
@@ -201,7 +201,7 @@
 <!-- 无优惠券 -->
 <view class="not" wx:if="{{coupon.length == 0}}">
 	<view class="not-coupon">
-		<image lazy-load="true"  src="{{imgHost}}not.png"></image>
+		<image lazy-load="true" src="{{imgHost}}not.png"></image>
 		<view class="not-text">暂无优惠券</view>
 		<view class="button">前往领券中心</view>
 	</view>

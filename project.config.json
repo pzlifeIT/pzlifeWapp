@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 24,
+			"current": 25,
 			"list": [
 				{
 					"id": 0,
@@ -200,6 +200,13 @@
 					"id": -1,
 					"name": "购买钻石会员",
 					"pathName": "pages/activity/buyvip/buyvip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "1",
+					"pathName": "pages/address/address",
 					"scene": null
 				}
 			]

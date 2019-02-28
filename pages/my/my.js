@@ -97,7 +97,7 @@ Page({
     myQr: function() {
         if (this.data.con_id) {
             wx.navigateTo({
-                url: "/pages/coupon/coupon"
+                url: ""
             })
         } else {
             app.toast({ title: "请先登录" })

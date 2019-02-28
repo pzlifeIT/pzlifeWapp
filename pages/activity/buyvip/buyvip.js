@@ -8,13 +8,14 @@ Page({
 	data: {
 		mask: false,
 		imgUrls: [
-			"http://pnkp5i8sb.bkt.clouddn.com/solitairebanner1.jpg",
-			"http://pnkp5i8sb.bkt.clouddn.com/solitairebanner3.jpg",
-			"http://pnkp5i8sb.bkt.clouddn.com/solitairebanner2.jpg"
+			app.globalData.host.imgHost+"solitairebanner1.jpg",
+			app.globalData.host.imgHost+"solitairebanner3.jpg",
+			app.globalData.host.imgHost+"solitairebanner2.jpg"
 		],
 		share_id: "",
 		con_id: "",
-		uid:""
+		uid:"",
+		imgHost:''
 	},
 	preventTouchMove: function() {
 		//防止用户操作弹出层外界面
@@ -144,6 +145,10 @@ Page({
 			share_id: share_id,
 			con_id: con_id
 		})
+		this.setData({
+		    imgHost: app.globalData.host.imgHost
+		})
+		console.log(app.globalData.host.imgHost)
 		if(options.uid){
 			this.setData({
 				uid:options.uid

@@ -1,4 +1,5 @@
 // pages/coupon/coupon.js
+const app = getApp()
 Page({
 
     /**

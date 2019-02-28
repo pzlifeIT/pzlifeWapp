@@ -1,4 +1,5 @@
 // pages/activity/buyvip/buyvip.js
+const app = getApp()
 Page({
 
 	/**
@@ -7,11 +8,12 @@ Page({
 	data: {
 		mask: true,
 		imgUrls: [
-			"http://pnkp5i8sb.bkt.clouddn.com/solitairebanner1.jpg",
-			"http://pnkp5i8sb.bkt.clouddn.com/solitairebanner3.jpg",
-			"http://pnkp5i8sb.bkt.clouddn.com/solitairebanner2.jpg"
+			app.globalData.host.imgHost+"solitairebanner1.jpg",
+			app.globalData.host.imgHost+"solitairebanner3.jpg",
+			app.globalData.host.imgHost+"solitairebanner2.jpg"
 		],
-		uid: ""
+		uid: "",
+		imgHost:''
 	},
 	button: function() {
 		let maks = !this.data.mask
@@ -26,6 +28,9 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
+		this.setData({
+		    imgHost: app.globalData.host.imgHost
+		})
 		if (options.uid) {
 			this.setData({
 				uid: options.uid

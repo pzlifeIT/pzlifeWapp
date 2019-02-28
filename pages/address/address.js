@@ -6,7 +6,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-        address: []
+        address: [],
+		imgHost:""
     },
 
     /**
@@ -14,6 +15,9 @@ Page({
      */
     onLoad: function(options) {
         // this.getUserAddress()
+		this.setData({
+		    imgHost: app.globalData.host.imgHost
+		})
     },
     redirect: function(e) {
         console.log(e.currentTarget.dataset.id)

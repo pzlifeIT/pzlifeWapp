@@ -10,7 +10,8 @@ Page({
         skus: '',
         address: [],
         num: 1,
-        quick: false
+        quick: false,
+		imgHost:''
     },
 
     /**
@@ -22,7 +23,10 @@ Page({
                 skus: options.skus,
                 quick: options.quick,
                 num: options.num
-            })
+            });
+			this.setData({
+			    imgHost: app.globalData.host.imgHost
+			})
             // this.getUserAddress()
     },
     setsite: function(e) {
