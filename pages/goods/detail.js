@@ -15,7 +15,8 @@ Page({
         buy: false,
         repertory: true,
         buyNum: 1,
-        swipercur: 1
+        swipercur: 1,
+        imgHost: ''
     },
     showModel: function() {
         this.setData({
@@ -223,7 +224,8 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
-            goodid: options.goodid
+            goodid: options.goodid,
+            imgHost: app.globalData.host.imgHost
         })
         this.getGoodInfo(this.data.goodid)
     },

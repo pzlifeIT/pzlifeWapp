@@ -11,7 +11,8 @@ Page({
         page: 1,
         mask: false,
         reach: true,
-        order_list: []
+        order_list: [],
+        imgHost: ''
     },
     comfir: function(e) {
         this.setData({
@@ -172,6 +173,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
+        this.setData({
+            imgHost: app.globalData.host.imgHost
+        })
         this.setData({
             status: options.status
         })

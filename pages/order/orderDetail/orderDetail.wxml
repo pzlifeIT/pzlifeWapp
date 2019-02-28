@@ -13,7 +13,7 @@
   <view class='order-number'><text class='number'>订单号：{{order_info.order_no}}</text><text class='status'>{{order_info.order_status_text}}</text></view>
   <view class='one-goods' wx:for="{{order_info.order_child}}">
 		<view class="goods-wai" wx:for="{{item.order_goods}}">
-			<view class='goods-image'><image src='{{item.sku_image}}'></image></view>
+			<view class='goods-image'><image lazy-load="true" src='{{item.sku_image}}'></image></view>
 			<view class='goods-info'>
 				<text class='goods-title'>{{item.goods_name}}</text>
 				<text class='goods-subtitle'>{{item.sku_json}}</text>

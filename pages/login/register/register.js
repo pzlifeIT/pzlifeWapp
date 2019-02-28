@@ -13,14 +13,17 @@ Page({
         getcode: "获取验证码",
         time: 59,
         disabled: false,
-        logcode: ""
+        logcode: "",
+        imgHost: ''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-
+        this.setData({
+            imgHost: app.globalData.host.imgHost
+        })
     },
     /**
      * 获取输入的值

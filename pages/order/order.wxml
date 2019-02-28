@@ -12,7 +12,7 @@
 <!-- 没有订单 -->
 <view class='empty' wx:if="{{order_list.length == 0}}">
   <view class='or-empty'>
-    <view class='icon'><image src='http://pnkp5i8sb.bkt.clouddn.com/emptyorder.png'></image></view>
+    <view class='icon'><image lazy-load="true" src='{{imgHost}}emptyorder.png'></image></view>
     <view class='text'>你还没有订单哦!</view>
   </view>
 </view>
@@ -28,7 +28,7 @@
   <navigator wx:for="{{item.order_goods}}" url='/pages/order/orderDetail/orderDetail?orderno={{item1.order_no}}'>
     <view class='one-goods'>
       <view class="goods-wai">
-        <view class='goods-image'><image src='{{item.sku_image}}'></image></view>
+        <view class='goods-image'><image lazy-load="true" src='{{item.sku_image}}'></image></view>
         <view class='goods-info'>
           <text class='goods-title'>{{item.goods_name}}</text>
           <text class='goods-subtitle'>{{item.sku_json}}</text>

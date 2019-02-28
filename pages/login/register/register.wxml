@@ -1,7 +1,7 @@
 <!--pages/login/register/register.wxml-->
 <view class="centert">
 	<view class="logo">
-		<image src="http://pnkp5i8sb.bkt.clouddn.com/logo1.png"></image>
+		<image lazy-load="true" src="{{imgHost}}logo1.png"></image>
 	</view>
 	<form></form>
 	<view class="phone">
