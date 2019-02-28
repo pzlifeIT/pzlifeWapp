@@ -12,7 +12,7 @@
 <!-- 没有订单 -->
 <view class='empty' wx:if="{{order_list.length == 0}}">
   <view class='or-empty'>
-    <view class='icon'><image src='/pages/images/images/emptyorder.png'></image></view>
+    <view class='icon'><image src='http://pnkp5i8sb.bkt.clouddn.com/emptyorder.png'></image></view>
     <view class='text'>你还没有订单哦!</view>
   </view>
 </view>

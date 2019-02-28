@@ -14,7 +14,7 @@
 		<view class="history-head">
 			<text class="head-left">最近搜索</text>
 			<view class="del" bindtap="del">
-				<image class="del-img" src="../images/images/del.png"></image>
+				<image class="del-img" src="http://pnkp5i8sb.bkt.clouddn.com/del.png"></image>
 			</view>
 		</view>
 		<view class="history-list">

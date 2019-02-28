@@ -15,14 +15,14 @@ App({
     },
     getconid: function() {
         let that = this
-		console.log("执行了")
+        console.log("执行了")
         wx.getStorage({
             key: "con_id",
             success(res) {
                 that.globalData.con_id = res.data
             }
         });
-		console.log(that.globalData.con_id)
+        console.log(that.globalData.con_id)
     },
     setconid: function(conid) {
         wx.setStorage({
@@ -100,6 +100,7 @@ App({
         })
     },
     login: function() {
+        console.log('登录')
         this.modal({
             title: "请先登录",
             content: "是否确定去登录",
@@ -133,21 +134,22 @@ App({
                 'content-type': 'application/json' // 默认值
             },
             success(res) {
+                console.log(res)
                 wx.hideLoading()
                 if (res.statusCode == 200) {
                     let result = JSON.parse(res.data);
+                    console.log(result)
                     if (result.code == 200) {
                         if (typeof obj.success == 'function') {
                             obj.success(result)
                         }
                     } else {
-                        if (typeof obj.error == 'function') {
-                            if (result.code == 5000) {
-                                that.login()
-                            } else {
-                                obj.error(result.code)
-                            }
-
+                        console.log(result.code)
+                        console.log(result.code == 5000)
+                        if (result.code == 5000) {
+                            that.login()
+                        } else if (typeof obj.error == 'function') {
+                            obj.error(result.code)
                         }
                     }
                 } else {
