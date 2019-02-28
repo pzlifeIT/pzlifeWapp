@@ -32,40 +32,40 @@
 <view class="icon-bar">
 	<view class="slogan">
 		<view class="slogan-one">
-			<image src="/pages/images/images/bao.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/bao.png"></image>
 			<view class="slogan-text">全民挑选产品</view>
 		</view>
 		<view class="slogan-one">
-			<image src="/pages/images/images/qian.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/qian.png"></image>
 			<view class="slogan-text">全民审核价格</view>
 		</view>
 		<view class="slogan-one">
-			<image src="/pages/images/images/zhi.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/zhi.png"></image>
 			<view class="slogan-text">全民监控质量</view>
 		</view>
 	</view>
 	<view class="icon-botton">
 		<view class="botton-one">
 			<view class="icon-img">
-				<image src="/pages/images/images/kf.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/kf.png"></image>
 			</view>
 			<view class="icon-text"><text>客服服务</text></view>
 		</view>
 		<view class="botton-one">
 			<view class="icon-img">
-				<image src="/pages/images/images/kf.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/kf.png"></image>
 			</view>
 			<view class="icon-text"><text>领券中心</text></view>
 		</view>
 		<view class="botton-one">
 			<view class="icon-img">
-				<image src="/pages/images/images/kf.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/kf.png"></image>
 			</view>
 			<view class="icon-text"><text>限时抢购</text></view>
 		</view>
 		<view class="botton-one">
 			<view class="icon-img">
-				<image src="/pages/images/images/kf.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/kf.png"></image>
 			</view>
 			<view class="icon-text"><text>全国拼团</text></view>
 		</view>
@@ -77,17 +77,17 @@
 	<view class="scheme-title">推荐方案</view>
 	<view class="scheme-lump">
 		<view class="scheme-main">
-			<image src="/pages/images/images/jy_02.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/jy_02.png"></image>
 		</view>
 		<view class="scheme-list">
 			<view class="scheme-one">
-				<image src="/pages/images/images/tjjy_03.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/tjjy_03.png"></image>
 			</view>
 			<view class="scheme-one two">
-				<image src="/pages/images/images/tjjy_03.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/tjjy_03.png"></image>
 			</view>
 			<view class="scheme-one">
-				<image src="/pages/images/images/tjjy_03.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/tjjy_03.png"></image>
 			</view>
 		</view>
 	</view>
@@ -97,16 +97,16 @@
 	<view class="scheme-title">生活导购</view>
 	<view class="lump">
 		<view class="lump-one">
-			<image src="/pages/images/images/shdg.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/shdg.png"></image>
 		</view>
 		<view class="lump-one">
-			<image src="/pages/images/images/shdg.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/shdg.png"></image>
 		</view>
 		<view class="lump-one">
-			<image src="/pages/images/images/shdg.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/shdg.png"></image>
 		</view>
 		<view class="lump-one">
-			<image src="/pages/images/images/shdg.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/shdg.png"></image>
 		</view>
 	</view>
 </view>
@@ -114,61 +114,61 @@
 <view class="scheme">
 	<view class="scheme-title">热门商品</view>
 	<view class="subject-img">
-		<image src="/pages/images/images/rmsp.png"></image>
+		<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp.png"></image>
 	</view>
 	<view class="goods-list">
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
@@ -177,7 +177,7 @@
 	<view class="more">
 		<view class="more-text">查看更多</view>
 		<view class="more-img">
-			<image src="/pages/images/images/more.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/more.png"></image>
 		</view>
 	</view>
 </view>
@@ -187,33 +187,33 @@
 	<view class="scheme-title">商品热销</view>
 	<view class="goods-list">
 		 <view class="left-img">
-			 <image src="/pages/images/images/sprx.png"></image>
+			 <image src="http://pnkp5i8sb.bkt.clouddn.com/sprx.png"></image>
 		 </view>
 		 <view class="right-goods">
 			  <view class="right-goods-one">
 					<view class="one-img">
-						<image src="/pages/images/images/sprx_13.png"></image>
+						<image src="http://pnkp5i8sb.bkt.clouddn.com/sprx_13.png"></image>
 					</view>
 					<view class="goods-title">哈尔滨红小豆</view>
 					<view class="goods-price">￥15</view>
 				</view>
 				<view class="right-goods-one">
 					<view class="one-img">
-						<image src="/pages/images/images/sprx_13.png"></image>
+						<image src="http://pnkp5i8sb.bkt.clouddn.com/sprx_13.png"></image>
 					</view>
 					<view class="goods-title">哈尔滨红小豆</view>
 					<view class="goods-price">￥15</view>
 				</view>
 				<view class="right-goods-one">
 					<view class="one-img">
-						<image src="/pages/images/images/sprx_13.png"></image>
+						<image src="http://pnkp5i8sb.bkt.clouddn.com/sprx_13.png"></image>
 					</view>
 					<view class="goods-title">哈尔滨红小豆</view>
 					<view class="goods-price">￥15</view>
 				</view>
 				<view class="right-goods-one">
 					<view class="one-img">
-						<image src="/pages/images/images/sprx_13.png"></image>
+						<image src="http://pnkp5i8sb.bkt.clouddn.com/sprx_13.png"></image>
 					</view>
 					<view class="goods-title">哈尔滨红小豆</view>
 					<view class="goods-price">￥15</view>
@@ -223,7 +223,7 @@
 	<view class="more">
 		<view class="more-text">查看更多</view>
 		<view class="more-img">
-			<image src="/pages/images/images/more.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/more.png"></image>
 		</view>
 	</view>
 </view>
@@ -231,62 +231,62 @@
 <view class="scheme">
 	<view class="scheme-title">速食调味</view>
 	<view class="subject-img cate">
-		<image class="cate-left" src="/pages/images/images/fll_12.png"></image>
-		<image class="cate-right" src="/pages/images/images/lfr_13.png"></image>
+		<image class="cate-left" src="http://pnkp5i8sb.bkt.clouddn.com/fll_12.png"></image>
+		<image class="cate-right" src="http://pnkp5i8sb.bkt.clouddn.com/lfr_13.png"></image>
 	</view>
 	<view class="goods-list">
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="goods-one">
 			<view class="goods-img">
-				<image src="/pages/images/images/rmsp_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/rmsp_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
@@ -295,7 +295,7 @@
 	<view class="more">
 		<view class="more-text">查看更多</view>
 		<view class="more-img">
-			<image src="/pages/images/images/more.png"></image>
+			<image src="http://pnkp5i8sb.bkt.clouddn.com/more.png"></image>
 		</view>
 	</view>
 </view>
@@ -306,28 +306,28 @@
 	<view class="like">
 		<view class="like-one">
 			<view class="like-img">
-				<image src="/pages/images/images/like_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/like_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="like-one">
 			<view class="like-img">
-				<image src="/pages/images/images/like_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/like_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="like-one">
 			<view class="like-img">
-				<image src="/pages/images/images/like_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/like_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>
 		</view>
 		<view class="like-one">
 			<view class="like-img">
-				<image src="/pages/images/images/like_12.png"></image>
+				<image src="http://pnkp5i8sb.bkt.clouddn.com/like_12.png"></image>
 			</view>
 			<view class="goods-title">克林伯瑞干红葡萄酒</view>
 			<view class="goods-price">￥123</view>

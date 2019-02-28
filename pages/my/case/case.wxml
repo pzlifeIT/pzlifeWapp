@@ -25,7 +25,7 @@
 
 <view class="not">
 	<view class="not-case">
-		<image src="../../images/images/yhq.png"></image>
+		<image src="http://pnkp5i8sb.bkt.clouddn.com/yhq.png"></image>
 		<view class="text">暂无商票</view>
 	</view>
 </view>

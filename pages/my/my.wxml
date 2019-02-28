@@ -5,11 +5,11 @@
 <view class="userheader" wx:if="{{!loginStatus}}">
   <navigator url='/pages/login/login' hover-class="none">
     <view class="headPhoto din fl" >
-      <image src="../images/images/logo_03.png" />
+      <image src="http://pnkp5i8sb.bkt.clouddn.com/logo_03.png" />
     </view>
     <text class="userLogin din fl">请登录</text>
   </navigator>
-  <image class="userBack" src="../images/images/myback_02.png" />
+  <image class="userBack" src="http://pnkp5i8sb.bkt.clouddn.com/myback_02.png" />
 </view>
 <view class="userheader" wx:if="{{loginStatus}}">
   <navigator url='/pages/my/myInfo/myInfo?name={{userInfo.nick_name}}&phone={{userInfo.mobile}}' hover-class="none" open-type="navigate">
@@ -19,25 +19,25 @@
     <text class="userLogin din fl">{{userInfo.nick_name}}</text>
 		<view class="vid"><text>{{userInfo.user_vid}}</text></view>
   </navigator>
-  <image class="userBack" src="../images/images/myback_02.png" />
+  <image class="userBack" src="http://pnkp5i8sb.bkt.clouddn.com/myback_02.png" />
 	<view class="diamond-card" wx:if="{{userInfo.user_identity == 1}}">
-		<image src="../images/images/diamond.png"></image>
+		<image src="http://pnkp5i8sb.bkt.clouddn.com/diamond.png"></image>
 	</view>
 </view> 
 
 <view class="userCost" >
   <view class="userCoupon" bindtap="coupon">
-    <image class="ucIcon" src="../images/images/12121_05.png" wx:if="{{loginStatus == false}}"/>
+    <image class="ucIcon" src="http://pnkp5i8sb.bkt.clouddn.com/12121_05.png" wx:if="{{loginStatus == false}}"/>
 		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">0</text><text class="text">张</text></view>
     <text class="userText" >优惠券</text>
   </view>
   <view class="userIntegral" bindtap="inte">
-    <image  class="ucIcon" src="../images/images/12121_07.png" wx:if="{{loginStatus === false}}" />
+    <image  class="ucIcon" src="http://pnkp5i8sb.bkt.clouddn.com/12121_07.png" wx:if="{{loginStatus === false}}" />
 		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">{{userInfo.integral}}</text><text class="text">分</text></view>
     <text class="userText" >购物积分</text>
   </view>
   <view class="userMoney" bindtap="money">
-    <image  class="ucIcon" src="../images/images/12121_10.png" wx:if="{{loginStatus ==false}}" />
+    <image  class="ucIcon" src="http://pnkp5i8sb.bkt.clouddn.com/12121_10.png" wx:if="{{loginStatus ==false}}" />
 		<view class="ucNum" wx:if="{{loginStatus}}"><text class="num">{{userInfo.balance}}</text><text class="text">元</text></view>
     <text class="userText" >我的商票</text>
   </view>
@@ -46,7 +46,7 @@
 <view class="userorder">
     <view  class="uoHeader" bindtap="checkOrder" data-status="">
       <text  class="uoHeaderText" >我的订单</text>
-      <view class="uoHeaderLook din fr" >查看全部<image class="uoimg din fr" src="../images/images/jt_18.png" alt=""/></view>
+      <view class="uoHeaderLook din fr" >查看全部<image class="uoimg din fr" src="http://pnkp5i8sb.bkt.clouddn.com/jt_18.png" alt=""/></view>
     </view>
   <view class="uoList">
     <view class="uoLi" bindtap="checkOrder" data-status="1" >
@@ -62,7 +62,7 @@
       <text class="userText" >待收货</text>
     </view>
     <view class="uoLi"  bindtap="checkOrder" data-status="6">
-      <image class="uoIcon" src="../images/images/444_14.png" />
+      <image class="uoIcon" src="http://pnkp5i8sb.bkt.clouddn.com/444_14.png" />
       <text class="userText" >待评价</text>
     </view>
     <view class="uoLi" >
@@ -74,40 +74,40 @@
 
 <view class="userFnLi" bindtap="activity" wx:if="{{userInfo.user_identity !=1}}">
   <text >钻石接龙</text>
-  <image class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
+  <image class="ulimg din fr" src="http://pnkp5i8sb.bkt.clouddn.com/jt_18.png" alt=""/>
 </view>
 
 <view class="userFnLi" bindtap="myQr">
   <text >我的二维码</text>
-  <image class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
+  <image class="ulimg din fr" src="http://pnkp5i8sb.bkt.clouddn.com/jt_18.png" alt=""/>
 </view>
 
 <view class="userFnLi"  bindtap="bindPhone">
   <text >绑定手机号</text>
-  <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
+  <image  class="ulimg din fr" src="http://pnkp5i8sb.bkt.clouddn.com/jt_18.png" alt=""/>
 </view>
 
 <view  bindtap="toaddress" hover-class="other-navigator-hover" class="userFnLi" >
   <text >地址管理</text>
-  <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
+  <image  class="ulimg din fr" src="http://pnkp5i8sb.bkt.clouddn.com/jt_18.png" alt=""/>
 </view>
 
 <view bindtap="tonewpassword"  hover-class="other-navigator-hover" class="userFnLi" >
   <text >修改密码</text>
-  <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
+  <image  class="ulimg din fr" src="http://pnkp5i8sb.bkt.clouddn.com/jt_18.png" alt=""/>
 </view>
 <!-- 
 <navigator  class="userFnLi" >
   <text >我的收藏</text>
-  <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
+  <image  class="ulimg din fr" src="http://pnkp5i8sb.bkt.clouddn.com/jt_18.png" alt=""/>
 </navigator> -->
 
 <view class="userFnLi" bindtap="call" >
   <text >投诉专线</text>
-  <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
+  <image  class="ulimg din fr" src="http://pnkp5i8sb.bkt.clouddn.com/jt_18.png" alt=""/>
 </view>
 
 <!-- <navigator class="userFnLi" >
   <text >买主要求</text>
-  <image  class="ulimg din fr" src="../images/images/jt_18.png" alt=""/>
+  <image  class="ulimg din fr" src="http://pnkp5i8sb.bkt.clouddn.com/jt_18.png" alt=""/>
 </navigator> -->

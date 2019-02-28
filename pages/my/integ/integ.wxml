@@ -75,7 +75,7 @@
 
 <view class="not" wx:if="{{inte.length == 0}}">
 	<view class="not-case">
-		<image src="../../images/images/jf.png"></image>
+		<image src="http://pnkp5i8sb.bkt.clouddn.com/jf.png"></image>
 		<view class="text">暂无积分</view>
 	</view>
 </view>
