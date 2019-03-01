@@ -13,7 +13,7 @@ Page({
             success(res) {
                 if (res.code) {
                     app.wxrequest({
-                        url: "index/user/loginuserbywx",
+                        url: "user/loginuserbywx",
                         data: { code: res.code, buid: app.globalData.pid },
                         nocon: true,
                         success(res) {

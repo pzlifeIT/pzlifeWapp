@@ -15,7 +15,7 @@ Page({
         subData: [],
         showSub: [],
         ind: 0,
-		imgHost:''
+        imgHost: ''
     },
 
 
@@ -47,9 +47,9 @@ Page({
     onLoad: function(options) {
         // this.getClassify()
         this.getSubject()
-		this.setData({
-		    imgHost: app.globalData.host.imgHost
-		})
+        this.setData({
+            imgHost: app.globalData.host.imgHost
+        })
     },
     /**
      * 获取分类
@@ -57,7 +57,7 @@ Page({
     getClassify: function() {
         let that = this
         app.wxrequest({
-            url: 'index/category/getfirstcate',
+            url: 'category/getfirstcate',
             nocon: true,
             success(res) {
                 let first = that.getfirst(res.data),
@@ -78,7 +78,7 @@ Page({
     getSubject: function() {
         let that = this
         app.wxrequest({
-            url: "index/category/getGoodsSubject",
+            url: "category/getGoodsSubject",
             nocon: true,
             success(res) {
                 let firstSub = that.getFirstSub(res.data),

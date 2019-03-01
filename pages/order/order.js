@@ -50,7 +50,7 @@ Page({
         let that = this
         let orderno = e.currentTarget.dataset.orderno
         app.wxrequest({
-            url: 'index/order/confirmOrder',
+            url: 'order/confirmOrder',
             data: {
                 order_no: orderno
             },
@@ -73,12 +73,13 @@ Page({
         console.log(e.currentTarget.dataset.orderno)
         let that = this
         app.wxrequest({
-            url: 'pay/pay/pay',
+            url: 'pay/pay',
             data: {
                 order_no: e.currentTarget.dataset.orderno,
                 payment: '1',
                 platform: '1'
             },
+            host: 2,
             nocon: true,
             success: function(res) {
                 let parameters = res.parameters
@@ -142,7 +143,7 @@ Page({
             content: '是否取消订单',
             success: function() {
                 app.wxrequest({
-                    url: 'index/order/cancelorder',
+                    url: 'order/cancelorder',
                     data: {
                         order_no: e.currentTarget.dataset.orderno
                     },
@@ -232,7 +233,7 @@ Page({
     getUserOrderList: function(data) {
         let that = this
         app.wxrequest({
-            url: 'index/order/getUserOrderList',
+            url: 'order/getUserOrderList',
             data: {
                 orderStatus: parseInt(data.orderStatus) || '',
                 page: data.page || 1,

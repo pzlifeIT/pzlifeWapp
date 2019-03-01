@@ -18,7 +18,7 @@ Page({
         paymoney: {},
         num: 1,
         quick: 0,
-		imgHost:''
+        imgHost: ''
     },
     hideModel: function(e) {
         this.setData({
@@ -98,9 +98,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-		this.setData({
-		    imgHost: app.globalData.host.imgHost
-		});
+        this.setData({
+            imgHost: app.globalData.host.imgHost
+        });
         this.setData({
             skus: options.skus,
             siteid: options.siteid || '',
@@ -114,7 +114,7 @@ Page({
     createorder: function(data) {
         let that = this
         app.wxrequest({
-            url: 'index/order/createorder',
+            url: 'order/createorder',
             data: {
                 sku_id_list: that.data.skus,
                 user_address_id: that.data.siteid,
@@ -165,7 +165,7 @@ Page({
     quickcreateorder: function(data) {
         let that = this
         app.wxrequest({
-            url: 'index/order/quickcreateorder',
+            url: 'order/quickcreateorder',
             data: {
                 buid: app.globalData.pid,
                 sku_id: that.data.skus,
@@ -219,12 +219,13 @@ Page({
     pay: function(data) {
         let that = this
         app.wxrequest({
-            url: 'pay/pay/pay',
+            url: 'pay/pay',
             data: {
                 order_no: data.order_no,
                 payment: '1',
                 platform: '1'
             },
+            host: 2,
             nocon: true,
             success: function(res) {
                 let parameters = res.parameters
@@ -298,7 +299,7 @@ Page({
     getUserAddress: function(data) {
         let that = this
         app.wxrequest({
-            url: 'index/user/getUserAddress',
+            url: 'user/getUserAddress',
             data: {
                 address_id: data.address_id
             },
@@ -315,7 +316,7 @@ Page({
     createsettlement: function(data) {
         let that = this
         app.wxrequest({
-            url: "index/order/createsettlement",
+            url: "order/createsettlement",
             data: {
                 sku_id_list: that.data.skus,
                 user_address_id: that.data.siteid
@@ -366,7 +367,7 @@ Page({
     quickSettlement: function(data) {
         let that = this
         app.wxrequest({
-            url: "index/order/quicksettlement",
+            url: "order/quicksettlement",
             data: {
                 buid: app.globalData.pid,
                 sku_id: that.data.skus,

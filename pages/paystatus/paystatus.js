@@ -29,7 +29,7 @@ Page({
     getsite: function(id) {
         let that = this
         app.wxrequest({
-            url: 'index/user/getUserAddress',
+            url: 'user/getUserAddress',
             data: {
                 address_id: id
             },
@@ -54,12 +54,13 @@ Page({
     gopay: function() {
         let that = this
         app.wxrequest({
-            url: 'pay/pay/pay',
+            url: 'pay/pay',
             data: {
                 order_no: that.data.orderno,
                 payment: '1',
                 platform: '1'
             },
+            host: 2,
             nocon: true,
             success: function(res) {
                 let parameters = res.parameters

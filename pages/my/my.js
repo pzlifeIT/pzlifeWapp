@@ -38,7 +38,7 @@ Page({
     getUser: function() {
         let that = this
         app.wxrequest({
-            url: "index/user/getuser",
+            url: "user/getuser",
             success(res) {
                 let userInfo = res.data
                 switch (parseInt(userInfo.user_identity)) {

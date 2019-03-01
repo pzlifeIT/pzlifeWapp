@@ -205,7 +205,7 @@ Page({
     addUserCart: function(data) {
         let that = this
         app.wxrequest({
-            url: 'index/cart/addUserCart',
+            url: 'cart/addUserCart',
             data: {
                 goods_skuid: data.goods_skuid,
                 goods_num: data.goods_num,
@@ -236,7 +236,7 @@ Page({
         let t = this,
             goodData = {}
         app.wxrequest({
-            url: 'index/goods/getGoods',
+            url: 'goods/getGoods',
             data: {
                 goods_id: id,
                 source: 4

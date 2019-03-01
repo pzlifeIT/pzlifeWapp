@@ -62,7 +62,7 @@ Page({
     getSearchGood: function(search) {
         let that = this
         app.wxrequest({
-            url: "index/goods/getSearchGoods",
+            url: "goods/getSearchGoods",
             data: { search: search },
             nocon: true,
             success(res) {

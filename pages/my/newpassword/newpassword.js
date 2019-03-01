@@ -38,7 +38,7 @@ Page({
             return
         }
         app.wxrequest({
-            url: "index/user/sendvercode",
+            url: "user/sendvercode",
             data: {
                 mobile: phone,
                 stype: 2
@@ -81,7 +81,7 @@ Page({
             return
         }
         app.wxrequest({
-            url: "index/user/resetpassword",
+            url: "user/resetpassword",
             data: {
                 mobile: phone,
                 vercode: code,

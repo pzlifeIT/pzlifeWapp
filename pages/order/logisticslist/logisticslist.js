@@ -23,7 +23,7 @@ Page({
     getOrderSubpackage: function(orderno) {
         let that = this
         app.wxrequest({
-            url: 'index/order/getOrderSubpackage',
+            url: 'order/getOrderSubpackage',
             data: {
                 order_no: orderno
             },

@@ -11,7 +11,7 @@ Page({
         address: [],
         num: 1,
         quick: false,
-		imgHost:''
+        imgHost: ''
     },
 
     /**
@@ -19,14 +19,14 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
-                siteid: options.siteid,
-                skus: options.skus,
-                quick: options.quick,
-                num: options.num
-            });
-			this.setData({
-			    imgHost: app.globalData.host.imgHost
-			})
+            siteid: options.siteid,
+            skus: options.skus,
+            quick: options.quick,
+            num: options.num
+        });
+        this.setData({
+                imgHost: app.globalData.host.imgHost
+            })
             // this.getUserAddress()
     },
     setsite: function(e) {
@@ -41,7 +41,7 @@ Page({
     getUserAddress: function() {
         let that = this
         app.wxrequest({
-            url: 'index/user/getUserAddress',
+            url: 'user/getUserAddress',
             data: {
                 address_id: ''
             },

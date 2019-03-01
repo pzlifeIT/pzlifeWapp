@@ -40,7 +40,7 @@ Page({
             return
         }
         app.wxrequest({
-            url: "index/user/sendvercode",
+            url: "user/sendvercode",
             data: {
                 mobile: phone,
                 stype: 3
@@ -101,7 +101,7 @@ Page({
             app.toast({ title: '请填写手机号码' })
             return
         }
-        if (phone.length < 11) {
+        if (mobile.length < 11) {
             app.toast({ title: '请填写11位手机号码' })
             return
         }
@@ -110,7 +110,7 @@ Page({
             return
         }
         app.wxrequest({
-            url: "index/user/quicklogin",
+            url: "user/quicklogin",
             data: {
                 mobile: mobile,
                 encrypteddata: encrypteddata,

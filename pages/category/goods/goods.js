@@ -25,14 +25,14 @@ Page({
         }
 
     },
-    
+
     /**
      * 获取专题商品
      */
     getSubGoodsList: function(sub_id) {
         let that = this
         app.wxrequest({
-            url: "index/goods/getSubjectGoods",
+            url: "goods/getSubjectGoods",
             data: {
                 subject_id: sub_id,
                 page: that.data.page || 1,

@@ -49,7 +49,7 @@ Page({
             return
         }
         app.wxrequest({
-            url: "index/user/sendvercode",
+            url: "user/sendvercode",
             data: {
                 mobile: phone,
                 stype: 1
@@ -133,7 +133,7 @@ Page({
             })
         }
         app.wxrequest({
-            url: "index/user/register",
+            url: "user/register",
             data: {
                 mobile: mobile,
                 encrypteddata: encrypteddata,

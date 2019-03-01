@@ -11,16 +11,16 @@ Page({
         mobile: '',
         address: '',
         region: [],
-		imgHost:""
+        imgHost: ""
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-		this.setData({
-		    imgHost: app.globalData.host.imgHost
-		})
+        this.setData({
+            imgHost: app.globalData.host.imgHost
+        })
         if (options.id) {
             this.setData({
                 id: options.id
@@ -115,7 +115,7 @@ Page({
     addUserAddress: function(data) {
         let that = this
         app.wxrequest({
-            url: 'index/user/addUserAddress',
+            url: 'user/addUserAddress',
             data: {
                 province_name: data.province_name,
                 city_name: data.city_name,
@@ -163,7 +163,7 @@ Page({
     updateUserAddress: function(data) {
         let that = this
         app.wxrequest({
-            url: 'index/user/updateUserAddress',
+            url: 'user/updateUserAddress',
             data: {
                 address_id: data.address_id,
                 province_name: data.province_name,
@@ -187,7 +187,7 @@ Page({
     getUserAddress: function(id) {
         let that = this
         app.wxrequest({
-            url: 'index/user/getUserAddress',
+            url: 'user/getUserAddress',
             data: {
                 address_id: id
             },

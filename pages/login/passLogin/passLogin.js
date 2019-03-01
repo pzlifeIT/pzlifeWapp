@@ -24,7 +24,7 @@ Page({
         let mobile = this.data.phone,
             password = this.data.pass
         app.wxrequest({
-            url: "index/user/login",
+            url: "user/login",
             data: { mobile: mobile, password: password, buid: app.globalData.pid },
             nocon: true,
             success(res) {

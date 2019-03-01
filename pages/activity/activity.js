@@ -91,7 +91,7 @@ Page({
         } else if (this.data.identity == 3 || this.data.identity == 4) {
             //如果是boss，发请求判断是否领完，如果没有领完就提示怎么开始游戏
             app.wxrequest({
-                url: "index/rights/IsBossDominos",
+                url: "rights/IsBossDominos",
                 nocon: false,
                 success(res) {
                     that.setData({
@@ -120,7 +120,7 @@ Page({
     },
     lingvip: function(share_id, uid) {
         app.wxrequest({
-            url: "index/rights/receiveDiamondvip",
+            url: "rights/receiveDiamondvip",
             data: { parent_id: share_id },
             nocon: false,
             success(res) {
@@ -149,7 +149,7 @@ Page({
                     if (res.data.user_identity == 1) {
                         //如果是普通用户，判断分享者有没有权限
                         app.wxrequest({
-                            url: "index/rights/IsGetDominos",
+                            url: "rights/IsGetDominos",
                             data: {
                                 parent_id: share_id
                             },
@@ -173,7 +173,7 @@ Page({
                         //判断是不是发起者进来了，如果是就判断还有没有资格
                         if (app.globalData.con_id == share_id) {
                             app.wxrequest({
-                                url: "index/rights/IsBossDominos",
+                                url: "rights/IsBossDominos",
                                 nocon: false,
                                 success(res) {
                                     that.setData({

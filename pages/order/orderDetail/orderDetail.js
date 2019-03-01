@@ -72,7 +72,7 @@ Page({
     getUserOrderInfo: function(data) {
         let that = this
         app.wxrequest({
-            url: 'index/order/getUserOrderInfo',
+            url: 'order/getUserOrderInfo',
             data: {
                 order_no: data.orderno
             },

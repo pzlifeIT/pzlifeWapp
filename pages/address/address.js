@@ -7,7 +7,7 @@ Page({
      */
     data: {
         address: [],
-		imgHost:""
+        imgHost: ""
     },
 
     /**
@@ -15,9 +15,9 @@ Page({
      */
     onLoad: function(options) {
         // this.getUserAddress()
-		this.setData({
-		    imgHost: app.globalData.host.imgHost
-		})
+        this.setData({
+            imgHost: app.globalData.host.imgHost
+        })
     },
     redirect: function(e) {
         console.log(e.currentTarget.dataset.id)
@@ -28,7 +28,7 @@ Page({
     getUserAddress: function() {
         let that = this
         app.wxrequest({
-            url: 'index/user/getUserAddress',
+            url: 'user/getUserAddress',
             data: {
                 address_id: ''
             },

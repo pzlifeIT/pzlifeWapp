@@ -7,6 +7,7 @@ App({
         let that = this
         that.globalData.con_id = wx.getStorageSync('con_id') || ''
         that.globalData.host = config
+        console.log(wx.getAccountInfoSync())
     },
     globalData: {
         userInfo: {},
@@ -67,7 +68,7 @@ App({
     getUserInfo: function() {
         let that = this
         this.wxrequest({
-            url: "index/user/getuser",
+            url: "user/getuser",
             success(res) {
                 that.globalData.userInfo = res.data
             }
@@ -75,7 +76,7 @@ App({
     },
     judgelogin: function(obj) {
         this.wxrequest({
-            url: "index/user/getuser",
+            url: "user/getuser",
             success(res) {
                 typeof obj.success == 'function' ? obj.success(res) : ''
             }
@@ -84,7 +85,7 @@ App({
     indexmain: function(id) {
         console.log(this.globalData.con_id)
         this.wxrequest({
-            url: 'index/user/indexmain',
+            url: 'user/indexmain',
             data: {
                 buid: id
             },
@@ -99,16 +100,15 @@ App({
             success(res) {
                 if (res.confirm) {
                     console.log('用户点击确定')
-                    data.success()
+                    typeof data.success == 'function' ? data.success() : ''
                 } else if (res.cancel) {
-                    data.cancel()
+                    typeof data.cancel == 'function' ? data.cancel() : ''
                     console.log('用户点击取消')
                 }
             }
         })
     },
     login: function() {
-        console.log('登录')
         this.modal({
             title: "请先登录",
             content: "是否确定去登录",
@@ -120,7 +120,8 @@ App({
         })
     },
     wxrequest: function(obj) {
-        let that = this
+        let that = this,
+            url = ''
         obj.data = obj.data || {}
         if (!obj.nocon) {
             if (that.globalData.con_id == '') {
@@ -133,8 +134,14 @@ App({
         if (!obj.noloading) {
             wx.showLoading({ title: '加载中' })
         }
+        obj.host = obj.host || 1
+        if (obj.host == 2) {
+            url = config.payHost
+        } else {
+            url = config.apiHost
+        }
         wx.request({
-            url: config.apiHost + obj.url,
+            url: url + obj.url,
             data: obj.data || {},
             method: obj.method || 'POST',
             dataType: JSON,
