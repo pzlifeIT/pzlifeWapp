@@ -9,6 +9,7 @@
         "pages/category/goods/goods",
         "pages/goods/detail",
         "pages/address/address",
+        
         "pages/address/installAddress/installAddress",
         "pages/order/orderDetail/orderDetail",
         "pages/order/order",
