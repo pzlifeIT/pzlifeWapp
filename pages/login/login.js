@@ -34,8 +34,9 @@ Page({
                                     wx.navigateTo({
                                         url: "/pages/login/captchaLogin/captchaLogin"
                                     })
+									 clearTimeout(timer)
                                 }, 1500);
-                                clearTimeout(timer)
+                               
                             } else if (res == 3003) {
                                 app.toast({
                                     title: "登录失败,请稍后重试",
