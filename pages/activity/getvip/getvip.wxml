@@ -2,24 +2,24 @@
 <swiper class='pz-swiper' autoplay='true' indicator-dots="true" circular='true'>
 	<block wx:for="{{imgUrls}}">
 		<swiper-item>
-			<image src="{{item}}" class="slide-image" />
+			<image lazy-load="true" src="{{item}}" class="slide-image" />
 		</swiper-item>
 	</block>
 </swiper>
 <view class="bg">
-	<image src="{{imgHost}}member01.png"></image>
-	<image class="di" src="{{imgHost}}member02.png"></image>
+	<image lazy-load="true" src="{{imgHost}}member01.png"></image>
+	<image lazy-load="true" class="di" src="{{imgHost}}member02.png"></image>
 	<view class="buy">立即购买</view>
 </view>
 
 <view class="mask" wx:if="{{mask}}" catchtouchmove='preventTouchMove'>
-	<image class="shou" src="{{imgHost}}shou.png"></image>
+	<image lazy-load="true" class="shou" src="{{imgHost}}shou.png"></image>
 	<view class="hint">
 		<view class="status">
 			<view class="success">领取成功</view>
 			<view class="isvip">恭喜成为钻石会员</view>
 		</view>
-		<image src="{{imgHost}}hint_03.png"></image>
+		<image lazy-load="true" src="{{imgHost}}hint_03.png"></image>
 		<view class="button">
 			<view>我知道了</view>
 		</view>

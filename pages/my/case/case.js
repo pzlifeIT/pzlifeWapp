@@ -1,4 +1,5 @@
 // pages/my/case/case.js
+const app = getApp()
 Page({
 
     /**
