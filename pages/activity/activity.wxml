@@ -1,9 +1,9 @@
 <view class="bg">
-	<image src="{{imgHost}}nomember01.png"></image>
-	<image src="{{imgHost}}nomember02.png"></image>
+	<image lazy-load="true" src="{{imgHost}}nomember01.png"></image>
+	<image lazy-load="true" src="{{imgHost}}nomember02.png"></image>
 </view>
 <view class="mask" wx:if="{{mask}}" catchtouchmove='preventTouchMove'>
-	<image class="shou" src="..//shou.png"></image>
+	<image class="shou" src="{{imgHost}}shou.png"></image>
 	<view class="centert">
 		<image class="text" src="{{imgHost}}text_03.png"></image>
 		<view class="button" bindtap="editstatus">

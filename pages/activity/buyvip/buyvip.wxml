@@ -7,13 +7,13 @@
 	</block>
 </swiper>
 <view class="bg">
-	<image lazy-load="true" lazy-load="true" src="{{imgHost}}member01.png"></image>
-	<image lazy-load="true" lazy-load="true" class="di" src="{{imgHost}}member02.png"></image>
+	<image lazy-load="true" src="{{imgHost}}member01.png"></image>
+	<image lazy-load="true" class="di" src="{{imgHost}}member02.png"></image>
 	<view class="buy" bindtap="buy">立即购买</view>
 </view>
 
 <view class="mask" wx:if="{{mask}}" catchtouchmove='preventTouchMove'>
-	<image lazy-load="true" lazy-load="true" class="shou" src="{{imgHost}}shou.png"></image>
+	<image lazy-load="true" class="shou" src="{{imgHost}}shou.png"></image>
 	<view class="hint">
 		<view class="status">
 			<view class="success">支付成功</view>
