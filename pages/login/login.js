@@ -26,7 +26,7 @@ Page({
 
                         },
                         error(res) {
-                            if (res.code == 3000 || res.code == 3002) {
+                            if (res == 3000 || res == 3002) {
                                 app.toast({
                                     title: "用户未绑定手机号,1.5秒后跳转去快捷登录",
                                 });
@@ -36,11 +36,11 @@ Page({
                                     })
                                 }, 1500);
                                 clearTimeout(timer)
-                            } else if (res.code == 3003) {
+                            } else if (res == 3003) {
                                 app.toast({
                                     title: "登录失败,请稍后重试",
                                 })
-                            } else if (res.code == 3001) {
+                            } else if (res == 3001) {
                                 app.toast({
                                     title: "用户授权失败",
                                 })
