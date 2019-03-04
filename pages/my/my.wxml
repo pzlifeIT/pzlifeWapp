@@ -77,7 +77,7 @@
   <image lazy-load="true"  class="ulimg din fr" src="{{imgHost}}jt_18.png" alt=""/>
 </view>
 
-<view class="userFnLi" bindtap="myQr">
+<!-- <view class="userFnLi" bindtap="myQr">
   <text >我的二维码</text>
   <image lazy-load="true"  class="ulimg din fr" src="{{imgHost}}jt_18.png" alt=""/>
 </view>
@@ -85,7 +85,7 @@
 <view class="userFnLi"  bindtap="bindPhone">
   <text >绑定手机号</text>
   <image lazy-load="true"   class="ulimg din fr" src="{{imgHost}}jt_18.png" alt=""/>
-</view>
+</view> -->
 
 <view  bindtap="toaddress" hover-class="other-navigator-hover" class="userFnLi" >
   <text >地址管理</text>

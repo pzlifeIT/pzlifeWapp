@@ -96,9 +96,9 @@ Page({
     },
     myQr: function() {
         if (this.data.con_id) {
-            wx.navigateTo({
-                url: ""
-            })
+            // wx.navigateTo({
+            //     url: ""
+            // })
         } else {
             app.toast({ title: "请先登录" })
         }
@@ -106,9 +106,9 @@ Page({
     bindPhone: function() {
         if (this.data.con_id) {
 
-            wx.navigateTo({
-                url: ""
-            })
+            // wx.navigateTo({
+            //     url: ""
+            // })
         } else {
             app.toast({ title: "请先登录" })
         }
@@ -134,9 +134,9 @@ Page({
     },
     coupon: function() {
         if (this.data.con_id) {
-            wx.navigateTo({
-                url: "/pages/coupon/coupon"
-            })
+            // wx.navigateTo({
+            //     url: "/pages/coupon/coupon"
+            // })
         } else {
             app.toast({
                 title: '请先登录'
@@ -151,10 +151,10 @@ Page({
     },
     money: function() {
         if (this.data.con_id) {
-            let caseMoney = this.data.userInfo.balance
-            wx.navigateTo({
-                url: "/pages/my/case/case?caseMoney=" + caseMoney
-            })
+            // let caseMoney = this.data.userInfo.balance
+            // wx.navigateTo({
+            //     url: "/pages/my/case/case?caseMoney=" + caseMoney
+            // })
         } else {
             app.toast({
                 title: '请先登录'
@@ -163,10 +163,10 @@ Page({
     },
     inte: function() {
         if (this.data.con_id) {
-            let integral = this.data.userInfo.integral
-            wx.navigateTo({
-                url: "/pages/my/integ/integ?integ=" + integral
-            })
+            // let integral = this.data.userInfo.integral
+            // wx.navigateTo({
+            //     url: "/pages/my/integ/integ?integ=" + integral
+            // })
         } else {
             app.toast({
                 title: '请先登录'

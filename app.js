@@ -7,7 +7,6 @@ App({
         let that = this
         that.globalData.con_id = wx.getStorageSync('con_id') || ''
         that.globalData.host = config
-        console.log(wx.getAccountInfoSync())
     },
     globalData: {
         userInfo: {},
