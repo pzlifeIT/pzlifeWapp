@@ -115,7 +115,6 @@ Page({
                     delta: 1
                 })
             }, 1500);
-            clearTimeout(timer)
         }
     },
     lingvip: function(share_id, uid) {
