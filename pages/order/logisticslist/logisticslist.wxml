@@ -7,7 +7,7 @@
     <view class="ll-btn fr" data-express="{{item.express_no}}">查看物流详情</view>
   </view>
   <view class="ll-good" wx:for="{{item.express_goods}}" >
-    <view class="ll-good-img din fl" ><image src="" /></view>
+    <view class="ll-good-img din fl" ><image lazy-load="true" src="" /></view>
     <view class="ll-good-info din fl" >
       <text class="db ll-good-name" >{{item.goods_name}}</text>
       <text class="db ll-good-tit" >{{item.sku_json}}</text>

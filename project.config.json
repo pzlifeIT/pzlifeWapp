@@ -37,9 +37,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 26,
-			"list": [
-				{
+			"current": 25,
+            "list": [{
 					"id": 0,
 					"name": "goods",
 					"pathName": "pages/goods/detail",

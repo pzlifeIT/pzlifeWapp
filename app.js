@@ -44,9 +44,9 @@ App({
             path = '/page/index/index'
         }
         if (data.path.indexOf('?') == -1) {
-            path = data.path + '?pid=' + this.globalData.pid
+            path = data.path + '?pid=' + this.globalData.userInfo.uid || ''
         } else {
-            path = data.path + '&pid=' + this.globalData.pid
+            path = data.path + '&pid=' + this.globalData.userInfo.uid || ''
         }
         let sharejson = {
             title: data.title || '品质生活商城',
