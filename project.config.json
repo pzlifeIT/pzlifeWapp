@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 25,
+			"current": 26,
 			"list": [
 				{
 					"id": 0,
@@ -208,6 +208,13 @@
 					"name": "1",
 					"pathName": "pages/my/case/case",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": 26,
+					"name": "goodslist",
+					"pathName": "pages/category/goods/goods",
+					"query": "sub_id=51",
 					"scene": null
 				}
 			]

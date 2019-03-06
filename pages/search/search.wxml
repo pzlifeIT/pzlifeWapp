@@ -46,15 +46,17 @@
 		</view>
 	</view>
 </view> -->
-<view class='goods' wx:for='{{goodsList}}' wx:if="{{goodsList.length>=1 && search!=''}}">
-	<navigator url='/pages/goods/detail?goodid={{item.id}}'>
-		<view class='one_goods'>
-			<view class='img'>
-				<image class='goods_img' src='{{item.image}}'></image>
+<view class="nest">
+	<view class='goods' wx:for='{{goodsList}}' wx:if="{{goodsList.length>=1 && search!=''}}">
+		<navigator url='/pages/goods/detail?goodid={{item.id}}'>
+			<view class='one_goods'>
+				<view class='img'>
+					<image class='goods_img' src='{{item.image+"?imageMogr2/thumbnail/370x"}}'></image>
+				</view>
+				<text class='title'>{{item.goods_name}}</text>
+				<text class='subtitle'>{{item.subtitle}}</text>
+				<text class='price'>￥{{item.min_retail_price}}</text>
 			</view>
-			<text class='title'>{{item.goods_name}}</text>
-			<text class='subtitle'>{{item.subtitle}}</text>
-			<text class='price'>￥{{item.min_retail_price}}</text>
-		</view>
-	</navigator>
+		</navigator>
+	</view>
 </view>

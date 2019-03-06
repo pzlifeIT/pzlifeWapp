@@ -47,6 +47,7 @@ swiper-item {
     padding: 19rpx 19rpx 30rpx 9rpx;
     background-color: #ffffff;
     float: left;
+	box-sizing: border-box;
 }
 
 .desc .text {
@@ -91,18 +92,21 @@ swiper-item {
     float: left;
     padding: 0 10rpx;
     background-color: #ffffff;
+	box-sizing: border-box;
 }
 
 .content .spec {
     width: 750rpx;
     line-height: 80rpx;
     border-bottom: 1rpx #f7f7f7 solid;
+	box-sizing: border-box;
 }
 
 .content .ticket {
     width: 750rpx;
     line-height: 80rpx;
     border-bottom: 1rpx #f7f7f7 solid;
+	box-sizing: border-box;
 }
 
 .content .integral {
@@ -136,6 +140,8 @@ swiper-item {
     box-shadow: 1px -1px 3px 0px rgba(0, 0, 0, 0.19);
     background-color: #fff;
     z-index: 99;
+	box-sizing: border-box;
+	display: flex;
 }
 
 .footer .home,
@@ -144,7 +150,7 @@ swiper-item {
     display: inline-block;
     float: left;
     text-align: center;
-    width: 82.666rpx;
+    width: 83rpx;
     height: 98rpx;
     color: #404040;
     font-size: 22rpx;
@@ -173,7 +179,7 @@ swiper-item {
 .footer .join_cart {
     display: inline-block;
     float: left;
-    width: 250rpx;
+    width: 251rpx;
     text-align: center;
     line-height: 98rpx;
     color: #ffffff;
