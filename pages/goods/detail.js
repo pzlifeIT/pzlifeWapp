@@ -38,7 +38,7 @@ Page({
     },
     call: function() {
         wx.makePhoneCall({
-            phoneNumber: '15736884573'
+            phoneNumber: '15502123212'
         })
     },
     selectAttr: function(e) { //选择规格

@@ -144,9 +144,8 @@ Page({
         }
     },
     call: function() {
-        // window.location.href = 'tel:152'
         wx.makePhoneCall({
-            phoneNumber: '15736884734'
+            phoneNumber: '15502123212'
         })
     },
     money: function() {
