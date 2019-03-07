@@ -39,13 +39,20 @@ page{
   font-size: 24rpx;
   color: rgb(182, 182, 182);
   margin: 5rpx 0 5rpx 20rpx;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 .one_goods .price{
   font-size: 30rpx;
   color: rgb(230, 31, 24);
-	margin-bottom: 20rpx;
+	margin-bottom: 5rpx;
 }
-
+.vipprice{
+	font-size: 24rpx;
+	color: #EAB700;
+	margin-bottom: 10rpx;
+}
 
 
 

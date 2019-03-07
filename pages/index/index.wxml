@@ -234,9 +234,9 @@
 			</view>
 		</view>
 	</scroll-view>
-	<i class="line" style="transform: translateX({{pos_scroll}}rpx);">
+	<!-- <i class="line" style="transform: translateX({{pos_scroll}}rpx);">
 		<s></s>
-	</i>
+	</i> -->
 </view>
 <!-- 时令食品推荐 -->
 <view class="life-recommend">

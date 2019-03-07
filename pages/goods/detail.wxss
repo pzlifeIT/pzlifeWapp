@@ -6,7 +6,7 @@ page {
 
 swiper {
     width: 750rpx;
-    height: 726rpx;
+    height: 750rpx;
     background-color: #f7f7f7;
     position: relative;
 }
@@ -95,30 +95,11 @@ swiper-item {
 	box-sizing: border-box;
 }
 
-.content .spec {
+.content .spec ,.content .integral,.content .ticket ,.content .freight {
     width: 750rpx;
-    line-height: 80rpx;
+    line-height: 70rpx;
     border-bottom: 1rpx #f7f7f7 solid;
 	box-sizing: border-box;
-}
-
-.content .ticket {
-    width: 750rpx;
-    line-height: 80rpx;
-    border-bottom: 1rpx #f7f7f7 solid;
-	box-sizing: border-box;
-}
-
-.content .integral {
-    width: 750rpx;
-    line-height: 80rpx;
-    border-bottom: 1rpx #f7f7f7 solid;
-}
-
-.content .freight {
-    width: 750rpx;
-    line-height: 80rpx;
-    border-bottom: 1rpx #f7f7f7 solid;
 }
 
 .fix {
@@ -194,8 +175,12 @@ swiper-item {
 .goods_content {
     float: left;
     margin-top: 7rpx;
+	width: 750rpx;
 }
-
+.four_cont{
+	width: 750rpx;
+	overflow: auto;
+}
 .tab {
     width: 750rpx;
     height: 80rpx;

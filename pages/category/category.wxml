@@ -17,22 +17,7 @@
     </view> 
   </scroll-view>
 
-  <scroll-view scroll-y="true" scroll-top="0" class='cate_right'>
-    <!-- <view class='image'>
-      <image lazy-load="true" src='images/cate.jpg' style='height:200rpx;width:560rpx'></image>
-    </view> -->
-    <!-- <view class='wai' wx:for='{{secondCate}}' wx:key='{{item.id}}'>
-      <view class='cate_two'>
-        <view><text class='cate_title'>{{item.type_name}}</text></view>
-        <navigator url='goods/goods?cate_id={{item.id}}' wx:for="{{item._child}}" hover-class="none">
-          <view class='cate_three' >
-            <image lazy-load="true" class='cate_banner' src='http://imagecache.pzlife.vip/o_1cujhrkh9vm024fh9f8vr17arc.jpg?imageMogr2/thumbnail/120x'></image>
-            <text class='cate_three_title'>{{item.type_name}}</text>
-          </view>
-       </navigator>
-      </view>
-    </view> -->
-		
+  <scroll-view scroll-y="true" scroll-top="0" class='cate_right'>		
 		<view class='wai' wx:for='{{showSub}}' wx:key='{{item.id}}'>
 		  <view class='cate_two'>
 		    <view><text class='cate_title'>{{item.subject}}</text></view>
@@ -45,5 +30,4 @@
 		  </view>
 		</view>
   </scroll-view>
-
 </view>

@@ -79,6 +79,17 @@ page{
 	height: 230rpx;
 	margin:48rpx auto 48rpx;
 }
+.centert{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	position: relative;
+	z-index: 99999;
+}
+.text{
+	width: 347rpx;
+	height: 219rpx;
+}
 .button{
 	border: 2rpx solid #fff;
 	width: 224rpx;

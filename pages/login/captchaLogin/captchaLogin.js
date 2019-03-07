@@ -105,7 +105,7 @@ Page({
             app.toast({ title: '请填写11位手机号码' })
             return
         }
-        if (code == '') {
+        if (vercode == '') {
             app.toast({ title: '请输入验证码' })
             return
         }

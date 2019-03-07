@@ -17,7 +17,7 @@ Page({
         ind: 0,
         imgHost: ''
     },
-
+//把所有的二级分类都找出来，全部展示在右边，然后当二级分类的父级id和一级分类id一样时就选中
 
     //选择一级分类
     selectCate: function(e) {
