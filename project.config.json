@@ -37,8 +37,9 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 25,
-            "list": [{
+			"current": 27,
+			"list": [
+				{
 					"id": 0,
 					"name": "goods",
 					"pathName": "pages/goods/detail",
@@ -214,6 +215,13 @@
 					"name": "goodslist",
 					"pathName": "pages/category/goods/goods",
 					"query": "sub_id=51",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/category/category",
+					"query": "",
 					"scene": null
 				}
 			]

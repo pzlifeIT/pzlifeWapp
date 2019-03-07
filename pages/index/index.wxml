@@ -8,139 +8,76 @@
 		</navigator>
 	</view>
 	<swiper class="slider" autoplay="true" current="0" circular="true" bindchange="swiper">
-		<swiper-item class="pz-swiper" wx:for="{{imgUrls}}">
-			<image lazy-load="true" src="{{item}}"></image>
+		<swiper-item class="pz-swiper" wx:for="{{slider.son}}" wx:key="index">
+			<image lazy-load="true" src="{{item.image_path}}"></image>
 		</swiper-item>
 	</swiper>
-	<view class="num">{{num}}/{{imgUrls.length}}</view>
+	<view class="num">{{num}}/{{slider.son.length}}</view>
 </view>
 <view class="icon">
 	<view class="icon-line">
-		<view class="icon-one">
-			<image lazy-load="true" src="{{imgHost}}index-icon_3.png"></image>
-			<view class="icon-text">热卖</view>
-		</view>
-		<view class="icon-one">
-			<image lazy-load="true" src="{{imgHost}}index-icon_5.png"></image>
-			<view class="icon-text">新品</view>
-		</view>
-		<view class="icon-one">
-			<image lazy-load="true" src="{{imgHost}}indexicon_07.png"></image>
-			<view class="icon-text">水果生鲜</view>
-		</view>
-		<view class="icon-one">
-			<image lazy-load="true" src="{{imgHost}}indexicon_09.png"></image>
-			<view class="icon-text">生活美食</view>
-		</view>
-		<view class="icon-one">
-			<image lazy-load="true" src="{{imgHost}}indexicon_11.png"></image>
-			<view class="icon-text">家居百货</view>
-		</view>
-		<view class="icon-one">
-			<image lazy-load="true" src="{{imgHost}}index-icon_19.png"></image>
-			<view class="icon-text">美妆个护</view>
-		</view>
-		<view class="icon-one">
-			<image lazy-load="true" src="{{imgHost}}index-icon_21.png"></image>
-			<view class="icon-text">数码家电</view>
-		</view>
-		<view class="icon-one">
-			<image lazy-load="true" src="{{imgHost}}index-icon_22.png"></image>
-			<view class="icon-text">母婴玩具</view>
-		</view>
-		<view class="icon-one">
-			<image lazy-load="true" src="{{imgHost}}index-icon_23.png"></image>
-			<view class="icon-text">医疗健康</view>
-		</view>
-		<view class="icon-one">
-			<image lazy-load="true" src="{{imgHost}}index-icon_24.png"></image>
-			<view class="icon-text">分类</view>
+		<view class="icon-one" wx:for="{{icon.son}}">
+			<image lazy-load="true" src="{{item.image_path}}"></image>
+			<view class="icon-text">{{item.title}}</view>
 		</view>
 	</view>
 </view>
 <view class="">
 	<view class="double-div">
-		<view class="div-left">
-			<image lazy-load="true" src="{{imgHost}}left_03.png"></image>
-		</view>
-		<view class="div-right">
-			<image lazy-load="true" src="{{imgHost}}right_03.png"></image>
+		<view class="div-left" wx:for="{{sub.son}}">
+			<image lazy-load="true" src="{{item.image_path}}"></image>
 		</view>
 	</view>
 </view>
 <!-- 新品上市 -->
 <view class="newpro">
 	<view class="title">
-		<view class="newpro-text">新品上市</view>
+		<view class="newpro-text">{{newGoods.title}}</view>
 		<view class="new-more">更多
 			<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
 		</view>
 	</view>
 	<view class="new-one">
-		<image lazy-load="true" src="{{imgHost}}new1.png"></image>
+		<image lazy-load="true" src="{{newGoods.son[0].image_path}}"></image>
 	</view>
 	<view class="new-line">
 		<view class="new-two">
-			<image lazy-load="true" src="{{imgHost}}new2.png"></image>
+			<image lazy-load="true" src="{{newGoods.son[1].image_path}}"></image>
 		</view>
 		<view class="new-two new-mid">
-			<image lazy-load="true" src="{{imgHost}}new3.png"></image>
+			<image lazy-load="true" src="{{newGoods.son[2].image_path}}"></image>
 		</view>
 		<view class="new-two">
-			<image lazy-load="true" src="{{imgHost}}new4.png"></image>
+			<image lazy-load="true" src="{{newGoods.son[3].image_path}}"></image>
 		</view>
 	</view>
 </view>
 <!-- 每日轮播 -->
 <view>
 	<view class="date-banner">
-		<image lazy-load="true" src="{{imgHost}}date-banner.png"></image>
+		<image lazy-load="true" src="{{oneDay.son[0].image_path}}"></image>
 	</view>
 	<view class="goods-content">
 		<view class="title">
-			<view class="newpro-text">爆款推荐</view>
+			<view class="newpro-text">{{hotGoods.title}}</view>
 			<view class="new-more">更多
 				<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
 			</view>
 		</view>
 		<view class="one-line">
 			<view class="date-left">
-				<image lazy-load="true" src="{{imgHost}}date1.png"></image>
+				<image lazy-load="true" src="{{hotGoods.son[0].image_path}}"></image>
 			</view>
 			<view class="date-left date-right">
-				<image lazy-load="true" src="{{imgHost}}date1.png"></image>
+				<image lazy-load="true" src="{{hotGoods.son[1].image_path}}"></image>
 			</view>
 		</view>
 		<view class="goods-line">
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利500.00</view>
+			<view class="goods-one" wx:for="{{hotson}}">
+				<image lazy-load="true" src="{{item.image_path}}"></image>
+				<view class="goods-title">{{item.title}}</view>
+				<view class="goods-price">￥{{item.price}}</view>
+				<view class="vipprice">{{item.goods_min_brokerage}}</view>
 			</view>
 		</view>
 	</view>
@@ -148,88 +85,18 @@
 <!-- 应季生活推荐 -->
 <view class="life-recommend">
 	<view class="life-title">
-		<image lazy-load="true" src="{{imgHost}}life_02.png"></image>
+		<image lazy-load="true" src="{{season.image_path}}"></image>
 	</view>
 	<scroll-view class="life-goods" scroll-x style="width:100%;" scroll-with-animation bindscroll="movescroll">
 		<!-- 一列 -->
-		<view class="life-goods-column">
+		<view class="life-goods-column" wx:for="{{season.son}}">
 			<!-- 单个商品 -->
 			<view class="life-goods-one">
-				<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
+				<image lazy-load="true" src="{{item.image_path}}"></image>
 				<view class="life-goods-desc">
-					<view class="desc-title">粑粑柑中果8斤粑粑柑中果3斤</view>
-					<view class="desc-price">￥62.00</view>
-					<view class="desc-vipprice">钻石再让利10.22</view>
-				</view>
-			</view>
-			<view class="life-goods-one">
-				<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-				<view class="life-goods-desc">
-					<view class="desc-title">粑粑柑中果8斤粑粑柑中果8斤</view>
-					<view class="desc-price">￥62.00</view>
-					<view class="desc-vipprice">钻石再让利10.22</view>
-				</view>
-			</view>
-			<view class="life-goods-one">
-				<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-				<view class="life-goods-desc">
-					<view class="desc-title">粑粑柑中果8斤粑粑柑中果8斤</view>
-					<view class="desc-price">￥62.00</view>
-					<view class="desc-vipprice">钻石再让利10.22</view>
-				</view>
-			</view>
-		</view>
-		<view class="life-goods-column">
-			<!-- 单个商品 -->
-			<view class="life-goods-one">
-				<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-				<view class="life-goods-desc">
-					<view class="desc-title">粑粑柑中果8斤粑粑柑中果2斤</view>
-					<view class="desc-price">￥62.00</view>
-					<view class="desc-vipprice">钻石再让利10.22</view>
-				</view>
-			</view>
-			<view class="life-goods-one">
-				<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-				<view class="life-goods-desc">
-					<view class="desc-title">粑粑柑中果8斤粑粑柑中果8斤</view>
-					<view class="desc-price">￥62.00</view>
-					<view class="desc-vipprice">钻石再让利10.22</view>
-				</view>
-			</view>
-			<view class="life-goods-one">
-				<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-				<view class="life-goods-desc">
-					<view class="desc-title">粑粑柑中果8斤粑粑柑中果8斤</view>
-					<view class="desc-price">￥62.00</view>
-					<view class="desc-vipprice">钻石再让利10.22</view>
-				</view>
-			</view>
-		</view>
-		<view class="life-goods-column">
-			<!-- 单个商品 -->
-			<view class="life-goods-one">
-				<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-				<view class="life-goods-desc">
-					<view class="desc-title">粑粑柑中果8斤粑粑柑中果1斤</view>
-					<view class="desc-price">￥62.00</view>
-					<view class="desc-vipprice">钻石再让利10.22</view>
-				</view>
-			</view>
-			<view class="life-goods-one">
-				<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-				<view class="life-goods-desc">
-					<view class="desc-title">粑粑柑中果8斤粑粑柑中果8斤</view>
-					<view class="desc-price">￥62.00</view>
-					<view class="desc-vipprice">钻石再让利10.22</view>
-				</view>
-			</view>
-			<view class="life-goods-one">
-				<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-				<view class="life-goods-desc">
-					<view class="desc-title">粑粑柑中果8斤粑粑柑中果8斤</view>
-					<view class="desc-price">￥62.00</view>
-					<view class="desc-vipprice">钻石再让利10.22</view>
+					<view class="desc-title">{{item.title}}</view>
+					<view class="desc-price">￥{{item.price}}</view>
+					<view class="desc-vipprice">{{item.goods_min_brokerage}}</view>
 				</view>
 			</view>
 		</view>
@@ -241,290 +108,52 @@
 <!-- 时令食品推荐 -->
 <view class="life-recommend">
 	<view class="life-title">
-		<image lazy-load="true" src="{{imgHost}}slsp_02.png"></image>
+		<image lazy-load="true" src="{{shiling.image_path}}"></image>
 	</view>
 	<scroll-view class="slsp-recommend" scroll-x="true">
-		<view class="slsp-goods-one">
-			<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-			<view class="desc-title slsp-title">粑粑柑中果8斤粑粑柑中果8斤</view>
-			<view class="desc-price slsp-price">￥62.00</view>
-			<view class="desc-vipprice slsp-vipprice">钻石再让利10.22</view>
-		</view>
-		<view class="slsp-goods-one">
-			<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-			<view class="desc-title slsp-title">粑粑柑中果8斤粑粑柑中果8斤</view>
-			<view class="desc-price slsp-price">￥62.00</view>
-			<view class="desc-vipprice slsp-vipprice">钻石再让利10.22</view>
-		</view>
-		<view class="slsp-goods-one">
-			<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-			<view class="desc-title slsp-title">粑粑柑中果8斤粑粑柑中果8斤</view>
-			<view class="desc-price slsp-price">￥62.00</view>
-			<view class="desc-vipprice slsp-vipprice">钻石再让利10.22</view>
-		</view>
-		<view class="slsp-goods-one">
-			<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-			<view class="desc-title slsp-title">粑粑柑中果8斤粑粑柑中果8斤</view>
-			<view class="desc-price slsp-price">￥62.00</view>
-			<view class="desc-vipprice slsp-vipprice">钻石再让利10.22</view>
-		</view>
-		<view class="slsp-goods-one">
-			<image lazy-load="true" src="{{imgHost}}life-goods_03.png"></image>
-			<view class="desc-title slsp-title">粑粑柑中果8斤粑粑柑中果8斤</view>
-			<view class="desc-price slsp-price">￥62.00</view>
-			<view class="desc-vipprice slsp-vipprice">钻石再让利10.22</view>
+		<view class="slsp-goods-one" wx:for="{{shiling.son}}">
+			<image lazy-load="true" src="{{item.image_path}}"></image>
+			<view class="desc-title slsp-title">{{item.title}}</view>
+			<view class="desc-price slsp-price">￥{{item.price}}</view>
+			<view class="desc-vipprice slsp-vipprice">{{item.goods_min_brokerage}}</view>
 		</view>
 	</scroll-view>
 </view>
 <!-- 买主代表推荐 -->
 <view class="buyer-recommend">
 	<view class="title">
-		<view class="newpro-text">买主代表推荐</view>
+		<view class="newpro-text">{{maizhu.title}}</view>
 		<view class="new-more">更多
-			<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
+			<image lazy-load="true" src="{{maizhu.image_path}}"></image>
 		</view>
 	</view>
 	<scroll-view class="buyer-img" scroll-x="true">
-		<image lazy-load="true" src="{{imgHost}}buyer-re_05.png"></image>
-		<image lazy-load="true" src="{{imgHost}}buyer-re_05.png"></image>
-		<image lazy-load="true" src="{{imgHost}}buyer-re_05.png"></image>
-		<image lazy-load="true" src="{{imgHost}}buyer-re_05.png"></image>
-		<image lazy-load="true" src="{{imgHost}}buyer-re_05.png"></image>
-		<image lazy-load="true" src="{{imgHost}}buyer-re_05.png"></image>
+		<image lazy-load="true" wx:for="{{maizhu.son}}" src="{{item.image_path}}"></image>
 	</scroll-view>
 </view>
 <!-- 安心零食、酒饮、乳品 -->
-<view class="">
+<view class="one-div" wx:for="{{sub_goods.son}}">
 	<view class="goods-content">
 		<view class="title">
-			<view class="newpro-text">安心零食&酒饮&乳品</view>
+			<view class="newpro-text">{{item.title}}</view>
 			<view class="new-more">更多
 				<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
 			</view>
 		</view>
 		<view class="goods-line">
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
+			<view class="goods-one" wx:for="{{item.third}}" wx:for-item="third">
+				<image lazy-load="true" src="{{third.image_path}}"></image>
+				<view class="goods-title">{{third.title}}</view>
+				<view class="goods-price">￥{{third.price}}</view>
+				<view class="vipprice">{{third.goods_min_brokerage}}</view>
 			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利500.00</view>
-			</view>
-			<view class="goods-one">
-				<image class="right-bottom-img" lazy-load="true" src="{{imgHost}}jiuyin_03.png"></image>
+			<view class="goods-one" >
+				<image class="right-bottom-img" lazy-load="true" src="{{item.image_path}}"></image>
 			</view>
 		</view>
 	</view>
 </view>
-
-<view class="one-div">
-	<view class="goods-content">
-		<view class="title">
-			<view class="newpro-text">优选电器&数码</view>
-			<view class="new-more">更多
-				<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
-			</view>
-		</view>
-		<view class="goods-line">
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利500.00</view>
-			</view>
-			<view class="goods-one">
-				<image class="right-bottom-img" lazy-load="true" src="{{imgHost}}jiuyin_03.png"></image>
-			</view>
-		</view>
-	</view>
-</view>
-
-<view class="one-div">
-	<view class="goods-content">
-		<view class="title">
-			<view class="newpro-text">优选美妆&个护&母婴</view>
-			<view class="new-more">更多
-				<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
-			</view>
-		</view>
-		<view class="goods-line">
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利500.00</view>
-			</view>
-			<view class="goods-one">
-				<image class="right-bottom-img" lazy-load="true" src="{{imgHost}}jiuyin_03.png"></image>
-			</view>
-		</view>
-	</view>
-</view>
-
-<view class="one-div">
-	<view class="goods-content">
-		<view class="title">
-			<view class="newpro-text">旅游出行</view>
-			<view class="new-more">更多
-				<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
-			</view>
-		</view>
-		<view class="goods-line">
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利500.00</view>
-			</view>
-			<view class="goods-one">
-				<image class="right-bottom-img" lazy-load="true" src="{{imgHost}}jiuyin_03.png"></image>
-			</view>
-		</view>
-	</view>
-</view>
-
-<view class="one-div">
-	<view class="goods-content">
-		<view class="title">
-			<view class="newpro-text">医疗健康</view>
-			<view class="new-more">更多
-				<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
-			</view>
-		</view>
-		<view class="goods-line">
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利12.00</view>
-			</view>
-			<view class="goods-one">
-				<image lazy-load="true" src="{{imgHost}}rmsp_12.png"></image>
-				<view class="goods-title">粑粑柑中果8斤</view>
-				<view class="goods-price">￥62.00</view>
-				<view class="vipprice">钻石再让利500.00</view>
-			</view>
-			<view class="goods-one">
-				<image class="right-bottom-img" lazy-load="true" src="{{imgHost}}jiuyin_03.png"></image>
-			</view>
-		</view>
-	</view>
-</view>
-
-<view class="one-div">
+<!-- <view class="one-div">
 	<view class="goods-content ">
 		<view class="title">
 			<view class="newpro-text">为你推荐</view>
@@ -579,4 +208,4 @@
 			</view>
 		</view>
 	</view>
-</view>
+</view> -->
