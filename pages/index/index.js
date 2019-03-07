@@ -69,7 +69,7 @@ Page({
 					newGoods:home[i]
 				})
 			}else if(home[i].model_id == 5){
-				thta.setData({
+				that.setData({
 					oneDay:home[i]
 				})
 			}else if(home[i].model_id == 6){
@@ -134,10 +134,12 @@ Page({
 	getIndex:function(){
 		let that = this
 		app.wxrequest({
-			url:"index/Recommend/getRecommend",
+			url:"Recommend/getRecommend",
 			nocon:true,
-			success(res){
+			success(res){		
+				res.recommends.reverse()
 				that.home(res.recommends)
+				console.log(res.recommends)
 			},
 			error(res){
 				console.log(res)
@@ -146,5 +148,8 @@ Page({
 				
 			}
 		})
-	}
+	},
+	onShow: function() {
+		this.getIndex()
+	},
 })

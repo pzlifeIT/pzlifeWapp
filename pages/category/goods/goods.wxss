@@ -9,6 +9,7 @@ page{
   margin: 10rpx 3rpx;
   background-color: rgb(255, 255, 255);
 	box-sizing: border-box;
+	background: #fff;
 	/* margin: 4rpx; */
 }
 .one_goods .goods_img{
@@ -19,6 +20,7 @@ page{
 }
 .img{
   text-align: left;
+	background: #fff;
   /* margin-top: 31rpx; */
   
 }

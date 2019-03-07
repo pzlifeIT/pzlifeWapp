@@ -96,6 +96,9 @@ page {
 .cate_title {
     font-size: 28rpx;
     color: #202020;
+	display: inline-block;
+	background: #fff;
+	width: 150rpx;
 }
 
 .cate_three {
@@ -118,4 +121,22 @@ page {
     font-size: 26rpx;
     color: #666;
     text-align: center;
+}
+.sub_title{
+	text-align: center;
+	position: relative;
+	margin: 20rpx 0;
+}
+.sub_title::after{
+	border-bottom:2rpx solid #F7F7F7 ;
+}
+.line{
+	width: 70%;
+	height: 2rpx;
+	background: #B6B6B6;
+	margin: 0 auto;
+	position: absolute;
+	top: 55%;
+	left: 15%;
+	z-index: -1;
 }
