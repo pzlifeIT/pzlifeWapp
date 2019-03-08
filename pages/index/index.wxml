@@ -11,14 +11,14 @@
 		<swiper-item class="pz-swiper" wx:for="{{slider.son}}" wx:key="index">
 			<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}"
 			 open-type="navigate">
-				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true"  src="{{item.image_path+'?imageMogr2/thumbnail/790x'}}"></image>
 			</navigator>
 			<navigator hover-class="none" wx:elif="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}"
 			 open-type="navigate">
-				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/790x'}}"></image>
 			</navigator>
 			<navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="navigate">
-				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/790x'}}"></image>
 			</navigator>
 		</swiper-item>
 	</swiper>
@@ -29,16 +29,16 @@
 		<view class="icon-one" wx:for="{{icon.son}}">
 			<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}"
 			 open-type="navigate">
-				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
 				<view class="icon-text">{{item.title}}</view>
 			</navigator>
 			<navigator hover-class="none" wx:if="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="reLaunch">
-				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
 				<view class="icon-text">{{item.title}}</view>
 			</navigator>
 			<navigator hover-class="none" wx:if="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}"
 			 open-type="navigate">
-				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
 				<view class="icon-text">{{item.title}}</view>
 			</navigator>
 		</view>
@@ -51,14 +51,14 @@
 			<!-- {{item.image_path+'?imageMogr2/thumbnail/370x'}} -->
 			<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}"
 			 open-type="navigate">
-				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/450x'}}"></image>
 			</navigator>
 			<navigator hover-class="none" wx:elif="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}"
 			 open-type="navigate">
-				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/450x'}}"></image>
 			</navigator>
 			<navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="reLaunch">
-				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/450x'}}"></image>
 			</navigator>
 			<!-- <navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="navigate">
 				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
@@ -92,27 +92,27 @@
 	<navigator hover-class="none" wx:if="{{newGoods.son[0].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{newGoods.son[0].jump_content}}"
 	 open-type="navigate">
 		<view class="new-one">
-			<image lazy-load="true" src="{{newGoods.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			<image lazy-load="true" src="{{newGoods.son[0].image_path+'?imageMogr2/thumbnail/710x'}}"></image>
 		</view>
 	</navigator>
 	<navigator hover-class="none" wx:elif="{{newGoods.son[0].jump_type == 2}}" url="/pages/goods/detail?goodid={{newGoods.son[0].jump_content}}"
 	 open-type="navigate">
 
 		<view class="new-one">
-			<image lazy-load="true" src="{{newGoods.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			<image lazy-load="true" src="{{newGoods.son[0].image_path+'?imageMogr2/thumbnail/710x'}}"></image>
 		</view>
 	</navigator>
 	<navigator hover-class="none" wx:elif="{{newGoods.son[0].jump_type == 3}}" url="{{newGoods.son[0].jump_content}}"
 	 open-type="navigate">
 		<view class="new-one">
-			<image lazy-load="true" src="{{newGoods.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			<image lazy-load="true" src="{{newGoods.son[0].image_path+'?imageMogr2/thumbnail/710x'}}"></image>
 		</view>
 	</navigator>
 	<view class="new-line">
 		<navigator hover-class="none" wx:if="{{newGoods.son[1].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{newGoods.son[1].jump_content}}"
 		 open-type="navigate">
 			<view class="new-two">
-				<image lazy-load="true" src="{{newGoods.son[1].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{newGoods.son[1].image_path+'?imageMogr2/thumbnail/260x'}}"></image>
 
 			</view>
 
@@ -120,52 +120,52 @@
 		<navigator hover-class="none" wx:elif="{{newGoods.son[1].jump_type == 2}}" url="/pages/goods/detail?goodid={{newGoods.son[1].jump_content}}"
 		 open-type="navigate">
 			<view class="new-two">
-				<image lazy-load="true" src="{{newGoods.son[1].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{newGoods.son[1].image_path+'?imageMogr2/thumbnail/260x'}}"></image>
 			</view>
 
 		</navigator>
 		<navigator hover-class="none" wx:elif="{{newGoods.son[1].jump_type == 3}}" url="{{newGoods.son[1].jump_content}}"
 		 open-type="navigate">
 			<view class="new-two">
-				<image lazy-load="true" src="{{newGoods.son[1].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{newGoods.son[1].image_path+'?imageMogr2/thumbnail/260x'}}"></image>
 			</view>
 		</navigator>
 		<navigator hover-class="none" wx:if="{{newGoods.son[1].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{newGoods.son[2].jump_content}}"
 		 open-type="navigate">
 
 			<view class="new-two new-mid">
-				<image lazy-load="true" src="{{newGoods.son[2].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{newGoods.son[2].image_path+'?imageMogr2/thumbnail/260x'}}"></image>
 			</view>
 		</navigator>
 		<navigator hover-class="none" wx:elif="{{newGoods.son[2].jump_type == 2}}" url="/pages/goods/detail?goodid={{newGoods.son[2].jump_content}}"
 		 open-type="navigate">
 			<view class="new-two new-mid">
-				<image lazy-load="true" src="{{newGoods.son[2].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{newGoods.son[2].image_path+'?imageMogr2/thumbnail/260x'}}"></image>
 			</view>
 		</navigator>
 		<navigator hover-class="none" wx:elif="{{newGoods.son[2].jump_type == 3}}" url="{{newGoods.son[2].jump_content}}"
 		 open-type="navigate">
 			<view class="new-two new-mid">
-				<image lazy-load="true" src="{{newGoods.son[2].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{newGoods.son[2].image_path+'?imageMogr2/thumbnail/260x'}}"></image>
 			</view>
 		</navigator>
 		<navigator hover-class="none" wx:if="{{newGoods.son[3].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{newGoods.son[3].jump_content}}"
 		 open-type="navigate">
 
 			<view class="new-two">
-				<image lazy-load="true" src="{{newGoods.son[3].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{newGoods.son[3].image_path+'?imageMogr2/thumbnail/260x'}}"></image>
 			</view>
 		</navigator>
 		<navigator hover-class="none" wx:elif="{{newGoods.son[3].jump_type == 2}}" url="/pages/goods/detail?goodid={{newGoods.son[3].jump_content}}"
 		 open-type="navigate">
 			<view class="new-two">
-				<image lazy-load="true" src="{{newGoods.son[3].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{newGoods.son[3].image_path+'?imageMogr2/thumbnail/260x'}}"></image>
 			</view>
 		</navigator>
 		<navigator hover-class="none" wx:elif="{{newGoods.son[3].jump_type == 3}}" url="{{newGoods.son[3].jump_content}}"
 		 open-type="navigate">
 			<view class="new-two">
-				<image lazy-load="true" src="{{newGoods.son[3].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<image lazy-load="true" src="{{newGoods.son[3].image_path+'?imageMogr2/thumbnail/260x'}}"></image>
 			</view>
 		</navigator>
 	</view>
@@ -176,17 +176,15 @@
 	<view class="date-banner">
 		<navigator hover-class="none" wx:if="{{oneDay.son[0].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{oneDay.son[0].jump_content}}"
 		 open-type="navigate">
-
-			<image lazy-load="true" src="{{oneDay.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
-
+			<image lazy-load="true" src="{{oneDay.son[0].image_path+'?imageMogr2/thumbnail/710x'}}"></image>
 		</navigator>
 		<navigator hover-class="none" wx:elif="{{oneDay.son[0].jump_type == 2}}" url="/pages/goods/detail?goodid={{oneDay.son[0].jump_content}}"
 		 open-type="navigate">
-			<image lazy-load="true" src="{{oneDay.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			<image lazy-load="true" src="{{oneDay.son[0].image_path+'?imageMogr2/thumbnail/710x'}}"></image>
 		</navigator>
 		<navigator hover-class="none" wx:elif="{{oneDay.son[0].jump_type == 3}}" url="{{oneDay.son[0].jump_content}}"
 		 open-type="navigate">
-			<image lazy-load="true" src="{{oneDay.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			<image lazy-load="true" src="{{oneDay.son[0].image_path+'?imageMogr2/thumbnail/710x'}}"></image>
 		</navigator>
 	</view>
 	<view class="goods-content">
@@ -282,22 +280,21 @@
 </view>
 <!-- 应季生活推荐 -->
 <view class="life-recommend yinji-recommend" wx:if="{{season.is_show == 1}}">
-
 	<navigator hover-class="none" wx:if="{{season.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{season.jump_content}}"
 	 open-type="navigate">
 		<view class="life-title">
-			<image lazy-load="true" src="{{season.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			<image lazy-load="true" src="{{season.image_path+'?imageMogr2/thumbnail/750x'}}"></image>
 		</view>
 	</navigator>
 	<navigator hover-class="none" wx:elif="{{season.jump_type == 2}}" url="/pages/goods/detail?goodid={{season.jump_content}}"
 	 open-type="navigate">
 		<view class="life-title">
-			<image lazy-load="true" src="{{season.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			<image lazy-load="true" src="{{season.image_path+'?imageMogr2/thumbnail/750x'}}"></image>
 		</view>
 	</navigator>
 	<navigator hover-class="none" wx:elif="{{season.jump_type == 3}}" url="{{season.jump_content}}" open-type="navigate">
 		<view class="life-title">
-			<image lazy-load="true" src="{{season.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			<image lazy-load="true" src="{{season.image_path+'?imageMogr2/thumbnail/750x'}}"></image>
 		</view>
 	</navigator>
 	<scroll-view class="life-goods" style="width:100%;" scroll-with-animation bindscroll="movescroll">
@@ -478,7 +475,7 @@
 			</navigator>
 			<navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="navigate">
 				<view class="goods-one">
-					<image class="right-bottom-img" lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+					<image class="right-bottom-img" lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/450x'}}"></image>
 				</view>
 			</navigator>
 		</view>

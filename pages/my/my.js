@@ -76,23 +76,32 @@ Page({
             }
         })
     },
-	getQrcode:function(){
-		app.wxrequest({
-			url:"user/getUserQrcode",
-			method:"GET",
-			data:{link:"/pages/index/index"},
-			nocon:false,
-			success(res){
-				console.log(res)
-			},
-			error(res){
-				console.log(res)
-			},
-			fail(res){
-				
-			}
-		})
-	},
+    getQrcode: function() {
+        app.wxrequest({
+            url: "user/getUserQrcode",
+            method: "GET",
+            data: { link: "/pages/index/index" },
+            nocon: false,
+            success(res) {
+                console.log(res)
+            },
+            error(res) {
+                console.log(res)
+            },
+            fail(res) {
+
+            }
+        })
+    },
+    checkOrder: function(e) {
+        if (this.data.con_id) {
+            wx.navigateTo({
+                url: "/pages/order/order?status=" + e.currentTarget.dataset.status
+            })
+        } else {
+            app.toast({ title: "请先登录" })
+        }
+    },
     activity: function(e) {
         if (this.data.con_id) {
             wx.navigateTo({
@@ -104,9 +113,9 @@ Page({
     },
     myQr: function() {
         if (this.data.con_id) {
-            wx.navigateTo({
-                url: "/pages/my/myQr/myQr"
-            })
+            // wx.navigateTo({
+            //     url: "/pages/my/myQr/myQr"
+            // })
         } else {
             app.toast({ title: "请先登录" })
         }
