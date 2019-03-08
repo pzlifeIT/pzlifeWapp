@@ -207,9 +207,8 @@
                     "name": "1",
                     "pathName": "pages/my/case/case",
                     "query": "",
-                    "scene": null <<
-                        << << < HEAD ===
-                        === =
+                    "scene": null 
+                      
                 },
                 {
                     "id": 26,
@@ -223,8 +222,8 @@
                     "name": "分类",
                     "pathName": "pages/category/category",
                     "query": "",
-                    "scene": null >>>
-                        >>> > 583 ac29d24a97c1b1423f694713cdb8fa96cad4b
+                    "scene": null
+                      
                 }
             ]
         }

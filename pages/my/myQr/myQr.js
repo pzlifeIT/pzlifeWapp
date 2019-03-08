@@ -1,5 +1,6 @@
 // pages/my/myQr/myQr.js
 const app = getApp()
+// let qrcode = require(../../utils/qrcode.js)
 Page({
 
     /**
@@ -19,7 +20,9 @@ Page({
         })
         console.log(app.globalData.host.apiHost + 'user/getUserQrcode?con_id=' + app.globalData.con_id + '&link=/pages/index/index')
     },
-
+	getQrcode:function(){
+		qrcode = new qrcode
+	},
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -33,6 +36,7 @@ Page({
             data: {
                 link: '/pages/index/index'
             },
+			method:"GET",
             success(res) {
                 console.log(res)
             }

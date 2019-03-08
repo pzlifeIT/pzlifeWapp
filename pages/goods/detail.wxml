@@ -19,7 +19,9 @@
     <view class='price'>
       <text class="din fl" >￥{{goodInfo.goods_data.min_retail_price}}</text>
       <text class="din fl" wx:if="{{goodInfo.goods_data.min_retail_price != goodInfo.goods_data.max_retail_price}}" > -￥{{goodInfo.goods_data.max_retail_price}}</text> </view>
-  </view>
+			<view class="vipprice">钻石再让利 {{goodInfo.goods_data.min_brokerage}}</view>
+			<view class="vipprice" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}"> -￥{{goodInfo.goods_data.min_brokerage}}</view>
+  </view>	
   <!-- <view class='collect'>
     <icon type=''></icon>
     <text >收藏</text>

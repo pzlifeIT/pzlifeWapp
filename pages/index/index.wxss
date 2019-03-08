@@ -294,13 +294,16 @@ page{
 	float: left;
 	margin-left: 10rpx;
 }
+.life-goods-one navigator{
+	width: 100%;
+}
 .life-goods-one image{
 	width: 240rpx;
 	height: 200rpx;
 	margin: 0 auto;
 }
 .life-goods-desc{
-	width: 510rpx;
+	width: 100%;
 	height: auto;
 	margin-left: 10rpx;
 }

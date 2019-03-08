@@ -40,8 +40,8 @@ Page({
 			showSub: showClassify,
 			idx: 0,
 			secondCate: [],
-			toview: "p" + id,
-			navactive:i
+			toview: "p" + id, //scroll-into-view的值 对应子元素的id值
+			navactive:i //索引
 		})
 		console.log(this.data.ind)
 	},
@@ -62,9 +62,10 @@ Page({
 				heightArr: heightArr
 			});
 		});
+		//获取右边可视高度
 		query.select(".cate_right").boundingClientRect(function(res) {
 			that.setData({
-				right: res.height
+				right: parseInt(res.height)
 			})
 		}).exec()
 // 		for(let i=0;i<this.data.third.length;i++){
@@ -167,16 +168,19 @@ Page({
 		// console.log(arr)
 		return arr;
 	},
-
 	gun: function(e) {
 		// this.getHeight()
-		console.log(this.data.heightArr)
+		console.log(this.data.right)
 		let scrollTop = e.detail.scrollTop;
 		let scrollArr = this.data.heightArr;
 		//每一块区域距离顶部的高度
 		//[106, 294, 400, 506, 612, 718, 988, 1094, 1200, 1306, 1412, 1518, 1624, 1730, 1836, 1942, 2048, 2236, 2342, 2530, 2636, 2742, 2930, 3036, 3224, 3330, 3436, 3542, 3648, 3754, 3942, 4048, 4154]
+		//[34, 150, 184, 218, 252, 286, 484, 518, 552, 586, 620, 654, 688, 722, 756, 790, 824, 858, 892, 1008, 1042, 1076, 1192, 1226, 1342, 1376, 1410, 1444, 1478, 1594, 1628, 1662]
 		//滚动的距离大于等于最后一个wai的高度减去右边的整个高度（475）那就超出最大的高度
-		if (scrollTop > scrollArr[scrollArr.length - 1] - this.data.right) { // this.data.right
+		console.log(scrollArr)
+		console.log(scrollTop)
+		//如果滚动的高度大于最后一个框距离顶部的距离，那就超出了
+		if (scrollTop > scrollArr[scrollArr.length - 1]) { // this.data.right
 			return
 		} else {
 			//循环所有的wai的高度，如果滚动距离大于等于0，并且滚动高度小于第一个框的高度说明就是初始的
@@ -184,16 +188,14 @@ Page({
 				if (scrollTop >= 0 && scrollTop < scrollArr[0]) {
 					// if(0 != this.data.lastactive){
 						this.setData({
-							ind: 0
+							navactive: 0
 						})
-					// }
 					//如果滚动条高度大于等于
-				} else if (scrollTop >= scrollArr[i - 1] && scrollTop <= scrollArr[i]) {
+				} else if (scrollTop >= scrollArr[i - 1] - 24 && scrollTop <= scrollArr[i] - 24) {
 					// if(i != this.data.lastactive){
 						this.setData({
-							ind:i
+							navactive:i
 						})
-					// }
 				}
 			}
 		}
@@ -210,7 +212,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function() {
-
+this.getHeight()
 	},
 
 	/**

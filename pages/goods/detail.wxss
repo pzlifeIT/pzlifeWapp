@@ -68,14 +68,18 @@ swiper-item {
 .desc .subtitle {
     font-size: 30rpx;
     color: #b6b6b6;
-    margin-bottom: 51rpx;
+    margin-bottom: 31rpx;
 }
 
 .desc .price {
     font-size: 38rpx;
     color: #e61f18;
+	overflow: auto;
 }
-
+.desc .vipprice{
+	font-size: 24rpx;
+	color: #EAB700;
+}
 .desc .collect {
     width: 90rpx;
     /* height: 50rpx; */
