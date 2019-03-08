@@ -56,7 +56,7 @@
       </view>
       <view class='goods_desc fl' wx:if="{{repertory}}">
         <text class='pop_price' wx:if="{{buy}}">价格：￥{{goodData.sku_price}}</text>
-        <text class='pop_price' wx:else >价格：￥{{goodInfo.goods_data.max_retail_price}}-￥{{goodInfo.goods_data.min_retail_price}}</text>
+        <text class='pop_price' wx:else >价格：￥{{goodInfo.goods_data.min_retail_price}}</text>
         <text class='selected' wx:if="{{buy}}">已选择：{{goodData.sku_name}}</text>
         <text class='selected' wx:else>未选择规格</text>
         <text class='present' wx:if="{{buy}}">赠送积分：{{goodData.integral_active}}分</text>
@@ -70,7 +70,8 @@
       <view  wx:for="{{goodInfo.goods_spec}}" wx:for-index="idx" wx:key="{{item.id}}">
       <view class='spec_name'><text>{{item.spe_name}}</text></view>
       <view class='attr'>
-        <view wx:for="{{item.list}}" wx:for-item="item1" class='attr_name {{ item1.id == attr[idx]?"active":"" }}'  wx:key="{{item1.id}}"  bindtap='selectAttr' data-idx='{{idx}}'  data-id="{{item1.id}}">{{item1.attr_name}}</view>
+				
+        <view wx:for="{{item.list}}" wx:for-item="item1" data-i="{{item1.id}}" class='attr_name {{ item1.id == attr[idx]?"active":"" }}'  wx:key="{{item1.id}}"  bindtap='selectAttr' data-idx='{{idx}}'  data-id="{{item1.id}}">{{item1.attr_name}}</view>
       </view>
     </view>
   </view>

@@ -9,12 +9,14 @@ Page({
         imgHost: ''
     },
     bindGetUserInfo: function(e) {
+		let encrypteddata = e.detail.encryptedData,
+		    iv = e.detail.iv
         wx.login({
             success(res) {
                 if (res.code) {
                     app.wxrequest({
                         url: "user/loginuserbywx",
-                        data: { code: res.code, buid: app.globalData.pid },
+                        data: { code: res.code, buid: app.globalData.pid,encrypteddata:encrypteddata,iv:iv},
                         nocon: true,
                         success(res) {
                             let pages = getCurrentPages();

@@ -20,7 +20,7 @@
 			<view class="isvip">恭喜成为钻石会员</view>
 		</view>
 		<image  lazy-load="true" src="{{imgHost}}hint_03.png"></image>
-		<view class="button">
+		<view class="button" bindtap="editstatus">
 			<view>我知道了</view>
 		</view>
 	</view>

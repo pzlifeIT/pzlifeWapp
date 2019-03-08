@@ -301,6 +301,7 @@ page{
 	width: 240rpx;
 	height: 200rpx;
 	margin: 0 auto;
+	border-radius: 20rpx;
 }
 .life-goods-desc{
 	width: 100%;
@@ -465,4 +466,7 @@ page{
 .yinji-recommend{
 	height: auto;
 	background: #F7F7F7;
+}
+ .life-goods-one image{
+	
 }

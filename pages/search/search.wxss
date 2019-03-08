@@ -173,10 +173,17 @@ page {
 .one_goods .price {
 	font-size: 30rpx;
 	color: rgb(230, 31, 24);
-	margin-bottom: 20rpx;
+	margin-bottom: 10rpx;
 }
 
 .nest {
 	width: 750rpx;
 	overflow: auto;
+	margin-top: 85rpx;
+}
+.vipprice{
+	color: #EAB700;
+	font-size: 24rpx;
+	margin-left: 20rpx;
+	margin-bottom: 10rpx;
 }

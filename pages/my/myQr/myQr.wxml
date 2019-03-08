@@ -1,2 +1,2 @@
 <!--pages/my/myQr/myQr.wxml-->
-<canvas class="can" canvas-id="can" bindlongtap="save"></canvas>
+<image src="{{qrcode}}" alt="" />

@@ -24,6 +24,12 @@ Page({
 	preventTouchMove: function() {
 		//防止用户操作弹出层外界面
 	},
+	 editstatus: function() {
+	    let mask = !this.data.mask
+	    this.setData({
+	        mask: mask
+	    })
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
