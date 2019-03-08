@@ -1,208 +1,250 @@
 // pages/category/category.js
 const app = getApp()
 Page({
-    data: {
-        category: "",
-        firstCate: [],
-        secondCate: [],
-        classify: [],
-        thirdCate: {
-            "title": "",
-            "image": ""
-        },
-        idx: 0,
-        firstSub: [],
-        subData: [],
-        showSub: [],
-        ind: 0,
-        imgHost: ''
-    },
+	data: {
+		category: "",
+		firstCate: [],
+		secondCate: [],
+		classify: [],
+		thirdCate: {
+			"title": "",
+			"image": ""
+		},
+		idx: 0,
+		firstSub: [],
+		subData: [],
+		showSub: [],
+		ind: 0,
+		imgHost: '',
+		third: [],
+		pid: [],
+		toview: "p1",
+		heightArr: [],
+		right: 0,
+		windowheight:0,
+		navactive:0,
+		lastactive:0
+	},
 
 
-    //选择一级分类
-    selectCate: function(e) {
-        let id = e.currentTarget.dataset.cateId,
-            showClassify = this.getshowClassify(this.data.classify, id)
-        this.setData({
-            idx: id,
-            secondCate: showClassify,
-            ind: 0,
-            showSub: []
-        })
-    },
-    selectSub: function(e) {
-        let id = e.currentTarget.dataset.subId,
-            //根据一级id找到对应的二三级
-            showClassify = this.getShowSub(this.data.subData, id)
-        this.setData({
-            ind: id,
-            showSub: showClassify,
-            idx: 0,
-            secondCate: []
-        })
-    },
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function(options) {
-        // this.getClassify()
-        this.getSubject()
-        this.setData({
-            imgHost: app.globalData.host.imgHost
-        })
-    },
-    /**
-     * 获取分类
-     */
-    getClassify: function() {
-        let that = this
-        app.wxrequest({
-            url: 'category/getfirstcate',
-            nocon: true,
-            success(res) {
-                let first = that.getfirst(res.data),
-                    id = res.data[0].id,
-                    showClassify = that.getshowClassify(res.data, id)
-                that.setData({
-                    firstCate: first,
-                    classify: res.data,
-                    // secondCate: showClassify,
-                    // idx: id		
-                })
-            }
-        })
-    },
-    /**
-     * 获取专题
-     */
-    getSubject: function() {
-        let that = this
-        app.wxrequest({
-            url: "category/getGoodsSubject",
-            nocon: true,
-            success(res) {
-                let firstSub = that.getFirstSub(res.data),
-                    id = res.data[0].id,
-                    showSub = that.getShowSub(res.data, id)
-                that.setData({
-                    firstSub: firstSub,
-                    subData: res.data,
-                    showSub: showSub,
-                    ind: id
-                })
-            }
-        })
-    },
-    /**
-     * 获取一级专题
-     */
-    getFirstSub: function(data) {
-        let arr = []
-        for (var i = 0; i < data.length; i++) {
-            let json = {}
-            json.id = data[i].id
-            json.subject = data[i].subject
-            arr.push(json)
-        }
-        return arr
-    },
-    /**
-     * 获取一级分类
-     */
-    getfirst: function(data) {
-        let len = data.length,
-            i, arr = [],
-            json1
-        for (i = 0; i < len; i++) {
-            json1 = {}
-            json1.id = data[i].id
-            json1.type_name = data[i].type_name
-            arr.push(json1)
-        }
-        return arr
-    },
-    /**
-     * 获取二三级专题
-     */
-    getShowSub: function(data, id) {
-        // 		console.log(data)
-        // 		console.log(id)
-        //循环遍历数组，根据传过来的一级id获取当前一级专题的子专题，放进一个空数组中
-        let arr = []
-        for (let i = 0; i < data.length; i++) {
-            if (id == data[i].id) {
-                if (data[i]._child instanceof Array) {
-                    arr = data[i]._child
-                }
-                break
-            }
-        }
-        // console.log(arr)
-        return arr;
-    },
-    /**
-     * 获取展示分类
-     */
-    getshowClassify: function(data, id) {
-        let len = data.length,
-            i, arr = [],
-            json1
-        for (i = 0; i < len; i++) {
-            if (id == data[i].id) {
-                if (data[i]._child instanceof Array) {
-                    arr = data[i]._child
-                }
-                break
-            }
-        }
-        return arr
-    },
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function() {
+	selectSub: function(e) {
+		//点击获取当前点击的一级分类的id，
+		console.log(this.data.firstSub)
+		let i = e.currentTarget.dataset.i;
+		let id = e.currentTarget.dataset.subId,
+			//根据一级id找到对应的二三级
+			showClassify = this.getShowSub(this.data.subData, id)
+			console.log(id)
+		this.setData({
+			ind: id,
+			showSub: showClassify,
+			idx: 0,
+			secondCate: [],
+			toview: "p" + id,
+			navactive:i
+		})
+		console.log(this.data.ind)
+	},
+	getHeight: function() {
+		let that = this;
+		let query = wx.createSelectorQuery().in(this);
+		let heightArr = [];
+		let s = 0
+		query.selectAll(".wai").boundingClientRect((react) => {
+			//计算出所有wai的高度
+			console.log(react)
+			react.forEach((res) => {
+				// console.log(res)
+				s += res.height;
+				heightArr.push(s)
+			});
+			this.setData({
+				heightArr: heightArr
+			});
+		});
+		query.select(".cate_right").boundingClientRect(function(res) {
+			that.setData({
+				right: res.height
+			})
+		}).exec()
+// 		for(let i=0;i<this.data.third.length;i++){
+// 			s = s +40+ this.data.third[i].length * 90;
+// 			heightArr.push(s)
+// 		}
+// 		this.setData({
+// 			heightArr:heightArr
+// 		})
+	},
 
-    },
+	/**
+	 * 生命周期函数--监听页面加载
+	 */
+	onLoad: function(options) {
+		this.getwindowheight()
+		// this.getClassify()
+		this.getSubject()
+		this.setData({
+			imgHost: app.globalData.host.imgHost
+		})
+	},
+	getwindowheight:function(){
+		let that = this
+		wx.getSystemInfo({
+			success(res) {
+				that.setData({
+					windowheight:parseInt(res.windowHeight) - 90
+				})
+			}
+		})
+	},
+	/**
+	 * 获取专题
+	 */
+	getSubject: function() {
+		let that = this
+		app.wxrequest({
+			url: "category/getGoodsSubject",
+			nocon: true,
+			success(res) {
+				console.log(res.data)
+				let firstSub = that.getFirstSub(res.data),
+					id = res.data[0].id,
+					showSub = that.getShowSub(res.data, id)
+				that.getthird(res.data)
+				that.setData({
+					firstSub: firstSub,
+					subData: res.data,
+					showSub: showSub,
+					ind: id
+				})
+			}
+		})
+	},
+	getthird: function(data) {
+		let arr = [],
+			pid = []
+		for (let i = 0; i < data.length; i++) {
+			for (let j = 0; j < data[i]._child.length; j++) {
+				arr.push(data[i]._child[j])
+				pid.push(data[i]._child[j].pid)
+			}
+		}
+		console.log(arr)
+		this.setData({
+			third: arr,
+			pid: pid
+		})
+	},
+	/**
+	 * 获取一级专题
+	 */
+	getFirstSub: function(data) {
+		let arr = []
+		for (var i = 0; i < data.length; i++) {
+			let json = {}
+			json.id = data[i].id
+			json.subject = data[i].subject
+			arr.push(json)
+		}
+		return arr
+	},
+	/**
+	 * 获取二三级专题
+	 */
+	getShowSub: function(data, id) {
+		// 		console.log(data)
+		// 		console.log(id)
+		//循环遍历数组，根据传过来的一级id获取当前一级专题的子专题，放进一个空数组中
+		let arr = []
+		for (let i = 0; i < data.length; i++) {
+			if (id == data[i].id) {
+				if (data[i]._child instanceof Array) {
+					arr = data[i]._child
+				}
+				break
+			}
+		}
+		// console.log(arr)
+		return arr;
+	},
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function() {
+	gun: function(e) {
+		// this.getHeight()
+		console.log(this.data.heightArr)
+		let scrollTop = e.detail.scrollTop;
+		let scrollArr = this.data.heightArr;
+		//每一块区域距离顶部的高度
+		//[106, 294, 400, 506, 612, 718, 988, 1094, 1200, 1306, 1412, 1518, 1624, 1730, 1836, 1942, 2048, 2236, 2342, 2530, 2636, 2742, 2930, 3036, 3224, 3330, 3436, 3542, 3648, 3754, 3942, 4048, 4154]
+		//滚动的距离大于等于最后一个wai的高度减去右边的整个高度（475）那就超出最大的高度
+		if (scrollTop > scrollArr[scrollArr.length - 1] - this.data.right) { // this.data.right
+			return
+		} else {
+			//循环所有的wai的高度，如果滚动距离大于等于0，并且滚动高度小于第一个框的高度说明就是初始的
+			for (let i = 0; i < scrollArr.length; i++) {
+				if (scrollTop >= 0 && scrollTop < scrollArr[0]) {
+					// if(0 != this.data.lastactive){
+						this.setData({
+							ind: 0
+						})
+					// }
+					//如果滚动条高度大于等于
+				} else if (scrollTop >= scrollArr[i - 1] && scrollTop <= scrollArr[i]) {
+					// if(i != this.data.lastactive){
+						this.setData({
+							ind:i
+						})
+					// }
+				}
+			}
+		}
+	},
+	/**
+	 * 生命周期函数--监听页面初次渲染完成
+	 */
+	onReady: function() {
+		this.getHeight()
+		// this.getwindowheight()
+	},
 
-    },
+	/**
+	 * 生命周期函数--监听页面显示
+	 */
+	onShow: function() {
 
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function() {
+	},
 
-    },
+	/**
+	 * 生命周期函数--监听页面隐藏
+	 */
+	onHide: function() {
 
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function() {
+	},
 
-    },
+	/**
+	 * 生命周期函数--监听页面卸载
+	 */
+	onUnload: function() {
 
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function() {
+	},
 
-    },
+	/**
+	 * 页面相关事件处理函数--监听用户下拉动作
+	 */
+	onPullDownRefresh: function() {
 
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function() {
+	},
 
-    },
+	/**
+	 * 页面上拉触底事件的处理函数
+	 */
+	onReachBottom: function() {
 
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function() {
+	},
 
-    }
+	/**
+	 * 用户点击右上角分享
+	 */
+	onShareAppMessage: function() {
+
+	}
 })

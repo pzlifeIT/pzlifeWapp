@@ -12,7 +12,7 @@
 	<view class="buy" bindtap="buy">立即购买</view>
 </view>
 
-<view class="mask" wx:if="{{mask}}" catchtouchmove='preventTouchMove'>
+<view class="mask" wx:if="{{mask && ident != 4}}" catchtouchmove='preventTouchMove'>
 	<image lazy-load="true" class="shou" src="{{imgHost}}shou.png"></image>
 	<view class="hint">
 		<view class="status">
@@ -21,6 +21,16 @@
 		</view>
 		<image  lazy-load="true" src="{{imgHost}}hint_03.png"></image>
 		<view class="button">
+			<view>我知道了</view>
+		</view>
+	</view>
+</view>
+
+<view class="mask" wx:if="{{!mask && ident == 4}}" catchtouchmove='preventTouchMove'>
+	<image lazy-load="true" class="shou" src="{{imgHost}}shou.png"></image>
+	<view class="centert">
+		<image lazy-load="true" class="text" src="{{imgHost}}text_03.png"></image>
+		<view class="button" bindtap="editstatus">
 			<view>我知道了</view>
 		</view>
 	</view>

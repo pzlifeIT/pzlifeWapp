@@ -19,7 +19,7 @@ Page({
         let search = options.search,
             sub_id = options.sub_id
         this.setData({
-            sub_id: sub_id
+            sub_id: options.sub_id
         })
         if (sub_id) {
             this.getSubGoodsList(sub_id)

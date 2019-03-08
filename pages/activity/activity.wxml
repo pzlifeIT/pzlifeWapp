@@ -32,3 +32,15 @@
 	</view>
 	<image lazy-load="true" bindtap="cha" class="cha" src="{{imgHost}}cha.png"></image>
 </view>
+
+<view class="mask over" wx:if="{{poptype && identity == 4}}"  catchtouchmove='preventTouchMove'>
+	<view class="pop poptype">
+		<view class="content">
+			<view class="type">选择用户领取钻石会员卡的方式</view>
+		</view>
+		<view class="pop-button">
+			<view class="button-left" bindtap="free">免费领取</view>
+			<view class="button-right" bindtap="pay">付费购买</view>
+		</view>
+	</view>
+</view>

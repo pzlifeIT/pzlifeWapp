@@ -15,7 +15,8 @@ Page({
         share: 0,
         isover: 0,
         uid: "",
-        imgHost: ''
+        imgHost: '',
+		poptype:true
     },
     cha: function() {
         let isvip = !this.data.isvip
@@ -43,6 +44,22 @@ Page({
     preventTouchMove: function() {
         //防止用户操作弹出层外界面
     },
+	popmodal:function(){
+		app.modal({
+			title:"选择用户领取方式"
+		})
+	},
+	free:function(){
+		let type = !this.data.poptype;
+		this.setData({
+			poptype:type
+		})
+	},
+	pay:function(){
+		wx.navigateTo({
+			url: "/pages/activity/buyvip/buyvip?share_id="+app.globalData.userInfo.uid+"&ident="+this.data.identity+"&con_id="+app.globalData.con_id
+		})
+	},
     /**
      * 生命周期函数--监听页面加载
      */
@@ -129,7 +146,7 @@ Page({
             },
             error(res) {
                 wx.redirectTo({
-                    url: "/pages/activity/buyvip/buyvip?share_id=" + share_id + "&con_id=" + app.globalData.con_id + "&uid=" + res.data.uid
+                    url: "/pages/activity/buyvip/buyvip?share_id=" + share_id + "&con_id=" + app.globalData.con_id + "&uid=" + app.globalData.userInfo.uid
                 })
             }
         })

@@ -3,25 +3,31 @@ page{
   background-color: rgb(247, 247, 247)
 }
 .one_goods{
-  width: 370rpx;
-  height: 386rpx;
+  width: 368rpx;
+  height: auto;
   float: left;
-  margin: 2rpx;
-  background-color: rgb(255, 255, 255)
+  margin: 10rpx 3rpx;
+  background-color: rgb(255, 255, 255);
+	box-sizing: border-box;
+	background: #fff;
+	/* margin: 4rpx; */
 }
 .one_goods .goods_img{
-  width: 236rpx;
-  height: 199rpx;
+  width: 100%;
+  height: 370rpx;
+	min-height: 2rpx;
   
 }
 .img{
-  text-align: center;
-  margin-top: 31rpx;
+  text-align: left;
+	background: #fff;
+  /* margin-top: 31rpx; */
   
 }
 .one_goods text{
   display: block;
-  text-align: center;
+  text-align: left;
+	margin-left: 20rpx;
 
 }
 .one_goods .title{
@@ -34,13 +40,21 @@ page{
 .one_goods .subtitle{
   font-size: 24rpx;
   color: rgb(182, 182, 182);
-  margin: 5rpx 0 5rpx 0;
+  margin: 5rpx 0 5rpx 20rpx;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 .one_goods .price{
   font-size: 30rpx;
   color: rgb(230, 31, 24);
+	margin-bottom: 5rpx;
 }
-
+.vipprice{
+	font-size: 24rpx;
+	color: #EAB700;
+	margin-bottom: 10rpx;
+}
 
 
 

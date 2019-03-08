@@ -131,3 +131,12 @@ page{
 	position: absolute;
 	bottom: 180rpx;
 }
+.type{
+	text-align: center;
+}
+.poptype{
+	height: 300rpx;
+}
+
+
+
