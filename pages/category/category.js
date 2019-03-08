@@ -23,13 +23,11 @@ Page({
             query = wx.createSelectorQuery().in(this),
             heightArr = [],
             s = 0
-			console.log(query.selectAll(".wai"))
         query.selectAll(".wai").boundingClientRect((react) => {
             react.forEach((res) => {
                 s += res.height;
                 heightArr.push(s)
             });
-			console.log(react)
             this.setData({
                 heightArr: heightArr
             });
@@ -100,26 +98,18 @@ Page({
     gun: function(e) {
         let scrollTop = e.detail.scrollTop,
             scrollArr = this.data.heightArr;
-			
         if (scrollTop > scrollArr[scrollArr.length - 1] - this.data.right) {
-			// console.log(2222)
             return
         } else {
-			console.log(scrollArr)
-			
             for (let i = 0; i < scrollArr.length; i++) {
-				console.log(scrollTop)
                 if (scrollTop >= 0 && scrollTop < scrollArr[0]) {
-					console.log('11111')
                     if (this.data.ind === 0) return
-					
                     this.setData({
                         ind: 0
                     })
                 } else if (scrollTop >= scrollArr[i - 1] && scrollTop <= scrollArr[i]) {
-                    
+                    console.log(i)
                     if (this.data.ind === i) return
-					
                     this.setData({
                         ind: i
                     })
@@ -138,7 +128,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-		this.getHeight()
+        this.getHeight()
     },
 
     /**
