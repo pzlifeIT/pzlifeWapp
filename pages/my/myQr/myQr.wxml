@@ -1,0 +1,2 @@
+<!--pages/my/myQr/myQr.wxml-->
+<image src="{{qrcode}}" alt="" />

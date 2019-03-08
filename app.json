@@ -9,7 +9,6 @@
         "pages/category/goods/goods",
         "pages/goods/detail",
         "pages/address/address",
-        
         "pages/address/installAddress/installAddress",
         "pages/order/orderDetail/orderDetail",
         "pages/order/order",
@@ -27,6 +26,7 @@
         "pages/coupon/coupon",
         "pages/my/case/case",
         "pages/my/integ/integ",
+        "pages/my/myQr/myQr",
         "pages/my/case/grantcase/grantcase",
         "pages/coupon/getcoupon/getcoupon",
         "pages/boss/boss",
