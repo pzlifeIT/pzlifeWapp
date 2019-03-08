@@ -234,7 +234,8 @@ Page({
      */
     getGoodInfo: function(id) {
         let t = this,
-            goodData = {}
+            goodData = {},
+			dataattr = this.data.attr;
         app.wxrequest({
             url: 'goods/getGoods',
             data: {
@@ -244,6 +245,7 @@ Page({
             nocon: true,
             success: function(res) {
                 goodData.sku_image = res.goods_data.image
+				console.log(res.goods_spec[0].id)
                 t.setData({
                     goodInfo: res,
                     goodData: goodData
