@@ -9,14 +9,15 @@
 </view>
 <view class='cate_content'>
 	<scroll-view scroll-y="true" scroll-top="0" class='cate_left' scroll-into-view="">
-		<view class='cate_text {{item.id == ind ? "active":""}}' data-navactive="{{navactive}}" wx:for='{{firstSub}}' wx:key='{{item.id}}' bindtap='selectSub'
+		<view class='cate_text {{index == ind ? "active":""}}'  wx:for='{{firstSub}}' wx:key='{{item.id}}' bindtap='selectSub'
 		 data-i="{{index}}" data-sub-id="{{item.id}}">
 			<text class=''>{{item.subject}}</text>
 		</view>
 	</scroll-view>
 
 	<scroll-view scroll-y="true" scroll-top="0" class='cate_right' bindscroll="gun" scroll-into-view="{{toview}}">
-		<view class='wai' wx:for='{{third}}' wx:key='{{item.id}}' id="p{{item.pid}}">
+    <view class='wai' wx:for='{{third}}' id="p{{item.id}}" data-id="{{item.id}}">
+		<view  wx:for='{{item._child}}' wx:key='{{item.id}}' >
 			<view class='cate_two'>
 				<view id="id{{item.id}}" class="sub_title">
 					<text class='cate_title'>{{item.subject}}</text>
@@ -29,6 +30,7 @@
 					</view>
 				</navigator>
 			</view>
-		</view>
+    </view>
+    </view>
 	</scroll-view>
 </view>
