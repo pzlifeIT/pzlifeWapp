@@ -18,6 +18,9 @@ Page({
     onLoad: function(options) {
         let search = options.search,
             sub_id = options.sub_id
+			this.setData({
+				sub_id:options.sub_id
+			})
         if (sub_id) {
             this.getSubGoodsList(sub_id)
         } else if (search) {
@@ -99,9 +102,7 @@ Page({
      */
     onReachBottom: function() {
         if (!this.data.reach) return
-        this.getSubGoodsList({
-            sub_id: this.data.sub_id
-        })
+        this.getSubGoodsList( this.data.sub_id)
     },
 
     /**

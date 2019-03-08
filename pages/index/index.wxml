@@ -1,6 +1,6 @@
 <view class="in-slider">
 	<view class="header">
-		<navigator url='/pages/search/search' hover-class="none">
+		<navigator hover-class="none" url='/pages/search/search' hover-class="none">
 			<view class="index-search din fl">
 				<icon type="search" size="34rpx" color="#fff" />
 				<input class="search-inp din fr" type="text" placeholder-class="pla" placeholder="输入您当前要搜索的商品" disabled='disabled' />
@@ -9,23 +9,55 @@
 	</view>
 	<swiper class="slider" autoplay="true" current="0" circular="true" bindchange="swiper">
 		<swiper-item class="pz-swiper" wx:for="{{slider.son}}" wx:key="index">
-			<image lazy-load="true" src="{{item.image_path}}"></image>
+			<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</navigator>
 		</swiper-item>
 	</swiper>
 	<view class="num">{{num}}/{{slider.son.length}}</view>
 </view>
 <view class="icon">
 	<view class="icon-line">
+
 		<view class="icon-one" wx:for="{{icon.son}}">
-			<image lazy-load="true" src="{{item.image_path}}"></image>
-			<view class="icon-text">{{item.title}}</view>
+			<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<view class="icon-text">{{item.title}}</view>
+			</navigator>
+			<navigator hover-class="none" wx:if="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="reLaunch">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<view class="icon-text">{{item.title}}</view>
+			</navigator>
+			<navigator hover-class="none" wx:if="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<view class="icon-text">{{item.title}}</view>
+			</navigator>
 		</view>
+
 	</view>
 </view>
 <view class="">
 	<view class="double-div">
 		<view class="div-left" wx:for="{{sub.son}}">
-			<image lazy-load="true" src="{{item.image_path}}"></image>
+			<!-- {{item.image_path+'?imageMogr2/thumbnail/370x'}} -->
+			<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="reLaunch">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</navigator>
+			<!-- <navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</navigator> -->
 		</view>
 	</view>
 </view>
@@ -37,25 +69,103 @@
 			<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
 		</view>
 	</view>
-	<view class="new-one">
-		<image lazy-load="true" src="{{newGoods.son[0].image_path}}"></image>
-	</view>
+	<navigator hover-class="none" wx:if="{{newGoods.son[0].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{newGoods.son[0].jump_content}}"
+	 open-type="navigate">
+
+
+		<view class="new-one">
+			<image lazy-load="true" src="{{newGoods.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+		</view>
+
+	</navigator>
+	<navigator hover-class="none" wx:elif="{{newGoods.son[0].jump_type == 2}}" url="/pages/goods/detail?goodid={{newGoods.son[0].jump_content}}"
+	 open-type="navigate">
+
+		<view class="new-one">
+			<image lazy-load="true" src="{{newGoods.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+		</view>
+	</navigator>
+	<navigator hover-class="none" wx:elif="{{newGoods.son[0].jump_type == 3}}" url="{{newGoods.son[0].jump_content}}" open-type="navigate">
+		<view class="new-one">
+			<image lazy-load="true" src="{{newGoods.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+		</view>
+	</navigator>
 	<view class="new-line">
-		<view class="new-two">
-			<image lazy-load="true" src="{{newGoods.son[1].image_path}}"></image>
-		</view>
-		<view class="new-two new-mid">
-			<image lazy-load="true" src="{{newGoods.son[2].image_path}}"></image>
-		</view>
-		<view class="new-two">
-			<image lazy-load="true" src="{{newGoods.son[3].image_path}}"></image>
-		</view>
+		<navigator hover-class="none" wx:if="{{newGoods.son[1].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{newGoods.son[1].jump_content}}"
+		 open-type="navigate">
+			<view class="new-two">
+				<image lazy-load="true" src="{{newGoods.son[1].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+
+			</view>
+
+		</navigator>
+		<navigator hover-class="none" wx:elif="{{newGoods.son[1].jump_type == 2}}" url="/pages/goods/detail?goodid={{newGoods.son[1].jump_content}}"
+		 open-type="navigate">
+			<view class="new-two">
+				<image lazy-load="true" src="{{newGoods.son[1].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</view>
+
+		</navigator>
+		<navigator hover-class="none" wx:elif="{{newGoods.son[1].jump_type == 3}}" url="{{newGoods.son[1].jump_content}}" open-type="navigate">
+			<view class="new-two">
+				<image lazy-load="true" src="{{newGoods.son[1].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</view>
+		</navigator>
+		<navigator hover-class="none" wx:if="{{newGoods.son[1].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{newGoods.son[2].jump_content}}"
+		 open-type="navigate">
+
+			<view class="new-two new-mid">
+				<image lazy-load="true" src="{{newGoods.son[2].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</view>
+		</navigator>
+		<navigator hover-class="none" wx:elif="{{newGoods.son[2].jump_type == 2}}" url="/pages/goods/detail?goodid={{newGoods.son[2].jump_content}}"
+		 open-type="navigate">
+			<view class="new-two new-mid">
+				<image lazy-load="true" src="{{newGoods.son[2].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</view>
+		</navigator>
+		<navigator hover-class="none" wx:elif="{{newGoods.son[2].jump_type == 3}}" url="{{newGoods.son[2].jump_content}}" open-type="navigate">
+			<view class="new-two new-mid">
+				<image lazy-load="true" src="{{newGoods.son[2].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</view>
+		</navigator>
+		<navigator hover-class="none" wx:if="{{newGoods.son[3].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{newGoods.son[3].jump_content}}"
+		 open-type="navigate">
+
+			<view class="new-two">
+				<image lazy-load="true" src="{{newGoods.son[3].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</view>
+		</navigator>
+		<navigator hover-class="none" wx:elif="{{newGoods.son[3].jump_type == 2}}" url="/pages/goods/detail?goodid={{newGoods.son[3].jump_content}}"
+		 open-type="navigate">
+			<view class="new-two">
+				<image lazy-load="true" src="{{newGoods.son[3].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</view>
+		</navigator>
+		<navigator hover-class="none" wx:elif="{{newGoods.son[3].jump_type == 3}}" url="{{newGoods.son[3].jump_content}}" open-type="navigate">
+			<view class="new-two">
+				<image lazy-load="true" src="{{newGoods.son[3].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</view>
+		</navigator>
 	</view>
 </view>
 <!-- 每日轮播 -->
+<!-- {{oneDay.son[0].image_path+'?imageMogr2/thumbnail/370x'}} -->
 <view>
 	<view class="date-banner">
-		<image lazy-load="true" src="{{oneDay.son[0].image_path}}"></image>
+		<navigator hover-class="none" wx:if="{{oneDay.son[0].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{oneDay.son[0].jump_content}}"
+		 open-type="navigate">
+
+			<image lazy-load="true" src="{{oneDay.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+
+		</navigator>
+		<navigator hover-class="none" wx:elif="{{oneDay.son[0].jump_type == 2}}" url="/pages/goods/detail?goodid={{oneDay.son[0].jump_content}}"
+		 open-type="navigate">
+			<image lazy-load="true" src="{{oneDay.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+		</navigator>
+		<navigator hover-class="none" wx:elif="{{oneDay.son[0].jump_type == 3}}" url="{{oneDay.son[0].jump_content}}" open-type="navigate">
+			<image lazy-load="true" src="{{oneDay.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+		</navigator>
 	</view>
 	<view class="goods-content">
 		<view class="title">
@@ -65,57 +175,148 @@
 			</view>
 		</view>
 		<view class="one-line">
-			<view class="date-left">
-				<image lazy-load="true" src="{{hotGoods.son[0].image_path}}"></image>
-			</view>
-			<view class="date-left date-right">
-				<image lazy-load="true" src="{{hotGoods.son[1].image_path}}"></image>
-			</view>
+			<navigator hover-class="none" wx:if="{{hotGoods.son[0].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{hotGoods.son[0].jump_content}}"
+			 open-type="navigate">
+
+				<view class="date-left">
+					<image lazy-load="true" src="{{hotGoods.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				</view>
+
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{hotGoods.son[0].jump_type == 2}}" url="/pages/goods/detail?goodid={{hotGoods.son[0].jump_content}}"
+			 open-type="navigate">
+				<view class="date-left">
+					<image lazy-load="true" src="{{hotGoods.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				</view>
+
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{hotGoods.son[0].jump_type == 3}}" url="{{hotGoods.son[0].jump_content}}" open-type="navigate">
+				<view class="date-left">
+					<image lazy-load="true" src="{{hotGoods.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				</view>
+			</navigator>
+			<navigator hover-class="none" wx:if="{{hotGoods.son[0].jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{hotGoods.son[1].jump_content}}"
+			 open-type="navigate">
+
+
+				<view class="date-left date-right">
+					<image lazy-load="true" src="{{hotGoods.son[1].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				</view>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{hotGoods.son[0].jump_type == 2}}" url="/pages/goods/detail?goodid={{hotGoods.son[1].jump_content}}"
+			 open-type="navigate">
+
+				<view class="date-left date-right">
+					<image lazy-load="true" src="{{hotGoods.son[1].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				</view>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{hotGoods.son[0].jump_type == 3}}" url="{{hotGoods.son[1].jump_content}}" open-type="navigate">
+				<view class="date-left date-right">
+					<image lazy-load="true" src="{{hotGoods.son[1].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				</view>
+			</navigator>
 		</view>
 		<view class="goods-line">
 			<view class="goods-one" wx:for="{{hotson}}">
-				<image lazy-load="true" src="{{item.image_path}}"></image>
-				<view class="goods-title">{{item.title}}</view>
-				<view class="goods-price">￥{{item.price}}</view>
-				<view class="vipprice">{{item.goods_min_brokerage}}</view>
+				<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}" open-type="navigate">
+					<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+					<view class="goods-title">{{item.title}}</view>
+					<view class="goods-price">￥{{item.goods_retail_price}}</view>
+					<view class="vipprice">{{item.goods_min_brokerage}}</view>
+				</navigator>
+				<navigator hover-class="none" wx:elif="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}" open-type="navigate">
+					<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+					<view class="goods-title">{{item.title}}</view>
+					<view class="goods-price">￥{{item.goods_retail_price}}</view>
+					<view class="vipprice">{{item.goods_min_brokerage}}</view>
+				</navigator>
+				<navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="navigate">
+					<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+					<view class="goods-title">{{item.title}}</view>
+					<view class="goods-price">￥{{item.goods_retail_price}}</view>
+					<view class="vipprice">{{item.goods_min_brokerage}}</view>
+				</navigator>
 			</view>
 		</view>
 	</view>
 </view>
 <!-- 应季生活推荐 -->
-<view class="life-recommend">
+<view class="life-recommend yinji-recommend" >
 	<view class="life-title">
-		<image lazy-load="true" src="{{season.image_path}}"></image>
+		<image lazy-load="true" src="{{season.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
 	</view>
-	<scroll-view class="life-goods" scroll-x style="width:100%;" scroll-with-animation bindscroll="movescroll">
+	<scroll-view class="life-goods"  style="width:100%;" scroll-with-animation bindscroll="movescroll">
 		<!-- 一列 -->
-		<view class="life-goods-column" wx:for="{{season.son}}">
-			<!-- 单个商品 -->
-			<view class="life-goods-one">
-				<image lazy-load="true" src="{{item.image_path}}"></image>
+		<view class="life-goods-column"  >
+		<!-- 单个商品 -->
+		<view class="life-goods-one" wx:for="{{season.son}}">
+			<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
 				<view class="life-goods-desc">
 					<view class="desc-title">{{item.title}}</view>
-					<view class="desc-price">￥{{item.price}}</view>
-					<view class="desc-vipprice">{{item.goods_min_brokerage}}</view>
+					<view class="desc-price">￥{{item.goods_retail_price}}</view>
+					<view class="desc-vipprice">钻石再让利 {{item.goods_min_brokerage}}</view>
 				</view>
-			</view>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<view class="life-goods-desc">
+					<view class="desc-title">{{item.title}}</view>
+					<view class="desc-price">￥{{item.goods_retail_price}}</view>
+					<view class="desc-vipprice">钻石再让利 {{item.goods_min_brokerage}}</view>
+				</view>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<view class="life-goods-desc">
+					<view class="desc-title">{{item.title}}</view>
+					<view class="desc-price">￥{{item.goods_retail_price}}</view>
+					<view class="desc-vipprice">钻石再让利 {{item.goods_min_brokerage}}</view>
+				</view>
+			</navigator>
+		</view>
 		</view>
 	</scroll-view>
-	<!-- <i class="line" style="transform: translateX({{pos_scroll}}rpx);">
-		<s></s>
-	</i> -->
+
 </view>
 <!-- 时令食品推荐 -->
 <view class="life-recommend">
-	<view class="life-title">
-		<image lazy-load="true" src="{{shiling.image_path}}"></image>
-	</view>
+	<navigator hover-class="none" wx:if="{{shiling.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{shiling.jump_content}}"
+	 open-type="navigate">
+		<view class="life-title">
+			<image lazy-load="true" src="{{shiling.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+		</view>
+	</navigator>
+	<navigator hover-class="none" wx:elif="{{shiling.jump_type == 2}}" url="/pages/goods/detail?goodid={{shiling.jump_content}}" open-type="navigate">
+		<view class="life-title">
+			<image lazy-load="true" src="{{shiling.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+		</view>
+	</navigator>
+	<navigator hover-class="none" wx:elif="{{shiling.jump_type == 3}}" url="{{shiling.jump_content}}" open-type="navigate">
+		<view class="life-title">
+			<image lazy-load="true" src="{{shiling.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+		</view>
+	</navigator>
 	<scroll-view class="slsp-recommend" scroll-x="true">
 		<view class="slsp-goods-one" wx:for="{{shiling.son}}">
-			<image lazy-load="true" src="{{item.image_path}}"></image>
-			<view class="desc-title slsp-title">{{item.title}}</view>
-			<view class="desc-price slsp-price">￥{{item.price}}</view>
-			<view class="desc-vipprice slsp-vipprice">{{item.goods_min_brokerage}}</view>
+			<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<view class="desc-title slsp-title">{{item.title}}</view>
+				<view class="desc-price slsp-price">￥{{item.goods_retail_price}}</view>
+				<view class="desc-vipprice slsp-vipprice">钻石再让利 {{item.goods_min_brokerage}}</view>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<view class="desc-title slsp-title">{{item.title}}</view>
+				<view class="desc-price slsp-price">￥{{item.goods_retail_price}}</view>
+				<view class="desc-vipprice slsp-vipprice">钻石再让利 {{item.goods_min_brokerage}}</view>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				<view class="desc-title slsp-title">{{item.title}}</view>
+				<view class="desc-price slsp-price">￥{{item.goods_retail_price}}</view>
+				<view class="desc-vipprice slsp-vipprice">钻石再让利 {{item.goods_min_brokerage}}</view>
+			</navigator>
 		</view>
 	</scroll-view>
 </view>
@@ -123,12 +324,35 @@
 <view class="buyer-recommend">
 	<view class="title">
 		<view class="newpro-text">{{maizhu.title}}</view>
-		<view class="new-more">更多
-			<image lazy-load="true" src="{{maizhu.image_path}}"></image>
-		</view>
+		<navigator hover-class="none" wx:if="{{maizhu.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{maizhu.jump_content}}"
+		 open-type="navigate">
+			<view class="new-more">更多
+				<image lazy-load="true" src="{{maizhu.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</view>
+		</navigator>
+		<navigator hover-class="none" wx:elif="{{maizhu.jump_type == 2}}" url="/pages/goods/detail?goodid={{maizhu.jump_content}}" open-type="navigate">
+			<view class="new-more">更多
+				<image lazy-load="true" src="{{maizhu.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</view>
+		</navigator>
+		<navigator hover-class="none" wx:elif="{{maizhu.jump_type == 3}}" url="{{maizhu.jump_content}}" open-type="navigate">
+			<view class="new-more">更多
+				<image lazy-load="true" src="{{maizhu.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</view>
+		</navigator>
 	</view>
 	<scroll-view class="buyer-img" scroll-x="true">
-		<image lazy-load="true" wx:for="{{maizhu.son}}" src="{{item.image_path}}"></image>
+		<view wx:for="{{maizhu.son}}">
+			<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="navigate">
+				<image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+			</navigator>
+		</view>
 	</scroll-view>
 </view>
 <!-- 安心零食、酒饮、乳品 -->
@@ -136,20 +360,59 @@
 	<view class="goods-content">
 		<view class="title">
 			<view class="newpro-text">{{item.title}}</view>
-			<view class="new-more">更多
-				<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
-			</view>
+			<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}" open-type="navigate">
+				<view class="new-more">更多
+					<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
+				</view>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}" open-type="navigate">
+				<view class="new-more">更多
+					<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
+				</view>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="navigate">
+				<view class="new-more">更多
+					<image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
+				</view>
+			</navigator>
 		</view>
 		<view class="goods-line">
 			<view class="goods-one" wx:for="{{item.third}}" wx:for-item="third">
-				<image lazy-load="true" src="{{third.image_path}}"></image>
-				<view class="goods-title">{{third.title}}</view>
-				<view class="goods-price">￥{{third.price}}</view>
-				<view class="vipprice">{{third.goods_min_brokerage}}</view>
+				<navigator hover-class="none" wx:if="{{third.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{third.jump_content}}"
+				 open-type="navigate">
+					<image lazy-load="true" src="{{third.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+					<view class="goods-title">{{third.title}}</view>
+					<view class="goods-price">￥{{third.price}}</view>
+					<view class="vipprice">{{third.goods_min_brokerage}}</view>
+				</navigator>
+				<navigator hover-class="none" wx:elif="{{third.jump_type == 2}}" url="/pages/goods/detail?goodid={{third.jump_content}}" open-type="navigate">
+					<image lazy-load="true" src="{{third.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+					<view class="goods-title">{{third.title}}</view>
+					<view class="goods-price">￥{{third.price}}</view>
+					<view class="vipprice">{{third.goods_min_brokerage}}</view>
+				</navigator>
+				<navigator hover-class="none" wx:elif="{{third.jump_type == 3}}" url="{{third.jump_content}}" open-type="navigate">
+					<image lazy-load="true" src="{{third.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+					<view class="goods-title">{{third.title}}</view>
+					<view class="goods-price">￥{{third.price}}</view>
+					<view class="vipprice">{{third.goods_min_brokerage}}</view>
+				</navigator>
 			</view>
-			<view class="goods-one" >
-				<image class="right-bottom-img" lazy-load="true" src="{{item.image_path}}"></image>
-			</view>
+			<navigator hover-class="none" wx:if="{{item.jump_type == 1}}" url="/pages/category/goods/goods?sub_id={{item.jump_content}}" open-type="navigate">
+				<view class="goods-one">
+					<image class="right-bottom-img" lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				</view>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 2}}" url="/pages/goods/detail?goodid={{item.jump_content}}" open-type="navigate">
+				<view class="goods-one">
+					<image class="right-bottom-img" lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				</view>
+			</navigator>
+			<navigator hover-class="none" wx:elif="{{item.jump_type == 3}}" url="{{item.jump_content}}" open-type="navigate">
+				<view class="goods-one">
+					<image class="right-bottom-img" lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+				</view>
+			</navigator>
 		</view>
 	</view>
 </view>
@@ -165,7 +428,7 @@
 					<view class="re-goods-title">粑粑柑中果8斤</view>
 					<view class="re-goods-subtitle">粑粑柑中果8斤</view>
 					<view class="re-goods-price">￥62.00<text>280.00</text></view>
-					<view class="re-vipprice">
+					<view class="re-vipprice">钻石再让利 
 						<view>钻石再让利</view>2.00
 					</view>
 				</view>
@@ -174,7 +437,7 @@
 					<view class="re-goods-title">粑粑柑中果8斤</view>
 					<view class="re-goods-subtitle">粑粑柑中果8斤</view>
 					<view class="re-goods-price">￥62.00<text>280.00</text></view>
-					<view class="re-vipprice">
+					<view class="re-vipprice">钻石再让利 
 						<view>钻石再让利</view>2.00
 					</view>
 				</view>
@@ -183,7 +446,7 @@
 					<view class="re-goods-title">粑粑柑中果8斤</view>
 					<view class="re-goods-subtitle">粑粑柑中果8斤</view>
 					<view class="re-goods-price">￥62.00<text>280.00</text></view>
-					<view class="re-vipprice">
+					<view class="re-vipprice">钻石再让利 
 						<view>钻石再让利</view>2.00
 					</view>
 				</view>
@@ -192,7 +455,7 @@
 					<view class="re-goods-title">粑粑柑中果8斤</view>
 					<view class="re-goods-subtitle">粑粑柑中果8斤</view>
 					<view class="re-goods-price">￥62.00<text>280.00</text></view>
-					<view class="re-vipprice">
+					<view class="re-vipprice">钻石再让利 
 						<view>钻石再让利</view>2.00
 					</view>
 				</view>
@@ -201,7 +464,7 @@
 					<view class="re-goods-title">粑粑柑中果8斤</view>
 					<view class="re-goods-subtitle">粑粑柑中果8斤</view>
 					<view class="re-goods-price">￥62.00<text>280.00</text></view>
-					<view class="re-vipprice">
+					<view class="re-vipprice">钻石再让利 
 						<view>钻石再让利</view>2.00
 					</view>
 				</view>

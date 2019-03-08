@@ -165,6 +165,9 @@ page {
 	font-size: 24rpx;
 	color: rgb(182, 182, 182);
 	margin: 5rpx 0 5rpx 20rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .one_goods .price {

@@ -72,6 +72,7 @@ Page({
 				that.setData({
 					oneDay:home[i]
 				})
+				console.log(home[i].son)
 			}else if(home[i].model_id == 6){
 				that.setData({
 					hotGoods:home[i]

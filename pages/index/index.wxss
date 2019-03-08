@@ -25,8 +25,6 @@ page{
     width: 710rpx;
     /* height: 60rpx; */
     margin: 20rpx 0;
-    background-color: #fff;
-    border: 1rpx solid #c9c9c9;
     margin-left: 20rpx;
     border-radius: 10rpx;
     overflow: hidden;
@@ -45,7 +43,9 @@ page{
     height: 60rpx;
     line-height: 60rpx;
     font-size: 26rpx;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,.3);
+	outline: none;
+	border: none;
     border-left: none;
 	text-align: center;
 	color: #fff;
@@ -56,16 +56,16 @@ page{
 }
 .slider{
 	width: 750rpx;
-	height: 480rpx;
+	height: 456rpx;
 }
 .pz-swiper {
     width: 750rpx;
-    height: 480rpx;
+    height: 456rpx;
 }
 
 .pz-swiper image {
     width: 100%;
-    height: 480rpx;
+    height: 456rpx;
 }
 .num{
 	width: 64rpx;
@@ -125,6 +125,7 @@ page{
 .div-left image,.div-right image{
 	width: 100%;
 	height: 100%;
+	border-radius: 20rpx;
 }
 .newpro{
 	width: 750rpx;
@@ -144,12 +145,13 @@ page{
 .new-one{
 	width: 710rpx;
 	height: 240rpx;
-	border-radius: 10rpx;
+	border-radius: 20rpx;
 	margin: 0 auto;
 }
 .new-one image{
 	width: 100%;
 	height: 100%;
+	border-radius: 20rpx;
 }
 .title{
 	width: 710rpx;
@@ -187,6 +189,7 @@ page{
 .new-two,.new-two image{
 	width: 230rpx;
 	height: 215rpx;	
+	border-radius: 20rpx;
 }
 .date-banner{
 	width: 750rpx;
@@ -213,6 +216,7 @@ page{
 .date-left,.date-left image{
 	width: 350rpx;
 	height: 180rpx;
+	border-radius: 20rpx;
 }
 .date-right{
 	margin-left: 10rpx;
@@ -267,31 +271,37 @@ page{
 	height: 146rpx;
 }
 .life-goods{
-	height: 650rpx;
+	height: auto;
 	background: #fff;
 }
 .life-goods-column{
 	width: 100%;
-	height: 650rpx;
+	height: auto;
 	overflow: hidden;
-	margin-left: 20rpx;
+	display: inline-block;
+	background: #F7F7F7;
+}
+.life-goods-column navigator{
 	display: inline-block;
 }
 .life-goods-one{
-	width: 100%;
-	height: 200rpx;
-	display: flex;
+	background: #fff;
+	width: 32%;
+	height: auto;
+	/* display: flex; */
 	overflow: hidden;
 	margin-top: 10rpx;
+	float: left;
+	margin-left: 10rpx;
 }
 .life-goods-one image{
-	width: 220rpx;
+	width: 240rpx;
 	height: 200rpx;
+	margin: 0 auto;
 }
 .life-goods-desc{
 	width: 510rpx;
-	height: 200rpx;
-	display: inline-block;
+	height: auto;
 	margin-left: 10rpx;
 }
 .desc-title{
@@ -311,6 +321,7 @@ page{
 .desc-vipprice{
 	color: #eab700;
 	font-size: 24rpx;
+	margin-bottom: 10rpx;
 }
 .line{
 	position: absolute;
@@ -327,20 +338,20 @@ page{
 }
 .slsp-recommend{
 	width: 100%;
-	height: 354rpx;
+	height: auto;
 	background: #fff;
 }
 .slsp-goods-one{
 	margin-left: 20rpx;
 	width: 33.33%;
-	height: 100%;
+	height: auto;
 	overflow: hidden;
 	text-align: left;
 	display: inline-block;
 }
 .slsp-goods-one image{
-	width: 220rpx;
-	height: 204rpx;
+	width: 100%;
+	height: 249rpx;
 }
 .slsp-title{
 	margin: 0;
@@ -438,4 +449,17 @@ page{
 	width: 735rpx;
 	overflow: hidden;
 	margin: 0 auto;
+}
+.buyer-img navigator {
+	display: inline-block;
+}
+.buyer-img view{
+	display: inline-block;
+}
+.double-div navigator{
+	display: inline;
+}
+.yinji-recommend{
+	height: auto;
+	background: #F7F7F7;
 }

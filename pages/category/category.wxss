@@ -134,6 +134,7 @@ page {
 	width: 70%;
 	height: 2rpx;
 	background: #B6B6B6;
+	opacity: 0.3;
 	margin: 0 auto;
 	position: absolute;
 	top: 55%;
