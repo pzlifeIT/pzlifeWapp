@@ -87,7 +87,134 @@ Page({
             }
         })
     },
+    gopay: function(e) {
+        console.log(e.currentTarget.dataset.orderno)
+        let that = this
+        app.wxrequest({
+            url: 'pay/pay',
+            data: {
+                order_no: e.currentTarget.dataset.orderno,
+                payment: '1',
+                platform: '1'
+            },
+            host: 2,
+            nocon: true,
+            success: function(res) {
+                let parameters = res.parameters
+                wx.requestPayment({
+                    timeStamp: parameters.timeStamp,
+                    nonceStr: parameters.nonceStr,
+                    package: parameters.package,
+                    signType: parameters.signType,
+                    paySign: parameters.paySign,
+                    success(res) {
+                        that.setData({
+                            page: 1,
+                            reach: true,
+                            order_list: []
+                        })
+                        that.getUserOrderList({
+                            orderStatus: that.data.status
+                        })
+                    },
+                    fail(res) {
+                        app.toast({ title: '支付失败' })
+                    }
+                })
+            },
+            error: function(code) {
+                switch (parseInt(code)) {
+                    case 3000:
+                        app.toast({ title: '不存在需要支付的订单' })
+                        break;
+                    case 3001:
+                        app.toast({ title: '订单号错误' })
+                        break;
+                    case 3002:
+                        app.toast({ title: '订单类型错误' })
+                        break;
+                    case 3004:
+                        app.toast({ title: '订单已取消' })
+                        break;
+                    case 3005:
+                        app.toast({ title: '订单已关闭' })
+                        break;
+                    case 3006:
+                        app.toast({ title: '订单已付款' })
+                        break;
+                    case 3007:
+                        app.toast({ title: '订单已过期' })
+                        break;
+                    case 3010:
+                        app.toast({ title: '支付失败' })
+                        break;
+                    default:
+                        app.toast({ title: '意料之外的网络错误' })
+                }
 
+            }
+        })
+    },
+    cancelorder: function(e) {
+        let that = this
+        app.modal({
+            content: '是否取消订单',
+            success: function() {
+                app.wxrequest({
+                    url: 'order/cancelorder',
+                    data: {
+                        order_no: e.currentTarget.dataset.orderno
+                    },
+                    success: function(res) {
+                        that.setData({
+                            page: 1,
+                            reach: true,
+                            order_list: []
+                        })
+                        that.getUserOrderList({
+                            orderStatus: that.data.status
+                        })
+
+                        app.toast({ title: '取消成功！', duration: 1500 })
+                    },
+                    error: function(code) {
+                        app.toast({ title: '取消失败' })
+                    }
+                })
+            },
+            cancel: function() {
+
+            }
+        })
+
+    },
+    gologistics: function(e) {
+        let that = this,
+            orderno = e.currentTarget.dataset.orderno
+        wx.navigateTo({
+            url: '/pages/order/logisticslist/logisticslist?orderno=' + orderno
+        })
+    },
+    confirmOrder: function(e) {
+        let that = this
+        let orderno = e.currentTarget.dataset.orderno
+        app.wxrequest({
+            url: 'order/confirmOrder',
+            data: {
+                order_no: orderno
+            },
+            success: function(res) {
+                that.setData({
+                    page: 1,
+                    reach: true,
+                    order_list: []
+                })
+                that.getUserOrderList({
+                    orderStatus: that.data.status
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

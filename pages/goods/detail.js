@@ -216,6 +216,7 @@ Page({
                     showModel: false
                 })
                 app.toast({ title: '加入购物车成功' })
+                app.setCartNum()
             }
         })
     },
@@ -227,7 +228,7 @@ Page({
             goodid: options.goodid,
             imgHost: app.globalData.host.imgHost
         })
-        this.getGoodInfo(this.data.goodid)
+        this.getGoodInfo(options.goodid)
     },
     /**
      * 获取商品详情
@@ -235,7 +236,10 @@ Page({
     getGoodInfo: function(id) {
         let t = this,
             goodData = {},
-			dataattr = this.data.attr;
+            dataattr = this.data.attr,
+            buy = false,
+            repertory = true,
+            attr = [];
         app.wxrequest({
             url: 'goods/getGoods',
             data: {
@@ -245,10 +249,24 @@ Page({
             nocon: true,
             success: function(res) {
                 goodData.sku_image = res.goods_data.image
-				console.log(res.goods_spec[0].id)
+                if (res.goods_sku.length == 1) {
+                    goodData.sku_price = res.goods_sku[0].retail_price
+                    goodData.sku_image = res.goods_sku[0].sku_image
+                    goodData.integral_active = res.goods_sku[0].integral_active
+                    goodData.sku_name = res.goods_sku[0].sku_name
+                    goodData.id = res.goods_sku[0].id
+                    buy = true
+                    attr.push(res.goods_spec[0].list[0].id)
+                    if (parseInt(res.goods_sku[0].stock) < 1) {
+                        repertory = false
+                    }
+                }
                 t.setData({
                     goodInfo: res,
-                    goodData: goodData
+                    goodData: goodData,
+                    buy: buy,
+                    repertory: repertory,
+                    attr: attr
                 })
             },
             error: function(code) {

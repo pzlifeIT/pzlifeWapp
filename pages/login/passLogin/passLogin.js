@@ -42,7 +42,6 @@ Page({
                         url: "/" + prevpage.route
                     })
                 }
-                app.getconid()
             },
             fail(res) {
 

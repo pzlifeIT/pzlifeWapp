@@ -8,8 +8,8 @@
 	</navigator>
 </view>
 <view class='cate_content'>
-	<scroll-view scroll-y="true" scroll-top="0" class='cate_left' scroll-into-view="">
-		<view class='cate_text {{index == ind ? "active":""}}'  wx:for='{{firstSub}}' wx:key='{{item.id}}' bindtap='selectSub'
+	<scroll-view scroll-y="true" scroll-top="0" class='cate_left' scroll-into-view="p{{ind - 4}}">
+		<view id="p{{index}}" class='cate_text {{index == ind ? "active":""}}'  wx:for='{{firstSub}}' wx:key='{{item.id}}' bindtap='selectSub'
 		 data-i="{{index}}" data-sub-id="{{item.id}}">
 			<text class=''>{{item.subject}}</text>
 		</view>

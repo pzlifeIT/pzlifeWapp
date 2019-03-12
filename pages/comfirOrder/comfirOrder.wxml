@@ -45,7 +45,7 @@
 </view>
 <view class='stat'>
   <view class='summation'><text class='sum_text'>含运费</text><text class='sum_price'>￥{{stat.total_freight_price}}</text></view>
-  <view class='summation'><text class='sum_text'>钻石返利</text><text class='sum_price'>￥{{stat.rebate_all}}</text></view>
+  <view class='summation'><text class='sum_text'>钻石返利<text class="small">(让利收益在支付货款后自动转入后台商票)</text></text><text class='sum_price'>￥{{stat.rebate_all}}</text></view>
   <view class='summation'><text class='sum_text'>共计{{stat.goods_count}}件商品</text><text class='sum_price'>合计￥{{stat.total_goods_price}}</text></view>
 </view>
 
@@ -73,7 +73,7 @@
     </view>
     <view >
       <button class="hp-else din fl" plain="true" bindtap="selsite"  >选择其他</button>
-      <button bindtap="showbuypup" class="hp-confirm din fl" >确定</button>
+      <button bindtap="showbuypup" class="hp-confirm din fl" >地址确定</button>
     </view>
   </view>
 </view>

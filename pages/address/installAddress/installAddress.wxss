@@ -16,13 +16,13 @@ page {
 }
 
 .provinces-tit {
-    width: 260rpx;
+    width: 220rpx;
     margin-left: 20rpx;
     color: #888;
 }
 
 .provinces-text {
-    width: 450rpx;
+    width: 500rpx;
     height: 100rpx;
     text-align: center;
     overflow: auto;

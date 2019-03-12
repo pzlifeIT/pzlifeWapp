@@ -1,0 +1,12 @@
+<!--pages/diamondlist/diamondlist.wxml-->
+<view >
+  <view class="ddList" >
+    <view class="dt-num" >9386 张</view>
+    <view class="dt-con din fl" >
+      <view class="dt-money" >¥<text class="num" >188.88</text></view>
+      <view class="dt-time" >创建时间：2018-12-01</view>
+    </view>
+    <view class="dt-text din fl" >已有<text class="num">999人</text>领取</view>
+    <view class="dt-look din fr" ><text class="dl-text" >查看详情</text></view>
+  </view>
+</view>

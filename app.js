@@ -22,6 +22,7 @@ App({
                 that.globalData.con_id = res.data
             }
         });
+        this.setCartNum()
     },
     setconid: function(conid) {
         wx.setStorage({
@@ -30,6 +31,7 @@ App({
         })
         this.globalData.con_id = conid
         this.getUserInfo()
+        this.setCartNum()
     },
     toast: function(data) {
         wx.showToast({
@@ -88,8 +90,23 @@ App({
             data: {
                 buid: id
             },
-            indexmain: true,
+            nologin: true,
             success: function(res) {}
+        })
+    },
+    setCartNum: function(id) {
+        this.wxrequest({
+            url: 'cart/getUserCartNum',
+            nologin: true,
+            success: function(res) {
+                let n = res.total
+                console.log(n)
+                if (n == 0) return
+                wx.setTabBarBadge({
+                    index: 2,
+                    text: n.toString() || ''
+                })
+            }
         })
     },
     modal: function(data) {
@@ -124,7 +141,7 @@ App({
         obj.data = obj.data || {}
         if (!obj.nocon) {
             if (that.globalData.con_id == '') {
-                if (obj.indexmain) return
+                if (obj.nologin) return
                 that.login()
                 return
             }
@@ -157,7 +174,7 @@ App({
                         }
                     } else {
                         if (result.code == 5000) {
-                            if (obj.indexmain) return
+                            if (obj.nologin) return
                             that.login()
                         } else if (typeof obj.error == 'function') {
                             obj.error(result.code)

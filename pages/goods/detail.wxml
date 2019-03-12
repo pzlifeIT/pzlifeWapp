@@ -19,8 +19,8 @@
     <view class='price'>
       <text class="din fl" >￥{{goodInfo.goods_data.min_retail_price}}</text>
       <text class="din fl" wx:if="{{goodInfo.goods_data.min_retail_price != goodInfo.goods_data.max_retail_price}}" > -￥{{goodInfo.goods_data.max_retail_price}}</text> </view>
-			<view class="vipprice">钻石再让利 {{goodInfo.goods_data.min_brokerage}}</view>
-			<view class="vipprice" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}"> -￥{{goodInfo.goods_data.min_brokerage}}</view>
+			<view class="vipprice">钻石再让利 {{goodInfo.goods_data.min_brokerage}}<text wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}"> -￥{{goodInfo.goods_data.min_brokerage}}</text></view>
+			
   </view>	
   <!-- <view class='collect'>
     <icon type=''></icon>
@@ -39,10 +39,10 @@
     <text class='fix'>领券：</text><text class='fix_desc'>全场满39减9</text>
   </view> -->
   <view class='integral'>
-    <text class='fix'>积分：</text><text class='fix_desc'>赠送<text >{{goodInfo.goods_data.min_integral_active}}</text><text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">-{{goodInfo.goods_data.max_integral_active}}</text>积分</text>
+    <text class='fix' decode="{{true}}">积&emsp;分：</text><text class='fix_desc'>赠送<text >{{goodInfo.goods_data.min_integral_active}}</text><text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">-{{goodInfo.goods_data.max_integral_active}}</text>积分</text>
   </view>
   <view class='freight'>
-    <text class='fix'>运费：</text><text class='fix_desc'>{{goodInfo.goods_data.supplier_desc}}</text>
+    <text class='fix' decode="{{true}}">运&emsp;费：</text><text class='fix_desc'>{{goodInfo.goods_data.supplier_desc}}</text>
   </view>
 </view>
 <!-- 选择规格弹出层 -->
