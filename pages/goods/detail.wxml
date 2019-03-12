@@ -119,7 +119,7 @@
     </view> -->
     <view class='four_cont'>
       <view class='detail_img'>
-        <image lazy-load="true" wx:for="{{goodInfo.goods_details}}" class='imgDetails'  bindtap="previewImage" data-img="{{item.image_path}}" src='{{item.image_path}}' mode="widthFix"></image>
+        <image lazy-load="true" wx:for="{{goodInfo.goods_details}}" class='imgDetails'  bindtap="previewImage" data-img="{{item.image_path+'?imageMogr2/thumbnail/750x'}}" src="{{item.image_path+'?imageMogr2/thumbnail/750x'}}" mode="widthFix"></image>
       </view>
     </view>
 </view>
