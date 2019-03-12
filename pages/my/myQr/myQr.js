@@ -27,12 +27,13 @@ Page({
 
     },
     getUserQrcode: function() {
-        let that = this
+        let that = this,
+            pid = app.globalData.userInfo.uid
         app.wxrequest({
             url: 'user/getUserQrcode',
             data: {
                 page: 'pages/index/index',
-                scene:"uid=1"
+                scene:pid
             },
             nocon:false,
 			method:"GET",
