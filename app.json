@@ -28,6 +28,7 @@
         "pages/my/integ/integ",
         "pages/my/myQr/myQr",
         "pages/diamondlist/diamondlist",
+        "pages/diamondlist/diamonddetails/diamonddetails",
         "pages/my/case/grantcase/grantcase",
         "pages/coupon/getcoupon/getcoupon",
         "pages/boss/boss",

@@ -1,249 +1,258 @@
 {
-    "description": "项目配置文件",
-    "packOptions": {
-        "ignore": []
-    },
-    "setting": {
-        "urlCheck": false,
-        "es6": true,
-        "postcss": true,
-        "minified": true,
-        "newFeature": true,
-        "autoAudits": false
-    },
-    "compileType": "miniprogram",
-    "libVersion": "2.4.3",
-    "appid": "wx1771b2e93c87e22c",
-    "projectname": "pzlifeWapp",
-    "debugOptions": {
-        "hidedInDevtools": []
-    },
-    "isGameTourist": false,
-    "condition": {
-        "search": {
-            "current": -1,
-            "list": []
-        },
-        "conversation": {
-            "current": -1,
-            "list": []
-        },
-        "plugin": {
-            "current": -1,
-            "list": []
-        },
-        "game": {
-            "currentL": -1,
-            "list": []
-        },
-        "miniprogram": {
-            "current": 30,
-            "list": [{
-                    "id": 0,
-                    "name": "goods",
-                    "pathName": "pages/goods/detail",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "cart",
-                    "pathName": "pages/cart/cart",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "确认订单",
-                    "pathName": "pages/comfirOrder/comfirOrder",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "orderDetail",
-                    "pathName": "pages/order/orderDetail/orderDetail",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "login",
-                    "pathName": "pages/login/login",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "logi",
-                    "pathName": "pages/login/register/register",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "captcha",
-                    "pathName": "pages/login/captchaLogin/captchaLogin",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "pass",
-                    "pathName": "pages/login/passLogin/passLogin",
-                    "query": ""
-                },
-                {
-                    "id": 10,
-                    "name": "pay",
-                    "pathName": "pages/paystatus/paystatus",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "search",
-                    "pathName": "pages/search/search",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "info",
-                    "pathName": "pages/my/myInfo/myInfo",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "注册",
-                    "pathName": "pages/login/register/register",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "my",
-                    "pathName": "pages/my/my",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "cart",
-                    "pathName": "pages/cart/cart",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "newpass",
-                    "pathName": "pages/my/newpassword/newpassword",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "优惠券",
-                    "pathName": "pages/coupon/coupon",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "商票",
-                    "pathName": "pages/my/case/case",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "积分",
-                    "pathName": "pages/my/integ/integ",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "支付结果",
-                    "pathName": "pages/paystatus/paystatus",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "收藏",
-                    "pathName": "pages/collect/collect",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "领券中心",
-                    "pathName": "pages/coupon/getcoupon/getcoupon",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "店铺管理",
-                    "pathName": "pages/boss/boss",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "新建优惠券",
-                    "pathName": "pages/boss/addcoupon/addcoupon",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "活动",
-                    "pathName": "pages/activity/activity",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "购买钻石会员",
-                    "pathName": "pages/activity/buyvip/buyvip",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": 25,
-                    "name": "1",
-                    "pathName": "pages/my/case/case",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": 26,
-                    "name": "goodslist",
-                    "pathName": "pages/category/goods/goods",
-                    "query": "sub_id=51",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "分类",
-                    "pathName": "pages/category/category",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "商品列表",
-                    "pathName": "pages/category/goods/goods",
-                    "query": "sub_id=53",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "地址",
-                    "pathName": "pages/address/address",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "钻石卡列表",
-                    "pathName": "pages/diamondlist/diamondlist",
-                    "scene": null
-                }
-            ]
-        }
-    }
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
+	"appid": "wxa8c604ce63485956",
+	"projectname": "pzlifeWapp",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 31,
+			"list": [
+				{
+					"id": 0,
+					"name": "goods",
+					"pathName": "pages/goods/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "确认订单",
+					"pathName": "pages/comfirOrder/comfirOrder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "orderDetail",
+					"pathName": "pages/order/orderDetail/orderDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "logi",
+					"pathName": "pages/login/register/register",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "captcha",
+					"pathName": "pages/login/captchaLogin/captchaLogin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pass",
+					"pathName": "pages/login/passLogin/passLogin",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "pay",
+					"pathName": "pages/paystatus/paystatus",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "info",
+					"pathName": "pages/my/myInfo/myInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/login/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "newpass",
+					"pathName": "pages/my/newpassword/newpassword",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "优惠券",
+					"pathName": "pages/coupon/coupon",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商票",
+					"pathName": "pages/my/case/case",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分",
+					"pathName": "pages/my/integ/integ",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付结果",
+					"pathName": "pages/paystatus/paystatus",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收藏",
+					"pathName": "pages/collect/collect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "领券中心",
+					"pathName": "pages/coupon/getcoupon/getcoupon",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "店铺管理",
+					"pathName": "pages/boss/boss",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新建优惠券",
+					"pathName": "pages/boss/addcoupon/addcoupon",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动",
+					"pathName": "pages/activity/activity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购买钻石会员",
+					"pathName": "pages/activity/buyvip/buyvip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 25,
+					"name": "1",
+					"pathName": "pages/my/case/case",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 26,
+					"name": "goodslist",
+					"pathName": "pages/category/goods/goods",
+					"query": "sub_id=51",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/category/category",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品列表",
+					"pathName": "pages/category/goods/goods",
+					"query": "sub_id=53",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "地址",
+					"pathName": "pages/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "钻石卡列表",
+					"pathName": "pages/diamondlist/diamondlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "pid=1235",
+					"scene": null
+				}
+			]
+		}
+	}
 }

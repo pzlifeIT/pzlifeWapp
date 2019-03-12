@@ -38,15 +38,15 @@ Page({
         let con = e.currentTarget.dataset
         if (con.jump == 1) {
             wx.navigateTo({
-                url:"/pages/category/goods/goods?sub_id="+con.content
+                url: "/pages/category/goods/goods?sub_id=" + con.content
             })
         } else if (con.jump == 2) {
             wx.navigateTo({
-                url:"/pages/goods/detail?goodid="+con.content
+                url: "/pages/goods/detail?goodid=" + con.content
             })
         } else if (con.jump == 3) {
             wx.reLaunch({
-                url:con.content
+                url: con.content
             })
         }
     },
@@ -125,13 +125,16 @@ Page({
     onPullDownRefresh: function() {
         wx.showNavigationBarLoading() //在标题栏中显示加载
             //模拟加载
+        let that = this
         setTimeout(function() {
+            that.getIndex()
             wx.hideNavigationBarLoading() //完成停止加载
             wx.stopPullDownRefresh() //停止下拉刷新
         }, 1500);
     },
     onLoad: function(options) {
-        console.log(options.uid)
+        console.log(132121)
+        console.log()
         this.setData({
             imgHost: app.globalData.host.imgHost
         })

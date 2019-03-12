@@ -1,4 +1,4 @@
-// pages/diamondlist/diamondlist.js
+// pages/diamondlist/diamonddetails/diamonddetails.js
 const app = getApp()
 Page({
 
@@ -6,15 +6,18 @@ Page({
      * 页面的初始数据
      */
     data: {
-        Diamondvips: [],
-        DiamondvipDominos: 0
+        id: '',
+        DominosReceive: []
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        this.getDominosChance()
+        this.setData({
+            id: options.id || ''
+        })
+        this.getDominosReceive(options.id || '')
     },
 
     /**
@@ -23,36 +26,27 @@ Page({
     onReady: function() {
 
     },
-
+    getDominosReceive(id) {
+        let that = this;
+        app.wxrequest({
+            url: 'rights/getDominosReceive',
+            data: {
+                diamondvips_id: id
+            },
+            success: function(res) {
+                that.setData({
+                    DominosReceive: res.Diamondvips || []
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
 
     },
-    getDominosChance() {
-        let that = this
-        app.wxrequest({
-            url: 'rights/getDominosChance',
-            success: function(res) {
-                let Diamondvips = that.disDominos(res.Diamondvips)
-                that.setData({
-                    Diamondvips: Diamondvips,
-                    DiamondvipDominos: res.DiamondvipDominos || 0
-                })
-            }
-        })
-    },
-    disDominos(data) {
-        if (!data) return []
-        if (data.length < 1) return []
-        let len = data.length
-        for (let i = 0; i < len; i++) {
-            let time = data[i].create_time.split(' ')
-            data[i].time = time[0]
-        }
-        return data
-    },
+
     /**
      * 生命周期函数--监听页面隐藏
      */
