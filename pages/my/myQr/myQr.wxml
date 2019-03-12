@@ -1,2 +1,4 @@
 <!--pages/my/myQr/myQr.wxml-->
-<image src="{{qrcode}}" alt="" />
+<view>
+    <image class="qr" src="{{qrcode}}" alt="" bindlongtap=""/>
+</view>

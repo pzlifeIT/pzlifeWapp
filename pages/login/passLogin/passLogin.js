@@ -9,6 +9,7 @@ Page({
         phone: "",
         pass: "",
         goodid: 0,
+        share_id:"",
         imgHost: ''
     },
     /**
@@ -22,7 +23,8 @@ Page({
     },
     login: function() {
         let mobile = this.data.phone,
-            password = this.data.pass
+            password = this.data.pass,
+            share_id = this.data.share_id
         app.wxrequest({
             url: "user/login",
             data: { mobile: mobile, password: password, buid: app.globalData.pid },
@@ -39,7 +41,7 @@ Page({
                     })
                 } else {
                     wx.reLaunch({
-                        url: "/" + prevpage.route
+                        url: "/" + prevpage.route+"?share_id="+share_id
                     })
                 }
                 app.getconid()
@@ -75,6 +77,11 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
+        if (options.share_id){
+            this.setData({
+                share_id:options.share_id
+            })
+        }
     },
 
     /**

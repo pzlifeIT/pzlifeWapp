@@ -15,7 +15,7 @@
 	<text class="title">手机号</text>
 	<input class="cont" placeholder-class=""  value="{{mobile}}" disabled="disabled"/>
 </view>
-<view class="footer">
-	<view class="left" bindtap='back'>取消</view>
-	<view class="right">保存</view>
-</view>
+<!--<view class="footer">-->
+	<!--<view class="left" bindtap='back'>取消</view>-->
+	<!--<view class="right">保存</view>-->
+<!--</view>-->

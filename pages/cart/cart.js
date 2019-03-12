@@ -10,7 +10,7 @@ Page({
         valid: [],
         failure: [],
         total: 0,
-        selectAll: true,
+        selectAll: false,
         sku_id: 0,
         con_id: "",
         shop_id: 0,
@@ -26,8 +26,8 @@ Page({
             valid[i].selectStatus = selectAll
             for (let j = 0; j < valid[i].goods.length; j++) {
                 valid[i].goods[j].selectStatus = selectAll
-                if (valid[i].goods[j].selectStatus == false) {
-                    selectAll = false
+                if (valid[i].goods[j].selectStatus == true) {
+                    selectAll = true
                 }
             }
         }
@@ -50,15 +50,15 @@ Page({
             valid[validIndex].goods[i].selectStatus = selectShop
             select[i] = valid[validIndex].goods[i].selectStatus
         }
-        let status = false
+        let status = true
         let have = select.indexOf(status)
         if (have < 0) { //如果没有false
             this.setData({
-                selectAll: true
+                selectAll: false
             })
         } else {
             this.setData({
-                selectAll: false
+                selectAll: true
             })
         }
         valid[validIndex].selectStatus = selectShop
@@ -97,11 +97,11 @@ Page({
                 selectAll: false
             })
         }
-        let haveTrue = select.indexOf(true)
+        let haveTrue = select.indexOf(false)
         if (haveTrue >= 0) {
-            valid[validIndex].selectStatus = true
-        } else {
             valid[validIndex].selectStatus = false
+        } else {
+            valid[validIndex].selectStatus = true
         }
         this.setData({
             valid: valid
@@ -343,9 +343,9 @@ Page({
      */
     addText: function(data) {
         for (let i = 0; i < data.length; i++) {
-            data[i].selectStatus = true
+            data[i].selectStatus = false
             for (let j = 0; j < data[i].goods.length; j++) {
-                data[i].goods[j].selectStatus = true
+                data[i].goods[j].selectStatus = false
             }
         }
         return data
@@ -428,7 +428,7 @@ Page({
     onShow: function() {
         this.getStorage()
         this.setData({
-            selectAll: true
+            selectAll: false
         })
     },
 

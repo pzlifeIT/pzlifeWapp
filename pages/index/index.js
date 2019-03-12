@@ -37,11 +37,17 @@ Page({
     goUrl(e) {
         let con = e.currentTarget.dataset
         if (con.jump == 1) {
-
+            wx.navigateTo({
+                url:"/pages/category/goods/goods?sub_id="+con.content
+            })
         } else if (con.jump == 2) {
-
+            wx.navigateTo({
+                url:"/pages/goods/detail?goodid="+con.content
+            })
         } else if (con.jump == 3) {
-
+            wx.reLaunch({
+                url:con.content
+            })
         }
     },
     swiper: function(e) {
@@ -110,6 +116,7 @@ Page({
                     sub_goods: home[i]
                 });
             }
+
         }
     },
     /**
@@ -123,7 +130,8 @@ Page({
             wx.stopPullDownRefresh() //停止下拉刷新
         }, 1500);
     },
-    onLoad: function() {
+    onLoad: function(options) {
+        console.log(options.uid)
         this.setData({
             imgHost: app.globalData.host.imgHost
         })

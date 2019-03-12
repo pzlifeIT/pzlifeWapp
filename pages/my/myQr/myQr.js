@@ -31,10 +31,18 @@ Page({
         app.wxrequest({
             url: 'user/getUserQrcode',
             data: {
-                link: '/pages/index/index'
+                page: 'pages/index/index',
+                scene:"uid=1"
             },
+            nocon:false,
 			method:"GET",
             success(res) {
+                console.log(res)
+                that.setData({
+                    qrcode:res.Qrcode
+                })
+            },
+            error(res){
                 console.log(res)
             }
         })
@@ -46,10 +54,8 @@ Page({
             success: function (res) {
                 console.log(res.tapIndex)
                 if (res.tapIndex == 0) {
-                    qrcode.exportImage(function (path) {
-                        wx.saveImageToPhotosAlbum({
-                            filePath: path,
-                        })
+                    app.toast({
+                        title:"保存成功"
                     })
                 }
             }

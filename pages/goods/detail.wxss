@@ -2,6 +2,7 @@
 
 page {
     background: #f7f7f7;
+    overflow: auto;
 }
 
 swiper {
