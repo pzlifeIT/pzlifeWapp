@@ -1,6 +1,6 @@
 // pages/my/myQr/myQr.js
 const app = getApp()
-// let qrcode = require(../../utils/qrcode.js)
+    // let qrcode = require(../../utils/qrcode.js)
 Page({
 
     /**
@@ -15,10 +15,6 @@ Page({
      */
     onLoad: function(options) {
         this.getUserQrcode()
-        this.setData({
-            qrcode: app.globalData.host.apiHost + 'user/getUserQrcode?con_id=' + app.globalData.con_id + '&link=/pages/index/index'
-        })
-        console.log(app.globalData.host.apiHost + 'user/getUserQrcode?con_id=' + app.globalData.con_id + '&link=/pages/index/index')
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -27,35 +23,36 @@ Page({
 
     },
     getUserQrcode: function() {
-        let that = this
+        let that = this,
+            pid = app.globalData.userInfo.uid
         app.wxrequest({
             url: 'user/getUserQrcode',
             data: {
                 page: 'pages/index/index',
-                scene:"uid=1"
+                scene: pid
             },
-            nocon:false,
-			method:"GET",
+            nocon: false,
+            method: "GET",
             success(res) {
                 console.log(res)
                 that.setData({
-                    qrcode:res.Qrcode
+                    qrcode: res.Qrcode
                 })
             },
-            error(res){
+            error(res) {
                 console.log(res)
             }
         })
     },
-	save: function () {
+    save: function() {
         console.log('save')
         wx.showActionSheet({
             itemList: ['保存图片'],
-            success: function (res) {
+            success: function(res) {
                 console.log(res.tapIndex)
                 if (res.tapIndex == 0) {
                     app.toast({
-                        title:"保存成功"
+                        title: "保存成功"
                     })
                 }
             }

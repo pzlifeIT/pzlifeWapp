@@ -136,7 +136,7 @@ page{
 	height: 42rpx;
 }
 .vigor{
-	height: 136rpx;
+	height: auto;
 }
 .vigor input{
 	width: 120rpx;

@@ -94,6 +94,7 @@ Page({
     bindGetUserInfo: function(e) {
         console.log(this.data.a)
         this.getCode()
+        let share_id = this.data.share_id
         let that = this
         let encrypteddata = e.detail.encryptedData,
             iv = e.detail.iv,
@@ -138,7 +139,7 @@ Page({
                     })
                 } else {
                     wx.reLaunch({
-                        url: "/" + prevpage.route+"?share_id="+prevpage.share_id+"&a="
+                        url: "/" + prevpage.route+"?share_id="+share_id
 
                     })
                 }
