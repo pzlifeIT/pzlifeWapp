@@ -4,14 +4,16 @@
 		<view class="left">
 			<view class="right-top"></view>
 			<view class="right-bottom"></view>
-			<view class="price"><text class="symbol">￥</text>9</view>
-			<view class="rule">满39元使用</view>
+			<view class="price"><text class="symbol">￥</text>{{subtract}}</view>
+			<view class="rule">满{{full}}元使用</view>
 		</view>
 		<view class="right">
 			<view class="right-nei">
-				<view class="title">新人专属优惠券</view>
-				<view class="subtitle">仅限“猫山榴莲王”使用</view>
-				<view class="time">有效期：2018.09.01-2019.03.01</view>
+				<view class="title" wx:if="{{title == ''}}">新人专属优惠券</view>
+				<view class="title" wx:else>{{title}}</view>
+				<view class="subtitle" wx:if="{{subtitle == ''}}">仅限“猫山榴莲王”使用</view>
+				<view class="subtitle" wx:else>{{subtitle}}</view>
+				<view class="time">有效期：{{startDate}}-{{endDate}}</view>
 				<view class="left-top"></view>
 				<view class="left-bottom"></view>
 			</view>
@@ -23,20 +25,20 @@
 	<view class="coupon-title">
 		<view class="title-text">优惠券名称:</view>
 		<view class="input">
-			<input type="text"  placeholder="输入优惠券名称"/>
+			<input type="text"  placeholder="输入优惠券名称" bindinput="inputwacth" data-model="title"/>
 		</view>
 	</view>
 	<view class="coupon-title">
 		<view class="title-text">使用范围:</view>
 		<view class="input">
-			<input type="text"  placeholder="输入使用范围"/>
+			<input type="text"  placeholder="输入使用范围" bindinput="inputwacth" data-model="subtitle"/>
 		</view>
 	</view>
 	<view class="coupon-title">
 		<view class="title-text">开始时间:</view>
 		<view class="input">
-			<input type="text"  placeholder="开始时间" disabled="true"/>
-			<picker mode="date" start="1870-01-01" end="2019-12-31" bindchange="selectData">
+			<input type="text"  placeholder="开始时间" disabled="true" value="{{startDate}}"/>
+			<picker mode="date" start="1870-01-01" end="2019-12-31" bindchange="selectStartDate">
 				<image lazy-load="true" src="{{imgHost}}date.png"></image>
 			</picker>
 		</view>
@@ -44,8 +46,8 @@
 	<view class="coupon-title">
 		<view class="title-text">结束时间:</view>
 		<view class="input">
-			<input type="text"  placeholder="结束时间" disabled="true"/>
-			<picker mode="date" start="1870-01-01" end="2019-12-31" bindchange="selectData">
+			<input type="text"  placeholder="结束时间" disabled="true" value="{{endDate}}" />
+			<picker mode="date" start="1870-01-01" end="2019-12-31" bindchange="selectEndDate">
 				<image lazy-load="true" src="{{imgHost}}date.png"></image>
 			</picker>
 		</view>
@@ -54,16 +56,16 @@
 		<view class="title-text">优惠力度:</view>
 		<view class="input you">
 			<view class="man">满</view>
-			<input type="text"  placeholder="元"/>
+			<input type="text"  placeholder="元" bindinput="inputwacth" data-model="full" />
 			<view class="jian">减</view>
-			<input type="text" placeholder="元" />
+			<input type="text" placeholder="元" bindinput="inputwacth" data-model="subtract" />
 		</view>
 		<view  class="hint">优惠券最高金额请勿超过毛利</view>
 	</view>
 	<view class="coupon-title">
 		<view class="title-text">发放数量:</view>
 		<view class="input grant">
-			<input type="number" />
+			<input type="number" bindinput="inputwacth" data-model="number" />
 		</view>
 	</view>
 </view>
