@@ -512,3 +512,8 @@ radio-group {
 .moneynum {
     font-weight: bold;
 }
+
+.small {
+    font-size: 24rpx;
+    color: #333;
+}

@@ -36,6 +36,20 @@ page {
     overflow: hidden;
 }
 
+.al-default {
+    float: left;
+    width: 300rpx;
+    overflow: auto;
+}
+
+.unsel {
+    width: 32rpx;
+    height: 32rpx;
+    border: 1px solid #b6b6b6;
+    border-radius: 50%;
+}
+
+.al-default .unsel,
 .al-default .icon {
     margin: 19rpx 10rpx 19rpx 20rpx;
 }

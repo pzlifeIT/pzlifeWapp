@@ -161,6 +161,7 @@ Page({
                     valid: valid
                 });
                 that.getTotal(valid)
+                app.setCartNum()
                     // that.getStorage()
             },
             error(res) {
@@ -223,6 +224,7 @@ Page({
                     valid: valid
                 });
                 that.getTotal(valid)
+                app.setCartNum()
                     // that.getStorage()
             },
             error(res) {
@@ -302,8 +304,6 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        app.getconid()
-        console.log('onLoad')
         this.setData({
                 imgHost: app.globalData.host.imgHost
             })

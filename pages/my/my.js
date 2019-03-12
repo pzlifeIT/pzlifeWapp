@@ -102,6 +102,15 @@ Page({
             app.toast({ title: "请先登录" })
         }
     },
+    diamondlist: function(e) {
+        if (this.data.con_id) {
+            wx.navigateTo({
+                url: "/pages/diamondlist/diamondlist"
+            })
+        } else {
+            app.toast({ title: "请先登录" })
+        }
+    },
     activity: function(e) {
         if (this.data.con_id) {
             wx.navigateTo({

@@ -11,16 +11,14 @@ Page({
         mobile: '',
         address: '',
         region: [],
-        imgHost: ""
+        default: 2,
+        mdefault: 2,
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        this.setData({
-            imgHost: app.globalData.host.imgHost
-        })
         if (options.id) {
             this.setData({
                 id: options.id
@@ -96,7 +94,8 @@ Page({
                 area_name: data.region[2],
                 address: data.address,
                 mobile: data.mobile,
-                name: data.name
+                name: data.name,
+                default: this.data.default
             })
         } else {
             this.addUserAddress({
@@ -105,7 +104,8 @@ Page({
                 area_name: data.region[2],
                 address: data.address,
                 mobile: data.mobile,
-                name: data.name
+                name: data.name,
+                default: this.data.default
             })
         }
     },
@@ -126,7 +126,11 @@ Page({
             },
             success: function(res) {
                 app.toast({ title: '添加地址成功' })
-                wx.navigateBack()
+                if (that.data.default == 1) {
+                    that.updateDefault(res.id)
+                } else {
+                    wx.navigateBack()
+                }
             },
             error(code) {
                 that.hintcode(code)
@@ -174,10 +178,26 @@ Page({
                 name: data.name
             },
             success: function(res) {
-                wx.navigateBack()
+                if (that.data.default != that.data.mdefault) {
+                    that.updateDefault()
+                } else {
+                    wx.navigateBack()
+                }
+
             },
             error(code) {
                 that.hintcode(code)
+            }
+        })
+    },
+    updateDefault: function(id) {
+        app.wxrequest({
+            url: 'user/updateUserAddressDefault',
+            data: {
+                address_id: id
+            },
+            success: function(res) {
+                wx.navigateBack()
             }
         })
     },
@@ -197,7 +217,9 @@ Page({
                     name: data.name,
                     mobile: data.mobile,
                     address: data.address,
-                    region: [data.province_name, data.city_name, data.area_name]
+                    region: [data.province_name, data.city_name, data.area_name],
+                    default: data.mdefault,
+                    mdefault: data.mdefault
                 })
             }
         })

@@ -39,6 +39,32 @@ Page({
             }
         })
     },
+    default: function(e) {
+        let that = this,
+            id = e.currentTarget.dataset.id
+        app.wxrequest({
+            url: 'user/updateUserAddressDefault',
+            data: {
+                address_id: id
+            },
+            success: function(res) {
+                that.disaddress(id)
+            }
+        })
+    },
+    disaddress: function(id) {
+        let data = this.data.address,
+            len = data.length
+        for (let i = 0; i < len; i++) {
+            data[i].default = 2
+            if (data[i].id == id) {
+                data[i].default = 1
+            }
+        }
+        this.setData({
+            address: data
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

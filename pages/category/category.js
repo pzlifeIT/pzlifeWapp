@@ -108,7 +108,6 @@ Page({
                         ind: 0
                     })
                 } else if (scrollTop >= scrollArr[i - 1] && scrollTop <= scrollArr[i]) {
-                    console.log(i)
                     if (this.data.ind === i) return
                     this.setData({
                         ind: i

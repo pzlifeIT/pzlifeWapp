@@ -2,6 +2,7 @@
 
 page {
     background: #f7f7f7;
+    height: 100%;
     overflow: auto;
 }
 
@@ -27,6 +28,7 @@ swiper-item {
     position: relative;
     width: 750rpx;
     height: 750rpx;
+    overflow: hidden;
 }
 
 .swipercur {
@@ -45,15 +47,17 @@ swiper-item {
 .desc {
     width: 750rpx;
     /* height: 204rpx; */
-    padding: 19rpx 19rpx 30rpx 9rpx;
+    /* padding: 19rpx 19rpx 30rpx 9rpx; */
     background-color: #ffffff;
     float: left;
-	box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .desc .text {
     width: 659rpx;
     float: left;
+    margin: 20rpx;
 }
 
 .desc text {
@@ -75,12 +79,14 @@ swiper-item {
 .desc .price {
     font-size: 38rpx;
     color: #e61f18;
-	overflow: auto;
+    overflow: auto;
 }
-.desc .vipprice{
-	font-size: 24rpx;
-	color: #EAB700;
+
+.desc .vipprice {
+    font-size: 24rpx;
+    color: #EAB700;
 }
+
 .desc .collect {
     width: 90rpx;
     /* height: 50rpx; */
@@ -93,26 +99,46 @@ swiper-item {
 
 .content {
     width: 750rpx;
+    box-sizing: border-box;
     margin-top: 10rpx;
     float: left;
-    padding: 0 10rpx;
+    /* padding: 0 10rpx; */
     background-color: #ffffff;
-	box-sizing: border-box;
+    overflow: hidden;
 }
 
-.content .spec ,.content .integral,.content .ticket ,.content .freight {
+.content .spec,
+.content .integral,
+.content .ticket,
+.content .freight {
     width: 750rpx;
     line-height: 70rpx;
     border-bottom: 1rpx #f7f7f7 solid;
-	box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: auto;
+    /* margin: 0 auto */
 }
 
 .fix {
+    display: inline-block;
+    float: left;
+    width: 120rpx;
+    margin-left: 20rpx;
     font-size: 30rpx;
     color: #b6b6b6;
 }
 
+.content .freight {
+    margin-top: 10rpx;
+    line-height: 45rpx;
+    padding-bottom: 10rpx;
+}
+
 .content .fix_desc {
+    display: inline-block;
+    float: left;
+    width: 580rpx;
+    /* margin-left: 20rpx; */
     font-size: 30rpx;
     color: #404040;
 }
@@ -126,8 +152,9 @@ swiper-item {
     box-shadow: 1px -1px 3px 0px rgba(0, 0, 0, 0.19);
     background-color: #fff;
     z-index: 99;
-	box-sizing: border-box;
-	display: flex;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
 }
 
 .footer .home,
@@ -180,12 +207,15 @@ swiper-item {
 .goods_content {
     float: left;
     margin-top: 7rpx;
-	width: 750rpx;
+    width: 750rpx;
+    overflow: hidden;
 }
-.four_cont{
-	width: 750rpx;
-	overflow: auto;
+
+.four_cont {
+    width: 750rpx;
+    overflow: auto;
 }
+
 .tab {
     width: 750rpx;
     height: 80rpx;

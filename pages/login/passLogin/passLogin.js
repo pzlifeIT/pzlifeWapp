@@ -44,7 +44,6 @@ Page({
                         url: "/" + prevpage.route+"?share_id="+share_id
                     })
                 }
-                app.getconid()
             },
             fail(res) {
 

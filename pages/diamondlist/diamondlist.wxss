@@ -1,0 +1,113 @@
+/* pages/diamondlist/diamondlist.wxss */
+
+page {
+    background-color: #f7f7f7;
+}
+
+.ddList {
+    position: relative;
+    width: 710rpx;
+    height: 188rpx;
+    background-color: #fff;
+    margin: 10rpx auto 0;
+}
+
+.dt-num {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    font-size: 22rpx;
+    text-align: center;
+    background-color: #e61f18;
+    color: #fff;
+}
+
+.dt-num::after {
+    display: block;
+    float: right;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 0rpx solid transparent;
+    border-top: 12rpx solid transparent;
+    border-bottom: 13rpx solid transparent;
+    border-right: 16rpx solid #fff;
+}
+
+.ddList::after,
+.ddList::before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: 286rpx;
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    z-index: 10;
+}
+
+.ddList::after {
+    top: -15rpx
+}
+
+.ddList::before {
+    bottom: -15rpx
+}
+
+.dt-con {
+    width: 300rpx;
+    height: 100%;
+}
+
+.dt-money {
+    width: 100%;
+    margin-top: 50rpx;
+    text-align: center;
+    font-size: 22rpx;
+    color: #e61f18;
+}
+
+.dt-money .num {
+    font-size: 48rpx;
+}
+
+.dt-time {
+    width: 100%;
+    text-align: center;
+    font-size: 24rpx;
+    color: #666;
+}
+
+.dt-text {
+    width: 296rpx;
+    line-height: 188rpx;
+    font-size: 28rpx;
+    text-align: center;
+    border-left: 2rpx solid #f7f7f7;
+    color: #404040;
+}
+
+.dt-text .num {
+    color: #f99f36;
+}
+
+.dt-look {
+    width: 110rpx;
+    height: 188rpx;
+    font-size: 28rpx;
+    color: #fffeff;
+    background-color: #f99f36;
+}
+
+.dl-text {
+    display: block;
+    /* width: 1.5em; */
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    writing-mode: vertical-rl;
+}

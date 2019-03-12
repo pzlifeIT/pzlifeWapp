@@ -10,18 +10,18 @@
   </view> -->
   <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" >
     <view class="provinces" >
-      <text class="provinces-tit din fl" >省份、城市、县区</text>
+      <text class="provinces-tit din fl" >省/市/县（区）</text>
       <view class="provinces-text din fl" >
         <text class="provinces-text-con" wx:if="{{region.length > 0}}" >{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
       </view>
     </view>
   </picker>
   <input  class="ia-input" type="text" value="{{address}}" bindinput="bindaddress" placeholder="详细地址,如楼道、楼盘号等" />
-  <!-- <view class="ia-default" >
-    <icon type="success" class="sel fl" size="34rpx" />
-    <view class="unsel fl"></view>
+  <view class="ia-default"  >
+    <icon type="success" wx:if="{{default == 1}}" class="sel fl" size="34rpx" />
+    <view class="unsel fl" wx:else></view>
     <text class="ia-d-text din fl">设为默认地址</text>
-  </view> -->
+  </view>
    
   <view class="save-btn" bindtap="save" >保存</view>
 </view>
