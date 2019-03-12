@@ -36,6 +36,17 @@ Page({
     onReady: function() {
 
     },
+    updatesel: function() {
+        let d = this.data.default
+        if (d == 1) {
+            d = 2
+        } else if (d == 2) {
+            d = 1
+        }
+        this.setData({
+            default: d
+        })
+    },
     bindname: function(e) {
         console.log(e.detail.value)
         this.setData({
@@ -179,7 +190,7 @@ Page({
             },
             success: function(res) {
                 if (that.data.default != that.data.mdefault) {
-                    that.updateDefault()
+                    that.updateDefault(data.address_id)
                 } else {
                     wx.navigateBack()
                 }
@@ -218,8 +229,8 @@ Page({
                     mobile: data.mobile,
                     address: data.address,
                     region: [data.province_name, data.city_name, data.area_name],
-                    default: data.mdefault,
-                    mdefault: data.mdefault
+                    default: data.default,
+                    mdefault: data.default
                 })
             }
         })

@@ -17,8 +17,8 @@
     </view>
   </picker>
   <input  class="ia-input" type="text" value="{{address}}" bindinput="bindaddress" placeholder="详细地址,如楼道、楼盘号等" />
-  <view class="ia-default"  >
-    <icon type="success" wx:if="{{default == 1}}" class="sel fl" size="34rpx" />
+  <view class="ia-default" bindtap="updatesel"  >
+    <icon type="success" color="#e61f18" wx:if="{{default == 1}}" class="sel fl" size="34rpx" />
     <view class="unsel fl" wx:else></view>
     <text class="ia-d-text din fl">设为默认地址</text>
   </view>
