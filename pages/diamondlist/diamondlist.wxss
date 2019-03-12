@@ -98,10 +98,8 @@ page {
 .dt-look {
     width: 110rpx;
     height: 188rpx;
-    /* line-height: 188rpx; */
     font-size: 28rpx;
     color: #fffeff;
-    /* text-align: center; */
     background-color: #f99f36;
 }
 

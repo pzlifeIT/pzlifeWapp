@@ -12,7 +12,9 @@ Page({
         time: 60,
         getcode: "获取验证码",
         disabled: false,
-        imgHost: ''
+        imgHost: '',
+        share_id:"",
+        a:""
     },
     /**
      * 获取输入的值
@@ -90,6 +92,7 @@ Page({
      * 登录
      */
     bindGetUserInfo: function(e) {
+        console.log(this.data.a)
         this.getCode()
         let that = this
         let encrypteddata = e.detail.encryptedData,
@@ -126,6 +129,8 @@ Page({
                 let str = "pages/goods/detail"
                     //登录完成后将con_id存入本地缓存
                 app.setconid(res.con_id)
+
+                console.log(prevpage)
                     //从商品详情页跳来的
                 if (prevpage.route == str) {
                     wx.navigateBack({
@@ -133,7 +138,8 @@ Page({
                     })
                 } else {
                     wx.reLaunch({
-                        url: "/" + prevpage.route
+                        url: "/" + prevpage.route+"?share_id="+prevpage.share_id+"&a="
+
                     })
                 }
             },
@@ -174,6 +180,16 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
+        if (options.share_id){
+            this.setData({
+                share_id:options.share_id
+            })
+        }
+        if (options.a){
+            this.setData({
+                a:options.a
+            })
+        }
     },
 
     /**

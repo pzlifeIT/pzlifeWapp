@@ -13,7 +13,7 @@
 						<radio checked='' color='#e61f18' checked="{{goods.selectStatus}}" />
 					</radio-group>
 				</view>
-
+                <navigator hover-class="none" url='/pages/goods/detail?goodid={{goods.goods_id}}' >
 				<view class='goods_img'>
 					<image lazy-load="true" src='{{goods.sku_image}}'></image>
 					<view class='supplier_name'><text>{{goods.supplier_name}}</text></view>
@@ -24,6 +24,7 @@
 					<text class='goods_price'>￥{{goods.retail_price}}</text>
 					<text class='rebate'>钻石返利</text><text class='rebate_money'>￥{{goods.brokerage}}</text>
 				</view>
+                </navigator>
 				<view class='sum'>
 					<view class='border'>
 						<view class='jian' bindtap='jian' data-goods="{{item.goods}}" data-goods-index="{{goodsIndex}}" data-valid-index="{{validIndex}}">-</view>

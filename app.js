@@ -19,7 +19,8 @@ App({
         wx.getStorage({
             key: "con_id",
             success(res) {
-                that.globalData.con_id = res.data
+                that.globalData.con_id = res.data;
+                // that.getcartnum(res.data)
             }
         });
         this.setCartNum()
@@ -167,6 +168,8 @@ App({
             success(res) {
                 wx.hideLoading()
                 if (res.statusCode == 200) {
+                    console.log(res);
+                    // return
                     let result = JSON.parse(res.data);
                     if (result.code == 200) {
                         if (typeof obj.success == 'function') {

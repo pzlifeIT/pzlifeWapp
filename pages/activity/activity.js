@@ -216,7 +216,7 @@ Page({
                         title: "是否去登陆",
                         success() {
                             wx.navigateTo({
-                                url: "/pages/login/login"
+                                url: "/pages/login/login?share_id="+ share_id
                             })
                         },
                         cancel() {

@@ -6,7 +6,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        imgHost: ''
+        imgHost: '',
+        share_id:"",
+        a:""
     },
     bindGetUserInfo: function(e) {
 		let encrypteddata = e.detail.encryptedData,
@@ -22,6 +24,7 @@ Page({
                             let pages = getCurrentPages();
                             let prevpage = pages[pages.length - 2]
                             app.setconid(res.con_id)
+                            console.log(prevpage)
                             wx.navigateBack({
                                 delta: prevpage
                             });
@@ -61,6 +64,17 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
+        if (options.share_id){
+            this.setData({
+                share_id:options.share_id
+            })
+        }
+        if (options.a){
+            console.log(options.a)
+            this.setData({
+                a:options.a
+            })
+        }
     },
 
     /**

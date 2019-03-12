@@ -122,9 +122,9 @@ Page({
     },
     myQr: function() {
         if (this.data.con_id) {
-            // wx.navigateTo({
-            //     url: "/pages/my/myQr/myQr"
-            // })
+            wx.navigateTo({
+                url: "/pages/my/myQr/myQr"
+            })
         } else {
             app.toast({ title: "请先登录" })
         }

@@ -4,10 +4,10 @@
 		<image lazy-load="true" src="{{imgHost}}logo1.png"></image>
 	</view>
 	<button class="wechat" open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo' lang="zh_CN" >微信登录</button>
-  <navigator url='/pages/login/captchaLogin/captchaLogin' hover-class="none">
+  <navigator url='/pages/login/captchaLogin/captchaLogin?share_id={{share_id}}&a={{a}}' hover-class="none">
     <view class="phone">手机号登录</view>
   </navigator>
-  <navigator url='/pages/login/register/register' hover-class="none">
+  <navigator url='/pages/login/register/register?share_id={{share_id}}' hover-class="none">
     	<view class="phone-login">手机号注册</view>
   </navigator>
 </view>

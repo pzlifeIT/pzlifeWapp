@@ -3,7 +3,7 @@
 
 </view>
 <view class="userheader" wx:if="{{!loginStatus}}">
-  <navigator url='/pages/login/login' hover-class="none">
+  <navigator url='/pages/login/login?a=111' hover-class="none">
     <view class="headPhoto din fl" >
       <image lazy-load="true"  src="{{imgHost}}logo_03.png" />
     </view>
