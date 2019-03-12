@@ -87,6 +87,10 @@ swiper-item {
     color: #EAB700;
 }
 
+.desc .vipprice text {
+    display: inline-block;
+}
+
 .desc .collect {
     width: 90rpx;
     /* height: 50rpx; */
