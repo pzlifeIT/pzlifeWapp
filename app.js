@@ -23,6 +23,7 @@ App({
                 // that.getcartnum(res.data)
             }
         });
+        this.getUserInfo()
         this.setCartNum()
     },
     setconid: function(conid) {
@@ -71,6 +72,7 @@ App({
         let that = this
         this.wxrequest({
             url: "user/getuser",
+            nologin: true,
             success(res) {
                 that.globalData.userInfo = res.data
             }
