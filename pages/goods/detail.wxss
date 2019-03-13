@@ -129,7 +129,7 @@ swiper-item {
     width: 120rpx;
     margin-left: 20rpx;
     font-size: 30rpx;
-    color: #b6b6b6;
+    color: #404040;
 }
 
 .content .freight {

@@ -37,13 +37,14 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 0,
 			"list": [
 				{
 					"id": 0,
 					"name": "goods",
 					"pathName": "pages/goods/detail",
-					"query": ""
+					"query": "goodid=318",
+					"scene": null
 				},
 				{
 					"id": -1,

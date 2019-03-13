@@ -66,6 +66,11 @@ Page({
             }
         })
     },
+    call() {
+        wx.makePhoneCall({
+            phoneNumber: '15502123212'
+        })
+    },
     /**
      * 支付
      */

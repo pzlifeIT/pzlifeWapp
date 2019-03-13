@@ -48,8 +48,12 @@
 		<text class="jf-text">含运费</text><text class="jf-num">￥{{item1.express_money}}</text>
 	</view>
 	<view class="or-footer">
-		<view class="footer-left"><text class="sum">共付：<text class="total">￥{{item1.pay_money}}</text></text></view>
+		<view class="footer-left"><text class="sum fr">共付：<text class="total">￥{{item1.pay_money}}</text></text></view>
 		<view class="footer-right">
+      <view bindtap="call" class="call din fl" >
+        <image class="pzkefu" src="{{imgHost}}pzkefu.png?imageMogr2/thumbnail/64x" />
+        <text class="call-text fr">联系客服</text>
+      </view>
 			<view bindtap="gopay" data-orderno="{{item1.order_no}}" class="or-btn red" wx:if="{{item1.order_status == 1}}">去付款</view>
       <view bindtap="cancelorder" data-orderno="{{item1.order_no}}" class="or-btn black" wx:if="{{item1.order_status == 1}}">取消订单</view>
       <view bindtap="gologistics" data-orderno="{{item1.order_no}}" class="or-btn black" wx:if="{{item1.order_status == 5 || item1.order_status == 6}}">查看物流</view>
