@@ -29,7 +29,7 @@ Page({
             url: 'user/getUserQrcode',
             data: {
                 page: 'pages/index/index',
-                scene: pid
+                scene: 'pid=' + pid
             },
             nocon: false,
             method: "GET",
