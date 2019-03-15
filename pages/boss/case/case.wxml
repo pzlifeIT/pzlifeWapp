@@ -1,0 +1,31 @@
+<!--pages/boss/case/case.wxml-->
+<view class="title">
+    商票明细
+</view>
+<view class="">
+    <view class="one-detail">
+        <view class="">
+            <view class="detail-title">购物消费</view>
+            <view class="detail-desc">订单号:1234567891221551</view>
+            <view class="detail-time">2018-08-15 10:06:05</view>
+        </view>
+        <view class="detail-case active">+60 元</view>
+    </view>
+    <view class="one-detail">
+        <view class="">
+            <view class="detail-title">购物消费</view>
+            <view class="detail-desc">订单号:1234567891221551</view>
+            <view class="detail-time">2018-08-15 10:06:05</view>
+        </view>
+        <view class="detail-case active">+60 元</view>
+    </view>
+    <view class="one-detail">
+        <view class="">
+            <view class="detail-title">购物消费</view>
+            <view class="detail-desc">订单号:1234567891221551</view>
+            <view class="detail-time">2018-08-15 10:06:05</view>
+        </view>
+        <view class="detail-case active">+60 元</view>
+    </view>
+</view>
+

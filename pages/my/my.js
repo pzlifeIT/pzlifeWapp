@@ -52,7 +52,7 @@ Page({
                         userInfo.user_vid = "创业店主";
                         break;
                     case 4:
-                        userInfo.user_vid = "boss合伙人";
+                        userInfo.user_vid = "合伙人";
                         break;
                     default:
                         userInfo.user_vid = "普通会员"

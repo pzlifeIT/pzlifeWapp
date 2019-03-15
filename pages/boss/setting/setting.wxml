@@ -1,0 +1,20 @@
+<!--pages/boss/setting/setting.wxml-->
+<view class="line top">
+    <view class="line-left">店铺头像</view>
+    <image lazy-load="true"  class="line-right via"></image>
+</view>
+<view class="line" bindtap="goSetInfo" data-num="2" data-shop="店铺名称" data-shop-info="1">
+    <view class="line-left">店铺名称</view>
+    <image lazy-load="true"  class="jt" src="{{imgHost}}jt_18.png"></image>
+    <view class="line-right text">一家小店</view>
+</view>
+<view class="line" bindtap="goSetInfo" data-num="3" data-shop="客服电话"  data-shop-info="2">
+    <view class="line-left">客服电话</view>
+    <image lazy-load="true"  class="jt" src="{{imgHost}}jt_18.png"></image>
+    <view class="line-right text">15502123212</view>
+
+</view>
+<view class="line" bindtap="goSetInfo" data-num="4" data-shop="店铺简介"  data-shop-info="3">
+    <view class="line-left">店铺简介</view>
+    <image lazy-load="true"  class="line-right jt" src="{{imgHost}}jt_18.png" ></image>
+</view>

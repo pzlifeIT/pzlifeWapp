@@ -6,47 +6,121 @@
 		</view>
 		<view class="nickname">
 			<view class="name">梦比糖果甜</view>
-			<view class="identity">BOSS</view>
-			<view class="shop-id">店铺ID：122345</view>
+			<view class="identity">合伙人</view>
+			<!--<view class="shop-id">店铺ID：122345</view>-->
 		</view>
 	</view>
 	<image lazy-load="true" class="sz" src="{{imgHost}}sz.png"></image>
 </view>
-<view class="statistics">
-	<view class="earnings">
-		<view class="div after">
-			<view class="title">奖金收益</view>
-			<view class="num">100<text>元</text></view>
-		</view>
-		<view class="div after">
-			<view class="title">本月销售额</view>
-			<view class="num">100<text>元</text></view>
-		</view>
-		<view class="div">
-			<view class="title">店铺市场资源</view>
-			<view class="num">100<text>人</text></view>
-		</view>
+<view class="asset">
+	<view class="asset-title">
+		资产中心
 	</view>
-	<view class="icon">
-		<view class="one icon-after">
-			<image lazy-load="true" src="{{imgHost}}dpfq.png"></image>
-			<view class="icon-text">店铺发券</view>
+	<view class="line"></view>
+</view>
+<view class="case">
+	<view class="case-title">
+		<view class="shu"></view>
+		商票
+	</view>
+	<view class="case-info">
+		<view class="case-total">
+			<view class="total-text">商票总额<text>(元)</text></view>
+			<view class="total-price">30000.00</view>
 		</view>
-		<view class="one icon-after">
-			<image lazy-load="true" src="{{imgHost}}sphc.png"></image>
-			<view class="icon-text">商品货仓</view>
-		</view>
-		<view class="one">
-			<image lazy-load="true" src="{{imgHost}}kdyq.png"></image>
-			<view class="icon-text">开店邀请</view>
-		</view>
-		<view class="one icon-after">
-			<image lazy-load="true" src="{{imgHost}}zshy.png"></image>
-			<view class="icon-text">钻石会员</view>
-		</view>
-		<view class="one icon-after">
-			<image lazy-load="true" src="{{imgHost}}xjq.png"></image>
-			<view class="icon-text">现金券</view>
+		<view class="three-div">
+			<view class="one-div oneone">
+				<view class="total-div">商票余额<text>(元)</text></view>
+				<view class="total-div">30000.00</view>
+			</view>
+			<view class="one-div two">
+				<view class="total-div">未结算商票<text>(元)</text></view>
+				<view class="total-div">30000.00</view>
+			</view>
+			<view class="one-div three">
+				<view class="total-div">已使用商票<text>(元)</text></view>
+				<view class="total-div">30000.00</view>
+			</view>
 		</view>
 	</view>
 </view>
+<view class="case">
+	<view class="case-title">
+		<view class="shu"></view>
+		经营性收益
+	</view>
+	<view class="case-info">
+		<view class="case-total">
+			<view class="total-text">本月销售额<text>(元)</text></view>
+			<view class="total-price">30000.00</view>
+		</view>
+		<view class="three-div">
+			<view class="one-two-div two-one">
+				<view class="total-div">上月返利<text>(元)</text></view>
+				<view class="total-div">30000.00</view>
+			</view>
+			<view class="one-two-div two-two">
+				<view class="total-div">本月返利<text>(元)</text></view>
+				<view class="total-div">30000.00</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="case">
+	<view class="case-title">
+		<view class="shu"></view>
+		店铺市场资源
+	</view>
+	<view class="case-info">
+		<view class="case-total">
+			<view class="total-text">总人数<text>(人)</text></view>
+			<view class="total-price">30</view>
+		</view>
+		<view class="three-div">
+			<view class="one-two-div maizhu-one">
+				<view class="total-div">买主圈<text>(人)</text></view>
+				<view class="total-div">300</view>
+			</view>
+			<view class="one-two-div maizhu-two">
+				<view class="total-div">钻石会员圈<text>(人)</text></view>
+				<view class="total-div">30</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="jf">
+	<view class="left">
+		<view class="jifen">积分</view>
+		<view class="jf-num">322</view>
+	</view>
+	<view class="mid"></view>
+	<view class="left">
+		<view class="earnings">招商加盟收益<text>(元)</text></view>
+		<view class="renshu"><text>10</text></view>
+	</view>
+</view>
+
+	<view class="icon">
+		<!--<view class="one icon-after">-->
+			<!--<image lazy-load="true" src="{{imgHost}}dpfq.png"></image>-->
+			<!--<view class="icon-text">店铺发券</view>-->
+		<!--</view>-->
+		<view class="one icon-after">
+			<image lazy-load="true" src="{{imgHost}}dpgl_05.png"></image>
+			<view class="icon-text">商品货仓</view>
+		</view>
+		<view class="one">
+			<image lazy-load="true" src="{{imgHost}}dpgl_07.png"></image>
+			<view class="icon-text">开店邀请</view>
+		</view>
+		<!--<view class="one icon-after">-->
+			<!--<image lazy-load="true" src="{{imgHost}}dpgl_12.png"></image>-->
+			<!--<view class="icon-text">店铺市场资源</view>-->
+		<!--</view>-->
+		<!--<view class="one icon-after">-->
+			<!--<image lazy-load="true" src="{{imgHost}}xjq.png"></image>-->
+			<!--<view class="icon-text">现金券</view>-->
+		<!--</view>-->
+	</view>

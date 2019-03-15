@@ -43,7 +43,7 @@
     <view class="newpro" wx:if="{{newGoods.is_show == 1}}" style="order: {{newGoods.model_order}}">
         <view class="title">
             <view class="newpro-text">{{newGoods.title}}</view>
-            <view class="new-more" bindtap="goUrl" data-jump="{{newGoods.jump_type}}" data-content="{{item.jump_content}}">
+            <view class="new-more" bindtap="goUrl" data-jump="{{newGoods.jump_type}}" data-content="{{newGoods.jump_content}}">
                 更多
                 <image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
             </view>

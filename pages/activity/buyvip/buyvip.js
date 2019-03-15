@@ -35,13 +35,14 @@ Page({
     },
     buy: function() {
         let share_id = this.data.share_id,
+            pid = app.globalData.pid,
             that = this
         app.wxrequest({
             url: "order/createMemberOrder",
             data: {
                 pay_type: 2,
                 user_type: 1,
-                parent_id: share_id
+                parent_id: pid
             },
             nocon: false,
             success(res) {
@@ -147,25 +148,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        let share_id = options.share_id,
-            con_id = options.con_id
-        this.setData({
-            share_id: share_id,
-            con_id: con_id
-        })
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
-        console.log(app.globalData.host.imgHost)
-        if (options.uid) {
-            this.setData({
-                uid: options.uid
-            })
-        }
-        this.setData({
-            ident: options.ident
-        })
-        console.log(app.globalData.userInfo)
     },
 
     /**
@@ -217,7 +202,7 @@ Page({
         let that = this,
             share = app.share({
                 title: "恭喜获得钻石会员卡",
-                path: '/pages/activity/buyvip/buyvip?share_id=' + this.data.uid,
+                path: '/pages/activity/buyvip/buyvip',
                 imageUrl: "http://pnkp5i8sb.bkt.clouddn.com/nomember01.png"
             })
         return share

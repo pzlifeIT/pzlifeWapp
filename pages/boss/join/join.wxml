@@ -1,0 +1,44 @@
+<!--pages/boss/join/join.wxml-->
+<!--pages/boss/earnings/earnings.wxml-->
+<view class="title">返利明细</view>
+<view class="list">
+    <view class="list-one">
+        <view class="touxiang">
+            <image src=""></image>
+        </view>
+        <view class="one-info">
+            <view class="one-title">我是一束阳光
+            </view>
+            <view class="order">
+                <text>2019-02-13</text>
+            </view>
+        </view>
+        <view class="money">500元</view>
+    </view>
+    <view class="list-one">
+        <view class="touxiang">
+            <image src=""></image>
+        </view>
+        <view class="one-info">
+            <view class="one-title">我是一束阳光
+            </view>
+            <view class="order">
+                <text>2019-02-13</text>
+            </view>
+        </view>
+        <view class="money">500元</view>
+    </view>
+    <view class="list-one">
+        <view class="touxiang">
+            <image src=""></image>
+        </view>
+        <view class="one-info">
+            <view class="one-title">我是一束阳光
+            </view>
+            <view class="order">
+                <text>2019-02-13</text>
+            </view>
+        </view>
+        <view class="money">500元</view>
+    </view>
+</view>

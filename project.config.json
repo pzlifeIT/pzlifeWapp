@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 29,
+			"current": 34,
 			"list": [
 				{
 					"id": 0,
@@ -235,6 +235,41 @@
 					"id": -1,
 					"name": "设置",
 					"pathName": "pages/boss/setting/setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设置店铺",
+					"pathName": "pages/boss/setShopInfo/setShopInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员圈",
+					"pathName": "pages/boss/member/member",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "明细",
+					"pathName": "pages/boss/case/case",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收益",
+					"pathName": "pages/boss/earnings/earnings",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "jiameng",
+					"pathName": "pages/boss/join/join",
 					"scene": null
 				}
 			]
