@@ -16,7 +16,7 @@ Page({
         isover: 0,
         uid: "",
         imgHost: '',
-		poptype:true
+        poptype: true
     },
     cha: function() {
         let isvip = !this.data.isvip
@@ -44,22 +44,22 @@ Page({
     preventTouchMove: function() {
         //防止用户操作弹出层外界面
     },
-	popmodal:function(){
-		app.modal({
-			title:"选择用户领取方式"
-		})
-	},
-	free:function(){
-		let type = !this.data.poptype;
-		this.setData({
-			poptype:type
-		})
-	},
-	pay:function(){
-		wx.navigateTo({
-			url: "/pages/activity/buyvip/buyvip?share_id="+app.globalData.userInfo.uid+"&ident="+this.data.identity+"&con_id="+app.globalData.con_id
-		})
-	},
+    popmodal: function() {
+        app.modal({
+            title: "选择用户领取方式"
+        })
+    },
+    free: function() {
+        let type = !this.data.poptype;
+        this.setData({
+            poptype: type
+        })
+    },
+    pay: function() {
+        wx.navigateTo({
+            url: "/pages/activity/buyvip/buyvip?share_id=" + app.globalData.userInfo.uid + "&ident=" + this.data.identity + "&con_id=" + app.globalData.con_id
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -216,7 +216,7 @@ Page({
                         title: "是否去登陆",
                         success() {
                             wx.navigateTo({
-                                url: "/pages/login/login?share_id="+ share_id
+                                url: "/pages/login/login?share_id=" + share_id
                             })
                         },
                         cancel() {

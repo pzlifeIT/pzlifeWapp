@@ -35,7 +35,9 @@
         "pages/boss/addcoupon/addcoupon",
         "pages/activity/activity",
         "pages/activity/buyvip/buyvip",
-        "pages/activity/getvip/getvip"
+        "pages/activity/getvip/getvip",
+        "pages/freightHouse/freightHouse",
+        "pages/freightHouse/fhSearch/fhSearch"
     ],
     "window": {
         "backgroundTextStyle": "dark",

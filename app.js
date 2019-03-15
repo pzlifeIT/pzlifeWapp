@@ -104,11 +104,16 @@ App({
             success: function(res) {
                 let n = res.total
                 console.log(n)
-                if (n == 0) return
-                wx.setTabBarBadge({
-                    index: 2,
-                    text: n.toString() || ''
-                })
+                if (n == 0) {
+                    wx.removeTabBarBadge({
+                        index: 2
+                    })
+                } else {
+                    wx.setTabBarBadge({
+                        index: 2,
+                        text: n.toString() || ''
+                    })
+                }
             }
         })
     },

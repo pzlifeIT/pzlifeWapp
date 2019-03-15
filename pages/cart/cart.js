@@ -279,6 +279,7 @@ Page({
                 app.toast({
                     title: "删除成功"
                 })
+                app.setCartNum()
                 that.getStorage()
             },
             error(res) {

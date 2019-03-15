@@ -1,0 +1,77 @@
+<view class="fh-header" >
+  <view class="fh-search wid" >
+    <view class="fh-inpbox din fl" >
+      <icon type="search" class="search fl" size="31rpx" />
+      <input type="text" class="fh-inp" placeholder="请输入你想搜索的产品" />
+    </view>
+    <view class="fh-searchbtn din fl" >搜索</view>
+  </view>
+  <view class="fh-nav wid">
+    <view bindtap="tabtap" data-tab="1" class="nav-btn din fl {{tab == 1?'active':''}}">我的店铺</view>
+    <view bindtap="tabtap" data-tab="2" class="nav-btn din fl {{tab == 2?'active':''}}">去添加商品</view>
+    <i class="wire"><s></s></i>
+  </view>
+</view>
+<view class="fixed"></view>
+<view hidden="{{tab == 2}}">
+<view class="fh-li">
+  <view class="fh-goodInfo">
+    <view class="gi-img din fl" >
+      <image class="image" src="" />
+    </view>
+    <view class="gi-info din fl">
+      <text class="gi-name db " >黄金面包蟹</text>
+      <text class="db" >¥132.60</text>
+    </view>
+    <view class="gi-btnlist din fr">
+      <view class="gi-btn" >添加上架</view>
+    </view>
+  </view>
+  <view class="fh-sizelist">
+    <view class="triangle" >
+      <image class="image" src="{{imgHost}}stop.png" />
+      <image class="image" wx:if="{{false}}" src="{{imgHost}}sdown.png" />
+    </view>
+    <view class="wid" >
+      <text class="sl-tit">规格</text>
+      <text class="sl-tit">合伙人毛利</text>
+    </view>
+    <view >
+      <view class="wid" >
+        <text class="sl-name">400g-600g/只,2只装</text>
+        <text class="sl-num">19.45</text>
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+
+<view class="fh-cate" hidden="{{tab == 1}}" >
+<view class='cate_content'>
+	<scroll-view scroll-y="true" scroll-top="0" class='cate_left' scroll-into-view="p{{ind - 4}}">
+		<view id="p{{index}}" class='cate_text {{index == ind ? "active":""}}'  wx:for='{{firstSub}}' wx:key='{{item.id}}' bindtap='selectSub'
+		 data-i="{{index}}" data-sub-id="{{item.id}}">
+			<text class=''>{{item.subject}}</text>
+		</view>
+	</scroll-view>
+
+	<scroll-view scroll-y="true" scroll-top="0" class='cate_right' bindscroll="gun" scroll-into-view="{{toview}}">
+    <view class='wai' wx:for='{{third}}' id="p{{item.id}}" data-id="{{item.id}}">
+		<view  wx:for='{{item._child}}' wx:key='{{item.id}}' >
+			<view class='cate_two'>
+				<view id="id{{item.id}}" class="sub_title">
+					<text class='cate_title'>{{item.subject}}</text>
+					<view class="line"></view>
+				</view>
+				<navigator url='fhSearch/fhSearch?sub_id={{item.id}}' wx:for="{{item._child}}" hover-class="none">
+					<view class='cate_three'>
+						<image lazy-load="true" class='cate_banner' src='{{item.goods_subject_image}}'></image>
+						<text class='cate_three_title'>{{item.subject}}</text>
+					</view>
+				</navigator>
+			</view>
+		</view>
+    </view>
+	</scroll-view>
+</view>
+</view>
