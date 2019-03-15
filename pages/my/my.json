@@ -1,4 +1,5 @@
 {
-  "usingComponents": {},
-	"navigationBarTitleText": "个人中心"
+    "usingComponents": {},
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "个人中心"
 }

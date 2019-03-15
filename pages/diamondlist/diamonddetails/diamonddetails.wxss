@@ -1,0 +1,52 @@
+/* pages/diamondlist/diamonddetails/diamonddetails.wxss */
+
+page {
+    background-color: #fff;
+}
+
+.diamonddetail {
+    margin-top: 10rpx;
+}
+
+.dd-list {
+    width: 750rpx;
+    height: 150rpx;
+    border-bottom: 1rpx solid #f7f7f7;
+}
+
+.dl-img {
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    margin: 26rpx 20rpx;
+    overflow: hidden;
+}
+
+.dl-img image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.dl-con {
+    color: #404040;
+}
+
+.con-name {
+    margin-top: 30rpx;
+    font-size: 30rpx;
+}
+
+.con-num {
+    margin-top: 15rpx;
+    font-size: 24rpx;
+}
+
+.dl-status {
+    height: 150rpx;
+    line-height: 150rpx;
+    margin-right: 20rpx;
+    font-size: 28rpx;
+    color: #202020;
+}

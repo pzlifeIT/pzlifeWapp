@@ -1,60 +1,42 @@
-// pages/my/myQr/myQr.js
+// pages/diamondlist/diamonddetails/diamonddetails.js
 const app = getApp()
-    // let qrcode = require(../../utils/qrcode.js)
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        qrcode: ''
+        id: '',
+        DominosReceive: []
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        this.getUserQrcode()
+        this.setData({
+            id: options.id || ''
+        })
+        this.getDominosReceive(options.id || '')
     },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function() {
 
     },
-    getUserQrcode: function() {
-        let that = this,
-            pid = app.globalData.userInfo.uid
+    getDominosReceive(id) {
+        let that = this;
         app.wxrequest({
-            url: 'user/getUserQrcode',
+            url: 'rights/getDominosReceive',
             data: {
-                page: 'pages/index/index',
-                scene: pid
+                diamondvips_id: id
             },
-            nocon: false,
-            method: "GET",
-            success(res) {
-                console.log(res)
-                that.setData({
-                    qrcode: res.Qrcode
-                })
-            },
-            error(res) {
-                console.log(res)
-            }
-        })
-    },
-    save: function() {
-        console.log('save')
-        wx.showActionSheet({
-            itemList: ['保存图片'],
             success: function(res) {
-                console.log(res.tapIndex)
-                if (res.tapIndex == 0) {
-                    app.toast({
-                        title: "保存成功"
-                    })
-                }
+                that.setData({
+                    DominosReceive: res.Diamondvips || []
+                })
             }
         })
     },

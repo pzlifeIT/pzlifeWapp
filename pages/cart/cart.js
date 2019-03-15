@@ -433,6 +433,7 @@ Page({
      */
     onShow: function() {
         this.getStorage()
+        app.setCartNum()
         this.setData({
             selectAll: false
         })

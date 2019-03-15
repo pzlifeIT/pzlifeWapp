@@ -1,0 +1,14 @@
+<!--pages/diamondlist/diamonddetails/diamonddetails.wxml-->
+
+<view class="diamonddetail">
+  <view class="dd-list" wx:for="{{DominosReceive}}">
+    <view class="dl-img din fl">
+      <image src="{{item.avatar}}" />
+    </view>
+    <view class="dl-con din fl">
+      <text class="con-name db" >{{item.nick_name}}</text>
+      <text class="con-num db" >买主号：{{item.uid}}</text>
+    </view>
+    <view class="dl-status din fr">已开通</view>
+  </view>
+</view>
