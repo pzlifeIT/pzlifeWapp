@@ -8,44 +8,50 @@
   </view>
   <view class="fh-nav wid">
     <view bindtap="tabtap" data-tab="1" class="nav-btn din fl {{tab == 1?'active':''}}">我的店铺</view>
-    <view bindtap="tabtap" data-tab="2" class="nav-btn din fl {{tab == 2?'active':''}}">去添加商品</view>
+    <!-- <view bindtap="tabtap" data-tab="2" class="nav-btn din fl {{tab == 2?'active':''}}">去添加商品</view> -->
     <i class="wire"><s></s></i>
   </view>
 </view>
 <view class="fixed"></view>
-<view hidden="{{tab == 2}}">
-<view class="fh-li">
+<!-- <view hidden="{{tab == 2}}"> -->
+<view wx:for="{{goodsList}}" wx:for-index="idx">
+<view class="fh-li" wx:for="{{item}}" wx:for-index="idx1">
   <view class="fh-goodInfo">
     <view class="gi-img din fl" >
-      <image class="image" src="" />
+      <image class="image" src="{{item.image}}" />
     </view>
     <view class="gi-info din fl">
-      <text class="gi-name db " >黄金面包蟹</text>
+      <text class="gi-name db " >{{item.goods_name}}</text>
       <text class="db" >¥132.60</text>
     </view>
     <view class="gi-btnlist din fr">
-      <view class="gi-btn" >添加上架</view>
+      <view class="gi-btn" bindtap="autostatus" data-goodsid="{{item.goods_id || item.id}}">商品下架</view>
     </view>
   </view>
   <view class="fh-sizelist">
-    <view class="triangle" >
-      <image class="image" src="{{imgHost}}stop.png" />
-      <image class="image" wx:if="{{false}}" src="{{imgHost}}sdown.png" />
-    </view>
+    <view class="triangle" bindtap="foldchange" wx:if="{{item.isShow}}" data-idx="{{idx}}" data-idx1="{{idx1}}" data-fold="{{item.fold}}" >
+        <image lazy-load="true" class="image" wx:if="{{item.fold}}" src="{{imgHost}}sdown.png" />
+        <image lazy-load="true"  class="image" wx:else src="{{imgHost}}stop.png" />
+      </view>
     <view class="wid" >
       <text class="sl-tit">规格</text>
       <text class="sl-tit">合伙人毛利</text>
     </view>
-    <view >
-      <view class="wid" >
-        <text class="sl-name">400g-600g/只,2只装</text>
-        <text class="sl-num">19.45</text>
+    <view class="wid" wx:if="{{item.isShow && item.fold}}">
+          <text class="sl-name">{{item.goods_sku[0].sku_name}}</text>
+          <text class="sl-num">{{item.goods_sku[0].brokerage}}</text>
+        </view>
+      <view wx:else>
+        <view class="wid" wx:for="{{item.goods_sku}}">
+          <text class="sl-name">{{item.sku_name}}</text>
+          <text class="sl-num">{{item.brokerage}}</text>
+        </view>
       </view>
-    </view>
   </view>
 </view>
 </view>
-
+<!-- </view> -->
+<!-- 
 <view class="fh-cate" hidden="{{tab == 1}}" >
 <view class='cate_content'>
 	<scroll-view scroll-y="true" scroll-top="0" class='cate_left' scroll-into-view="p{{ind - 4}}">
@@ -74,4 +80,4 @@
     </view>
 	</scroll-view>
 </view>
-</view>
+</view> -->
