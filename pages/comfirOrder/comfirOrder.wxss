@@ -515,5 +515,5 @@ radio-group {
 
 .small {
     font-size: 24rpx;
-    color: #333;
+    color: #999;
 }

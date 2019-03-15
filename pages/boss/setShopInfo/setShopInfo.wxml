@@ -1,0 +1,40 @@
+<!--pages/boss/setShopInfo/setShopInfo.wxml-->
+<!--店铺名称-->
+<view class="text" wx:if="{{num == 2}}">
+    <input type="text" value="{{shopInfo}}" />
+    <icon type="clear" />
+</view>
+<!--客服电话-->
+<view class="text" wx:if="{{num == 3}}">
+    <input type="number" value="{{shopInfo}}" />
+    <icon type="clear" />
+</view>
+<!--店铺简介-->
+<view class="text area-text" wx:if="{{num == 4}}">
+    <textarea class="area" value="{{shopInfo}}" />
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="footer">
+    <view class="left">取消</view>
+    <view class="right">完成</view>
+</view>

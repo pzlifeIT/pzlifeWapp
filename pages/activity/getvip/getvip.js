@@ -37,11 +37,6 @@ Page({
 		this.setData({
 		    imgHost: app.globalData.host.imgHost
 		})
-		if (options.uid) {
-			this.setData({
-				uid: options.uid
-			})
-		}
 	},
 
 	/**
@@ -93,7 +88,7 @@ Page({
 		let that = this,
 			share = app.share({
 				title: "恭喜获得钻石会员卡",
-				path: '/pages/activity/activity?share_id=' + this.data.uid,
+				path: '/pages/activity/activity',
 				imageUrl: "http://pnkp5i8sb.bkt.clouddn.com/nomember01.png"
 			})
 		return share

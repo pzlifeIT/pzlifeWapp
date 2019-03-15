@@ -29,21 +29,22 @@
 </view>
 
 <view class='content'>
-  <view class='spec' bindtap='showModel'  wx:if="{{buy}}">
-    <text class='fix'>已选择：</text><text class='fix_desc'>{{goodData.sku_name}};x{{buyNum}}</text>
+  <view class='freight'>
+    <text class='fix' decode="{{true}}">运费：</text>
+    <text class='fix_desc'>{{goodInfo.goods_data.supplier_desc}}</text>
   </view>
-  <view class='spec' bindtap='showModel' wx:else>
-    <text class='fix'>未选择：</text>
+  <view class='spec' bindtap='showModel'  >
+    <text class='fix'>选择：</text>
+    <text wx:if="{{buy}}" class='fix_desc'>{{goodData.sku_name}};x{{buyNum}}</text>
+    <text class='fix_desc' wx:else>请选择规格</text>
   </view>
   <!-- <view class='ticket'>
     <text class='fix'>领券：</text><text class='fix_desc'>全场满39减9</text>
   </view> -->
   <view class='integral'>
-    <text class='fix' decode="{{true}}">积&emsp;分：</text><text class='fix_desc'>赠送<text >{{goodInfo.goods_data.min_integral_active}}</text><text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">-{{goodInfo.goods_data.max_integral_active}}</text>积分</text>
+    <text class='fix' decode="{{true}}">积分：</text><text class='fix_desc'>赠送<text >{{goodInfo.goods_data.min_integral_active}}</text><text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">-{{goodInfo.goods_data.max_integral_active}}</text>积分</text>
   </view>
-  <view class='freight'>
-    <text class='fix' decode="{{true}}">运&emsp;费：</text><text class='fix_desc'>{{goodInfo.goods_data.supplier_desc}}</text>
-  </view>
+  
 </view>
 <!-- 选择规格弹出层 -->
  <view class="popout" wx:if='{{showModel}}'>

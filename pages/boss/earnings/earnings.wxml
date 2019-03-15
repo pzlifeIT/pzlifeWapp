@@ -1,0 +1,53 @@
+<!--pages/boss/earnings/earnings.wxml-->
+<view class="title">返利明细</view>
+<view class="list">
+    <view class="list-one">
+        <view class="touxiang">
+            <image src=""></image>
+        </view>
+        <view class="one-info">
+            <view class="one-title">我是一束阳光
+                <text>2019-02-13</text>
+            </view>
+            <view class="order">订单号:
+                <text>123456789244515</text>
+            </view>
+            <view class="shouyi">获得收益:
+                <text>9.00</text>
+            </view>
+        </view>
+    </view>
+    <view class="list-one">
+        <view class="touxiang">
+            <image src=""></image>
+        </view>
+        <view class="one-info">
+            <view class="one-title">我是一束阳光
+                <text>2019-02-13</text>
+            </view>
+            <view class="order">订单号:
+                <text>123456789244515</text>
+            </view>
+            <view class="shouyi">获得收益:
+                <text>9.00</text>
+            </view>
+        </view>
+    </view>
+    <view class="list-one">
+        <view class="touxiang">
+            <image src=""></image>
+        </view>
+        <view class="one-info">
+            <view class="one-title">我是一束阳光
+                <text>2019-02-13</text>
+            </view>
+            <view class="order">订单号:
+                <text>123456789244515</text>
+            </view>
+            <view class="shouyi">获得收益:
+                <text>9.00</text>
+            </view>
+        </view>
+    </view>
+
+</view>

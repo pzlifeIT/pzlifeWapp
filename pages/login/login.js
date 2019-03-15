@@ -123,6 +123,11 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function() {
-
+        let that = this,
+            share = app.share({
+                title: "登陆",
+                path: '/pages/login/login'
+            })
+        return share
     }
 })

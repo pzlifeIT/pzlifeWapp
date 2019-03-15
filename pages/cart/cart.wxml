@@ -1,5 +1,5 @@
 <!--pages/cart/cart.wxml-->
-<view wx:if="{{valid.length>=1 || failure.length>=1}}">
+<view wx:if="{{valid.length>=1 || failure.length>=1}}" class="cart-top">
 	<block wx:if="{{valid.length>=1}}">
 		<view class='cart_goods' wx:for="{{valid}}" wx:for-index="validIndex" wx:key="index">
 			<view class='shop_name'>

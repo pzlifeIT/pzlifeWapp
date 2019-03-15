@@ -5,7 +5,11 @@ page {
     height: 100%;
     width: 100%;
 }
-
+.cart-top{
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
 radio {
     transform: scale(0.8);
 }

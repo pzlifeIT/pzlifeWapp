@@ -335,6 +335,12 @@ Page({
         }
         skus = skus.substring(0, skus.length - 1);
         console.log(skus)
+        if (!skus) {
+            app.toast({
+                title: "请选择商品"
+            })
+            return;
+        }
         wx.navigateTo({
             url: '/pages/comfirOrder/comfirOrder?skus=' + skus
         })
@@ -466,6 +472,11 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function() {
-
+        let that = this,
+            share = app.share({
+                title: "购物车",
+                path: '/pages/cart/cart'
+            })
+        return share
     }
 })

@@ -474,6 +474,3 @@ page{
     height: auto;
     background: #F7F7F7;
 }
-.item{
-    order: ;
-}
