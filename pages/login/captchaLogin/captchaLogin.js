@@ -239,6 +239,11 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function() {
-
+        let that = this,
+            share = app.share({
+                title: "快捷登陆",
+                path: '/pages/captchaLogin/captchaLogin'
+            })
+        return share
     }
 })

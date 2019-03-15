@@ -52,8 +52,9 @@ App({
         } else {
             path = data.path + '&pid=' + this.globalData.userInfo.uid || ''
         }
+        console.log(path)
         let sharejson = {
-            title: data.title || '品质生活商城',
+            title: data.title || '品质生活广场',
             path: path,
             imageUrl: data.imageUrl,
             success: function(shareTickets) {
