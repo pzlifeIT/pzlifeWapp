@@ -1,5 +1,10 @@
 <!--pages/boss/earnings/earnings.wxml-->
-<view class="title">返利明细</view>
+<view class="top">
+    <view class="top-left {{num == 1 ? 'active':''}}" bindtap="clickSelect" data-num="1">个人消费</view>
+    <view class="top-left {{num == 2 ? 'active' : ''}}" bindtap="clickSelect" data-num="2">会员圈消费</view>
+    <i class="line"><s></s></i>
+</view>
+<view class="title">收益明细</view>
 <view class="list">
     <view class="list-one">
         <view class="touxiang">

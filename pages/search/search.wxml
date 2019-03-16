@@ -46,9 +46,9 @@
 		</view>
 	</view>
 </view> -->
-<view class="nest">
-	<view class='goods' wx:for='{{goodsList}}' wx:if="{{goodsList.length>=1 && search!=''}}">
-		<navigator url='/pages/goods/detail?goodid={{item.id}}'>
+<view class="nest" wx:for='{{goodsList}}' wx:if="{{goodsList[index].length>=1 && search!=''}}">
+	<view class='goods' wx:for="{{item}}" wx:key="{{item.id}}">
+		<navigator url='/pages/goods/detail?goodid={{item.id}}' >
 			<view class='one_goods'>
 				<view class='img'>
 					<image class='goods_img' src='{{item.image+"?imageMogr2/thumbnail/370x"}}'></image>

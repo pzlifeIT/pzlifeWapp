@@ -19,6 +19,9 @@
     <text class="userLogin din fl">{{userInfo.nick_name}}</text>
 		<view class="vid"><text>{{userInfo.user_vid}}</text></view>
   </navigator>
+  <navigator wx:if="{{userInfo.user_identity == 4}}" url="/pages/boss/boss?name={{userInfo.nick_name}}&head={{userInfo.avatar}}"  hover-class="none" open-type="navigate">
+  <view class="bossShop" >进入店铺管理 <image src="{{imgHost}}jt_b_03.png"></image></view>
+  </navigator>
   <image lazy-load="true"  class="userBack" src="{{imgHost}}myback_02.png" />
 	<view class="diamond-card" wx:if="{{userInfo.user_identity == 1}}">
 		<image lazy-load="true"  src="{{imgHost}}diamond.png"></image>

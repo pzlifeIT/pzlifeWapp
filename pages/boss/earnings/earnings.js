@@ -5,16 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      num:1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if(options.earn == 1){
+      wx.setNavigationBarTitle({
+        title: '经营性收益总额'
+      })
+    }else if (options.earn == 2){
+      wx.setNavigationBarTitle({
+        title: '上月收益'
+      })
+    } else if (options.earn == 3){
+      wx.setNavigationBarTitle({
+        title: '本月收益'
+      })
+    }
   },
-
+  clickSelect:function(e){
+    let num = e.currentTarget.dataset.num
+      this.setData({
+          num:num
+      })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

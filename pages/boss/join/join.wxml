@@ -1,6 +1,6 @@
 <!--pages/boss/join/join.wxml-->
 <!--pages/boss/earnings/earnings.wxml-->
-<view class="title">返利明细</view>
+<view class="title">招商加盟明细</view>
 <view class="list">
     <view class="list-one">
         <view class="touxiang">

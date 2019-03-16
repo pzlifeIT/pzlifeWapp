@@ -63,3 +63,43 @@ page{
 .order text,.shouyi text{
     color: #202020;
 }
+.top{
+    width: 750rpx;
+    height: 80rpx;
+    background: #FFFFFF;
+    position: relative;
+}
+.top-left{
+    width: 50%;
+    height: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+    color: #202020;
+    font-size: 30rpx;
+    float: left;
+}
+.line{
+    width: 50%;
+    height: 2rpx;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    display: block;
+
+}
+.line s{
+    width: 30%;
+    height: 2rpx;
+    background: #E61F18;
+    margin:  0 auto;
+    display: block;
+}
+.top-left:nth-of-type(1).active~.line{
+     transform: translate3d(0,0,0);
+ }
+.top-left:nth-of-type(2).active~.line{
+    transform: translate3d(100%,0,0);
+}
+.active{
+    color: #E61F18;
+}

@@ -37,6 +37,7 @@ Page({
         let share_id = this.data.share_id,
             pid = app.globalData.pid,
             that = this
+        console.log(pid)
         app.wxrequest({
             url: "order/createMemberOrder",
             data: {
