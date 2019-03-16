@@ -41,6 +41,7 @@
         "pages/boss/case/case",
         "pages/boss/earnings/earnings",
         "pages/boss/join/join",
+        "pages/boss/circle/circle",
         "pages/freightHouse/freightHouse",
         "pages/freightHouse/fhSearch/fhSearch"
     ],

@@ -16,7 +16,8 @@ Page({
         repertory: true,
         buyNum: 1,
         swipercur: 1,
-        imgHost: ''
+        imgHost: '',
+        identity: ''
     },
     showModel: function() {
         this.setData({
@@ -26,6 +27,19 @@ Page({
     changeSwiper: function(e) {
         this.setData({
             swipercur: parseInt(e.detail.current) + 1
+        })
+    },
+    putaway: function() {
+        let that = this
+        app.wxrequest({
+            url: 'shopmanage/autoShopGoods',
+            data: {
+                type: 1,
+                goods_id: that.data.goods_id
+            },
+            success: function(res) {
+                app.toast({ title: '操作成功' })
+            }
         })
     },
     hideModel: function() {
@@ -226,7 +240,8 @@ Page({
     onLoad: function(options) {
         this.setData({
             goodid: options.goodid,
-            imgHost: app.globalData.host.imgHost
+            imgHost: app.globalData.host.imgHost,
+            identity: app.globalData.userInfo.user_identity
         })
         this.getGoodInfo(options.goodid)
     },
@@ -286,7 +301,9 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-
+        this.setData({
+            identity: app.globalData.userInfo.user_identity
+        })
     },
 
     /**

@@ -55,9 +55,21 @@ swiper-item {
 }
 
 .desc .text {
-    width: 659rpx;
+    width: 550rpx;
     float: left;
     margin: 20rpx;
+}
+
+.putaway {
+    width: 140rpx;
+    padding: 10rpx 0;
+    font-size: 28rpx;
+    margin-top: 100rpx;
+    margin-right: 20rpx;
+    background-color: #e61f18;
+    border-radius: 2px;
+    color: #fff;
+    text-align: center;
 }
 
 .desc text {

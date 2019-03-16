@@ -13,6 +13,7 @@ page {
     /* height: 150rpx; */
     background-color: #f99f36;
     overflow: auto;
+    z-index: 20;
 }
 
 .fixed {

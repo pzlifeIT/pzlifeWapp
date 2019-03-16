@@ -2,11 +2,11 @@
   <view class="fh-search wid" >
     <view class="fh-inpbox din fl" >
       <icon type="search" class="search fl" size="31rpx" />
-      <input type="text" class="fh-inp" placeholder="请输入你想搜索的产品" />
+      <input type="text" value="{{searchText}}" bindinput="searchchange" bindconfirm="searchfinish" class="fh-inp" placeholder="请输入你想搜索的产品" />
     </view>
-    <view class="fh-searchbtn din fl" >搜索</view>
+    <view class="fh-searchbtn din fl"  bindtap="searchfinish" >搜索</view>
   </view>
-  <view class="fh-nav wid">
+  <view class="fh-nav">
     <view bindtap="tabtap" data-tab="1" class="nav-btn din fl {{tab == 1?'active':''}}">我的店铺</view>
     <!-- <view bindtap="tabtap" data-tab="2" class="nav-btn din fl {{tab == 2?'active':''}}">去添加商品</view> -->
     <i class="wire"><s></s></i>
@@ -22,7 +22,7 @@
     </view>
     <view class="gi-info din fl">
       <text class="gi-name db " >{{item.goods_name}}</text>
-      <text class="db" >¥132.60</text>
+      <text class="db" >¥{{item.min_retail_price}}<text wx:if="{{item.max_retail_price > item.max_retail_price}}" >-¥{{item.max_retail_price}}</text></text>
     </view>
     <view class="gi-btnlist din fr">
       <view class="gi-btn" bindtap="autostatus" data-goodsid="{{item.goods_id || item.id}}">商品下架</view>

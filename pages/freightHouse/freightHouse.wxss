@@ -12,6 +12,7 @@ page {
     /* height: 150rpx; */
     background-color: #f99f36;
     overflow: auto;
+    z-index: 10;
 }
 
 .fixed {
@@ -116,7 +117,6 @@ page {
     width: 90rpx;
     height: 90rpx;
     margin: 20rpx;
-    background-color: #f99f36;
 }
 
 .gi-img .image {
@@ -154,6 +154,8 @@ page {
 .fh-sizelist {
     position: relative;
     margin-bottom: 20rpx;
+    z-index: 1;
+    color: #fff;
 }
 
 .triangle {
@@ -181,6 +183,7 @@ page {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    background-color: #fff;
 }
 
 .sl-tit {
