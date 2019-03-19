@@ -55,8 +55,8 @@
   <view class='pop'>
     <view class='goods_data' >
       <view class='goods_thumb fl'>
-        <image lazy-load="true" src='{{goodData.sku_image}}' wx:if="{{buy}}"></image>
-        <image lazy-load="true" src='{{goodInfo.goods_data.image}}' wx:else></image>
+        <image lazy-load="true" bindtap="previewImage" data-img="{{goodData.sku_image}}"  src='{{goodData.sku_image}}' wx:if="{{buy}}"></image>
+        <image lazy-load="true" bindtap="previewImage" data-img="{{goodInfo.goods_data.image}}" src='{{goodInfo.goods_data.image}}' wx:else></image>
       </view>
       <view class='goods_desc fl' wx:if="{{repertory}}">
         <text class='pop_price' wx:if="{{buy}}">价格：￥{{goodData.sku_price}}</text>

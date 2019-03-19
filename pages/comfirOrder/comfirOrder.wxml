@@ -72,12 +72,24 @@
       <view class="hp-address" >{{site.province_name}} {{site.city_name}} {{site.area_name}} {{site.address}}</view>
     </view>
     <view >
-      <button class="hp-else din fl" plain="true" bindtap="selsite"  >选择其他</button>
+      <button class="hp-else din fl" plain="true" bindtap="selsite"  >选择其他地址</button>
       <button bindtap="showbuypup" class="hp-confirm din fl" >地址确定</button>
     </view>
   </view>
 </view>
-
+<view class="hint-popup" wx:if="{{distribution}}">
+  <view class="fill" bindtap="" ></view>
+  <view class="hp-cen" >
+    <view class="b_xie" ><image lazy-load="true" class="b-image" src="{{imgHost}}b_xie.png" /></view>
+    <view class="hp-con" >
+      <view class="hb-address" >该地址商品不支持配送</view>
+    </view>
+    <view >
+      <button class="hp-else din fl" plain="true" bindtap="selsite"  >选择其他地址</button>
+      <button bindtap="cancelbuypup" class="hp-confirm din fl" >取消购买</button>
+    </view>
+  </view>
+</view>
 <view class="cobuy" wx:if="{{buypup}}">
   <view class="fill" bindtap="hidepay" ></view>
   <view class="buymoney">

@@ -18,7 +18,8 @@ Page({
         paymoney: {},
         num: 1,
         quick: 0,
-        imgHost: ''
+        imgHost: '',
+        distribution: false
     },
     hideModel: function(e) {
         this.setData({
@@ -35,13 +36,20 @@ Page({
             addressshow: false
         })
     },
+    hidedistribution(e) {
+        this.setData({
+            distribution: false
+        })
+    },
     hidepay: function() {
         this.setData({
             buypup: false
         })
     },
+    cancelbuypup() {
+        wx.navigateBack()
+    },
     selpaytype: function(e) {
-        console.log(e.currentTarget.dataset.type)
         let type = e.currentTarget.dataset.type,
             paym = {},
             stat = this.data.stat
@@ -131,6 +139,7 @@ Page({
                         order_no: res.order_no
                     })
                 }
+                app.globalData.updateNum = true
             },
             error: function(code) {
                 switch (parseInt(code)) {
@@ -149,6 +158,9 @@ Page({
                         })
                         break;
                     case 3006:
+                        that.setData({
+                            distribution: true
+                        })
                         app.toast({ title: '该地区商品不支持配送' })
                         break;
                     case 3007:
@@ -195,6 +207,9 @@ Page({
                         app.toast({ title: '商品已售完' })
                         break;
                     case 3006:
+                        that.setData({
+                            distribution: true
+                        })
                         app.toast({ title: '该地区商品不支持配送' })
                         break;
                     case 3007:
@@ -289,7 +304,7 @@ Page({
      */
     selsite: function() {
         wx.navigateTo({
-            url: 'address/address?siteid=' + this.data.siteid + '&skus=' + this.data.skus + '&num=' + this.data.num + '&quick=' + this.data.quick
+            url: 'address/address'
         })
     },
     /**
@@ -331,7 +346,11 @@ Page({
                 }
                 that.setData({
                     datalist: res.supplier_list,
-                    stat: stat
+                    stat: stat,
+                    siteid: res.default_address_id
+                })
+                that.getUserAddress({
+                    address_id: res.default_address_id
                 })
             },
             error: function(code) {
@@ -352,6 +371,9 @@ Page({
                         })
                         break;
                     case 3006:
+                        that.setData({
+                            distribution: true
+                        })
                         app.toast({ title: '该地区商品不支持配送' })
                         break;
                     case 3007:
@@ -399,6 +421,9 @@ Page({
                         app.toast({ title: '商品售罄' })
                         break;
                     case 3006:
+                        that.setData({
+                            distribution: true
+                        })
                         app.toast({ title: '该地区商品不支持配送' })
                         break;
                     case 3007:
@@ -421,15 +446,16 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function(o) {
+        this.setData({
+            siteid: app.globalData.addressId,
+            distribution: false
+        })
         if (this.data.quick == 1) {
             this.quickSettlement()
         } else {
             this.createsettlement()
         }
-        this.setData({
-            siteid: app.globalData.addressId
-        })
-        console.log(app.globalData.addressId)
+        console.log('siteid', app.globalData.addressId)
         if (!this.data.siteid) return
         this.getUserAddress({
             address_id: this.data.siteid

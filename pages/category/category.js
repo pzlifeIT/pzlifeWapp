@@ -128,6 +128,9 @@ Page({
      */
     onShow: function() {
         this.getHeight()
+        if (app.globalData.updateNum) {
+            app.setCartNum()
+        }
     },
 
     /**

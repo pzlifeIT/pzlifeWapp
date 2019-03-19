@@ -22,8 +22,8 @@
     </view>
   </view>
 </view>
-
 </view>
+<view class="list-bottom" ></view>
 <navigator url="installAddress/installAddress" >
   <view  class="address-new" >新建</view>
 </navigator>

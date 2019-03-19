@@ -5,6 +5,8 @@ page {
 }
 
 .address-list {
+    height: 100%;
+    overflow: auto;
     margin-bottom: 100rpx;
 }
 
@@ -95,4 +97,9 @@ page {
     text-align: center;
     z-index: 20;
     background-color: #e61f18;
+}
+
+.list-bottom {
+    width: 100%;
+    height: 100rpx;
 }

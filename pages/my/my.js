@@ -230,7 +230,9 @@ Page({
      */
     onShow: function() {
         this.getStorage()
-        app.setCartNum()
+        if (app.globalData.updateNum) {
+            app.setCartNum()
+        }
     },
 
     /**

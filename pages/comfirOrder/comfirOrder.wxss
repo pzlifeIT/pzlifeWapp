@@ -404,6 +404,15 @@ radio-group {
     color: #888888;
 }
 
+.hb-address {
+    width: 530rpx;
+    line-height: 45rpx;
+    text-align: center;
+    margin-left: 35rpx;
+    font-size: 32rpx;
+    color: #404040;
+}
+
 .hp-else,
 .hp-confirm {
     width: 270rpx;

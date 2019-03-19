@@ -173,7 +173,9 @@ Page({
     },
     onShow: function() {
         this.getIndex()
-        app.setCartNum()
+        if (app.globalData.updateNum) {
+            app.setCartNum()
+        }
     },
     /**
      * 用户点击右上角分享

@@ -19,12 +19,6 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
-            siteid: options.siteid,
-            skus: options.skus,
-            quick: options.quick,
-            num: options.num
-        });
-        this.setData({
                 imgHost: app.globalData.host.imgHost
             })
             // this.getUserAddress()

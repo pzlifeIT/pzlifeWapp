@@ -14,6 +14,7 @@ App({
         addressId: '',
         pid: '',
         host: {},
+        updateNum: true
     },
     getconid: function() {
         let that = this
@@ -98,11 +99,13 @@ App({
         })
     },
     setCartNum: function(id) {
-        this.wxrequest({
+        let that = this
+        that.wxrequest({
             url: 'cart/getUserCartNum',
             nologin: true,
             success: function(res) {
                 let n = res.total
+                that.globalData.updateNum = false
                 if (n == 0) {
                     wx.removeTabBarBadge({
                         index: 2

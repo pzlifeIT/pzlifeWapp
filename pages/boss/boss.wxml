@@ -104,11 +104,13 @@
 		<view class="one icon-after">
 			<image lazy-load="true" src="{{imgHost}}dpgl_10.png"></image>
 			<view class="icon-text">店铺发券</view>
-		</view>
-		<view class="one icon-after">
+    </view>
+    <navigator class="one icon-after" url="/pages/freightHouse/freightHouse" >
+		<!-- <view class="one icon-after"> -->
 			<image lazy-load="true" src="{{imgHost}}dpgl_12.png"></image>
 			<view class="icon-text">商品货仓</view>
-		</view>
+    <!-- </view> -->
+    </navigator>
 		<view class="one">
 			<image lazy-load="true" src="{{imgHost}}dpgl_07.png"></image>
 			<view class="icon-text">开店邀请</view>

@@ -232,6 +232,7 @@ Page({
                 that.setData({
                     showModel: false
                 })
+                app.globalData.updateNum = true
                 that.getCartNum()
                 app.toast({ title: '加入购物车成功' })
             }
