@@ -30,7 +30,7 @@ page{
     text-align: center;
     float: left;
 }
- image{
+.touxiang image{
     width: 96rpx;
     height: 96rpx;
     border-radius: 50%;
@@ -71,4 +71,28 @@ page{
     float: right;
     display: inline-block;
     margin-right: 10rpx;
+}
+.not{
+    width: 750rpx;
+    height: 70%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.not-case{
+    width: 199rpx;
+    overflow: hidden;
+}
+.not-img{
+    width: 199rpx;
+    height: 138rpx;
+    margin-bottom: 29rpx;
+}
+.not .text{
+    width: 199rpx;
+    overflow: hidden;
+    text-align: center;
+    color: #D6D6D6;
+    font-size: 28rpx;
 }

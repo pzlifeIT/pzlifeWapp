@@ -1,5 +1,5 @@
 <!--pages/boss/case/case.wxml-->
-<view class="title" wx:if="{{detailList.length <= 0}}">
+<view class="title" wx:if="{{detailList.length > 0}}">
     商票明细
 </view>
 <view class="" wx:for="{{detailList}}" wx:if="{{detailList.length > 0}}">
