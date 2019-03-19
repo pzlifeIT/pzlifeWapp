@@ -15,16 +15,20 @@
   <view class='text'>
     <text class='title'>{{goodInfo.goods_data.goods_name}}</text>
     <text class='subtitle'>{{goodInfo.goods_data.subtitle}}</text>
-    <view class='price'>
-      <text class="din fl" >￥{{goodInfo.goods_data.min_retail_price}}</text>
-      <text class="din fl" wx:if="{{goodInfo.goods_data.min_retail_price != goodInfo.goods_data.max_retail_price}}" > -￥{{goodInfo.goods_data.max_retail_price}}</text> </view>
-			<view class="vipprice">钻石再让利 {{goodInfo.goods_data.min_brokerage}}<text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}"> -￥{{goodInfo.goods_data.max_brokerage}}</text></view>
   </view>	
+  <view class='price'>
+      <view class="price-num">
+        <text class="din fl" >￥{{goodInfo.goods_data.min_retail_price}}</text>
+        <text class="din fl" wx:if="{{goodInfo.goods_data.min_retail_price != goodInfo.goods_data.max_retail_price}}" > -￥{{goodInfo.goods_data.max_retail_price}}</text> 
+      </view>
+      <view class="vipprice">钻石再让利 {{goodInfo.goods_data.min_brokerage}}<text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}"> -￥{{goodInfo.goods_data.max_brokerage}}</text>
+      </view>
+  </view>
   <!-- <view class='collect'>
     <icon type=''></icon>
     <text >收藏</text>
   </view> -->
-  <view class='putaway din fr' wx:if="{{identity == 4}}" bindtap="putaway" ><text>添加到\n我的店铺</text></view>
+   <view class='putaway din fr' wx:if="{{identity == 4 & status == 2}}" bindtap="putaway" ><i class="fl"></i><text class="fr" >添加到我的店铺</text></view>
 </view>
 
 <view class='content'>
@@ -137,6 +141,7 @@
   <view class='cart'>
     <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_07.png" />
     <text  class="ft-text">购物车</text>
+    <text class="cartNum" wx:if="{{cartNum > 0}}" >{{cartNum}}</text>
   </view>
   </navigator>
   <view bindtap="buyGood"  class='buy' >

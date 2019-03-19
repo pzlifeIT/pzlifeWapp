@@ -31,9 +31,12 @@ Page({
     },
     setsite: function(e) {
         console.log(e.currentTarget.dataset)
-        wx.redirectTo({
-            url: '../comfirOrder?skus=' + this.data.skus + '&siteid=' + e.currentTarget.dataset.id + '&num=' + this.data.num + '&quick=' + this.data.quick
-        })
+        app.globalData.addressId = e.currentTarget.dataset.id
+        wx.navigateBack()
+
+        // wx.redirectTo({
+        //     url: '../comfirOrder?skus=' + this.data.skus + '&siteid=' + e.currentTarget.dataset.id + '&num=' + this.data.num + '&quick=' + this.data.quick
+        // })
     },
     /**
      * 获取所有用户地址接口

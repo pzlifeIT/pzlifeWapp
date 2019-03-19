@@ -162,11 +162,10 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function() {
-        let that = this,
-            share = app.share({
-                title: "分类",
-                path: '/pages/category/category'
-            })
+        let share = app.share({
+            title: "分类",
+            path: '/pages/category/category'
+        })
         return share
     }
 })

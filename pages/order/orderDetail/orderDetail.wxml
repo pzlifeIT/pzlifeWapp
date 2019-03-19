@@ -41,11 +41,15 @@
 	</view>
 	<view class="or-footer">
 		<view class="footer-left"><text class="sum">共件 共付：<text class="total">￥{{order_info.pay_money}}</text></text></view>
-		<view class="footer-right">
+	</view>
+</view>
+<view class="footer-right">
+      <view bindtap="call" class="call din fl" >
+        <image class="pzkefu" src="{{imgHost}}pzkefu.png?imageMogr2/thumbnail/64x" />
+        <text class="call-text fr">联系客服</text>
+      </view>
 			<view bindtap="gopay" data-orderno="{{order_info.order_no}}" class="or-btn red" wx:if="{{order_info.order_status == 1}}">去付款</view>
       <view bindtap="cancelorder" data-orderno="{{order_info.order_no}}" class="or-btn black" wx:if="{{order_info.order_status == 1}}">取消订单</view>
       <view bindtap="gologistics" data-orderno="{{order_info.order_no}}" class="or-btn black" wx:if="{{order_info.order_status == 5 || order_info.order_status == 6}}">查看物流</view>
       <view bindtap="confirmOrder" data-orderno="{{order_info.order_no}}" class="or-btn red" wx:if="{{order_info.order_status == 5}}">确认收货</view>
-		</view>
-	</view>
 </view>

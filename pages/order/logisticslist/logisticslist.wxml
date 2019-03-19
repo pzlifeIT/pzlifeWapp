@@ -4,7 +4,9 @@
 <view class="ll-info" wx:for="{{order_subpackage}}" >
   <view class="ll-sub-head" >
     <text class="ll-number" >{{item.express_name}}：{{item.express_no}}</text>
+    <navigator class="din fr" url="../logisticsInfo/logisticsInfo?orderno={{order_no}}&expresskey={{item.express_key}}&expressno={{item.express_no}}&expressname={{item.express_name}}">
     <view class="ll-btn fr" data-express="{{item.express_no}}">查看物流详情</view>
+    </navigator>
   </view>
   <view class="ll-good" wx:for="{{item.express_goods}}" >
     <view class="ll-good-img din fl" ><image lazy-load="true" src="" /></view>

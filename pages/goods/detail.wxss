@@ -61,15 +61,54 @@ swiper-item {
 }
 
 .putaway {
-    width: 140rpx;
-    padding: 10rpx 0;
+    width: 260rpx;
+    height: 62rpx;
     font-size: 28rpx;
-    margin-top: 100rpx;
+    margin-top: 20rpx;
     margin-right: 20rpx;
     background-color: #e61f18;
-    border-radius: 2px;
+    border-radius: 6px;
     color: #fff;
-    text-align: center;
+    text-align: right;
+}
+
+.putaway i {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 36rpx;
+    height: 36rpx;
+    margin: 13rpx 0 13rpx 11rpx;
+    border: 2rpx solid #fff;
+    border-radius: 50%;
+}
+
+.putaway i::before,
+.putaway i::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: #fff;
+}
+
+.putaway i::after {
+    top: 8rpx;
+    left: 16rpx;
+    width: 2rpx;
+    height: 20rpx;
+}
+
+.putaway i::before {
+    top: 16rpx;
+    left: 8rpx;
+    width: 20rpx;
+    height: 2rpx;
+}
+
+.putaway text {
+    display: inline-block;
+    line-height: 62rpx;
+    margin-right: 10rpx;
 }
 
 .desc text {
@@ -89,8 +128,16 @@ swiper-item {
 }
 
 .desc .price {
+    width: 400rpx;
+    float: left;
+    margin: 0 20rpx 20rpx;
     font-size: 38rpx;
     color: #e61f18;
+    overflow: auto;
+}
+
+.price-num {
+    width: 100%;
     overflow: auto;
 }
 
@@ -179,7 +226,7 @@ swiper-item {
     display: inline-block;
     float: left;
     text-align: center;
-    width: 83rpx;
+    width: 103rpx;
     height: 98rpx;
     color: #404040;
     font-size: 22rpx;
@@ -187,14 +234,30 @@ swiper-item {
 }
 
 .footer .cart {
+    position: relative;
     border-right: none;
+}
+
+.cart .cartNum {
+    position: absolute;
+    display: inline-block;
+    top: 10rpx;
+    left: 56rpx;
+    min-width: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    border-radius: 16rpx;
+    color: #fff;
+    text-align: center;
+    font-size: 20rpx;
+    background-color: #e61f18;
 }
 
 .footer .dl-ficon {
     float: left;
     width: 48rpx;
     height: 48rpx;
-    margin: 10rpx 17rpx 5rpx;
+    margin: 10rpx 27rpx 5rpx;
 }
 
 .footer .ft-text {
@@ -208,7 +271,7 @@ swiper-item {
 .footer .join_cart {
     display: inline-block;
     float: left;
-    width: 251rpx;
+    width: 221rpx;
     text-align: center;
     line-height: 98rpx;
     color: #ffffff;
@@ -343,6 +406,7 @@ swiper-item {
 }
 
 .param .attr .attr_name {
+    box-sizing: border-box;
     border: 1rpx #b6b6b6 solid;
     border-radius: 2rpx;
     padding: 21rpx;
