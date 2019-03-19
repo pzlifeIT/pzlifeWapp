@@ -202,8 +202,8 @@ page {
 }
 
 .back image {
-    width: 40rpx;
-    height: 39rpx;
+    width: 20rpx;
+    height: 34rpx;
     display: block;
     margin: auto;
     margin-top: 12rpx;

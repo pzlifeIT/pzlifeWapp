@@ -16,7 +16,10 @@ Page({
         repertory: true,
         buyNum: 1,
         swipercur: 1,
-        imgHost: ''
+        imgHost: '',
+        identity: 0,
+        status: 0,
+        cartNum: 0
     },
     showModel: function() {
         this.setData({
@@ -26,6 +29,20 @@ Page({
     changeSwiper: function(e) {
         this.setData({
             swipercur: parseInt(e.detail.current) + 1
+        })
+    },
+    putaway: function() {
+        let that = this
+        app.wxrequest({
+            url: 'shopmanage/autoShopGoods',
+            data: {
+                type: 1,
+                goods_id: that.data.goodid
+            },
+            success: function(res) {
+                that.getGoodsAway()
+                app.toast({ title: '操作成功' })
+            }
         })
     },
     hideModel: function() {
@@ -215,8 +232,8 @@ Page({
                 that.setData({
                     showModel: false
                 })
+                that.getCartNum()
                 app.toast({ title: '加入购物车成功' })
-                app.setCartNum()
             }
         })
     },
@@ -224,9 +241,11 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
+        console.log('app.globalData.userInfo.user_identity', app.globalData.userInfo.user_identity)
         this.setData({
             goodid: options.goodid,
-            imgHost: app.globalData.host.imgHost
+            imgHost: app.globalData.host.imgHost,
+            identity: app.globalData.userInfo.user_identity || 0
         })
         this.getGoodInfo(options.goodid)
     },
@@ -275,6 +294,22 @@ Page({
             }
         })
     },
+    getGoodsAway: function() {
+        if (this.data.identity != 4) return
+        let t = this
+        app.wxrequest({
+            url: 'shopmanage/getGoodsAway',
+            data: {
+                goods_id: t.data.goodid
+            },
+            success(res) {
+
+                t.setData({
+                    status: res.putaway
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -286,9 +321,25 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-
+        this.setData({
+            identity: app.globalData.userInfo.user_identity || 0,
+            cartNum: ''
+        })
+        this.getCartNum()
+        this.getGoodsAway()
     },
-
+    getCartNum: function(id) {
+        let that = this
+        app.wxrequest({
+            url: 'cart/getUserCartNum',
+            nologin: true,
+            success: function(res) {
+                that.setData({
+                    cartNum: res.total
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面隐藏
      */

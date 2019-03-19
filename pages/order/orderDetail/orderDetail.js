@@ -7,19 +7,23 @@ Page({
      */
     data: {
         orderno: '',
-        order_info: {}
+        order_info: {},
+        imgHost: ''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
-        console.log(options)
-        this.setData({
-            orderno: options.orderno
+    call() {
+        wx.makePhoneCall({
+            phoneNumber: '15502123212'
         })
-        parseInt
-        parseFloat
+    },
+    onLoad: function(options) {
+        this.setData({
+            orderno: options.orderno,
+            imgHost: app.globalData.host.imgHost
+        })
         this.getUserOrderInfo({
             orderno: options.orderno
         })

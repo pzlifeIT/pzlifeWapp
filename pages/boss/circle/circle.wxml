@@ -1,0 +1,48 @@
+<!--pages/boss/circle/circle.wxml-->
+<view class="circle-header" >
+  <view class="ch-statistics">
+    <image class="circleback " src="http://pnkp5i8sb.bkt.clouddn.com/circleback.png" />
+    <view class="ch-total">
+      <text class="ct-text db unit">社交圈总人数</text>
+      <text class="ct-num db" >222</text>
+    </view>
+    <view class="ch-half"> 
+      <text class="db ch-name unit" >钻石会员圈</text>
+      <text class="db ch-num" >122</text>
+    </view>
+    <view class="ch-half">
+      <text class="db ch-name unit" >买主圈</text>
+      <text class="db ch-num" >100</text>
+    </view>
+  </view>
+  <view class="ch-nav">
+    <view class="ch-nav-btn {{tab == 1?'active':''}}"  >钻石会员圈</view>
+    <view class="ch-nav-btn {{tab == 2?'active':''}}"  >买主圈</view>
+    <i class="wire"><s></s></i>
+  </view>
+  <view class="ch-explain" wx:if="{{tab == 1}}">
+    <text class="ce-name din fl">好友昵称</text>
+    <text class="ce-diamond unit  din fl">好友的钻石会员</text>
+    <text class="ce-socialite unit  din fl">好友的社交圈</text>
+  </view>
+  <view class="ch-explain" wx:else >
+    <text class="ce-buyer din fl">好友昵称</text>
+    <text class="ce-buyer unit din fl">好友的买主圈</text>
+  </view>
+  <view class="bottom-wire"></view>
+</view>
+<view class="diamond-list" wx:if="{{tab == 1}}">
+  <view class="diamond-li" >
+    <image class="image din fl" src="" />
+    <text class="dl-name din fl" >一片云彩一片云彩</text>
+    <text class="dl-diamond din fl" >20</text>
+    <text class="dl-socialite din fl" >40</text>
+  </view>
+</view>
+<view class="diamond-list" wx:else>
+  <view class="diamond-li" >
+    <image class="image din fl" src="" />
+    <text class="dl-buyer-name din fl" >一片云彩一片云彩</text>
+    <text class="dl-buyer-num din fl" >40</text>
+  </view>
+</view>

@@ -1,37 +1,69 @@
 // pages/boss/case/case.js
+const app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        i: 0
+        i: 0,
+        detailList:[],
+        imgHost:"",
+        page:1,
+        pageNum:10,
+        reach:true
     },
-
+    getCaseDetail:function(i){
+        let that = this
+        app.wxrequest({
+            url:"user/getshopbalance",
+            data: {
+                stype:parseInt(i)
+            },
+            nocon:false,
+            success(res){
+                if (res.data.length < 10){
+                    that.setData({
+                        reach:false
+                    })
+                }
+                if (res.data.length > 0) {
+                    let detailList = that.data.detailList
+                    detailList.push(res.data)
+                    console.log(detailList)
+                    console.log(res.data)
+                    that.setData({
+                        detailList:detailList,
+                        page:that.data.page + 1
+                    })
+                }
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
         this.setData({
+            imgHost:app.globalData.host.imgHost
+        })
+        this.setData({
             i: options.i
         })
         if (options.i == 1){
             wx.setNavigationBarTitle({
-              title: '商票总额'
+              title: '已使用商票明细'
             })
         } else if (options.i == 2){
             wx.setNavigationBarTitle({
-                title:"商票余额"
+                title:"待入账商票明细"
             })
         } else if (options.i == 3){
             wx.setNavigationBarTitle({
-              title: '未结算商票'
-            })
-        } else if (options.i == 4){
-            wx.setNavigationBarTitle({
-                title:"已使用商票"
+              title: '商票余额明细'
             })
         }
+        this.getCaseDetail(options.i)
     },
 
     /**
@@ -73,7 +105,8 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-
+        // if (!this.data.reach) return;
+        // this.getCaseDetail(this.data.i)
     },
 
     /**

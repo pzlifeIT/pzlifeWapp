@@ -4,55 +4,34 @@
     <view class="top-left {{num == 2 ? 'active' : ''}}" bindtap="clickSelect" data-num="2">会员圈消费</view>
     <i class="line"><s></s></i>
 </view>
-<view class="title">收益明细</view>
-<view class="list">
-    <view class="list-one">
+<view class="title" wx:if="{{eranList.length > 0}}">收益明细</view>
+<view class="list" wx:for="{{eranList}}" wx:if="{{eranList.length > 0}}">
+    <view class="list-one" wx:for="{{item}}">
         <view class="touxiang">
-            <image src=""></image>
+            <image src="item.avatar"></image>
         </view>
         <view class="one-info">
-            <view class="one-title">我是一束阳光
-                <text>2019-02-13</text>
+            <view class="one-title">{{item.nick_name}}
+                <text>{{item.create_time}}</text>
             </view>
-            <view class="order">订单号:
-                <text>123456789244515</text>
+            <view class="shouyi" wx:if="{{num == 1}}">订单收益:
+                <text>{{item.result_price}}</text>
             </view>
-            <view class="shouyi">获得收益:
-                <text>9.00</text>
+            <view class="shouyi" wx:if="{{num == 2}}">合伙人赚取:
+                <text>{{item.result_price}}</text>
             </view>
-        </view>
-    </view>
-    <view class="list-one">
-        <view class="touxiang">
-            <image src=""></image>
-        </view>
-        <view class="one-info">
-            <view class="one-title">我是一束阳光
-                <text>2019-02-13</text>
-            </view>
-            <view class="order">订单号:
-                <text>123456789244515</text>
-            </view>
-            <view class="shouyi">获得收益:
-                <text>9.00</text>
-            </view>
-        </view>
-    </view>
-    <view class="list-one">
-        <view class="touxiang">
-            <image src=""></image>
-        </view>
-        <view class="one-info">
-            <view class="one-title">我是一束阳光
-                <text>2019-02-13</text>
-            </view>
-            <view class="order">订单号:
-                <text>123456789244515</text>
-            </view>
-            <view class="shouyi">获得收益:
-                <text>9.00</text>
-            </view>
-        </view>
-    </view>
 
+            <navigator url="/pages/order/orderDetail/orderDetail?orderno={{item.order_on}}">
+            <view class="order" wx:if="{{num == 1}}" >订单号:
+                <text>{{item.order_on}}</text>
+            </view>
+            </navigator>
+        </view>
+    </view>
+</view>
+<view class="not" wx:if="{{eranList.length <= 0}}">
+    <view class="not-case">
+        <image lazy-load="true" src="{{imgHost}}yhq.png"></image>
+        <view class="text">暂无明细</view>
+    </view>
 </view>

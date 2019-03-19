@@ -165,11 +165,7 @@ Page({
                     // that.getStorage()
             },
             error(res) {
-                if (res == 3000) {
-                    app.toast({
-                        title: "未获取到数据"
-                    })
-                } else if (res == 3001) {
+                if (res == 3001) {
                     app.toast({
                         title: "con_id错误"
                     })

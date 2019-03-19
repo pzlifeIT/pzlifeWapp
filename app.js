@@ -11,8 +11,9 @@ App({
     globalData: {
         userInfo: {},
         con_id: '',
+        addressId: '',
         pid: '',
-        host: {}
+        host: {},
     },
     getconid: function() {
         let that = this
@@ -24,7 +25,6 @@ App({
             }
         });
         this.getUserInfo()
-        this.setCartNum()
     },
     setconid: function(conid) {
         wx.setStorage({
@@ -33,7 +33,6 @@ App({
         })
         this.globalData.con_id = conid
         this.getUserInfo()
-        this.setCartNum()
     },
     toast: function(data) {
         wx.showToast({
@@ -52,7 +51,6 @@ App({
         } else {
             path = data.path + '&pid=' + this.globalData.userInfo.uid || ''
         }
-        console.log(path)
         let sharejson = {
             title: data.title || '品质生活广场',
             path: path,
@@ -76,6 +74,7 @@ App({
             nologin: true,
             success(res) {
                 that.globalData.userInfo = res.data
+                console.log(that.globalData.userInfo)
             }
         })
     },
@@ -104,7 +103,6 @@ App({
             nologin: true,
             success: function(res) {
                 let n = res.total
-                console.log(n)
                 if (n == 0) {
                     wx.removeTabBarBadge({
                         index: 2
@@ -112,7 +110,7 @@ App({
                 } else {
                     wx.setTabBarBadge({
                         index: 2,
-                        text: n.toString() || ''
+                        text: n.toString()
                     })
                 }
             }

@@ -23,3 +23,8 @@
 .fr {
     float: right;
 }
+
+.wid {
+    display: block;
+    width: 100%;
+}

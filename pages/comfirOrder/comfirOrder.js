@@ -103,7 +103,7 @@ Page({
         });
         this.setData({
             skus: options.skus,
-            siteid: options.siteid || '',
+            siteid: app.globalData.addressId,
             num: options.num || 1,
             quick: options.quick || 0
         })
@@ -131,7 +131,6 @@ Page({
                         order_no: res.order_no
                     })
                 }
-
             },
             error: function(code) {
                 switch (parseInt(code)) {
@@ -427,7 +426,10 @@ Page({
         } else {
             this.createsettlement()
         }
-
+        this.setData({
+            siteid: app.globalData.addressId
+        })
+        console.log(app.globalData.addressId)
         if (!this.data.siteid) return
         this.getUserAddress({
             address_id: this.data.siteid

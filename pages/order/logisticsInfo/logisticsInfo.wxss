@@ -11,7 +11,7 @@ page{
 }
 .address-info .info-text{
 	font-size: 28rpx;
-	color: #888888;
+	color: #888;
 }
 .address-info .info-name-phone{
 	font-size: 28rpx;
@@ -19,7 +19,7 @@ page{
 }
 .address-detail .detail-text{
 	font-size: 28rpx;
-	color: #888888;
+	color: #888;
 }
 .address-detail .detail-info{
 	font-size: 28rpx;
@@ -37,7 +37,8 @@ page{
 
 .new-text{
 	width: 555rpx;
-	position: relative;
+  position: relative;
+  float: left;
 }
 .status{
 	width: 50rpx;
@@ -84,14 +85,18 @@ page{
 .status-text{
 	width: 555rpx;
 	float: left;
-	/* position: relative; */
+  /* position: relative; */
+  color: #888;
+  font-size: 28rpx;
 	margin-bottom: 50rpx;
 }
-.shou{
+.shou,
+.dian,
+.faa{
 	position: relative;
 }
-.dian{
-	position: relative;
+.first{
+  color: #404040;
 }
 .dian::before{
 	content: "";
@@ -99,38 +104,25 @@ page{
 	height: 32rpx;
 	border-radius:50% ;
 	background: #404040;
-	/* margin-right: 31rpx; */
 	display: inline-block;
 	position: absolute;
 	top: 30%;
 	left: 10rpx;
 }
-.faa{
-	position: relative;
+
+.faa::before{
+  content: "发";
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #fff;
+  left: 0;
 }
-.new-text .faa::before{
-	content: "发";
-	text-align: center;
-	line-height: 50rpx;
-	color: #fff;
-	width: 50rpx;
-	height: 50rpx;
-	border-radius: 50%;
-	background: #E61F18;
-	/* margin-right: 21rpx; */
-	display: inline-block;
-	position: absolute;
-	left: 0;
-	top: 30%;
+.first::before{
+  background-color: #e61f18;
 }
-/* .hidden{
-	width: 29rpx;
-	height: 50rpx;
-	/* float: left; 
-	display: inline-block;
-} */
 .text-model{
-	/* float: left; */
 	margin-left: 70rpx;
 	display: inline-block;
 }
@@ -138,25 +130,16 @@ page{
 	color: #E61F18;
 	font-size: 28rpx;
 }
-.new{
-	font-size: 28rpx;
-	color: #404040;
-}
-.old{
-	font-size: 28rpx;
-	color: #888888;
-}
-.new-text{
-	float: left;
-}
+
 .exp-time{
 	display: block;
 }
 .line{
-	height: 73%;
+	height: 80%;
 	background: #B6B6B6;
 	border: 1rpx solid #B6B6B6;
 	position: absolute;
 	left: 25rpx;
 	top: 10%;
 }
+

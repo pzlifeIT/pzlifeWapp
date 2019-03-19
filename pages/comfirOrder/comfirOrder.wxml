@@ -53,8 +53,8 @@
   <view class='total'><text class='total_text'>总计金额：</text><text class='total_price'>￥{{stat.total_price}}</text></view>
 	<navigator hover-class="none" open-type="navigateBack" delta="1">
   <view class='back'>
-    <image lazy-load="true" src='{{imgHost}}che.png'></image>
-    <text>返回购物车</text>
+    <image lazy-load="true" src='{{imgHost}}back_jt_03.png'></image>
+    <text>返回上一页</text>
   </view>
 	</navigator>
   <view class='pay' bindtap="showaddres" >去付款</view>

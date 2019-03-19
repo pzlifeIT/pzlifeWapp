@@ -173,6 +173,7 @@ Page({
     },
     onShow: function() {
         this.getIndex()
+        app.setCartNum()
     },
     /**
      * 用户点击右上角分享

@@ -103,3 +103,27 @@ page{
 .active{
     color: #E61F18;
 }
+.not{
+    width: 750rpx;
+    height: 70%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.not-case{
+    width: 199rpx;
+    overflow: hidden;
+}
+.not image{
+    width: 199rpx;
+    height: 138rpx;
+    margin-bottom: 29rpx;
+}
+.not .text{
+    width: 199rpx;
+    overflow: hidden;
+    text-align: center;
+    color: #D6D6D6;
+    font-size: 28rpx;
+}

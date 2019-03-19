@@ -24,22 +24,22 @@
 		商票
 	</view>
 	<view class="case-info">
-		<view class="case-total" catchtap="case" data-i="1">
+		<view class="case-total">
 			<view class="total-text">商票总额<text>(元)</text>
 				<image lazy-load="true" catchtap="pop" data-type="1" src="{{imgHost}}wh_03.png"></image>
 			</view>
 			<view class="total-price">{{boss.balance_all}}</view>
 		</view>
 		<view class="three-div">
-			<view class="one-div oneone" bindtap="case" data-i="2">
+			<view class="one-div oneone" bindtap="case" data-i="3">
 				<view class="total-div">商票余额<text>(元)</text></view>
 				<view class="total-div">{{boss.balance}}</view>
 			</view>
-			<view class="one-div two" bindtap="case" data-i="3">
-				<view class="total-div">未结算商票<text>(元)</text></view>
+			<view class="one-div two" bindtap="case" data-i="2">
+				<view class="total-div">待入账商票<text>(元)</text></view>
 				<view class="total-div">{{boss.balance_not_settlement}}</view>
 			</view>
-			<view class="one-div three" bindtap="case" data-i="4">
+			<view class="one-div three" bindtap="case" data-i="1">
 				<view class="total-div">已使用商票<text>(元)</text></view>
 				<view class="total-div">{{boss.balance_use}}</view>
 			</view>
@@ -52,16 +52,16 @@
 		经营性收益
 	</view>
 	<view class="case-info">
-		<view class="case-total" catchtap="earning" data-earn="1">
+		<view class="case-total">
 			<view class="total-text">经营性收益总额<text>(元)</text><image  catchtap="pop" data-type="2" lazy-load="true" src="{{imgHost}}wh_03.png"></image></view>
 			<view class="total-price">{{boss.bonus}}</view>
 		</view>
 		<view class="three-div">
-			<view class="one-two-div two-one"  catchtap="earning" data-earn="2">
+			<view class="one-two-div two-one"  catchtap="earning" data-earn="1">
 				<view class="total-div">上月收益<text>(元)</text></view>
 				<view class="total-div">{{boss.prebonus}}</view>
 			</view>
-			<view class="one-two-div two-two"  catchtap="earning" data-earn="3">
+			<view class="one-two-div two-two"  catchtap="earning" data-earn="2">
 				<view class="total-div">本月收益<text>(元)</text></view>
 				<view class="total-div">{{boss.tobonus}}</view>
 			</view>

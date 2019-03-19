@@ -23,7 +23,7 @@
 					<text class='cate_title'>{{item.subject}}</text>
 					<view class="line"></view>
 				</view>
-				<navigator url='goods/goods?sub_id={{item.id}}' wx:for="{{item._child}}" hover-class="none">
+				<navigator url='goods/goods?sub_id={{item.id}}&sub_name={{item.subject}}' wx:for="{{item._child}}" hover-class="none">
 					<view class='cate_three'>
 						<image lazy-load="true" class='cate_banner' src='{{item.goods_subject_image}}'></image>
 						<text class='cate_three_title'>{{item.subject}}</text>
