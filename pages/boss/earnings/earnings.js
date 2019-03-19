@@ -11,7 +11,8 @@ Page({
         pageNum:10,
         reach:true,
         eranList:[],
-        imgHost:''
+        imgHost:'',
+        huiyuan:[]
     },
 
     /**
@@ -58,7 +59,10 @@ Page({
             month = this.data.month,
             year = this.data.year
         this.setData({
-            num: num
+            num: num,
+            huiyuan:[],
+            eranList:[],
+            page:1
         });
         this.getEarnings(month,year,num)
     },
@@ -81,21 +85,23 @@ Page({
                     })
                 }
                 if (res.data.length > 0){
-                    let earnList = that.data.eranList
-                    earnList.push(res.data)
+                    let earnList = that.data.eranList,
+                        huiyuan = that.data.huiyuan
+                    if (num == 1){
+                        earnList.push(res.data)
+                    } else if (num == 2){
+                        huiyuan.push(res.data)
+                    }
+
                     that.setData({
                         eranList:earnList,
+                        huiyuan:huiyuan,
                         page:that.data.page + 1
                     })
                 }
 
             }
         })
-    },
-    goOrder:function(){
-      wx.navigateTo({
-          url:""
-      })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

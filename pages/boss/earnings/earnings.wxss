@@ -63,11 +63,17 @@ page{
 .order text,.shouyi text{
     color: #202020;
 }
+.order image{
+    width: 14rpx;
+    height: 24rpx;
+    margin-left: 10rpx;
+}
 .top{
     width: 750rpx;
     height: 80rpx;
     background: #FFFFFF;
-    position: relative;
+    position: fixed;
+    top: 0;
 }
 .top-left{
     width: 50%;

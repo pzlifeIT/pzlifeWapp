@@ -59,13 +59,13 @@ Page({
                 title:"经营性收益",
                 content:"个人购物的可分配利润的75%+普通会员可分配利润的75%+钻石会员可分配利润的15%+合伙人月经营性收益总额的15%"
             })
-        } else if (poptype == 3){
+        } else if (poptype == 4){
             this.setData({
                 popYongjin:true,
                 title:"佣金收益",
                 content:"经营收益总额+招商代理收益"
             })
-        } else if (poptype == 4){
+        } else if (poptype == 3){
             this.setData({
                 popJoin:true,
                 title:"招商代理收益",
