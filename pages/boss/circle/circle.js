@@ -7,7 +7,12 @@ Page({
     data: {
         tab: 1
     },
-
+    select:function(e){
+        let tab = e.currentTarget.dataset.tab
+        this.setData({
+            tab:tab
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

@@ -16,8 +16,8 @@
     </view>
   </view>
   <view class="ch-nav">
-    <view class="ch-nav-btn {{tab == 1?'active':''}}"  >钻石会员圈</view>
-    <view class="ch-nav-btn {{tab == 2?'active':''}}"  >买主圈</view>
+    <view class="ch-nav-btn {{tab == 1?'active':''}}" bindtap="select" data-tab="1">钻石会员圈</view>
+    <view class="ch-nav-btn {{tab == 2?'active':''}}" bindtap="select" data-tab="2" >买主圈</view>
     <i class="wire"><s></s></i>
   </view>
   <view class="ch-explain" wx:if="{{tab == 1}}">

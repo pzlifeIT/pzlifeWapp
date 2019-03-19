@@ -13,7 +13,6 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
-
 	"appid": "wxa8c604ce63485956",
 	"projectname": "pzlifeWapp",
 	"debugOptions": {
@@ -38,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 31,
+			"current": 39,
 			"list": [
 				{
 					"id": 0,
@@ -64,8 +63,8 @@
 					"pathName": "pages/order/order",
 					"query": "",
 					"scene": null
-        },
-        {
+				},
+				{
 					"id": -1,
 					"name": "orderDetail",
 					"pathName": "pages/order/orderDetail/orderDetail",
@@ -299,6 +298,13 @@
 					"id": -1,
 					"name": "会员",
 					"pathName": "pages/boss/earnings/earnings",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shejiao",
+					"pathName": "pages/boss/circle/circle",
 					"query": "",
 					"scene": null
 				}
