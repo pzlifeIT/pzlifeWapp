@@ -62,7 +62,8 @@ Page({
             num: num,
             huiyuan:[],
             eranList:[],
-            page:1
+            page:1,
+            reach:true
         });
         this.getEarnings(month,year,num)
     },
