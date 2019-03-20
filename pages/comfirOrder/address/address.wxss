@@ -1,8 +1,24 @@
 /* pages/comfirOrder/address/address.wxss */
 
+page {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
 .ad-image {
     width: 750rpx;
     height: 6rpx;
+}
+
+.ad-box {
+    margin-bottom: 90rpx;
+    overflow: auto;
+}
+
+.ad-box-bottom {
+    width: 100%;
+    height: 90rpx;
 }
 
 .ad-list {
