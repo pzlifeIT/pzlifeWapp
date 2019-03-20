@@ -20,7 +20,8 @@ Page({
             tab:tab,
             page:1,
             socialList:[],
-            maizhu:[]
+            maizhu:[],
+            reach:true
         })
         console.log(this.data.page)
         this.getusersocial()

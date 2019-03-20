@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/boss.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/boss.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/boss.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/boss.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/boss.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/boss.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/case/case.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/case/case.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/boss/circle/circle.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/circle/circle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/circle/circle.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/circle/circle.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/boss/circle/circle.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/circle/circle.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/boss/earnings/earnings.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/earnings/earnings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/join/join.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/join/join.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/join/join.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/join/join.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/join/join.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/join/join.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/join/join.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/join/join.wxss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,14 +32,14 @@
         <counts>
           <entry key="js" value="70" />
           <entry key="json" value="3" />
-          <entry key="wxml" value="54" />
-          <entry key="wxss" value="34" />
+          <entry key="wxml" value="55" />
+          <entry key="wxss" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="34" />
-          <entry key="HTML" value="53" />
+          <entry key="CSS" value="36" />
+          <entry key="HTML" value="54" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="70" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -59,153 +47,121 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="8827" />
+          <entry key="js" value="8851" />
           <entry key="json" value="13" />
           <entry key="wxml" value="5259" />
-          <entry key="wxss" value="4765" />
+          <entry key="wxss" value="4783" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4765" />
+          <entry key="CSS" value="4783" />
           <entry key="HTML" value="5259" />
           <entry key="JSON" value="13" />
-          <entry key="JavaScript" value="8827" />
+          <entry key="JavaScript" value="8851" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.55854243">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/earnings/earnings.wxss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="546">
-                  <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/boss.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="728">
-                  <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/join/join.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/circle/circle.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="35" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pages/boss/earnings/earnings.wxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="416">
-                  <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/boss.wxss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7124">
-                  <caret line="274" column="13" selection-start-line="274" selection-start-column="13" selection-end-line="274" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#116#10511#2" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/circle/circle.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-598">
-                  <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/join/join.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/join/join.wxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/case/case.wxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="9" column="65" lean-forward="true" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/category/goods/goods.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="818">
-                  <caret line="86" column="7" selection-start-line="86" selection-start-column="7" selection-end-line="86" selection-end-column="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pages/boss/earnings/earnings.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="572">
-                  <caret line="76" column="41" lean-forward="true" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/circle/circle.wxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="494">
-                  <caret line="40" column="15" lean-forward="true" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/boss/boss.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="607">
+              <caret line="144" column="11" selection-start-line="144" selection-start-column="11" selection-end-line="144" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/boss/earnings/earnings.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/boss/boss.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="728">
+              <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/boss/earnings/earnings.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="728">
+              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/boss/boss.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7124">
+              <caret line="274" column="13" selection-start-line="274" selection-start-column="13" selection-end-line="274" selection-end-column="13" />
+              <folding>
+                <element signature="e#116#10511#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/boss/circle/circle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/boss/circle/circle.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="114" column="23" lean-forward="true" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
+              <folding>
+                <element signature="e#2538#6407#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/boss/join/join.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="58" column="6" lean-forward="true" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/boss/join/join.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/boss/case/case.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="9" column="65" lean-forward="true" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -270,7 +226,6 @@
         <option value="$PROJECT_DIR$/pages/boss/case/case.wxss" />
         <option value="$PROJECT_DIR$/pages/category/goods/goods.js" />
         <option value="$PROJECT_DIR$/pages/boss/case/case.js" />
-        <option value="$PROJECT_DIR$/pages/boss/circle/circle.wxss" />
         <option value="$PROJECT_DIR$/pages/boss/boss.wxss" />
         <option value="$PROJECT_DIR$/pages/boss/join/join.js" />
         <option value="$PROJECT_DIR$/pages/boss/join/join.wxss" />
@@ -279,11 +234,12 @@
         <option value="$PROJECT_DIR$/pages/boss/case/case.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/boss.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/circle/circle.wxml" />
-        <option value="$PROJECT_DIR$/pages/boss/circle/circle.js" />
         <option value="$PROJECT_DIR$/pages/boss/earnings/earnings.wxss" />
         <option value="$PROJECT_DIR$/pages/boss/boss.js" />
-        <option value="$PROJECT_DIR$/pages/boss/earnings/earnings.js" />
         <option value="$PROJECT_DIR$/pages/boss/earnings/earnings.wxml" />
+        <option value="$PROJECT_DIR$/pages/boss/circle/circle.js" />
+        <option value="$PROJECT_DIR$/pages/boss/earnings/earnings.js" />
+        <option value="$PROJECT_DIR$/pages/boss/circle/circle.wxss" />
       </list>
     </option>
   </component>
@@ -442,12 +398,12 @@
       <workItem from="1552272812181" duration="8890000" />
       <workItem from="1552286298236" duration="107589000" />
       <workItem from="1552873393646" duration="34876000" />
-      <workItem from="1552989150439" duration="3099000" />
+      <workItem from="1552989150439" duration="5422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157126000" />
+    <option name="totallyTimeSpent" value="159449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -720,20 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/circle/circle.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="172" column="31" selection-start-line="172" selection-start-column="31" selection-end-line="172" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/boss.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3744">
-          <caret line="144" column="11" selection-start-line="144" selection-start-column="11" selection-end-line="144" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/boss/join/join.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="832">
@@ -762,13 +704,6 @@
           <folding>
             <element signature="e#116#10511#2" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/join/join.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -807,17 +742,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/circle/circle.js">
+    <entry file="file://$PROJECT_DIR$/pages/boss/earnings/earnings.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-598">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        <state relative-caret-position="728">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/earnings/earnings.wxml">
+    <entry file="file://$PROJECT_DIR$/pages/boss/join/join.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        <state relative-caret-position="572">
+          <caret line="58" column="6" lean-forward="true" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/boss/boss.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="144" column="11" selection-start-line="144" selection-start-column="11" selection-end-line="144" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/boss/earnings/earnings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="61" column="21" lean-forward="true" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -828,10 +777,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/earnings/earnings.js">
+    <entry file="file://$PROJECT_DIR$/pages/boss/circle/circle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="76" column="41" lean-forward="true" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+        <state relative-caret-position="624">
+          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/boss/circle/circle.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="114" column="23" lean-forward="true" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
+          <folding>
+            <element signature="e#2538#6407#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
