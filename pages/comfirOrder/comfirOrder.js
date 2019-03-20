@@ -406,7 +406,11 @@ Page({
                 }
                 that.setData({
                     datalist: res.supplier_list,
-                    stat: stat
+                    stat: stat,
+                    siteid: res.default_address_id
+                })
+                that.getUserAddress({
+                    address_id: res.default_address_id
                 })
             },
             error: function(code) {
