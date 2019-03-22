@@ -5,7 +5,8 @@ App({
         // 展示本地存储能力
         //本地缓存
         let that = this
-        that.globalData.con_id = wx.getStorageSync('con_id') || ''
+            // that.globalData.con_id = wx.getStorageSync('con_id') || ''
+        that.globalData.con_id = '55555'
         that.globalData.host = config
     },
     globalData: {
@@ -175,6 +176,7 @@ App({
                 'content-type': 'application/json' // 默认值
             },
             success(res) {
+                console.log(res)
                 wx.hideLoading()
                 if (res.statusCode == 200) {
                     console.log(res);

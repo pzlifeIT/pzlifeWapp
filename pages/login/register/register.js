@@ -164,7 +164,9 @@ Page({
                 }
             },
             error(res) {
-                if (res == 3001) {
+                if (res == 3000) {
+                    app.toast({ title: '微信授权失败' })
+                } else if (res == 3001) {
                     app.toast({ title: '手机格式有误' })
                 } else if (res == 3002) {
                     app.toast({ title: '用户未授权,无法注册' })
@@ -178,6 +180,8 @@ Page({
                     app.toast({ title: '注册失败' })
                 } else if (res == 3008) {
                     app.toast({ title: '手机号已被注册' })
+                } else {
+                    app.toast({ title: '意料之外的错误' })
                 }
             },
             fail(res) {

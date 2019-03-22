@@ -13,8 +13,8 @@ Page({
         getcode: "获取验证码",
         disabled: false,
         imgHost: '',
-        share_id:"",
-        a:""
+        share_id: "",
+        a: ""
     },
     /**
      * 获取输入的值
@@ -139,13 +139,16 @@ Page({
                     })
                 } else {
                     wx.reLaunch({
-                        url: "/" + prevpage.route+"?share_id="+share_id
+                        url: "/" + prevpage.route + "?share_id=" + share_id
 
                     })
                 }
             },
             error(code) {
                 switch (parseInt(code)) {
+                    case 3000:
+                        app.toast({ title: '微信授权失败' })
+                        break;
                     case 3001:
                         app.toast({ title: '手机格式有误' })
                         break;
@@ -181,14 +184,14 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
-        if (options.share_id){
+        if (options.share_id) {
             this.setData({
-                share_id:options.share_id
+                share_id: options.share_id
             })
         }
-        if (options.a){
+        if (options.a) {
             this.setData({
-                a:options.a
+                a: options.a
             })
         }
     },
