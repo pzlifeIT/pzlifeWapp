@@ -100,14 +100,14 @@ page {
 .history-one {
 	height: 48rpx;
 	overflow: hidden;
-	background: #F7F7F7;
+	background: #FFFFFF;
 	text-align: center;
 	line-height: 48rpx;
 	color: #404040;
 	font-size: 28rpx;
 	margin: 0 15rpx 30rpx 15rpx;
 	float: left;
-
+	border-radius: 10rpx;
 }
 
 .text {
@@ -162,6 +162,7 @@ page {
 }
 
 .one_goods .subtitle {
+	height: 32rpx;
 	font-size: 24rpx;
 	color: rgb(182, 182, 182);
 	margin: 5rpx 0 5rpx 20rpx;

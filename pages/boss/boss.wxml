@@ -38,12 +38,7 @@
                 </view>
                 <view class="total-div">{{boss.balance}}</view>
             </view>
-            <view class="one-div two" bindtap="case" data-i="2">
-                <view class="total-div">待入账商票
-                    <text>(元)</text>
-                </view>
-                <view class="total-div">{{boss.balance_not_settlement}}</view>
-            </view>
+            <view class="case-line"></view>
             <view class="one-div three" bindtap="case" data-i="1">
                 <view class="total-div">已使用商票
                     <text>(元)</text>
@@ -53,57 +48,66 @@
         </view>
     </view>
 </view>
+
+<view class="inter">
+    <view class="case-title">
+        <view class="shu"></view>
+        积分
+        <!---->
+        <view class="inter-num" bindtap="goInte">
+            {{boss.integral}}
+            <image lazy-load="true" class="jt" src="{{imgHost}}jt_18.png"></image>
+        </view>
+    </view>
+</view>
+
 <view class="case">
     <view class="case-title">
         <view class="shu"></view>
         经营性收益
     </view>
     <view class="case-info">
-        <view class="case-total">
+        <view class="case-total" catchtap="earning" data-earn="1" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
             <view class="total-text">经营性收益总额
                 <text>(元)</text>
-                <image catchtap="pop" data-type="2" lazy-load="true" src="{{imgHost}}wh_03.png"></image>
+                <image  catchtap="pop" data-type="2" lazy-load="true" src="{{imgHost}}wh_03.png"></image>
             </view>
-            <view class="total-price">{{boss.bonus}}</view>
+            <view class="total-price">{{boss.bonus_all}}</view>
         </view>
         <view class="three-div">
-            <view class="one-two-div two-one" catchtap="earning" data-earn="1">
-                <view class="total-div">上月收益
+            <view class="one-div oneone" catchtap="earning" data-earn="1" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
+                <view class="total-div">已入账
                     <text>(元)</text>
                 </view>
-                <view class="total-div">{{boss.prebonus}}</view>
+                <view class="total-div">{{boss.bonus}}</view>
             </view>
-            <view class="one-two-div two-two" catchtap="earning" data-earn="2">
-                <view class="total-div">本月收益
+            <view class="case-line"></view>
+            <view class="one-div three" catchtap="earning" data-earn="2" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
+                <view class="total-div">待入帐
                     <text>(元)</text>
                 </view>
-                <view class="total-div">{{boss.tobonus}}</view>
+                <view class="total-div">{{boss.no_bonus}}</view>
             </view>
         </view>
     </view>
 </view>
 
-<view class="jf">
-    <view class="left">
-        <view class="jifen">积分</view>
-        <view class="jf-num">{{boss.integral}}</view>
-    </view>
-    <view class="mid"></view>
-    <view class="left" bindtap="join">
-        <view class="earnings">招商代理收益
-            <text>(元)</text>
-            <image class="earnings-img" catchtap="pop" data-type="3" lazy-load="true"
-                   src="{{imgHost}}wh_03.png"></image>
-        </view>
-        <view class="renshu">
-            <text>{{boss.merchants}}</text>
+<view class="inter">
+    <view class="case-title">
+        <view class="shu"></view>
+        招商代理收益
+        <image class="wenhao" catchtap="pop" data-type="3" lazy-load="true" src="{{imgHost}}wh_03.png"></image>
+        <view class="inter-num" bindtap="join">
+            {{boss.merchants}}
+            <image lazy-load="true" class="jt" src="{{imgHost}}jt_18.png"></image>
         </view>
     </view>
 </view>
+
 
 <view class="case">
     <view class="case-info">
-        <view class="case-total commission">
+        <view class="case-total commission" bindtap="gocommiss">
             <view class="total-text">佣金总额
                 <text>(元)</text>
                 <image catchtap="pop" data-type="4" lazy-load="true" src="{{imgHost}}wh_03.png"></image>
@@ -139,7 +143,7 @@
     <navigator class="one icon-after" url="/pages/boss/circle/circle">
     <!-- <view class="one icon-after"> -->
             <image lazy-load="true" src="{{imgHost}}dpgl_17.png"></image>
-            <view class="icon-text">社交圈</view>
+            <view class="icon-text">买主圈</view>
     <!-- </view> -->
     </navigator>
     <!--<view class="one icon-after">-->

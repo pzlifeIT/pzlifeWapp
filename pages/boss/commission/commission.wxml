@@ -1,0 +1,134 @@
+<!--pages/boss/earnings/earnings.wxml-->
+<view class="circle-header">
+    <view class="ch-statistics">
+        <view class="ch-total">
+            <text class="ct-text db unit">佣金总额</text>
+            <text class="ct-num db">{{info.commission}}</text>
+        </view>
+        <view class="ch-half ch-left {{div == 1 ?'selected':''}}" bindtap="clickDiv" data-div="1">
+            <text class="db ch-name unit">经营性收益</text>
+            <text class="db ch-num">{{info.bonus_all}}</text>
+        </view>
+        <view class="ch-half ch-right {{div == 2 ?'selected':''}}" bindtap="clickDiv" data-div="2">
+            <text class="db ch-name unit">招商代理收益</text>
+            <text class="db ch-num">{{info.merchants}}</text>
+        </view>
+    </view>
+    <view class="bottom-wire"></view>
+</view>
+<view class="top" wx:if="{{div == 1}}">
+    <view class="top-left {{num == 1 ? 'active':''}}" bindtap="clickSelect" data-num="1">个人消费收益</view>
+    <view class="top-left {{num == 2 ? 'active' : ''}}" bindtap="clickSelect" data-num="2">会员消费收益</view>
+    <view class="top-left {{num == 3 ? 'active' : ''}}" bindtap="clickSelect" data-num="3">渠道收益</view>
+    <i class="line"><s></s></i>
+</view>
+<view class="redHint" wx:if="{{div == 1}}">
+    <view class="redText" wx:if="{{num == 1 && eranList > 0}}">
+        <view class="red-left" >个人消费收益已入账合计</view>
+        <view class="red-right">1000 元</view>
+    </view>
+    <view class="redText" wx:if="{{num == 2 && eranList > 0}}">
+        <view class="red-left">会员消费收益已入账合计</view>
+        <view class="red-right">1000 元</view>
+    </view>
+    <view class="redText" wx:if="{{num == 3 && eranList > 0}}">
+        <view class="red-left">渠道收益已入账合计</view>
+        <view class="red-right">1000 元</view>
+    </view>
+</view>
+<view class="list " wx:if="{{num == 1 && div == 1}}">
+    <block wx:for="{{eranList}}">
+    <view class="list-one" wx:for="{{item}}">
+        <view class="touxiang">
+            <image src="{{item.avatar}}"></image>
+        </view>
+        <view class="one-info">
+            <view class="shouyi">订单收益
+                <text class="order-money {{div == 2 ? 'drz-money':''}}">+{{item.result_price}} 元</text>
+            </view>
+            <view class="one-title">{{item.nick_name}}
+                <text>{{item.create_time}}</text>
+            </view>
+            <navigator url="/pages/order/orderDetail/orderDetail?orderno={{item.order_on}}">
+                <view class="order">订单号:
+                    <text>{{item.order_on}}</text>
+                    <image src="{{imgHost}}jt_18.png"></image>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    </block>
+</view>
+<view class="list" wx:if="{{num == 2 && div == 1}}">
+    <block wx:for="{{huiyuan}}">
+    <view class="list-one" wx:for="{{item}}">
+        <view class="touxiang">
+            <image src="{{item.avatar}}"></image>
+        </view>
+        <view class="one-info">
+            <view class="nickname">
+                <view class="name">{{item.nick_name}}</view>
+                <text class="ident">普通会员</text>
+                <view class="money ">+{{item.result_price}} 元</view>
+            </view>
+            <view class="shijian">{{item.create_time}}</view>
+
+        </view>
+    </view>
+    </block>
+</view>
+<view class="list {{div == 2 ? 'red-d':''}}" wx:if="{{num == 3 && div == 1}}">
+    <block wx:for="{{qudao}}">
+    <view class="list-one" wx:for="{{item}}">
+        <view class="touxiang">
+            <image src="{{item.avatar}}"></image>
+        </view>
+        <view class="one-info">
+            <view class="nickname qudao">
+                <view class="name">{{item.nick_name}}</view>
+                <view class="money ">+{{item.result_price}} 元</view>
+            </view>
+        </view>
+    </view>
+    </block>
+</view>
+<view class="redHint" wx:if="{{div == 2}}"></view>
+<view class="list {{div == 2 ? 'red-d':''}}" wx:if="{{div == 2 && zhaoshang.length > 0}}">\
+    <block wx:for="{{zhaoshang}}">
+    <view class="list-one" wx:for="{{item}}">
+        <view class="touxiang">
+            <image src="{{item.avatar}}"></image>
+        </view>
+        <view class="one-info">
+            <view class="nickname qudao">
+                <view class="name">{{item.nick_name}}</view>
+                <view class="money ">+{{item.money}}元</view>
+            </view>
+        </view>
+    </view>
+    </block>
+</view>
+<view class="not" wx:if="{{huiyuan.length <= 0}}">
+    <view class="not-case">
+        <image lazy-load="true" src="{{imgHost}}yhq.png"></image>
+        <view class="text">暂无明细</view>
+    </view>
+</view>
+<view class="not" wx:if="{{qudao.length <= 0 }}">
+    <view class="not-case">
+        <image lazy-load="true" src="{{imgHost}}yhq.png"></image>
+        <view class="text">暂无明细</view>
+    </view>
+</view>
+<view class="not" wx:if="{{eranList.length <= 0}}">
+    <view class="not-case">
+        <image lazy-load="true" src="{{imgHost}}yhq.png"></image>
+        <view class="text">暂无明细</view>
+    </view>
+</view>
+<view class="not" wx:if="{{zhaoshang.length <= 0}}">
+    <view class="not-case">
+        <image lazy-load="true" src="{{imgHost}}yhq.png"></image>
+        <view class="text">暂无明细</view>
+    </view>
+</view>

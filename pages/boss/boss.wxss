@@ -91,7 +91,7 @@ page{
 	height: auto;
 	background-color: #FFFFFF;
 	overflow: auto;
-	margin-bottom: 20rpx;
+	margin-bottom: 10rpx;
 }
 .shu{
 	width: 4rpx;
@@ -105,6 +105,26 @@ page{
 	margin-left: 20rpx;
 	margin-top: 22rpx;
 }
+.jt{
+	width: 13rpx;
+	height: 24rpx;
+}
+.wenhao{
+	width: 26rpx;
+	height: 26rpx;
+}
+.inter{
+	width: 750rpx;
+	height: 70rpx;
+	background: #FFFFFF;
+	line-height: 70rpx;
+	margin-bottom: 10rpx;
+	box-sizing: border-box;
+	padding-right: 19rpx;
+}
+.inter-num{
+	float: right;
+}
 .case-info{
 	width: 750rpx;
 	overflow: auto;
@@ -112,7 +132,6 @@ page{
 .case-total{
 	width: 750rpx;
 	text-align: center;
-	margin-bottom: 22rpx;
 }
 .total-text{
 	color: #404040;
@@ -138,7 +157,7 @@ page{
 	align-items: center;
 }
 .one-div{
-	width: 237rpx;
+	width: 374rpx;
 	height: 120rpx;
 	display: flex;
 	flex-direction: column;
@@ -146,16 +165,14 @@ page{
 	align-items: center;
 }
 .oneone{
-	background-color: #fff4e7;
-	color: #ec9938;
+	color: #E61F18;
 }
 .two{
 	background-color: #eef6ff;
 	color: #389eec;
 }
 .three{
-	background-color: #fff1e9;
-	color: #dc652a;
+	color: #f99f36;
 }
 .total-div{
 	font-size: 26rpx;
@@ -328,6 +345,10 @@ page{
 	border-top: 2rpx solid #f7f7f7;
 	box-sizing: border-box;
 }
-
+.case-line{
+	width: 1rpx;
+	height: 46rpx;
+	background: #d6d6d6;
+}
 
 

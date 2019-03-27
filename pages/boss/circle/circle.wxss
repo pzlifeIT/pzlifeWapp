@@ -18,7 +18,7 @@ page {
     position: relative;
     height: 260rpx;
     text-align: center;
-    background-color: transparent;
+    background-color: #f99f36;
     overflow: auto;
 }
 
@@ -43,11 +43,31 @@ page {
 
 .ch-half {
     display: inline-block;
-    width: 50%;
+    width: 352rpx;
+    height: 95rpx;
+    background: rgba(255,255,255,0.6);
+    border-radius: 10rpx 10rpx 0 0;
+    color: #666666;
+    position: absolute;
+    bottom: 0;
 }
-
+.selected{
+    height: 110rpx;
+    color: #202020;
+}
+.selected .ch-name{
+    margin-top: 14rpx;
+}
+.ch-left{
+    float: left;
+    left: 20rpx ;
+}
+.ch-right{
+    float: right;
+    right: 20rpx;
+}
 .ch-name {
-    margin-top: 20rpx;
+    margin-top: 7rpx;
     font-size: 28rpx;
 }
 
@@ -208,4 +228,39 @@ page {
     width: 300rpx;
     font-size: 34rpx;
     text-align: center;
+}
+.diamond{
+    margin-top: 494rpx;
+}
+.people-num{
+    width: 750rpx;
+    height: 78rpx;
+    background: #F7F7F7;
+}
+.people-div{
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    line-height: 78rpx;
+    font-size: 28rpx;
+    color: #E61F18;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.people-left{
+    padding-left:18rpx ;
+}
+.people-right{
+    text-align: right;
+    padding-right: 18rpx;
+}
+.people::after{
+    content: "(人)";
+    font-size: 22rpx;
+}
+.footer{
+    margin-top: 336rpx;
+}
+.div-time{
+    width: auto;
 }

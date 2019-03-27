@@ -45,6 +45,16 @@ Page({
             url: "/pages/boss/case/case?i=" + i
         })
     },
+    goInte:function(){
+      wx.navigateTo({
+          url:"/pages/boss/integral/integral"
+      })
+    },
+    gocommiss:function(){
+        wx.navigateTo({
+            url:"/pages/boss/commission/commission"
+        })
+    },
     pop:function(e){
         let poptype = e.currentTarget.dataset.type
         if (poptype == 1){
@@ -90,9 +100,12 @@ Page({
       })
     },
     earning:function(e){
-        let earn = e.currentTarget.dataset.earn
+        let earn = e.currentTarget.dataset.earn,
+            enter = e.currentTarget.dataset.enter,
+            entered = e.currentTarget.dataset.entered,
+            all = e.currentTarget.dataset.all
         wx.navigateTo({
-            url:"/pages/boss/earnings/earnings?earn="+earn
+            url:"/pages/boss/earnings/earnings?earn="+earn+"&all="+all+"&enter="+enter+"&entered="+entered
         })
     },
     commission:function(){

@@ -14,7 +14,8 @@
                 wx:if="{{slider.is_show == 1}}">
             <swiper-item class="pz-swiper" wx:for="{{slider.son}}" wx:key="index">
                 <image lazy-load="true" bindtap="goUrl" data-jump="{{item.jump_type}}"
-                       data-content="{{item.jump_content}}" src="{{item.image_path+'?imageMogr2/thumbnail/790x'}}"></image>
+                       data-content="{{item.jump_content}}"
+                       src="{{item.image_path+'?imageMogr2/thumbnail/790x'}}"></image>
             </swiper-item>
         </swiper>
         <view class="num">{{num}}/{{slider.son.length}}</view>
@@ -23,7 +24,8 @@
     <view class="icon" wx:if="{{icon.is_show == 1}}" style="order: {{icon.model_order}}">
         <view class="icon-line">
             <view class="icon-one" wx:for="{{icon.son}}">
-                <image lazy-load="true" bindtap="goUrl" data-jump="{{item.jump_type}}" data-content="{{item.jump_content}}"
+                <image lazy-load="true" bindtap="goUrl" data-jump="{{item.jump_type}}"
+                       data-content="{{item.jump_content}}"
                        src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
                 <view class="icon-text">{{item.title}}</view>
             </view>
@@ -35,15 +37,18 @@
         <view class="double-div">
             <view class="div-left" wx:for="{{sub.son}}">
                 <image lazy-load="true" bindtap="goUrl" data-jump="{{item.jump_type}}"
-                       data-content="{{item.jump_content}}" src="{{item.image_path+'?imageMogr2/thumbnail/450x'}}"></image>
+                       data-content="{{item.jump_content}}"
+                       src="{{item.image_path+'?imageMogr2/thumbnail/450x'}}"></image>
             </view>
         </view>
     </view>
     <!-- 新品上市 -->
     <view class="newpro" wx:if="{{newGoods.is_show == 1}}" style="order: {{newGoods.model_order}}">
+        <image src=""></image>
         <view class="title">
             <view class="newpro-text">{{newGoods.title}}</view>
-            <view class="new-more" bindtap="goUrl" data-jump="{{newGoods.jump_type}}" data-content="{{newGoods.jump_content}}">
+            <view class="new-more" bindtap="goUrl" data-jump="{{newGoods.jump_type}}"
+                  data-content="{{newGoods.jump_content}}">
                 更多
                 <image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
             </view>
@@ -69,11 +74,13 @@
         </view>
     </view>
     <!-- 每日轮播 -->
-    <view class="date-banner" wx:if="{{oneDay.is_show == 1 }}" style="order: {{oneDay.model_order}}">
-        <image lazy-load="true" bindtap="goUrl" data-jump="{{oneDay.son[0].jump_type}}"
-               data-content="{{oneDay.son[0].jump_content}}"
-               src="{{oneDay.son[0].image_path+'?imageMogr2/thumbnail/710x'}}"></image>
-    </view>
+    <swiper class="oneday" style="order: {{oneDay.model_order}}" autoplay="true" circular="true">
+        <swiper-item class="date-banner" wx:if="{{oneDay.is_show == 1 }}" wx:for="{{oneDay.son}}" >
+            <image lazy-load="true" bindtap="goUrl" data-jump="{{item.jump_type}}"
+                   data-content="{{item.jump_content}}"
+                   src="{{item.image_path+'?imageMogr2/thumbnail/710x'}}"></image>
+        </swiper-item>
+    </swiper>
     <!-- {{oneDay.son[0].image_path+'?imageMogr2/thumbnail/370x'}} -->
     <!--热门商品-->
     <view wx:if="{{hotGoods.is_show == 1 }}" style="order: {{hotGoods.model_order}}">
@@ -108,7 +115,8 @@
     </view>
     <!-- 应季生活推荐 -->
     <view class="life-recommend yinji-recommend" wx:if="{{season.is_show == 1}}" style="order: {{season.model_order}}">
-        <view class="life-title" bindtap="goUrl" data-jump="{{season.jump_type}}" data-content="{{season.jump_content}}">
+        <view class="life-title" bindtap="goUrl" data-jump="{{season.jump_type}}"
+              data-content="{{season.jump_content}}">
             <image lazy-load="true" src="{{season.image_path+'?imageMogr2/thumbnail/750x'}}"></image>
         </view>
         <scroll-view class="life-goods" style="width:100%;" scroll-with-animation bindscroll="movescroll">
@@ -130,7 +138,8 @@
     </view>
     <!-- 时令食品推荐 -->
     <view class="life-recommend" wx:if="{{shiling.is_show == 1}}" style="order: {{shiling.model_order}}">
-        <view class="life-title" bindtap="goUrl" data-jump="{{shiling.jump_type}}" data-content="{{shiling.jump_content}}">
+        <view class="life-title" bindtap="goUrl" data-jump="{{shiling.jump_type}}"
+              data-content="{{shiling.jump_content}}">
             <image lazy-load="true" src="{{shiling.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
         </view>
         <scroll-view class="slsp-recommend" scroll-x="true">
@@ -147,7 +156,8 @@
     <view class="buyer-recommend" wx:if="{{maizhu.is_show == 1}}" style="order: {{maizhu.model_order}}">
         <view class="title">
             <view class="newpro-text">{{maizhu.title}}</view>
-            <view class="new-more" bindtap="goUrl" data-jump="{{maizhu.jump_type}}" data-content="{{maizhu.jump_content}}">
+            <view class="new-more" bindtap="goUrl" data-jump="{{maizhu.jump_type}}"
+                  data-content="{{maizhu.jump_content}}">
                 更多
                 <image lazy-load="true" src="{{maizhu.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
             </view>
@@ -161,7 +171,8 @@
     </view>
     <!-- 安心零食、酒饮、乳品 -->
     <view class="sub_re" style="order: {{sub_goods.model_order}}">
-        <view class="one-div" wx:for="{{sub_goods.son}}" wx:if="{{sub_goods.is_show == 1}}" style="order: {{item.model_order}}">
+        <view class="one-div" wx:for="{{sub_goods.son}}" wx:if="{{sub_goods.is_show == 1}}"
+              style="order: {{item.model_order}}">
             <view class="goods-content">
                 <view class="title">
                     <view class="newpro-text">{{item.title}}</view>

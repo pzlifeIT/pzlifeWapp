@@ -12,69 +12,80 @@ Page({
         reach:true,
         eranList:[],
         imgHost:'',
-        huiyuan:[]
+        huiyuan:[],
+        div:1,
+        qudao:[],
+        total:0
     },
-
+    /**
+     * 选择账单类型
+     * @param e
+     */
+    clickDiv:function(e){
+        let div = parseInt(e.currentTarget.dataset.div)
+        this.setData({
+            div:div,
+            page:1,
+            reach:true,
+            eranList:[],
+            huiyuan:[],
+            qudao:[]
+        })
+        this.getEarnings(div,this.data.num)
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        let date = new Date();
-        let month = parseInt(date.getMonth());
-        let year = parseInt(date.getFullYear())
+        this.setData({
+            entered:options.entered,
+            enter:options.enter,
+            all:options.all
+        })
         if (options.earn == 1) {
             wx.setNavigationBarTitle({
-                title: '上月收益'
+                title: '已入账'
             });
-            let premonth;
-            if(month == 0){//一月
-                year = year - 1;
-                premonth = 12
-            }else {
-                premonth = parseInt(month)
-            }
-            this.setData({
-                month:premonth,
-                year:year
-            });
-            this.getEarnings(premonth, year,1)
+           this.setData({
+               div:parseInt(options.earn)
+           })
         } else if (options.earn == 2) {
             wx.setNavigationBarTitle({
-                title: '本月收益'
+                title: '待入账'
             });
-            let premonth = parseInt(month) + 1
             this.setData({
-                month:premonth,
-                year:year
-            });
-            this.getEarnings(premonth, year,1)
+                div:parseInt(options.earn)
+            })
         }
+        this.getEarnings(parseInt(options.earn),1)
         this.setData({
             imgHost:app.globalData.host.imgHost
         })
     },
-    //在每一年的一月,查询上一个月的明细,也就是前一年的12月
+    /**
+     * 选择消费类型
+     * @param e
+     */
     clickSelect: function (e) {
         let num = parseInt(e.currentTarget.dataset.num),
-            month = this.data.month,
-            year = this.data.year
+            status = this.data.div;
         this.setData({
             num: num,
             huiyuan:[],
             eranList:[],
             page:1,
-            reach:true
+            reach:true,
+            qudao:[]
         });
-        this.getEarnings(month,year,num)
+        this.getEarnings(status,num)
     },
-    getEarnings: function (month, year,num) {
+    getEarnings: function (status,stype) {
         let that = this
         app.wxrequest({
             url: "user/getuserbonus",
             data: {
-                year: year,
-                month: month,
-                stype:num,
+                status:status,
+                stype:stype,
                 page:that.data.page || 1,
                 pageNum:that.data.pageNum || 10
             },
@@ -87,16 +98,25 @@ Page({
                 }
                 if (res.data.length > 0){
                     let earnList = that.data.eranList,
-                        huiyuan = that.data.huiyuan
-                    if (num == 1){
+                        huiyuan = that.data.huiyuan,
+                        qudao = that.data.qudao;
+                    let total = 0
+                    if (stype == 1){
                         earnList.push(res.data)
-                    } else if (num == 2){
+                        total = res.combined
+                    } else if (stype == 2){
                         huiyuan.push(res.data)
+                        total = res.combined
+                    } else if(stype == 3){
+                        qudao.push(res.data)
+                        total = res.combined
                     }
-
+                    console.log(earnList)
                     that.setData({
                         eranList:earnList,
                         huiyuan:huiyuan,
+                        qudao:qudao,
+                        total:total,
                         page:that.data.page + 1
                     })
                 }
@@ -144,10 +164,9 @@ Page({
      */
     onReachBottom: function () {
         if (!this.data.reach) return
-        let month = this.data.month,
-            year = this.data.year,
-            num = this.data.num || 1
-        this.getEarnings(month,year,num)
+        let status = this.data.div,
+            stype = this.data.num
+        this.getEarnings(status,stype)
     },
 
     /**

@@ -1,31 +1,142 @@
 <!--pages/my/case/case.wxml-->
-<view class="balance">
-	<view class="balance-text">商票余额</view>
-	<view class="balance-num">{{caseMoney}}<text>元</text></view>
-	<!-- <view class="total">总额：20000元</view>
-	<view class="used">已使用：800元</view> -->
-</view>
-<view class="button" wx:if="{{caseList.length>=1}}">
-	<view class="left">发商票</view>
-	<view class="right">发放记录</view>
-</view>
-<view class="detail" wx:if="{{caseList.length>=1}}">
-	<view class="detail-head">商票明细</view>
-	<scroll-view class="detali-list" scroll-y="true" style="height: {{scroll_height}}rpx;">
-		<view class="detail-one">
-			<view class="list-left">
-				<view class="title">订单消费</view>
-				<view class="order">订单号：16161361320321610321051651</view>
-				<view class="time">2019-10-15 10:26:50</view>
-			</view>
-			<view class="list-right">-60元</view>
-		</view>
-	</scroll-view>
+<!--<view class="balance">-->
+    <!--<image lazy-load="true" src="{{imgHost}}bg.png"></image>-->
+    <!--<view class="balance-text">商票余额</view>-->
+    <!--<view class="balance-num">{{userInfo.balance}}-->
+        <!--<text>元</text>-->
+    <!--</view>-->
+    <!--<view class="two" wx:if="{{userInfo.user_identity == 1}}">-->
+        <!--<view class="total">商票总额-->
+            <!--<text>(元)</text>-->
+            <!--<view>20000</view>-->
+        <!--</view>-->
+        <!--<view class="used">已使用商票-->
+            <!--<text>(元)</text>-->
+            <!--<view>3000</view>-->
+        <!--</view>-->
+    <!--</view>-->
+    <!--<view class="three" wx:else>-->
+        <!--<view class="three-total">商票总额-->
+            <!--<text>(元)</text>-->
+            <!--<view>20000</view>-->
+        <!--</view>-->
+        <!--<view class="three-total">待入账商票-->
+            <!--<text>(元)</text>-->
+            <!--<view>20000</view>-->
+        <!--</view>-->
+        <!--<view class="three-used">已使用商票-->
+            <!--<text>(元)</text>-->
+            <!--<view>3000</view>-->
+        <!--</view>-->
+    <!--</view>-->
+<!--</view>-->
+<!--<view class="button" wx:if="{{caseList.length>=1}}">-->
+<!--<view class="left">发商票</view>-->
+<!--<view class="right">发放记录</view>-->
+<!--</view>-->
+<view class="detail">
+    <view class="detail-head">商票明细</view>
+    <scroll-view class="detali-list" scroll-y="true" style="height: {{scroll_height}}rpx;">
+        <view class="detail-one" wx:for="{{caseList}}">
+            <view class="list-left">
+                <view class="title">{{item.ctype}}</view>
+                <view class="order" wx:if="{{item.order_no}}">订单号：{{item.order_no}}</view>
+                <view class="time" >{{item.create_time}}</view>
+            </view>
+            <view class="list-right {{item.money > 0 ? 'active':''}}"><text wx:if="{{item.money > 0}}">+</text>{{item.money}} 元</view>
+        </view>
+    </scroll-view>
+    <!--<scroll-view class="detali-list" scroll-y="true" style="height: {{scroll_height}}rpx;"-->
+                 <!--wx:if="{{userInfo.user_identity == 2}}">-->
+        <!--<view class="detail-doim">-->
+            <!--<view class="one-line">-->
+                <!--<text class="detail-title">购物消费</text>-->
+                <!--<text class="detail-money active dm">+90</text>-->
+            <!--</view>-->
+            <!--<view class="detail-total">消费总额: 60元</view>-->
+            <!--<view class="detail-order">订单号：12345678921541484-->
+                <!--<image src="{{imgHost}}jt_18.png"></image>-->
+            <!--</view>-->
+            <!--<view class="detail-time">2018-08-12 10:06:06</view>-->
+        <!--</view>-->
+        <!--<view class="detail-doim">-->
+            <!--<view class="one-line">-->
+                <!--<text class="detail-title dt">钻石再让利</text>-->
+                <!--<text class="detail-money active dm">+90</text>-->
+            <!--</view>-->
+            <!--<view class="detail-total">消费总额: 60元</view>-->
+            <!--<view class="detail-order">订单号：12345678921541484-->
+                <!--<image src="{{imgHost}}jt_18.png"></image>-->
+            <!--</view>-->
+            <!--<view class="detail-time">2018-08-12 10:06:06</view>-->
+        <!--</view>-->
+        <!--<view class="detail-doim">-->
+            <!--<view class="one-line">-->
+                <!--<text class="detail-title dt">钻石再让利</text>-->
+                <!--<text class="detail-money active dm">+90</text>-->
+            <!--</view>-->
+            <!--<view class="detail-total">消费总额: 60元</view>-->
+            <!--<view class="detail-order">订单号：12345678921541484-->
+                <!--<image src="{{imgHost}}jt_18.png"></image>-->
+            <!--</view>-->
+            <!--<view class="detail-time">2018-08-12 10:06:06</view>-->
+        <!--</view>-->
+        <!--<view class="detail-doim">-->
+            <!--<view class="list-left">-->
+                <!--<view class="title">钻石邀请奖励</view>-->
+                <!--<view class="time">2019-10-15 10:26:50</view>-->
+            <!--</view>-->
+            <!--<view class="list-right active">+60 元</view>-->
+        <!--</view>-->
+    <!--</scroll-view>-->
+    <!--<scroll-view class="detali-list" scroll-y="true" style="height: {{scroll_height}}rpx;"-->
+                 <!--wx:if="{{userInfo.user_identity == 4 || userInfo.user_identity == 3}}">-->
+        <!--<view class="detail-doim">-->
+            <!--<view class="one-line">-->
+                <!--<text class="detail-title">购物消费</text>-->
+                <!--<text class="detail-money active dm">+90</text>-->
+            <!--</view>-->
+            <!--<view class="detail-total">消费总额: 60元</view>-->
+            <!--<view class="detail-order">订单号：12345678921541484-->
+                <!--<image src="{{imgHost}}jt_18.png"></image>-->
+            <!--</view>-->
+            <!--<view class="detail-time">2018-08-12 10:06:06</view>-->
+        <!--</view>-->
+        <!--<view class="detail-doim">-->
+            <!--<view class="one-line">-->
+                <!--<text class="detail-title dt">钻石再让利</text>-->
+                <!--<text class="detail-money active dm">+90</text>-->
+            <!--</view>-->
+            <!--<view class="detail-total">消费总额: 60元</view>-->
+            <!--<view class="detail-order">订单号：12345678921541484-->
+                <!--<image src="{{imgHost}}jt_18.png"></image>-->
+            <!--</view>-->
+            <!--<view class="detail-time">2018-08-12 10:06:06</view>-->
+        <!--</view>-->
+        <!--<view class="detail-doim">-->
+            <!--<view class="one-line">-->
+                <!--<text class="detail-title dt">钻石再让利</text>-->
+                <!--<text class="detail-money active dm">+90</text>-->
+            <!--</view>-->
+            <!--<view class="detail-total">消费总额: 60元</view>-->
+            <!--<view class="detail-order">订单号：12345678921541484-->
+                <!--<image src="{{imgHost}}jt_18.png"></image>-->
+            <!--</view>-->
+            <!--<view class="detail-time">2018-08-12 10:06:06</view>-->
+        <!--</view>-->
+        <!--<view class="detail-doim">-->
+            <!--<view class="list-left">-->
+                <!--<view class="title">钻石邀请奖励</view>-->
+                <!--<view class="time">2019-10-15 10:26:50</view>-->
+            <!--</view>-->
+            <!--<view class="list-right active">+60 元</view>-->
+        <!--</view>-->
+    <!--</scroll-view>-->
 </view>
 
-<view class="not">
-	<view class="not-case">
-		<image lazy-load="true" src="{{imgHost}}yhq.png"></image>
-		<view class="text">暂无商票</view>
-	</view>
+<view class="not" wx:if="{{1==2}}">
+    <view class="not-case">
+        <image lazy-load="true" src="{{imgHost}}yhq.png"></image>
+        <view class="text">暂无商票</view>
+    </view>
 </view>
