@@ -7,8 +7,8 @@
 	</block>
 </swiper>
 <view class="bg">
-	<image lazy-load="true" src="{{imgHost}}member01.png"></image>
-	<image lazy-load="true" class="di" src="{{imgHost}}member02.png"></image>
+	<image class="member01" lazy-load="true" src="{{imgHost}}member01.png"></image>
+	<image class="member02" lazy-load="true" src="{{imgHost}}member02.png"></image>
 	<view class="buy" bindtap="buy">立即购买</view>
 </view>
 
