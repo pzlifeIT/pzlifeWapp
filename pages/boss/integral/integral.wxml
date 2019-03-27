@@ -5,7 +5,8 @@
     <block wx:for="{{list}}">
         <view class="list-one" wx:for="{{item}}">
             <view class="one-line">
-                <view class="line-left">+{{item.result_integral}} 积分</view>
+                <view class="line-left">{{item.ctype}}</view>
+                <view class="line-right"><text wx:if="{{item.result_integral > 0}}">+</text>{{item.result_integral}} 积分</view>
             </view>
             <view class="one-line footer">
                 <view class="line-time">{{item.create_time}}</view>

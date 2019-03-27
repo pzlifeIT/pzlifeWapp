@@ -12,7 +12,8 @@
   <navigator url='/pages/login/captchaLogin/captchaLogin' open-type="redirect" hover-class="none" >
     <view class="checkout">验证码登录</view>
   </navigator>
-	<view class="register" bindtap="login">登录</view>
+	<!--<view class="register" bindtap="login">登录</view>-->
+	<button class="register" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
 </view>
 
 
