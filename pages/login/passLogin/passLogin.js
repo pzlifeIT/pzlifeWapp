@@ -21,10 +21,26 @@ Page({
             [item]: e.detail.value
         })
     },
-    login: function() {
+    bindGetUserInfo: function(e) {
         let mobile = this.data.phone,
             password = this.data.pass,
-            share_id = this.data.share_id
+            share_id = this.data.share_id,
+            that = this
+        let encrypteddata = e.detail.encryptedData,
+            iv = e.detail.iv
+        if (mobile == '') {
+            app.toast({ title: '请填写手机号码' })
+            return
+        }
+        if (mobile.length < 11) {
+            app.toast({ title: '请填写11位手机号码' })
+            return
+        }
+        if (password == '') {
+            app.toast({ title: '请输入密码' })
+            return
+        }
+        that.getUserRead(encrypteddata,iv)
         app.wxrequest({
             url: "user/login",
             data: { mobile: mobile, password: password, buid: app.globalData.pid },
@@ -64,6 +80,31 @@ Page({
                 } else if (res == 3004) {
                     app.toast({
                         title: '登录失败'
+                    })
+                }
+            }
+        })
+    },
+    getUserRead: function (encrypteddata = "", iv = "") {
+        let pid = app.globalData.pid
+        wx.login({
+            success(res){
+                if (res.code) {
+                    app.wxrequest({
+                        url: "user/getUserRead",
+                        data: {
+                            code: res.code,
+                            view_uid: pid,
+                            encrypteddata:encrypteddata,
+                            iv:iv
+                        },
+                        nocon: true,
+                        success(res) {
+                            console.log(res)
+                        },
+                        error(res){
+                            console.log(res)
+                        }
                     })
                 }
             }

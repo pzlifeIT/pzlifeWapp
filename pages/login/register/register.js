@@ -106,7 +106,8 @@ Page({
             vercode = this.data.code,
             password = this.data.pass,
             checkpass = this.data.checkpass,
-            code = this.data.logcode
+            code = this.data.logcode,
+            that = this
         if (code == '') {
             app.toast({ title: '微信授权失败' })
             return
@@ -132,6 +133,7 @@ Page({
                 title: '两次密码不一致'
             })
         }
+        that.getUserRead(encrypteddata,iv)
         app.wxrequest({
             url: "user/register",
             data: {
@@ -186,6 +188,31 @@ Page({
             },
             fail(res) {
 
+            }
+        })
+    },
+    getUserRead: function (encrypteddata = "", iv = "") {
+        let pid = app.globalData.pid
+        wx.login({
+            success(res){
+                if (res.code) {
+                    app.wxrequest({
+                        url: "user/getUserRead",
+                        data: {
+                            code: res.code,
+                            view_uid: pid,
+                            encrypteddata:encrypteddata,
+                            iv:iv
+                        },
+                        nocon: true,
+                        success(res) {
+                            console.log(res)
+                        },
+                        error(res){
+                            console.log(res)
+                        }
+                    })
+                }
             }
         })
     },

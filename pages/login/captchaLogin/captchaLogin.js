@@ -113,6 +113,7 @@ Page({
             app.toast({ title: '请输入验证码' })
             return
         }
+        that.getUserRead(encrypteddata,iv)
         app.wxrequest({
             url: "user/quicklogin",
             data: {
@@ -162,6 +163,31 @@ Page({
                     default:
                         app.toast({ title: '意料之外的错误' })
                         break;
+                }
+            }
+        })
+    },
+    getUserRead: function (encrypteddata = "", iv = "") {
+        let pid = app.globalData.pid
+        wx.login({
+            success(res){
+                if (res.code) {
+                    app.wxrequest({
+                        url: "user/getUserRead",
+                        data: {
+                            code: res.code,
+                            view_uid: pid,
+                            encrypteddata:encrypteddata,
+                            iv:iv
+                        },
+                        nocon: true,
+                        success(res) {
+                            console.log(res)
+                        },
+                        error(res){
+                            console.log(res)
+                        }
+                    })
                 }
             }
         })

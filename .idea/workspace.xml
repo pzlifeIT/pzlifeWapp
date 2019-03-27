@@ -2,43 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/pages/my/join/join.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/join/join.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/join/join.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/join/join.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/activity/buyvip/buyvip.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activity/buyvip/buyvip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/boss.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/boss.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/boss.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/boss.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/boss.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/boss.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/circle/circle.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/circle/circle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/circle/circle.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/circle/circle.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/circle/circle.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/circle/circle.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/circle/circle.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/circle/circle.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/earnings/earnings.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/earnings/earnings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/join/join.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/join/join.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/join/join.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/join/join.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/member/member.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/member/member.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/member/member.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/member/member.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/category/goods/goods.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/category/goods/goods.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/case/case.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/case/case.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/case/case.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/case/case.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/case/case.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/case/case.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/boss/integral/integral.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/integral/integral.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/passLogin/passLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/passLogin/passLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/passLogin/passLogin.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/passLogin/passLogin.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/register/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/search/search.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/search.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,19 +36,19 @@
         <counts>
           <entry key="htm" value="2" />
           <entry key="html" value="1" />
-          <entry key="js" value="115" />
+          <entry key="js" value="120" />
           <entry key="json" value="11" />
           <entry key="php" value="4" />
-          <entry key="wxml" value="102" />
-          <entry key="wxss" value="73" />
+          <entry key="wxml" value="104" />
+          <entry key="wxss" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="73" />
-          <entry key="HTML" value="104" />
+          <entry key="CSS" value="75" />
+          <entry key="HTML" value="106" />
           <entry key="JSON" value="11" />
-          <entry key="JavaScript" value="115" />
+          <entry key="JavaScript" value="120" />
           <entry key="PHP" value="4" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
@@ -87,108 +56,97 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="htm" value="36" />
-          <entry key="js" value="12875" />
+          <entry key="js" value="12934" />
           <entry key="json" value="38" />
-          <entry key="wxml" value="10670" />
+          <entry key="wxml" value="10712" />
           <entry key="wxss" value="9411" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="9411" />
-          <entry key="HTML" value="10706" />
+          <entry key="HTML" value="10748" />
           <entry key="JSON" value="38" />
-          <entry key="JavaScript" value="12875" />
+          <entry key="JavaScript" value="12934" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.85895884">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/my/my.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="582">
-                  <caret line="275" column="6" selection-start-line="275" selection-start-column="6" selection-end-line="275" selection-end-column="6" />
+                <state relative-caret-position="-110">
+                  <caret line="240" column="34" lean-forward="true" selection-start-line="240" selection-start-column="34" selection-end-line="240" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/category/goods/goods.wxss">
+            <entry file="file://$PROJECT_DIR$/pages/login/login.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+                <state relative-caret-position="832">
+                  <caret line="83" column="17" lean-forward="true" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/search/search.wxss">
+            <entry file="file://$PROJECT_DIR$/pages/login/passLogin/passLogin.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="728">
-                  <caret line="109" column="24" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
+                <state relative-caret-position="624">
+                  <caret line="42" column="42" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="42" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/commission/commission.wxss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="156" column="24" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/case/case.wxml">
+            <entry file="file://$PROJECT_DIR$/pages/login/passLogin/passLogin.wxml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="390">
-                  <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="20" selection-end-column="7" />
+                  <caret line="15" column="98" selection-start-line="15" selection-start-column="98" selection-end-line="15" selection-end-column="98" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/integral/integral.js">
+            <entry file="file://$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.wxss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="312">
-                  <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+                  <caret line="66" selection-start-line="66" selection-end-line="74" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/integral/integral.wxml">
+            <entry file="file://$PROJECT_DIR$/pages/login/passLogin/passLogin.wxss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="26">
-                  <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-                </state>
+                <state relative-caret-position="-1159" />
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/case/case.wxss">
+            <entry file="file://$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="713">
-                  <caret line="74" column="1" lean-forward="true" selection-start-line="51" selection-end-line="74" selection-end-column="1" />
+                <state relative-caret-position="416">
+                  <caret line="16" column="98" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="98" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/boss/integral/integral.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="208">
+                  <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/boss/integral/integral.wxss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="453">
@@ -202,19 +160,19 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
+            <entry file="file://$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="427">
-                  <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+                <state relative-caret-position="505">
+                  <caret line="108" column="38" lean-forward="true" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pages/boss/boss.js">
+            <entry file="file://$PROJECT_DIR$/pages/login/register/register.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+                <state relative-caret-position="921">
+                  <caret line="135" column="40" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -260,10 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/search/search.js" />
-        <option value="$PROJECT_DIR$/pages/category/category.wxml" />
-        <option value="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxml" />
-        <option value="$PROJECT_DIR$/pages/boss/case/case.wxss" />
         <option value="$PROJECT_DIR$/pages/category/goods/goods.js" />
         <option value="$PROJECT_DIR$/pages/boss/case/case.js" />
         <option value="$PROJECT_DIR$/pages/boss/join/join.js" />
@@ -307,10 +261,14 @@
         <option value="$PROJECT_DIR$/pages/search/search.wxss" />
         <option value="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss" />
         <option value="$PROJECT_DIR$/pages/my/my.wxml" />
-        <option value="$PROJECT_DIR$/pages/my/my.js" />
         <option value="$PROJECT_DIR$/pages/boss/integral/integral.js" />
-        <option value="$PROJECT_DIR$/pages/boss/integral/integral.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/integral/integral.wxss" />
+        <option value="$PROJECT_DIR$/pages/my/my.js" />
+        <option value="$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js" />
+        <option value="$PROJECT_DIR$/pages/login/passLogin/passLogin.wxml" />
+        <option value="$PROJECT_DIR$/pages/login/passLogin/passLogin.js" />
+        <option value="$PROJECT_DIR$/pages/login/register/register.js" />
+        <option value="$PROJECT_DIR$/pages/boss/integral/integral.wxml" />
       </list>
     </option>
   </component>
@@ -416,6 +374,27 @@
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="captchaLogin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="passLogin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -485,12 +464,12 @@
       <workItem from="1553154871547" duration="23726000" />
       <workItem from="1553314392634" duration="7126000" />
       <workItem from="1553478042182" duration="24278000" />
-      <workItem from="1553564427353" duration="37157000" />
+      <workItem from="1553564427353" duration="39768000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267507000" />
+    <option name="totallyTimeSpent" value="270118000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -524,53 +503,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/my/join/join.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-78" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/earnings/earnings.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="138" column="1" lean-forward="true" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/earnings/earnings.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="15" lean-forward="true" selection-end-line="49" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/commission/commission.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="217" column="14" selection-start-line="217" selection-start-column="14" selection-end-line="217" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/commission/commission.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/commission/commission.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="109" column="2" selection-start-line="109" selection-start-column="2" selection-end-line="109" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/activity/buyvip/buyvip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2366">
-          <caret line="91" column="56" lean-forward="true" selection-start-line="91" selection-start-column="56" selection-end-line="91" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/boss/join/join.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3484">
@@ -720,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4977">
@@ -814,27 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="275" column="6" selection-start-line="275" selection-start-column="6" selection-end-line="275" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/boss.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/boss/commission/commission.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -863,17 +767,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/integral/integral.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/boss/integral/integral.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
           <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-572">
+          <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="240" column="34" lean-forward="true" selection-start-line="240" selection-start-column="34" selection-end-line="240" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="83" column="17" lean-forward="true" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="98" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="66" selection-start-line="66" selection-end-line="74" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/passLogin/passLogin.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1159" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/passLogin/passLogin.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="98" selection-start-line="15" selection-start-column="98" selection-end-line="15" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/boss/boss.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="108" column="38" lean-forward="true" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/register/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="921">
+          <caret line="135" column="40" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/passLogin/passLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="42" column="42" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/boss/integral/integral.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
         </state>
       </provider>
     </entry>

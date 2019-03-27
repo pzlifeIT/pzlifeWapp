@@ -241,8 +241,6 @@ Page({
                 console.log('000')
             }
         });
-
-
     },
     gosxy: function () {
         app.toast({
