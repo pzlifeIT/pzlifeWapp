@@ -234,7 +234,17 @@ Page({
             app.setCartNum()
         }
     },
+    getUserInfoFun(e) {
+        wx.getUserInfo({
+            success: function(res) {
+                console.log("userInfo:" + res)　　　　　　　 //do anything
+            },
+            fail() {
+                console.log(121)
+            }
+        })
 
+    },
     /**
      * 生命周期函数--监听页面隐藏
      */
@@ -259,9 +269,7 @@ Page({
         setTimeout(function() {
             that.getStorage()
             wx.hideNavigationBarLoading() //完成停止加载
-            wx.stopPullDownRefresh({
-
-                }) //停止下拉刷新
+            wx.stopPullDownRefresh({}) //停止下拉刷新
         }, 1500);
     },
 

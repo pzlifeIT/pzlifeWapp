@@ -34,10 +34,8 @@ Page({
         })
     },
     buy: function() {
-        let share_id = this.data.share_id,
-            pid = app.globalData.pid,
-            that = this
-        console.log(pid)
+        let pid = app.globalData.pid,
+            that = this;
         app.wxrequest({
             url: "order/createMemberOrder",
             data: {
@@ -45,7 +43,6 @@ Page({
                 user_type: 1,
                 parent_id: pid
             },
-            nocon: false,
             success(res) {
                 that.pay(res.order_data.order_no)
             },

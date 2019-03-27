@@ -100,7 +100,6 @@ Page({
         app.wxrequest({
             url: "rights/receiveDiamondvip",
             data: { parent_id: pid },
-            nocon: false,
             success(res) {
                 wx.redirectTo({
                     url: "/pages/activity/getvip/getvip"

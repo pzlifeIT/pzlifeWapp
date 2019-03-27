@@ -5,8 +5,7 @@ App({
         // 展示本地存储能力
         //本地缓存
         let that = this
-            // that.globalData.con_id = wx.getStorageSync('con_id') || ''
-        that.globalData.con_id = '55555'
+        that.globalData.con_id = wx.getStorageSync('con_id') || ''
         that.globalData.host = config
     },
     globalData: {
@@ -46,7 +45,7 @@ App({
     share: function(data) {
         let path = ''
         if (!data.path) {
-            path = '/page/index/index'
+            path = '/pages/index/index'
         }
         if (data.path.indexOf('?') == -1) {
             path = data.path + '?pid=' + this.globalData.userInfo.uid || ''
@@ -274,8 +273,32 @@ App({
     onShow: function(opt) {
         this.getconid()
         this.globalData.host = config
-        this.globalData.pid = opt.query.pid || ''
+        this.getUserRead(opt.query.pid)
+        if (!opt.query.pid) return
+        this.globalData.pid = opt.query.pid
         if (this.globalData.pid == '') return
         this.indexmain(this.globalData.pid)
+    },
+    getUserRead(pid = '') {
+        let that = this
+        if (that.globalData.con_id) return
+        wx.login({
+            success(res) {
+                if (res.code) {
+                    that.wxrequest({
+                        url: 'user/getUserRead',
+                        data: {
+                            code: res.code,
+                            view_uid: pid
+                        },
+                        nocon: true,
+                        success() {
+
+                        }
+                    })
+                }
+            }
+        })
+
     }
 })
