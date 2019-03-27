@@ -178,8 +178,6 @@ App({
                 console.log(res)
                 wx.hideLoading()
                 if (res.statusCode == 200) {
-                    console.log(res);
-                    // return
                     let result = JSON.parse(res.data);
                     if (result.code == 200) {
                         if (typeof obj.success == 'function') {
