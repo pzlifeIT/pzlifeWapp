@@ -37,13 +37,17 @@
         "pages/activity/getvip/getvip",
         "pages/boss/setting/setting",
         "pages/boss/setShopInfo/setShopInfo",
-        "pages/boss/member/member",
         "pages/boss/case/case",
         "pages/boss/earnings/earnings",
         "pages/boss/join/join",
         "pages/boss/circle/circle",
         "pages/freightHouse/freightHouse",
-        "pages/freightHouse/fhSearch/fhSearch"
+        "pages/freightHouse/fhSearch/fhSearch",
+        "pages/boss/integral/integral",
+        "pages/my/join/join",
+        "pages/my/earnings/earnings",
+        "pages/my/commission/commission",
+        "pages/boss/commission/commission"
     ],
     "window": {
         "backgroundTextStyle": "dark",

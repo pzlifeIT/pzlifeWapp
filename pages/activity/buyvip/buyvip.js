@@ -86,7 +86,7 @@ Page({
                     },
                     fail(res) {
                         that.gopaystatus({
-                            order_no: data.order_no,
+                            order_no: res.data.order_no,
                             status: 2
                         })
                     }

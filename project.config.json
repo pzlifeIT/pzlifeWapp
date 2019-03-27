@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
-	"appid": "wx1771b2e93c87e22c",
+	"appid": "wxa8c604ce63485956",
 	"projectname": "pzlifeWapp",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 40,
+			"current": 42,
 			"list": [
 				{
 					"id": 0,
@@ -274,16 +274,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 35,
 					"name": "商票",
 					"pathName": "pages/boss/earnings/earnings",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "会员",
-					"pathName": "pages/boss/member/member",
 					"query": "",
 					"scene": null
 				},
@@ -295,9 +288,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "会员",
-					"pathName": "pages/boss/earnings/earnings",
+					"id": 38,
+					"name": "买主",
+					"pathName": "pages/boss/circle/circle",
 					"query": "",
 					"scene": null
 				},
@@ -312,6 +305,27 @@
 					"id": -1,
 					"name": "个人中心",
 					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员-收益",
+					"pathName": "pages/my/earnings/earnings",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员-佣金",
+					"pathName": "pages/my/commission/commission",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "店管-佣金",
+					"pathName": "pages/boss/commission/commission",
 					"query": "",
 					"scene": null
 				}

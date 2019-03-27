@@ -1,0 +1,32 @@
+<!--pages/boss/integral/integral.wxml-->
+<view class="inte-title" wx:if="{{list.length > 0}}">积分明细</view>
+
+<view class="list" wx:if="{{list.length > 0}}">
+    <block wx:for="{{list}}">
+        <view class="list-one" wx:for="{{item}}">
+            <view class="one-line">
+                <view class="line-left">+{{item.result_integral}} 积分</view>
+            </view>
+            <view class="one-line footer">
+                <view class="line-time">{{item.create_time}}</view>
+                <!--<view class="line-inte">剩余322 积分</view>-->
+            </view>
+        </view>
+    </block>
+    <!--<view class="list-one">-->
+        <!--<view class="one-line">-->
+            <!--<view class="line-left">成功交易36.33 元</view>-->
+            <!--<view class="line-right">+60 积分</view>-->
+        <!--</view>-->
+        <!--<view class="one-line footer">-->
+            <!--<view class="line-time">2019-03-15</view>-->
+            <!--<view class="line-inte">剩余322 积分</view>-->
+        <!--</view>-->
+    <!--</view>-->
+</view>
+<view class="not" wx:if="{{list.length <= 0}}">
+    <view class="not-case">
+        <image lazy-load="true" src="{{imgHost}}yhq.png"></image>
+        <view class="text">暂无明细</view>
+    </view>
+</view>

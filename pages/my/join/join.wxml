@@ -1,21 +1,22 @@
-
-<!--<view class="bg">-->
-    <!--<image lazy-load="true" src="{{imgHost}}bg.png"></image>-->
-    <!--<view class="balance-text">招商代理余额</view>-->
-    <!--<view class="balance-num">1000-->
-        <!--<text>元</text>-->
-    <!--</view>-->
-    <!--<view class="two">-->
-        <!--<view class="total">招商代理收益总额-->
-            <!--<text>(元)</text>-->
-            <!--<view>20000</view>-->
-        <!--</view>-->
-        <!--<view class="used">本月招商代理收益-->
-            <!--<text>(元)</text>-->
-            <!--<view>3000</view>-->
-        <!--</view>-->
-    <!--</view>-->
-<!--</view>-->
+<!--pages/boss/join/join.wxml-->
+<!--pages/boss/earnings/earnings.wxml-->
+<view class="bg">
+    <image lazy-load="true" src="{{imgHost}}bg.png"></image>
+    <view class="balance-text">招商代理余额</view>
+    <view class="balance-num">1000
+        <text>元</text>
+    </view>
+    <view class="two">
+        <view class="total">招商代理收益总额
+            <text>(元)</text>
+            <view>20000</view>
+        </view>
+        <view class="used">本月招商代理收益
+            <text>(元)</text>
+            <view>3000</view>
+        </view>
+    </view>
+</view>
 <view class="title" wx:if="{{list.length > 0}}">招商代理明细</view>
 <view class="list" wx:for="{{list}}" wx:if="{{list.length > 0}}">
     <view class="list-one" wx:for="{{item}}">

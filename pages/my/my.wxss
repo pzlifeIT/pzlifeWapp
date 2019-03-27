@@ -58,17 +58,53 @@ page {
 
 .userCost {
     width: 100%;
-    height: 140rpx;
-    background-color: #fff;
+    height: auto;
+    margin-bottom: 10rpx;
 }
-
-.userCoupon,
-.userIntegral,
-.userMoney {
-    display: inline-block;
+.cost-title{
+    width: 100%;
+    height: 68rpx;
+    text-align: left;
+    line-height: 68rpx;
+    color: #202020;
+    font-size: 30rpx;
+    padding-left: 10rpx;
+    border-bottom: 1rpx solid #f7f7f7;
+    box-sizing: border-box;
+    background: #FFFFFF;
+}
+.cost-line{
+    width: 750rpx;
+    height: 116rpx;
+    margin-top: 2rpx;
+    background: #FFFFFF;
+}
+.line-one{
+    width: 33.33%;
+    height: 116rpx;
     float: left;
-    width: 250rpx;
-    height: 140rpx;
+}
+.one-content{
+    width: 234rpx;
+    height: 88rpx;
+    margin: 20rpx auto 0;
+    text-align: center;
+    border-right: 1rpx solid #f7f7f7;
+}
+.cont-no{
+    border: none;
+}
+.one-title{
+    color: #404040;
+    font-size: 26rpx;
+}
+.one-title text{
+    font-size: 22rpx;
+}
+.one-price{
+    color: #E61F18;
+    font-size: 40rpx;
+
 }
 
 .ucIcon {
@@ -90,7 +126,7 @@ page {
 
 .userorder {
     width: 750rpx;
-    margin: 10rpx 0;
+    margin-bottom: 10rpx ;
     background-color: #fff;
 }
 
@@ -126,18 +162,66 @@ page {
     display: inline-block;
     float: left;
     box-sizing: border-box;
-    width: 250rpx;
+    width: 25%;
     height: 169rpx;
     border-top: 1px solid #f7f7f7;
     border-right: 1px solid #f7f7f7;
+    position: relative;
 }
+.or-num{
+    width: auto;
+    height: 30rpx;
+    min-width: 30rpx;
+    max-width: 50rpx;
+    text-align: center;
+    line-height: 30rpx;
+    border:2rpx solid #e61f18;
+    border-radius: 50%;
+    color: #E61F18;
+    font-size: 24rpx;
+    position: absolute;
+    top: 15rpx;
+    left: 116rpx;
+    padding: 3rpx 3rpx;
+    box-sizing: padding-box;
+}
+.or-num-nine{
+    width: 50rpx;
+    border-radius: 20rpx;
+}
+.equity{
+    width: 750rpx;
+    height: 140rpx;
+    background: #FFFFFF;
+}
+.equity-one{
+    width: 33.33%;
+    height: 100%;
+    border-right: 1rpx solid #f7f7f7;
+    border-bottom: 1rpx solid #f7f7f7;
+    text-align: center;
+    color: #404040;
+    font-size: 26rpx;
+    float: left;
+    box-sizing: border-box;
+}
+.last{
+    border:none;
+}
+.equity-one image{
+    width: 53rpx;
+    height: 53rpx;
+    margin-top: 25rpx;
+}
+.equity-title{
 
+}
 .uoIcon {
     display: inline-block;
     float: left;
     width: 68rpx;
     height: 58rpx;
-    margin: 33rpx 84rpx 15rpx;
+    margin: 33rpx 60rpx 15rpx;
 }
 
 .nobr {

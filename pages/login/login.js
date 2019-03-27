@@ -7,18 +7,20 @@ Page({
      */
     data: {
         imgHost: '',
-        share_id:"",
-        a:""
+        share_id: "",
+        a: ""
     },
-    bindGetUserInfo: function(e) {
-		let encrypteddata = e.detail.encryptedData,
-		    iv = e.detail.iv
+    bindGetUserInfo: function (e) {
+        let encrypteddata = e.detail.encryptedData ? e.detail.encryptedData : "",
+            iv = e.detail.iv ? e.detail.iv : '',
+            that = this;
         wx.login({
             success(res) {
                 if (res.code) {
+                    that.getUserRead(encrypteddata,iv);
                     app.wxrequest({
                         url: "user/loginuserbywx",
-                        data: { code: res.code, buid: app.globalData.pid,encrypteddata:encrypteddata,iv:iv},
+                        data: {code: res.code, buid: app.globalData.pid, encrypteddata: encrypteddata, iv: iv},
                         nocon: true,
                         success(res) {
                             let pages = getCurrentPages();
@@ -35,7 +37,7 @@ Page({
                                 app.toast({
                                     title: "用户未绑定手机号,1.5秒后跳转去快捷登录",
                                 });
-                                let timer = setTimeout(function() {
+                                let timer = setTimeout(function () {
                                     wx.navigateTo({
                                         url: "/pages/login/captchaLogin/captchaLogin"
                                     })
@@ -56,23 +58,49 @@ Page({
                 }
             }
         })
+
+    },
+    getUserRead: function (encrypteddata = "", iv = "") {
+        let pid = app.globalData.pid
+        wx.login({
+            success(res){
+                if (res.code) {
+                    app.wxrequest({
+                        url: "user/getUserRead",
+                        data: {
+                            code: res.code,
+                            view_uid: pid,
+                            encrypteddata:encrypteddata,
+                            iv:iv
+                        },
+                        nocon: true,
+                        success(res) {
+                            console.log(res)
+                        },
+                        error(res){
+                            console.log(res)
+                        }
+                    })
+                }
+            }
+        })
     },
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
-        if (options.share_id){
+        if (options.share_id) {
             this.setData({
-                share_id:options.share_id
+                share_id: options.share_id
             })
         }
-        if (options.a){
+        if (options.a) {
             console.log(options.a)
             this.setData({
-                a:options.a
+                a: options.a
             })
         }
     },
@@ -80,49 +108,49 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
         let that = this,
             share = app.share({
                 title: "登陆",

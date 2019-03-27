@@ -11,7 +11,7 @@ page {
 .addres {
     margin-top: 2rpx;
     width: 731rpx;
-    height: 150rpx;
+    height: auto;
     position: relative;
     padding: 37rpx 10rpx 0 9rpx;
     background: #ffffff;

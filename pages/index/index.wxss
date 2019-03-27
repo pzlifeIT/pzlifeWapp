@@ -248,6 +248,7 @@ page{
 .goods-one image{
     width: 230rpx;
     height: 204rpx;
+    border-radius: 15rpx;
 }
 .goods-title{
     font-size: 28rpx;
@@ -473,4 +474,8 @@ page{
 .yinji-recommend{
     height: auto;
     background: #F7F7F7;
+}
+.oneday{
+    width: 750rpx;
+    height: 157rpx;
 }

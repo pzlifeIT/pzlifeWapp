@@ -12,7 +12,11 @@ Page({
         pageNum:10,
         reach:true,
         socialList:[],
-        maizhu:[]
+        maizhu:[],
+        div:1,
+        peopleNum:0,
+        diamon_user_count:0,
+        social_count_all:0
     },
     select:function(e){
         let tab = e.currentTarget.dataset.tab
@@ -25,6 +29,24 @@ Page({
         })
         console.log(this.data.page)
         this.getusersocial()
+    },
+    clickDiv:function(e){
+        let div = e.currentTarget.dataset.div
+        this.setData({
+            div:div,
+            socialList:[],
+            maizhu:[],
+            peopleNum:0,
+            diamon_user_count:0,
+            social_count_all:0,
+            reach:true,
+            page:1
+        })
+        if (div == 1){
+            this.getusersocial()
+        }else if (div == 2){
+
+        }
     },
     getusersocialsum:function(){
         let that = this
@@ -65,7 +87,10 @@ Page({
                     that.setData({
                         socialList:social,
                         maizhu:maizhu,
-                        page:that.data.page + 1
+                        page:that.data.page + 1,
+                        peopleNum:res.user_ring_count || 0,
+                        diamon_user_count:res.diamon_user_count || 0,
+                        social_count_all:res.social_count_all || 0
                     })
                 }
             },

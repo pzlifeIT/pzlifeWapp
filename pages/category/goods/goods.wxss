@@ -6,7 +6,7 @@ page{
   width: 368rpx;
   height: auto;
   float: left;
-  margin: 10rpx 3rpx;
+  margin: 5rpx 3rpx;
   background-color: rgb(255, 255, 255);
 	box-sizing: border-box;
 	background: #fff;
@@ -38,6 +38,7 @@ page{
   white-space: nowrap;
 }
 .one_goods .subtitle{
+    height: 32rpx;
   font-size: 24rpx;
   color: rgb(182, 182, 182);
   margin: 5rpx 0 5rpx 20rpx;

@@ -1,0 +1,84 @@
+/* pages/boss/integral/integral.wxss */
+page{
+    background: #F7F7F7;
+}
+.inte-title{
+    width: 750rpx;
+    height: 75rpx;
+    text-align: center;
+    line-height: 75rpx;
+    font-size: 32rpx;
+    color: #202020;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: #F7F7F7;
+}
+.list{
+    width: 750rpx;
+    height: auto;
+    overflow: auto;
+    margin-top: 75rpx;
+}
+.list-one{
+    width: 750rpx;
+    height: auto;
+    background: #FFFFFF;
+    overflow: auto;
+    margin-bottom: 2rpx;
+}
+.one-line{
+    width: 750rpx;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+    height: auto;
+    overflow: auto;
+    margin-top: 29rpx;
+}
+.line-left{
+    float: left;
+    color: #202020;
+    font-size: 30rpx;
+}
+.line-right{
+    float: right;
+    color: #404040;
+    font-size: 28rpx;
+}
+.line-time{
+    color: #666666;
+    font-size: 26rpx;
+    float: left;
+}
+.line-inte{
+    float: right;
+    font-size: 26rpx;
+    color: #666666;
+}
+.footer{
+    margin-top: 10rpx;
+    margin-bottom: 20rpx;
+}
+.not{
+    width: 750rpx;
+    height: 70%;
+    overflow: hidden;
+   margin: 50% 40%;
+
+}
+.not-case{
+    width: 199rpx;
+    overflow: hidden;
+}
+.not image{
+    width: 199rpx;
+    height: 138rpx;
+    margin-bottom: 29rpx;
+}
+.not .text{
+    width: 199rpx;
+    overflow: hidden;
+    text-align: center;
+    color: #D6D6D6;
+    font-size: 28rpx;
+}
