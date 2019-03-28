@@ -16,7 +16,8 @@ Page({
         div:1,
         peopleNum:0,
         diamon_user_count:0,
-        social_count_all:0
+        social_count_all:0,
+        onlyRead:[]
     },
     select:function(e){
         let tab = e.currentTarget.dataset.tab
@@ -25,6 +26,7 @@ Page({
             page:1,
             socialList:[],
             maizhu:[],
+            onlyRead:[],
             reach:true
         })
         console.log(this.data.page)
@@ -36,6 +38,7 @@ Page({
             div:div,
             socialList:[],
             maizhu:[],
+            onlyRead:[],
             peopleNum:0,
             diamon_user_count:0,
             social_count_all:0,
@@ -45,8 +48,33 @@ Page({
         if (div == 1){
             this.getusersocial()
         }else if (div == 2){
-
+            this.getread()
         }
+    },
+    getread:function(){
+      let that = this
+        app.wxrequest({
+            url:"user/getread",
+            data:{
+                page:that.data.page || 1,
+                pageNum:that.data.pageNum || 10
+            },
+            success(res){
+                if (res.data.length < 10){
+                    that.setData({
+                        reach:false
+                    })
+                }
+                if (res.data.length > 0){
+                    let onlyRead = that.data.onlyRead
+                    onlyRead.push(onlyRead)
+                    that.setData({
+                        onlyRead:onlyRead,
+                        page:that.data.page + 1
+                    })
+                }
+            }
+        })
     },
     getusersocialsum:function(){
         let that = this
@@ -147,11 +175,12 @@ Page({
      */
     onReachBottom: function() {
         if (!this.data.reach) return
-        // this.setData({
-        //     page:this.data.page + 1
-        // })
-        this.getusersocial()
-        // this.getusersocialsum()
+
+        if (this.data.div == 1){
+            this.getusersocial()
+        } else if (this.data.div == 2){
+            this.getread()
+        }
     },
 
     /**

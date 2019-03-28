@@ -16,7 +16,8 @@ Page({
         huiyuan:[],
         info:{},
         qudao:[],
-        zhaoshang:[]
+        zhaoshang:[],
+        total:0
     },
     clickDiv: function (e) {
         let div = e.currentTarget.dataset.div,
@@ -53,7 +54,7 @@ Page({
         app.wxrequest({
             url:"user/getuserbonus",
             data:{
-                status:1,
+                status:2,
                 stype:stype,
                 page:that.data.page || 1,
                 pageNum:that.data.pageNum || 10
@@ -67,13 +68,17 @@ Page({
                 if (res.data.length > 0){
                     let eranList = that.data.eranList,
                         huiyuan = that.data.huiyuan,
-                        qudao = that.data.qudao
+                        qudao = that.data.qudao,
+                        total = that.data.total
                     if (stype == 1){
                         eranList.push(res.data)
+                        total = total = res.combined
                     } else if(stype == 2){
                         huiyuan.push(res.data)
+                        total = total = res.combined
                     } else if(stype == 3){
                         qudao.push(res.data)
+                        total = total = res.combined
                     }
                     that.setData({
                         eranList:eranList,

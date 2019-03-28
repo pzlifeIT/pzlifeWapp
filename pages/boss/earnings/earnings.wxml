@@ -5,11 +5,11 @@
             <text class="ct-text db unit">经营性收益总额</text>
             <text class="ct-num db">{{all}}</text>
         </view>
-        <view class="ch-half ch-left {{div == 1 ?'selected':''}}" bindtap="clickDiv" data-div="1">
+        <view class="ch-half ch-left {{div == 2 ?'selected':''}}" bindtap="clickDiv" data-div="2">
             <text class="db ch-name unit">已入账</text>
             <text class="db ch-num">{{entered}}</text>
         </view>
-        <view class="ch-half ch-right {{div == 2 ?'selected':''}}" bindtap="clickDiv" data-div="2">
+        <view class="ch-half ch-right {{div == 1 ?'selected':''}}" bindtap="clickDiv" data-div="1">
             <text class="db ch-name unit">待入账</text>
             <text class="db ch-num">{{enter}}</text>
         </view>
