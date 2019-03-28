@@ -284,15 +284,17 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-        this.getStorage()
-        if (app.globalData.userInfo.uid) {
-            if (app.globalData.updateNum) {
-                app.setCartNum()
+        let that = this
+        app.judgelogin({
+            success() {
+                if (app.globalData.updateNum) {
+                    app.setCartNum()
+                }
+                that.getStorage()
+                that.getUserOrderCount()
+                that.getBoss()
             }
-            this.getUserOrderCount()
-            this.getBoss()
-        }
-
+        })
     },
     getUserInfoFun(e) {
         wx.getUserInfo({
