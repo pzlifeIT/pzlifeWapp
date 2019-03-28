@@ -1,6 +1,5 @@
 // pages/my/myQr/myQr.js
 const app = getApp()
-    // let qrcode = require(../../utils/qrcode.js)
 Page({
 
     /**
@@ -13,16 +12,16 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.getUserQrcode()
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
-    getUserQrcode: function() {
+    getUserQrcode: function () {
         let that = this,
             pid = app.globalData.userInfo.uid
         app.wxrequest({
@@ -44,59 +43,68 @@ Page({
             }
         })
     },
-    save: function() {
-        console.log('save')
-        wx.showActionSheet({
-            itemList: ['保存图片'],
-            success: function(res) {
-                console.log(res.tapIndex)
-                if (res.tapIndex == 0) {
-                    app.toast({
-                        title: "保存成功"
-                    })
-                }
+    saveImg: function () {
+        console.log("??????")
+        let path = this.data.qrcode
+        wx.downloadFile({
+            url: path,
+            success(res) {
+                wx.saveImageToPhotosAlbum({
+                    filePath: res.tempFilePath,
+                    success(res) {
+                        console.log("成功")
+                        app.toast({
+                            title: "保存成功"
+                        })
+                    },
+                    error(res) {
+                        app.toast({
+                            title: "保存失败"
+                        })
+                    }
+                })
             }
         })
     },
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
 
     }
 })

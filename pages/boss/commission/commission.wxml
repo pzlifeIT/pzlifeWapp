@@ -23,17 +23,17 @@
     <i class="line"><s></s></i>
 </view>
 <view class="redHint" wx:if="{{div == 1}}">
-    <view class="redText" wx:if="{{num == 1 && eranList > 0}}">
+    <view class="redText" wx:if="{{num == 1 && eranList.length > 0}}">
         <view class="red-left" >个人消费收益已入账合计</view>
-        <view class="red-right">1000 元</view>
+        <view class="red-right">{{total}} 元</view>
     </view>
-    <view class="redText" wx:if="{{num == 2 && eranList > 0}}">
+    <view class="redText" wx:if="{{num == 2 && huiyuan.length > 0}}">
         <view class="red-left">会员消费收益已入账合计</view>
-        <view class="red-right">1000 元</view>
+        <view class="red-right">{{total}} 元</view>
     </view>
-    <view class="redText" wx:if="{{num == 3 && eranList > 0}}">
+    <view class="redText" wx:if="{{num == 3 && qudao.length > 0}}">
         <view class="red-left">渠道收益已入账合计</view>
-        <view class="red-right">1000 元</view>
+        <view class="red-right">{{total}} 元</view>
     </view>
 </view>
 <view class="list " wx:if="{{num == 1 && div == 1}}">

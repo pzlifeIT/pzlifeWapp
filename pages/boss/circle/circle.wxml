@@ -9,7 +9,7 @@
             <text class="db ch-name unit">已注册</text>
             <text class="db ch-num">{{sum.reg_count}}</text>
         </view>
-        <view class="ch-half ch-right {{div == 2 ?'selected':''}}"  bindtap="clickDiv" data-div="2">
+        <view class="ch-half ch-right {{div == 2 ?'selected':''}}" bindtap="clickDiv" data-div="2">
             <text class="db ch-name unit">已授权未注册</text>
             <text class="db ch-num">{{sum.grant_count}}</text>
         </view>
@@ -50,7 +50,7 @@
         </view>
     </view>
 </view>
-<view class="diamond"   wx:elif="{{tab == 2 && div!= 2}}">
+<view class="diamond" wx:elif="{{tab == 2 && div!= 2}}">
     <view class="diamond-list" wx:for="{{maizhu}}">
         <view class="diamond-li" wx:for="{{item}}">
             <image class="image din fl" src="{{item.avatar}}"/>
@@ -62,10 +62,12 @@
 
 <view class="diamond footer" wx:if="{{div == 2}}">
     <view class="diamond-list">
-        <view class="diamond-li">
-            <image class="image din fl" src=""/>
-            <text class="dl-buyer-name din fl">一片云彩</text>
-            <text class="dl-buyer-num din fl div-time">2019.03.21 12:00:00</text>
-        </view>
+        <block wx:for="{{onlyRead}}">
+            <view class="diamond-li" wx:for="{{item}}">
+                <image class="image din fl" src="{{item.avatar}}"/>
+                <text class="dl-buyer-name din fl">{{item.nick_name}}</text>
+                <text class="dl-buyer-num din fl div-time">{{item.create_time}}</text>
+            </view>
+        </block>
     </view>
 </view>

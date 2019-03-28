@@ -38,7 +38,7 @@
 <view class="userCost">
     <view class="cost-title">资产中心</view>
     <view class="cost-line" wx:if="{{userInfo.user_identity == 4}}">
-        <view class="line-one" bindtap="goearn" data-earn="1" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
+        <view class="line-one" bindtap="goearn" data-earn="2" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
             <view class="one-content">
                 <view class="one-title">经营性收益余额
                     <text>(元)</text>
