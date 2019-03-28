@@ -72,18 +72,19 @@ Page({
                         total = that.data.total
                     if (stype == 1){
                         eranList.push(res.data)
-                        total = total = res.combined
+                         total = res.combined
                     } else if(stype == 2){
                         huiyuan.push(res.data)
-                        total = total = res.combined
+                        total = res.combined
                     } else if(stype == 3){
                         qudao.push(res.data)
-                        total = total = res.combined
+                        total = res.combined
                     }
                     that.setData({
                         eranList:eranList,
                         huiyuan:huiyuan,
                         qudao:qudao,
+                        total:total,
                         page:that.data.page + 1
 
                     })
