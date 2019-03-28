@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/boss.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/boss.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/circle/circle.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/circle/circle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/circle/circle.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/circle/circle.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/commission/commission.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/commission/commission.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/boss/commission/commission.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/commission/commission.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/myQr/myQr.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/myQr/myQr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/myQr/myQr.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/myQr/myQr.wxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,11 +116,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/boss/commission/commission.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
-                  <caret line="33" column="67" lean-forward="true" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+                <state relative-caret-position="416">
+                  <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
@@ -156,11 +146,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/boss/circle/circle.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="569">
-                  <caret line="67" column="76" lean-forward="true" selection-start-line="67" selection-start-column="76" selection-end-line="67" selection-end-column="76" />
+                <state relative-caret-position="257">
+                  <caret line="22" column="93" lean-forward="true" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
                 </state>
               </provider>
             </entry>
@@ -275,10 +265,10 @@
         <option value="$PROJECT_DIR$/pages/my/my.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/earnings/earnings.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/commission/commission.js" />
-        <option value="$PROJECT_DIR$/pages/boss/commission/commission.wxml" />
         <option value="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss" />
         <option value="$PROJECT_DIR$/pages/boss/circle/circle.js" />
         <option value="$PROJECT_DIR$/pages/boss/circle/circle.wxml" />
+        <option value="$PROJECT_DIR$/pages/boss/commission/commission.wxml" />
       </list>
     </option>
   </component>
@@ -489,12 +479,12 @@
       <workItem from="1553314392634" duration="7126000" />
       <workItem from="1553478042182" duration="24278000" />
       <workItem from="1553564427353" duration="39768000" />
-      <workItem from="1553737205281" duration="6454000" />
+      <workItem from="1553737205281" duration="7381000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276572000" />
+    <option name="totallyTimeSpent" value="277499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -847,13 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/commission/commission.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="33" column="67" lean-forward="true" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -880,8 +863,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/boss/circle/circle.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="67" column="76" lean-forward="true" selection-start-line="67" selection-start-column="76" selection-end-line="67" selection-end-column="76" />
+        <state relative-caret-position="257">
+          <caret line="22" column="93" lean-forward="true" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/boss/commission/commission.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
         </state>
       </provider>
     </entry>

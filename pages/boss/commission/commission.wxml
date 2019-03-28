@@ -7,7 +7,7 @@
         </view>
         <view class="ch-half ch-left {{div == 1 ?'selected':''}}" bindtap="clickDiv" data-div="1">
             <text class="db ch-name unit">经营性收益</text>
-            <text class="db ch-num">{{info.bonus_all}}</text>
+            <text class="db ch-num">{{info.bonus}}</text>
         </view>
         <view class="ch-half ch-right {{div == 2 ?'selected':''}}" bindtap="clickDiv" data-div="2">
             <text class="db ch-name unit">招商代理收益</text>
