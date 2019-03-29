@@ -21,12 +21,6 @@ Page({
     preventTouchMove: function() {
         //防止用户操作弹出层外界面
     },
-    button: function() {
-        let maks = !this.data.mask
-        this.setData({
-            mask: mask
-        })
-    },
     editstatus: function() {
         let mask = !this.data.mask
         this.setData({
