@@ -47,7 +47,10 @@
         "pages/my/join/join",
         "pages/my/earnings/earnings",
         "pages/my/commission/commission",
-        "pages/boss/commission/commission"
+        "pages/boss/commission/commission",
+        "pages/shiftMoney/shiftMoney",
+        "pages/shiftMoney/shiftSuccess/shiftSuccess",
+        "pages/shiftMoney/record/record"
     ],
     "window": {
         "backgroundTextStyle": "dark",

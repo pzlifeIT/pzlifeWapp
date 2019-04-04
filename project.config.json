@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 42,
+			"current": 45,
 			"list": [
 				{
 					"id": 0,
@@ -327,6 +327,26 @@
 					"name": "店管-佣金",
 					"pathName": "pages/boss/commission/commission",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "转入商票",
+					"pathName": "pages/shiftMoney/shiftMoney",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提出申请",
+					"pathName": "pages/shiftMoney/shiftSuccess/shiftSuccess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商票申请纪录",
+					"pathName": "pages/shiftMoney/record/record",
 					"scene": null
 				}
 			]
