@@ -103,8 +103,8 @@ Page({
                         goodData.integral_active = sku[i].integral_active
                         goodData.sku_name = sku[i].sku_name
                         goodData.id = sku[i].id
+                        goodData.brokerage = sku[i].brokerage
                     } else {
-                        console.log('')
                         buy = false
                         repertory = false
                         goodData = {}

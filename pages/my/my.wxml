@@ -38,15 +38,23 @@
 <view class="userCost">
     <view class="cost-title">资产中心</view>
     <view class="cost-line" wx:if="{{userInfo.user_identity == 4}}">
-        <view class="line-one" bindtap="goearn" data-earn="2" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
+        <!-- <view class="line-one" bindtap="goearn" data-earn="2" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
             <view class="one-content">
                 <view class="one-title">经营性收益余额
                     <text>(元)</text>
                 </view>
                 <view class="one-price">{{boss.bonus}}</view>
             </view>
+        </view> -->
+        <view class="line-one wid50" bindtap="gocommiss">
+            <view class="one-content">
+                <view class="one-title">佣金总额
+                    <text>(元)</text>
+                </view>
+                <view class="one-price">{{boss.commission}}</view>
+            </view>
         </view>
-        <view class="line-one" bindtap="gocommiss">
+        <view class="line-one wid50" bindtap="gocommiss">
             <view class="one-content">
                 <view class="one-title">佣金余额
                     <text>(元)</text>
@@ -54,14 +62,14 @@
                 <view class="one-price">{{boss.commission}}</view>
             </view>
         </view>
-        <view class="line-one"  bindtap="join">
+        <!-- <view class="line-one"  bindtap="join">
             <view class="one-content cont-no">
                 <view class="one-title">招商代理余额
                     <text>(元)</text>
                 </view>
                 <view class="one-price">{{boss.merchants}}</view>
             </view>
-        </view>
+        </view> -->
     </view>
 
     <view class="cost-line">
@@ -70,7 +78,7 @@
                 <view class="one-title">商票余额
                     <text>(元)</text>
                 </view>
-                <view class="one-price">{{userInfo.balance}}</view>
+                <view class="one-price">{{userInfo.balance || 0}}</view>
             </view>
         </view>
         <view class="line-one">
@@ -84,9 +92,9 @@
         <view class="line-one" bindtap="goInte">
             <view class="one-content cont-no">
                 <view class="one-title">购物积分
-                    <text>(分                                                                                   )</text>
+                    <text>(分)</text>
                 </view>
-                <view class="one-price">{{userInfo.integral}}</view>
+                <view class="one-price">{{userInfo.integral || 0}}</view> 
             </view>
         </view>
     </view>

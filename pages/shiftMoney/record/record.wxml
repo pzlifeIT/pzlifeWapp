@@ -1,21 +1,21 @@
 <!--pages/shiftMoney/record/record.wxml-->
-<view >
-  <view class="rd-list" >
+<view wx:for="{{recordlist}}" >
+  <view class="rd-list" wx:for="{{item}}" >
     <view class="rd-li" >
       <text class="rd-li-tit" >申请时间</text>
-      <text class="rd-li-con" >2018-12-13  13:58:35</text>
+      <text class="rd-li-con" >{{item.create_time}}</text>
     </view>
     <view class="rd-li" >
       <text class="rd-li-tit" >申请金额</text>
-      <text class="rd-li-con" >888.00元</text>
+      <text class="rd-li-con" >{{item.money}}元</text>
     </view>
     <view class="rd-li" >
       <text class="rd-li-tit" >扣除费用</text>
-      <text class="rd-li-con" >10.00元</text>
+      <text class="rd-li-con" >{{item.proportion}}元</text>
     </view>
     <view class="rd-li" >
       <text class="rd-li-tit" >申请状态</text>
-      <text  class="rd-li-con">申请成功</text>
+      <text  class="rd-li-con">{{item.statusText}}</text>
     </view>
   </view>
 </view>

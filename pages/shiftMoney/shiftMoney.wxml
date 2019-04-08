@@ -11,6 +11,6 @@
   </view>
 </view>
 <view class="sm-submit {{withdraw?'':'opa'}}" bindtap="transferBalance">确定提现</view>
-<!-- <navigator url="./record/record" > -->
+<navigator url="./record/record" >
 <view class="fr record">申请记录<image lazy-load="true" class="img din fr" src="{{imgHost}}jt_18.png" alt="" /></view>
-<!-- </navigator> -->
+</navigator>
