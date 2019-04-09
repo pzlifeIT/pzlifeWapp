@@ -48,7 +48,30 @@
   <view class='summation'><text class='sum_text'>钻石返利<text class="small">(让利收益在支付货款后自动转入后台商票)</text></text><text class='sum_price'>￥{{stat.rebate_all}}</text></view>
   <view class='summation'><text class='sum_text'>共计{{stat.goods_count}}件商品</text><text class='sum_price'>合计￥{{stat.total_goods_price}}</text></view>
 </view>
-
+<view class="payment" >
+  <view class="pt-header" >选择支付方式</view>
+  <view class="bm-mode be fl" bindtap="selpaytype"  data-type="2">
+      <view class="din fl" ><image lazy-load="true" class="buyIcon" src="{{imgHost}}pay_03.png" /></view>
+      <view  class="bm-info din fl" >
+        <text class="db ">商票抵扣</text>
+      </view>
+      <view  class="din fl" >
+        <icon class="bm-btn" wx:if="{{paytype == 2}}" type="success" size="36rpx" />
+        <view class="bm-btn no-btn" wx:else ></view>
+      </view>
+      <view class="bm-balance fl">(余额:￥{{stat.balance}})</view>
+  </view>
+  <view class="bm-mode fl" bindtap="selpaytype"  data-type="1">
+      <view class="din fl" ><image lazy-load="true" class="buyIcon wxIcon" src="{{imgHost}}pay_08.png" /></view>
+      <view class="bm-info din fl" >
+        <text class="db">微信支付</text>
+      </view>
+      <view class=" din fl" >
+        <icon class="bm-btn" wx:if="{{paytype == 1}}" type="success" size="36rpx" />
+        <view class="bm-btn no-btn" wx:else  ></view>
+      </view>
+  </view>
+</view>
 <view class='footer'>
   <view class='total'><text class='total_text'>总计金额：</text><text class='total_price'>￥{{stat.total_price}}</text></view>
 	<navigator hover-class="none" open-type="navigateBack" delta="1">
@@ -73,7 +96,8 @@
     </view>
     <view >
       <button class="hp-else din fl" plain="true" bindtap="selsite"  >选择其他地址</button>
-      <button bindtap="showbuypup" class="hp-confirm din fl" >地址确定</button>
+      <!-- <button bindtap="showbuypup" class="hp-confirm din fl" >地址确定</button> -->
+      <button bindtap="gobuy" class="hp-confirm din fl" >地址确定</button>
     </view>
   </view>
 </view>
@@ -90,7 +114,7 @@
     </view>
   </view>
 </view>
-<view class="cobuy" wx:if="{{buypup}}">
+<!-- <view class="cobuy" wx:if="{{buypup}}">
   <view class="fill" bindtap="hidepay" ></view>
   <view class="buymoney">
     <view class="bm-tit" >支付方式</view>
@@ -123,7 +147,7 @@
       <view bindtap="gobuy" class="ba-btn din fr" >去付款</view>
     </view>
   </view>
-</view>
+</view> -->
 <!-- <view class='mask' bindtap='hideModel' wx:if="{{isShow}}">
   <view class='addres_pop' catchtap='maopao'>
     <scroll-view class='addres_list' scroll-y="true" >

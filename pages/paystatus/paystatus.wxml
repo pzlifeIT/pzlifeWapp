@@ -1,8 +1,12 @@
 <!--pages/paystatus/paystatus.wxml-->
 <view class="status">
 	<view class="pay-status fail" wx:if="{{status == 2}}">支付失败</view>
-	<view class="pay-status success" wx:if="{{status == 1}}">支付成功</view>
-	<view class="botton">
+  <view class="pay-status success" wx:if="{{status == 1}}">支付成功</view>
+  <view class="pay-hint" wx:if="{{status == 1}}">
+    <view >钻石再让利在发货后的第15天</view>
+    <view >自动到账，请在“我的商票”中查看</view>
+  </view>
+	<view class="botton {{status == 2?'mt':''}}">
 		<view class="bo-left" bindtap="goorder">查看订单</view>
 		<view class="bo-right" bindtap="gopay" wx:if="{{status == 2}}">重新支付</view>
 		<view class="bo-right" bindtap="goindex"  wx:if="{{status == 1}}">返回首页</view>
