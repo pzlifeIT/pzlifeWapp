@@ -105,6 +105,21 @@ page {
     width: 100%;
 }
 
+.wid50 {
+    position: relative;
+}
+
+.wid50::before {
+    position: absolute;
+    top: 14rpx;
+    right: 0;
+    content: '';
+    display: inline-block;
+    width: 1rpx;
+    height: 88rpx;
+    background-color: #f7f7f7;
+}
+
 .cont-no {
     border: none;
 }

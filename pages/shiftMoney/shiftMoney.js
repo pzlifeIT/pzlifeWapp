@@ -18,8 +18,7 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
-            imgHost: app.globalData.host.imgHost,
-            commission: app.globalData.userInfo.commission || 10000
+            imgHost: app.globalData.host.imgHost
         })
     },
     setmoney: function(e) {
@@ -56,6 +55,7 @@ Page({
                 money: that.data.reality || 0
             },
             success(res) {
+                app.getUserInfo()
                 wx.navigateTo({
                     url: './shiftSuccess/shiftSuccess'
                 })
@@ -98,7 +98,8 @@ Page({
     onShow: function() {
         this.setData({
             money: '',
-            reality: 0.00
+            reality: 0.00,
+            commission: app.globalData.userInfo.commission
         })
     },
 

@@ -275,6 +275,7 @@ Page({
                     goodData.integral_active = res.goods_sku[0].integral_active
                     goodData.sku_name = res.goods_sku[0].sku_name
                     goodData.id = res.goods_sku[0].id
+                    goodData.brokerage = res.goods_sku[0].brokerage
                     buy = true
                     attr.push(res.goods_spec[0].list[0].id)
                     if (parseInt(res.goods_sku[0].stock) < 1) {

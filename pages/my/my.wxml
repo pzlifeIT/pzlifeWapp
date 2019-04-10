@@ -51,7 +51,7 @@
                 <view class="one-title">佣金总额
                     <text>(元)</text>
                 </view>
-                <view class="one-price">{{boss.commission}}</view>
+                <view class="one-price">{{boss.commission_all}}</view>
             </view>
         </view>
         <view class="line-one wid50" bindtap="gocommiss">

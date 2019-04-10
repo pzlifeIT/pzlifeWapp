@@ -103,10 +103,11 @@ page {
 
 .goods_detail {
     display: inline-block;
-    height: 100%;
+    width: 470rpx;
+    height: 176rpx;
     margin-left: 19rpx;
     vertical-align: top;
-    padding-top: 41rpx;
+    padding-top: 40rpx;
 }
 
 .goods_detail .goods_title {
@@ -114,6 +115,9 @@ page {
     color: #202020;
     display: block;
     margin-bottom: 17rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .goods_detail .goods_subtitle {
@@ -121,6 +125,9 @@ page {
     color: #888888;
     display: block;
     margin-bottom: 25rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .goods_detail .price {
@@ -151,16 +158,31 @@ page {
     line-height: 80rpx;
     position: relative;
     background-color: #fff;
+    overflow: hidden;
+}
+
+.stat .rebate {
+    height: 120rpx;
 }
 
 .sum_text {
-    position: absolute;
-    left: 9rpx;
+    float: left;
+    margin-left: 10rpx;
 }
 
 .sum_price {
-    position: absolute;
-    right: 12rpx;
+    float: right;
+    margin-right: 12rpx;
+}
+
+.small {
+    width: 100%;
+    margin-top: -10rpx;
+    line-height: 40rpx;
+    text-indent: 10rpx;
+    font-size: 26rpx;
+    color: #999;
+    color: #e61f18;
 }
 
 .footer {
@@ -524,11 +546,6 @@ radio-group {
 
 .moneynum {
     font-weight: bold;
-}
-
-.small {
-    font-size: 24rpx;
-    color: #999;
 }
 
 .payment {

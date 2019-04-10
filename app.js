@@ -75,7 +75,6 @@ App({
             nologin: true,
             success(res) {
                 that.globalData.userInfo = res.data
-                console.log(that.globalData.userInfo)
             }
         })
     },
@@ -88,7 +87,6 @@ App({
         })
     },
     indexmain: function(id) {
-        console.log(this.globalData.con_id)
         this.wxrequest({
             url: 'user/indexmain',
             data: {
@@ -125,11 +123,9 @@ App({
             content: data.content || '',
             success(res) {
                 if (res.confirm) {
-                    console.log('用户点击确定')
                     typeof data.success == 'function' ? data.success() : ''
                 } else if (res.cancel) {
                     typeof data.cancel == 'function' ? data.cancel() : ''
-                    console.log('用户点击取消')
                 }
             }
         })
@@ -175,7 +171,6 @@ App({
                 'content-type': 'application/json' // 默认值
             },
             success(res) {
-                console.log(res)
                 wx.hideLoading()
                 if (res.statusCode == 200) {
                     let result = JSON.parse(res.data);
