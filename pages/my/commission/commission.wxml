@@ -1,52 +1,54 @@
 <view class="bg">
     <image lazy-load="true" src="{{imgHost}}bg.png"></image>
     <view class="balance-text">佣金余额</view>
-    <view class="balance-num">1000
+    <view class="balance-num">{{commission.commission || 0}}
         <text>元</text>
     </view>
     <view class="three" >
         <view class="three-total">佣金总额
             <text>(元)</text>
-            <view>20000</view>
+            <view>{{commission.commission_all || 0}}</view>
         </view>
         <view class="three-total">已提现
             <text>(元)</text>
-            <view>20000</view>
+            <view>{{commission.commission_extract || 0}}</view>
         </view>
         <view class="three-used">已转商票
             <text>(元)</text>
-            <view>3000</view>
+            <view>{{commission.commission_to_balance || 0}}</view>
         </view>
     </view>
 </view>
 <view class="title" >佣金明细</view>
-<view class="list" >
-    <view class="list-one">
-        <view class="touxiang">
-            <image src=""></image>
-        </view>
-        <view class="one-info">
-            <view class="shouyi">订单收益
-                <text class="order-money drz-money">+5600</text>
-            </view>
-            <view class="one-title">我十一速
-                <text>2019-03-13 12:00:00</text>
-            </view>
-            <navigator url="/pages/order/orderDetail/orderDetail?orderno={{item.order_on}}">
-                <view class="order">订单号:
-                    <text>20184562144016192</text>
-                    <image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
-                </view>
-            </navigator>
-        </view>
-    </view>
-    <view class="detail-doim">
-        <view class="list-left">
-            <view class="doim-title">钻石邀请奖励</view>
-            <view class="doim-time">2019-10-15 10:26:50</view>
-        </view>
-        <view class="list-right active">+60 元</view>
-    </view>
+<view class="list" wx:for="{{list}}" >
+  <view wx:for="{{item}}" >
+      <view class="list-one">
+          <view class="touxiang">
+              <image src=""></image>
+          </view>
+          <view class="one-info">
+              <view class="shouyi">订单收益
+                  <text class="order-money drz-money">+5600</text>
+              </view>
+              <view class="one-title">我十一速
+                  <text>2019-03-13 12:00:00</text>
+              </view>
+              <navigator url="/pages/order/orderDetail/orderDetail?orderno={{item.order_on}}">
+                  <view class="order">订单号:
+                      <text>20184562144016192</text>
+                      <image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
+                  </view>
+              </navigator>
+          </view>
+      </view>
+      <view class="detail-doim">
+          <view class="list-left">
+              <view class="doim-title">钻石邀请奖励</view>
+              <view class="doim-time">2019-10-15 10:26:50</view>
+          </view>
+          <view class="list-right active">+60 元</view>
+      </view>
+  </view>
 </view>
 <view class="not"  wx:if="{{1 == 2}}">
     <view class="not-case" >

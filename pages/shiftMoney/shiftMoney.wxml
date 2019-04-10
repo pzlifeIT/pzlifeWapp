@@ -2,7 +2,7 @@
 <view class="shiftMoney">
   <text class="sm-header" >转入金额</text>
   <view class="sm-input">
-    <input class="input" type="number" value="{{money}}" bindinput="setmoney"  />
+    <input class="input" type="digit" value="{{money}}" bindinput="setmoney"  />
     <view class="sm-img din fr" bindtap="clear" > <image lazy-load="true" class="img" src="{{imgHost}}clear_03.png" alt="" /></view>
   </view>
   <view>
