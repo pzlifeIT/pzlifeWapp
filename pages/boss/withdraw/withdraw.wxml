@@ -19,7 +19,7 @@
         <view class="with-text">提现金额</view>
         <view class="with-area">
             <view class="symbol">￥</view>
-            <input class="input" type="number" value="{{money}}" bindinput="watchInput"/>
+            <input class="input" type="digit" value="{{money}}" bindinput="watchInput"/>
             <icon type="clear" bindtap="clear" size="18"/>
         </view>
     </view>

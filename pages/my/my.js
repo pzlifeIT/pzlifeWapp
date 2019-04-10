@@ -277,6 +277,11 @@ Page({
              url:"/pages/my/earnings/earnings"
         })
     },
+    gototalcommiss:function(){
+      wx.navigateTo({
+          url: "/pages/boss/commission/commission"
+      })
+    },
     goInte: function(e) {
         let int = e.currentTarget.dataset.int
         wx.navigateTo({
