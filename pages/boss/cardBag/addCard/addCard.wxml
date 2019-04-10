@@ -36,7 +36,8 @@
 <view class="two-div">
   <view class="div left" bindtap="back">取消</view>
   <view class="mid"></view>
-  <view class="div right" bindtap="addCard">保存</view>
+  <view class="div right" bindtap="editCard" wx:if="{{stype == 1}}">保存</view>
+  <view class="div right" bindtap="addCard" wx:else>保存</view>
 </view>
 <view class="pop" id="pop" wx:if="{{yh}}">
   <scroll-view >
