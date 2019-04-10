@@ -17,6 +17,7 @@ Page({
         let that = this
       app.wxrequest({
           url:"user/getUserBankcards",
+          noloading:true,
           success(res){
               that.dispose(res.user_bank)
             that.setData({
