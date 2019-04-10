@@ -1,63 +1,60 @@
-<!--pages/boss/cardBag/addCard/addCard.wxml-->
+<!-- pages/boss/cardBag/addCard/addCard.wxml -->
 <view class="one-input top">
-    <view class="text">ÕæÊµĞÕÃû</view>
-    <input class="in-text" type="text" placeholder="ÇëÊäÈë±¾ÈËÕæÊµĞÕÃû£¬·ñÔòÎŞĞ§" placeholder-class="pla-class" value="{{trueName}}" bindinput="watchInput" data-model="trueName"/>
-    <view class="xing" wx:if="{{error_fields.user_name == 1}}">*</view>
+  <view class="text">çœŸå®å§“å</view>
+  <input class="in-text" type="text" placeholder="è¯·è¾“å…¥æœ¬äººçœŸå®å§“åï¼Œå¦åˆ™æ— æ•ˆ" placeholder-class="pla-class" value="{{trueName}}" bindinput="watchInput" data-model="trueName" />
+  <view class="xing" wx:if="{{error_fields.user_name == 1}}">*</view>
 </view>
 <view class="one-input top" bindtap="popYh">
-    <view class="text">¿ª»§ÒøĞĞ</view>
-    <input class="in-text yh-text" type="text" disabled placeholder="ÇëÑ¡Ôñ¿ª»§ÒøĞĞ" placeholder-class="pla-class"  value="{{bankName}}" bindinput="watchInput" data-model="bankName" />
-    <view class="jt">
-        <image class="jt" wx:if="{{!yh}}" lazy-load="true" src="{{imgHost}}jt_down.png"></image>
-        <image class="jt" wx:else lazy-load="true" src="{{imgHost}}jt_up.png"></image>
-    </view>
-    <!--<view class="xing yh-xing" wx:if="{{error_fields.admin_bank == 1}}">*</view>-->
+  <view class="text">å¼€æˆ·é“¶è¡Œ</view>
+  <input class="in-text yh-text" type="text" disabled placeholder="è¯·é€‰æ‹©å¼€æˆ·é“¶è¡Œ" placeholder-class="pla-class" value="{{bankName}}" bindinput="watchInput" data-model="bankName" />
+  <view class="jt">
+    <image class="jt" wx:if="{{!yh}}" lazy-load="true" src="{{imgHost}}jt_down.png"></image>
+    <image class="jt" wx:else lazy-load="true" src="{{imgHost}}jt_up.png"></image>
+  </view>
+  <!-- <view class="xing yh-xing" wx:if="{{error_fields.admin_bank == 1}}">*</view> -->
 </view>
 <view class="one-input top">
-    <view class="text">¿ª»§Ö§ĞĞ</view>
-    <input class="in-text" type="text" placeholder="ÀıÈç£ºÉÏº£³¤ÄşÖ§ĞĞ" value="{{bankZiName}}" placeholder-class="pla-class" bindinput="watchInput" data-model="bankZiName" />
-    <view class="xing" wx:if="{{error_fields.bank_add == 1}}">*</view>
+  <view class="text">å¼€æˆ·æ”¯è¡Œ</view>
+  <input class="in-text" type="text" placeholder="ä¾‹å¦‚ï¼šä¸Šæµ·é•¿å®æ”¯è¡Œ" value="{{bankZiName}}" placeholder-class="pla-class" bindinput="watchInput" data-model="bankZiName" />
+  <view class="xing" wx:if="{{error_fields.bank_add == 1}}">*</view>
 </view>
 <view class="one-input top">
-    <view class="text">ÒøĞĞ¿¨ºÅ</view>
-    <input class="in-text" type="number" maxlength="19" value="{{cardNum}}" placeholder="ÇëÊäÈë15-19Î»±¾ÈËÒøĞĞ¿¨ºÅ£¬·ñÔòÎŞĞ§" placeholder-class="pla-class" bindinput="watchInput" data-model="cardNum"/>
-    <view class="xing" wx:if="{{error_fields.bank_card == 1}}">*</view>
+  <view class="text">é“¶è¡Œå¡å·</view>
+  <input class="in-text" type="number" maxlength="19" value="{{cardNum}}" placeholder="è¯·è¾“å…¥15-19ä½æœ¬äººé“¶è¡Œå¡å·ï¼Œå¦åˆ™æ— æ•ˆ" placeholder-class="pla-class" bindinput="watchInput" data-model="cardNum" />
+  <view class="xing" wx:if="{{error_fields.bank_card == 1}}">*</view>
 </view>
 <view class="one-input top">
-    <view class="text">ÊÖ»úºÅÂë</view>
-    <input class="in-text" type="number" maxlength="11" value="{{phone}}" placeholder="ÇëÊäÈëÔ¤ÁôÊÖ»úºÅÂë" placeholder-class="pla-class" bindinput="watchInput" data-model="phone"/>
-    <view class="xing" wx:if="{{error_fields.bank_mobile == 1}}">*</view>
+  <view class="text">æ‰‹æœºå·ç </view>
+  <input class="in-text" type="number" maxlength="11" value="{{phone}}" placeholder="è¯·è¾“å…¥é¢„ç•™æ‰‹æœºå·ç " placeholder-class="pla-class" bindinput="watchInput" data-model="phone" />
+  <view class="xing" wx:if="{{error_fields.bank_mobile == 1}}">*</view>
 </view>
 <view class="one-input top">
-    <view class="text">ÑéÖ¤Âë</view>
-    <input class="in-text code-input" type="number" maxlength="6" placeholder="ÇëÊäÈëÑéÖ¤Âë" placeholder-class="pla-class" bindinput="watchInput" data-model="code"/>
-    <button class="code" disabled="{{disabled}}" bindtap="getCode">{{codeText}}</button>
+  <view class="text">éªŒè¯ç </view>
+  <input class="in-text code-input" type="number" maxlength="6" placeholder="è¯·è¾“å…¥éªŒè¯ç " placeholder-class="pla-class" bindinput="watchInput" data-model="code" />
+  <button class="code" disabled="{{disabled}}" bindtap="getCode">{{codeText}}</button>
 </view>
-
 <view class="two-div">
-    <view class="div left" bindtap="back">È¡Ïû</view>
-    <view class="mid"></view>
-    <view class="div right" bindtap="addCard">±£´æ</view>
+  <view class="div left" bindtap="back">å–æ¶ˆ</view>
+  <view class="mid"></view>
+  <view class="div right" bindtap="addCard">ä¿å­˜</view>
 </view>
-
 <view class="pop" id="pop" wx:if="{{yh}}">
-    <scroll-view style="height: 844rpx">
-            <radio-group catchchange="radioChange">
-                <label class="one-yh" wx:for="{{bankList}}">
-                    <radio color="#e61f18" value="{{item.id}}" bindtap="getBankName" data-name="{{item.bank_name}}" class="radio">
-                        {{item.bank_name}}
-                    </radio>
-                </label>
-            </radio-group>
-    </scroll-view>
+  <scroll-view >
+    <radio-group catchchange="radioChange">
+      <label class="one-yh" wx:for="{{bankList}}">
+        <radio color="#e61f18" value="{{item.id}}" bindtap="getBankName" data-name="{{item.bank_name}}" class="radio">
+          {{item.bank_name}}
+        </radio>
+      </label>
+    </radio-group>
+  </scroll-view>
 </view>
-
 <view class="mask" wx:if="{{mask}}">
-    <view class="hint">
-        <view class="content">
-            <view class="title">²µ»ØÔ­Òò</view>
-            <view class="content-text">{{message}}</view>
-        </view>
-        <view class="know" bindtap="know">ÎÒÖªµÀÁË</view>
+  <view class="hint">
+    <view class="content">
+      <view class="title">é©³å›åŸå› </view>
+      <view class="content-text">{{message}}</view>
     </view>
+    <view class="know" bindtap="know">æˆ‘çŸ¥é“äº†</view>
+  </view>
 </view>

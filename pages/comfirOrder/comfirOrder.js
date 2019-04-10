@@ -114,9 +114,7 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
-            imgHost: app.globalData.host.imgHost
-        });
-        this.setData({
+            imgHost: app.globalData.host.imgHost,
             skus: options.skus,
             siteid: app.globalData.addressId,
             num: options.num || 1,

@@ -44,13 +44,13 @@ Page({
         let that = this
         let time = setInterval(function() {
             if (app.globalData.userInfo) {
-                clearInterval(time)
                 that.setData({
                     bossname: app.globalData.userInfo.nick_name,
                     head: app.globalData.userInfo.avatar
                 })
+                clearInterval(time)
             }
-        }, 1000);
+        }, 100);
     },
     case: function(e) {
         let i = e.currentTarget.dataset.i

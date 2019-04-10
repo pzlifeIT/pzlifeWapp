@@ -77,9 +77,13 @@
 <view class='footer'>
   <view class='total'><text class='total_text'>总计金额：</text><text class='total_price'>￥{{stat.total_price}}</text></view>
 	<navigator hover-class="none" open-type="navigateBack" delta="1">
-  <view class='back'>
+  <view class='back' wx:if="{{quick == 1}}">
     <image lazy-load="true" src='{{imgHost}}back_jt_03.png'></image>
     <text>返回上一页</text>
+  </view>
+  <view class='back' wx:else>
+    <image class="cartImg" lazy-load="true" src='{{imgHost}}cartwhite.png'></image>
+    <text>返回购物车</text>
   </view>
 	</navigator>
   <view class='pay' bindtap="showaddres" >去付款</view>

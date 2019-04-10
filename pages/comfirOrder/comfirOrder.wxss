@@ -235,6 +235,13 @@ page {
     margin-top: 12rpx;
 }
 
+.back .cartImg {
+    width: 40rpx;
+    display: block;
+    margin: auto;
+    margin-top: 12rpx;
+}
+
 .pay {
     width: 220rpx;
     height: 92rpx;
