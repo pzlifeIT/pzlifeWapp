@@ -8,103 +8,119 @@ Page({
     data: {
         page: 1,
         pageNum: 10,
-        reach:true,
-        list:[],
-        imgHost:"",
-        num:1
+        reach: true,
+        list: [],
+        imgHost: "",
+        num: 1,
+        commission: {}
     },
-    clickSelect:function(e){
+    clickSelect: function(e) {
         let num = parseInt(e.currentTarget.dataset.num)
         this.setData({
-            num:num
+            num: num
         })
     },
-    getMerchants() {
+    getshopcommission() {
         let that = this
         app.wxrequest({
-            url: "user/getMerchants",
+            url: "user/getshopcommission",
             data: {
                 page: that.data.page || 1,
                 pageNum: that.data.pageNum || 10
             },
             success(res) {
-                console.log(res,123)
-                if (res.data.length < 10){
+                if (res.data.length < 10) {
                     that.setData({
-                        reach:false
+                        reach: false
                     })
                 }
-                if (res.data.length > 0){
+                if (res.data.length > 0) {
                     let list = that.data.list
                     list.push(res.data)
                     that.setData({
-                        list:list,
-                        page:that.data.page + 1
+                        list: list,
+                        page: that.data.page + 1
                     })
                 }
             },
-            error(res){
-                console.log(res,456)
+            error(res) {
+
             }
         })
     },
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-        this.getMerchants()
+    onLoad: function(options) {
+        this.getshopcommission()
         this.setData({
-            imgHost:app.globalData.host.imgHost
+            imgHost: app.globalData.host.imgHost
+        })
+        this.getshopcommissionsum()
+    },
+    getshopcommissionsum() {
+        let that = this
+        app.wxrequest({
+            url: "user/getshopcommissionsum",
+            success(res) {
+                that.setData({
+                    commission: res || {}
+                })
+            },
+            error(res) {
+                app.toast({
+                    title: '获取失败'
+                })
+            }
         })
     },
-
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {
+    onReady: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
+    onShow: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function () {
+    onHide: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {
+    onUnload: function() {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
+    onReachBottom: function() {
         if (!this.data.reach) return
-        this.getMerchants()
+        this.getshopcommission()
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function () {
+    onShareAppMessage: function() {
 
     }
 })

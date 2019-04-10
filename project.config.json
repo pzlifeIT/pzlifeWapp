@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 46,
+			"current": 47,
 			"list": [
 				{
 					"id": 0,
@@ -354,6 +354,14 @@
 					"id": -1,
 					"name": "须知",
 					"pathName": "pages/my/notice/notice",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "佣金余额",
+					"pathName": "pages/my/commission/commission",
+					"query": "",
 					"scene": null
 				}
 			]
