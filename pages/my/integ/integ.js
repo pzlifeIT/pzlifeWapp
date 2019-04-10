@@ -1,4 +1,4 @@
-// pages/my/integ/integ.js
+// pages/boss/integral/integral.js
 const app = getApp()
 Page({
 
@@ -6,72 +6,98 @@ Page({
      * 页面的初始数据
      */
     data: {
-        scroll_height: 0,
-        inte: [],
-        integ: 0,
-        imgHost: ''
+        reach:true,
+        page:1,
+        pageNum:10,
+        list:[],
+        imgHost:"",
+        int:0
     },
+    getInte: function () {
+        let that = this
+        app.wxrequest({
+            url:"user/getintegraldetail",
+            data: {
+                page:that.data.page || 1,
+                page_num:that.data.pageNum || 10
+            },
+            nocon:false,
+            success(res){
+                if (res.data.length < 10){
+                    that.setData({
+                        reach:false
+                    })
+                }
+                if (res.data.length > 0){
+                    let list = that.data.list
+                    list.push(res.data)
+                    that.setData({
+                        list:list,
+                        page:that.data.page + 1
+                    })
+                }
+            }
 
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
-        let windowHeight = wx.getSystemInfoSync().windowHeight,
-            windowWidth = wx.getSystemInfoSync().windowWidth,
-            integ = options.integ
+    onLoad: function (options) {
+        this.getInte()
         this.setData({
-            scroll_height: windowHeight * 750 / windowWidth - 308 - 30,
-            integ: integ,
-            imgHost: app.globalData.host.imgHost
+            imgHost:app.globalData.host.imgHost,
+            int:options.int
         })
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
-
+    onReachBottom: function () {
+        if (!this.data.reach) return
+        this.getInte()
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
 
     }
 })

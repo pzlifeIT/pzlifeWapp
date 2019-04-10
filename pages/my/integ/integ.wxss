@@ -11,6 +11,9 @@ page{
 	background-repeat: none;
 	background-size: 750rpx 240rpx;
 	overflow: hidden;
+	position: fixed;
+	top: 0;
+	z-index: 1;
 }
 .balance-text{
 	width: 750rpx;
@@ -33,94 +36,86 @@ page{
 	display: inline-block;
 	margin-left:11rpx ;
 }
-.detail{
+.inte-title{
 	width: 750rpx;
-	overflow: hidden;
-}
-.detail-head{
-	background: #F7F7F7;
-	height: 68rpx;
-	width: 750rpx;
+	height: 75rpx;
 	text-align: center;
-	line-height: 68rpx;
-	color: #202020;
+	line-height: 75rpx;
 	font-size: 32rpx;
+	color: #202020;
+	background: #F7F7F7;
+	margin-top: 240rpx;
+	position: fixed;
+	top: 0;
 }
-::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-    color: transparent;
-}
-
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: #f7f7f7;
-}
-.detail-one{
+.list{
 	width: 750rpx;
-	height: 180rpx;
-	border-bottom: 1rpx solid #F7F7F7;
-	background: #fff;
+	height: auto;
+	overflow: auto;
+	margin-top: 315rpx;
 }
-.list-left{
-	width: 70%;
-	height: 150rpx;
-	margin-left: 12rpx;
-	padding-top: 30rpx;
+.list-one{
+	width: 750rpx;
+	height: auto;
+	background: #FFFFFF;
+	overflow: auto;
+	margin-bottom: 2rpx;
+}
+.one-line{
+	width: 750rpx;
+	padding: 0 10rpx;
+	box-sizing: border-box;
+	height: auto;
+	overflow: auto;
+	margin-top: 29rpx;
+}
+.line-left{
 	float: left;
-}
-.list-left .title{
 	color: #202020;
 	font-size: 30rpx;
-	margin-bottom: 12rpx;
 }
-.list-left .order{
-	color: #666;
-	font-size: 24rpx;
-	margin-bottom: 12rpx;
-}
-.list-left .time{
-	color: #666;
-	font-size: 24rpx;
-}
-.list-right{
-	width: 20%;
-	height: 180rpx;
+.line-right{
 	float: right;
-	color: #202020;
+	color: #404040;
 	font-size: 28rpx;
-	text-align: center;
-	line-height: 180rpx;
 }
-.active{
-	color: #E61F18;
+.line-time{
+	color: #666666;
+	font-size: 26rpx;
+	float: left;
+}
+.line-inte{
+	float: right;
+	font-size: 26rpx;
+	color: #666666;
+}
+.footer{
+	margin-top: 10rpx;
+	margin-bottom: 20rpx;
 }
 .not{
 	width: 750rpx;
 	height: 70%;
 	overflow: hidden;
-	display: flex;
-	justify-content: center;	
-	align-items: center;
+	margin: 50% 40%;
+
 }
 .not-case{
-	width: 156rpx;
+	width: 199rpx;
 	overflow: hidden;
 }
 .not image{
-	width: 156rpx;
-	height: 200rpx;
+	width: 199rpx;
+	height: 138rpx;
 	margin-bottom: 29rpx;
 }
 .not .text{
-	width: 156rpx;
+	width: 199rpx;
 	overflow: hidden;
 	text-align: center;
 	color: #D6D6D6;
 	font-size: 28rpx;
 }
-
 
 
 

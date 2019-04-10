@@ -92,7 +92,7 @@
                 <view class="one-price">0</view>
             </view>
         </view>
-        <view class="line-one" bindtap="goInte">
+        <view class="line-one" bindtap="goInte" data-int="{{userInfo.integral}}">
             <view class="one-content cont-no">
                 <view class="one-title">购物积分
                     <text>(分)</text>

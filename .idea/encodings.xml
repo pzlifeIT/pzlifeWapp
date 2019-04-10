@@ -3,5 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/pages/boss/cardBag/addCard/addCard.wxml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/pages/boss/withdraw/record/record.wxml" charset="UTF-8" />
   </component>
 </project>

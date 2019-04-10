@@ -277,9 +277,10 @@ Page({
              url:"/pages/my/earnings/earnings"
         })
     },
-    goInte: function() {
+    goInte: function(e) {
+        let int = e.currentTarget.dataset.int
         wx.navigateTo({
-            url: "/pages/my/integral/integral"
+            url: "/pages/my/integ/integ?int="+int
         })
     },
     /**
