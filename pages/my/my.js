@@ -251,12 +251,12 @@ Page({
 
     gocommiss: function() {
         wx.navigateTo({
-            url: "/pages/boss/commission/commission"
+            url: "/pages/my/commission/commission"
         })
     },
     join: function() {
         wx.navigateTo({
-            url: "/pages/boss/join/join"
+            url: "/pages/my/join/join"
         })
     },
     goearn: function(e) {
@@ -265,12 +265,13 @@ Page({
             entered = e.currentTarget.dataset.entered,
             all = e.currentTarget.dataset.all
         wx.navigateTo({
-            url: "/pages/boss/earnings/earnings?earn=" + earn + "&all=" + all + "&enter=" + enter + "&entered=" + entered
+            // url: "/pages/boss/earnings/earnings?earn=" + earn + "&all=" + all + "&enter=" + enter + "&entered=" + entered
+             url:"/pages/my/earnings/earnings"
         })
     },
     goInte: function() {
         wx.navigateTo({
-            url: "/pages/boss/integral/integral"
+            url: "/pages/my/integral/integral"
         })
     },
     /**

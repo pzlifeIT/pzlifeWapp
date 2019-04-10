@@ -1,28 +1,33 @@
 <!--pages/search/search.wxml-->
 <view class='search_head'>
-	<view class='search'>
-		<icon type='search' class='search_icon fl' size='34rpx' />
-		<input class="search_cate din fl" type="text" focus="{{true}}" placeholder="搜索品质方案" value="{{search}}" confirm-type="search"
-		 placeholder-class="pl-class" bindinput="inputwacth" bindconfirm="getSearchGoods"/>
-	</view>
-	<view class="sea-button" bindtap="getSearchGoods">
-		搜索
-	</view>
+    <view class='search'>
+        <icon type='search' class='search_icon fl' size='34rpx'/>
+        <input class="search_cate din fl" type="text" focus="{{true}}" placeholder="搜索品质方案" value="{{search}}"
+               confirm-type="search"
+               placeholder-class="pl-class" bindinput="inputwacth" bindconfirm="getSearchGoods"/>
+    </view>
+    <view class="sea-button" bindtap="getSearchGoods">
+        搜索
+    </view>
 </view>
 <!-- 搜索历史 -->
 <view class="history-wai" wx:if="{{goodsList.length<=0 || search==''}}">
-	<view class="history">
-		<view class="history-head">
-			<text class="head-left">最近搜索</text>
-			<view class="del" bindtap="del">
-				<image lazy-load="true" class="del-img" src="{{imgHost}}del.png"></image>
-			</view>
-		</view>
-		<view class="history-list">
-			<view class="history-one" wx:for="{{searchList}}" wx:key="index" bindtap="clickSearch" data-keyword="{{item}}"><text
-				 class="text">{{item}}</text></view>
-		</view>
-	</view>
+    <view class="history">
+        <view class="history-head">
+            <text class="head-left">最近搜索</text>
+            <view class="del" bindtap="del">
+                <image lazy-load="true" class="del-img" src="{{imgHost}}del.png"></image>
+            </view>
+        </view>
+        <view class="history-list">
+            <view class="history-one" wx:for="{{searchList}}" wx:key="index" bindtap="clickSearch"
+                  data-keyword="{{item}}">
+                <text
+                        class="text">{{item}}
+                </text>
+            </view>
+        </view>
+    </view>
 </view>
 <!-- 大家都在搜 -->
 <!-- <view class="history-wai">
@@ -46,18 +51,20 @@
 		</view>
 	</view>
 </view> -->
-<view class="nest" wx:for='{{goodsList}}' wx:if="{{goodsList[index].length>=1 && search!=''}}">
-	<view class='goods' wx:for="{{item}}" wx:key="{{item.id}}">
-		<navigator url='/pages/goods/detail?goodid={{item.id}}' >
-			<view class='one_goods'>
-				<view class='img'>
-					<image class='goods_img' src='{{item.image+"?imageMogr2/thumbnail/370x"}}'></image>
-				</view>
-				<text class='title'>{{item.goods_name}}</text>
-				<text class='subtitle'>{{item.subtitle}}</text>
-				<text class='price'>￥{{item.min_retail_price}}</text>
-				<view class="vipprice">钻石再让利 {{item.min_brokerage}}</view>
-			</view>
-		</navigator>
-	</view>
+<view class="nest" wx:if="{{goodsList.length>=1 && search!=''}}">
+    <block  wx:for='{{goodsList}}'>
+        <view class='goods' wx:for="{{item}}" wx:key="{{item.id}}">
+            <navigator url='/pages/goods/detail?goodid={{item.id}}'>
+                <view class='one_goods'>
+                    <view class='img'>
+                        <image class='goods_img' src='{{item.image+"?imageMogr2/thumbnail/370x"}}'></image>
+                    </view>
+                    <text class='title'>{{item.goods_name}}</text>
+                    <text class='subtitle'>{{item.subtitle}}</text>
+                    <text class='price'>￥{{item.min_retail_price}}</text>
+                    <view class="vipprice">钻石再让利 {{item.min_brokerage}}</view>
+                </view>
+            </navigator>
+        </view>
+    </block>
 </view>

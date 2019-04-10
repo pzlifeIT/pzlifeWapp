@@ -1,4 +1,21 @@
 <!--pages/boss/case/case.wxml-->
+<view class="circle-header">
+    <view class="ch-statistics">
+        <view class="ch-total">
+            <text class="ct-text db unit">商票总额</text>
+            <text class="ct-num db">{{boss.balance_all}}</text>
+        </view>
+        <view class="ch-half ch-left {{i == 3 ?'selected':''}}" bindtap="clickDiv" data-i="3">
+            <text class="db ch-name unit">商票余额</text>
+            <text class="db ch-num">{{boss.balance}}</text>
+        </view>
+        <view class="ch-half ch-right {{i == 1 ?'selected':''}}" bindtap="clickDiv" data-i="1">
+            <text class="db ch-name unit">已使用商票</text>
+            <text class="db ch-num">{{boss.balance_use}}</text>
+        </view>
+    </view>
+    <view class="bottom-wire"></view>
+</view>
 <view class="title" wx:if="{{detailList.length > 0}}">
     商票明细
 </view>

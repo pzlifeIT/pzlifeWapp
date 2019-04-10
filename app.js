@@ -123,6 +123,9 @@ App({
         wx.showModal({
             title: data.title || '',
             content: data.content || '',
+            confirmColor:data.confirmColor || "",
+            showCancel:data.showCancel || true,
+            confirmText:data.confirmText || "确定",
             success(res) {
                 if (res.confirm) {
                     console.log('用户点击确定')

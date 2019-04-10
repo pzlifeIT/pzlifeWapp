@@ -44,7 +44,7 @@
     </view>
     <!-- 新品上市 -->
     <view class="newpro" wx:if="{{newGoods.is_show == 1}}" style="order: {{newGoods.model_order}}">
-        <image src=""></image>
+
         <view class="title">
             <view class="newpro-text">{{newGoods.title}}</view>
             <view class="new-more" bindtap="goUrl" data-jump="{{newGoods.jump_type}}"

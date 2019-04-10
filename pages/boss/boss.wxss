@@ -350,5 +350,8 @@ page{
 	height: 46rpx;
 	background: #d6d6d6;
 }
-
+.click{
+	display: inline-block;
+	margin: 0 auto;
+}
 

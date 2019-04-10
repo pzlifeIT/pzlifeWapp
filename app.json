@@ -47,7 +47,14 @@
         "pages/my/join/join",
         "pages/my/earnings/earnings",
         "pages/my/commission/commission",
-        "pages/boss/commission/commission"
+        "pages/boss/commission/commission",
+        "pages/boss/changeCase/changeCase",
+        "pages/boss/cardBag/cardBag",
+        "pages/boss/cardBag/addCard/addCard",
+        "pages/boss/withdraw/withdraw",
+        "pages/boss/withdraw/selectCard/selectCard",
+        "pages/boss/withdraw/record/record",
+        "pages/boss/withdraw/submitStatus/submitStatus"
     ],
     "window": {
         "backgroundTextStyle": "dark",

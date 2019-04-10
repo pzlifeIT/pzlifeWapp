@@ -31,6 +31,15 @@ Page({
             huiyuan:[],
             qudao:[]
         })
+        if (div == 2){
+            wx.setNavigationBarTitle({
+                title: '已入账'
+            });
+        } else if(div == 1){
+            wx.setNavigationBarTitle({
+                title: '待入账'
+            });
+        }
         this.getEarnings(div,this.data.num)
     },
     /**
@@ -42,14 +51,14 @@ Page({
             enter:options.enter,
             all:options.all
         })
-        if (options.earn == 1) {
+        if (options.earn == 2) {
             wx.setNavigationBarTitle({
                 title: '已入账'
             });
            this.setData({
                div:parseInt(options.earn)
            })
-        } else if (options.earn == 2) {
+        } else if (options.earn == 1) {
             wx.setNavigationBarTitle({
                 title: '待入账'
             });

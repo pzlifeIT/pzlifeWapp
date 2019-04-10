@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 42,
+			"current": 50,
 			"list": [
 				{
 					"id": 0,
@@ -327,6 +327,61 @@
 					"name": "店管-佣金",
 					"pathName": "pages/boss/commission/commission",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员-招商",
+					"pathName": "pages/my/join/join",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员-积分",
+					"pathName": "pages/my/integ/integ",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "卡包",
+					"pathName": "pages/boss/cardBag/cardBag",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 46,
+					"name": "添加银行卡",
+					"pathName": "pages/boss/cardBag/addCard/addCard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现",
+					"pathName": "pages/boss/withdraw/withdraw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现-选卡",
+					"pathName": "pages/boss/withdraw/selectCard/selectCard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现-记录",
+					"pathName": "pages/boss/withdraw/record/record",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现-申请结果",
+					"pathName": "pages/boss/withdraw/submitStatus/submitStatus",
 					"scene": null
 				}
 			]

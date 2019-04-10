@@ -43,7 +43,8 @@
                 <view class="one-title">经营性收益余额
                     <text>(元)</text>
                 </view>
-                <view class="one-price">{{boss.bonus}}</view>
+                <view class="one-price" wx:if="{{boss.bonus}}">{{boss.bonus}}</view>
+                <view class="one-price" wx:else>0</view>
             </view>
         </view>
         <view class="line-one" bindtap="gocommiss">
@@ -51,15 +52,17 @@
                 <view class="one-title">佣金余额
                     <text>(元)</text>
                 </view>
-                <view class="one-price">{{boss.commission}}</view>
+                <view class="one-price" wx:if="{{boss.commission}}">{{boss.commission}}</view>
+                <view class="one-price" wx:else>0</view>
             </view>
         </view>
         <view class="line-one"  bindtap="join">
             <view class="one-content cont-no">
-                <view class="one-title">招商代理余额
+                <view class="one-title">招商代理金额
                     <text>(元)</text>
                 </view>
-                <view class="one-price">{{boss.merchants}}</view>
+                <view class="one-price" wx:if="{{boss.merchants}}">{{boss.merchants}}</view>
+                <view class="one-price" wx:else>0</view>
             </view>
         </view>
     </view>
@@ -70,7 +73,8 @@
                 <view class="one-title">商票余额
                     <text>(元)</text>
                 </view>
-                <view class="one-price">{{userInfo.balance}}</view>
+                <view class="one-price" wx:if="{{userInfo.balance}}">{{userInfo.balance}}</view>
+                <view class="one-price" wx:else>0</view>
             </view>
         </view>
         <view class="line-one">
@@ -86,7 +90,8 @@
                 <view class="one-title">购物积分
                     <text>(分                                                                                   )</text>
                 </view>
-                <view class="one-price">{{userInfo.integral}}</view>
+                <view class="one-price" wx:if="{{userInfo.integral}}">{{userInfo.integral}}</view>
+                <view class="one-price" wx:else>0</view>
             </view>
         </view>
     </view>
@@ -122,7 +127,7 @@
             <image lazy-load="true" class="uoIcon" src="{{imgHost}}dd_09.png"/>
             <view class="or-num" wx:if="{{orderCount.rating > 0 && orderCount.rating < 99}}">{{orderCount.rating}}</view>
             <view class="or-num or-num-nine"  wx:if="{{orderCount.rating > 99}}">99+</view>
-            <text class="userText">待评价</text>
+            <text class="userText">已收货</text>
         </view>
     </view>
 </view>

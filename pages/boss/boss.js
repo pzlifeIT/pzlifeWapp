@@ -29,15 +29,28 @@ Page({
             }
         })
     },
+    cardbag:function(){
+      wx.navigateTo({
+          url:"cardBag/cardBag"
+      })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
         this.setData({
-            imgHost: app.globalData.host.imgHost,
-            bossname: options.name,
-            head: options.head
+            imgHost: app.globalData.host.imgHost
         })
+        let that = this
+        let time = setInterval(function(){
+            if (app.globalData.userInfo){
+                clearInterval(time)
+                that.setData({
+                    bossname: app.globalData.userInfo.nick_name,
+                    head:app.globalData.userInfo.avatar
+                })
+            }
+        },1000);
     },
     case: function (e) {
         let i = e.currentTarget.dataset.i
@@ -67,7 +80,7 @@ Page({
             this.setData({
                 popShouyi:true,
                 title:"经营性收益",
-                content:"个人购物的可分配利润的75%+普通会员可分配利润的75%+钻石会员可分配利润的15%+合伙人月经营性收益总额的15%"
+                content:"个人购物可分配利润的75%+普通会员购物可分配利润的75%+钻石会员购物获让利总额的15%+直接招商的合伙人月经营性收益总额的15%"
             })
         } else if (poptype == 4){
             this.setData({
@@ -109,8 +122,8 @@ Page({
         })
     },
     commission:function(){
-      app.toast({
-          title:"敬请期待"
+      wx.navigateTo({
+          url:"withdraw/withdraw"
       })
     },
     /**

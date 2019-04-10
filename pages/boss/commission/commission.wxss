@@ -43,7 +43,8 @@ page{
 
 .ch-half {
     display: inline-block;
-    width: 352rpx;
+    width: 240rpx;
+    /*width: 352rpx;*/
     height: 95rpx;
     background: rgba(255,255,255,0.6);
     border-radius: 10rpx 10rpx 0 0;
@@ -58,13 +59,20 @@ page{
 .selected .ch-name{
     margin-top: 14rpx;
 }
+/*.ch-left{*/
+    /*left: 20rpx;*/
+/*}*/
+/*.ch-right{*/
+    /*right: 20rpx;*/
+/*}*/
 .ch-left{
-    float: left;
-    left: 20rpx ;
+    left: 0;
 }
 .ch-right{
-    float: right;
-    right: 20rpx;
+    left: 510rpx;
+}
+.ch-center{
+    left: 255rpx;
 }
 .ch-name {
     margin-top: 7rpx;
@@ -74,7 +82,9 @@ page{
 .ch-num {
     font-size: 36rpx;
 }
-
+.three-text{
+    font-size: 26rpx;
+}
 .unit::after {
     content: '（元）';
     font-size: 22rpx;
@@ -284,4 +294,7 @@ page{
 }
 .red-d{
     margin-top: 260rpx;
+}
+.qi{
+    width: 710rpx;
 }

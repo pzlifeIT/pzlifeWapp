@@ -1,4 +1,5 @@
 // pages/my/integ/integ.js
+const app = getApp()
 Page({
 
     /**
