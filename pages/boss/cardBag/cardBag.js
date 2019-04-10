@@ -93,33 +93,38 @@ Page({
     backout:function(e){
         let id = e.currentTarget.dataset.cardid,
             that = this;
-      app.wxrequest({
-          url:"user/changeUserBankcardStatus",
-          data: {
-              id:id,
-              status:3
-          },
-          noloading:true,
+      app.modal({
+          title:"是否撤销该银行卡的审核",
           success(res){
-              app.toast({
-                  title:"撤销成功"
+              app.wxrequest({
+                  url:"user/changeUserBankcardStatus",
+                  data: {
+                      id:id,
+                      status:3
+                  },
+                  noloading:true,
+                  success(res){
+                      app.toast({
+                          title:"撤销成功"
+                      })
+                      that.getCardList()
+                  },
+                  error(res){
+                      if (res == 3004){
+                          app.toast({
+                              title: "该银行卡状态无法变更"
+                          })
+                      } else if (res == 3006) {
+                          app.toast({
+                              title:"未查询到该银行卡"
+                          })
+                      }else if (res == 3007){
+                          app.toast({
+                              title:"撤销失败"
+                          })
+                      }
+                  }
               })
-              that.getCardList()
-          },
-          error(res){
-              if (res == 3004){
-                  app.toast({
-                      title: "该银行卡状态无法变更"
-                  })
-              } else if (res == 3006) {
-                  app.toast({
-                      title:"未查询到该银行卡"
-                  })
-              }else if (res == 3007){
-                  app.toast({
-                      title:"撤销失败"
-                  })
-              }
           }
       })
     },

@@ -24,36 +24,5 @@
             <view class="yuan qy-yuan"></view>
         </view>
     </view>
-    <!--<view class="one-card">-->
-        <!--<view class="logo-name">-->
-            <!--<image lazy-load="true" class="logo" src="{{imgHost}}yh.png"></image>-->
-            <!--<view class="yh-name">招商银行</view>-->
-        <!--</view>-->
-        <!--<view class="cardNum">62228 **** **** 911</view>-->
-        <!--<view class="button un-dispose">已驳回</view>-->
-        <!--<view class="reason" bindtap="addCard" data-stype="1">查看原因 <image lazy-load="true" class="jt" src="{{imgHost}}jt_black.png"></image></view>-->
-    <!--</view>-->
-    <!--<view class="one-card">-->
-        <!--<view class="logo-name">-->
-            <!--<image lazy-load="true" class="logo" src="{{imgHost}}yh.png"></image>-->
-            <!--<view class="yh-name">招商银行</view>-->
-        <!--</view>-->
-        <!--<view class="cardNum">62228 **** **** 911</view>-->
-        <!--&lt;!&ndash;<view class="button un-dispose">处理中</view>&ndash;&gt;-->
-        <!--<view class="button">处理中</view>-->
-    <!--</view>-->
-    <!--<view class="one-card">-->
-        <!--<view class="logo-name">-->
-            <!--<image lazy-load="true" class="logo" src="{{imgHost}}yh.png"></image>-->
-            <!--<view class="yh-name">招商银行</view>-->
-        <!--</view>-->
-        <!--<view class="cardNum">62228 **** **** 911</view>-->
-        <!--<view class="button ty" bindtap="clickButton" wx:if="{{buttonStatus}}">已停用-->
-            <!--<view class="yuan ty-yuan"></view>-->
-        <!--</view>-->
-        <!--<view class="button qy" bindtap="clickButton" wx:else>已启用-->
-            <!--<view class="yuan qy-yuan"></view>-->
-        <!--</view>-->
-    <!--</view>-->
 </view>
 <view class="footer" bindtap="addCard">+ <text>添加银行卡</text></view>

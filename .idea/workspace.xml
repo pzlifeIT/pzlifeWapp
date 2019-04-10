@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/boss/cardBag/addCard/addCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/cardBag/addCard/addCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/withdraw/withdraw.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/withdraw/withdraw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/withdraw/withdraw.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/withdraw/withdraw.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/boss/cardBag/cardBag.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/cardBag/cardBag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +54,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="htm" value="36" />
-          <entry key="js" value="24675" />
+          <entry key="js" value="24722" />
           <entry key="json" value="90" />
           <entry key="wxml" value="17645" />
           <entry key="wxss" value="16789" />
@@ -68,20 +65,20 @@
           <entry key="CSS" value="16789" />
           <entry key="HTML" value="17681" />
           <entry key="JSON" value="90" />
-          <entry key="JavaScript" value="24675" />
+          <entry key="JavaScript" value="24722" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.37920672">
+    <splitter split-orientation="horizontal" split-proportion="0.41646636">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/my/my.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="671">
-                  <caret line="281" column="50" lean-forward="true" selection-start-line="281" selection-start-column="50" selection-end-line="281" selection-end-column="50" />
+                <state relative-caret-position="332">
+                  <caret line="269" column="25" lean-forward="true" selection-start-line="269" selection-start-column="25" selection-end-line="269" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -149,11 +146,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/addCard/addCard.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="583">
-                  <caret line="146" column="9" selection-start-line="146" selection-start-column="8" selection-end-line="146" selection-end-column="9" />
+                <state relative-caret-position="-535">
+                  <caret line="64" column="24" lean-forward="true" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -191,8 +188,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/cardBag.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="494">
-                  <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+                <state relative-caret-position="10">
+                  <caret line="102" column="30" lean-forward="true" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -200,8 +197,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="130">
-                  <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+                <state relative-caret-position="390">
+                  <caret line="15" column="74" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="74" />
                 </state>
               </provider>
             </entry>
@@ -257,7 +254,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/boss/withdraw/withdraw.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="650">
+                <state relative-caret-position="1586">
                   <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
                 </state>
               </provider>
@@ -269,7 +266,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>JSON</find>
       <find>validNum</find>
       <find>/pages/index/</find>
       <find>&lt;image</find>
@@ -299,6 +295,7 @@
       <find>bankId</find>
       <find>select</find>
       <find>goInte</find>
+      <find>backout</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;image lazy-load=&quot;true&quot;</replace>
@@ -332,7 +329,6 @@
         <option value="$PROJECT_DIR$/pages/boss/withdraw/submitStatus/submitStatus.wxss" />
         <option value="$PROJECT_DIR$/pages/boss/withdraw/submitStatus/submitStatus.js" />
         <option value="$PROJECT_DIR$/pages/boss/withdraw/submitStatus/submitStatus.wxml" />
-        <option value="$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/commission/commission.js" />
         <option value="$PROJECT_DIR$/pages/boss/commission/commission.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/commission/commission.wxss" />
@@ -351,16 +347,17 @@
         <option value="$PROJECT_DIR$/pages/my/notice/notice.js" />
         <option value="$PROJECT_DIR$/pages/my/notice/notice.wxml" />
         <option value="$PROJECT_DIR$/pages/my/notice/notice.wxss" />
-        <option value="$PROJECT_DIR$/pages/boss/cardBag/cardBag.js" />
         <option value="$PROJECT_DIR$/pages/my/integ/integ.js" />
         <option value="$PROJECT_DIR$/pages/my/integ/integ.wxml" />
         <option value="$PROJECT_DIR$/pages/my/integ/integ.wxss" />
         <option value="$PROJECT_DIR$/pages/my/integ/integ.json" />
-        <option value="$PROJECT_DIR$/pages/boss/cardBag/addCard/addCard.js" />
         <option value="$PROJECT_DIR$/pages/my/my.wxml" />
         <option value="$PROJECT_DIR$/pages/my/my.js" />
         <option value="$PROJECT_DIR$/pages/boss/withdraw/withdraw.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/withdraw/withdraw.js" />
+        <option value="$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml" />
+        <option value="$PROJECT_DIR$/pages/boss/cardBag/cardBag.js" />
+        <option value="$PROJECT_DIR$/pages/boss/cardBag/addCard/addCard.js" />
       </list>
     </option>
   </component>
@@ -506,12 +503,12 @@
       <workItem from="1554174340976" duration="40754000" />
       <workItem from="1554348564603" duration="8418000" />
       <workItem from="1554372405397" duration="609000" />
-      <workItem from="1554685574896" duration="73830000" />
+      <workItem from="1554685574896" duration="74798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="432483000" />
+    <option name="totallyTimeSpent" value="433451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -759,24 +756,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/my/notice/notice.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/cardBag.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -852,24 +835,10 @@
     <entry file="file://$PROJECT_DIR$/pages/my/integ/integ.wxml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/addCard/addCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="146" column="9" selection-start-line="146" selection-start-column="8" selection-end-line="146" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/boss/boss.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="73" column="52" lean-forward="true" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="281" column="50" lean-forward="true" selection-start-line="281" selection-start-column="50" selection-end-line="281" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -887,10 +856,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="74" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/cardBag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="102" column="30" lean-forward="true" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/boss/withdraw/withdraw.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
+        <state relative-caret-position="1586">
           <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="269" column="25" lean-forward="true" selection-start-line="269" selection-start-column="25" selection-end-line="269" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/addCard/addCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-535">
+          <caret line="64" column="24" lean-forward="true" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
         </state>
       </provider>
     </entry>

@@ -68,9 +68,15 @@ Page({
             })
             return
         }
-        if (bankId == "" || bankZiName == ""){
+        if (bankId == "" ){
             app.toast({
                 title:"开户银行不能为空"
+            })
+            return
+        }
+        if (bankZiName == ""){
+            app.toast({
+                title:"开户支行不能为空"
             })
             return
         }
