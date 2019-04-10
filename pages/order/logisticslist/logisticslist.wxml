@@ -9,7 +9,7 @@
     </navigator>
   </view>
   <view class="ll-good" wx:for="{{item.express_goods}}" >
-    <view class="ll-good-img din fl" ><image lazy-load="true" src="" /></view>
+    <view class="ll-good-img din fl" ><image lazy-load="true" src="{{item.sku_image}}" /></view>
     <view class="ll-good-info din fl" >
       <text class="db ll-good-name" >{{item.goods_name}}</text>
       <text class="db ll-good-tit" >{{item.sku_json}}</text>

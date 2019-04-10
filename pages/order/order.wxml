@@ -46,6 +46,9 @@
 	</view>
 	<view class="jf">
 		<text class="jf-text">含运费</text><text class="jf-num">￥{{item1.express_money}}</text>
+  </view>
+  <view class="jf" wx:if="{{user_identity != 1}}">
+		<text class="jf-text"  >钻石再让利</text><text class="jf-num">￥{{item1.commission}}</text>
 	</view>
 	<view class="or-footer">
 		<view class="footer-left"><text class="sum fr">共付：<text class="total">￥{{item1.pay_money}}</text></text></view>

@@ -8,7 +8,8 @@ Page({
     data: {
         orderno: '',
         order_info: {},
-        imgHost: ''
+        imgHost: '',
+        user_identity: 0
     },
 
     /**
@@ -22,7 +23,8 @@ Page({
     onLoad: function(options) {
         this.setData({
             orderno: options.orderno,
-            imgHost: app.globalData.host.imgHost
+            imgHost: app.globalData.host.imgHost,
+            user_identity: app.globalData.userInfo.user_identity
         })
         this.getUserOrderInfo({
             orderno: options.orderno

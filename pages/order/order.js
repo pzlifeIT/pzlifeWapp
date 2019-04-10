@@ -12,6 +12,7 @@ Page({
         mask: false,
         reach: true,
         order_list: [],
+        user_identity: 0,
         imgHost: ''
     },
     comfir: function(e) {
@@ -180,9 +181,8 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
-            imgHost: app.globalData.host.imgHost
-        })
-        this.setData({
+            imgHost: app.globalData.host.imgHost,
+            user_identity: app.globalData.userInfo.user_identity,
             status: options.status
         })
         this.getUserOrderList({
