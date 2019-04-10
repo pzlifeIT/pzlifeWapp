@@ -17,6 +17,9 @@ Page({
         this.setData({
             id: options.id || ''
         })
+        wx.setNavigationBarTitle({
+          title: '钻石卡列表详情',
+        })
         this.getDominosReceive(options.id || '')
     },
 
