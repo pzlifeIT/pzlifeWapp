@@ -11,38 +11,38 @@ Page({
         goodsList: [],
         imgHost: '',
         page: 1,
-        pageNum:10,
-        reach:true
+        pageNum: 10,
+        reach: true
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
+    onLoad: function(options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
     },
-    inputwacth: function (e) {
+    inputwacth: function(e) {
         console.log(e)
 
         this.setData({
             search: e.detail.value
         });
-        if (!e.detail.value){
+        if (!e.detail.value) {
             this.setData({
-                goodsList:[]
+                goodsList: []
             })
         }
     },
     /**
      * 搜索
      */
-    mid: function (keyword = "") {
+    mid: function(keyword = "") {
         //获取数组
         let arr = this.data.searchList
         console.log(this.data.searchList)
-        //将搜索的词放进数组中
+            //将搜索的词放进数组中
         let search = this.data.search.replace(/\s*/g, "");
         if (keyword) {
             search = keyword.replace(/\s*/g, "")
@@ -67,7 +67,7 @@ Page({
     /**
      * 请求搜索
      */
-    getSearchGood: function (search) {
+    getSearchGood: function(search) {
         let that = this
         app.wxrequest({
             url: "goods/getSearchGoods",
@@ -95,7 +95,7 @@ Page({
                 console.log(goodsList)
                 that.setData({
                     goodsList: goodsList,
-                    page:that.data.page + 1
+                    page: that.data.page + 1
                 })
             },
             error(res) {
@@ -109,11 +109,19 @@ Page({
     /**
      * 点击搜索按钮
      */
-    getSearchGoods: function (e) {
+    getSearchGoods: function(e) {
+        this.setData({
+            page: 1,
+            goodsList: []
+        })
         this.mid()
     },
-    clickSearch: function (e) {
+    clickSearch: function(e) {
         console.log(e)
+        this.setData({
+            page: 1,
+            goodsList: []
+        })
         let keyword = e.currentTarget.dataset.keyword
         console.log(keyword)
         this.mid(keyword)
@@ -121,7 +129,7 @@ Page({
             search: keyword
         })
     },
-    del: function () {
+    del: function() {
         let that = this
         wx.showModal({
             title: "提示",
@@ -139,14 +147,14 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {
+    onReady: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
+    onShow: function() {
         // 		获取搜索历史
         this.setData({
             searchList: wx.getStorageSync("searchList") || []
@@ -156,28 +164,28 @@ Page({
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function () {
+    onHide: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {
+    onUnload: function() {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
+    onReachBottom: function() {
         if (!this.data.reach) return;
         this.mid()
     },
@@ -185,7 +193,7 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function () {
+    onShareAppMessage: function() {
 
     }
 })

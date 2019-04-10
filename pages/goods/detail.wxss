@@ -366,6 +366,7 @@ swiper-item {
 }
 
 .pop .goods_data .goods_desc {
+    width: 480rpx;
     height: 196rpx;
     display: inline-block;
     margin-left: 21rpx;

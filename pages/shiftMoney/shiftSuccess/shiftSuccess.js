@@ -1,4 +1,4 @@
-// pages/order/logisticslist/logisticslist.js
+// pages/shiftMoney/shiftSuccess/shiftSuccess.js
 const app = getApp()
 Page({
 
@@ -6,38 +6,18 @@ Page({
      * 页面的初始数据
      */
     data: {
-        num: 0,
-        order_no: '',
-        order_subpackage: []
+        imgHost: ''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        wx.setNavigationBarTitle({
-            title: '订单物流'
-        })
         this.setData({
-            order_no: options.orderno
-        })
-        this.getOrderSubpackage(options.orderno)
-    },
-    getOrderSubpackage: function(orderno) {
-        let that = this
-        app.wxrequest({
-            url: 'order/getOrderSubpackage',
-            data: {
-                order_no: orderno
-            },
-            success: function(res) {
-                that.setData({
-                    num: res.package_num,
-                    order_subpackage: res.order_subpackage || []
-                })
-            }
+            imgHost: app.globalData.host.imgHost
         })
     },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

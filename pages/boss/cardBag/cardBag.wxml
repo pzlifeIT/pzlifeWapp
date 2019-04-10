@@ -2,7 +2,7 @@
 <view class="card-list">
     <view class="kefu">
         <view class="dian"></view>
-        <view class="phone">å®¢æœç”µè¯15502123212</view>
+        <view class="phone">¿Í·þµç»°15502123212</view>
     </view>
     <view class="one-card" wx:for="{{cardList}}">
         <image class="bg" src="{{item.admin_bank.bg_img}}"></image>
@@ -12,48 +12,48 @@
             <view class="yh-name">{{item.admin_bank.bank_name}}</view>
         </view>
         <view class="cardNum">{{item.bank_card}}</view>
-        <view class="button un-dispose" wx:if="{{item.status == 1}}">æœªå¤„ç†</view>
-        <view class="button" wx:if="{{item.status == 1}}" bindtap="backout" data-cardid="{{item.id}}">æ’¤é”€</view>
-        <view class="button" wx:if="{{item.status == 4}}">å¤„ç†ä¸­</view>
-        <view class="button un-dispose" wx:if="{{item.status == 5}}">å·²é©³å›ž</view>
-        <view class="reason" wx:if="{{item.status == 5}}" bindtap="addCard" data-stype="1" data-cardid="{{item.id}}">æŸ¥çœ‹åŽŸå›  <image lazy-load="true" class="jt" src="{{imgHost}}jt_black.png"></image></view>
-        <view class="button ty" bindtap="clickButton" data-status="1" data-cardid="{{item.id}}" wx:if="{{item.status == 3}}">å·²åœç”¨
+        <view class="button un-dispose" wx:if="{{item.status == 1}}">Î´´¦Àí</view>
+        <view class="button" wx:if="{{item.status == 1}}" bindtap="backout" data-cardid="{{item.id}}">³·Ïú</view>
+        <view class="button" wx:if="{{item.status == 4}}">´¦ÀíÖÐ</view>
+        <view class="button un-dispose" wx:if="{{item.status == 5}}">ÒÑ²µ»Ø</view>
+        <view class="reason" wx:if="{{item.status == 5}}" bindtap="addCard" data-stype="1" data-cardid="{{item.id}}">²é¿´Ô­Òò <image lazy-load="true" class="jt" src="{{imgHost}}jt_black.png"></image></view>
+        <view class="button ty" bindtap="clickButton" data-status="1" data-cardid="{{item.id}}" wx:if="{{item.status == 3}}">ÒÑÍ£ÓÃ
             <view class="yuan ty-yuan"></view>
         </view>
-        <view class="button qy" bindtap="clickButton" data-status="2" data-cardid="{{item.id}}" wx:elif="{{item.status == 2}}">å·²å¯ç”¨
+        <view class="button qy" bindtap="clickButton" data-status="2" data-cardid="{{item.id}}" wx:elif="{{item.status == 2}}">ÒÑÆôÓÃ
             <view class="yuan qy-yuan"></view>
         </view>
     </view>
     <!--<view class="one-card">-->
         <!--<view class="logo-name">-->
             <!--<image lazy-load="true" class="logo" src="{{imgHost}}yh.png"></image>-->
-            <!--<view class="yh-name">æ‹›å•†é“¶è¡Œ</view>-->
+            <!--<view class="yh-name">ÕÐÉÌÒøÐÐ</view>-->
         <!--</view>-->
         <!--<view class="cardNum">62228 **** **** 911</view>-->
-        <!--<view class="button un-dispose">å·²é©³å›ž</view>-->
-        <!--<view class="reason" bindtap="addCard" data-stype="1">æŸ¥çœ‹åŽŸå›  <image lazy-load="true" class="jt" src="{{imgHost}}jt_black.png"></image></view>-->
+        <!--<view class="button un-dispose">ÒÑ²µ»Ø</view>-->
+        <!--<view class="reason" bindtap="addCard" data-stype="1">²é¿´Ô­Òò <image lazy-load="true" class="jt" src="{{imgHost}}jt_black.png"></image></view>-->
     <!--</view>-->
     <!--<view class="one-card">-->
         <!--<view class="logo-name">-->
             <!--<image lazy-load="true" class="logo" src="{{imgHost}}yh.png"></image>-->
-            <!--<view class="yh-name">æ‹›å•†é“¶è¡Œ</view>-->
+            <!--<view class="yh-name">ÕÐÉÌÒøÐÐ</view>-->
         <!--</view>-->
         <!--<view class="cardNum">62228 **** **** 911</view>-->
-        <!--&lt;!&ndash;<view class="button un-dispose">å¤„ç†ä¸­</view>&ndash;&gt;-->
-        <!--<view class="button">å¤„ç†ä¸­</view>-->
+        <!--&lt;!&ndash;<view class="button un-dispose">´¦ÀíÖÐ</view>&ndash;&gt;-->
+        <!--<view class="button">´¦ÀíÖÐ</view>-->
     <!--</view>-->
     <!--<view class="one-card">-->
         <!--<view class="logo-name">-->
             <!--<image lazy-load="true" class="logo" src="{{imgHost}}yh.png"></image>-->
-            <!--<view class="yh-name">æ‹›å•†é“¶è¡Œ</view>-->
+            <!--<view class="yh-name">ÕÐÉÌÒøÐÐ</view>-->
         <!--</view>-->
         <!--<view class="cardNum">62228 **** **** 911</view>-->
-        <!--<view class="button ty" bindtap="clickButton" wx:if="{{buttonStatus}}">å·²åœç”¨-->
+        <!--<view class="button ty" bindtap="clickButton" wx:if="{{buttonStatus}}">ÒÑÍ£ÓÃ-->
             <!--<view class="yuan ty-yuan"></view>-->
         <!--</view>-->
-        <!--<view class="button qy" bindtap="clickButton" wx:else>å·²å¯ç”¨-->
+        <!--<view class="button qy" bindtap="clickButton" wx:else>ÒÑÆôÓÃ-->
             <!--<view class="yuan qy-yuan"></view>-->
         <!--</view>-->
     <!--</view>-->
 </view>
-<view class="footer" bindtap="addCard">+ <text>æ·»åŠ é“¶è¡Œå¡</text></view>
+<view class="footer" bindtap="addCard">+ <text>Ìí¼ÓÒøÐÐ¿¨</text></view>

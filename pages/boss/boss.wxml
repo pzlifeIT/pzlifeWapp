@@ -129,7 +129,7 @@
                 <view class="renshu">佣金提现</view>
             </view>
             <view class="mid"></view>
-            <view class="left" bindtap="commission">
+            <view class="left" bindtap="goshiftMoney">
                 <image lazy-load="true" src="{{imgHost}}yj_06.png"></image>
                 <view class="renshu">佣金转商票</view>
             </view>

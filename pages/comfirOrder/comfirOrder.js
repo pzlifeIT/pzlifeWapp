@@ -93,14 +93,21 @@ Page({
             })
             return
         }
+        if (this.data.paytype === 0) {
+            app.toast({
+                title: '请选择支付方式'
+            })
+            return
+        }
         this.setData({
             addressshow: true
         })
     },
     showbuypup: function() {
-        this.setData({
-            buypup: true
-        })
+
+        // this.setData({
+        //     buypup: true
+        // })
     },
     /**
      * 生命周期函数--监听页面加载

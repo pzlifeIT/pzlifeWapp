@@ -61,7 +61,8 @@ page {
     height: auto;
     margin-bottom: 10rpx;
 }
-.cost-title{
+
+.cost-title {
     width: 100%;
     height: 68rpx;
     text-align: left;
@@ -73,38 +74,68 @@ page {
     box-sizing: border-box;
     background: #FFFFFF;
 }
-.cost-line{
+
+.cost-line {
     width: 750rpx;
     height: 116rpx;
     margin-top: 2rpx;
     background: #FFFFFF;
 }
-.line-one{
+
+.line-one {
     width: 33.33%;
     height: 116rpx;
     float: left;
 }
-.one-content{
+
+.line-one.wid50 {
+    width: 50%;
+    overflow: hidden;
+}
+
+.one-content {
     width: 234rpx;
     height: 88rpx;
     margin: 20rpx auto 0;
     text-align: center;
     border-right: 1rpx solid #f7f7f7;
 }
-.cont-no{
+
+.wid50 .one-content {
+    width: 100%;
+}
+
+.wid50 {
+    position: relative;
+}
+
+.wid50::before {
+    position: absolute;
+    top: 14rpx;
+    right: 0;
+    content: '';
+    display: inline-block;
+    width: 1rpx;
+    height: 88rpx;
+    background-color: #f7f7f7;
+}
+
+.cont-no {
     border: none;
 }
-.one-title{
+
+.one-title {
     color: #404040;
     font-size: 26rpx;
 }
-.one-title text{
+
+.one-title text {
     font-size: 22rpx;
 }
-.one-price{
+
+.one-price {
     color: #E61F18;
     font-size: 40rpx;
-
 }
 
 .ucIcon {
@@ -126,7 +157,7 @@ page {
 
 .userorder {
     width: 750rpx;
-    margin-bottom: 10rpx ;
+    margin-bottom: 10rpx;
     background-color: #fff;
 }
 
@@ -168,14 +199,15 @@ page {
     border-right: 1px solid #f7f7f7;
     position: relative;
 }
-.or-num{
+
+.or-num {
     width: auto;
     height: 30rpx;
     min-width: 30rpx;
     max-width: 50rpx;
     text-align: center;
     line-height: 30rpx;
-    border:2rpx solid #e61f18;
+    border: 2rpx solid #e61f18;
     border-radius: 50%;
     color: #E61F18;
     font-size: 24rpx;
@@ -185,16 +217,19 @@ page {
     padding: 3rpx 3rpx;
     box-sizing: padding-box;
 }
-.or-num-nine{
+
+.or-num-nine {
     width: 50rpx;
     border-radius: 20rpx;
 }
-.equity{
+
+.equity {
     width: 750rpx;
     height: 140rpx;
     background: #FFFFFF;
 }
-.equity-one{
+
+.equity-one {
     width: 33.33%;
     height: 100%;
     border-right: 1rpx solid #f7f7f7;
@@ -205,17 +240,19 @@ page {
     float: left;
     box-sizing: border-box;
 }
-.last{
-    border:none;
+
+.last {
+    border: none;
 }
-.equity-one image{
+
+.equity-one image {
     width: 53rpx;
     height: 53rpx;
     margin-top: 25rpx;
 }
-.equity-title{
 
-}
+.equity-title {}
+
 .uoIcon {
     display: inline-block;
     float: left;

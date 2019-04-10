@@ -1,0 +1,16 @@
+<!--pages/shiftMoney/shiftMoney.wxml-->
+<view class="shiftMoney">
+  <text class="sm-header" >转入金额</text>
+  <view class="sm-input">
+    <input class="input" type="number" value="{{money}}" bindinput="setmoney"  />
+    <view class="sm-img din fr" bindtap="clear" > <image lazy-load="true" class="img" src="{{imgHost}}clear_03.png" alt="" /></view>
+  </view>
+  <view>
+    <text class="fl usable">可用金额{{commission}}元</text>
+    <text class="fr reality" >实际到账金额：{{reality}}元</text>
+  </view>
+</view>
+<view class="sm-submit {{withdraw?'':'opa'}}" bindtap="transferBalance">确定提现</view>
+<navigator url="./record/record" >
+<view class="fr record">申请记录<image lazy-load="true" class="img din fr" src="{{imgHost}}jt_18.png" alt="" /></view>
+</navigator>

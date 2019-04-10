@@ -1,0 +1,52 @@
+/* pages/shiftMoney/shiftSuccess/shiftSuccess.wxss */
+
+page {
+    background-color: #f7f7f7;
+}
+
+.ss-header {
+    width: 750rpx;
+    height: 200rpx;
+    margin-top: 10rpx;
+    background-color: #fff;
+    overflow: auto;
+}
+
+.ss-header .img {
+    display: block;
+    width: 60rpx;
+    height: 66rpx;
+    margin: 41rpx auto 20rpx;
+}
+
+.ss-text {
+    width: 100%;
+    text-align: center;
+    font-size: 30rpx;
+    color: #404040;
+}
+
+.continue,
+.look {
+    width: 240rpx;
+    height: 60rpx;
+    margin-top: 41rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 26rpx;
+    border-radius: 2rpx;
+}
+
+.continue {
+    margin-left: 115rpx;
+    background-color: #e61f18;
+    color: #fff;
+}
+
+.look {
+    box-sizing: border-box;
+    margin-left: 40rpx;
+    background-color: #ffffff;
+    border: solid 1rpx #e61f18;
+    color: #e61f18;
+}

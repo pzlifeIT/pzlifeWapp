@@ -103,10 +103,11 @@ page {
 
 .goods_detail {
     display: inline-block;
-    height: 100%;
+    width: 470rpx;
+    height: 176rpx;
     margin-left: 19rpx;
     vertical-align: top;
-    padding-top: 41rpx;
+    padding-top: 40rpx;
 }
 
 .goods_detail .goods_title {
@@ -114,6 +115,9 @@ page {
     color: #202020;
     display: block;
     margin-bottom: 17rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .goods_detail .goods_subtitle {
@@ -121,6 +125,9 @@ page {
     color: #888888;
     display: block;
     margin-bottom: 25rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .goods_detail .price {
@@ -139,7 +146,7 @@ page {
 .stat {
     width: 750rpx;
     position: relative;
-    padding-bottom: 100rpx;
+    padding-bottom: 290rpx;
 }
 
 .stat .summation {
@@ -151,16 +158,31 @@ page {
     line-height: 80rpx;
     position: relative;
     background-color: #fff;
+    overflow: hidden;
+}
+
+.stat .rebate {
+    height: 120rpx;
 }
 
 .sum_text {
-    position: absolute;
-    left: 9rpx;
+    float: left;
+    margin-left: 10rpx;
 }
 
 .sum_price {
-    position: absolute;
-    right: 12rpx;
+    float: right;
+    margin-right: 12rpx;
+}
+
+.small {
+    width: 100%;
+    margin-top: -10rpx;
+    line-height: 40rpx;
+    text-indent: 10rpx;
+    font-size: 26rpx;
+    color: #999;
+    color: #e61f18;
 }
 
 .footer {
@@ -173,11 +195,14 @@ page {
 }
 
 .footer .total {
-    height: 92rpx;
     position: absolute;
-    left: 9rpx;
-    line-height: 92rpx;
+    left: 0;
     display: inline-block;
+    width: 390rpx;
+    height: 92rpx;
+    line-height: 92rpx;
+    border-top: 1rpx solid #f7f7f7;
+    text-indent: 10rpx;
 }
 
 .total .total_text {
@@ -523,7 +548,70 @@ radio-group {
     font-weight: bold;
 }
 
-.small {
-    font-size: 24rpx;
-    color: #999;
+.payment {
+    position: fixed;
+    left: 0;
+    bottom: 92rpx;
+    width: 100%;
+    height: 190rpx;
+    background-color: #fff;
+    box-shadow: 0 -3rpx 3rpx #eee;
+}
+
+.pt-header {
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-indent: 10rpx;
+    font-size: 30rpx;
+    color: #404040;
+}
+
+.payment .bm-mode {
+    position: relative;
+    width: 50%;
+    height: 120rpx;
+    border-top: 1rpx solid #f7f7f7;
+}
+
+.payment .buyIcon {
+    width: 42rpx;
+    height: 42rpx;
+    margin: 20rpx 10rpx 0;
+}
+
+.payment .wxIcon {
+    margin-left: 100rpx;
+}
+
+.payment .bm-info {
+    margin: 20rpx 0 0;
+    width: 170rpx;
+    line-height: 42rpx;
+    font-size: 28rpx;
+    color: #202020;
+}
+
+.payment .bm-balance {
+    width: 100%;
+    text-indent: 62rpx;
+    font-size: 26rpx;
+    color: #b6b6b6;
+}
+
+.payment .bm-btn {
+    width: 36rpx;
+    height: 36rpx;
+    margin: 24rpx 0 0;
+}
+
+.be::before {
+    position: absolute;
+    top: 33rpx;
+    right: 0;
+    display: inline-block;
+    content: '12';
+    width: 2rpx;
+    height: 54rpx;
+    background-color: #f7f7f7;
 }
