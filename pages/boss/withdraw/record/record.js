@@ -49,6 +49,7 @@ Page({
                 pageNum: that.data.pageNum || 10
             },
             success(res) {
+                that.dispose(res.log_transfer)
                 if (res.log_transfer.length < 10) {
                     that.setData({
                         reach: false
@@ -66,7 +67,12 @@ Page({
             }
         })
     },
-    /**
+    dispose:function(data){
+        for (let i = 0;i<data.length;i++){
+            data[i].bank_card = data[i].bank_card.substring(15,19)
+        }
+        // console.log(data)
+    },    /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {

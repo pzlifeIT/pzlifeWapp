@@ -30,7 +30,7 @@
         </view>
         <view class="line">
           <view class="left">转账银行</view>
-          <view class="right">{{item.bank_name}}(5566)</view>
+          <view class="right">{{item.bank_name}}({{item.bank_card}})</view>
         </view>
         <view class="line">
           <view class="left">申请状态</view>
