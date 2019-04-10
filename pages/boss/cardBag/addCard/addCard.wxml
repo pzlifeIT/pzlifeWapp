@@ -1,0 +1,63 @@
+<!--pages/boss/cardBag/addCard/addCard.wxml-->
+<view class="one-input top">
+    <view class="text">真实姓名</view>
+    <input class="in-text" type="text" placeholder="请输入本人真实姓名，否则无效" placeholder-class="pla-class" value="{{trueName}}" bindinput="watchInput" data-model="trueName"/>
+    <view class="xing" wx:if="{{error_fields.user_name == 1}}">*</view>
+</view>
+<view class="one-input top" bindtap="popYh">
+    <view class="text">开户银行</view>
+    <input class="in-text yh-text" type="text" disabled placeholder="请选择开户银行" placeholder-class="pla-class"  value="{{bankName}}" bindinput="watchInput" data-model="bankName" />
+    <view class="jt">
+        <image class="jt" wx:if="{{!yh}}" lazy-load="true" src="{{imgHost}}jt_down.png"></image>
+        <image class="jt" wx:else lazy-load="true" src="{{imgHost}}jt_up.png"></image>
+    </view>
+    <!--<view class="xing yh-xing" wx:if="{{error_fields.admin_bank == 1}}">*</view>-->
+</view>
+<view class="one-input top">
+    <view class="text">开户支行</view>
+    <input class="in-text" type="text" placeholder="例如：上海长宁支行" value="{{bankZiName}}" placeholder-class="pla-class" bindinput="watchInput" data-model="bankZiName" />
+    <view class="xing" wx:if="{{error_fields.bank_add == 1}}">*</view>
+</view>
+<view class="one-input top">
+    <view class="text">银行卡号</view>
+    <input class="in-text" type="number" maxlength="19" value="{{cardNum}}" placeholder="请输入15-19位本人银行卡号，否则无效" placeholder-class="pla-class" bindinput="watchInput" data-model="cardNum"/>
+    <view class="xing" wx:if="{{error_fields.bank_card == 1}}">*</view>
+</view>
+<view class="one-input top">
+    <view class="text">手机号码</view>
+    <input class="in-text" type="number" maxlength="11" value="{{phone}}" placeholder="请输入预留手机号码" placeholder-class="pla-class" bindinput="watchInput" data-model="phone"/>
+    <view class="xing" wx:if="{{error_fields.bank_mobile == 1}}">*</view>
+</view>
+<view class="one-input top">
+    <view class="text">验证码</view>
+    <input class="in-text code-input" type="number" maxlength="6" placeholder="请输入验证码" placeholder-class="pla-class" bindinput="watchInput" data-model="code"/>
+    <button class="code" disabled="{{disabled}}" bindtap="getCode">{{codeText}}</button>
+</view>
+
+<view class="two-div">
+    <view class="div left" bindtap="back">取消</view>
+    <view class="mid"></view>
+    <view class="div right" bindtap="addCard">保存</view>
+</view>
+
+<view class="pop" id="pop" wx:if="{{yh}}">
+    <scroll-view style="height: 844rpx">
+            <radio-group catchchange="radioChange">
+                <label class="one-yh" wx:for="{{bankList}}">
+                    <radio color="#e61f18" value="{{item.id}}" bindtap="getBankName" data-name="{{item.bank_name}}" class="radio">
+                        {{item.bank_name}}
+                    </radio>
+                </label>
+            </radio-group>
+    </scroll-view>
+</view>
+
+<view class="mask" wx:if="{{mask}}">
+    <view class="hint">
+        <view class="content">
+            <view class="title">驳回原因</view>
+            <view class="content-text">{{message}}</view>
+        </view>
+        <view class="know" bindtap="know">我知道了</view>
+    </view>
+</view>

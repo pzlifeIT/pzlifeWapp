@@ -1,0 +1,251 @@
+/* pages/boss/withdraw/withdraw.wxss */
+page{
+    /*height: 100%;*/
+    background: #f7f7f7;
+}
+.card{
+    width: 750rpx;
+    height: auto;
+    overflow: auto;
+    margin-top: 10rpx;
+    position: relative;
+}
+.card-one{
+    width: 750rpx;
+    height: 120rpx;
+    background-color: #FFFFFF;
+    margin-bottom: 2rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo{
+    width: 111rpx;
+    height: 120rpx;
+}
+.logo image{
+    width: 75rpx;
+    height: 75rpx;
+    margin: 16rpx 0 0 21rpx;
+    border-radius: 50%;
+}
+.card-info{
+    height: 100%;
+    width: auto;
+    margin-left: 20rpx;
+}
+.card-name{
+    color: #404040;
+    font-size: 30rpx;
+    margin-top: 18rpx;
+}
+.card-num{
+    color: #404040;
+    font-size: 28rpx;
+}
+.bankCard{
+    width: 750rpx;
+    height: 76rpx;
+    line-height: 76rpx;
+    padding-left: 19rpx;
+    box-sizing: border-box;
+    color: #404040;
+    font-size: 30rpx;
+    background: #FFFFFF;
+    margin: 10rpx 0;
+}
+.bankCard image{
+    width: 14rpx;
+    height: 24rpx;
+    float: right;
+    margin-right: 19rpx;
+    margin-top: 26rpx;
+}
+.card-img{
+    width: 14rpx;
+    height: 24rpx;
+    position: absolute;
+    right: 19rpx;
+    top: 50rpx;
+}
+/*.withdraw{*/
+    /*width: 750rpx;*/
+    /*height: 212rpx;*/
+
+/*}*/
+.area{
+    width: 750rpx;
+    /*height: 288rpx;*/
+    overflow: auto;
+    padding: 32rpx 20rpx 0rpx 20rpx;
+    background: #FFFFFF;
+    box-sizing: border-box;
+}
+.with-text{
+    color: #404040;
+    font-size: 30rpx;
+}
+.with-area{
+    width: 710rpx;
+    height: 75rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 53rpx;
+}
+.symbol{
+    font-size: 38rpx;
+    color: #404040;
+}
+.input{
+    width: 647rpx;
+    height: 70rpx;
+    color: #404040;
+    font-size: 36rpx;
+}
+.dibu{
+    height: 75rpx;
+    line-height: 75rpx;
+    border-top: 1rpx solid #c7c6cb;
+    margin-top: 35rpx;
+}
+.left-div{
+    font-size: 24rpx;
+    color: #e61f18;
+    float: left;
+}
+.right-div{
+    font-size: 24rpx;
+    color: #999999;
+    float: right;
+}
+.bill{
+    padding: 33rpx 0;
+    border-top: 2rpx solid #f7f7f7;
+}
+.bill-text{
+    color: #404040;
+    font-size: 30rpx;
+    margin-bottom: 37rpx;
+}
+.radio{
+    transform: scale(0.8);
+
+}
+.ra-text{
+    font-size: 26rpx;
+    color: #404040;
+}
+.ra-r{
+    margin-left: 61rpx;
+}
+.clickRead{
+    color: #e61f18;
+    font-size: 26rpx;
+    width: 750rpx;
+    padding-left: 19rpx;
+    margin-top: 19rpx;
+}
+.button{
+    width: 680rpx;
+    height: 86rpx;
+    background: #e61f18;
+    text-align: center;
+    line-height: 86rpx;
+    color: #FFFFFF;
+    font-size: 28rpx;
+    margin: 196rpx 0 0 35rpx;
+    border-radius: 2rpx;
+}
+.two-jt{
+    width: 750rpx;
+    padding: 0 35rpx;
+    margin-top: 29rpx;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.jl{
+    color: #404040;
+    font-size: 26rpx;
+}
+.jl-l{
+    float: left;
+}
+.jl-r{
+    float: right;
+}
+.jl image{
+    width: 13rpx;
+    height: 23rpx;
+    margin-left: 12rpx;
+}
+button[disabled]:not([type]) {
+    background-color: #e61f18;
+    color: #FFFFFF;
+    opacity: 0.4;
+}
+.pop{
+    width: 750rpx;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+.mask{
+    width: 488rpx;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    position: absolute;
+    top: 259rpx;
+    left: 141rpx;
+    z-index: 999;
+}
+.text{
+    width: 488rpx;
+    padding: 39rpx 18rpx 10rpx 30rpx;
+    box-sizing: border-box;
+}
+.title{
+    color: #404040;
+    font-size: 34rpx;
+    text-align: center;
+    margin-bottom: 30rpx;
+}
+.one{
+    color:#404040;
+    font-size: 26rpx;
+    margin-bottom: 24rpx;
+
+}
+
+.content text{
+    display: inline-block;
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    background-color: #000000;
+    margin-top: 16rpx;
+    margin-right: 15rpx;
+}
+.one-text{
+    margin-right: 10rpx;
+    line-height: 44rpx;
+    display: flex;
+    justify-content: flex-start;
+}
+.know{
+    width: 100%;
+    height: 66rpx;
+    text-align: center;
+    line-height: 66rpx;
+    color: #e61f18;
+    font-size: 26rpx;
+    border-top: 1rpx solid #f7f7f7;
+}
+.ct{
+    width: 430rpx;
+    display: inline-block;
+}
+

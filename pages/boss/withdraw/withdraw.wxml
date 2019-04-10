@@ -1,0 +1,85 @@
+<!--pages/boss/withdraw/withdraw.wxml-->
+<view class="bankCard" bindtap="selectBank" wx:if="{{!cardInfo}}">选择银行卡
+    <image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
+</view>
+<view class="card" bindtap="selectBank" wx:else>
+    <view class="card-one">
+        <view class="logo">
+            <image lazy-load="true" src="{{cardInfo.cardImg}}"></image>
+        </view>
+        <view class="card-info">
+            <view class="card-name">{{cardInfo.cardName}}</view>
+            <view class="card-num">尾号{{cardInfo.cardNum}}</view>
+        </view>
+    </view>
+    <image class="card-img" lazy-load="true" src="{{imgHost}}jt_18.png"></image>
+</view>
+<view class="area">
+    <view class="withdraw">
+        <view class="with-text">提现金额</view>
+        <view class="with-area">
+            <view class="symbol">￥</view>
+            <input class="input" type="number" value="{{money}}" bindinput="watchInput"/>
+            <icon type="clear" bindtap="clear" size="18"/>
+        </view>
+    </view>
+    <view class="dibu">
+        <view class="left-div">可用金额{{userInfo.commission}}元</view>
+        <view class="right-div">实际到账金额：{{trueMoney}}元</view>
+    </view>
+    <view class="bill">
+        <view class="bill-text">是否可提供一般纳税人增值税服务专用发票</view>
+        <radio-group class="group" bindchange="select">
+            <radio class="radio" color="#e61f18" value="1"/>
+                <text class="ra-text">可以提供</text>
+            <radio class="radio ra-r" color="#e61f18" value="2" />
+                <text class="ra-text">无法提供</text>
+        </radio-group>
+    </view>
+</view>
+<view class="clickRead" bindtap="know">请点击阅读注意事项</view>
+
+<button bindtap="withdraw" class="button">确定提现</button>
+<view class="two-jt">
+    <view class="jl jl-l" bindtap="selectDiv" data-div="1">申请记录
+        <image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
+    </view>
+    <view class="jl jl-r" bindtap="selectDiv" data-div="2">发票信息
+        <image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
+    </view>
+</view>
+
+<view class="pop" wx:if="{{mask}}">
+    <view class="mask">
+        <view class="text">
+            <view class="title">注意事项</view>
+            <view class="content">
+                <view class="one">
+                    <view class="one-text">
+                        <text></text>
+                        <view class="ct">不接受增值税普通发票</view>
+                    </view>
+                </view>
+                <view class="one">
+                    <view class="one-text">
+                        <text></text>
+                        <view class="ct">可以提供一般纳税人增值税服务专用发票不需要手续费</view>
+                    </view>
+                </view>
+                <view class="one">
+                    <view class="one-text">
+                        <text></text>
+                        <view class="ct">没有增值税专用发票发票扣除7%的税和服务手续费每次申请额度不能少于2000元，不能大于20万元</view>
+                    </view>
+                </view>
+                <view class="one">
+                    <view class="one-text">
+                        <text></text>
+                        <view class="ct">提出申请之后，请寄出您申请金额相对应的发票</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="know" bindtap="know">我知道了</view>
+    </view>
+</view>

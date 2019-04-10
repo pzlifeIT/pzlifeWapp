@@ -1,0 +1,59 @@
+<!--pages/boss/cardBag/cardBag.wxml-->
+<view class="card-list">
+    <view class="kefu">
+        <view class="dian"></view>
+        <view class="phone">客服电话15502123212</view>
+    </view>
+    <view class="one-card" wx:for="{{cardList}}">
+        <image class="bg" src="{{item.admin_bank.bg_img}}"></image>
+        <view class="logo-name">
+            <image lazy-load="true" class="logo" wx:if="{{!item.admin_bank.icon_img}}" src="{{imgHost}}yh.png"></image>
+            <image lazy-load="true" class="logo" wx:else src="{{item.admin_bank.icon_img}}"></image>
+            <view class="yh-name">{{item.admin_bank.bank_name}}</view>
+        </view>
+        <view class="cardNum">{{item.bank_card}}</view>
+        <view class="button un-dispose" wx:if="{{item.status == 1}}">未处理</view>
+        <view class="button" wx:if="{{item.status == 1}}" bindtap="backout" data-cardid="{{item.id}}">撤销</view>
+        <view class="button" wx:if="{{item.status == 4}}">处理中</view>
+        <view class="button un-dispose" wx:if="{{item.status == 5}}">已驳回</view>
+        <view class="reason" wx:if="{{item.status == 5}}" bindtap="addCard" data-stype="1" data-cardid="{{item.id}}">查看原因 <image lazy-load="true" class="jt" src="{{imgHost}}jt_black.png"></image></view>
+        <view class="button ty" bindtap="clickButton" data-status="1" data-cardid="{{item.id}}" wx:if="{{item.status == 3}}">已停用
+            <view class="yuan ty-yuan"></view>
+        </view>
+        <view class="button qy" bindtap="clickButton" data-status="2" data-cardid="{{item.id}}" wx:elif="{{item.status == 2}}">已启用
+            <view class="yuan qy-yuan"></view>
+        </view>
+    </view>
+    <!--<view class="one-card">-->
+        <!--<view class="logo-name">-->
+            <!--<image lazy-load="true" class="logo" src="{{imgHost}}yh.png"></image>-->
+            <!--<view class="yh-name">招商银行</view>-->
+        <!--</view>-->
+        <!--<view class="cardNum">62228 **** **** 911</view>-->
+        <!--<view class="button un-dispose">已驳回</view>-->
+        <!--<view class="reason" bindtap="addCard" data-stype="1">查看原因 <image lazy-load="true" class="jt" src="{{imgHost}}jt_black.png"></image></view>-->
+    <!--</view>-->
+    <!--<view class="one-card">-->
+        <!--<view class="logo-name">-->
+            <!--<image lazy-load="true" class="logo" src="{{imgHost}}yh.png"></image>-->
+            <!--<view class="yh-name">招商银行</view>-->
+        <!--</view>-->
+        <!--<view class="cardNum">62228 **** **** 911</view>-->
+        <!--&lt;!&ndash;<view class="button un-dispose">处理中</view>&ndash;&gt;-->
+        <!--<view class="button">处理中</view>-->
+    <!--</view>-->
+    <!--<view class="one-card">-->
+        <!--<view class="logo-name">-->
+            <!--<image lazy-load="true" class="logo" src="{{imgHost}}yh.png"></image>-->
+            <!--<view class="yh-name">招商银行</view>-->
+        <!--</view>-->
+        <!--<view class="cardNum">62228 **** **** 911</view>-->
+        <!--<view class="button ty" bindtap="clickButton" wx:if="{{buttonStatus}}">已停用-->
+            <!--<view class="yuan ty-yuan"></view>-->
+        <!--</view>-->
+        <!--<view class="button qy" bindtap="clickButton" wx:else>已启用-->
+            <!--<view class="yuan qy-yuan"></view>-->
+        <!--</view>-->
+    <!--</view>-->
+</view>
+<view class="footer" bindtap="addCard">+ <text>添加银行卡</text></view>

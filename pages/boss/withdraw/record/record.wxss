@@ -1,0 +1,114 @@
+/* pages/boss/withdraw/record/record.wxss */
+page{
+    background-color: #f7f7f7;
+}
+.heard{
+    width: 750rpx;
+    height: 86rpx;
+    /*margin-top: 2rpx;*/
+    position: fixed;
+    top: 0;
+}
+.div{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    line-height: 86rpx;
+    color: #404040;
+    font-size: 30rpx;
+    display: inline-block;
+    background-color: #FFFFFF;
+}
+.active{
+    background-color: #e61f18;
+    color: #FFFFFF;
+}
+.list{
+    width: 750rpx;
+    margin-top: 96rpx;
+}
+.list-one{
+    width: 750rpx;
+    height: auto;
+    overflow: auto;
+    padding: 30rpx 23rpx 12rpx 21rpx;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+.line{
+    width: 706rpx;
+    height: auto;
+    overflow: auto;
+    margin-bottom: 17rpx;
+}
+.left{
+    color:#666666;
+    font-size: 28rpx;
+    float: left;
+    text-align: left;
+}
+.right{
+    color: #404040;
+    font-size: 28rpx;
+    float: right;
+    text-align: right;
+}
+.bill-info{
+    width: 750rpx;
+    /*height: 360rpx;*/
+    padding: 29rpx 30rpx 12rpx 19rpx;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+.info-title{
+    color: #202020;
+    font-size: 30rpx;
+    display: inline-block;
+    margin-bottom: 28rpx;
+}
+text{
+    display: inline-block;
+}
+.info-line{
+    color: #666666;
+    font-size: 28rpx;
+    margin-bottom: 16rpx;
+    display: flex;
+    justify-content: flex-start;
+}
+.line-title{
+   display: flex;
+    width: 140rpx;
+    justify-content: space-between;
+}
+.text{
+    color: #202020;
+    text-align: justify;
+    display: inline-block;
+    width: 553rpx;
+}
+.billTitle{
+    width: 750rpx;
+    height: 134rpx;
+    background-color: #FFFFFF;
+    margin: 10rpx 0;
+    padding: 30rpx 0 21rpx 20rpx;
+    box-sizing: border-box;
+}
+.title-title{
+    color: #202020;
+    font-size: 30rpx;
+   margin-bottom: 18rpx;
+}
+.tt{
+    color: #666666;
+    font-size: 28rpx;
+}
+.tt text{
+    color: #202020;
+}
+.fp{
+    width: 645rpx;
+    height: 372rpx;
+    margin-left: 31rpx;
+}

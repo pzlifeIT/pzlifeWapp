@@ -1,0 +1,119 @@
+<!--pages/boss/withdraw/record/record.wxml-->
+<view class="heard">
+    <view class="div {{div == 1?'active':''}}" bindtap="selectDiv" data-div="1">申请记录</view>
+    <view class="div {{div == 2?'active':''}}" bindtap="selectDiv" data-div="2">发票信息</view>
+</view>
+<block wx:if="{{div == 1}}">
+    <view class="list">
+        <block wx:for="{{list}}">
+        <view class="list-one" wx:for="{{item}}">
+            <view class="line">
+                <view class="left">申请日期</view>
+                <view class="right">{{item.create_time}}</view>
+            </view>
+            <view class="line">
+                <view class="left">申请金额</view>
+                <view class="right">{{item.money}}元</view>
+            </view>
+            <view class="line">
+                <view class="left">是否开票</view>
+                <view class="right" wx:if="{{item.invoice == 1}}">是</view>
+                <view class="right" wx:if="{{item.invoice == 2}}">否</view>
+            </view>
+            <view class="line">
+                <view class="left">扣除费用</view>
+                <view class="right">{{item.deduct_money}}元</view>
+            </view>
+            <view class="line">
+                <view class="left">税后实付</view>
+                <view class="right">{{item.real_money}}元</view>
+            </view>
+            <view class="line">
+                <view class="left">转账银行</view>
+                <view class="right">{{item.bank_name}}(5566)</view>
+            </view>
+            <view class="line">
+                <view class="left">申请状态</view>
+                <!--<view class="right">{{item.message}}</view>-->
+                <view class="right" wx:if="{{item.status == 1}}">待处理</view>
+                <view class="right" wx:if="{{item.status == 2}}">已完成</view>
+                <view class="right" wx:if="{{item.status == 3}}">取消</view>
+            </view>
+        </view>
+        </block>
+    </view>
+</block>
+<!--发票信息-->
+<block wx:if="{{div == 2}}">
+    <view style="margin-top: 96rpx">
+        <view class="bill-info">
+            <view class="info-title">发票信息</view>
+            <view class="info">
+                <view class="info-line">
+                    <text class="line-title">公司名称：</text>
+                    <text class="text">上海弗来寺国际贸易有限公司</text>
+                </view>
+                <view class="info-line">
+                    <text class="line-title">
+                        <text>税</text>
+                        <text> 号：</text>
+                    </text>
+                    <text class="text">91310115342435549H</text>
+                </view>
+                <view class="info-line">
+                    <text class="line-title">注册地址：</text>
+                    <text class="text">中国（上海）自由贸易试验区浦东大道2123号3E-1864室</text>
+                </view>
+                <view class="info-line">
+                    <text class="line-title">
+                        <text>开</text>
+                        <text>户</text>
+                        <text> 行：</text>
+                    </text>
+                    <text class="text">上海银行股份有限公司长宁支行</text>
+                </view>
+                <view class="info-line">
+                    <text class="line-title">开户账号：</text>
+                    <text class="text">03002617551</text>
+                </view>
+            </view>
+        </view>
+        <view class="billTitle">
+            <view class="title-title">发票服务名称</view>
+            <view class="tt">发票服务名称：
+                <text>商务服务（不支持其他发票服务名称）</text>
+            </view>
+        </view>
+        <view class="bill-info">
+            <view class="info-title">发票样式</view>
+            <image class="fp" lazy-load="true" src="{{imgHost}}fp.png" bindtap="previewImg"
+                   data-img="{{imgHost}}fp.png"></image>
+        </view>
+        <view class="bill-info">
+            <view class="info-title">发票寄出信息</view>
+            <view class="info">
+                <view class="info-line">
+                    <text class="line-title">收件人：</text>
+                    <text class="text">品质生活财务部</text>
+                </view>
+                <view class="info-line">
+                    <text class="line-title">
+                        <text>电</text>
+                        <text> 话：</text>
+                    </text>
+                    <text class="text">15502123121</text>
+                </view>
+                <view class="info-line">
+                    <text class="line-title">地址：</text>
+                    <text class="text">上海市静安区石门二路333号3号楼17C</text>
+                </view>
+            </view>
+        </view>
+        <view class="billTitle">
+            <view class="title-title">寄发票时请备注真实姓名手机号和开票公司名称</view>
+            <view class="tt">如有疑问请联系：
+                <text>15502123121</text>
+            </view>
+        </view>
+    </view>
+</block>

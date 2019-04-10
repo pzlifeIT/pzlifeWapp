@@ -1,0 +1,15 @@
+<!--pages/boss/withdraw/submitStatus/submitStatus.wxml-->
+<view class="status">
+    <view class="img">
+        <image lazy-load="true" src="{{imgHost}}lb.png"></image>
+        <text>申请提交成功</text>
+    </view>
+    <view class="jg" wx:if="{{status == 1}}">请尽快寄出发票等待财务收到发票进行操作</view>
+    <view class="jg" wx:else="{{status == 2}}">请耐心等待财务进行操作</view>
+</view>
+
+<view class="footer">
+    <view class="left" bindtap="goon">继续操作</view>
+    <view class="right" bindtap="cha">查看申请记录</view>
+</view>
+<view class="goBoss" bindtap="goBoss">返回个人中心</view>
