@@ -103,6 +103,7 @@ page {
 }
 
 .radio {
+    width: 100%;
     color: #202020;
     font-size: 30rpx;
     transform: scale(0.9);
