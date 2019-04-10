@@ -121,6 +121,9 @@ App({
         wx.showModal({
             title: data.title || '',
             content: data.content || '',
+            confirmColor:data.confirmColor || "",
+            showCancel:data.showCancel || true,
+            confirmText:data.confirmText || "确定",
             success(res) {
                 if (res.confirm) {
                     typeof data.success == 'function' ? data.success() : ''

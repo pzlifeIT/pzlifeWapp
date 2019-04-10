@@ -67,6 +67,7 @@ Page({
                 if (res.code) {
                     app.wxrequest({
                         url: "user/getUserRead",
+                        noloading:true,
                         data: {
                             code: res.code,
                             view_uid: pid,

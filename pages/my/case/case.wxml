@@ -2,40 +2,36 @@
 <view class="balance">
     <image lazy-load="true" src="{{imgHost}}bg.png"></image>
     <view class="balance-text">商票余额</view>
-    <view class="balance-num">{{userInfo.balance}}
+    <view class="balance-num">{{boss.balance}}
         <text>元</text>
     </view>
     <view class="two" wx:if="{{userInfo.user_identity == 1}}">
         <view class="total">商票总额
             <text>(元)</text>
-            <view>20000</view>
+            <view>{{boss.balance_all}}</view>
         </view>
         <view class="used">已使用商票
             <text>(元)</text>
-            <view>3000</view>
+            <view>{{boss.balance_use}}</view>
         </view>
     </view>
     <view class="three" wx:else>
         <view class="three-total">商票总额
             <text>(元)</text>
-            <view>20000</view>
+            <view>{{boss.balance_all}}</view>
         </view>
         <view class="three-total">待入账商票
             <text>(元)</text>
-            <view>20000</view>
+            <view>未定义</view>
         </view>
         <view class="three-used">已使用商票
             <text>(元)</text>
-            <view>3000</view>
+            <view>{{boss.balance_use}}</view>
         </view>
     </view>
 </view>
-<!--<view class="button" wx:if="{{caseList.length>=1}}">-->
-<!--<view class="left">发商票</view>-->
-<!--<view class="right">发放记录</view>-->
-<!--</view> -->
+<view class="detail-head">商票明细</view>
 <view class="detail">
-    <view class="detail-head">商票明细</view>
     <scroll-view class="detali-list" scroll-y="true" style="height: {{scroll_height}}rpx;">
         <view class="detail-one" wx:for="{{caseList}}">
             <view class="list-left">

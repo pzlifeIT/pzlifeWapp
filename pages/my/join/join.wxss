@@ -132,7 +132,7 @@ page{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 260rpx;
+    margin-top: 550rpx;
 }
 .not-case{
     width: 199rpx;

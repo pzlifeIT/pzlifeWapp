@@ -10,7 +10,8 @@ Page({
         caseList: [],
         userInfo: {},
         imgHost: '',
-        ident:0
+        ident:0,
+        boss:{}
     },
     getCaseDetail:function(){
         let that = this
@@ -35,12 +36,23 @@ Page({
             windowWidth = wx.getSystemInfoSync().windowWidth
         console.log(app.globalData.userInfo)
         this.setData({
-            scroll_height: windowHeight * 750 / windowWidth - 68,
+            scroll_height: windowHeight * 750 / windowWidth - 20,
             imgHost: app.globalData.host.imgHost
         })
         this.getCaseDetail()
+        this.getCaseNum()
     },
-
+    getCaseNum:function(){
+      let that = this
+      app.wxrequest({
+          url:"user/getbossshop",
+          success(res){
+              that.setData({
+                  boss:res.data
+              })
+          }
+      })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

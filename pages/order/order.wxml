@@ -5,7 +5,7 @@
     <view class="or-head-li {{status == 1?'active':''}}" bindtap="headtap" data-num="1">待付款</view>
     <view class="or-head-li {{status == 4?'active':''}}" bindtap="headtap" data-num="4">待发货</view>
     <view class="or-head-li {{status == 5?'active':''}}" bindtap="headtap" data-num="5">待收货</view>
-    <view class="or-head-li {{status == 6?'active':''}}" bindtap="headtap" data-num="6">待评价</view>
+    <view class="or-head-li {{status == 6?'active':''}}" bindtap="headtap" data-num="6">已收货</view>
     <i class="wire"><s></s></i>
 </view>
 <view class="top"></view>

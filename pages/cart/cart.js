@@ -10,7 +10,7 @@ Page({
         valid: [],
         failure: [],
         total: 0,
-        selectAll: false,
+        selectAll:true,
         sku_id: 0,
         con_id: "",
         shop_id: 0,
@@ -31,7 +31,6 @@ Page({
                 }
             }
         }
-
         this.setData({
             valid: valid,
             selectAll: selectAll
@@ -346,9 +345,9 @@ Page({
      */
     addText: function(data) {
         for (let i = 0; i < data.length; i++) {
-            data[i].selectStatus = false
+            data[i].selectStatus = true
             for (let j = 0; j < data[i].goods.length; j++) {
-                data[i].goods[j].selectStatus = false
+                data[i].goods[j].selectStatus = true
             }
         }
         return data
@@ -434,7 +433,7 @@ Page({
             app.setCartNum()
         }
         this.setData({
-            selectAll: false
+            selectAll: true
         })
     },
 

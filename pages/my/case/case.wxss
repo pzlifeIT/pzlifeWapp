@@ -93,6 +93,7 @@ page{
 .detail{
 	width: 750rpx;
 	height: 100%;
+	margin-top: 328rpx;
 	overflow: auto;
 }
 .detail-list{
@@ -106,6 +107,10 @@ page{
 	line-height: 68rpx;
 	color: #202020;
 	font-size: 32rpx;
+	margin-top: 260rpx;
+	position: fixed;
+	top: 0;
+	z-index: 1;
 }
 ::-webkit-scrollbar {
     width: 0px;
@@ -210,7 +215,7 @@ page{
 	font-size: 24rpx;
 }
 .list-right{
-	width: 23%;
+	width: 28%;
 	height: 180rpx;
 	float: right;
 	color: #202020;

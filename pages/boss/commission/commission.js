@@ -17,7 +17,8 @@ Page({
         info:{},
         qudao:[],
         zhaoshang:[],
-        total:0
+        total:0,
+        other:[]
     },
     clickDiv: function (e) {
         let div = e.currentTarget.dataset.div,
@@ -28,13 +29,42 @@ Page({
             huiyuan:[],
             qudao:[],
             zhaoshang:[],
-            reach:true
+            reach:true,
+            page:1,
+            other:[]
         })
         if (div == 1){
             this.getEarnings(num)
         } else if (div == 2){
             this.getmerchants()
+        } else if (div == 3){
+            this.getotherearn()
         }
+    },
+    getotherearn:function(){
+      let that = this
+      app.wxrequest({
+          url:"user/getotherearn",
+          data: {
+              page:that.data.page || 1,
+              page_num:that.data.pageNum
+          },
+          success(res){
+              if (res.data.length < 10) {
+                  that.setData({
+                      reach:false
+                  })
+              }
+              if (res.data.length > 0){
+                  let other = that.data.other
+                  other.push(res.data)
+                  that.setData({
+                      other:other,
+                      page:that.data.page + 1
+                  })
+              }
+          }
+      })
     },
     //在每一年的一月,查询上一个月的明细,也就是前一年的12月
     clickSelect: function (e) {
@@ -43,9 +73,11 @@ Page({
             num: num,
             huiyuan:[],
             eranList:[],
+            qudao:[],
             zhaoshang:[],
             page:1,
-            reach:true
+            reach:true,
+            other:[]
         });
         this.getEarnings(num)
     },
@@ -185,6 +217,8 @@ Page({
             this.getEarnings(this.data.num)
         } else if(this.data.div == 2){
             this.getmerchants()
+        } else if (this.data.div == 3){
+            this.getotherearn()
         }
 
     },

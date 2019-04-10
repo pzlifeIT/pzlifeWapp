@@ -6,12 +6,32 @@ Page({
      * 页面的初始数据
      */
     data: {
-        i: 0,
+        i: 1,
         detailList:[],
         imgHost:"",
         page:1,
         pageNum:10,
-        reach:true
+        reach:true,
+        boss:{}
+    },
+    clickDiv:function(e){
+        let i = e.currentTarget.dataset.i
+        this.setData({
+            i:i,
+            detailList:[],
+            page:1,
+            reach:true,
+        })
+        if (i == 1){
+            wx.setNavigationBarTitle({
+                title:"已使用商票明细"
+            })
+        } else if (i == 3){
+            wx.setNavigationBarTitle({
+                title:"商票余额明细"
+            })
+        }
+        this.getCaseDetail(i)
     },
     getCaseDetail:function(i){
         let that = this
@@ -40,6 +60,18 @@ Page({
             }
         })
     },
+    getbossshop:function(){
+        let that = this
+        app.wxrequest({
+            url: "user/getbossshop",
+            success(res) {
+                console.log(res)
+                that.setData({
+                    boss: res.data
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -48,7 +80,8 @@ Page({
             imgHost:app.globalData.host.imgHost
         })
         this.setData({
-            i: options.i
+            i: options.i,
+            div:options.i
         })
         if (options.i == 1){
             wx.setNavigationBarTitle({
@@ -64,6 +97,7 @@ Page({
             })
         }
         this.getCaseDetail(options.i)
+        this.getbossshop()
     },
 
     /**

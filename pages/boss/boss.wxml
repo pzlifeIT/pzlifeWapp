@@ -25,11 +25,13 @@
     </view>
     <view class="case-info">
         <view class="case-total">
-            <view class="total-text">商票总额
-                <text>(元)</text>
-                <image lazy-load="true" catchtap="pop" data-type="1" src="{{imgHost}}wh_03.png"></image>
+            <view class="click" catchtap="case" data-i="3">
+                <view class="total-text">商票总额
+                    <text>(元)</text>
+                    <image lazy-load="true" catchtap="pop" data-type="1" src="{{imgHost}}wh_03.png"></image>
+                </view>
+                <view class="total-price">{{boss.balance_all}}</view>
             </view>
-            <view class="total-price">{{boss.balance_all}}</view>
         </view>
         <view class="three-div">
             <view class="one-div oneone" bindtap="case" data-i="3">
@@ -67,22 +69,27 @@
         经营性收益
     </view>
     <view class="case-info">
-        <view class="case-total" catchtap="earning" data-earn="2" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
-            <view class="total-text">经营性收益总额
-                <text>(元)</text>
-                <image  catchtap="pop" data-type="2" lazy-load="true" src="{{imgHost}}wh_03.png"></image>
+        <view class="click" catchtap="earning" data-earn="2" data-all="{{boss.bonus_all}}"
+              data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
+            <view class="case-total">
+                <view class="total-text">经营性收益总额
+                    <text>(元)</text>
+                    <image catchtap="pop" data-type="2" lazy-load="true" src="{{imgHost}}wh_03.png"></image>
+                </view>
+                <view class="total-price">{{boss.bonus_all}}</view>
             </view>
-            <view class="total-price">{{boss.bonus_all}}</view>
         </view>
         <view class="three-div">
-            <view class="one-div oneone" catchtap="earning" data-earn="2" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
+            <view class="one-div oneone" catchtap="earning" data-earn="2" data-all="{{boss.bonus_all}}"
+                  data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
                 <view class="total-div">已入账
                     <text>(元)</text>
                 </view>
                 <view class="total-div">{{boss.bonus}}</view>
             </view>
             <view class="case-line"></view>
-            <view class="one-div three" catchtap="earning" data-earn="1" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
+            <view class="one-div three" catchtap="earning" data-earn="1" data-all="{{boss.bonus_all}}"
+                  data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
                 <view class="total-div">待入帐
                     <text>(元)</text>
                 </view>
@@ -107,12 +114,14 @@
 
 <view class="case">
     <view class="case-info">
-        <view class="case-total commission" bindtap="gocommiss">
-            <view class="total-text">佣金总额
-                <text>(元)</text>
-                <image catchtap="pop" data-type="4" lazy-load="true" src="{{imgHost}}wh_03.png"></image>
+        <view class="click" bindtap="gocommiss">
+            <view class="case-total commission">
+                <view class="total-text">佣金总额
+                    <text>(元)</text>
+                    <image catchtap="pop" data-type="4" lazy-load="true" src="{{imgHost}}wh_03.png"></image>
+                </view>
+                <view class="total-price">{{boss.commission_all}}</view>
             </view>
-            <view class="total-price">{{boss.commission}}</view>
         </view>
         <view class="jf commission-jf">
             <view class="left" bindtap="commission">
@@ -129,27 +138,31 @@
 </view>
 <view class="icon">
     <!--<view class="one icon-after">-->
-        <!--<image lazy-load="true" src="{{imgHost}}dpgl_10.png"></image>-->
-        <!--<view class="icon-text">店铺发券</view>-->
+    <!--<image lazy-load="true" src="{{imgHost}}dpgl_10.png"></image>-->
+    <!--<view class="icon-text">店铺发券</view>-->
     <!--</view>-->
-    <navigator class="one icon-after" url="/pages/freightHouse/freightHouse" >
+    <navigator class="one icon-after" url="/pages/freightHouse/freightHouse">
         <image lazy-load="true" src="{{imgHost}}dpgl_12.png"></image>
         <view class="icon-text">商品货仓</view>
     </navigator>
     <!--<view class="one">-->
-        <!--<image lazy-load="true" src="{{imgHost}}dpgl_07.png"></image>-->
-        <!--<view class="icon-text">开店邀请</view>-->
+    <!--<image lazy-load="true" src="{{imgHost}}dpgl_07.png"></image>-->
+    <!--<view class="icon-text">开店邀请</view>-->
     <!--</view>-->
     <navigator class="one icon-after" url="/pages/boss/circle/circle">
-    <!-- <view class="one icon-after"> -->
-            <image lazy-load="true" src="{{imgHost}}dpgl_17.png"></image>
-            <view class="icon-text">买主圈</view>
-    <!-- </view> -->
+        <!-- <view class="one icon-after"> -->
+        <image lazy-load="true" src="{{imgHost}}dpgl_17.png"></image>
+        <view class="icon-text">买主圈</view>
+        <!-- </view> -->
     </navigator>
     <!--<view class="one icon-after">-->
         <!--<image lazy-load="true" src="{{imgHost}}dpgl_18.png"></image>-->
         <!--<view class="icon-text">现金券</view>-->
     <!--</view>-->
+    <view class="one icon-after" bindtap="cardbag">
+        <image lazy-load="true" src="{{imgHost}}kb.png"></image>
+        <view class="icon-text">卡包</view>
+    </view>
 </view>
 <!--弹窗-->
 <view class="mask" catchtouchmove='preventTouchMove' wx:if="{{popCase || popShouyi || popYongjin || popJoin}}">
