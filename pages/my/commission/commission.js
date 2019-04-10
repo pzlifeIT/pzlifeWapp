@@ -52,10 +52,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        this.getshopcommission()
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
+        this.getshopcommission()
         this.getshopcommissionsum()
     },
     getshopcommissionsum() {

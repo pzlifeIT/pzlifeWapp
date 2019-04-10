@@ -20,14 +20,15 @@
     </view>
 </view>
 <view class="title" >佣金明细</view>
+<view class="listtop"></view>
 <view class="list" wx:for="{{list}}" >
   <view wx:for="{{item}}" >
-      <view class="list-one">
+      <!-- <view class="list-one">
           <view class="touxiang">
               <image src=""></image>
           </view>
           <view class="one-info">
-              <view class="shouyi">订单收益
+              <view class="shouyi">{{ctype}}
                   <text class="order-money drz-money">+5600</text>
               </view>
               <view class="one-title">我十一速
@@ -40,17 +41,17 @@
                   </view>
               </navigator>
           </view>
-      </view>
+      </view> -->
       <view class="detail-doim">
           <view class="list-left">
-              <view class="doim-title">钻石邀请奖励</view>
-              <view class="doim-time">2019-10-15 10:26:50</view>
+              <view class="doim-title">{{item.ctype}}</view>
+              <view class="doim-time">{{item.create_time}}</view>
           </view>
-          <view class="list-right active">+60 元</view>
+          <view class="list-right active">{{item.money > 0?'+':''}}{{item.money}}元</view>
       </view>
   </view>
 </view>
-<view class="not"  wx:if="{{1 == 2}}">
+<view class="not"  wx:if="{{list.length == 0}}">
     <view class="not-case" >
         <image class="not-img" lazy-load="true" src="{{imgHost}}yhq.png"></image>
         <view class="text">暂无明细</view>
