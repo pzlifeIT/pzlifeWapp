@@ -52,6 +52,12 @@ Page({
             }
         }, 1000);
     },
+    casetotal: function(e) {
+        let i = e.currentTarget.dataset.i
+        wx.navigateTo({
+            url: "/pages/boss/case/totalcase/totalcase?i=" + i
+        })
+    },
     case: function(e) {
         let i = e.currentTarget.dataset.i
         wx.navigateTo({

@@ -26,9 +26,9 @@ Page({
             wx.setNavigationBarTitle({
                 title:"已使用商票明细"
             })
-        } else if (i == 3){
+        } else if (i == 4){
             wx.setNavigationBarTitle({
-                title:"商票余额明细"
+                title:"商票总额明细"
             })
         }
         this.getCaseDetail(i)
@@ -87,7 +87,7 @@ Page({
         })
         if (options.i == 1){
             wx.setNavigationBarTitle({
-              title: '已使用商票明细'
+                title: '已使用商票明细'
             })
         } else if (options.i == 2){
             wx.setNavigationBarTitle({
@@ -95,7 +95,11 @@ Page({
             })
         } else if (options.i == 3){
             wx.setNavigationBarTitle({
-              title: '商票余额明细'
+                title: '商票余额明细'
+            })
+        }else if (options.i == 4){
+            wx.setNavigationBarTitle({
+                title: '商票总额明细'
             })
         }
         this.getCaseDetail(options.i)

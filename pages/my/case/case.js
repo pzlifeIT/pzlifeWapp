@@ -11,20 +11,37 @@ Page({
         userInfo: {},
         imgHost: '',
         ident:0,
-        boss:{}
+        balance:0,
+        balanceAll:0,
+        balanceUse:0,
+        noBbonus:0,
+        reach:true,
+        page:1
     },
     getCaseDetail:function(){
         let that = this
         app.wxrequest({
             url:"user/getshopbalance",
             data: {
-                stype:3
+                stype:3,
+                page:that.data.page || 1,
+                page_num:10
             },
             nocon:false,
             success(res){
-                that.setData({
-                    caseList:res.data
-                })
+                if (res.data.length < 10){
+                    that.setData({
+                        reach:false
+                    })
+                }
+                if (res.data.length > 0) {
+                    let list = that.data.caseList
+                    list.push(res.data)
+                    that.setData({
+                        caseList:list,
+                        page : that.data.page+1
+                    })
+                }
             }
         })
     },
@@ -45,10 +62,13 @@ Page({
     getCaseNum:function(){
       let that = this
       app.wxrequest({
-          url:"user/getbossshop",
+          url:"user/getshopbalancesum",
           success(res){
               that.setData({
-                  boss:res.data
+                  balance:res.balance,
+                  balanceAll:res.balanceAll,
+                  balanceUse:res.balanceUse,
+                  noBbonus:res.noBbonus
               })
           }
       })
@@ -94,7 +114,8 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function() {
-
+        if (!this.data.reach) return
+        this.getCaseDetail()
     },
 
     /**
