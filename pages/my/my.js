@@ -13,7 +13,15 @@ Page({
         orderCount: {},
         boss: {}
     },
-
+    notice:function(e){
+        let user_identity = e.currentTarget.dataset.identity
+        if (user_identity == 1){
+            return
+        }
+      wx.navigateTo({
+          url:"/pages/my/notice/notice?iden="+user_identity
+      })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

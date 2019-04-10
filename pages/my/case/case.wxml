@@ -2,38 +2,39 @@
 <view class="balance">
     <image lazy-load="true" src="{{imgHost}}bg.png"></image>
     <view class="balance-text">商票余额</view>
-    <view class="balance-num">{{boss.balance}}
+    <view class="balance-num">{{balance}}
         <text>元</text>
     </view>
     <view class="two" wx:if="{{userInfo.user_identity == 1}}">
         <view class="total">商票总额
             <text>(元)</text>
-            <view>{{boss.balance_all}}</view>
+            <view>{{balanceAll}}</view>
         </view>
         <view class="used">已使用商票
             <text>(元)</text>
-            <view>{{boss.balance_use}}</view>
+            <view>{{balanceUse}}</view>
         </view>
     </view>
     <view class="three" wx:else>
         <view class="three-total">商票总额
             <text>(元)</text>
-            <view>{{boss.balance_all}}</view>
+            <view>{{balanceAll}}</view>
         </view>
         <view class="three-total">待入账商票
             <text>(元)</text>
-            <view>未定义</view>
+            <view>{{noBbonus}}</view>
         </view>
         <view class="three-used">已使用商票
             <text>(元)</text>
-            <view>{{boss.balance_use}}</view>
+            <view>{{balanceUse}}</view>
         </view>
     </view>
 </view>
 <view class="detail-head">商票明细</view>
 <view class="detail">
     <scroll-view class="detali-list" scroll-y="true" style="height: {{scroll_height}}rpx;">
-        <view class="detail-one" wx:for="{{caseList}}">
+        <block wx:for="{{caseList}}">
+        <view class="detail-one" wx:for="{{item}}">
             <view class="list-left">
                 <view class="title">{{item.ctype}}</view>
                 <view class="order" wx:if="{{item.order_no}}">订单号：{{item.order_no}}</view>
@@ -41,6 +42,7 @@
             </view>
             <view class="list-right {{item.money > 0 ? 'active':''}}"><text wx:if="{{item.money > 0}}">+</text>{{item.money}} 元</view>
         </view>
+        </block>
     </scroll-view>
     <!--<scroll-view class="detali-list" scroll-y="true" style="height: {{scroll_height}}rpx;"-->
                  <!--wx:if="{{userInfo.user_identity == 2}}">-->

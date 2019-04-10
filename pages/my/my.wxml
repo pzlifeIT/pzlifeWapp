@@ -18,10 +18,10 @@
             <image lazy-load="true" src="{{userInfo.avatar}}"/>
         </view>
         <text class="userLogin din fl">{{userInfo.nick_name}}</text>
-        <view class="vid">
-            <text>{{userInfo.user_vid}}</text>
-        </view>
     </navigator>
+    <view class="vid" bindtap="notice" data-identity="{{userInfo.user_identity}}">
+        <text>{{userInfo.user_vid}}</text>
+    </view>
     <navigator wx:if="{{userInfo.user_identity == 4}}"
                url="/pages/boss/boss?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
                open-type="navigate">
@@ -97,7 +97,7 @@
                 <view class="one-title">购物积分
                     <text>(分)</text>
                 </view>
-                <view class="one-price">{{userInfo.integral || 0}}</view> 
+                <view class="one-price">{{userInfo.integral || 0}}</view>
             </view>
         </view>
     </view>
@@ -113,26 +113,31 @@
     <view class="uoList">
         <view class="uoLi" bindtap="checkOrder" data-status="1">
             <image lazy-load="true" class="uoIcon" src="{{imgHost}}dd_03.png"/>
-            <view class="or-num "  wx:if="{{orderCount.obligation > 0 && orderCount.obligation < 99}}">{{orderCount.obligation}}</view>
-            <view class="or-num or-num-nine"  wx:if="{{orderCount.obligation > 99}}">99+</view>
+            <view class="or-num " wx:if="{{orderCount.obligation > 0 && orderCount.obligation < 99}}">
+                {{orderCount.obligation}}
+            </view>
+            <view class="or-num or-num-nine" wx:if="{{orderCount.obligation > 99}}">99+</view>
             <text class="userText">待付款</text>
         </view>
         <view class="uoLi" bindtap="checkOrder" data-status="4">
             <image lazy-load="true" class="uoIcon" src="{{imgHost}}dd_05.png"/>
-            <view class="or-num "  wx:if="{{orderCount.deliver > 0 && orderCount.deliver < 99}}">{{orderCount.deliver}}</view>
-            <view class="or-num or-num-nine"  wx:if="{{orderCount.deliver > 99}}">99+</view>
+            <view class="or-num " wx:if="{{orderCount.deliver > 0 && orderCount.deliver < 99}}">{{orderCount.deliver}}
+            </view>
+            <view class="or-num or-num-nine" wx:if="{{orderCount.deliver > 99}}">99+</view>
             <text class="userText">待发货</text>
         </view>
         <view class="uoLi" bindtap="checkOrder" data-status="5">
             <image lazy-load="true" class="uoIcon" src="{{imgHost}}dd_07.png"/>
-            <view class="or-num" wx:if="{{orderCount.receive > 0 && orderCount.receive < 99}}">{{orderCount.receive}}</view>
-            <view class="or-num or-num-nine"  wx:if="{{orderCount.receive > 99}}">99+</view>
+            <view class="or-num" wx:if="{{orderCount.receive > 0 && orderCount.receive < 99}}">{{orderCount.receive}}
+            </view>
+            <view class="or-num or-num-nine" wx:if="{{orderCount.receive > 99}}">99+</view>
             <text class="userText">待收货</text>
         </view>
         <view class="uoLi nobr" bindtap="checkOrder" data-status="6">
             <image lazy-load="true" class="uoIcon" src="{{imgHost}}dd_09.png"/>
-            <view class="or-num" wx:if="{{orderCount.rating > 0 && orderCount.rating < 99}}">{{orderCount.rating}}</view>
-            <view class="or-num or-num-nine"  wx:if="{{orderCount.rating > 99}}">99+</view>
+            <view class="or-num" wx:if="{{orderCount.rating > 0 && orderCount.rating < 99}}">{{orderCount.rating}}
+            </view>
+            <view class="or-num or-num-nine" wx:if="{{orderCount.rating > 99}}">99+</view>
             <text class="userText">已收货</text>
         </view>
     </view>
@@ -159,11 +164,12 @@
 <view class="userCost" wx:if="{{userInfo.user_identity !=1}}">
     <view class="cost-title">活动管理</view>
     <view class="equity">
-        <view class="equity-one"  bindtap="activity" wx:if="{{userInfo.user_identity !=1}}" hover-class="other-navigator-hover" >
+        <view class="equity-one" bindtap="activity" wx:if="{{userInfo.user_identity !=1}}"
+              hover-class="other-navigator-hover">
             <image lazy-load="true" src="{{imgHost}}glhd_06.png"></image>
             <view class="equity-title">钻石接龙</view>
         </view>
-        <view class="equity-one"  bindtap="diamondlist" wx:if="{{userInfo.user_identity !=1}}">
+        <view class="equity-one" bindtap="diamondlist" wx:if="{{userInfo.user_identity !=1}}">
             <image lazy-load="true" src="{{imgHost}}glhd_03.png"></image>
             <view class="equity-title">钻石接龙列表</view>
         </view>
@@ -173,15 +179,15 @@
 <view class="userCost">
     <view class="cost-title">常用设置</view>
     <view class="equity">
-        <view class="equity-one" bindtap="toaddress" hover-class="other-navigator-hover" >
+        <view class="equity-one" bindtap="toaddress" hover-class="other-navigator-hover">
             <image lazy-load="true" src="{{imgHost}}cysz_06.png"></image>
             <view class="equity-title">我的地址</view>
         </view>
-        <view class="equity-one"  bindtap="myQr">
+        <view class="equity-one" bindtap="myQr">
             <image lazy-load="true" src="{{imgHost}}cysz_08.png"></image>
             <view class="equity-title">我的二维码</view>
         </view>
-        <view class="equity-one last"  bindtap="tonewpassword" hover-class="other-navigator-hover" >
+        <view class="equity-one last" bindtap="tonewpassword" hover-class="other-navigator-hover">
             <image lazy-load="true" src="{{imgHost}}cysz_03.png"></image>
             <view class="equity-title">修改密码</view>
         </view>
