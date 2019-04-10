@@ -47,7 +47,7 @@
                 <view class="one-price" wx:else>0</view>
             </view>
         </view> -->
-        <view class="line-one wid50" bindtap="gocommiss">
+        <view class="line-one wid50" bindtap="gototalcommiss">
             <view class="one-content">
                 <view class="one-title">佣金总额
                     <text>(元)</text>

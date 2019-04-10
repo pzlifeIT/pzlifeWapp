@@ -52,7 +52,18 @@ Page({
             })
             return
         }
-
+        if (parseFloat(that.data.money) < 2000){
+            app.toast({
+                title:"提现金额不得少于2000"
+            })
+            return
+        }
+        if (parseFloat(that.data.money) > 200000){
+            app.toast({
+                title:"提现金额不得大于200000"
+            })
+            return
+        }
         if (that.data.cardInfo == false || that.data.invoice == 0) {
             app.toast({
                 title: "未选择银行卡或是否可提供发票"
@@ -123,6 +134,7 @@ Page({
                 title: "提现金额不得大于可用金额"
             })
         }
+
     },
     /**
      * 生命周期函数--监听页面加载

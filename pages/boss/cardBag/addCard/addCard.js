@@ -74,6 +74,12 @@ Page({
             })
             return
         }
+        if (trueName == ""){
+            app.toast({
+                title:"姓名不能为空"
+            })
+            return
+        }
         app.wxrequest({
             url:"user/addUserBankcard",
             data:{
@@ -93,7 +99,7 @@ Page({
                 })
             },
             error(res){
-                if (res == 3002) {
+                if (res == 3002 || res == 3005 || res == 3006) {
                     app.toast({
                         title:"缺少参数"
                     })
