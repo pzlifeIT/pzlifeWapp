@@ -4,12 +4,12 @@ page {
 }
 
 .bg {
-    width: 750rpx;
-    height: 260rpx;
     position: fixed;
     top: 0;
     left: 0;
-    overflow: auto;
+    width: 750rpx;
+    height: 260rpx;
+    overflow: hidden;
 }
 
 .bg image {

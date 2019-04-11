@@ -55,7 +55,6 @@ Page({
                 money: that.data.reality || 0
             },
             success(res) {
-                app.getUserInfo()
                 wx.navigateTo({
                     url: './shiftSuccess/shiftSuccess'
                 })
@@ -85,6 +84,18 @@ Page({
             }
         })
     },
+    getUserInfo: function() {
+        let that = this
+        app.wxrequest({
+            url: "user/getuser",
+            nologin: true,
+            success(res) {
+                that.setData({
+                    commission: res.data.commission
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -96,10 +107,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
+        this.getUserInfo()
         this.setData({
             money: '',
-            reality: 0.00,
-            commission: app.globalData.userInfo.commission
+            reality: 0.00
         })
     },
 

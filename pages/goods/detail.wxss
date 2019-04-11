@@ -6,6 +6,12 @@ page {
     overflow: auto;
 }
 
+.detail {
+    background: #f7f7f7;
+    height: 100%;
+    overflow: auto;
+}
+
 swiper {
     width: 750rpx;
     height: 750rpx;
@@ -392,7 +398,9 @@ swiper-item {
 
 .param {
     width: 710rpx;
+    max-height: 500rpx;
     margin: 20rpx;
+    overflow: auto;
 }
 
 .param .spec_name {
