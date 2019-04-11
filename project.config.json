@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 47,
+			"current": 48,
 			"list": [
 				{
 					"id": 0,
@@ -362,6 +362,12 @@
 					"name": "佣金余额",
 					"pathName": "pages/my/commission/commission",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "扫码开店",
+					"pathName": "pages/openShop/openShop",
 					"scene": null
 				}
 			]
