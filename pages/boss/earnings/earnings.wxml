@@ -24,22 +24,22 @@
 </view>
 <view class="redHint">
     <view class="redText" wx:if="{{num == 1}}">
-        <view class="red-left" wx:if="{{div == 1 && eranList.length > 0}}">个人消费收益已入账合计</view>
-        <view class="red-left" wx:if="{{div == 2 && eranList.length > 0}}">个人消费收益待入账合计</view>
-        <view class="red-right" wx:if="{{div == 1 && eranList.length > 0}}">{{total}} 元</view>
+        <view class="red-left" wx:if="{{div == 2 && eranList.length > 0}}">个人消费收益已入账合计</view>
+        <view class="red-left" wx:if="{{div == 1 && eranList.length > 0}}">个人消费收益待入账合计</view>
         <view class="red-right" wx:if="{{div == 2 && eranList.length > 0}}">{{total}} 元</view>
+        <view class="red-right" wx:if="{{div == 1 && eranList.length > 0}}">{{total}} 元</view>
     </view>
     <view class="redText" wx:if="{{num == 2}}">
-        <view class="red-left" wx:if="{{div == 1 && huiyuan.length > 0}}">会员消费收益已入账合计</view>
-        <view class="red-left" wx:if="{{div == 2 && huiyuan.length > 0}}">会员消费收益待入账合计</view>
-        <view class="red-right" wx:if="{{div == 1 && huiyuan.length > 0}}">{{total}} 元</view>
+        <view class="red-left" wx:if="{{div == 2 && huiyuan.length > 0}}">会员消费收益已入账合计</view>
+        <view class="red-left" wx:if="{{div == 1 && huiyuan.length > 0}}">会员消费收益待入账合计</view>
         <view class="red-right" wx:if="{{div == 2 && huiyuan.length > 0}}">{{total}} 元</view>
+        <view class="red-right" wx:if="{{div == 1 && huiyuan.length > 0}}">{{total}} 元</view>
     </view>
     <view class="redText" wx:if="{{num == 3}}">
-        <view class="red-left" wx:if="{{div == 1 && qudao.length > 0}}">渠道收益已入账合计</view>
-        <view class="red-left" wx:if="{{div == 2 && qudao.length > 0}}">渠道收益待入账合计</view>
-        <view class="red-right" wx:if="{{div == 1 && qudao.length > 0}}">{{total}} 元</view>
+        <view class="red-left" wx:if="{{div == 2 && qudao.length > 0}}">渠道收益已入账合计</view>
+        <view class="red-left" wx:if="{{div == 1 && qudao.length > 0}}">渠道收益待入账合计</view>
         <view class="red-right" wx:if="{{div == 2 && qudao.length > 0}}">{{total}} 元</view>
+        <view class="red-right" wx:if="{{div == 1 && qudao.length > 0}}">{{total}} 元</view>
     </view>
 </view>
 <view class="list" wx:if="{{num == 1 && eranList.length > 0 }}">
@@ -50,7 +50,7 @@
             </view>
             <view class="one-info">
                 <view class="shouyi">订单收益
-                    <text class="order-money {{div == 2 ? 'drz-money':''}}">+{{item.result_price}} 元</text>
+                    <text class="order-money {{div == 1 ? 'drz-money':''}}">+{{item.result_price}} 元</text>
                 </view>
                 <view class="one-title">{{item.nick_name}}
                     <text>{{item.create_time}}</text>
@@ -77,7 +77,7 @@
                 <text class="ident" wx:if="{{item.user_identity == 1}}" >普通会员</text>
                 <text class="ident" wx:if="{{item.user_identity == 2}}" >钻石会员</text>
                 <text class="ident" wx:if="{{item.user_identity == 3}}" >合伙人</text>
-                <view class="money {{div == 2 ? 'drz-money':''}}">+{{item.result_price}} 元</view>
+                <view class="money {{div == 1 ? 'drz-money':''}}">+{{item.result_price}} 元</view>
             </view>
             <view class="shijian">{{item.create_time}}</view>
         </view>
@@ -93,7 +93,7 @@
         <view class="one-info">
             <view class="nickname qudao">
                 <view class="name">{{item.nick_name}}</view>
-                <view class="money {{div == 2 ? 'drz-money':''}}">+{{item.result_price}} 元</view>
+                <view class="money {{div == 1 ? 'drz-money':''}}">+{{item.result_price}} 元</view>
             </view>
         </view>
     </view>

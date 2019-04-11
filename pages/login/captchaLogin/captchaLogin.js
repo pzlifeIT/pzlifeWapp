@@ -124,6 +124,7 @@ Page({
                 code: code,
                 buid: app.globalData.pid
             },
+            noloading:true,
             nocon: true,
             success(res) {
                 let pages = getCurrentPages();
