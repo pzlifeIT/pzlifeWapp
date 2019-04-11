@@ -38,7 +38,7 @@ page {
     margin: 100rpx auto;
     float: right;
     margin-right: 7rpx;
-    width: 175rpx;
+    width: 185rpx;
     display: flex;
     justify-content: space-between;
     align-items: center;
