@@ -140,6 +140,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        app.getUserInfo()
         this.getInvoice()
         console.log(app.globalData.userInfo)
         let that = this
