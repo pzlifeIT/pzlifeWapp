@@ -22,9 +22,7 @@
         <view class="history-list">
             <view class="history-one" wx:for="{{searchList}}" wx:key="index" bindtap="clickSearch"
                   data-keyword="{{item}}">
-                <text
-                        class="text">{{item}}
-                </text>
+                <text class="text">{{item}}</text>
             </view>
         </view>
     </view>

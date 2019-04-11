@@ -1,190 +1,188 @@
 /* pages/search/search.wxss */
 
 page {
-	height: 100%;
-	overflow: auto;
-	background: #F7F7F7;
+    height: 100%;
+    overflow: auto;
+    background: #F7F7F7;
 }
 
 .search_head {
-	height: 80rpx;
-	margin-bottom: 10rpx;
-	overflow: auto;
-	border-bottom: 1rpx solid #f7f7f7;
-	position: fixed;
-	top: 0;
-	background: #fff;
+    height: 80rpx;
+    margin-bottom: 10rpx;
+    overflow: auto;
+    border-bottom: 1rpx solid #f7f7f7;
+    position: fixed;
+    top: 0;
+    background: #fff;
 }
 
 .search {
-	width: 644rpx;
-	height: 60rpx;
-	margin: 10rpx;
-	border-radius: 2rpx;
-	background-color: #f7f7f7;
-	float: left;
+    width: 644rpx;
+    height: 60rpx;
+    margin: 10rpx;
+    border-radius: 2rpx;
+    background-color: #f7f7f7;
+    float: left;
 }
 
 .search .search_icon {
-	margin: 13rpx 8rpx 13rpx 18rpx;
+    margin: 13rpx 8rpx 13rpx 18rpx;
 }
 
 .search .search_cate {
-	line-height: 60rpx;
-	font-size: 30rpx;
-	width: 582rpx;
-	margin-top: 5rpx;
+    line-height: 60rpx;
+    font-size: 30rpx;
+    width: 582rpx;
+    margin-top: 5rpx;
 }
 
 .pl-class {
-	font-size: 30rpx;
-	color: #B6B6B6;
+    font-size: 30rpx;
+    color: #B6B6B6;
 }
 
 .sea-button {
-	height: 60rpx;
-	width: 86rpx;
-	font-size: 30rpx;
-	color: #202020;
-	float: left;
-	text-align: center;
-	line-height: 60rpx;
-	margin-top: 10rpx;
+    height: 60rpx;
+    width: 86rpx;
+    font-size: 30rpx;
+    color: #202020;
+    float: left;
+    text-align: center;
+    line-height: 60rpx;
+    margin-top: 10rpx;
 }
 
 .history-wai {
-	width: 750rpx;
-	overflow: hidden;
-	margin-top: 90rpx;
+    width: 750rpx;
+    overflow: hidden;
+    margin-top: 90rpx;
 }
 
 .history {
-	width: 736rpx;
-	overflow: hidden;
-	padding: 0 7rpx;
-	margin-top: 44rpx;
+    width: 736rpx;
+    overflow: hidden;
+    padding: 0 7rpx;
+    margin-top: 44rpx;
 }
 
 .history-head {
-	width: 750rpx;
-	height: 60rpx;
-	overflow: hidden;
-	margin-bottom: 20rpx;
+    width: 750rpx;
+    height: 60rpx;
+    overflow: hidden;
+    margin-bottom: 20rpx;
 }
 
 .head-left {
-	font-size: 30rpx;
-	color: #202020;
-	margin-left: 19rpx;
+    font-size: 30rpx;
+    color: #202020;
+    margin-left: 19rpx;
 }
 
 .del {
-	width: 60rpx;
-	height: 60rpx;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	float: right;
+    width: 60rpx;
+    height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
 }
 
 .del-img {
-	width: 25rpx;
-	height: 28rpx;
+    width: 25rpx;
+    height: 28rpx;
 }
 
 .history-list {
-	width: 100%;
-	overflow: hidden;
+    width: 100%;
+    overflow: hidden;
 }
 
 .history-one {
-	height: 48rpx;
-	overflow: hidden;
-	background: #FFFFFF;
-	text-align: center;
-	line-height: 48rpx;
-	color: #404040;
-	font-size: 28rpx;
-	margin: 0 15rpx 30rpx 15rpx;
-	float: left;
-	border-radius: 10rpx;
+    float: left;
+    height: 48rpx;
+    line-height: 48rpx;
+    color: #404040;
+    font-size: 28rpx;
+    margin: 0 15rpx 30rpx 15rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
 }
 
 .text {
-	margin: 0 19rpx;
+    margin: 0 19rpx;
 }
 
 .goods {
-	width: 370rpx;
-	overflow: auto;
-	float: left;
-	box-sizing: border-box;
-	padding: 15rpx 0 3rpx;
-	margin-left: 5rpx;
+    width: 370rpx;
+    overflow: auto;
+    float: left;
+    box-sizing: border-box;
+    padding: 15rpx 0 3rpx;
+    margin-left: 5rpx;
 }
 
 .one_goods {
-	width: 368rpx;
-	height: auto;
-	float: left;
-	background-color: rgb(255, 255, 255);
-	box-sizing: border-box;
-	background: #fff;
-	/* margin: 4rpx; */
+    width: 368rpx;
+    height: auto;
+    float: left;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    background: #fff;
+    /* margin: 4rpx; */
 }
 
 .one_goods .goods_img {
-	width: 100%;
-	height: 370rpx;
-	min-height: 2rpx;
-
+    width: 100%;
+    height: 370rpx;
+    min-height: 2rpx;
 }
 
 .img {
-	text-align: left;
-	/* margin-top: 31rpx; */
-
+    text-align: left;
+    /* margin-top: 31rpx; */
 }
 
 .one_goods text {
-	display: block;
-	text-align: left;
-	margin-left: 20rpx;
-
+    display: block;
+    text-align: left;
+    margin-left: 20rpx;
 }
 
 .one_goods .title {
-	font-size: 29rpx;
-	color: rgb(34, 34, 34);
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    font-size: 29rpx;
+    color: rgb(34, 34, 34);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .one_goods .subtitle {
-	height: 32rpx;
-	font-size: 24rpx;
-	color: rgb(182, 182, 182);
-	margin: 5rpx 0 5rpx 20rpx;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    height: 32rpx;
+    font-size: 24rpx;
+    color: rgb(182, 182, 182);
+    margin: 5rpx 0 5rpx 20rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .one_goods .price {
-	font-size: 30rpx;
-	color: rgb(230, 31, 24);
-	margin-bottom: 10rpx;
+    font-size: 30rpx;
+    color: rgb(230, 31, 24);
+    margin-bottom: 10rpx;
 }
 
 .nest {
-	width: 750rpx;
-	overflow: auto;
-	margin-top: 85rpx;
+    width: 750rpx;
+    overflow: auto;
+    margin-top: 85rpx;
 }
-.vipprice{
-	color: #EAB700;
-	font-size: 24rpx;
-	margin-left: 20rpx;
-	margin-bottom: 10rpx;
+
+.vipprice {
+    color: #EAB700;
+    font-size: 24rpx;
+    margin-left: 20rpx;
+    margin-bottom: 10rpx;
 }
