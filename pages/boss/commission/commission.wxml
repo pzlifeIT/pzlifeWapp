@@ -98,7 +98,7 @@
         </view>
     </block>
 </view>
-<view class="redHint" wx:if="{{div == 2}}"></view>
+<!--<view class="redHint" wx:if="{{div == 2}}"></view>-->
 <view class="list {{div == 2 ? 'red-d':''}}" wx:if="{{div == 2 && zhaoshang.length > 0}}">
     <block wx:for="{{zhaoshang}}">
         <view class="list-one" wx:for="{{item}}">
@@ -147,7 +147,7 @@
         <view class="text">暂无明细</view>
     </view>
 </view>
-<view class="not" wx:if="{{zhaoshang.length <= 0 && div== 2}}">
+<view class="not" wx:if="{{zhaoshang.length <= 0 && div== 2}}" style="margin-top: 500rpx">
     <view class="not-case">
         <image lazy-load="true" src="{{imgHost}}yhq.png"></image>
         <view class="text">暂无明细</view>
