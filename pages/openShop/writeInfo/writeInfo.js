@@ -59,7 +59,7 @@ Page({
                 target_sex:sex,
                 target_mobile:phone,
                 target_idcard:idCard,
-                parent_id:"EE"
+                parent_id:pid
             },
             success(res){
                wx.navigateTo({
@@ -88,6 +88,10 @@ Page({
                        title:"记录已存在"
                    })
                } else if (res == 3012){
+                   app.toast({
+                       title:"邀请人不是合伙人"
+                   })
+               }else if (res == 3013){
                    app.toast({
                        title:"邀请人不是合伙人"
                    })
