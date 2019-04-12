@@ -145,10 +145,10 @@
         <image lazy-load="true" src="{{imgHost}}dpgl_12.png"></image>
         <view class="icon-text">商品货仓</view>
     </navigator>
-    <!--<view class="one">-->
-    <!--<image lazy-load="true" src="{{imgHost}}dpgl_07.png"></image>-->
-    <!--<view class="icon-text">开店邀请</view>-->
-    <!--</view>-->
+    <view class="one" bindtap="goOpenShop">
+        <image lazy-load="true" src="{{imgHost}}dpgl_07.png"></image>
+        <view class="icon-text">开店邀请</view>
+    </view>
     <navigator class="one icon-after" url="/pages/boss/circle/circle">
         <!-- <view class="one icon-after"> -->
         <image lazy-load="true" src="{{imgHost}}dpgl_17.png"></image>

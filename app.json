@@ -58,7 +58,12 @@
         "pages/boss/withdraw/selectCard/selectCard",
         "pages/boss/withdraw/record/record",
         "pages/boss/withdraw/submitStatus/submitStatus",
-        "pages/my/notice/notice"
+        "pages/my/notice/notice",
+        "pages/openShop/openShop",
+        "pages/openShop/notice/notice",
+        "pages/openShop/writeInfo/writeInfo",
+        "pages/openShop/submitStatus/submitStatus",
+        "pages/openShop/payWay/payWay"
     ],
     "window": {
         "backgroundTextStyle": "dark",

@@ -1,0 +1,57 @@
+/* pages/openShop/submitStatus/submitStatus.wxss */
+.hint{
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+    margin-top: 150rpx;
+}
+.hint-img{
+    width: 185rpx;
+    height: 195rpx;
+    margin-left: 275rpx;
+    margin-bottom: 60rpx;
+}
+.text{
+    color: #e61f18;
+    font-size: 36rpx;
+    width: 750rpx;
+    text-align: center;
+}
+.bottom{
+    margin-bottom: 150rpx;
+}
+.select{
+    color: #000;
+    font-size: 30rpx;
+    font-weight: bold;
+    background-color: #f7f7f7;
+    width: 750rpx;
+    height: 95rpx;
+    line-height: 95rpx;
+    padding-left: 44rpx;
+    box-sizing: border-box;
+}
+.one{
+    width: 750rpx;
+    height: 130rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2rpx dashed #f7f7f7;
+}
+.way{
+    width: 80rpx;
+    height: 74rpx;
+    margin-left: 45rpx;
+    margin-right: 40rpx;
+}
+.way-text{
+    color: #000;
+    font-size: 32rpx;
+    width: 600rpx;
+}
+.jt{
+    width: 31rpx;
+    height: 38rpx;
+    margin-right: 40rpx;
+}

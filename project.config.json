@@ -393,9 +393,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 52,
 					"name": "选择付款方式",
 					"pathName": "pages/openShop/payWay/payWay",
+					"query": "ptype=1",
 					"scene": null
 				}
 			]

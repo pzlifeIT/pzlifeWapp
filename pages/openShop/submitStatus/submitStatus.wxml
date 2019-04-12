@@ -1,0 +1,30 @@
+<!--pages/openShop/submitStatus/submitStatus.wxml-->
+<view class="hint">
+    <image lazy-load='true' class="hint-img" src="{{imgHost}}sqcg_03.png"></image>
+    <view class="text">提交申请成功</view>
+    <view class="text bottom">请耐心等待审核</view>
+</view>
+<view class="select">
+    请选择以下一种支付方式付款
+</view>
+<view class="payWay">
+    <view class="one" bindtap="selectPayWay" data-ptype="1">
+        <image lazy-load='true' class="way" src="{{imgHost}}fkfs_03.png"></image>
+        <view class="way-text">支付宝支付</view>
+        <image lazy-load='true' class="jt" src="{{imgHost}}jt_18.png"></image>
+    </view>
+</view>
+<view class="payWay" bindtap="selectPayWay" data-ptype="2">
+    <view class="one">
+        <image lazy-load='true' class="way" src="{{imgHost}}fkfs_07.png"></image>
+        <view class="way-text">微信支付</view>
+        <image lazy-load='true' class="jt" src="{{imgHost}}jt_18.png"></image>
+    </view>
+</view>
+<view class="payWay" bindtap="selectPayWay" data-ptype="3">
+    <view class="one">
+        <image lazy-load='true' class="way" src="{{imgHost}}fkfs_11.png"></image>
+        <view class="way-text">银行转账</view>
+        <image lazy-load='true' class="jt" src="{{imgHost}}jt_18.png"></image>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/openShop/writeInfo/writeInfo.wxml-->
+<view class="input-line">
+    <view class="line">
+        <input class="input" type="text" placeholder="请填写姓名" bindinput="watchInput" data-model="name"/>
+    </view>
+</view>
+<view class="input-line">
+    <view class="div">
+        <view class="man {{sex == 1?'active':''}}" bindtap="selectSex" data-sex="1">先生</view>
+        <view class="woman {{sex == 2?'active':''}}" bindtap="selectSex" data-sex="2">女士</view>
+    </view>
+</view>
+<view class="input-line">
+    <view class="line">
+        <input class="input" type="number" placeholder="请输入身份证号"  bindinput="watchInput" data-model="idCard"/>
+    </view>
+</view>
+<view class="input-line">
+    <view class="line">
+        <input class="input" type="number" placeholder="请输入手机号码"  bindinput="watchInput" data-model="phone" />
+    </view>
+</view>
+
+<view class="footer">
+    <view class="button" bindtap="openShop">申请并提交</view>
+</view>

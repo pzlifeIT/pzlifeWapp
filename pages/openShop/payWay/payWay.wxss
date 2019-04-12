@@ -1,0 +1,33 @@
+/* pages/openShop/payWay/payWay.wxss */
+.alipay{
+    width: 750rpx;
+    overflow: auto;
+    margin-top: 19rpx;
+}
+.hint-title{
+    width: 750rpx;
+    text-align: center;
+    color: #202020;
+    font-size: 34rpx;
+    margin-bottom: 20rpx;
+    padding: 0 36rpx 0 33rpx;
+    box-sizing: border-box;
+}
+.hint-text{
+    width: 665rpx;
+    height: 46rpx;
+    background-color: #f99f36;
+    text-align: center;
+    line-height: 46rpx;
+    color: #FFFFFF;
+    font-size: 28rpx;
+    margin-left: 43rpx;
+}
+image{
+    width: 750rpx;
+    height: 1018rpx;
+    margin-top: 22rpx;
+}
+.yh{
+    text-align: left;
+}

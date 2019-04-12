@@ -1,0 +1,41 @@
+/* pages/openShop/openShop.wxss */
+.czlc{
+    width: 750rpx;
+    height: 1179rpx;
+    position: relative;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.kuang{
+    width: 750rpx;
+    height: 794rpx;
+    background-image: linear-gradient(94deg,
+    #db3030 0%,
+    #ff594a 100%),
+    linear-gradient(
+            #fc5548,
+            #fc5548);
+    background-blend-mode: normal,
+    normal;
+    position: absolute;
+    top: 0;
+    margin-top: 410rpx;
+}
+.center{
+    width: 650rpx;
+    height: 650rpx;
+    box-shadow: 2rpx 4rpx 10rpx 3rpx rgba(0, 0, 0, 0.17);
+    border-radius: 20rpx;
+    background-color: #FFFFFF;
+    margin: 50rpx 50rpx 0 50rpx;
+}
+.qrcode{
+    width: 650rpx;
+    height: 650rpx;
+    border-radius: 20rpx;
+}

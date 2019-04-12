@@ -1,0 +1,69 @@
+/* pages/openShop/writeInfo/writeInfo.wxss */
+.input-line{
+    width: 750rpx;
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50rpx;
+}
+.line{
+    width: 710rpx;
+    height: 80rpx;
+    border-bottom: 1rpx solid #d6d6d6;
+    overflow: hidden;
+}
+.input{
+    color: #666666;
+    font-size: 30rpx;
+    height: 75rpx;
+    width: 680rpx;
+    margin-top: 15rpx;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+}
+.div{
+    width: 710rpx;
+}
+.man{
+    width: 160rpx;
+    height: 62rpx;
+    color: #e61f18;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 62rpx;
+    border:1rpx solid #e61f18;
+    border-radius: 15rpx 0 0 15rpx;
+    display: inline-block;
+}
+.woman{
+    width: 160rpx;
+    height: 62rpx;
+    color: #e61f18;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 62rpx;
+    border:1rpx solid #e61f18;
+    border-radius: 0 15rpx 15rpx 0;
+    display: inline-block;
+}
+.active{
+    background-color: #e61f18;
+    color: #FFFFFF;
+}
+.footer{
+    width: 750rpx;
+    height: 80rpx;
+    margin-top: 98rpx;
+}
+.button{
+    width: 520rpx;
+    height: 80rpx;
+    background-color: #e61f18;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    border-radius: 40rpx;
+    margin: 0 auto;
+}
