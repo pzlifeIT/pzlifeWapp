@@ -617,7 +617,7 @@ radio-group {
     top: 33rpx;
     right: 0;
     display: inline-block;
-    content: '12';
+    content: '';
     width: 2rpx;
     height: 54rpx;
     background-color: #f7f7f7;
