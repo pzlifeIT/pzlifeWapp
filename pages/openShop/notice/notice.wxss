@@ -5,6 +5,7 @@ page{
 }
 .kuang{
     width: 750rpx;
+    margin-bottom: 80rpx;
 }
 .shang{
     width: 750rpx;
@@ -34,7 +35,7 @@ page{
     align-items: center;
 }
 .button{
-    width: 520rpx;
+    width: 730rpx;
     height: 80rpx;
     background-image: linear-gradient(0deg,
     #db3030 0%,
@@ -44,9 +45,16 @@ page{
             #db3030);
     background-blend-mode: normal,
     normal;
-    border-radius: 40px;
+    border-radius: 20rpx;
     color: #ffffff;
     font-size: 30rpx;
     text-align: center;
     line-height: 80rpx;
+}
+.fix{
+    width: 750rpx;
+    height: 120rpx;
+    position: fixed;
+    bottom: 0;
+    background-color: #FFFFFF;
 }

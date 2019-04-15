@@ -1,4 +1,5 @@
 <!--pages/openShop/openShop.wxml-->
+<script src="openShop.js"></script>
 <view class="czlc">
     <image class="img" lazy-load="true" src="{{imgHost}}czlc.png"></image>
     <view class="kuang">

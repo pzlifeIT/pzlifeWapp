@@ -124,7 +124,7 @@ Page({
      */
     onPullDownRefresh: function() {
         wx.showNavigationBarLoading() //在标题栏中显示加载
-            //模拟加载
+        //模拟加载
         let that = this
         setTimeout(function() {
             that.getIndex()
@@ -133,8 +133,6 @@ Page({
         }, 1500);
     },
     onLoad: function(options) {
-        console.log(132121)
-        console.log()
         this.setData({
             imgHost: app.globalData.host.imgHost
         })

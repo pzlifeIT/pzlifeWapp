@@ -6,7 +6,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-        imgHost:""
+        imgHost:"",
+        pid:""
     },
 
     /**
@@ -14,12 +15,24 @@ Page({
      */
     onLoad: function (options) {
         this.setData({
-            imgHost: app.globalData.host.imgHost
+            imgHost: app.globalData.host.imgHost,
+            pid:options.scene
+        })
+        
+        console.log(options)
+    },
+    test:function(id){
+        app.toast({
+            title:id
+        })
+        app.modal({
+            title:app.globalData.pid
         })
     },
     back:function(){
+        let pid = this.data.pid
         wx.navigateTo({
-           url:"/pages/openShop/writeInfo/writeInfo"
+           url:"/pages/openShop/writeInfo/writeInfo?pid="+pid
         })
     },
     /**

@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 52,
+			"current": 49,
 			"list": [
 				{
 					"id": 0,
@@ -372,11 +372,11 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 49,
 					"name": "合伙人须知",
 					"pathName": "pages/openShop/notice/notice",
-					"query": "",
-					"scene": null
+					"query": "scene=EE",
+					"scene": 1047
 				},
 				{
 					"id": -1,
