@@ -121,9 +121,9 @@ App({
         wx.showModal({
             title: data.title || '',
             content: data.content || '',
-            confirmColor:data.confirmColor || "",
-            showCancel:data.showCancel || true,
-            confirmText:data.confirmText || "确定",
+            confirmColor: data.confirmColor || "",
+            showCancel: data.showCancel || true,
+            confirmText: data.confirmText || "确定",
             success(res) {
                 if (res.confirm) {
                     typeof data.success == 'function' ? data.success() : ''
@@ -267,14 +267,19 @@ App({
         this.toast({ title: text })
     },
     onShow: function(opt) {
+        if (opt.query.scene) {
+            this.globalData.pid = opt.query.scene
+        }
+        if (opt.query.pid) {
+            this.globalData.pid = opt.query.pid
+        }
         this.getconid()
         this.globalData.host = config
-        this.getUserRead(opt.query.pid)
-        if (!opt.query.pid) return
-        this.globalData.pid = opt.query.pid
+        this.getUserRead(this.globalData.pid)
         if (this.globalData.pid == '') return
         this.indexmain(this.globalData.pid)
     },
+
     getUserRead(pid = '') {
         let that = this
         if (that.globalData.con_id) return
