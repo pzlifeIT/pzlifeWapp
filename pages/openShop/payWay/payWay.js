@@ -22,54 +22,6 @@ Page({
     save: function (e) {
         console.log(e)
         let img = e.currentTarget.dataset.img;
-        // wx.getSetting({
-        //     success(res){
-        //         //如果没有授权，就调用授权接口
-        //         if (!res.authSetting['scope.writePhotosAlbum']) {
-        //             console.log(123)
-        //             wx.authorize({
-        //                 scope:"scope.writePhotosAlbum",
-        //                 success(res){
-        //                     wx.downloadFile({
-        //                         url:img,
-        //                         success(res){
-        //                             console.log(res)
-        //                         }
-        //                     })
-        //                 },
-        //                 fail(res){
-        //                     app.modal({
-        //                         content:"您未授权保存，请点击确定打开权限",
-        //                         success(res){
-        //                             wx.openSetting({
-        //                                 success(res){
-        //
-        //                                 }
-        //                             })
-        //                         }
-        //                     })
-        //
-        //                 }
-        //             })
-        //         }else {
-        //             console.log(456)
-        //             wx.authorize({
-        //                 scope:"scope.writePhotosAlbum",
-        //                 success(res){
-        //                     wx.downloadFile({
-        //                         url:img,
-        //                         success(res){
-        //                             console.log(res)
-        //                         },
-        //                         fail(res){
-        //                             console.log(res)
-        //                         }
-        //                     })
-        //                 }
-        //             })
-        //         }
-        //     }
-        // })
         wx.authorize({
             scope: "scope.writePhotosAlbum",
             success(res) {

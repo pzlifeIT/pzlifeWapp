@@ -133,9 +133,6 @@ Page({
         }, 1500);
     },
     onLoad: function(options) {
-        if(options.scene){
-            app.globalData.pid = options.scene
-        }
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
