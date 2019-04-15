@@ -80,7 +80,7 @@
                    src="{{item.image_path+'?imageMogr2/thumbnail/710x'}}"></image>
         </swiper-item>
     </swiper>
-    <!-- {{oneDay.son[0].image_path+'?imageMogr2/thumbnail/370x'}} -->
+    <!-- {{oneDay.son[0].image_path+'?imageMogr2/thumbnail/250x'}} -->
     <!--热门商品-->
     <view wx:if="{{hotGoods.is_show == 1 }}" style="order: {{hotGoods.model_order}}">
         <view class="goods-content">
@@ -94,17 +94,17 @@
             <view class="one-line">
                 <view class="date-left" bindtap="goUrl" data-jump="{{hotGoods.son[0].jump_type}}"
                       data-content="{{hotGoods.son[0].jump_content}}">
-                    <image lazy-load="true" src="{{hotGoods.son[0].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+                    <image lazy-load="true" src="{{hotGoods.son[0].image_path+'?imageMogr2/thumbnail/250x'}}"></image>
                 </view>
                 <view class="date-left date-right" bindtap="goUrl" data-jump="{{hotGoods.son[1].jump_type}}"
                       data-content="{{hotGoods.son[1].jump_content}}">
-                    <image lazy-load="true" src="{{hotGoods.son[1].image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+                    <image lazy-load="true" src="{{hotGoods.son[1].image_path+'?imageMogr2/thumbnail/250x'}}"></image>
                 </view>
             </view>
             <view class="goods-line">
                 <view class="goods-one" wx:for="{{hotson}}" bindtap="goUrl" data-jump="{{item.jump_type}}"
                       data-content="{{item.jump_content}}">
-                    <image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+                    <image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
                     <view class="goods-title">{{item.title}}</view>
                     <view class="goods-price">￥{{item.goods_retail_price}}</view>
                     <view class="vipprice">钻石再让利 {{item.goods_min_brokerage}}</view>
@@ -124,7 +124,7 @@
                 <!-- 单个商品 -->
                 <view class="life-goods-one" wx:for="{{season.son}}" bindtap="goUrl" data-jump="{{item.jump_type}}"
                       data-content="{{item.jump_content}}">
-                    <image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+                    <image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
                     <view class="life-goods-desc">
                         <view class="desc-title">{{item.title}}</view>
                         <view class="desc-price">￥{{item.goods_retail_price}}</view>
@@ -139,12 +139,12 @@
     <view class="life-recommend" wx:if="{{shiling.is_show == 1}}" style="order: {{shiling.model_order}}">
         <view class="life-title" bindtap="goUrl" data-jump="{{shiling.jump_type}}"
               data-content="{{shiling.jump_content}}">
-            <image lazy-load="true" src="{{shiling.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+            <image lazy-load="true" src="{{shiling.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
         </view>
         <scroll-view class="slsp-recommend" scroll-x="true">
             <view class="slsp-goods-one" wx:for="{{shiling.son}}" bindtap="goUrl" data-jump="{{item.jump_type}}"
                   data-content="{{item.jump_content}}">
-                <image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+                <image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
                 <view class="desc-title slsp-title">{{item.title}}</view>
                 <view class="desc-price slsp-price">￥{{item.goods_retail_price}}</view>
                 <view class="desc-vipprice slsp-vipprice">钻石再让利 {{item.goods_min_brokerage}}</view>
@@ -158,13 +158,13 @@
             <view class="new-more" bindtap="goUrl" data-jump="{{maizhu.jump_type}}"
                   data-content="{{maizhu.jump_content}}">
                 更多
-                <image lazy-load="true" src="{{maizhu.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+                <image lazy-load="true" src="{{maizhu.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
             </view>
         </view>
         <scroll-view class="buyer-img" scroll-x="true">
             <view wx:for="{{maizhu.son}}" bindtap="goUrl" data-jump="{{item.jump_type}}"
                   data-content="{{item.jump_content}}">
-                <image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+                <image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
             </view>
         </scroll-view>
     </view>
@@ -184,7 +184,7 @@
                 <view class="goods-line">
                     <view class="goods-one" wx:for="{{item.third}}" wx:for-item="third" bindtap="goUrl"
                           data-jump="{{third.jump_type}}" data-content="{{third.jump_content}}">
-                        <image lazy-load="true" src="{{third.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+                        <image lazy-load="true" src="{{third.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
                         <view class="goods-title">{{third.goods_name}}</view>
                         <view class="goods-price">￥{{third.goods_retail_price}}</view>
                         <view class="vipprice">钻石再让利 {{third.goods_min_brokerage}}</view>
@@ -192,7 +192,7 @@
                     <view class="goods-one" bindtap="goUrl" data-jump="{{item.jump_type}}"
                           data-content="{{item.jump_content}}">
                         <image class="right-bottom-img" lazy-load="true"
-                               src="{{item.image_path+'?imageMogr2/thumbnail/370x'}}"></image>
+                               src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
                     </view>
                 </view>
             </view>
