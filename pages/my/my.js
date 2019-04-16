@@ -267,6 +267,11 @@ Page({
             url: "/pages/my/join/join"
         })
     },
+    addCard:function(){
+        wx.navigateTo({
+            url:"/pages/boss/cardBag/addCard/addCard"
+        })
+    },
     goearn: function(e) {
         let earn = e.currentTarget.dataset.earn,
             enter = e.currentTarget.dataset.enter,

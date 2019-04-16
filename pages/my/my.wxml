@@ -163,16 +163,45 @@
     </view>
   </view>
 </view>
-<view class="userCost" wx:if="{{userInfo.user_identity !=1}}">
+<!--<view class="userCost" wx:if="{{userInfo.user_identity !=1}}">-->
+  <!--<view class="cost-title">活动管理</view>-->
+  <!--<view class="equity">-->
+    <!--<view class="equity-one" bindtap="activity" wx:if="{{userInfo.user_identity !=1}}" hover-class="other-navigator-hover">-->
+      <!--<image lazy-load="true" src="{{imgHost}}glhd_06.png"></image>-->
+      <!--<view class="equity-title">钻石接龙</view>-->
+    <!--</view>-->
+    <!--<view class="equity-one" bindtap="diamondlist" wx:if="{{userInfo.user_identity !=1}}">-->
+      <!--<image lazy-load="true" src="{{imgHost}}glhd_03.png"></image>-->
+      <!--<view class="equity-title">钻石接龙列表</view>-->
+    <!--</view>-->
+  <!--</view>-->
+<!--</view>-->
+<view class="userCost">
   <view class="cost-title">活动管理</view>
   <view class="equity">
-    <view class="equity-one" bindtap="activity" wx:if="{{userInfo.user_identity !=1}}" hover-class="other-navigator-hover">
-      <image lazy-load="true" src="{{imgHost}}glhd_06.png"></image>
-      <view class="equity-title">钻石接龙</view>
+    <view class="equity-one" bindtap="activity" hover-class="other-navigator-hover">
+      <image lazy-load="true" src="{{imgHost}}hdgl_08.png"></image>
+      <view class="equity-title">品质计划</view>
     </view>
-    <view class="equity-one" bindtap="diamondlist" wx:if="{{userInfo.user_identity !=1}}">
-      <image lazy-load="true" src="{{imgHost}}glhd_03.png"></image>
-      <view class="equity-title">钻石接龙列表</view>
+    <view class="equity-one" bindtap="diamondlist">
+      <image lazy-load="true" src="{{imgHost}}hdgl_03.png"></image>
+      <view class="equity-title">活动收益</view>
+    </view>
+    <view class="equity-one" bindtap="addCard">
+      <image lazy-load="true" src="{{imgHost}}hdgl_05.png"></image>
+      <view class="equity-title">添加银行卡</view>
+    </view>
+    <view class="equity-one" bindtap="diamondlist">
+      <image lazy-load="true" src="{{imgHost}}hdgl_15.png"></image>
+      <view class="equity-title">转商票</view>
+    </view>
+    <view class="equity-one" bindtap="diamondlist">
+      <image lazy-load="true" src="{{imgHost}}hdgl_13.png"></image>
+      <view class="equity-title">提现</view>
+    </view>
+    <view class="equity-one" bindtap="diamondlist">
+      <image lazy-load="true" src="{{imgHost}}hdgl_14.png"></image>
+      <view class="equity-title" style="color: #e61f18;">操作指南</view>
     </view>
   </view>
 </view>

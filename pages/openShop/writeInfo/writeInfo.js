@@ -108,6 +108,10 @@ Page({
                     app.toast({
                         title: "身份证号有误"
                     })
+                }else if (res == 3013) {
+                    app.toast({
+                        title: "正在申请中"
+                    })
                 }
             }
         })

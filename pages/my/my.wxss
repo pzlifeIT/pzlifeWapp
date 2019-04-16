@@ -225,7 +225,8 @@ page {
 
 .equity {
     width: 750rpx;
-    height: 140rpx;
+    height: auto;
+    overflow: auto;
     background: #FFFFFF;
 }
 
@@ -251,7 +252,9 @@ page {
     margin-top: 25rpx;
 }
 
-.equity-title {}
+.equity-title {
+    margin-bottom: 10rpx;
+}
 
 .uoIcon {
     display: inline-block;
