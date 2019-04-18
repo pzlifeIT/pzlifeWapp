@@ -2,48 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftMoney.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftMoney.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftMoney.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftMoney.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftSuccess/shiftSuccess.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftSuccess/shiftSuccess.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftSuccess/shiftSuccess.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftSuccess/shiftSuccess.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/selectCard/selectCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/selectCard/selectCard.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/selectCard/selectCard.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/selectCard/selectCard.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/submitStatus/submitStatus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/submitStatus/submitStatus.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/submitStatus/submitStatus.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/submitStatus/submitStatus.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/withdraw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/withdraw.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/withdraw.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/withdraw.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/activity/activity.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activity/activity.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/boss.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/boss.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/boss.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/boss.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/withdraw/record/record.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/withdraw/record/record.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/withdraw/selectCard/selectCard.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/withdraw/selectCard/selectCard.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/withdraw/submitStatus/submitStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/withdraw/submitStatus/submitStatus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/withdraw/withdraw.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/withdraw/withdraw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/withdraw/withdraw.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/withdraw/withdraw.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/withdraw/withdraw.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/withdraw/withdraw.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/diamActive/diamActive.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/diamActive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,24 +54,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="htm" value="36" />
-          <entry key="js" value="30029" />
+          <entry key="js" value="30355" />
           <entry key="json" value="182" />
-          <entry key="wxml" value="20367" />
+          <entry key="wxml" value="20382" />
           <entry key="wxss" value="19736" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="19736" />
-          <entry key="HTML" value="20403" />
+          <entry key="HTML" value="20418" />
           <entry key="JSON" value="182" />
-          <entry key="JavaScript" value="30029" />
+          <entry key="JavaScript" value="30355" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.50301933">
+    <splitter split-orientation="horizontal" split-proportion="0.42089373">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -179,7 +140,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/my/activeEarn/activeEarn.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="286">
@@ -197,11 +158,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="532">
-                  <caret line="152" column="7" lean-forward="true" selection-start-line="152" selection-start-column="7" selection-end-line="152" selection-end-column="7" />
+                <state relative-caret-position="234">
+                  <caret line="144" column="32" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -213,26 +174,26 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+                <state relative-caret-position="104">
+                  <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="598">
+                  <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/my/my.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="410">
-                  <caret line="139" selection-start-line="139" selection-end-line="139" />
+                <state relative-caret-position="566">
+                  <caret line="362" column="28" selection-start-line="362" selection-start-column="28" selection-end-line="362" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -276,8 +237,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/diamActive/withdraw/withdraw.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1820">
-                  <caret line="70" column="79" selection-start-line="70" selection-start-column="79" selection-end-line="70" selection-end-column="79" />
+                <state relative-caret-position="531">
+                  <caret line="158" column="26" lean-forward="true" selection-start-line="158" selection-start-column="26" selection-end-line="158" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -285,8 +246,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1820">
-                  <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+                <state relative-caret-position="104">
+                  <caret line="136" column="9" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -307,7 +268,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>goodsList</find>
-      <find>con_id</find>
       <find>poptype</find>
       <find>userInfo</find>
       <find>getUserInfo</find>
@@ -336,6 +296,7 @@
       <find>getuser</find>
       <find>commission</find>
       <find>addCard</find>
+      <find>con_id</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;image lazy-load=&quot;true&quot;</replace>
@@ -390,17 +351,17 @@
         <option value="$PROJECT_DIR$/pages/diamActive/withdraw/submitStatus/submitStatus.json" />
         <option value="$PROJECT_DIR$/pages/diamActive/withdraw/submitStatus/submitStatus.wxml" />
         <option value="$PROJECT_DIR$/pages/my/my.wxml" />
-        <option value="$PROJECT_DIR$/pages/diamActive/diamActive.js" />
-        <option value="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/withdraw/record/record.wxml" />
         <option value="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.wxml" />
         <option value="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftMoney.wxml" />
-        <option value="$PROJECT_DIR$/pages/my/my.js" />
         <option value="$PROJECT_DIR$/pages/boss/boss.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/boss.js" />
         <option value="$PROJECT_DIR$/pages/activity/activity.wxml" />
         <option value="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.js" />
         <option value="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml" />
+        <option value="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" />
+        <option value="$PROJECT_DIR$/pages/diamActive/diamActive.js" />
+        <option value="$PROJECT_DIR$/pages/my/my.js" />
       </list>
     </option>
   </component>
@@ -447,14 +408,20 @@
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="my" type="462c0819:PsiDirectoryNode" />
+              <item name="diamActive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="diamActive" type="462c0819:PsiDirectoryNode" />
+              <item name="withdraw" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
-              <item name="activeEarn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
@@ -529,12 +496,12 @@
       <workItem from="1555290884735" duration="1976000" />
       <workItem from="1555293319978" duration="53246000" />
       <workItem from="1555550734134" duration="1939000" />
-      <workItem from="1555555959348" duration="7494000" />
+      <workItem from="1555555959348" duration="9333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="542468000" />
+    <option name="totallyTimeSpent" value="544307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -817,31 +784,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/diamActive/withdraw/withdraw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1820">
-          <caret line="70" column="79" selection-start-line="70" selection-start-column="79" selection-end-line="70" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1820">
-          <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="152" column="7" lean-forward="true" selection-start-line="152" selection-start-column="7" selection-end-line="152" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -883,13 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/address/address.wxml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -904,13 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -930,8 +862,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+        <state relative-caret-position="598">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="136" column="9" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="144" column="32" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/diamActive/withdraw/withdraw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="158" column="26" lean-forward="true" selection-start-line="158" selection-start-column="26" selection-end-line="158" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="362" column="28" selection-start-line="362" selection-start-column="28" selection-end-line="362" selection-end-column="28" />
         </state>
       </provider>
     </entry>

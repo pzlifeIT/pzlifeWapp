@@ -16,6 +16,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        this.getUserInfo()
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
@@ -142,7 +143,6 @@ Page({
         let that = this
         app.wxrequest({
             url: "user/getuser",
-            nologin: true,
             success(res) {
                 that.setData({
                     ident: res.data.user_identity
