@@ -19,7 +19,7 @@
 		</view>
 		<view class="pop-button">
 			<view class="button-left" bindtap="cancel">不再发送</view>
-			<view class="button-right" bindtap="call">继续发送</view>
+			<view class="button-right" bindtap="cancel">继续发送</view>
 		</view>
 	</view>
 </view>

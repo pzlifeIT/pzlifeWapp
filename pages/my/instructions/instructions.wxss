@@ -1,0 +1,11 @@
+/* pages/my/instructions/instructions.wxss */
+.first{
+    width: 750rpx;
+    height: 804rpx;
+    display: block;
+}
+.second{
+    width: 750rpx;
+    height: 868rpx;
+    display: block;
+}

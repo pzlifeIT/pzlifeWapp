@@ -36,8 +36,8 @@
           <view class="left">申请状态</view>
           <!-- <view class="right">{{item.message}}</view> -->
           <view class="right" wx:if="{{item.status == 1}}">待处理</view>
-          <view class="right" wx:if="{{item.status == 2}}">已完成</view>
-          <view class="right" wx:if="{{item.status == 3}}">取消</view>
+          <view class="right" wx:if="{{item.status == 2}}">提现成功</view>
+          <view class="right" wx:if="{{item.status == 3}}">提现失败</view>
         </view>
       </view>
     </block>

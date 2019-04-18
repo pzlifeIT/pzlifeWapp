@@ -1,0 +1,34 @@
+/* pages/shiftMoney/record/record.wxss */
+
+page {
+    background-color: #f7f7f7;
+    font-size: 28rpx;
+}
+
+.rd-list {
+    width: 750rpx;
+    margin-top: 10rpx;
+    padding: 10rpx 0;
+    background-color: #fff;
+}
+
+.rd-li {
+    line-height: 50rpx;
+}
+
+.rd-li-tit {
+    margin-left: 20rpx;
+    color: #666;
+}
+
+.rd-li-con {
+    float: right;
+    margin-right: 20rpx;
+    color: #404040;
+}
+.color{
+    color: #fa9f36;
+}
+.top{
+    margin-bottom: 12rpx;
+}

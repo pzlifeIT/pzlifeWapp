@@ -24,7 +24,7 @@
         </view>
     </view>
     <view class="dibu">
-        <view class="left-div">可用金额{{userInfo.commission}}元</view>
+        <view class="left-div">可用金额{{commission}}元</view>
         <view class="right-div">实际到账金额：{{trueMoney}}元</view>
     </view>
     <view class="bill">

@@ -1,0 +1,31 @@
+<!--pages/boss/withdraw/selectCard/selectCard.wxml-->
+<!--<view class="card">-->
+    <!--<view class="card-one" wx:for="{{cardList}}" bindtap="selectCard" data-id="{{item.id}}" data-name="{{item.admin_bank.bank_name}}" data-num="{{item.bank_card}}" data-img="{{item.admin_bank.icon_img}}">-->
+        <!--<view class="logo">-->
+            <!--<image lazy-load="true" src="{{item.admin_bank.icon_img}}"></image>-->
+        <!--</view>-->
+        <!--<view class="card-info">-->
+            <!--<view class="card-name">{{item.admin_bank.bank_name}}</view>-->
+            <!--<view class="card-num">尾号{{item.bank_card}}</view>-->
+        <!--</view>-->
+    <!--</view>-->
+<!--</view>-->
+
+<!--pages/boss/cardBag/cardBag.wxml-->
+<view class="card-list">
+    <view class="kefu">
+        <view class="dian"></view>
+        <view class="phone">客服电话15502123212</view>
+    </view>
+    <view class="one-card" wx:for="{{cardList}}"  bindtap="selectCard" data-id="{{item.id}}" data-name="{{item.admin_bank.bank_name}}" data-num="{{item.bank_card}}" data-img="{{item.admin_bank.icon_img}}">
+        <image class="bg" src="{{item.admin_bank.bg_img}}"></image>
+        <view class="logo-name">
+            <image lazy-load="true" class="logo" wx:if="{{!item.admin_bank.icon_img}}" src="{{imgHost}}yh.png"></image>
+            <image lazy-load="true" class="logo" wx:else src="{{item.admin_bank.icon_img}}"></image>
+            <view class="yh-name">{{item.admin_bank.bank_name}}</view>
+        </view>
+        <view class="cardNum">{{item.bank_card}}</view>
+    </view>
+</view>
+<view class="footer" bindtap="addCard">+ <text>添加银行卡</text></view>
+

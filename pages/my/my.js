@@ -137,24 +137,8 @@ Page({
             app.toast({ title: "请先登录" })
         }
     },
-    diamondlist: function(e) {
-        if (this.data.con_id) {
-            wx.navigateTo({
-                url: "/pages/diamondlist/diamondlist"
-            })
-        } else {
-            app.toast({ title: "请先登录" })
-        }
-    },
-    activity: function(e) {
-        if (this.data.con_id) {
-            wx.navigateTo({
-                url: "/pages/activity/activity"
-            })
-        } else {
-            app.toast({ title: "请先登录" })
-        }
-    },
+
+
     myQr: function() {
         if (this.data.con_id) {
             wx.navigateTo({
@@ -269,8 +253,28 @@ Page({
     },
     addCard:function(){
         wx.navigateTo({
-            url:"/pages/boss/cardBag/addCard/addCard"
+            url:"/pages/boss/cardBag/cardBag"
         })
+    },
+    activeEarn:function(){
+      wx.navigateTo({
+          url:"/pages/my/activeEarn/activeEarn"
+      })
+    },
+    toShangpiao:function(){
+      wx.navigateTo({
+          url:"/pages/diamActive/shiftMoney/shiftMoney"
+      })
+    },
+    bountyWithdraw:function(){
+      wx.navigateTo({
+          url:"/pages/diamActive/withdraw/withdraw"
+      })
+    },
+    instr:function(){
+      wx.navigateTo({
+          url:"/pages/my/instructions/instructions"
+      })
     },
     goearn: function(e) {
         let earn = e.currentTarget.dataset.earn,
@@ -291,6 +295,12 @@ Page({
         let int = e.currentTarget.dataset.int
         wx.navigateTo({
             url: "/pages/my/integ/integ?int="+int
+        })
+    },
+    diamBoss:function(e){
+        let stype = e.currentTarget.dataset.stype
+        wx.navigateTo({
+            url:"/pages/diamActive/diamActive?stype="+stype
         })
     },
     /**

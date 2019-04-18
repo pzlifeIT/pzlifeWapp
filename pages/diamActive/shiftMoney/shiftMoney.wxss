@@ -1,0 +1,98 @@
+/* pages/shiftMoney/shiftMoney.wxss */
+
+page {
+    background-color: #f7f7f7;
+}
+
+.shiftMoney {
+    width: 750rpx;
+    height: 288rpx;
+    margin-top: 10rpx;
+    background-color: #ffffff;
+}
+
+.sm-header {
+    line-height: 90rpx;
+    margin-left: 20rpx;
+    font-size: 30rpx;
+    color: #202020;
+}
+
+.sm-input {
+    width: 710rpx;
+    margin: 0 auto;
+    border-bottom: 1rpx solid #c7c6cb;
+    overflow: auto;
+}
+
+.sm-input::before {
+    display: inline-block;
+    float: left;
+    content: '￥';
+    line-height: 90rpx;
+    color: #404040;
+}
+
+.sm-input .input {
+    display: inline-block;
+    float: left;
+    width: 600rpx;
+    height: 80rpx;
+    margin: 10rpx 0 20rpx;
+    font-size: 48rpx;
+}
+
+.sm-img {
+    width: 60rpx;
+    height: 100rpx;
+}
+
+.sm-input .img {
+    float: right;
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: 30rpx;
+}
+
+.usable {
+    margin-left: 20rpx;
+    line-height: 70rpx;
+    font-size: 24rpx;
+    color: #e61f18;
+}
+
+.reality {
+    margin-right: 20rpx;
+    line-height: 70rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.sm-submit {
+    width: 680rpx;
+    height: 86rpx;
+    line-height: 86rpx;
+    text-align: center;
+    margin: 64rpx auto 0;
+    background-color: #e61f18;
+    border-radius: 6rpx;
+    font-size: 30rpx;
+    color: #fff;
+}
+
+.sm-submit.opa {
+    opacity: 0.4;
+}
+
+.record {
+    margin-right: 35rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    color: #404040;
+}
+
+.record .img {
+    width: 13rpx;
+    height: 23rpx;
+    margin: 28rpx 0 0 10rpx;
+}

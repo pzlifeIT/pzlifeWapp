@@ -1,0 +1,28 @@
+<!-- pages/boss/withdraw/record/record.wxml -->
+<block wx:if="{{div == 1}}">
+  <view class="list">
+    <block wx:for="{{list}}">
+      <view class="list-one" wx:for="{{item}}">
+        <view class="line">
+          <view class="left color">提现状态</view>
+          <view class="right color" wx:if="{{item.status == 1}}">待处理</view>
+          <view class="right color" wx:if="{{item.status == 2}}">提现成功</view>
+          <view class="right color" wx:if="{{item.status == 3}}">提现失败</view>
+        </view>
+        <view class="line">
+          <view class="left">提现金额</view>
+          <view class="right">{{item.money}}元</view>
+        </view>
+        <view class="line">
+          <view class="left">转账银行</view>
+          <view class="right">{{item.bank_name}}({{item.bank_card}})</view>
+        </view>
+        <view class="line">
+          <view class="left">提现日期</view>
+          <!-- <view class="right">{{item.message}}</view> -->
+          <view class="right">{{item.create_time}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>

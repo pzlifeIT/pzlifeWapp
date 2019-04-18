@@ -1,0 +1,21 @@
+<!--pages/shiftMoney/record/record.wxml-->
+<view wx:for="{{recordlist}}" >
+  <view class="rd-list" wx:for="{{item}}" >
+    <view class="rd-li top" >
+      <text class="rd-li-tit color" >转入状态</text>
+      <text class="rd-li-con color" >{{item.statusText}}</text>
+    </view>
+    <view class="rd-li" >
+      <text class="rd-li-tit" >转入商票金额</text>
+      <text class="rd-li-con" >{{item.real_money}}元</text>
+    </view>
+    <view class="rd-li" >
+      <text class="rd-li-tit" >奖励金转出金额</text>
+      <text class="rd-li-con" >{{item.money}}元</text>
+    </view>
+    <view class="rd-li" >
+      <text class="rd-li-tit" >转入日期</text>
+      <text class="rd-li-con" >{{item.create_time}}元</text>
+    </view>
+  </view>
+</view>

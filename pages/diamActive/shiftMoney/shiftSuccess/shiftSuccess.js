@@ -1,4 +1,4 @@
-// pages/boss/withdraw/submitStatus/submitStatus.js
+// pages/shiftMoney/shiftSuccess/shiftSuccess.js
 const app = getApp()
 Page({
 
@@ -6,33 +6,16 @@ Page({
      * 页面的初始数据
      */
     data: {
-        imgHost: "",
-        status: 0
+        imgHost: ''
     },
-    cha: function() {
-        wx.navigateTo({
-            url: "/pages/boss/withdraw/record/record?div=1"
-        })
-    },
-    goon: function() {
-        wx.navigateTo({
-            url: "/pages/boss/withdraw/withdraw"
-        })
-    },
-    goBoss: function() {
-        wx.switchTab({
-            url: "/pages/my/my"
-        })
-    },
+
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
         this.setData({
-            imgHost: app.globalData.host.imgHost,
-            status: options.status
+            imgHost: app.globalData.host.imgHost
         })
-
     },
 
     /**

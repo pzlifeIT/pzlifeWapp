@@ -1,0 +1,87 @@
+/* pages/diamActive/diamActive.wxss */
+.first{
+    width: 750rpx;
+    height: 804rpx;
+    display: block;
+}
+.second{
+    width: 750rpx;
+    height: 868rpx;
+    display: block;
+    /*margin-bottom: 92rpx;*/
+}
+.mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.shou {
+    width: 124rpx;
+    height: 121rpx;
+    position: absolute;
+    right: 180rpx;
+    top: 10rpx;
+    z-index: 999;
+    opacity: 1;
+}
+
+.text {
+    width: 537rpx;
+    height: 340rpx;
+    margin-top: 24rpx;
+    margin-bottom: 57rpx;
+}
+
+.center{
+    width: 593rpx;
+    height: 568rpx;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    z-index: 99999;
+    background-color: #FFFFFF;
+}
+
+.button {
+    border: 2rpx solid #000;
+    width: 224rpx;
+    height: 88rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.button view {
+    border: 2rpx solid #000;
+    width: 212rpx;
+    height: 76rpx;
+    color: #000;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 30rpx;
+}
+.boss{
+    height: 267rpx;
+    margin-top: 75rpx;
+}
+.footer{
+    width: 750rpx;
+    height: 92rpx;
+    background-color: #ffcb0f;
+    text-align: center;
+    line-height: 92rpx;
+    font-size: 30rpx;
+    color: #000;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,18 @@
+
+<image lazy-load="true" class="first" src="{{imgHost}}gz_02.png"></image>
+<image lazy-load="true" class="second" src="{{imgHost}}gz_03.png"></image>
+
+<view class="mask" wx:if="{{mask}}" catchtouchmove='preventTouchMove'>
+    <image lazy-load="true" class="shou" src="{{imgHost}}shou.png"></image>
+    <view class="center">
+        <image wx:if="{{ident == 1}}" lazy-load="true" class="text" src="{{imgHost}}hint_01.png"></image>
+        <image wx:elif="{{ident == 2}}" lazy-load="true" class="text" src="{{imgHost}}hint_02.png"></image>
+        <image wx:elif="{{ident == 4}}" lazy-load="true" class="text" src="{{imgHost}}hhrts.png"></image>
+        <view class="button" bindtap="editstatus">
+            <view>我知道了</view>
+        </view>
+    </view>
+</view>
+<view class="footer" bindtap="buy" wx:if="{{stype != 1 && ident == 1}}">
+    立即购买
+</view>

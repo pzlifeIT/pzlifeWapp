@@ -1,0 +1,27 @@
+<!--pages/my/activeEarn/activeEarn.wxml-->
+<view class="top">
+    <view class="left">
+        <view class="text text-left">总人数</view>
+        <view class="num">{{share_num}}</view>
+    </view>
+    <view class="mid"></view>
+    <view class="left">
+        <view class="text text-right">收益总额</view>
+        <view class="num">{{bountyAll}}</view>
+    </view>
+</view>
+<view class="detail-text" wx:if="{{bountyDetail.length > 0}}">活动收益明细</view>
+<view class="list" wx:if="{{bountyDetail.length > 0}}">
+    <block wx:for="{{list}}">
+        <view class="one" wx:for="{{item}}">
+            <view class="avatar">
+                <image src="{{item.user.avatar}}"></image>
+            </view>
+            <view class="name-time">
+                <view class="name">{{item.user.nick_name}}</view>
+                <view class="time">{{item.create_time}}</view>
+            </view>
+            <view class="money">+40</view>
+        </view>
+    </block>
+</view>

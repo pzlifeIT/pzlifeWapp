@@ -1,0 +1,70 @@
+/* pages/boss/withdraw/submitStatus/submitStatus.wxss */
+page{
+    background: #f7f7f7;
+}
+.status{
+    width: 750rpx;
+    height: 300rpx;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rpx;
+}
+.img{
+    margin-bottom: 47rpx;
+}
+image{
+    width: 60rpx;
+    height: 66rpx;
+    margin-right: 28rpx;
+}
+text{
+    color: #e61f18;
+    font-size: 30rpx;
+    display: inline-block;
+}
+.jg{
+    color: #666666;
+    font-size: 26rpx;
+}
+.footer{
+    width: 750rpx;
+    height: 60rpx;
+    margin-top: 39rpx;
+}
+.left{
+    background-color: #e61f18;
+    width: 240rpx;
+    height: 60rpx;
+    color: #FFFFFF;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 60rpx;
+    margin-left: 115rpx;
+    margin-right: 40rpx;
+    display: inline-block;
+}
+.right{
+    background-color: #FFFFFF;
+    border: 1rpx solid #e61f81;
+    color: #e61f18;
+    font-size: 26rpx;
+    display: inline-block;
+    text-align: center;
+    line-height: 60rpx;
+    width: 240rpx;
+    height: 60rpx;
+}
+.goBoss{
+    width: 750rpx;
+    height: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+    background-color: #e61f18;
+    color: #FFFFFF;
+    font-size: 30rpx;
+    position: fixed;
+    bottom: 0;
+}

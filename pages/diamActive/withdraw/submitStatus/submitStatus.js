@@ -1,4 +1,3 @@
-// pages/boss/withdraw/submitStatus/submitStatus.js
 const app = getApp()
 Page({
 
@@ -11,12 +10,12 @@ Page({
     },
     cha: function() {
         wx.navigateTo({
-            url: "/pages/boss/withdraw/record/record?div=1"
+            url: "/pages/diamActive/withdraw/record/record"
         })
     },
     goon: function() {
         wx.navigateTo({
-            url: "/pages/boss/withdraw/withdraw"
+            url: "/pages/diamActive/withdraw/withdraw"
         })
     },
     goBoss: function() {

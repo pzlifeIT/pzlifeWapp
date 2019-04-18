@@ -163,6 +163,14 @@
         <image lazy-load="true" src="{{imgHost}}kb.png"></image>
         <view class="icon-text">卡包</view>
     </view>
+    <view class="one icon-after" bindtap="activity">
+        <image lazy-load="true" src="{{imgHost}}zsjl_06.png"></image>
+        <view class="icon-text">钻石接龙</view>
+    </view>
+    <view class="one icon-after" bindtap="diamondlist">
+        <image lazy-load="true" src="{{imgHost}}zsjl_03.png"></image>
+        <view class="icon-text">钻石接龙列表</view>
+    </view>
 </view>
 <!--弹窗-->
 <view class="mask" catchtouchmove='preventTouchMove' wx:if="{{popCase || popShouyi || popYongjin || popJoin}}">

@@ -179,11 +179,11 @@
 <view class="userCost">
   <view class="cost-title">活动管理</view>
   <view class="equity">
-    <view class="equity-one" bindtap="activity" hover-class="other-navigator-hover">
+    <view class="equity-one" bindtap="diamBoss" hover-class="other-navigator-hover" data-stype="1">
       <image lazy-load="true" src="{{imgHost}}hdgl_08.png"></image>
-      <view class="equity-title">品质计划</view>
+      <view class="equity-title">钻石合伙人</view>
     </view>
-    <view class="equity-one" bindtap="diamondlist">
+    <view class="equity-one" bindtap="activeEarn">
       <image lazy-load="true" src="{{imgHost}}hdgl_03.png"></image>
       <view class="equity-title">活动收益</view>
     </view>
@@ -191,15 +191,15 @@
       <image lazy-load="true" src="{{imgHost}}hdgl_05.png"></image>
       <view class="equity-title">添加银行卡</view>
     </view>
-    <view class="equity-one" bindtap="diamondlist">
+    <view class="equity-one" bindtap="toShangpiao">
       <image lazy-load="true" src="{{imgHost}}hdgl_15.png"></image>
       <view class="equity-title">转商票</view>
     </view>
-    <view class="equity-one" bindtap="diamondlist">
+    <view class="equity-one" bindtap="bountyWithdraw">
       <image lazy-load="true" src="{{imgHost}}hdgl_13.png"></image>
       <view class="equity-title">提现</view>
     </view>
-    <view class="equity-one" bindtap="diamondlist">
+    <view class="equity-one" bindtap="instr">
       <image lazy-load="true" src="{{imgHost}}hdgl_14.png"></image>
       <view class="equity-title" style="color: #e61f18;">操作指南</view>
     </view>

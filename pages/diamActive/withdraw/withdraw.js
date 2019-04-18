@@ -25,18 +25,6 @@ Page({
             trueMoney:0
         })
     },
-    getInvoice: function () {
-        let that = this
-        app.wxrequest({
-            url: "user/getInvoice",
-            success(res) {
-                that.setData({
-                    has_invoice:res.invoice.has_invoice / 100,
-                    no_invoice:res.invoice.no_invoice / 100
-                })
-            }
-        })
-    },
     /**
      * 发起提现
      */
@@ -53,9 +41,9 @@ Page({
             })
             return
         }
-        if (parseFloat(that.data.money) < 2000){
+        if (parseFloat(that.data.money) <= 0){
             app.toast({
-                title:"提现金额不得少于2000"
+                title:"提现金额不能为0"
             })
             return
         }
@@ -65,14 +53,14 @@ Page({
             })
             return
         }
-        if (that.data.cardInfo == false || that.data.invoice == 0) {
+        if (that.data.cardInfo == false) {
             app.toast({
-                title: "未选择银行卡或是否可提供发票"
+                title: "未选择银行卡"
             })
             return
         }
         app.wxrequest({
-            url: "user/commissionTransferCash",
+            url: "user/bountyTransferCash",
             data: {
                 bankcard_id: cardInfo.cardId,
                 money: that.data.money,
@@ -80,7 +68,7 @@ Page({
             },
             success(res) {
                 wx.navigateTo({
-                    url: "/pages/boss/withdraw/submitStatus/submitStatus?status=" + status
+                    url: "/pages/diamActive/withdraw/submitStatus/submitStatus"
                 })
             },
             error(res) {
@@ -124,48 +112,30 @@ Page({
         if (e.detail.value == 1) {//提供发票
             let trueMoney = parseFloat(money) - (parseFloat(has)  * parseFloat(money))
             this.setData({
-                trueMoney:trueMoney.toFixed(2),
-                select:1
+                trueMoney:trueMoney.toFixed(2)
             })
         } else if (e.detail.value == 2) {//不提供
             let trueMoney = parseFloat(money) - (parseFloat(no)  * parseFloat(money))
             this.setData({
-                trueMoney:trueMoney.toFixed(2),
-                select:2
+                trueMoney:trueMoney.toFixed(2)
             })
         }
     },
     watchInput: function (e) {
         this.setData({
-            money: e.detail.value
+            money: e.detail.value,
+            trueMoney:e.detail.value
         })
-        let money = this.data.money || 0,
-            has = this.data.has_invoice,
-            no = this.data.no_invoice
         if (parseFloat(e.detail.value) > parseFloat(this.data.userInfo.commission)) {
             app.toast({
                 title: "提现金额不得大于可用金额"
             })
         }
-        if (this.data.select == 1){
-            let trueMoney = parseFloat(money) - (parseFloat(has)  * parseFloat(money))
-            this.setData({
-                trueMoney:trueMoney.toFixed(2)
-            })
-        } else if (this.data.select == 2){
-            let trueMoney = parseFloat(money) - (parseFloat(no)  * parseFloat(money))
-            this.setData({
-                trueMoney:trueMoney.toFixed(2)
-            })
-        }
-
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        app.getUserInfo()
-        this.getInvoice()
         console.log(app.globalData.userInfo)
         this.setData({
             imgHost: app.globalData.host.imgHost
@@ -182,12 +152,6 @@ Page({
             url: "selectCard/selectCard"
         })
     },
-    know: function () {
-        let status = !this.data.mask
-        this.setData({
-            mask: status
-        })
-    },
     getUserInfo: function() {
         let that = this
         app.wxrequest({
@@ -195,7 +159,7 @@ Page({
             nologin: true,
             success(res) {
                 that.setData({
-                    commission: res.data.commission
+                    commission: res.data.bounty
                 })
             }
         })

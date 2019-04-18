@@ -1,0 +1,3 @@
+<!--pages/my/instructions/instructions.wxml-->
+<image lazy-load="true" class="first" src="{{imgHost}}gz_02.png"></image>
+<image lazy-load="true" class="second" src="{{imgHost}}gz_03.png"></image>

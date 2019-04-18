@@ -154,7 +154,7 @@ page{
     line-height: 86rpx;
     color: #FFFFFF;
     font-size: 28rpx;
-    margin: 196rpx 0 0 35rpx;
+    margin: 428rpx 0 0 35rpx;
     border-radius: 2rpx;
 }
 .two-jt{
