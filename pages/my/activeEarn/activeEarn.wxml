@@ -10,8 +10,8 @@
         <view class="num">{{bountyAll}}</view>
     </view>
 </view>
-<view class="detail-text" wx:if="{{bountyDetail.length > 0}}">活动收益明细</view>
-<view class="list" wx:if="{{bountyDetail.length > 0}}">
+<view class="detail-text" wx:if="{{list.length > 0}}">活动收益明细</view>
+<view class="list" wx:if="{{list.length > 0}}">
     <block wx:for="{{list}}">
         <view class="one" wx:for="{{item}}">
             <view class="avatar">
