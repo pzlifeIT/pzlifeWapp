@@ -4,11 +4,12 @@
         <icon type='search' class='search_icon fl' size='34rpx'/>
         <input class="search_cate din fl" type="text" focus="{{true}}" placeholder="搜索品质方案" value="{{search}}"
                confirm-type="search"
-               placeholder-class="pl-class" bindinput="inputwacth" bindconfirm="getSearchGoods"/>
+               placeholder-class="pl-class" bindconfirm="getSearchGoods" bindinput="inputchange" />
     </view>
-    <view class="sea-button" bindtap="getSearchGoods">
-        搜索
-    </view>
+    <view class="sea-button" bindtap="getSearchGoods">搜索</view>
+</view>
+<view class="lenovo" hidden="{{!lenovoModal}}" >
+  <view class="lenovo-li" wx:for="{{lenovoList}}" bindtap="lenovoClick" data-name="{{item.label_name}}" >{{item.label_name}}</view>
 </view>
 <!-- 搜索历史 -->
 <view class="history-wai" wx:if="{{goodsList.length<=0 || search==''}}">

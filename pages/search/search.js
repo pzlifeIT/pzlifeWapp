@@ -7,60 +7,116 @@ Page({
      */
     data: {
         search: '',
+        oldsearch: '',
         searchList: [],
         goodsList: [],
         imgHost: '',
         page: 1,
         pageNum: 10,
-        reach: true
+        reach: true,
+        lenovoList: [],
+        lenovoModal: false,
+        alllenovo: {}
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
+        let alllenovo = {}
+        if (wx.getStorageSync("alllenovo")) {
+            alllenovo = JSON.parse(wx.getStorageSync("alllenovo"))
+        }
         this.setData({
-            imgHost: app.globalData.host.imgHost
+            imgHost: app.globalData.host.imgHost,
+            alllenovo: alllenovo
         })
     },
-    inputwacth: function(e) {
-        console.log(e)
-
-        this.setData({
-            search: e.detail.value
-        });
-        if (!e.detail.value) {
+    inputchange: function(e) {
+        let val = e.detail.value.replace(/\s*/g, "")
+        if (val == '') {
             this.setData({
-                goodsList: []
-            })
+                search: '',
+                lenovoModal: false,
+                goodsList: [],
+                page: 1
+            });
+            return
         }
+        let alllenovo = this.data.alllenovo
+        console.log(alllenovo)
+        if (alllenovo[val]) {
+            if (alllenovo[val].length > 0) {
+                this.setData({
+                    lenovoList: alllenovo[val],
+                    lenovoModal: true
+                });
+            } else {
+                this.setData({
+                    lenovoModal: false
+                });
+            }
+        } else {
+            this.searchlabel(val)
+        }
+        this.setData({
+            search: val
+        });
+    },
+    searchlabel: function(val) {
+        let that = this
+        app.wxrequest({
+            url: "goods/searchlabel",
+            data: {
+                search_content: val
+            },
+            noloading: true,
+            success(res) {
+                that.setAlllenovo(val, res.data)
+                that.setData({
+                    lenovoList: res.data,
+                    lenovoModal: true
+                })
+            },
+            error(res) {
+                that.setAlllenovo(val, [])
+                that.setData({
+                    lenovoList: [],
+                    lenovoModal: false
+                })
+            }
+        })
+    },
+    setAlllenovo(val, data = []) {
+        let alllenovo = this.data.alllenovo
+        alllenovo[val] = data
+        this.setData({
+            alllenovo: alllenovo
+        })
+        wx.setStorageSync("alllenovo", JSON.stringify(alllenovo))
     },
     /**
      * 搜索
      */
     mid: function(keyword = "") {
-        //获取数组
         let arr = this.data.searchList
-        console.log(this.data.searchList)
-            //将搜索的词放进数组中
         let search = this.data.search.replace(/\s*/g, "");
         if (keyword) {
             search = keyword.replace(/\s*/g, "")
         }
-        if (search == "") {
-            console.log(123)
-            return false
-        }
-        arr.unshift(search)
+
+        if (search == "") return
+
         for (let i = 0; i < arr.length - 1; i++) {
-            for (let j = i + 1; j < arr.length; j++) {
-                if (arr[i] == arr[j]) {
-                    arr.splice(j, 1)
-                    j--
-                }
+            if (arr[i] == search) {
+                arr.splice(i, 1)
             }
         }
-        //将搜索的词存进全局变量
+        arr.unshift(search)
+        this.setData({
+            searchList: arr,
+            search: search
+        });
         wx.setStorageSync("searchList", arr)
         this.getSearchGood(search)
     },
@@ -70,9 +126,9 @@ Page({
     getSearchGood: function(search) {
         let that = this
         app.wxrequest({
-            url: "goods/getSearchGoods",
+            url: "goods/getsearchgoodsbylabel",
             data: {
-                search: search,
+                label_name: search,
                 page: that.data.page || 1,
                 page_num: that.data.pageNum || 10
             },
@@ -91,8 +147,6 @@ Page({
                 }
                 let goodsList = that.data.goodsList
                 goodsList.push(res.goods_data)
-                console.log(res.goods_data)
-                console.log(goodsList)
                 that.setData({
                     goodsList: goodsList,
                     page: that.data.page + 1
@@ -100,47 +154,47 @@ Page({
             },
             error(res) {
 
-            },
-            fail(res) {
-
             }
         })
     },
     /**
      * 点击搜索按钮
      */
+    clickSearch: function(e) {
+        this.setData({
+            page: 1,
+            goodsList: []
+        })
+        this.mid(e.currentTarget.dataset.keyword)
+    },
     getSearchGoods: function(e) {
         this.setData({
             page: 1,
-            goodsList: []
+            goodsList: [],
+            lenovoList: [],
+            lenovoModal: false
         })
         this.mid()
     },
-    clickSearch: function(e) {
-        console.log(e)
+    lenovoClick: function(e) {
+        let name = e.currentTarget.dataset.name
         this.setData({
             page: 1,
-            goodsList: []
+            goodsList: [],
+            lenovoList: [],
+            lenovoModal: false
         })
-        let keyword = e.currentTarget.dataset.keyword
-        console.log(keyword)
-        this.mid(keyword)
-        this.setData({
-            search: keyword
-        })
+        this.mid(name)
     },
     del: function() {
         let that = this
-        wx.showModal({
-            title: "提示",
-            content: "是否确认清空？",
-            success(res) {
-                if (res.confirm) {
-                    wx.setStorageSync("searchList", [])
-                    that.setData({
-                        searchList: []
-                    })
-                }
+        app.modal({
+            content: "是否清空历史搜索？",
+            success() {
+                wx.setStorageSync("searchList", [])
+                that.setData({
+                    searchList: []
+                })
             }
         })
     },
