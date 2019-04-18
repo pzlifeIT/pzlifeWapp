@@ -55,14 +55,13 @@ page {
 .history-wai {
     width: 750rpx;
     overflow: hidden;
-    margin-top: 90rpx;
 }
 
 .history {
     width: 736rpx;
     overflow: hidden;
     padding: 0 7rpx;
-    margin-top: 44rpx;
+    margin-top: 134rpx;
 }
 
 .history-head {
@@ -185,4 +184,21 @@ page {
     font-size: 24rpx;
     margin-left: 20rpx;
     margin-bottom: 10rpx;
+}
+
+.lenovo {
+    position: fixed;
+    top: 80rpx;
+    width: 100%;
+    background-color: #fff;
+    padding: 10rpx 0 20rpx;
+    color: #202020;
+    box-shadow: 2rpx 2rpx 5rpx #d9d9d9;
+}
+
+.lenovo-li {
+    line-height: 80rpx;
+    text-indent: 20rpx;
+    font-size: 28rpx;
+    border-bottom: 1rpx solid #f7f7f7;
 }

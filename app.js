@@ -7,6 +7,7 @@ App({
         let that = this
         that.globalData.con_id = wx.getStorageSync('con_id') || ''
         that.globalData.host = config
+        wx.setStorageSync("alllenovo", '{}')
     },
     globalData: {
         userInfo: {},
