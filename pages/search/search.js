@@ -99,15 +99,17 @@ Page({
      * 搜索
      */
     mid: function(keyword = "") {
-        let arr = this.data.searchList
-        let search = this.data.search.replace(/\s*/g, "");
+        let arr = this.data.searchList,
+            search = '';
         if (keyword) {
             search = keyword.replace(/\s*/g, "")
+        } else {
+            search = this.data.search.replace(/\s*/g, "")
         }
 
-        if (search == "") return
+        if (search == '') return
 
-        for (let i = 0; i < arr.length - 1; i++) {
+        for (let i = 0; i < arr.length; i++) {
             if (arr[i] == search) {
                 arr.splice(i, 1)
             }
