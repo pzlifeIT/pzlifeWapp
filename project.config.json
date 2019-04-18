@@ -19,6 +19,8 @@
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -37,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 53,
+			"current": 60,
 			"list": [
 				{
 					"id": 0,
@@ -403,6 +405,56 @@
 					"id": -1,
 					"name": "收藏",
 					"pathName": "pages/collect/collect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动收益",
+					"pathName": "pages/my/activeEarn/activeEarn",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "钻石合伙人",
+					"pathName": "pages/diamActive/diamActive",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "操作指南",
+					"pathName": "pages/my/instructions/instructions",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "奖励金转商票",
+					"pathName": "pages/diamActive/shiftMoney/shiftMoney",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "奖励金转商票记录",
+					"pathName": "pages/diamActive/shiftMoney/record/record",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "奖励金提现",
+					"pathName": "pages/diamActive/withdraw/withdraw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "佣金提现",
+					"pathName": "pages/boss/withdraw/withdraw",
+					"query": "",
 					"scene": null
 				}
 			]
