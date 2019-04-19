@@ -33,8 +33,10 @@ Page({
             })
             withdraw = false
         }
+        let num = val ? (parseFloat(val)*1.25) + '' : 0
+            num = Math.floor(num * 100) / 100
         this.setData({
-            reality: val ? (parseFloat(val)*1.25).toFixed(2) : 0,
+            reality: num,
             money: val,
             withdraw: withdraw
         })

@@ -33,9 +33,9 @@ Page({
             cardInfo = that.data.cardInfo,
             status = this.data.invoice
         console.log(that.data.money)
-        console.log(that.data.userInfo.commission)
+        console.log(that.data.userInfo.bounty)
         console.log(cardInfo)
-        if (parseFloat(that.data.money) > parseFloat(that.data.userInfo.commission) || that.data.money == 0) {
+        if (parseFloat(that.data.money) > parseFloat(that.data.commission) || that.data.money == 0) {
             app.toast({
                 title: "提现金额错误"
             })
@@ -126,7 +126,12 @@ Page({
             money: e.detail.value,
             trueMoney:e.detail.value
         })
-        if (parseFloat(e.detail.value) > parseFloat(this.data.userInfo.commission)) {
+        if (e.detail.value == 0 || e.detail.value == '') {
+            this.setData({
+                trueMoney:0
+            })
+        }
+        if (parseFloat(e.detail.value) > parseFloat(this.data.commission)) {
             app.toast({
                 title: "提现金额不得大于可用金额"
             })

@@ -13,16 +13,16 @@ Page({
         invoice: 0,
         disabled: true,
         money: "",
-        has_invoice:0.1,
-        no_invoice:0.06,
-        trueMoney:0,
-        commission:0.00
+        has_invoice: 0.1,
+        no_invoice: 0.06,
+        trueMoney: 0,
+        commission: 0.00
     },
     clear: function () {
         console.log(123)
         this.setData({
             money: '',
-            trueMoney:0
+            trueMoney: 0
         })
     },
     getInvoice: function () {
@@ -31,8 +31,8 @@ Page({
             url: "user/getInvoice",
             success(res) {
                 that.setData({
-                    has_invoice:res.invoice.has_invoice / 100,
-                    no_invoice:res.invoice.no_invoice / 100
+                    has_invoice: res.invoice.has_invoice / 100,
+                    no_invoice: res.invoice.no_invoice / 100
                 })
             }
         })
@@ -53,15 +53,15 @@ Page({
             })
             return
         }
-        if (parseFloat(that.data.money) < 2000){
+        if (parseFloat(that.data.money) < 2000) {
             app.toast({
-                title:"提现金额不得少于2000"
+                title: "提现金额不得少于2000"
             })
             return
         }
-        if (parseFloat(that.data.money) > 200000){
+        if (parseFloat(that.data.money) > 200000) {
             app.toast({
-                title:"提现金额不得大于200000"
+                title: "提现金额不得大于200000"
             })
             return
         }
@@ -100,11 +100,11 @@ Page({
                     app.toast({
                         title: "未查询到该银行卡"
                     })
-                }else if (res == 3009) {
+                } else if (res == 3009) {
                     app.toast({
                         title: "错误代码:3009,请联系客服"
                     })
-                }else if (res == 3008) {
+                } else if (res == 3008) {
                     app.toast({
                         title: "该银行卡暂不可用"
                     })
@@ -122,16 +122,18 @@ Page({
         console.log(has)
         console.log(no)
         if (e.detail.value == 1) {//提供发票
-            let trueMoney = parseFloat(money) - (parseFloat(has)  * parseFloat(money))
+            let trueMoney = parseFloat(money) - (parseFloat(has) * parseFloat(money));
+            let Money = Math.floor(trueMoney * 100) / 100;
             this.setData({
-                trueMoney:trueMoney.toFixed(2),
-                select:1
+                trueMoney: Money,
+                select: 1
             })
         } else if (e.detail.value == 2) {//不提供
-            let trueMoney = parseFloat(money) - (parseFloat(no)  * parseFloat(money))
+            let trueMoney = parseFloat(money) - (parseFloat(no) * parseFloat(money));
+            let Money = Math.floor(trueMoney * 100) / 100;
             this.setData({
-                trueMoney:trueMoney.toFixed(2),
-                select:2
+                trueMoney: Money,
+                select: 2
             })
         }
     },
@@ -147,15 +149,15 @@ Page({
                 title: "提现金额不得大于可用金额"
             })
         }
-        if (this.data.select == 1){
-            let trueMoney = parseFloat(money) - (parseFloat(has)  * parseFloat(money))
+        if (this.data.select == 1) {
+            let trueMoney = parseFloat(money) - (parseFloat(has) * parseFloat(money))
             this.setData({
-                trueMoney:trueMoney.toFixed(2)
+                trueMoney: trueMoney.toFixed(2)
             })
-        } else if (this.data.select == 2){
-            let trueMoney = parseFloat(money) - (parseFloat(no)  * parseFloat(money))
+        } else if (this.data.select == 2) {
+            let trueMoney = parseFloat(money) - (parseFloat(no) * parseFloat(money))
             this.setData({
-                trueMoney:trueMoney.toFixed(2)
+                trueMoney: trueMoney.toFixed(2)
             })
         }
 
@@ -188,7 +190,7 @@ Page({
             mask: status
         })
     },
-    getUserInfo: function() {
+    getUserInfo: function () {
         let that = this
         app.wxrequest({
             url: "user/getuser",
