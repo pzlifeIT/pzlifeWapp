@@ -197,8 +197,12 @@ page {
 }
 
 .lenovo-li {
+    height: 80rpx;
     line-height: 80rpx;
     text-indent: 20rpx;
     font-size: 28rpx;
     border-bottom: 1rpx solid #f7f7f7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
