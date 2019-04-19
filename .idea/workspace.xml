@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
-      <change beforePath="$PROJECT_DIR$/pages/diamActive/diamActive.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/diamActive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/instructions/instructions.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/instructions/instructions.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +34,7 @@
           <entry key="htm" value="2" />
           <entry key="html" value="1" />
           <entry key="js" value="254" />
-          <entry key="json" value="50" />
+          <entry key="json" value="52" />
           <entry key="php" value="4" />
           <entry key="wxml" value="221" />
           <entry key="wxss" value="145" />
@@ -44,7 +44,7 @@
         <counts>
           <entry key="CSS" value="145" />
           <entry key="HTML" value="223" />
-          <entry key="JSON" value="50" />
+          <entry key="JSON" value="52" />
           <entry key="JavaScript" value="254" />
           <entry key="PHP" value="4" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -54,16 +54,16 @@
         <counts>
           <entry key="htm" value="36" />
           <entry key="js" value="30462" />
-          <entry key="json" value="182" />
-          <entry key="wxml" value="20393" />
+          <entry key="json" value="188" />
+          <entry key="wxml" value="20400" />
           <entry key="wxss" value="19736" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="19736" />
-          <entry key="HTML" value="20429" />
-          <entry key="JSON" value="182" />
+          <entry key="HTML" value="20436" />
+          <entry key="JSON" value="188" />
           <entry key="JavaScript" value="30462" />
         </counts>
       </usages-collector>
@@ -101,24 +101,6 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/diamActive/withdraw/selectCard/selectCard.wxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/withdraw/selectCard/selectCard.wxss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
-                  <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/boss/boss.wxml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="312">
@@ -145,11 +127,29 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="78">
-                  <caret line="141" column="23" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
+                <state relative-caret-position="442">
+                  <caret line="41" column="43" lean-forward="true" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="52">
+                  <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/my/instructions/instructions.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="52">
+                  <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -167,11 +167,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="15" column="72" lean-forward="true" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+                <state relative-caret-position="468">
+                  <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
                 </state>
               </provider>
             </entry>
@@ -239,11 +239,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+                <state relative-caret-position="514">
+                  <caret line="90" column="24" lean-forward="true" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -307,7 +307,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/openShop/notice/notice.wxml" />
         <option value="$PROJECT_DIR$/pages/openShop/openShop.wxml" />
         <option value="$PROJECT_DIR$/pages/openShop/submitStatus/submitStatus.json" />
         <option value="$PROJECT_DIR$/pages/openShop/payWay/payWay.wxml" />
@@ -354,10 +353,11 @@
         <option value="$PROJECT_DIR$/pages/boss/boss.js" />
         <option value="$PROJECT_DIR$/pages/activity/activity.wxml" />
         <option value="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.js" />
-        <option value="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" />
         <option value="$PROJECT_DIR$/pages/my/my.js" />
         <option value="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml" />
         <option value="$PROJECT_DIR$/pages/diamActive/diamActive.js" />
+        <option value="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" />
+        <option value="$PROJECT_DIR$/pages/my/instructions/instructions.json" />
       </list>
     </option>
   </component>
@@ -424,6 +424,13 @@
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="my" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
@@ -498,12 +505,12 @@
       <workItem from="1555290884735" duration="1976000" />
       <workItem from="1555293319978" duration="53246000" />
       <workItem from="1555550734134" duration="1939000" />
-      <workItem from="1555555959348" duration="12718000" />
+      <workItem from="1555555959348" duration="16382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="547692000" />
+    <option name="totallyTimeSpent" value="551356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -558,13 +565,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/openShop/writeInfo/writeInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="112" column="37" selection-start-line="112" selection-start-column="37" selection-end-line="112" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/openShop/notice/notice.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -651,13 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -862,13 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="72" lean-forward="true" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -892,15 +878,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+        <state relative-caret-position="514">
+          <caret line="90" column="24" lean-forward="true" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="141" column="23" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
+        <state relative-caret-position="442">
+          <caret line="41" column="43" lean-forward="true" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/instructions/instructions.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
         </state>
       </provider>
     </entry>
