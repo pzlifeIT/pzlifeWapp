@@ -70,6 +70,7 @@ Page({
             data: {
                 search_content: val
             },
+            nocon: true,
             noloading: true,
             success(res) {
                 that.setAlllenovo(val, res.data)

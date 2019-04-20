@@ -13,7 +13,7 @@ Page({
         orderCount: {},
         boss: {}
     },
-    notice: function (e) {
+    notice: function(e) {
         let user_identity = e.currentTarget.dataset.identity
         if (user_identity == 1) {
             return
@@ -25,7 +25,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
+    onLoad: function(options) {
         //获取con_id
         this.setData({
             imgHost: app.globalData.host.imgHost
@@ -34,7 +34,7 @@ Page({
     /**
      * 判断是否存在con_id
      */
-    checkLogin: function (con_id) {
+    checkLogin: function(con_id) {
         //存在就登陆不存在就无登录
         if (con_id) {
             this.getUser()
@@ -46,7 +46,7 @@ Page({
         //     })
         // }
     },
-    getUserOrderCount: function () {
+    getUserOrderCount: function() {
         let that = this
         app.wxrequest({
             url: "user/getUserOrderCount",
@@ -59,7 +59,7 @@ Page({
             }
         })
     },
-    getBoss: function () {
+    getBoss: function() {
         let that = this
         app.wxrequest({
             url: "user/getbossshop",
@@ -70,7 +70,7 @@ Page({
             }
         })
     },
-    getUser: function () {
+    getUser: function() {
         let that = this
         app.wxrequest({
             url: "user/getuser",
@@ -111,11 +111,11 @@ Page({
             }
         })
     },
-    getQrcode: function () {
+    getQrcode: function() {
         app.wxrequest({
             url: "user/getUserQrcode",
             method: "GET",
-            data: {link: "/pages/index/index"},
+            data: { link: "/pages/index/index" },
             nocon: false,
             success(res) {
                 console.log(res)
@@ -128,56 +128,56 @@ Page({
             }
         })
     },
-    checkOrder: function (e) {
+    checkOrder: function(e) {
         if (this.data.con_id) {
             wx.navigateTo({
                 url: "/pages/order/order?status=" + e.currentTarget.dataset.status
             })
         } else {
-            app.toast({title: "请先登录"})
+            app.toast({ title: "请先登录" })
         }
     },
 
 
-    myQr: function () {
+    myQr: function() {
         if (this.data.con_id) {
             wx.navigateTo({
                 url: "/pages/my/myQr/myQr"
             })
         } else {
-            app.toast({title: "请先登录"})
+            app.toast({ title: "请先登录" })
         }
     },
-    bindPhone: function () {
+    bindPhone: function() {
         if (this.data.con_id) {
 
             // wx.navigateTo({
             //     url: ""
             // })
         } else {
-            app.toast({title: "请先登录"})
+            app.toast({ title: "请先登录" })
         }
     },
-    toaddress: function () {
+    toaddress: function() {
         console.log(this.data.con_id)
         if (this.data.con_id) {
             wx.navigateTo({
                 url: "/pages/address/address"
             })
         } else {
-            app.toast({title: "请先登录"})
+            app.toast({ title: "请先登录" })
         }
     },
-    tonewpassword: function () {
+    tonewpassword: function() {
         if (this.data.con_id) {
             wx.navigateTo({
                 url: "newpassword/newpassword"
             })
         } else {
-            app.toast({title: "请先登录"})
+            app.toast({ title: "请先登录" })
         }
     },
-    coupon: function () {
+    coupon: function() {
         if (this.data.con_id) {
             // wx.navigateTo({
             //     url: "/pages/coupon/coupon"
@@ -188,12 +188,12 @@ Page({
             })
         }
     },
-    call: function () {
+    call: function() {
         wx.makePhoneCall({
             phoneNumber: '15502123212'
         })
     },
-    money: function () {
+    money: function() {
         if (this.data.con_id) {
             let caseMoney = this.data.userInfo.balance
             wx.navigateTo({
@@ -205,7 +205,7 @@ Page({
             })
         }
     },
-    inte: function () {
+    inte: function() {
         if (this.data.con_id) {
             // let integral = this.data.userInfo.integral
             // wx.navigateTo({
@@ -220,7 +220,7 @@ Page({
     /**
      * 获取con_id
      */
-    getStorage: function () {
+    getStorage: function() {
         let that = this
         wx.getStorage({
             key: "con_id",
@@ -235,13 +235,13 @@ Page({
             }
         });
     },
-    gosxy: function () {
+    gosxy: function() {
         app.toast({
             title: "敬请期待"
         })
     },
 
-    gocommiss: function () {
+    gocommiss: function() {
         if (this.data.con_id) {
             wx.navigateTo({
                 url: "/pages/my/commission/commission"
@@ -253,12 +253,12 @@ Page({
         }
 
     },
-    join: function () {
+    join: function() {
         wx.navigateTo({
             url: "/pages/my/join/join"
         })
     },
-    addCard: function () {
+    addCard: function() {
         if (this.data.con_id) {
             wx.navigateTo({
                 url: "/pages/boss/cardBag/cardBag"
@@ -269,7 +269,7 @@ Page({
             })
         }
     },
-    activeEarn: function () {
+    activeEarn: function() {
         if (this.data.con_id) {
             wx.navigateTo({
                 url: "/pages/my/activeEarn/activeEarn"
@@ -280,7 +280,7 @@ Page({
             })
         }
     },
-    toShangpiao: function () {
+    toShangpiao: function() {
         if (this.data.con_id) {
             wx.navigateTo({
                 url: "/pages/diamActive/shiftMoney/shiftMoney"
@@ -291,7 +291,7 @@ Page({
             })
         }
     },
-    bountyWithdraw: function () {
+    bountyWithdraw: function() {
         if (this.data.con_id) {
             wx.navigateTo({
                 url: "/pages/diamActive/withdraw/withdraw"
@@ -302,7 +302,7 @@ Page({
             })
         }
     },
-    instr: function () {
+    instr: function() {
         if (this.data.con_id) {
             wx.navigateTo({
                 url: "/pages/my/instructions/instructions"
@@ -313,7 +313,7 @@ Page({
             })
         }
     },
-    goearn: function (e) {
+    goearn: function(e) {
         let earn = e.currentTarget.dataset.earn,
             enter = e.currentTarget.dataset.enter,
             entered = e.currentTarget.dataset.entered,
@@ -329,7 +329,7 @@ Page({
             })
         }
     },
-    gototalcommiss: function () {
+    gototalcommiss: function() {
         if (this.data.con_id) {
             wx.navigateTo({
                 url: "/pages/boss/commission/commission"
@@ -340,7 +340,7 @@ Page({
             })
         }
     },
-    goInte: function (e) {
+    goInte: function(e) {
         let int = e.currentTarget.dataset.int
         if (this.data.con_id) {
             wx.navigateTo({
@@ -352,7 +352,7 @@ Page({
             })
         }
     },
-    diamBoss: function (e) {
+    diamBoss: function(e) {
         let stype = e.currentTarget.dataset.stype
         if (this.data.con_id) {
             wx.navigateTo({
@@ -367,14 +367,14 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {
+    onReady: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
+    onShow: function() {
         let that = this
         app.judgelogin({
             success() {
@@ -387,39 +387,28 @@ Page({
             }
         })
     },
-    getUserInfoFun(e) {
-        wx.getUserInfo({
-            success: function (res) {
-                console.log("userInfo:" + res)　　　　　　　 //do anything
-            },
-            fail() {
-                console.log(121)
-            }
-        })
-
-    },
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function () {
+    onHide: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {
+    onUnload: function() {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
         wx.showNavigationBarLoading() //在标题栏中显示加载
-        //模拟加载
+            //模拟加载
         let that = this
-        setTimeout(function () {
+        setTimeout(function() {
             that.getStorage()
             wx.hideNavigationBarLoading() //完成停止加载
             wx.stopPullDownRefresh({}) //停止下拉刷新
@@ -429,14 +418,14 @@ Page({
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
+    onReachBottom: function() {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function () {
+    onShareAppMessage: function() {
         let sharejson = app.share({
             title: '个人中心',
             path: '/pages/my/my'
