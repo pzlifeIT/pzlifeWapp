@@ -43,7 +43,9 @@ Page({
     withdraw: function () {
         let that = this,
             cardInfo = that.data.cardInfo,
-            status = this.data.invoice
+            status = this.data.invoice,
+            money = parseFloat(this.data.money);
+        money = Math.floor(money * 100) / 100
         console.log(that.data.money)
         console.log(that.data.userInfo.commission)
         console.log(cardInfo)
@@ -75,7 +77,7 @@ Page({
             url: "user/commissionTransferCash",
             data: {
                 bankcard_id: cardInfo.cardId,
-                money: that.data.money,
+                money: money,
                 invoice: that.data.invoice
             },
             success(res) {
@@ -144,20 +146,22 @@ Page({
         let money = this.data.money || 0,
             has = this.data.has_invoice,
             no = this.data.no_invoice
-        if (parseFloat(e.detail.value) > parseFloat(this.data.userInfo.commission)) {
+        if (parseFloat(e.detail.value) > parseFloat(this.data.commission)) {
             app.toast({
                 title: "提现金额不得大于可用金额"
             })
         }
         if (this.data.select == 1) {
             let trueMoney = parseFloat(money) - (parseFloat(has) * parseFloat(money))
+            let Money = Math.floor(trueMoney * 100) / 100;
             this.setData({
-                trueMoney: trueMoney.toFixed(2)
+                trueMoney: Money
             })
         } else if (this.data.select == 2) {
             let trueMoney = parseFloat(money) - (parseFloat(no) * parseFloat(money))
+            let Money = Math.floor(trueMoney * 100) / 100;
             this.setData({
-                trueMoney: trueMoney.toFixed(2)
+                trueMoney: Money
             })
         }
 

@@ -31,7 +31,10 @@ Page({
     withdraw: function () {
         let that = this,
             cardInfo = that.data.cardInfo,
-            status = this.data.invoice
+            status = this.data.invoice,
+            money = parseFloat(this.data.money);
+            money = Math.floor( money* 100) / 100
+
         console.log(that.data.money)
         console.log(that.data.userInfo.bounty)
         console.log(cardInfo)
@@ -47,12 +50,6 @@ Page({
             })
             return
         }
-        if (parseFloat(that.data.money) > 200000){
-            app.toast({
-                title:"提现金额不得大于200000"
-            })
-            return
-        }
         if (that.data.cardInfo == false) {
             app.toast({
                 title: "未选择银行卡"
@@ -63,7 +60,7 @@ Page({
             url: "user/bountyTransferCash",
             data: {
                 bankcard_id: cardInfo.cardId,
-                money: that.data.money,
+                money: money,
                 invoice: that.data.invoice
             },
             success(res) {
@@ -100,31 +97,13 @@ Page({
             }
         })
     },
-    select: function (e) {
-        this.setData({
-            invoice: e.detail.value
-        })
-        let money = this.data.money || 0,
-            has = this.data.has_invoice,
-            no = this.data.no_invoice
-        console.log(has)
-        console.log(no)
-        if (e.detail.value == 1) {//提供发票
-            let trueMoney = parseFloat(money) - (parseFloat(has)  * parseFloat(money))
-            this.setData({
-                trueMoney:trueMoney.toFixed(2)
-            })
-        } else if (e.detail.value == 2) {//不提供
-            let trueMoney = parseFloat(money) - (parseFloat(no)  * parseFloat(money))
-            this.setData({
-                trueMoney:trueMoney.toFixed(2)
-            })
-        }
-    },
+
     watchInput: function (e) {
+        let money = parseFloat(e.detail.value)
+            money = Math.floor(money * 100) / 100
         this.setData({
             money: e.detail.value,
-            trueMoney:e.detail.value
+            trueMoney:money
         })
         if (e.detail.value == 0 || e.detail.value == '') {
             this.setData({

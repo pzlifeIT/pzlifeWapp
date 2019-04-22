@@ -21,7 +21,7 @@
                 <view class="name">{{item.user.nick_name}}</view>
                 <view class="time">{{item.create_time}}</view>
             </view>
-            <view class="money">+40</view>
+            <view class="money" wx:if="{{item.bounty_status == 1}}">+40</view>
         </view>
     </block>
 </view>

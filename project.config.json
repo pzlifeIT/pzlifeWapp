@@ -1,4 +1,4 @@
- {
+{
 	"description": "项目配置文件",
 	"packOptions": {
 		"ignore": []
@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 60,
+			"current": 61,
 			"list": [
 				{
 					"id": 0,
@@ -67,10 +67,11 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 4,
 					"name": "orderDetail",
-					"pathName": "pages/order/orderDetail/orderDetail",
-					"query": ""
+					"pathName": "pages/shiftMoney/shiftMoney",
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": -1,
@@ -455,6 +456,13 @@
 					"name": "佣金提现",
 					"pathName": "pages/boss/withdraw/withdraw",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": 61,
+					"name": "商品详情",
+					"pathName": "pages/goods/detail",
+					"query": "goodid=1269",
 					"scene": null
 				}
 			]

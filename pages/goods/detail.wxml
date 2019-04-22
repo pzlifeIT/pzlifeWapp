@@ -125,6 +125,19 @@
     <view class='coupon_right'><text>点击领取</text></view>
   </view>
 </scroll-view> -->
+  <!--&lt;!&ndash;为你推荐&ndash;&gt;-->
+  <!--<view class="recommend">-->
+    <!--<view class="re-title">为你推荐</view>-->
+    <!--<scroll-view class="re-goods" x->-->
+      <!--<view class="re-one">-->
+        <!--<image src=""></image>-->
+        <!--<view class="goods_name">广西北海咸鸭蛋胆大</view>-->
+        <!--<view class="re-price">￥128.99</view>-->
+        <!--<view class="vip_money"><text class="vip-text">钻石再让利</text> <text class="vip-money">888.00</text></view>-->
+      <!--</view>-->
+    <!--</scroll-view>-->
+  <!--</view>-->
+  <!--商品详情-->
   <view class='goods_content'>
     <view class='tab'>
       <!-- <view class='one active'><text>商品评价</text></view>
