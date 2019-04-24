@@ -212,6 +212,10 @@ swiper-item {
     color: #404040;
 }
 
+.content .fix_desc text {
+    display: inline-block;
+}
+
 .footer {
     position: fixed;
     left: 0;
@@ -586,13 +590,15 @@ swiper-item {
     height: 0rpx;
     color: transparent;
 }
-.recommend{
+
+.recommend {
     width: 750rpx;
     height: auto;
     overflow: auto;
     background-color: #FFFFFF;
 }
-.re-title{
+
+.re-title {
     width: 750rpx;
     line-height: 80rpx;
     padding: 0 24rpx;
@@ -600,23 +606,27 @@ swiper-item {
     color: #404040;
     font-size: 30rpx;
 }
-.re-goods{
+
+.re-goods {
     padding: 0 16rpx 20rpx 16rpx;
     box-sizing: border-box;
     height: 360rpx;
     white-space: nowrap;
 }
-.re-one{
+
+.re-one {
     width: 226rpx;
     /*height: 309rpx;*/
     display: inline-block;
 }
-.re-one image{
+
+.re-one image {
     width: 214rpx;
     height: 200rpx;
     border-radius: 10rpx;
 }
-.goods_name{
+
+.goods_name {
     width: 210rpx;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -624,11 +634,13 @@ swiper-item {
     color: #222222;
     font-size: 30rpx;
 }
-.re-price{
+
+.re-price {
     color: #e61f18;
     font-size: 30rpx;
 }
-.vip-text{
+
+.vip-text {
     width: 134rpx;
     height: 30rpx;
     background-color: #F99F36;
@@ -638,7 +650,8 @@ swiper-item {
     line-height: 30rpx;
     padding: 0 6rpx;
 }
-.vip-money{
+
+.vip-money {
     color: #F99F36;
     font-size: 26rpx;
     display: inline-block;

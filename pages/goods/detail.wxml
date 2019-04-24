@@ -20,14 +20,12 @@
             <view class="price-num">
                 <text class="din fl">￥{{goodInfo.goods_data.min_retail_price}}</text>
                 <text class="din fl"
-                      wx:if="{{goodInfo.goods_data.min_retail_price != goodInfo.goods_data.max_retail_price}}">
-                    -￥{{goodInfo.goods_data.max_retail_price}}
+                      wx:if="{{goodInfo.goods_data.min_retail_price != goodInfo.goods_data.max_retail_price}}">-￥{{goodInfo.goods_data.max_retail_price}}
                 </text>
             </view>
             <view class="vipprice">
                 钻石再让利 {{goodInfo.goods_data.min_brokerage}}
-                <text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}">
-                    -￥{{goodInfo.goods_data.max_brokerage}}
+                <text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}">-￥{{goodInfo.goods_data.max_brokerage}}
                 </text>
             </view>
         </view>
@@ -57,10 +55,8 @@
             <text class='fix' decode="{{true}}">积分：</text>
             <text class='fix_desc'>
                 <text>赠送{{goodInfo.goods_data.min_integral_active}}</text>
-                <text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}"> -
-                    {{goodInfo.goods_data.max_integral_active}}
-                </text>
-                <text>积分</text>
+                <text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">-{{goodInfo.goods_data.max_integral_active}}
+                </text><text>积分</text>
             </text>
         </view>
     </view>
