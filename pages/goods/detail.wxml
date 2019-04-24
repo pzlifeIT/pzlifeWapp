@@ -77,18 +77,14 @@
                     <text class='selected' wx:if="{{buy}}">已选择：{{goodData.sku_name}}</text>
                     <text class='selected' wx:else>未选择规格</text>
                     <text class='present' wx:if="{{buy}}">赠送积分：{{goodData.integral_active}}分</text>
-                    <text class='present' wx:else>赠送积分：
-                        <text>{{goodInfo.goods_data.min_integral_active}}</text>
-                        <text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">
-                            -{{goodInfo.goods_data.max_integral_active}}
-                        </text>
-                        分
+                    <text class='present' wx:else>
+                        <text > 赠送积分：</text>
+                        <text>{{goodInfo.goods_data.min_integral_active}}</text><text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">-{{goodInfo.goods_data.max_integral_active}}
+                        </text><text >积分</text>
                     </text>
                     <text class="present" wx:if="{{buy}}">钻石再让利: ￥{{goodData.brokerage}}</text>
-                    <text class="present" wx:else>钻石再让利: ￥{{goodInfo.goods_data.min_brokerage}}
-                        <text class="din"
-                              wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}">
-                            -￥{{goodInfo.goods_data.max_brokerage}}
+                    <text class="present" wx:else>
+                      <text >钻石再让利: ￥{{goodInfo.goods_data.min_brokerage}}</text><text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}"> -￥{{goodInfo.goods_data.max_brokerage}}
                         </text>
                     </text>
                 </view>

@@ -400,6 +400,10 @@ swiper-item {
     display: block;
 }
 
+.present text {
+    display: inline-block
+}
+
 .param {
     width: 710rpx;
     max-height: 500rpx;
