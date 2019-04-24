@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 61,
+			"current": 62,
 			"list": [
 				{
 					"id": 0,
@@ -463,6 +463,12 @@
 					"name": "商品详情",
 					"pathName": "pages/goods/detail",
 					"query": "goodid=1269",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/category/category",
 					"scene": null
 				}
 			]

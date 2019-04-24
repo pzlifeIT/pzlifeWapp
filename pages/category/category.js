@@ -63,6 +63,7 @@ Page({
                     firstSub: firstSub,
                     third: res.data
                 })
+                that.getHeight()
             }
         })
     },
@@ -120,14 +121,14 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function() {
-        this.getHeight()
+
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-        this.getHeight()
+        // this.getHeight()
         if (app.globalData.updateNum) {
             app.setCartNum()
         }
