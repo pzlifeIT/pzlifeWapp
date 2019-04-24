@@ -603,10 +603,12 @@ swiper-item {
 .re-goods{
     padding: 0 16rpx 20rpx 16rpx;
     box-sizing: border-box;
+    height: 360rpx;
+    white-space: nowrap;
 }
 .re-one{
-    width: 214rpx;
-    height: 309rpx;
+    width: 226rpx;
+    /*height: 309rpx;*/
     display: inline-block;
 }
 .re-one image{
@@ -634,8 +636,11 @@ swiper-item {
     font-size: 24rpx;
     text-align: center;
     line-height: 30rpx;
+    padding: 0 6rpx;
 }
 .vip-money{
     color: #F99F36;
     font-size: 26rpx;
+    display: inline-block;
+    margin-left: 6rpx;
 }

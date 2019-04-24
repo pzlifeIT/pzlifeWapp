@@ -1,185 +1,212 @@
 <!-- pages/goods/detail.wxml -->
 <view class="detail">
-  <view class="detail-swiper">
-    <swiper autoplay='true' interval='3000' bindchange="changeSwiper" circular='true'>
-      <block>
-        <swiper-item wx:for="{{goodInfo.goods_banner}}">
-          <image lazy-load="true" bindtap="previewImage" data-img="{{item.image_path}}" class='swiper-img' src='{{item.image_path}}'></image>
-        </swiper-item>
-      </block>
-    </swiper>
-    <view class='swipercur'>{{swipercur}}/{{goodInfo.goods_banner.length}}</view>
-  </view>
-  <view class='desc'>
-    <view class='text'>
-      <text class='title'>{{goodInfo.goods_data.goods_name}}</text>
-      <text class='subtitle'>{{goodInfo.goods_data.subtitle}}</text>
+    <view class="detail-swiper">
+        <swiper autoplay='true' interval='3000' bindchange="changeSwiper" circular='true'>
+            <block>
+                <swiper-item wx:for="{{goodInfo.goods_banner}}">
+                    <image lazy-load="true" bindtap="previewImage" data-img="{{item.image_path}}" class='swiper-img'
+                           src='{{item.image_path}}'></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class='swipercur'>{{swipercur}}/{{goodInfo.goods_banner.length}}</view>
     </view>
-    <view class='price'>
-      <view class="price-num">
-        <text class="din fl">￥{{goodInfo.goods_data.min_retail_price}}</text><text class="din fl" wx:if="{{goodInfo.goods_data.min_retail_price != goodInfo.goods_data.max_retail_price}}"> -￥{{goodInfo.goods_data.max_retail_price}}
-        </text>
-      </view>
-      <view class="vipprice">
-        钻石再让利 {{goodInfo.goods_data.min_brokerage}}
-        <text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}">
-          -￥{{goodInfo.goods_data.max_brokerage}}
-        </text>
-      </view>
-    </view>
-    <!-- <view class='collect'>
-    <icon type=''></icon>
-    <text >收藏</text>
-  </view> -->
-    <view class='putaway din fr' wx:if="{{identity == 4 & status == 2}}" bindtap="putaway">
-      <i class="fl"></i>
-      <text class="fr">上架到我的店铺</text>
-    </view>
-  </view>
-  <view class='content'>
-    <view class='freight'>
-      <text class='fix' decode="{{true}}">运费：</text>
-      <text class='fix_desc'>{{goodInfo.goods_data.supplier_desc}}</text>
-    </view>
-    <view class='spec' bindtap='showModel'>
-      <text class='fix'>选择：</text>
-      <text wx:if="{{buy}}" class='fix_desc'>{{goodData.sku_name}};x{{buyNum}}</text>
-      <text class='fix_desc' wx:else>请选择规格</text>
-    </view>
-    <!-- <view class='ticket'>
-    <text class='fix'>领券：</text><text class='fix_desc'>全场满39减9</text>
-  </view> -->
-    <view class='integral'>
-      <text class='fix' decode="{{true}}">积分：</text>
-      <text class='fix_desc'><text>赠送{{goodInfo.goods_data.min_integral_active}}</text><text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}"> - {{goodInfo.goods_data.max_integral_active}}</text><text >积分</text>
-      </text>
-    </view>
-  </view>
-  <!-- 选择规格弹出层 -->
-  <view class="popout" wx:if='{{showModel}}'>
-    <view class='mask' catchtouchmove='preventTouchMove' bindtap='hideModel'></view>
-    <view class='pop'>
-      <view class='goods_data'>
-        <view class='goods_thumb fl'>
-          <image lazy-load="true" bindtap="previewImage" data-img="{{goodData.sku_image}}" src='{{goodData.sku_image}}' wx:if="{{buy}}"></image>
-          <image lazy-load="true" bindtap="previewImage" data-img="{{goodInfo.goods_data.image}}" src='{{goodInfo.goods_data.image}}' wx:else></image>
+    <view class='desc'>
+        <view class='text'>
+            <text class='title'>{{goodInfo.goods_data.goods_name}}</text>
+            <text class='subtitle'>{{goodInfo.goods_data.subtitle}}</text>
         </view>
-        <view class='goods_desc fl' wx:if="{{repertory}}">
-          <text class='pop_price' wx:if="{{buy}}">价格：￥{{goodData.sku_price}}</text>
-          <text class='pop_price' wx:else>价格：￥{{goodInfo.goods_data.min_retail_price}}</text>
-          <text class='selected' wx:if="{{buy}}">已选择：{{goodData.sku_name}}</text>
-          <text class='selected' wx:else>未选择规格</text>
-          <text class='present' wx:if="{{buy}}">赠送积分：{{goodData.integral_active}}分</text>
-          <text class='present' wx:else>赠送积分：<text>{{goodInfo.goods_data.min_integral_active}}</text>
-            <text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">
-              -{{goodInfo.goods_data.max_integral_active}}
-            </text>分</text>
-          <text class="present" wx:if="{{buy}}">钻石再让利: ￥{{goodData.brokerage}}</text>
-          <text class="present" wx:else>钻石再让利: ￥{{goodInfo.goods_data.min_brokerage}}<text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}"> -￥{{goodInfo.goods_data.max_brokerage}}</text>
-          </text>
-        </view>
-        <view class='goods_desc fl' wx:else>
-          <text class='pop_price'>暂无库存</text>
-        </view>
-      </view>
-      <view class='param'>
-        <view wx:for="{{goodInfo.goods_spec}}" wx:for-index="idx" wx:key="{{item.id}}">
-          <view class='spec_name'>
-            <text>{{item.spe_name}}</text>
-          </view>
-          <view class='attr'>
-            <view wx:for="{{item.list}}" wx:for-item="item1" data-i="{{item1.id}}" class='attr_name {{ item1.id == attr[idx]?"active":"" }}' wx:key="{{item1.id}}" bindtap='selectAttr' data-idx='{{idx}}' data-id="{{item1.id}}">
-              {{item1.attr_name}}
+        <view class='price'>
+            <view class="price-num">
+                <text class="din fl">￥{{goodInfo.goods_data.min_retail_price}}</text>
+                <text class="din fl"
+                      wx:if="{{goodInfo.goods_data.min_retail_price != goodInfo.goods_data.max_retail_price}}">
+                    -￥{{goodInfo.goods_data.max_retail_price}}
+                </text>
             </view>
+            <view class="vipprice">
+                钻石再让利 {{goodInfo.goods_data.min_brokerage}}
+                <text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}">
+                    -￥{{goodInfo.goods_data.max_brokerage}}
+                </text>
+            </view>
+        </view>
+        <!-- <view class='collect'>
+        <icon type=''></icon>
+        <text >收藏</text>
+      </view> -->
+        <view class='putaway din fr' wx:if="{{identity == 4 & status == 2}}" bindtap="putaway">
+            <i class="fl"></i>
+            <text class="fr">上架到我的店铺</text>
+        </view>
+    </view>
+    <view class='content'>
+        <view class='freight'>
+            <text class='fix' decode="{{true}}">运费：</text>
+            <text class='fix_desc'>{{goodInfo.goods_data.supplier_desc}}</text>
+        </view>
+        <view class='spec' bindtap='showModel'>
+            <text class='fix'>选择：</text>
+            <text wx:if="{{buy}}" class='fix_desc'>{{goodData.sku_name}};x{{buyNum}}</text>
+            <text class='fix_desc' wx:else>请选择规格</text>
+        </view>
+        <!-- <view class='ticket'>
+        <text class='fix'>领券：</text><text class='fix_desc'>全场满39减9</text>
+      </view> -->
+        <view class='integral'>
+            <text class='fix' decode="{{true}}">积分：</text>
+            <text class='fix_desc'>
+                <text>赠送{{goodInfo.goods_data.min_integral_active}}</text>
+                <text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}"> -
+                    {{goodInfo.goods_data.max_integral_active}}
+                </text>
+                <text>积分</text>
+            </text>
+        </view>
+    </view>
+    <!-- 选择规格弹出层 -->
+    <view class="popout" wx:if='{{showModel}}'>
+        <view class='mask' catchtouchmove='preventTouchMove' bindtap='hideModel'></view>
+        <view class='pop'>
+            <view class='goods_data'>
+                <view class='goods_thumb fl'>
+                    <image lazy-load="true" bindtap="previewImage" data-img="{{goodData.sku_image}}"
+                           src='{{goodData.sku_image}}' wx:if="{{buy}}"></image>
+                    <image lazy-load="true" bindtap="previewImage" data-img="{{goodInfo.goods_data.image}}"
+                           src='{{goodInfo.goods_data.image}}' wx:else></image>
+                </view>
+                <view class='goods_desc fl' wx:if="{{repertory}}">
+                    <text class='pop_price' wx:if="{{buy}}">价格：￥{{goodData.sku_price}}</text>
+                    <text class='pop_price' wx:else>价格：￥{{goodInfo.goods_data.min_retail_price}}</text>
+                    <text class='selected' wx:if="{{buy}}">已选择：{{goodData.sku_name}}</text>
+                    <text class='selected' wx:else>未选择规格</text>
+                    <text class='present' wx:if="{{buy}}">赠送积分：{{goodData.integral_active}}分</text>
+                    <text class='present' wx:else>赠送积分：
+                        <text>{{goodInfo.goods_data.min_integral_active}}</text>
+                        <text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">
+                            -{{goodInfo.goods_data.max_integral_active}}
+                        </text>
+                        分
+                    </text>
+                    <text class="present" wx:if="{{buy}}">钻石再让利: ￥{{goodData.brokerage}}</text>
+                    <text class="present" wx:else>钻石再让利: ￥{{goodInfo.goods_data.min_brokerage}}
+                        <text class="din"
+                              wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}">
+                            -￥{{goodInfo.goods_data.max_brokerage}}
+                        </text>
+                    </text>
+                </view>
+                <view class='goods_desc fl' wx:else>
+                    <text class='pop_price'>暂无库存</text>
+                </view>
+            </view>
+            <view class='param'>
+                <view wx:for="{{goodInfo.goods_spec}}" wx:for-index="idx" wx:key="{{item.id}}">
+                    <view class='spec_name'>
+                        <text>{{item.spe_name}}</text>
+                    </view>
+                    <view class='attr'>
+                        <view wx:for="{{item.list}}" wx:for-item="item1" data-i="{{item1.id}}"
+                              class='attr_name {{ item1.id == attr[idx]?"active":"" }}' wx:key="{{item1.id}}"
+                              bindtap='selectAttr' data-idx='{{idx}}' data-id="{{item1.id}}">
+                            {{item1.attr_name}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class='amount'>
+                <view class='num_title'>数量</view>
+                <view class='amount_num'>
+                    <view class='jian' bindtap='jian'>-</view>
+                    <input class='num' disabled type='text' value='{{buyNum}}' bindinput='getnum'/>
+                    <view class='jia' bindtap='jia'>+</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 领券弹出层 -->
+    <!-- <scroll-view class='coupon_pop'>
+    <view class='pop_title'><text>领券列表</text></view>
+    <view class='coupon'>
+      <view class='coupon_left'>
+        <view class='coupon_price'>
+          <text class='symbol'>￥</text><text class='sum'>18</text>
+        </view>
+        <view class='coupon_rule'><text>满39可用</text></view>
+      </view>
+      <view class='coupon_mid'>
+        <text class='coupon_title'>新人专属优惠券</text>
+        <text class='coupon_subtitle'>全场通用</text>
+        <text class='coupon_time'>2018.09.05-2019.11.06</text>
+      </view>
+      <view class='coupon_right'><text>点击领取</text></view>
+    </view>
+  </scroll-view> -->
+    <!--为你推荐-->
+    <view class="recommend" wx:if="{{recommend.length > 0}}">
+        <view class="re-title">为你推荐</view>
+        <scroll-view class="re-goods" scroll-x="true" style="width: 100%;">
+            <block wx:for="{{recommend}}">
+                <view class="re-one" bindtap="recommendGoods" data-goodsid="{{item.id}}">
+                    <image src="{{item.image}}"></image>
+                    <view class="goods_name">{{item.goods_name}}</view>
+                    <view class="re-price">￥{{item.min_retail_price}}</view>
+                    <view class="vip_money">
+                        <text class="vip-text">钻石再让利</text>
+                        <text class="vip-money">{{item.min_brokerage}}</text>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <!--商品详情-->
+    <view class='goods_content'>
+        <view class='tab'>
+            <!-- <view class='one active'><text>商品评价</text></view>
+          <view class='two'><text>搭配知道</text></view>
+          <view class='three'><text>使用指南</text></view> -->
+            <view class='four active'>
+                <text>商品详情</text>
+            </view>
+        </view>
+        <!-- <view class='one_cont'>
+          <view class='one_top'>
           </view>
         </view>
-      </view>
-      <view class='amount'>
-        <view class='num_title'>数量</view>
-        <view class='amount_num'>
-          <view class='jian' bindtap='jian'>-</view>
-          <input class='num' disabled type='text' value='{{buyNum}}' bindinput='getnum' />
-          <view class='jia' bindtap='jia'>+</view>
+        <view class='two_cont'>
         </view>
-      </view>
+        <view class='three_cont'>
+        </view> -->
+        <view class='four_cont'>
+            <view class='detail_img'>
+                <image lazy-load="true" wx:for="{{goodInfo.goods_details}}" class='imgDetails' bindtap="previewImage"
+                       data-img="{{item.image_path+'?imageMogr2/thumbnail/750x'}}"
+                       src="{{item.image_path+'?imageMogr2/thumbnail/750x'}}" mode="widthFix"></image>
+            </view>
+        </view>
     </view>
-  </view>
-  <!-- 领券弹出层 -->
-  <!-- <scroll-view class='coupon_pop'>
-  <view class='pop_title'><text>领券列表</text></view>
-  <view class='coupon'>
-    <view class='coupon_left'>
-      <view class='coupon_price'>
-        <text class='symbol'>￥</text><text class='sum'>18</text>
-      </view>
-      <view class='coupon_rule'><text>满39可用</text></view>
+    <!-- 底部固定区域 -->
+    <view class='footer'>
+        <navigator class='home' url="../index/index" open-type="switchTab">
+            <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_03.png"/>
+            <text class="ft-text">首页</text>
+        </navigator>
+        <view class='kefu' bindtap="call">
+            <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_05.png"/>
+            <text class="ft-text">客服</text>
+        </view>
+        <navigator url="../cart/cart" open-type="switchTab">
+            <view class='cart'>
+                <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_07.png"/>
+                <text class="ft-text">购物车</text>
+                <text class="cartNum" wx:if="{{cartNum > 0}}">{{cartNum}}</text>
+            </view>
+        </navigator>
+        <view bindtap="buyGood" class='buy'>
+            <text>立即购买</text>
+        </view>
+        <view bindtap="joinCart" class='join_cart'>
+            <text>加入购物车</text>
+        </view>
     </view>
-    <view class='coupon_mid'>
-      <text class='coupon_title'>新人专属优惠券</text>
-      <text class='coupon_subtitle'>全场通用</text>
-      <text class='coupon_time'>2018.09.05-2019.11.06</text>
-    </view>
-    <view class='coupon_right'><text>点击领取</text></view>
-  </view>
-</scroll-view> -->
-  <!--&lt;!&ndash;为你推荐&ndash;&gt;-->
-  <!--<view class="recommend">-->
-    <!--<view class="re-title">为你推荐</view>-->
-    <!--<scroll-view class="re-goods" x->-->
-      <!--<view class="re-one">-->
-        <!--<image src=""></image>-->
-        <!--<view class="goods_name">广西北海咸鸭蛋胆大</view>-->
-        <!--<view class="re-price">￥128.99</view>-->
-        <!--<view class="vip_money"><text class="vip-text">钻石再让利</text> <text class="vip-money">888.00</text></view>-->
-      <!--</view>-->
-    <!--</scroll-view>-->
-  <!--</view>-->
-  <!--商品详情-->
-  <view class='goods_content'>
-    <view class='tab'>
-      <!-- <view class='one active'><text>商品评价</text></view>
-    <view class='two'><text>搭配知道</text></view>
-    <view class='three'><text>使用指南</text></view> -->
-      <view class='four active'>
-        <text>商品详情</text>
-      </view>
-    </view>
-    <!-- <view class='one_cont'>
-      <view class='one_top'>
-      </view>
-    </view>
-    <view class='two_cont'>
-    </view>
-    <view class='three_cont'>
-    </view> -->
-    <view class='four_cont'>
-      <view class='detail_img'>
-        <image lazy-load="true" wx:for="{{goodInfo.goods_details}}" class='imgDetails' bindtap="previewImage" data-img="{{item.image_path+'?imageMogr2/thumbnail/750x'}}" src="{{item.image_path+'?imageMogr2/thumbnail/750x'}}" mode="widthFix"></image>
-      </view>
-    </view>
-  </view>
-  <!-- 底部固定区域 -->
-  <view class='footer'>
-    <navigator class='home' url="../index/index" open-type="switchTab">
-      <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_03.png" />
-      <text class="ft-text">首页</text>
-    </navigator>
-    <view class='kefu' bindtap="call">
-      <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_05.png" />
-      <text class="ft-text">客服</text>
-    </view>
-    <navigator url="../cart/cart" open-type="switchTab">
-      <view class='cart'>
-        <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_07.png" />
-        <text class="ft-text">购物车</text>
-        <text class="cartNum" wx:if="{{cartNum > 0}}">{{cartNum}}</text>
-      </view>
-    </navigator>
-    <view bindtap="buyGood" class='buy'>
-      <text>立即购买</text>
-    </view>
-    <view bindtap="joinCart" class='join_cart'>
-      <text>加入购物车</text>
-    </view>
-  </view>
 </view>

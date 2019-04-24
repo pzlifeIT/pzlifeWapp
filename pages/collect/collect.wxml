@@ -1,75 +1,75 @@
-<!--pages/collect/collect.wxml-->
-<view class='collect_top'>
-	<view class='collect {{collect == 1 ? "active":""}}' bindtap="select" data-num="1">收藏的店铺</view>
-	<view class='collect {{collect == 2 ? "active":""}}' bindtap="select" data-num="2">收藏的商品</view>
-	<i class="line"><s></s></i>
-</view>
-<view class="goodslist" wx:if="{{collect == 2&&collectGoods.length>=1}}">
-	<view class="goods">
-		<view class="goods-img">
-			<image lazy-load="true" src=""></image>
-		</view>
-		<view class="goods-info">
-			<view class="title">平和百香果</view>
-			<view class="subtitle">五仁叉烧 500g</view>
-			<view class="price">￥96.12</view>
-		</view>
-		<view class="button">取消收藏</view>
-	</view>
-	<view class="goods">
-		<view class="goods-img">
-			<image lazy-load="true" src=""></image>
-		</view>
-		<view class="goods-info">
-			<view class="title">平和百香果</view>
-			<view class="subtitle">五仁叉烧 500g</view>
-			<view class="xiajia">已下架</view>
-		</view>
-		<view class="button">取消收藏</view>
-	</view>
-	<view class="goods">
-		<view class="goods-img">
-			<image lazy-load="true" src=""></image>
-		</view>
-		<view class="goods-info">
-			<view class="title">平和百香果</view>
-			<view class="subtitle">五仁叉烧 500g</view>
-			<view class="price">￥96.12</view>
-		</view>
-		<view class="button">取消收藏</view>
-	</view>
-	<view class="goods">
-		<view class="goods-img">
-			<image lazy-load="true" src=""></image>
-		</view>
-		<view class="goods-info">
-			<view class="title">平和百香果</view>
-			<view class="subtitle">五仁叉烧 500g</view>
-			<view class="price">￥96.12</view>
-		</view>
-		<view class="button">取消收藏</view>
-	</view>
-</view>
+<!--&lt;!&ndash;pages/collect/collect.wxml&ndash;&gt;-->
+<!--<view class='collect_top'>-->
+	<!--<view class='collect {{collect == 1 ? "active":""}}' bindtap="select" data-num="1">收藏的店铺</view>-->
+	<!--<view class='collect {{collect == 2 ? "active":""}}' bindtap="select" data-num="2">收藏的商品</view>-->
+	<!--<i class="line"><s></s></i>-->
+<!--</view>-->
+<!--<view class="goodslist" wx:if="{{collect == 2&&collectGoods.length>=1}}">-->
+	<!--<view class="goods">-->
+		<!--<view class="goods-img">-->
+			<!--<image lazy-load="true" src=""></image>-->
+		<!--</view>-->
+		<!--<view class="goods-info">-->
+			<!--<view class="title">平和百香果</view>-->
+			<!--<view class="subtitle">五仁叉烧 500g</view>-->
+			<!--<view class="price">￥96.12</view>-->
+		<!--</view>-->
+		<!--<view class="button">取消收藏</view>-->
+	<!--</view>-->
+	<!--<view class="goods">-->
+		<!--<view class="goods-img">-->
+			<!--<image lazy-load="true" src=""></image>-->
+		<!--</view>-->
+		<!--<view class="goods-info">-->
+			<!--<view class="title">平和百香果</view>-->
+			<!--<view class="subtitle">五仁叉烧 500g</view>-->
+			<!--<view class="xiajia">已下架</view>-->
+		<!--</view>-->
+		<!--<view class="button">取消收藏</view>-->
+	<!--</view>-->
+	<!--<view class="goods">-->
+		<!--<view class="goods-img">-->
+			<!--<image lazy-load="true" src=""></image>-->
+		<!--</view>-->
+		<!--<view class="goods-info">-->
+			<!--<view class="title">平和百香果</view>-->
+			<!--<view class="subtitle">五仁叉烧 500g</view>-->
+			<!--<view class="price">￥96.12</view>-->
+		<!--</view>-->
+		<!--<view class="button">取消收藏</view>-->
+	<!--</view>-->
+	<!--<view class="goods">-->
+		<!--<view class="goods-img">-->
+			<!--<image lazy-load="true" src=""></image>-->
+		<!--</view>-->
+		<!--<view class="goods-info">-->
+			<!--<view class="title">平和百香果</view>-->
+			<!--<view class="subtitle">五仁叉烧 500g</view>-->
+			<!--<view class="price">￥96.12</view>-->
+		<!--</view>-->
+		<!--<view class="button">取消收藏</view>-->
+	<!--</view>-->
+<!--</view>-->
 
-<view class="shoplist" wx:if="{{collect == 1}}">
-	<view class="shop ">
-		<view class="shop-img">
-			<image lazy-load="true" src=""></image>
-		</view>
-		<view class="shop-info">
-			<view class="title">品质生活广场</view>
-			<view class="subtitle">我们的店铺您做主，您的美丽我做主！本店坚持以诚心求生存，以质量求发展，以服务求市场的经营理念</view>
-		</view>
-		<view class="icon" bindtap="selectShop">
-			<icon wx:if="{{selectShop}}" type="success" color="#e61f36" size="18px"></icon>
-			<view wx:else class="noicon"></view>
-		</view>
-	</view>
-</view>
+<!--<view class="shoplist" wx:if="{{collect == 1}}">-->
+	<!--<view class="shop ">-->
+		<!--<view class="shop-img">-->
+			<!--<image lazy-load="true" src=""></image>-->
+		<!--</view>-->
+		<!--<view class="shop-info">-->
+			<!--<view class="title">品质生活广场</view>-->
+			<!--<view class="subtitle">我们的店铺您做主，您的美丽我做主！本店坚持以诚心求生存，以质量求发展，以服务求市场的经营理念</view>-->
+		<!--</view>-->
+		<!--<view class="icon" bindtap="selectShop">-->
+			<!--<icon wx:if="{{selectShop}}" type="success" color="#e61f36" size="18px"></icon>-->
+			<!--<view wx:else class="noicon"></view>-->
+		<!--</view>-->
+	<!--</view>-->
+<!--</view>-->
 
-<view class="not" wx:if="{{collect == 2 && collectGoods.length == 0}}">
-	<view class="not-center">
-		<image lazy-load="true" src="{{imgHost}}wjx.png"></image>
-		<view class="not-text">暂无商品收藏</view>
-	</view>
-</view>
+<!--<view class="not" wx:if="{{collect == 2 && collectGoods.length == 0}}">-->
+	<!--<view class="not-center">-->
+		<!--<image lazy-load="true" src="{{imgHost}}wjx.png"></image>-->
+		<!--<view class="not-text">暂无商品收藏</view>-->
+	<!--</view>-->
+<!--</view>-->
