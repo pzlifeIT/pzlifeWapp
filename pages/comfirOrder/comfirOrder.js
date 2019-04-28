@@ -172,7 +172,7 @@ Page({
                         app.toast({ title: '商品库存不足' })
                         break;
                     default:
-                        app.toast({ title: '意料之外的网络错误' })
+                        app.toast({ title: '意料之外的错误' })
                 }
 
             }
@@ -221,7 +221,7 @@ Page({
                         app.toast({ title: '商品库存不够' })
                         break;
                     default:
-                        app.toast({ title: '意料之外的网络错误' })
+                        app.toast({ title: '意料之外的错误' })
                 }
             }
         })
@@ -298,7 +298,7 @@ Page({
                         })
                         break;
                     default:
-                        app.toast({ title: '意料之外的网络错误' })
+                        app.toast({ title: '意料之外的错误' })
                 }
 
             }
