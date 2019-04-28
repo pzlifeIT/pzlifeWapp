@@ -70,6 +70,9 @@ lose_title {
     background: #e61f18;
     color: #ffffff;
     font-size: 24rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .goods_data .goods_desc {
