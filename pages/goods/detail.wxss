@@ -401,7 +401,8 @@ swiper-item {
 }
 
 .present text {
-    display: inline-block
+    display: inline-block;
+    float: left;
 }
 
 .param {

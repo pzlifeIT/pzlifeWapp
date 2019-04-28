@@ -10,11 +10,12 @@ Page({
         valid: [],
         failure: [],
         total: 0,
-        selectAll:true,
+        selectAll: true,
         sku_id: 0,
         con_id: "",
         shop_id: 0,
-        imgHost: ''
+        imgHost: '',
+        noClick: false
     },
     /**
      * 全选
@@ -141,6 +142,10 @@ Page({
         if (num <= 1) {
             return false
         }
+        if (this.data.noClick) return
+        this.setData({
+            noClick: true
+        })
         app.wxrequest({
             url: "cart/addUserCart",
             data: {
@@ -157,13 +162,17 @@ Page({
                 goods[goodsIndex].brokerage = parseFloat(brokerage.toFixed(2))
                 valid[validIndex].goods = goods
                 that.setData({
-                    valid: valid
+                    valid: valid,
+                    noClick: false
                 });
                 that.getTotal(valid)
                 app.setCartNum()
                     // that.getStorage()
             },
             error(res) {
+                that.setData({
+                    noClick: false
+                });
                 if (res == 3001) {
                     app.toast({
                         title: "con_id错误"
@@ -175,7 +184,9 @@ Page({
                 }
             },
             fail(res) {
-
+                that.setData({
+                    noClick: false
+                });
             }
         })
     },
@@ -199,7 +210,10 @@ Page({
             });
             return false
         }
-
+        if (this.data.noClick) return
+        this.setData({
+            noClick: true
+        })
         app.wxrequest({
             url: "cart/addUserCart",
             data: {
@@ -216,13 +230,17 @@ Page({
                 goods[goodsIndex].brokerage = parseFloat(brokerage.toFixed(2))
                 valid[validIndex].goods = goods
                 that.setData({
-                    valid: valid
+                    valid: valid,
+                    noClick: false
                 });
                 that.getTotal(valid)
                 app.setCartNum()
                     // that.getStorage()
             },
             error(res) {
+                that.setData({
+                    noClick: false
+                });
                 if (res == 3000) {
                     app.toast({
                         title: "未获取到数据"
@@ -238,7 +256,9 @@ Page({
                 }
             },
             fail(res) {
-
+                that.setData({
+                    noClick: false
+                });
             }
         })
 
