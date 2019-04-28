@@ -1,0 +1,24 @@
+/* pages/my/getVip/getVip.wxss */
+.wai{
+    width: 750rpx;
+    height: 1272rpx;
+    position: relative;
+}
+.img{
+    width: 750rpx;
+    height: 1272rpx;
+    display: block;
+}
+.buy{
+    width: 673rpx;
+    height: 88rpx;
+    background-color: #ffe621;
+    border-radius: 8rpx;
+    text-align: center;
+    line-height: 88rpx;
+    color: #E61F18;
+    font-size: 36rpx;
+    position: absolute;
+    bottom: 44rpx;
+    left: 41rpx;
+}

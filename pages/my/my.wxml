@@ -26,7 +26,7 @@
     </view>
   </navigator>
   <image lazy-load="true" class="userBack" src="{{imgHost}}myback_02.png" />
-  <view class="diamond-card" wx:if="{{userInfo.user_identity == 1}}">
+  <view class="diamond-card" catchtap="buyDiam"  wx:if="{{userInfo.user_identity == 1}}">
     <image lazy-load="true" src="{{imgHost}}diamond.png"></image>
   </view>
 </view>

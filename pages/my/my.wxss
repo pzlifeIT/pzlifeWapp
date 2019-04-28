@@ -7,6 +7,7 @@ page {
 .userheader {
     position: relative;
     height: 240rpx;
+    overflow: hidden;
 }
 
 .userBack {
@@ -335,7 +336,6 @@ page {
     position: absolute;
     bottom: -80rpx;
     right: 0;
-    z-index: -1;
 }
 
 .diamond-card image {
