@@ -50,6 +50,10 @@ Page({
     confirmOrder: function(e) {
         let that = this
         let orderno = e.currentTarget.dataset.orderno
+            // app.modal({
+            //   title: '是否确定收货',
+            //   content: '如无其他退款退货情况，您的钻石再让利将会在第15天自动返利到您的商票中，您可以继续用于商城购物哦~'
+            // })
         app.wxrequest({
             url: 'order/confirmOrder',
             data: {
