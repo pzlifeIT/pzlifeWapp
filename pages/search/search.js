@@ -171,31 +171,28 @@ Page({
         this.mid(e.currentTarget.dataset.keyword)
     },
     getSearchGoods: function(e) {
+        let that = this
         this.setData({
             page: 1,
             goodsList: [],
             lenovoList: [],
             lenovoModal: false
+        }, function() {
+            that.mid()
         })
-        this.mid()
-    },
-    blurgetSearchGoods() {
-        this.setData({
-            page: 1,
-            goodsList: [],
-            lenovoList: [],
-            lenovoModal: false
-        })
+
     },
     lenovoClick: function(e) {
         let name = e.currentTarget.dataset.name
+        let that = this
         this.setData({
             page: 1,
             goodsList: [],
             lenovoList: [],
             lenovoModal: false
+        }, function() {
+            that.mid(name)
         })
-        this.mid(name)
     },
     del: function() {
         let that = this
