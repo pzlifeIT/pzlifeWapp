@@ -1,0 +1,12 @@
+<!--components/home/home.wxml-->
+<view class="navbar" style='height:{{navH}}px;'>
+
+    <view class='navbar-title'>
+        <view class="navbar-action-wrap navbar-action-group row item-center">
+            <image class="back navbar-action_item" src="/pages/images/left.png" bindtap="navBack"></image>
+            <view class="mid"></view>
+            <image class="home navbar-action_item" src="/pages/images/home.png" bindtap="toIndex"></image>
+        </view>
+        {{pageName}}
+    </view>
+</view>

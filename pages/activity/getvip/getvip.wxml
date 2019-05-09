@@ -1,4 +1,5 @@
 <!--pages/activity/buyvip/buyvip.wxml-->
+<!--<navbar page-name="获取钻石会员"></navbar>-->
 <swiper class='pz-swiper' autoplay='true' indicator-dots="true" circular='true'>
 	<block wx:for="{{imgUrls}}">
 		<swiper-item>
@@ -9,7 +10,6 @@
 <view class="bg">
 	<image class="member01" lazy-load="true" src="{{imgHost}}member01.png"></image>
 	<image class="member02" lazy-load="true" src="{{imgHost}}member02.png"></image>
-	<view class="buy">立即购买</view>
 </view>
 
 <view class="mask" wx:if="{{mask}}" catchtouchmove='preventTouchMove'>

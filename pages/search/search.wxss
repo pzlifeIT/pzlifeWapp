@@ -194,6 +194,7 @@ page {
     padding: 10rpx 0 20rpx;
     color: #202020;
     box-shadow: 2rpx 2rpx 5rpx #d9d9d9;
+    height: 100%;
 }
 
 .lenovo-li {

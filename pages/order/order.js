@@ -13,7 +13,8 @@ Page({
         reach: true,
         order_list: [],
         user_identity: 0,
-        imgHost: ''
+        imgHost: '',
+        orderno:''
     },
     comfir: function(e) {
         this.setData({
@@ -48,8 +49,15 @@ Page({
         })
     },
     confirmOrder: function(e) {
-        let that = this
         let orderno = e.currentTarget.dataset.orderno
+        this.setData({
+            mask:true,
+            orderno:orderno
+        })
+    },
+    confirm:function(){
+        let that = this,
+            orderno = this.data.orderno
         app.wxrequest({
             url: 'order/confirmOrder',
             data: {
@@ -59,7 +67,8 @@ Page({
                 that.setData({
                     page: 1,
                     reach: true,
-                    order_list: []
+                    order_list: [],
+                    mask:false
                 })
                 that.getUserOrderList({
                     orderStatus: that.data.status

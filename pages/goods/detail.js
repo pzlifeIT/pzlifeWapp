@@ -20,7 +20,8 @@ Page({
         identity: 0,
         status: 0,
         cartNum: 0,
-        recommend: []
+        recommend: [],
+        navH:0
     },
     showModel: function () {
         this.setData({
@@ -247,7 +248,8 @@ Page({
         this.setData({
             goodid: options.goodid,
             imgHost: app.globalData.host.imgHost,
-            identity: app.globalData.userInfo.user_identity || 0
+            identity: app.globalData.userInfo.user_identity || 0,
+            navH:app.globalData.topHeadHeight
         })
         this.getGoodInfo(options.goodid)
         this.getgoodsrecommend(options.goodid)
@@ -266,7 +268,7 @@ Page({
             success(res) {
                 that.setData({
                     recommend: res.data
-                })
+                });
             }
 
         })
@@ -315,7 +317,8 @@ Page({
                     buy: buy,
                     repertory: repertory,
                     attr: attr
-                })
+                });
+                // t.getgoodsrecommend(id)
             },
             error: function (code) {
                 app.toast({title: '未获取到商品信息'})

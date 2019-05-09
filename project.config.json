@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
-	"appid": "wxa8c604ce63485956",
+	"appid": "wx1771b2e93c87e22c",
 	"projectname": "pzlifeWapp",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -473,9 +473,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 63,
 					"name": "getvip",
-					"pathName": "pages/my/getVip/getVip",
+					"pathName": "pages/activity/buyvip/buyvip",
 					"query": "",
 					"scene": null
 				}

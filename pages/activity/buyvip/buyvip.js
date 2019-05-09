@@ -16,7 +16,8 @@ Page({
         con_id: "",
         uid: "",
         ident: 1,
-        imgHost: ''
+        imgHost: '',
+        navH:0
     },
     preventTouchMove: function() {
         //防止用户操作弹出层外界面
@@ -141,7 +142,8 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
-            imgHost: app.globalData.host.imgHost
+            imgHost: app.globalData.host.imgHost,
+            navH:app.globalData.topHeadHeight
         })
     },
 

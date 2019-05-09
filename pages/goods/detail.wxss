@@ -5,7 +5,13 @@ page {
     height: 100%;
     overflow: auto;
 }
-
+.view-page{
+    background-color: #FFFFFF;
+    position:relative;
+    top:0;
+    left:0;
+    z-index:100;
+}
 .detail {
     background: #f7f7f7;
     height: 100%;

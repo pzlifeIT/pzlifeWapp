@@ -8,6 +8,7 @@ App({
         that.globalData.con_id = wx.getStorageSync('con_id') || ''
         that.globalData.host = config
         wx.setStorageSync("alllenovo", '{}')
+        that.getTopHeadHeight()
     },
     globalData: {
         userInfo: {},
@@ -15,7 +16,17 @@ App({
         addressId: '',
         pid: '',
         host: {},
-        updateNum: true
+        updateNum: true,
+        topHeadHeight:0
+    },
+    getTopHeadHeight:function(){
+        let that = this
+        wx.getSystemInfo({
+            success(res){
+                console.log(res.statusBarHeight)
+                that.globalData.topHeadHeight = res.statusBarHeight + 46;
+            }
+        })
     },
     getconid: function() {
         let that = this
@@ -124,6 +135,7 @@ App({
             content: data.content || '',
             confirmColor: data.confirmColor || "",
             showCancel: data.showCancel || true,
+            cancelColor:data.cancelColor || '',
             confirmText: data.confirmText || "确定",
             success(res) {
                 if (res.confirm) {

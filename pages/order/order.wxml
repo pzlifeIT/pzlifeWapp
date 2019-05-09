@@ -1,82 +1,106 @@
 <!--pages/order/order.wxml-->
 <view class="order">
-<view class="or-header">
-    <view class="or-head-li {{status == ''?'active':''}}" bindtap="headtap" data-num="" >全部</view>
-    <view class="or-head-li {{status == 1?'active':''}}" bindtap="headtap" data-num="1">待付款</view>
-    <view class="or-head-li {{status == 4?'active':''}}" bindtap="headtap" data-num="4">待发货</view>
-    <view class="or-head-li {{status == 5?'active':''}}" bindtap="headtap" data-num="5">待收货</view>
-    <view class="or-head-li {{status == 6?'active':''}}" bindtap="headtap" data-num="6">已收货</view>
-    <i class="wire"><s></s></i>
-</view>
-<view class="top"></view>
-<!-- 没有订单 -->
-<view class='empty' wx:if="{{order_list.length == 0}}">
-  <view class='or-empty'>
-    <view class='icon'><image lazy-load="true" src='{{imgHost}}emptyorder.png'></image></view>
-    <view class='text'>你还没有订单哦!</view>
-  </view>
-</view>
-
-<!-- 订单 -->
-<view wx:for="{{order_list}}">
-
-<view class='obligation' wx:for="{{item}}"  wx:for-item="item1">
-  <view class='order-number'><text class='number'>订单号：{{item1.order_no}}</text>
-    <text class='status'>{{item1.order_status_text}}</text>
-  </view>
-  <view class="" wx:for="{{item1.order_child}}" >
-  <navigator wx:for="{{item.order_goods}}" url='/pages/order/orderDetail/orderDetail?orderno={{item1.order_no}}'>
-    <view class='one-goods'>
-      <view class="goods-wai">
-        <view class='goods-image'><image lazy-load="true" src='{{item.sku_image}}'></image></view>
-        <view class='goods-info'>
-          <text class='goods-title'>{{item.goods_name}}</text>
-          <text class='goods-subtitle'>{{item.sku_json}}</text>
-        </view>
-        <view class='price-num'>
-          <text class='price'>￥{{item.goods_price}}</text>
-          <text class='num'>x{{item.goods_num}}</text>
-        </view>
-      </view>
+    <view class="or-header">
+        <view class="or-head-li {{status == ''?'active':''}}" bindtap="headtap" data-num="">全部</view>
+        <view class="or-head-li {{status == 1?'active':''}}" bindtap="headtap" data-num="1">待付款</view>
+        <view class="or-head-li {{status == 4?'active':''}}" bindtap="headtap" data-num="4">待发货</view>
+        <view class="or-head-li {{status == 5?'active':''}}" bindtap="headtap" data-num="5">待收货</view>
+        <view class="or-head-li {{status == 6?'active':''}}" bindtap="headtap" data-num="6">已收货</view>
+        <i class="wire"><s></s></i>
     </view>
-  </navigator>
-  </view>
-	<view class="jf">
-		<text class="jf-text">送积分</text><text class="jf-num">{{item1.integral}}</text>
-	</view>
-	<view class="jf">
-		<text class="jf-text">含运费</text><text class="jf-num">￥{{item1.express_money}}</text>
-  </view>
-  <view class="jf" wx:if="{{user_identity != 1}}">
-		<text class="jf-text"  >钻石再让利</text><text class="jf-num">￥{{item1.commission}}</text>
-	</view>
-	<view class="or-footer">
-		<view class="footer-left"><text class="sum fr">共付：<text class="total">￥{{item1.pay_money}}</text></text></view>
-		<view class="footer-right">
-      <view bindtap="call" class="call din fl" >
-        <image lazy-load="true" class="pzkefu" src="{{imgHost}}pzkefu.png?imageMogr2/thumbnail/64x" />
-        <text class="call-text fr">联系客服</text>
-      </view>
-			<view bindtap="gopay" data-orderno="{{item1.order_no}}" class="or-btn red" wx:if="{{item1.order_status == 1}}">去付款</view>
-      <view bindtap="cancelorder" data-orderno="{{item1.order_no}}" class="or-btn black" wx:if="{{item1.order_status == 1}}">取消订单</view>
-      <view bindtap="gologistics" data-orderno="{{item1.order_no}}" class="or-btn black" wx:if="{{item1.order_status == 5 || item1.order_status == 6}}">查看物流</view>
-      <view bindtap="confirmOrder" data-orderno="{{item1.order_no}}" class="or-btn red" wx:if="{{item1.order_status == 5}}">确认收货</view>
-		</view>
-	</view>
-</view>
+    <view class="top"></view>
+    <!-- 没有订单 -->
+    <view class='empty' wx:if="{{order_list.length == 0}}">
+        <view class='or-empty'>
+            <view class='icon'>
+                <image lazy-load="true" src='{{imgHost}}emptyorder.png'></image>
+            </view>
+            <view class='text'>你还没有订单哦!</view>
+        </view>
+    </view>
 
-</view>
-<!-- 删除弹框 -->
-<view class='obscuration' wx:if="{{mask}}" catchtouchmove='preventTouchMove' bindtap='hidemask'></view>
-<view class='mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>
-  <view class='pop' catchtap='none'>
-    <view class='hint'>是否确定收货</view>
-    <view class='collect' bindtap="hidemask">取消</view>
-    <view class='delete'>确定</view>
-  </view>
-</view>
+    <!-- 订单 -->
+    <view wx:for="{{order_list}}">
 
+        <view class='obligation' wx:for="{{item}}" wx:for-item="item1">
+            <view class='order-number'>
+                <text class='number'>订单号：{{item1.order_no}}</text>
+                <text class='status'>{{item1.order_status_text}}</text>
+            </view>
+            <view class="" wx:for="{{item1.order_child}}">
+                <navigator wx:for="{{item.order_goods}}"
+                           url='/pages/order/orderDetail/orderDetail?orderno={{item1.order_no}}'>
+                    <view class='one-goods'>
+                        <view class="goods-wai">
+                            <view class='goods-image'>
+                                <image lazy-load="true" src='{{item.sku_image}}'></image>
+                            </view>
+                            <view class='goods-info'>
+                                <text class='goods-title'>{{item.goods_name}}</text>
+                                <text class='goods-subtitle'>{{item.sku_json}}</text>
+                            </view>
+                            <view class='price-num'>
+                                <text class='price'>￥{{item.goods_price}}</text>
+                                <text class='num'>x{{item.goods_num}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+            <view class="jf">
+                <text class="jf-text">送积分</text>
+                <text class="jf-num">{{item1.integral}}</text>
+            </view>
+            <view class="jf">
+                <text class="jf-text">含运费</text>
+                <text class="jf-num">￥{{item1.express_money}}</text>
+            </view>
+            <view class="jf" wx:if="{{user_identity != 1}}">
+                <text class="jf-text">钻石再让利</text>
+                <text class="jf-num">￥{{item1.commission}}</text>
+            </view>
+            <view class="or-footer">
+                <view class="footer-left">
+                    <text class="sum fr">共付：
+                        <text class="total">￥{{item1.pay_money}}</text>
+                    </text>
+                </view>
+                <view class="footer-right">
+                    <view bindtap="call" class="call din fl">
+                        <image lazy-load="true" class="pzkefu" src="{{imgHost}}pzkefu.png?imageMogr2/thumbnail/64x"/>
+                        <text class="call-text fr">联系客服</text>
+                    </view>
+                    <view bindtap="gopay" data-orderno="{{item1.order_no}}" class="or-btn red"
+                          wx:if="{{item1.order_status == 1}}">去付款
+                    </view>
+                    <view bindtap="cancelorder" data-orderno="{{item1.order_no}}" class="or-btn black"
+                          wx:if="{{item1.order_status == 1}}">取消订单
+                    </view>
+                    <view bindtap="gologistics" data-orderno="{{item1.order_no}}" class="or-btn black"
+                          wx:if="{{item1.order_status == 5 || item1.order_status == 6}}">查看物流
+                    </view>
+                    <view bindtap="confirmOrder" data-orderno="{{item1.order_no}}" class="or-btn red"
+                          wx:if="{{item1.order_status == 5}}">确认收货
+                    </view>
+                </view>
+            </view>
+        </view>
 
+    </view>
+    <!-- 弹框 -->
+    <view class='obscuration' wx:if="{{mask}}" catchtouchmove='preventTouchMove' bindtap='hidemask'></view>
+    <view class='mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>
+        <view class='pop' catchtap='none'>
+            <view class="hint">
+                <view class='hint-title'>是否确定收货</view>
+                <view class="hint-content">为了保障您的售后权益，请收到货确认无误后，再确认收货哦</view>
+            </view>
+            <view class="hint-button">
+                <view class='collect' bindtap="hidemask">取消</view>
+                <view class='delete' bindtap="confirm">确定</view>
+            </view>
+        </view>
+    </view>
 
 
 </view>
