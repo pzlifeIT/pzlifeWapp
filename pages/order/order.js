@@ -13,7 +13,8 @@ Page({
         reach: true,
         order_list: [],
         user_identity: 0,
-        imgHost: ''
+        imgHost: '',
+        orderno:''
     },
     comfir: function(e) {
         this.setData({
@@ -48,12 +49,15 @@ Page({
         })
     },
     confirmOrder: function(e) {
-        let that = this
         let orderno = e.currentTarget.dataset.orderno
-            // app.modal({
-            //   title: '是否确定收货',
-            //   content: '如无其他退款退货情况，您的钻石再让利将会在第15天自动返利到您的商票中，您可以继续用于商城购物哦~'
-            // })
+        this.setData({
+            mask:true,
+            orderno:orderno
+        })
+    },
+    confirm:function(){
+        let that = this,
+            orderno = this.data.orderno
         app.wxrequest({
             url: 'order/confirmOrder',
             data: {
@@ -63,7 +67,8 @@ Page({
                 that.setData({
                     page: 1,
                     reach: true,
-                    order_list: []
+                    order_list: [],
+                    mask:false
                 })
                 that.getUserOrderList({
                     orderStatus: that.data.status

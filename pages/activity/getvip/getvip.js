@@ -13,7 +13,8 @@ Page({
 			app.globalData.host.imgHost+"solitairebanner2.jpg"
 		],
 		uid: "",
-		imgHost:''
+		imgHost:'',
+		navH:0
 	},
 	button: function() {
 		let maks = !this.data.mask
@@ -35,7 +36,8 @@ Page({
 	 */
 	onLoad: function(options) {
 		this.setData({
-		    imgHost: app.globalData.host.imgHost
+		    imgHost: app.globalData.host.imgHost,
+			navH:app.globalData.topHeadHeight
 		})
 	},
 

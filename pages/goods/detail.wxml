@@ -136,7 +136,7 @@
     <!--为你推荐-->
     <view class="recommend" wx:if="{{recommend.length > 0}}">
         <view class="re-title">为你推荐</view>
-        <scroll-view class="re-goods" scroll-x="true" style="width: 100%;">
+        <scroll-view class="re-goods" scroll-x="true">
             <block wx:for="{{recommend}}">
                 <view class="re-one" bindtap="recommendGoods" data-goodsid="{{item.id}}">
                     <image src="{{item.image}}"></image>

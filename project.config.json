@@ -473,9 +473,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 63,
 					"name": "getvip",
-					"pathName": "pages/my/getVip/getVip",
+					"pathName": "pages/activity/buyvip/buyvip",
 					"query": "",
 					"scene": null
 				}

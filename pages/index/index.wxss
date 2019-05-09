@@ -239,7 +239,7 @@ page{
 }
 .goods-one{
     width: 230rpx;
-    height: 323rpx;
+    /* height: 323rpx; */
     text-align: left;
     margin: 15rpx 5rpx;
     float: left;
@@ -247,7 +247,7 @@ page{
 }
 .goods-one image{
     width: 230rpx;
-    height: 204rpx;
+    height: 230rpx;
     border-radius: 15rpx;
 }
 .goods-title{
@@ -268,7 +268,6 @@ page{
 }
 .life-recommend{
     width: 750rpx;
-    overflow: hidden;
     white-space:nowrap;
     position: relative;
 }
@@ -312,7 +311,7 @@ page{
     margin: 0 auto;
 }
 .life-goods-desc{
-    width: 510rpx;
+    width: 100%;
     height: auto;
     margin-left: 10rpx;
 }
@@ -370,7 +369,6 @@ page{
 }
 .buyer-recommend{
     width: 750rpx;
-    overflow: hidden;
     white-space:nowrap;
     background: #fff;
     margin-top: 20rpx;

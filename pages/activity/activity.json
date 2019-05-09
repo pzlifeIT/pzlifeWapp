@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-	"navigationBarTitleText": "发起活动"
+  "usingComponents": {
+
+  },
+  "navigationBarTitleText": "发起活动"
 }

@@ -16,7 +16,8 @@ Page({
         isover: 0,
         uid: "",
         imgHost: '',
-        poptype: true
+        poptype: true,
+        navH:0
     },
     cha: function() {
         let isvip = !this.data.isvip
@@ -66,7 +67,8 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
-            imgHost: app.globalData.host.imgHost
+            imgHost: app.globalData.host.imgHost,
+            navH:app.globalData.topHeadHeight
         })
         if (options.share_id) {
             let share_id = options.share_id

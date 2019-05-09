@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-	"navigationBarTitleText": "获取钻石会员"
+  "usingComponents": {
+
+  },
+  "navigationBarTitleText": "领取钻石会员"
 }

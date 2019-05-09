@@ -1,0 +1,54 @@
+/* components/home/home.wxss */
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #FFFFFF;
+}
+.navbar-title{
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #fff;
+    color: #333;
+    font-size: 30rpx;
+}
+.back{
+    width: 54rpx;
+    height: 54rpx;
+}
+.home{
+    width: 54rpx;
+    height: 52rpx;
+    margin-left: 14rpx;
+    margin-right: 14rpx;
+}
+.mid{
+    height: 40rpx;
+    width: 2rpx;
+    background: #e8e8e8;
+    display: inline-block;
+}
+.navbar-action-group{
+    position:absolute;
+    top:7px;
+    left:32rpx;
+    z-index:120;
+    color:#000;
+    line-height: 1;
+    border:1px solid #e8e8e8;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 4rpx 6rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -314,19 +314,21 @@ page {
 
 .pop .hint {
     width: 608rpx;
-    height: 147rpx;
+    height: auto;
     text-align: center;
-    line-height: 148rpx;
-    font-size: 30rpx;
-    color: #404040;
     background-color: #ffffff;
     border-top-left-radius: 15rpx;
     border-top-right-radius: 15rpx;
     border-bottom: 1rpx solid #e2e2e2;
 }
-
-.pop .collect {
-    width: 301rpx;
+.hint-title{
+    color: #333333;
+    font-size: 34rpx;
+    margin-top: 43rpx;
+    margin-bottom: 28rpx;
+}
+.collect {
+    width: 304rpx;
     height: 90rpx;
     text-align: center;
     line-height: 90rpx;
@@ -336,10 +338,11 @@ page {
     background-color: #ffffff;
     border-bottom-left-radius: 15rpx;
     border-right: 1rpx solid #e2e2e2;
+    box-sizing: border-box;
 }
 
-.pop .delete {
-    width: 303rpx;
+.delete {
+    width: 305rpx;
     height: 90rpx;
     text-align: center;
     line-height: 90rpx;
@@ -347,6 +350,7 @@ page {
     font-size: 30rpx;
     display: inline-block;
     border-bottom-right-radius: 15rpx;
+    background-color: #FFFFFF;
 }
 
 .call {
@@ -366,4 +370,15 @@ page {
     display: inline-block;
     font-size: 28rpx;
     color: #202020;
+}
+.hint-content{
+    color: #404040;
+    font-size: 28rpx;
+    margin-bottom: 36rpx;
+    padding: 0 50rpx;
+    text-align: left;
+    line-height: 50rpx;
+}
+.hint-button{
+    width: 608rpx;
 }
