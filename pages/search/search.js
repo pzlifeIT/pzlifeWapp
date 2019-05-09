@@ -179,6 +179,14 @@ Page({
         })
         this.mid()
     },
+    blurgetSearchGoods() {
+        this.setData({
+            page: 1,
+            goodsList: [],
+            lenovoList: [],
+            lenovoModal: false
+        })
+    },
     lenovoClick: function(e) {
         let name = e.currentTarget.dataset.name
         this.setData({

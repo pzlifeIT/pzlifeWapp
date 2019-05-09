@@ -4,7 +4,7 @@
         <icon type='search' class='search_icon fl' size='34rpx'/>
         <input class="search_cate din fl" type="text" focus="{{true}}" placeholder="搜索品质方案" value="{{search}}"
                confirm-type="search"
-               placeholder-class="pl-class" bindblur="getSearchGoods" bindconfirm="getSearchGoods" bindinput="inputchange" />
+               placeholder-class="pl-class" bindblur="blurgetSearchGoods" bindconfirm="getSearchGoods" bindinput="inputchange" />
     </view>
     <view class="sea-button" bindtap="getSearchGoods">搜索</view>
 </view>
