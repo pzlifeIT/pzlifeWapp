@@ -188,8 +188,7 @@ Page({
         let that = this,
             share = app.share({
                 title: "品质生活广场",
-                path: '/pages/index/index',
-                imageUrl: "http://pnkp5i8sb.bkt.clouddn.com/index_01.png"
+                path: '/pages/index/index'
             })
         return share
     }
