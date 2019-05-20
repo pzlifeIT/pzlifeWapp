@@ -55,18 +55,17 @@ App({
         })
     },
     share: function(data = {}) {
-        let path = ''
         if (!data.path) {
-            path = '/pages/index/index'
+            data.path = '/pages/index/index'
         }
         if (data.path.indexOf('?') == -1) {
-            path = data.path + '?pid=' + this.globalData.userInfo.uid || ''
+            data.path = data.path + '?pid=' + this.globalData.userInfo.uid || ''
         } else {
-            path = data.path + '&pid=' + this.globalData.userInfo.uid || ''
+            data.path = data.path + '&pid=' + this.globalData.userInfo.uid || ''
         }
         let sharejson = {
             title: data.title || '品质生活广场',
-            path: path,
+            path: data.path,
             imageUrl: data.imageUrl || 'https://webimages.pzlive.vip/share.jpg',
             success: function(shareTickets) {
 
