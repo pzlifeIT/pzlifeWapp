@@ -185,11 +185,12 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function() {
-        let that = this,
-            share = app.share({
-                title: "品质生活广场",
-                path: '/pages/index/index'
-            })
-        return share
+        // let that = this,
+        //     share = app.share({
+        //         title: "品质生活广场",
+        //         path: '/pages/index/index',
+        //         imageUrl: that.data.imgHost + "share.jpg"
+        //     })
+        return app.share()
     }
 })

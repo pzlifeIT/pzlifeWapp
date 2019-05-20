@@ -1,7 +1,7 @@
 //app.js
 const config = require('config/config.js')
 App({
-    onLaunch: function(opt) {
+    onLaunch: function (opt) {
         // 展示本地存储能力
         //本地缓存
         let that = this
@@ -19,7 +19,7 @@ App({
         updateNum: true,
         topHeadHeight: 0
     },
-    getTopHeadHeight: function() {
+    getTopHeadHeight: function () {
         let that = this
         wx.getSystemInfo({
             success(res) {
@@ -28,7 +28,7 @@ App({
             }
         })
     },
-    getconid: function() {
+    getconid: function () {
         let that = this
         wx.getStorage({
             key: "con_id",
@@ -39,7 +39,7 @@ App({
         });
         this.getUserInfo()
     },
-    setconid: function(conid) {
+    setconid: function (conid) {
         wx.setStorage({
             key: "con_id",
             data: conid
@@ -47,14 +47,14 @@ App({
         this.globalData.con_id = conid
         this.getUserInfo()
     },
-    toast: function(data) {
+    toast: function (data) {
         wx.showToast({
             title: data.title,
             icon: data.icon || "none",
             duration: data.duration || 2000
         })
     },
-    share: function(data) {
+    share: function (data = {}) {
         let path = ''
         if (!data.path) {
             path = '/pages/index/index'
@@ -67,20 +67,20 @@ App({
         let sharejson = {
             title: data.title || '品质生活广场',
             path: path,
-            imageUrl: data.imageUrl || '',
-            success: function(shareTickets) {
+            imageUrl: data.imageUrl || 'https://webimages.pzlive.vip/share.jpg',
+            success: function (shareTickets) {
 
             },
-            fail: function(res) {
+            fail: function (res) {
 
             },
-            complete: function(res) {
+            complete: function (res) {
 
             }
         }
         return sharejson
     },
-    getUserInfo: function() {
+    getUserInfo: function () {
         let that = this
         this.wxrequest({
             url: "user/getuser",
@@ -90,7 +90,7 @@ App({
             }
         })
     },
-    judgelogin: function(obj) {
+    judgelogin: function (obj) {
         this.wxrequest({
             url: "user/getuser",
             success(res) {
@@ -98,22 +98,23 @@ App({
             }
         })
     },
-    indexmain: function(id) {
+    indexmain: function (id) {
         this.wxrequest({
             url: 'user/indexmain',
             data: {
                 buid: id
             },
             nologin: true,
-            success: function(res) {}
+            success: function (res) {
+            }
         })
     },
-    setCartNum: function(id) {
+    setCartNum: function (id) {
         let that = this
         that.wxrequest({
             url: 'cart/getUserCartNum',
             nologin: true,
-            success: function(res) {
+            success: function (res) {
                 let n = res.total
                 that.globalData.updateNum = false
                 if (n == 0) {
@@ -129,7 +130,7 @@ App({
             }
         })
     },
-    modal: function(data) {
+    modal: function (data) {
         wx.showModal({
             title: data.title || '',
             content: data.content || '',
@@ -146,7 +147,7 @@ App({
             }
         })
     },
-    login: function() {
+    login: function () {
         this.modal({
             title: "请先登录",
             content: "是否确定去登录",
@@ -157,7 +158,7 @@ App({
             }
         })
     },
-    wxrequest: function(obj) {
+    wxrequest: function (obj) {
         let that = this,
             url = ''
         obj.data = obj.data || {}
@@ -170,7 +171,7 @@ App({
             obj.data.con_id = that.globalData.con_id
         }
         if (!obj.noloading) {
-            wx.showLoading({ title: '加载中' })
+            wx.showLoading({title: '加载中'})
         }
         obj.host = obj.host || 1
         if (obj.host == 2) {
@@ -209,14 +210,14 @@ App({
             },
             fail(err) {
                 wx.hideLoading()
-                that.toast({ title: '网络错误' })
+                that.toast({title: '网络错误'})
                 if (typeof obj.fail == 'function') {
                     obj.fail(err)
                 }
             }
         })
     },
-    networkerror: function(code) {
+    networkerror: function (code) {
         let text = ''
         switch (parseInt(code)) {
             case 201:
@@ -277,9 +278,9 @@ App({
             default:
                 text = '意料之外的网络错误'
         }
-        this.toast({ title: text })
+        this.toast({title: text})
     },
-    onShow: function(opt) {
+    onShow: function (opt) {
         if (opt.query.scene) {
             this.globalData.pid = opt.query.scene
         }

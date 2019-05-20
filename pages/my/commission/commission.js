@@ -102,18 +102,20 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
-        this.getshopcommission()
         this.getshopcommissionsum()
         if (options.hidden == 1){
             this.setData({
                 yan:true
+            },function () {
+                this.getshopcommission()
             })
         } else if (options.hidden == 2){
             this.setData({
                 yan:false,
                 tab:2
+            },function () {
+                this.getLogTransfer(2)
             })
-            this.getLogTransfer(2)
         }
     },
     logTransfer:function(){
