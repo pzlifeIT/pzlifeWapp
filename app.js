@@ -54,7 +54,7 @@ App({
             duration: data.duration || 2000
         })
     },
-    share: function(data) {
+    share: function(data = {}) {
         let path = ''
         if (!data.path) {
             path = '/pages/index/index'
