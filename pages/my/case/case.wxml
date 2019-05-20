@@ -1,36 +1,36 @@
 <!--pages/my/case/case.wxml-->
 <view class="balance">
     <image lazy-load="true" src="{{imgHost}}bg.png"></image>
-    <view class="balance-text">商票余额</view>
+    <view class="balance-text">商券余额</view>
     <view class="balance-num">{{balance}}
         <text>元</text>
     </view>
     <view class="two" wx:if="{{userInfo.user_identity == 1}}">
-        <view class="total">商票总额
+        <view class="total">商券总额
             <text>(元)</text>
             <view>{{balanceAll}}</view>
         </view>
-        <view class="used">已使用商票
+        <view class="used">已使用商券
             <text>(元)</text>
             <view>{{balanceUse}}</view>
         </view>
     </view>
     <view class="three" wx:else>
-        <view class="three-total">商票总额
+        <view class="three-total">商券总额
             <text>(元)</text>
             <view>{{balanceAll}}</view>
         </view>
-        <view class="three-total">待入账商票
+        <view class="three-total">待入账商券
             <text>(元)</text>
             <view>{{noBbonus}}</view>
         </view>
-        <view class="three-used">已使用商票
+        <view class="three-used">已使用商券
             <text>(元)</text>
             <view>{{balanceUse}}</view>
         </view>
     </view>
 </view>
-<view class="detail-head">商票明细</view>
+<view class="detail-head">商券明细</view>
 <view class="detail">
     <scroll-view class="detali-list" scroll-y="true" style="height: {{scroll_height}}rpx;">
         <block wx:for="{{caseList}}">
@@ -135,6 +135,6 @@
 <view class="not" wx:if="{{1==2}}">
     <view class="not-case">
         <image lazy-load="true" src="{{imgHost}}yhq.png"></image>
-        <view class="text">暂无商票</view>
+        <view class="text">暂无商券</view>
     </view>
 </view>

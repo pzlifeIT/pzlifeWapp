@@ -21,12 +21,12 @@
 <view class="case">
     <view class="case-title">
         <view class="shu"></view>
-        商票
+        商券
     </view>
     <view class="case-info">
         <view class="case-total">
             <view class="click" catchtap="casetotal" data-i="4">
-                <view class="total-text">商票总额
+                <view class="total-text">商券总额
                     <text>(元)</text>
                     <image lazy-load="true" catchtap="pop" data-type="1" src="{{imgHost}}wh_03.png"></image>
                 </view>
@@ -35,14 +35,14 @@
         </view>
         <view class="three-div">
             <view class="one-div oneone" bindtap="case" data-i="3">
-                <view class="total-div">商票余额
+                <view class="total-div">商券余额
                     <text>(元)</text>
                 </view>
                 <view class="total-div">{{boss.balance}}</view>
             </view>
             <view class="case-line"></view>
             <view class="one-div three" bindtap="case" data-i="1">
-                <view class="total-div">已使用商票
+                <view class="total-div">已使用商券
                     <text>(元)</text>
                 </view>
                 <view class="total-div">{{boss.balance_use}}</view>
@@ -131,7 +131,7 @@
             <view class="mid"></view>
             <view class="left" bindtap="goshiftMoney">
                 <image lazy-load="true" src="{{imgHost}}yj_06.png"></image>
-                <view class="renshu">佣金转商票</view>
+                <view class="renshu">佣金转商券</view>
             </view>
         </view>
     </view>

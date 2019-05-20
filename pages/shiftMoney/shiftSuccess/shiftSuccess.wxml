@@ -1,7 +1,7 @@
 <!--pages/shiftMoney/shiftSuccess/shiftSuccess.wxml-->
 <view class="ss-header" >
   <image class="img" lazy-load="true" src="{{imgHost}}shiftSuccess_03.png" />
-  <text class="db ss-text" >转入商票成功</text>
+  <text class="db ss-text" >转入商券成功</text>
 </view>
 <navigator open-type="navigateBack" >
 <view class="continue din fl" >继续操作</view>

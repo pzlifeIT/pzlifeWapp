@@ -79,7 +79,7 @@
     <view class="line-one" bindtap="money">
       <view class="one-content">
         <view class="one-title">
-          商票余额
+          商券余额
           <text>(元)</text>
         </view>
         <view class="one-price">{{userInfo.balance || 0}}</view>
@@ -197,7 +197,7 @@
     </view>
     <view class="equity-one" bindtap="toShangpiao">
       <image lazy-load="true" src="{{imgHost}}hdgl_15.png"></image>
-      <view class="equity-title">转商票</view>
+      <view class="equity-title">转商券</view>
     </view>
     <view class="equity-one" bindtap="bountyWithdraw">
       <image lazy-load="true" src="{{imgHost}}hdgl_13.png"></image>
