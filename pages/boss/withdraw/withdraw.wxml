@@ -69,7 +69,7 @@
                 <view class="one">
                     <view class="one-text">
                         <text></text>
-                        <view class="ct">没有增值税专用发票发票扣除7%的税和服务手续费每次申请额度不能少于2000元，不能大于20万元</view>
+                        <view class="ct">没有增值税专用发票发票扣除{{no_invoice * 100}}%的税和服务手续费每次申请额度不能少于2000元，不能大于20万元</view>
                     </view>
                 </view>
                 <view class="one">

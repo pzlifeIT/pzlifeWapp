@@ -451,10 +451,6 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-        let sharejson = app.share({
-            title: '个人中心',
-            path: '/pages/my/my'
-        })
-        return sharejson
+        return app.share()
     }
 })
