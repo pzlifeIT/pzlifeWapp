@@ -17,12 +17,12 @@ App({
         pid: '',
         host: {},
         updateNum: true,
-        topHeadHeight:0
+        topHeadHeight: 0
     },
-    getTopHeadHeight:function(){
+    getTopHeadHeight: function() {
         let that = this
         wx.getSystemInfo({
-            success(res){
+            success(res) {
                 console.log(res.statusBarHeight)
                 that.globalData.topHeadHeight = res.statusBarHeight + 46;
             }
@@ -67,7 +67,7 @@ App({
         let sharejson = {
             title: data.title || '品质生活广场',
             path: path,
-            imageUrl: data.imageUrl,
+            imageUrl: data.imageUrl || '',
             success: function(shareTickets) {
 
             },
@@ -135,7 +135,7 @@ App({
             content: data.content || '',
             confirmColor: data.confirmColor || "",
             showCancel: data.showCancel || true,
-            cancelColor:data.cancelColor || '',
+            cancelColor: data.cancelColor || '',
             confirmText: data.confirmText || "确定",
             success(res) {
                 if (res.confirm) {
