@@ -59,7 +59,8 @@ App({
             data.path = '/pages/index/index'
         }
         if (data.path.indexOf('?') == -1) {
-            data.path = data.path + '?pid=' + this.globalData.userInfo.uid || ''
+            data.path = data.path + '?pid=' +
+                this.globalData.userInfo.uid || ''
         } else {
             data.path = data.path + '&pid=' + this.globalData.userInfo.uid || ''
         }
