@@ -46,7 +46,7 @@
 <view class='stat'>
   <view class='summation'><text class='sum_text'>含运费</text><text class='sum_price'>￥{{stat.total_freight_price}}</text></view>
   <view class='summation rebate'><text class='sum_text'>钻石返利</text><text class='sum_price fr'>￥{{stat.rebate_all}}</text>
-  <view class="small fl">* 让利金额在下单后自动转入“我的商票”</view>
+  <view class="small fl">* 让利金额在下单后自动转入“我的商券”</view>
   </view>
   <view class='summation'><text class='sum_text'>共计{{stat.goods_count}}件商品</text><text class='sum_price'>合计￥{{stat.total_goods_price}}</text></view>
 </view>
@@ -55,7 +55,7 @@
   <view class="bm-mode be fl" bindtap="selpaytype"  data-type="2">
       <view class="din fl" ><image lazy-load="true" class="buyIcon" src="{{imgHost}}pay_03.png" /></view>
       <view  class="bm-info din fl" >
-        <text class="db ">商票抵扣</text>
+        <text class="db ">商券抵扣</text>
       </view>
       <view  class="din fl" >
         <icon class="bm-btn" wx:if="{{paytype == 2}}" type="success" size="36rpx" />
@@ -127,7 +127,7 @@
     <view class="bm-mode" bindtap="selpaytype"  data-type="2">
       <view class="din fl" ><image lazy-load="true" class="buyIcon" src="{{imgHost}}pay_03.png" /></view>
       <view  class="bm-info din fl" >
-        <text class="db">商票抵扣</text>
+        <text class="db">商券抵扣</text>
         <text class="db bm-balance">余额: ￥{{stat.balance}} </text>
       </view>
       <view  class="din fr" >
@@ -147,7 +147,7 @@
     </view>
     <view class="bm-affirm">
       <view class="bm-money fl" >
-        <view class="din hb fl" wx:if="{{paytype == 2}}"  >商票<text>￥<text class="moneynum">{{paymoney.redmoney}}</text></text></view>
+        <view class="din hb fl" wx:if="{{paytype == 2}}"  >商券<text>￥<text class="moneynum">{{paymoney.redmoney}}</text></text></view>
         <view class="din wxmoney fr">微信<text>￥<text class="moneynum">{{paymoney.wxpay}}</text></text></view>
       </view>
       <view bindtap="gobuy" class="ba-btn din fr" >去付款</view>

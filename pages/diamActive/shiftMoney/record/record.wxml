@@ -6,7 +6,7 @@
       <text class="rd-li-con color" >{{item.statusText}}</text>
     </view>
     <view class="rd-li" >
-      <text class="rd-li-tit" >转入商票金额</text>
+      <text class="rd-li-tit" >转入商券金额</text>
       <text class="rd-li-con" >{{item.real_money}}元</text>
     </view>
     <view class="rd-li" >

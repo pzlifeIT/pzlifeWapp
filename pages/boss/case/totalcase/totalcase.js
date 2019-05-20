@@ -7,46 +7,46 @@ Page({
      */
     data: {
         i: 1,
-        detailList:[],
-        imgHost:"",
-        page:1,
-        pageNum:10,
-        reach:true,
-        boss:{}
+        detailList: [],
+        imgHost: "",
+        page: 1,
+        pageNum: 10,
+        reach: true,
+        boss: {}
     },
-    clickDiv:function(e){
+    clickDiv: function(e) {
         let i = e.currentTarget.dataset.i
         this.setData({
-            i:i,
-            detailList:[],
-            page:1,
-            reach:true,
+            i: i,
+            detailList: [],
+            page: 1,
+            reach: true,
         })
-        if (i == 1){
+        if (i == 1) {
             wx.setNavigationBarTitle({
-                title:"已使用商票明细"
+                title: "已使用商券明细"
             })
-        } else if (i == 4){
+        } else if (i == 4) {
             wx.setNavigationBarTitle({
-                title:"商票总额明细"
+                title: "商券总额明细"
             })
         }
         this.getCaseDetail(i)
     },
-    getCaseDetail:function(i){
+    getCaseDetail: function(i) {
         let that = this
         app.wxrequest({
-            url:"user/getshopbalance",
+            url: "user/getshopbalance",
             data: {
-                stype:parseInt(i),
-                page:that.data.page || 1,
-                page_num:that.data.pageNum || 10
+                stype: parseInt(i),
+                page: that.data.page || 1,
+                page_num: that.data.pageNum || 10
             },
-            nocon:false,
-            success(res){
-                if (res.data.length < 10){
+            nocon: false,
+            success(res) {
+                if (res.data.length < 10) {
                     that.setData({
-                        reach:false
+                        reach: false
                     })
                 }
                 if (res.data.length > 0) {
@@ -55,14 +55,14 @@ Page({
                     console.log(detailList)
                     console.log(res.data)
                     that.setData({
-                        detailList:detailList,
-                        page:that.data.page + 1
+                        detailList: detailList,
+                        page: that.data.page + 1
                     })
                 }
             }
         })
     },
-    getbossshop:function(){
+    getbossshop: function() {
         let that = this
         app.wxrequest({
             url: "user/getbossshop",
@@ -77,29 +77,29 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
+    onLoad: function(options) {
         this.setData({
-            imgHost:app.globalData.host.imgHost
+            imgHost: app.globalData.host.imgHost
         })
         this.setData({
             i: options.i,
-            div:options.i
+            div: options.i
         })
-        if (options.i == 1){
+        if (options.i == 1) {
             wx.setNavigationBarTitle({
-                title: '已使用商票明细'
+                title: '已使用商券明细'
             })
-        } else if (options.i == 2){
+        } else if (options.i == 2) {
             wx.setNavigationBarTitle({
-                title:"待入账商票明细"
+                title: "待入账商券明细"
             })
-        } else if (options.i == 3){
+        } else if (options.i == 3) {
             wx.setNavigationBarTitle({
-                title: '商票余额明细'
+                title: '商券余额明细'
             })
-        }else if (options.i == 4){
+        } else if (options.i == 4) {
             wx.setNavigationBarTitle({
-                title: '商票总额明细'
+                title: '商券总额明细'
             })
         }
         this.getCaseDetail(options.i)
@@ -109,42 +109,42 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {
+    onReady: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
+    onShow: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function () {
+    onHide: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {
+    onUnload: function() {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
+    onReachBottom: function() {
         if (!this.data.reach) return;
         this.getCaseDetail(this.data.i)
     },
@@ -152,7 +152,7 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function () {
+    onShareAppMessage: function() {
 
     }
 })

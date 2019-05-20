@@ -17,7 +17,7 @@ Page({
         content: "",
         title: ""
     },
-    getBossInfo: function () {
+    getBossInfo: function() {
         let that = this
         app.wxrequest({
             url: "user/getbossshop",
@@ -29,7 +29,7 @@ Page({
             }
         })
     },
-    cardbag: function () {
+    cardbag: function() {
         wx.navigateTo({
             url: "cardBag/cardBag"
         })
@@ -37,12 +37,12 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
+    onLoad: function(options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
         let that = this
-        let time = setInterval(function () {
+        let time = setInterval(function() {
             if (app.globalData.userInfo) {
                 that.setData({
                     bossname: app.globalData.userInfo.nick_name,
@@ -52,24 +52,24 @@ Page({
             }
         }, 100);
     },
-    casetotal: function (e) {
+    casetotal: function(e) {
         let i = e.currentTarget.dataset.i
         wx.navigateTo({
             url: "/pages/boss/case/totalcase/totalcase?i=" + i
         })
     },
-    case: function (e) {
+    case: function(e) {
         let i = e.currentTarget.dataset.i
         wx.navigateTo({
             url: "/pages/boss/case/case?i=" + i
         })
     },
-    goInte: function () {
+    goInte: function() {
         wx.navigateTo({
             url: "/pages/boss/integral/integral"
         })
     },
-    gocommiss: function () {
+    gocommiss: function() {
         wx.navigateTo({
             url: "/pages/boss/commission/commission"
         })
@@ -79,13 +79,13 @@ Page({
             url: "/pages/shiftMoney/shiftMoney"
         })
     },
-    pop: function (e) {
+    pop: function(e) {
         let poptype = e.currentTarget.dataset.type
         if (poptype == 1) {
             this.setData({
                 popCase: true,
-                title: "商票总额",
-                content: "佣金转入商票总额+钻石会员分享奖励"
+                title: "商券总额",
+                content: "佣金转入商券总额+钻石会员分享奖励"
             })
         } else if (poptype == 2) {
             this.setData({
@@ -107,10 +107,10 @@ Page({
             })
         }
     },
-    preventTouchMove: function () {
+    preventTouchMove: function() {
 
     },
-    know: function () {
+    know: function() {
         this.setData({
             popCase: false,
             popShouyi: false,
@@ -118,12 +118,12 @@ Page({
             popJoin: false
         })
     },
-    join: function () {
+    join: function() {
         wx.navigateTo({
             url: "/pages/boss/join/join"
         })
     },
-    earning: function (e) {
+    earning: function(e) {
         let earn = e.currentTarget.dataset.earn,
             enter = e.currentTarget.dataset.enter,
             entered = e.currentTarget.dataset.entered,
@@ -132,22 +132,22 @@ Page({
             url: "/pages/boss/earnings/earnings?earn=" + earn + "&all=" + all + "&enter=" + enter + "&entered=" + entered
         })
     },
-    commission: function () {
+    commission: function() {
         wx.navigateTo({
             url: "withdraw/withdraw"
         })
     },
-    goOpenShop: function () {
+    goOpenShop: function() {
         wx.navigateTo({
             url: "/pages/openShop/openShop"
         })
     },
-    activity: function (e) {
+    activity: function(e) {
         wx.navigateTo({
             url: "/pages/activity/activity"
         })
     },
-    diamondlist: function (e) {
+    diamondlist: function(e) {
         wx.navigateTo({
             url: "/pages/diamondlist/diamondlist"
         })
@@ -155,49 +155,49 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {
+    onReady: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
+    onShow: function() {
         this.getBossInfo()
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function () {
+    onHide: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {
+    onUnload: function() {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
+    onReachBottom: function() {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function () {
-        return app.share()
+    onShareAppMessage: function() {
+return app.share()
     }
 })

@@ -15,13 +15,13 @@
             <view>{{commission.commission_extract || 0}}</view>
         </view>
         <view class="three-used {{tab == 1 ? 'three-active':''}}" bindtap="selectTab" data-tab="1">
-            <view class="font">已转商票</view>
+            <view class="font">已转商券</view>
             <view>{{commission.commission_to_balance || 0}}</view>
         </view>
     </view>
 </view>
 <view class="title" wx:if="{{tab == 0}}">佣金明细</view>
-<view class="title" wx:if="{{tab == 1}}">佣金转商票明细</view>
+<view class="title" wx:if="{{tab == 1}}">佣金转商券明细</view>
 <view class="title" wx:if="{{tab == 2}}">佣金提现明细</view>
 <view class="listtop">
     <block wx:for="{{list}}">
@@ -50,7 +50,7 @@
                     <view class="list-left">
                         <view class="doim-title" wx:if="{{tab == 0}}">{{item.ctype}}</view>
                         <view class="doim-title" wx:if="{{tab == 2}}">佣金提现</view>
-                        <view class="doim-title" wx:if="{{tab == 1}}">佣金转商票</view>
+                        <view class="doim-title" wx:if="{{tab == 1}}">佣金转商券</view>
                         <view class="doim-time">{{item.create_time}}</view>
                     </view>
                     <view class="list-right active">{{item.money > 0?'+':''}}{{item.money}}元</view>

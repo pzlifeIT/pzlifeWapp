@@ -33,8 +33,8 @@ Page({
             })
             withdraw = false
         }
-        let num = val ? (parseFloat(val)*1.25) + '' : 0
-            num = Math.floor(num * 100) / 100
+        let num = val ? (parseFloat(val) * 1.25) + '' : 0
+        num = Math.floor(num * 100) / 100
         this.setData({
             reality: num,
             money: val,
@@ -74,7 +74,7 @@ Page({
                         text = '没有足够的余额用于提现'
                         break;
                     case 3006:
-                        text = '转商票失败'
+                        text = '转商券失败'
                         break;
                     default:
                         text = '意料之外的错误'
