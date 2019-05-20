@@ -2,8 +2,11 @@
 <view class="circle-header">
     <view class="ch-statistics">
         <view class="ch-total">
-            <text class="ct-text db unit">佣金总额</text>
-            <text class="ct-num db">{{info.commission_all}}</text>
+            <text class="ct-text db unit ">佣金总额</text>
+            <image class="yan" src="{{imgHost}}yan.png" lazy-load="true" wx:if="{{ent == 1 && yan == true}}" bindtap="hidden"></image>
+            <image class="yan" src="{{imgHost}}yan_b.png" lazy-load="true" wx:if="{{ent == 1 && yan == false}}" bindtap="hidden"></image>
+            <text class="ct-num db" wx:if="{{yan}}">{{info.commission_all}}</text>
+            <text class="ct-num db" wx:else>********</text>
         </view>
         <view class="ch-half ch-left {{div == 1 ?'selected':''}}" bindtap="clickDiv" data-div="1">
             <text class="db ch-name unit">经营性收益</text>

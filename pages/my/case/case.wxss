@@ -12,6 +12,7 @@ page{
 	position: fixed;
 	top: 0;
 	z-index: 1;
+  background-color: #f9bd77;
 }
 .balance image{
 	width: 750rpx;

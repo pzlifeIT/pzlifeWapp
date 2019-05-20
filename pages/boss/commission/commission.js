@@ -18,7 +18,9 @@ Page({
         qudao:[],
         zhaoshang:[],
         total:0,
-        other:[]
+        other:[],
+        ent:0,
+        yan:true
     },
     clickDiv: function (e) {
         let div = e.currentTarget.dataset.div,
@@ -169,8 +171,27 @@ Page({
         this.setData({
             imgHost:app.globalData.host.imgHost
         })
+        if (options.ent == 1){
+            this.setData({
+                ent:1
+            })
+            if (options.hidden == 1){
+                this.setData({
+                    yan:true
+                })
+            } else if (options.hidden == 2){
+                this.setData({
+                    yan:false
+                })
+            }
+        }
     },
-
+    hidden:function(){
+      let status = !this.data.yan
+        this.setData({
+            yan:status
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

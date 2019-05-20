@@ -30,7 +30,9 @@ page{
     height: 260rpx;
     z-index: -1;
 }
-
+.ch-total{
+    position: relative;
+}
 .ct-text {
     margin-top: 35rpx;
     font-size: 30rpx;
@@ -297,4 +299,12 @@ page{
 }
 .qi{
     width: 710rpx;
+}
+.yan{
+    width: 28rpx;
+    height: 18rpx;
+    position: absolute;
+    top: 16rpx;
+    right: 250rpx;
+    z-index: 20;
 }

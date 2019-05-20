@@ -342,3 +342,8 @@ page {
     width: 215rpx;
     height: 192rpx;
 }
+.yan{
+    width: 26rpx;
+    height: 16rpx;
+    margin-left: 10rpx;
+}

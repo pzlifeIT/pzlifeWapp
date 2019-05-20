@@ -115,7 +115,8 @@ page {
 
 .goods {
     width: 370rpx;
-    overflow: auto;
+    height: 566rpx;
+    overflow: hidden;
     float: left;
     box-sizing: border-box;
     padding: 15rpx 0 3rpx;
@@ -124,7 +125,9 @@ page {
 
 .one_goods {
     width: 368rpx;
-    height: auto;
+    height: 550rpx;
+    /* height: auto; */
+    overflow: hidden;
     float: left;
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;

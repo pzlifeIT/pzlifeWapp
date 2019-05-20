@@ -73,8 +73,8 @@
         </view>
     </view>
     <!-- 每日轮播 -->
-    <swiper class="oneday" style="order: {{oneDay.model_order}}" autoplay="true" circular="true">
-        <swiper-item class="date-banner" wx:if="{{oneDay.is_show == 1 }}" wx:for="{{oneDay.son}}" >
+    <swiper class="oneday" style="order: {{oneDay.model_order}}" autoplay="true" circular="true" wx:if="{{oneDay.is_show == 1 }}">
+        <swiper-item class="date-banner" wx:for="{{oneDay.son}}" >
             <image lazy-load="true" bindtap="goUrl" data-jump="{{item.jump_type}}"
                    data-content="{{item.jump_content}}"
                    src="{{item.image_path+'?imageMogr2/thumbnail/710x'}}"></image>

@@ -12,12 +12,59 @@ Page({
         list: [],
         imgHost: "",
         num: 1,
-        commission: {}
+        commission: {},
+        tab:0,
+        yan:true
     },
     clickSelect: function(e) {
         let num = parseInt(e.currentTarget.dataset.num)
         this.setData({
             num: num
+        })
+    },
+    yan:function(){
+      let yan = !this.data.yan
+      this.setData({
+          yan:yan
+      })
+    },
+    selectTab:function(e){
+        let tab = e.currentTarget.dataset.tab
+        this.setData({
+            tab:tab,
+            page:1,
+            pageNum:10,
+            reach:true,
+            list:[]
+        },function () {
+            this.getLogTransfer(tab)
+        })
+
+    },
+    getLogTransfer:function(stype){
+        let that = this
+        app.wxrequest({
+            url:"user/getLogTransfer",
+            data: {
+                stype:parseInt(stype),
+                page:that.data.page || 1,
+                pageNum:that.data.pageNum || 10
+            },
+            success(res){
+                if (res.log_transfer.length < 10) {
+                    that.setData({
+                        reach:false
+                    })
+                }
+                if (res.log_transfer.length > 0){
+                    let list = that.data.list
+                    list.push(res.log_transfer)
+                    that.setData({
+                        list:list,
+                        page:that.data.page + 1
+                    })
+                }
+            }
         })
     },
     getshopcommission() {
@@ -57,6 +104,27 @@ Page({
         })
         this.getshopcommission()
         this.getshopcommissionsum()
+        if (options.hidden == 1){
+            this.setData({
+                yan:true
+            })
+        } else if (options.hidden == 2){
+            this.setData({
+                yan:false,
+                tab:2
+            })
+            this.getLogTransfer(2)
+        }
+    },
+    logTransfer:function(){
+        this.setData({
+            tab:0,
+            list:[],
+            page:1,
+            reach:true
+        },function () {
+            this.getshopcommission()
+        })
     },
     getshopcommissionsum() {
         let that = this
@@ -114,7 +182,13 @@ Page({
      */
     onReachBottom: function() {
         if (!this.data.reach) return
-        this.getshopcommission()
+        if (this.data.tab ==1){
+            this.getLogTransfer(1)
+        } else if (this.data.tab == 2){
+            this.getLogTransfer(2)
+        } else {
+            this.getshopcommission()
+        }
     },
 
     /**

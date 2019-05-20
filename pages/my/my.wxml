@@ -43,22 +43,26 @@
                 <view class="one-price" wx:else>0</view>
             </view>
         </view> -->
-    <view class="line-one wid50" bindtap="gototalcommiss">
+    <view class="line-one wid50" bindtap="gototalcommiss" data-hidden="{{yan_all ? 1 : 2}}" data-ent="1">
       <view class="one-content">
         <view class="one-title">
           佣金总额
           <text>(元)</text>
+          <image class="yan" lazy-load="true" src="{{imgHost}}yanb.png" wx:if="{{yan_all}}" catchtap="yanAll"></image>
+          <image class="yan" lazy-load="true" src="{{imgHost}}yanb_b.png" wx:else catchtap="yanAll"></image>
         </view>
-        <view class="one-price">{{boss.commission_all || 0}}</view>
+        <view class="one-price">{{yan_all ? boss.commission_all : '*******' || 0}}</view>
       </view>
     </view>
-    <view class="line-one wid50" bindtap="gocommiss">
+    <view class="line-one wid50" bindtap="gocommiss" data-hidden="{{yan ? 1 : 2}}">
       <view class="one-content">
         <view class="one-title">
           佣金余额
           <text>(元)</text>
+          <image class="yan" lazy-load="true" src="{{imgHost}}yanb.png" catchtap="yan" wx:if="{{yan}}"></image>
+          <image class="yan" lazy-load="true" src="{{imgHost}}yanb_b.png" catchtap="yan" wx:else></image>
         </view>
-        <view class="one-price">{{boss.commission || 0}}</view>
+        <view class="one-price">{{yan ? boss.commission : '*******' || 0}}</view>
       </view>
     </view>
     <!-- <view class="line-one"  bindtap="join">

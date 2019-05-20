@@ -4,7 +4,8 @@ page{
 }
 .one_goods{
   width: 368rpx;
-  height: auto;
+  height: 544rpx;
+  overflow: hidden;
   float: left;
   margin: 5rpx 3rpx;
   background-color: rgb(255, 255, 255);
