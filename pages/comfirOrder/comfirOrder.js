@@ -19,7 +19,8 @@ Page({
         num: 1,
         quick: 0,
         imgHost: '',
-        distribution: false
+        distribution: false,
+        payStatus: false
     },
     hideModel: function(e) {
         this.setData({
@@ -134,6 +135,7 @@ Page({
                 pay_type: that.data.paytype
             },
             success: function(res) {
+
                 if (res.is_pay == 1) {
                     that.gopaystatus({
                         order_no: res.order_no,
@@ -255,12 +257,18 @@ Page({
                     signType: parameters.signType,
                     paySign: parameters.paySign,
                     success(res) {
+                        that.setData({
+                            payStatus: true
+                        })
                         that.gopaystatus({
                             order_no: data.order_no,
                             status: 1
                         })
                     },
                     fail(res) {
+                        that.setData({
+                            payStatus: false
+                        })
                         that.gopaystatus({
                             order_no: data.order_no,
                             status: 2
@@ -455,6 +463,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function(o) {
+        if (this.data.payStatus) return
         this.setData({
             siteid: app.globalData.addressId,
             distribution: false

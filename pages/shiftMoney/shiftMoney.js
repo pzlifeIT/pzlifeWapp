@@ -23,7 +23,14 @@ Page({
     },
     setmoney: function(e) {
         let val = e.detail.value,
-            withdraw = false;
+            withdraw = false,
+            twoPoint = /[0-9]+\.((\d*\.\d*)|(\d{3,}))/;
+        if (val.indexOf('.') == 0 || twoPoint.test(val)) {
+            this.setData({
+                money: this.data.money
+            })
+            return
+        }
         if (val.length > 0 & parseFloat(val) > 0) {
             withdraw = true
         }
