@@ -24,6 +24,12 @@ Page({
     setmoney: function(e) {
         let val = e.detail.value,
             withdraw = false;
+        if (val == '.') {
+            val = '0.'
+        }
+        console.log('1:' + val)
+        val = val.replace(/^(\d+\.\d{2})(\d+)$/, "$1")
+        console.log('2:' + val)
         if (val.length > 0 & parseFloat(val) > 0) {
             withdraw = true
         }
