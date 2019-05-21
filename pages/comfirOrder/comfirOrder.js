@@ -192,9 +192,6 @@ Page({
                 num: that.data.num
             },
             success: function(res) {
-                that.setData({
-                    payStatus: true
-                })
                 if (res.is_pay == 1) {
                     that.gopaystatus({
                         order_no: res.order_no,
@@ -207,9 +204,6 @@ Page({
                 }
             },
             error(code) {
-                that.setData({
-                    payStatus: false
-                })
                 switch (parseInt(code)) {
                     case 3000:
                     case 3001:
@@ -263,12 +257,18 @@ Page({
                     signType: parameters.signType,
                     paySign: parameters.paySign,
                     success(res) {
+                        that.setData({
+                            payStatus: true
+                        })
                         that.gopaystatus({
                             order_no: data.order_no,
                             status: 1
                         })
                     },
                     fail(res) {
+                        that.setData({
+                            payStatus: false
+                        })
                         that.gopaystatus({
                             order_no: data.order_no,
                             status: 2
