@@ -1,4 +1,4 @@
 <!--pages/my/myQr/myQr.wxml-->
 <view>
-    <image class="qr" src="{{qrcode}}" alt="" bindlongpress="saveImg"/>
+    <image class="qr" src="{{qrcode}}" alt="" bindlongpress="saveImg" data-img="{{qrcode}}"/>
 </view>

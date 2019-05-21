@@ -34,7 +34,7 @@ Page({
             withdraw = false
         }
         this.setData({
-            reality: val ? parseFloat(val).toFixed(2) : 0,
+            reality: val ? parseFloat(val) * 100 / 100 : 0,
             money: val,
             withdraw: withdraw
         })

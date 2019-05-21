@@ -42,6 +42,44 @@ Page({
             }
         })
     },
+    save: function (e) {
+        console.log(e)
+        let img = e.currentTarget.dataset.img;
+        wx.authorize({
+            scope: "scope.writePhotosAlbum",
+            success(res) {
+                console.log(res)
+                wx.downloadFile({
+                    url: img,
+                    success(res) {
+                        wx.saveImageToPhotosAlbum({
+                            filePath:res.tempFilePath,
+                            success(res){
+                                app.toast({
+                                    title:"保存成功，请进入相册查看"
+                                })
+                            }
+                        })
+                    }
+                })
+            },
+            fail(res) {
+                app.modal({
+                    content: "您未授权保存到相册，请点击确定打开权限",
+                    success(res) {
+                        wx.openSetting({
+                            success(res){
+                                app.toast({
+                                    title: "请再次长按图片保存"
+                                })
+                            }
+                        })
+                    }
+                })
+
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

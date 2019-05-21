@@ -4,7 +4,7 @@
     <image class="img" lazy-load="true" src="{{imgHost}}czlc.png"></image>
     <view class="kuang">
         <view class="center">
-            <image class="qrcode" src="{{qrcode}}"></image>
+            <image class="qrcode" src="{{qrcode}}" bindtap="save" data-img="{{qrcode}}"></image>
             <!--<image class="qrcode" src="https://images.pzlive.vip/20190328/159ed7b44c6b4f3dd1e55aaddba4e0425c9c2e42b1a5e.png"></image>-->
         </view>
     </view>

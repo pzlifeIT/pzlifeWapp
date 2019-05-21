@@ -13,59 +13,69 @@ Page({
         imgHost: "",
         num: 1,
         commission: {},
-        tab:0,
-        yan:true
+        tab: 0,
+        yan: true
     },
-    clickSelect: function(e) {
+    clickSelect: function (e) {
         let num = parseInt(e.currentTarget.dataset.num)
         this.setData({
             num: num
         })
     },
-    yan:function(){
-      let yan = !this.data.yan
-      this.setData({
-          yan:yan
-      })
+    yan: function () {
+        let yan = !this.data.yan
+        this.setData({
+            yan: yan
+        })
     },
-    selectTab:function(e){
+    selectTab: function (e) {
         let tab = e.currentTarget.dataset.tab
         this.setData({
-            tab:tab,
-            page:1,
-            pageNum:10,
-            reach:true,
-            list:[]
-        },function () {
+            tab: tab,
+            page: 1,
+            pageNum: 10,
+            reach: true,
+            list: []
+        }, function () {
             this.getLogTransfer(tab)
         })
 
     },
-    getLogTransfer:function(stype){
+    getLogTransfer: function (stype) {
         let that = this
         app.wxrequest({
-            url:"user/getLogTransfer",
+            url: "user/getLogTransfer",
             data: {
-                stype:parseInt(stype),
-                page:that.data.page || 1,
-                pageNum:that.data.pageNum || 10
+                stype: parseInt(stype),
+                page: that.data.page || 1,
+                pageNum: that.data.pageNum || 10
             },
-            success(res){
+            success(res) {
                 if (res.log_transfer.length < 10) {
                     that.setData({
-                        reach:false
+                        reach: false
                     })
                 }
-                if (res.log_transfer.length > 0){
+                if (res.log_transfer.length > 0) {
                     let list = that.data.list
-                    list.push(res.log_transfer)
+                    let editlist =  that.edit(res.log_transfer)
+                    list.push(editlist)
+                    console.log(list)
                     that.setData({
-                        list:list,
-                        page:that.data.page + 1
+                        list: list,
+                        page: that.data.page + 1
                     })
                 }
             }
         })
+    },
+    edit: function (data) {
+        for (let i = data.length - 1; i >= 0 ; i--) {
+            if (data[i].status == 3) {
+               data.splice(i, 1)
+            }
+        }
+        return data
     },
     getshopcommission() {
         let that = this
@@ -98,33 +108,33 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
         this.getshopcommissionsum()
-        if (options.hidden == 1){
+        if (options.hidden == 1) {
             this.setData({
-                yan:true
-            },function () {
+                yan: true
+            }, function () {
                 this.getshopcommission()
             })
-        } else if (options.hidden == 2){
+        } else if (options.hidden == 2) {
             this.setData({
-                yan:false,
-                tab:2
-            },function () {
+                yan: false,
+                tab: 2
+            }, function () {
                 this.getLogTransfer(2)
             })
         }
     },
-    logTransfer:function(){
+    logTransfer: function () {
         this.setData({
-            tab:0,
-            list:[],
-            page:1,
-            reach:true
-        },function () {
+            tab: 0,
+            list: [],
+            page: 1,
+            reach: true
+        }, function () {
             this.getshopcommission()
         })
     },
@@ -147,46 +157,46 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
         if (!this.data.reach) return
-        if (this.data.tab ==1){
+        if (this.data.tab == 1) {
             this.getLogTransfer(1)
-        } else if (this.data.tab == 2){
+        } else if (this.data.tab == 2) {
             this.getLogTransfer(2)
         } else {
             this.getshopcommission()
@@ -196,7 +206,7 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
         return app.share()
     }
 })

@@ -140,9 +140,15 @@ Page({
         }
     },
     watchInput: function (e) {
-        this.setData({
-            money: e.detail.value
-        })
+        let m = /(^[1-9](\d+)?(\.\d{1,2})?$)|(^0$)|(^\d\.\d{1,2}$)/;
+        console.log(m.test(e.detail.value))
+        if (m.test(e.detail.value)) {
+            this.setData({
+                money: e.detail.value
+            })
+            return
+        }
+
         let money = this.data.money || 0,
             has = this.data.has_invoice,
             no = this.data.no_invoice
