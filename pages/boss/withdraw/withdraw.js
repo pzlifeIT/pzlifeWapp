@@ -140,15 +140,16 @@ Page({
         }
     },
     watchInput: function (e) {
-        let m = /(^[1-9](\d+)?(\.\d{1,2})?$)|(^0$)|(^\d\.\d{1,2}$)/;
-        console.log(m.test(e.detail.value))
-        if (m.test(e.detail.value)) {
+        let twoPoint = /[0-9]+\.((\d*\.\d*)|(\d{3,}))/;
+        if (e.detail.value.indexOf('.') == 0 || twoPoint.test(e.detail.value)) {
             this.setData({
-                money: e.detail.value
+                money: this.data.money
             })
             return
         }
-
+        this.setData({
+            money:e.detail.value
+        })
         let money = this.data.money || 0,
             has = this.data.has_invoice,
             no = this.data.no_invoice

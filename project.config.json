@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 63,
+			"current": 64,
 			"list": [
 				{
 					"id": 0,
@@ -476,6 +476,13 @@
 					"id": 63,
 					"name": "getvip",
 					"pathName": "pages/my/getVip/getVip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "button",
+					"pathName": "pages/button/button",
 					"query": "",
 					"scene": null
 				}

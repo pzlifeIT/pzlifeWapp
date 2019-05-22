@@ -1,5 +1,5 @@
 <!--pages/my/getVip/getVip.wxml-->
 <view class="wai">
-    <image class="img" lazy-load="true" src="{{imgHost}}120_02.png"></image>
+    <image class="img" lazy-load="true" src="{{imgHost}}120.png"></image>
     <view class="buy" bindtap="buy">立即开通</view>
 </view>

@@ -51,7 +51,8 @@
           <image class="yan" lazy-load="true" src="{{imgHost}}yanb.png" wx:if="{{yan_all}}" catchtap="yanAll"></image>
           <image class="yan" lazy-load="true" src="{{imgHost}}yanb_b.png" wx:else catchtap="yanAll"></image>
         </view>
-        <view class="one-price">{{yan_all ? boss.commission_all : '*******' || 0}}</view>
+        <view class="one-price" wx:if="{{boss.commission_all}}">{{yan_all ? boss.commission_all : '*******'}}</view>
+        <view class="one-price" wx:else>0</view>
       </view>
     </view>
     <view class="line-one wid50" bindtap="gocommiss" data-hidden="{{yan ? 1 : 2}}">
@@ -62,7 +63,7 @@
           <image class="yan" lazy-load="true" src="{{imgHost}}yanb.png" catchtap="yan" wx:if="{{yan}}"></image>
           <image class="yan" lazy-load="true" src="{{imgHost}}yanb_b.png" catchtap="yan" wx:else></image>
         </view>
-        <view class="one-price">{{yan ? boss.commission : '*******' || 0}}</view>
+        <view class="one-price">{{yan ? boss.commission : '*******'}}</view>
       </view>
     </view>
     <!-- <view class="line-one"  bindtap="join">

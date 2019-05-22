@@ -12,7 +12,7 @@ page{
 }
 .xia{
     width: 750rpx;
-    height: 617rpx;
+    height: 568rpx;
 }
 .h-shang{
     width: 750rpx;
@@ -49,4 +49,7 @@ page{
     font-size: 30rpx;
     text-align: center;
     line-height: 80rpx;
+}
+.foo{
+    margin-bottom: 20rpx;
 }
