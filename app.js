@@ -65,7 +65,7 @@ App({
             data.path = data.path + '&pid=' + this.globalData.userInfo.uid || ''
         }
         let sharejson = {
-            title: data.title || '品质生活广场',
+            title: data.title || '776品质生活广场',
             path: data.path,
             imageUrl: data.imageUrl || 'https://webimages.pzlive.vip/share.jpg',
             success: function(shareTickets) {
