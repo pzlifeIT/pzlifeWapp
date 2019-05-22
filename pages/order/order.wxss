@@ -225,6 +225,7 @@ page {
     background-color: #fff;
     margin-top: 2rpx;
     overflow: hidden;
+    /* padding-bottom: 6rpx; */
 }
 
 .or-footer .footer-left {
@@ -247,14 +248,17 @@ page {
 
 .or-footer .footer-right {
     width: 100%;
-    height: 78rpx;
+    height: 85rpx;
     margin-bottom: 18rpx;
+    padding-top: 10rpx;
+    /* box-sizing: border-box; */
 }
 
 .or-btn {
+    box-sizing: border-box;
     width: 152rpx;
     height: 68rpx;
-    margin-top: 3rpx;
+    margin-top: 5rpx;
     line-height: 68rpx;
     text-align: center;
     float: right;
@@ -264,13 +268,13 @@ page {
 
 .or-btn.red {
     color: #E61F18;
-    border: 1rpx solid #E61F18;
+    border: 1px solid #E61F18;
     border-radius: 2rpx;
 }
 
 .or-btn.black {
     color: #202020;
-    border: 1rpx solid #888888;
+    border: 1px solid #888888;
     border-radius: 2rpx;
 }
 
