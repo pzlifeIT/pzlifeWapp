@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 38,
+			"current": 64,
 			"list": [
 				{
 					"id": 0,
@@ -298,9 +298,9 @@
 					"scene": null
 				},
 				{
-					"id": 38,
-					"name": "佣金转商券",
-					"pathName": "pages/shiftMoney/shiftMoney",
+					"id": -1,
+					"name": "shejiao",
+					"pathName": "pages/boss/circle/circle",
 					"query": "",
 					"scene": null
 				},
@@ -475,7 +475,14 @@
 				{
 					"id": 63,
 					"name": "getvip",
-					"pathName": "pages/activity/buyvip/buyvip",
+					"pathName": "pages/my/getVip/getVip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "button",
+					"pathName": "pages/button/button",
 					"query": "",
 					"scene": null
 				}

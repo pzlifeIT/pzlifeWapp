@@ -74,7 +74,8 @@
     "pages/diamActive/withdraw/record/record",
     "pages/diamActive/withdraw/selectCard/selectCard",
     "pages/diamActive/withdraw/submitStatus/submitStatus",
-    "pages/my/getVip/getVip"
+    "pages/my/getVip/getVip",
+    "pages/button/button"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -106,7 +107,7 @@
       },
       {
         "pagePath": "pages/my/my",
-        "text": "我",
+        "text": "我的",
         "iconPath": "/pages/images/my.png",
         "selectedIconPath": "/pages/images/my1.png"
       }

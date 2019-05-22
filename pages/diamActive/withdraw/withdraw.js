@@ -73,9 +73,9 @@ Page({
                     app.toast({
                         title: "提现金额必须为数字"
                     })
-                } else if (res == 3004 || res == 3007) {
+                } else if (res == 3004) {
                     app.toast({
-                        title: "单笔提现金额不能少于2000,高于200000"
+                        title: "单笔提现金额不能少于0"
                     })
                 } else if (res == 3005) {
                     app.toast({
@@ -99,6 +99,13 @@ Page({
     },
 
     watchInput: function (e) {
+        let twoPoint = /[0-9]+\.((\d*\.\d*)|(\d{3,}))/;
+        if (e.detail.value.indexOf('.') == 0 || twoPoint.test(e.detail.value)) {
+            this.setData({
+                money: this.data.money
+            })
+            return
+        }
         let money = parseFloat(e.detail.value)
             money = Math.floor(money * 100) / 100
         this.setData({

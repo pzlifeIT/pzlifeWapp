@@ -140,8 +140,15 @@ Page({
         }
     },
     watchInput: function (e) {
+        let twoPoint = /[0-9]+\.((\d*\.\d*)|(\d{3,}))/;
+        if (e.detail.value.indexOf('.') == 0 || twoPoint.test(e.detail.value)) {
+            this.setData({
+                money: this.data.money
+            })
+            return
+        }
         this.setData({
-            money: e.detail.value
+            money:e.detail.value
         })
         let money = this.data.money || 0,
             has = this.data.has_invoice,
