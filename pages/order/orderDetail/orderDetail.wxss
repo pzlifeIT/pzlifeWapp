@@ -88,6 +88,7 @@ page {
 }
 
 .goods-info {
+    width: 350rpx;
     height: 100%;
     display: inline-block;
     margin-left: 49rpx;
@@ -98,7 +99,7 @@ page {
     width: 350rpx;
     color: #202020;
     font-size: 28rpx;
-    margin-top: 34rpx;
+    margin-top: 20rpx;
     margin-bottom: 17rpx;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -113,7 +114,7 @@ page {
 
 .price-num {
     display: inline-block;
-    padding-top: 35rpx;
+    padding-top: 20rpx;
     float: right;
 }
 

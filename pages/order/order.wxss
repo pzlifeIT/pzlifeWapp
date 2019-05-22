@@ -138,7 +138,6 @@ page {
 
 .goods-wai {
     width: 730rpx;
-    height: 136rpx;
 }
 
 .goods-image {
@@ -167,7 +166,7 @@ page {
     display: block;
     color: #202020;
     font-size: 28rpx;
-    margin-top: 34rpx;
+    margin-top: 20rpx;
     margin-bottom: 17rpx;
     overflow: hidden;
     text-overflow: ellipsis;
