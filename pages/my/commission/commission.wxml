@@ -53,13 +53,15 @@
                         <view class="doim-title" wx:if="{{tab == 1}}">佣金转商券</view>
                         <view class="doim-time">{{item.create_time}}</view>
                     </view>
-                    <view class="list-right active" >{{item.money > 0?'+':''}}{{item.money}}元</view>
+                    <view class="list-right active" wx:if="{{tab == 0}}">{{item.money > 0 ?'+':''}}{{item.money}}元</view>
+                    <view class="list-right active" wx:elif="{{tab == 1}}">-{{item.money}}元</view>
+                    <view class="list-right active" wx:elif="{{tab == 2}}">-{{item.money}}元</view>
                 </view>
             </view>
         </view>
     </block>
 </view>
-<view class="not" wx:if="{{list.length <= 0 || list[0].length <= 0}}">
+<view class="not" wx:if="{{list.length <= 0}}">
     <view class="not-case">
         <image class="not-img" lazy-load="true" src="{{imgHost}}yhq.png"></image>
         <view class="text">暂无明细</view>

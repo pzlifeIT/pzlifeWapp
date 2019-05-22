@@ -48,7 +48,8 @@ Page({
             data: {
                 stype: parseInt(stype),
                 page: that.data.page || 1,
-                pageNum: that.data.pageNum || 10
+                pageNum: that.data.pageNum || 10,
+                status:4
             },
             success(res) {
                 if (res.log_transfer.length < 10) {
@@ -58,9 +59,7 @@ Page({
                 }
                 if (res.log_transfer.length > 0) {
                     let list = that.data.list
-                    let editlist =  that.edit(res.log_transfer)
-                    list.push(editlist)
-                    console.log(list)
+                    list.push(res.log_transfer)
                     that.setData({
                         list: list,
                         page: that.data.page + 1
@@ -69,14 +68,7 @@ Page({
             }
         })
     },
-    edit: function (data) {
-        for (let i = data.length - 1; i >= 0 ; i--) {
-            if (data[i].status == 3) {
-               data.splice(i, 1)
-            }
-        }
-        return data
-    },
+
     getshopcommission() {
         let that = this
         app.wxrequest({
