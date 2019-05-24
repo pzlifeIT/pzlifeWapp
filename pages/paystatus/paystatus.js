@@ -71,12 +71,12 @@ Page({
                     signType: parameters.signType,
                     paySign: parameters.paySign,
                     success(res) {
-                        this.setData({
+                        that.setData({
                             status: 1
                         })
                     },
                     fail(res) {
-                        this.setData({
+                        that.setData({
                             status: 2
                         })
                     }
