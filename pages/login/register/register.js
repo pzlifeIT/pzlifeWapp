@@ -99,19 +99,13 @@ Page({
      * 注册
      */
     bindGetUserInfo: function(e) {
-        this.getCode()
         let encrypteddata = e.detail.encryptedData,
             iv = e.detail.iv,
             mobile = this.data.phone,
             vercode = this.data.code,
             password = this.data.pass,
             checkpass = this.data.checkpass,
-            code = this.data.logcode,
             that = this
-        if (code == '') {
-            app.toast({ title: '微信授权失败' })
-            return
-        }
         if (mobile == '') {
             app.toast({ title: '请填写手机号码' })
             return
@@ -133,63 +127,70 @@ Page({
                 title: '两次密码不一致'
             })
         }
-        that.getUserRead(encrypteddata,iv)
-        app.wxrequest({
-            url: "user/register",
-            data: {
+      that.getUserRead(encrypteddata, iv)
+      wx.login({
+        success(res) {
+          if(res.code){
+            app.wxrequest({
+              url: "user/register",
+              data: {
                 mobile: mobile,
                 encrypteddata: encrypteddata,
                 iv: iv,
                 vercode: vercode,
                 password: password,
-                code: code,
+                code: res.code,
                 buid: app.globalData.pid
-            },
-            nocon: true,
-            success(res) {
+              },
+              nocon: true,
+              success(res) {
                 let pages = getCurrentPages();
                 let prevpage = pages[pages.length - 3]
                 let str = "pages/goods/detail";
                 app.toast({
-                    title: '注册成功'
+                  title: '注册成功'
                 });
                 app.setconid(res.con_id)
-                    //从商品详情页跳来的
+                //从商品详情页跳来的
                 if (prevpage.route == str) {
-                    wx.navigateBack({
-                        delta: pages.indexOf(prevpage)
-                    })
+                  wx.navigateBack({
+                    delta: pages.indexOf(prevpage)
+                  })
                 } else {
-                    wx.reLaunch({
-                        url: "/" + prevpage.route
-                    })
+                  wx.reLaunch({
+                    url: "/" + prevpage.route
+                  })
                 }
-            },
-            error(res) {
+              },
+              error(res) {
                 if (res == 3000) {
-                    app.toast({ title: '微信授权失败' })
+                  app.toast({ title: '微信授权失败' })
                 } else if (res == 3001) {
-                    app.toast({ title: '手机格式有误' })
+                  app.toast({ title: '手机格式有误' })
                 } else if (res == 3002) {
-                    app.toast({ title: '用户未授权,无法注册' })
+                  app.toast({ title: '用户未授权,无法注册' })
                 } else if (res == 3004) {
-                    app.toast({ title: '验证码格式有误' })
+                  app.toast({ title: '验证码格式有误' })
                 } else if (res == 3005) {
-                    app.toast({ title: '密码强度不够' })
+                  app.toast({ title: '密码强度不够' })
                 } else if (res == 3006) {
-                    app.toast({ title: '验证码错误' })
+                  app.toast({ title: '验证码错误' })
                 } else if (res == 3007) {
-                    app.toast({ title: '注册失败' })
+                  app.toast({ title: '注册失败' })
                 } else if (res == 3008) {
-                    app.toast({ title: '手机号已被注册' })
+                  app.toast({ title: '手机号已被注册' })
                 } else {
-                    app.toast({ title: '意料之外的错误' })
+                  app.toast({ title: '意料之外的错误' })
                 }
-            },
-            fail(res) {
+              },
+              fail(res) {
 
-            }
-        })
+              }
+            })
+          }
+        }
+      })
+        
     },
     getUserRead: function (encrypteddata = "", iv = "") {
         let pid = app.globalData.pid
