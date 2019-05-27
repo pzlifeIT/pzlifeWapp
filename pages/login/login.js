@@ -10,21 +10,22 @@ Page({
         share_id: "",
         a: ""
     },
-    bindGetUserInfo: function (e) {
+    bindGetUserInfo: function(e) {
         let encrypteddata = e.detail.encryptedData ? e.detail.encryptedData : "",
             iv = e.detail.iv ? e.detail.iv : '',
             that = this;
         wx.login({
             success(res) {
                 if (res.code) {
-                    that.getUserRead(encrypteddata,iv);
+                    that.getUserRead(encrypteddata, iv);
                     app.wxrequest({
                         url: "user/loginuserbywx",
-                        data: {code: res.code, buid: app.globalData.pid, encrypteddata: encrypteddata, iv: iv},
+                        data: { code: res.code, buid: app.globalData.pid, encrypteddata: encrypteddata, iv: iv },
                         nocon: true,
                         success(res) {
                             let pages = getCurrentPages();
                             let prevpage = pages[pages.length - 2]
+                            console.log(prevpage)
                             app.setconid(res.con_id)
                             console.log(prevpage)
                             wx.navigateBack({
@@ -37,7 +38,7 @@ Page({
                                 app.toast({
                                     title: "用户未绑定手机号,1.5秒后跳转去快捷登录",
                                 });
-                                let timer = setTimeout(function () {
+                                let timer = setTimeout(function() {
                                     wx.navigateTo({
                                         url: "/pages/login/captchaLogin/captchaLogin"
                                     })
@@ -60,25 +61,25 @@ Page({
         })
 
     },
-    getUserRead: function (encrypteddata = "", iv = "") {
+    getUserRead: function(encrypteddata = "", iv = "") {
         let pid = app.globalData.pid
         wx.login({
-            success(res){
+            success(res) {
                 if (res.code) {
                     app.wxrequest({
                         url: "user/getUserRead",
-                        noloading:true,
+                        noloading: true,
                         data: {
                             code: res.code,
                             view_uid: pid,
-                            encrypteddata:encrypteddata,
-                            iv:iv
+                            encrypteddata: encrypteddata,
+                            iv: iv
                         },
                         nocon: true,
                         success(res) {
                             console.log(res)
                         },
-                        error(res){
+                        error(res) {
                             console.log(res)
                         }
                     })
@@ -89,7 +90,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
+    onLoad: function(options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
@@ -109,49 +110,49 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {
+    onReady: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
-
+    onShow: function() {
+        // app.login()
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function () {
+    onHide: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {
+    onUnload: function() {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
+    onReachBottom: function() {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function () {
+    onShareAppMessage: function() {
         let that = this,
             share = app.share({
                 title: "登陆",

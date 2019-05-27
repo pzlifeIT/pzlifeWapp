@@ -113,7 +113,7 @@ Page({
             app.toast({ title: '请输入验证码' })
             return
         }
-        that.getUserRead(encrypteddata,iv)
+        that.getUserRead(encrypteddata, iv)
         app.wxrequest({
             url: "user/quicklogin",
             data: {
@@ -124,7 +124,7 @@ Page({
                 code: code,
                 buid: app.globalData.pid
             },
-            noloading:true,
+            noloading: true,
             nocon: true,
             success(res) {
                 let pages = getCurrentPages();
@@ -168,25 +168,25 @@ Page({
             }
         })
     },
-    getUserRead: function (encrypteddata = "", iv = "") {
+    getUserRead: function(encrypteddata = "", iv = "") {
         let pid = app.globalData.pid
         wx.login({
-            success(res){
+            success(res) {
                 if (res.code) {
                     app.wxrequest({
                         url: "user/getUserRead",
-                        noloading:true,
+                        noloading: true,
                         data: {
                             code: res.code,
                             view_uid: pid,
-                            encrypteddata:encrypteddata,
-                            iv:iv
+                            encrypteddata: encrypteddata,
+                            iv: iv
                         },
                         nocon: true,
                         success(res) {
                             console.log(res)
                         },
-                        error(res){
+                        error(res) {
                             console.log(res)
                         }
                     })
