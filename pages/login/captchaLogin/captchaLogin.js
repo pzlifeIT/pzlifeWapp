@@ -134,17 +134,26 @@ Page({
                 app.setconid(res.con_id)
 
                 console.log(prevpage)
-                    //从商品详情页跳来的
+                if (prevpage == false){
+                    wx.switchTab({
+                        url:"/pages/index/index"
+                    });
+                    return
+                }
+                //从商品详情页跳来的
                 if (prevpage.route == str) {
                     wx.navigateBack({
                         delta: pages.indexOf(prevpage)
-                    })
+                    });
+                    return
                 } else {
                     wx.reLaunch({
                         url: "/" + prevpage.route + "?share_id=" + share_id
 
-                    })
+                    });
+                    return
                 }
+
             },
             error(code) {
                 switch (parseInt(code)) {
@@ -157,6 +166,9 @@ Page({
                     case 3004:
                     case 3006:
                         app.toast({ title: '验证码错误' })
+                        break;
+                    case 3005:
+                        app.toast({ title: '请先授权' })
                         break;
                     case 3009:
                         app.toast({ title: '该微信号已绑定手机号' })

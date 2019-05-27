@@ -343,7 +343,11 @@ page {
     height: 192rpx;
 }
 .yan{
-    width: 26rpx;
-    height: 16rpx;
-    margin-left: 10rpx;
+    width: 41rpx;
+    height: 23rpx;
+}
+.yan-d{
+    width: 70rpx;
+    height: 44rpx;
+    display: inline-block;
 }

@@ -1,4 +1,3 @@
-
 <image lazy-load="true" class="first" src="{{imgHost}}zshd_02.png"></image>
 <image lazy-load="true" class="second" src="{{imgHost}}zshd.png"></image>
 
@@ -13,6 +12,21 @@
         </view>
     </view>
 </view>
-<view class="footer" bindtap="buy" wx:if="{{stype != 1 && ident == 1}}">
-    立即购买
+<!--wx:if="{{stype != 1 && ident == 1}}"-->
+<view class="di"></view>
+<view class="footer" bindtap="popNotice" wx:if="{{stype != 1 && ident == 1}}">
+    立即开通
+</view>
+<!--<view class="pop p" catchtouchmove='preventTouchMove'></view>-->
+<view class="pop p" catchtouchmove='preventTouchMove' wx:if="{{pop}}">
+    <view class="kg">
+        <scroll-view scroll-y class="notice">
+            <image class="img" lazy-load="true" src="{{imgHost}}zsxz1.png"></image>
+        </scroll-view>
+        <checkbox-group bindchange="change">
+            <view class="check">
+                <checkbox class="ch" value="1">同意</checkbox>
+            </view>
+        </checkbox-group>
+    </view>
 </view>

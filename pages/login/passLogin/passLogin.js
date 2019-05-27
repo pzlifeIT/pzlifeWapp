@@ -50,6 +50,12 @@ Page({
                 let prevpage = pages[pages.length - 3]
                 let str = "pages/goods/detail";
                 app.setconid(res.con_id)
+                if (prevpage == false){
+                    wx.switchTab({
+                        url:"/pages/index/index"
+                    });
+                    return
+                }
                     //从商品详情页跳来的
                 if (prevpage.route == str) {
                     wx.navigateBack({
