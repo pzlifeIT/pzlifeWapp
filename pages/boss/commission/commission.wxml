@@ -3,8 +3,12 @@
     <view class="ch-statistics">
         <view class="ch-total">
             <text class="ct-text db unit ">佣金总额</text>
-            <image class="yan" src="{{imgHost}}yan.png" lazy-load="true" wx:if="{{ent == 1 && yan == true}}" bindtap="hidden"></image>
-            <image class="yan" src="{{imgHost}}yan_b.png" lazy-load="true" wx:if="{{ent == 1 && yan == false}}" bindtap="hidden"></image>
+            <view class="yan-d" wx:if="{{ent == 1 && yan == true}}" bindtap="hidden">
+                <image class="yan" src="{{imgHost}}eyes.png" lazy-load="true" ></image>
+            </view>
+            <view class="yan-d"  wx:if="{{ent == 1 && yan == false}}" bindtap="hidden">
+                <image class="yan" src="{{imgHost}}eyes_close.png" lazy-load="true"></image>
+            </view>
             <text class="ct-num db" wx:if="{{yan}}">{{info.commission_all}}</text>
             <text class="ct-num db" wx:else>********</text>
         </view>

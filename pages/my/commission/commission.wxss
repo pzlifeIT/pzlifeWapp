@@ -10,6 +10,7 @@ page {
     width: 750rpx;
     height: 331rpx;
     overflow: hidden;
+    background-color:#f99f36; 
 }
 
 .bg .bgimg {
@@ -330,18 +331,16 @@ page {
     line-height: 100rpx;
 }
 .yan-v{
-    display: inline-block;
-    width: 38rpx;
-    height: 24rpx;
+    width: 60rpx;
+    height: 40rpx;
     position: absolute;
-    top: 50rpx;
-    right: 250rpx;
+    top: 43rpx;
+    right: 240rpx;
 }
 .yan-v .yan{
-    width: 28rpx;
-    height: 18rpx;
+    width: 41rpx;
+    height: 23rpx;
     display: block;
-    /*position: absolute;*/
-    /*top: 50rpx;*/
-    /*right: 260rpx;*/
+    margin-left: 13rpx;
+    margin-top: 6rpx;
 }

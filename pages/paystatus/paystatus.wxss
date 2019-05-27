@@ -40,7 +40,7 @@ page {
 .bo-left {
     width: 188rpx;
     height: 66rpx;
-    border: 1rpx solid #888888;
+    border: 1px solid #888888;
     text-align: center;
     line-height: 66rpx;
     color: #202020;
@@ -51,7 +51,7 @@ page {
 .bo-right {
     width: 188rpx;
     height: 66rpx;
-    border: 1rpx solid #E61F18;
+    border: 1px solid #E61F18;
     color: #E61F18;
     font-size: 28rpx;
     text-align: center;

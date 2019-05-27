@@ -9,9 +9,28 @@ Page({
         imgHost: "",
         mask: true,
         ident: 0,
-        stype: 0
+        stype: 0,
+        pop:false
     },
+    preventTouchMove:function(){
 
+    },
+    popNotice:function(){
+        let pop = !this.data.pop
+        this.setData({
+            pop:pop
+        })
+    },
+    change:function(e){
+        console.log(e)
+        if (e.detail.value.length >= 1){
+            this.buy()
+        } else {
+            app.toast({
+                title:"不点击同意将无法升级为钻石会员"
+            })
+        }
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -78,7 +97,8 @@ Page({
                     paySign: parameters.paySign,
                     success(res) {
                         that.setData({
-                            ident: 2
+                            ident: 2,
+                            pop:false
                         })
                     },
                     fail(res) {

@@ -28,6 +28,12 @@ Page({
                             console.log(prevpage)
                             app.setconid(res.con_id)
                             console.log(prevpage)
+                            if (!prevpage) {
+                                wx.switchTab({
+                                    url: "/pages/index/index"
+                                });
+                                return
+                            }
                             wx.navigateBack({
                                 delta: prevpage
                             });
@@ -118,7 +124,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-        // app.login()
+
     },
 
     /**

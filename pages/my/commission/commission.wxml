@@ -2,8 +2,8 @@
     <image class="bgimg" lazy-load="true" src="{{imgHost}}bg.png"></image>
     <view class="balance-text">佣金余额</view>
     <view class="yan-v" bindtap="yan">
-        <image class="yan" lazy-load="true" src="{{imgHost}}yan.png" wx:if="{{yan}}"></image>
-        <image class="yan" lazy-load="true" src="{{imgHost}}yan_b.png" wx:else></image>
+        <image class="yan" lazy-load="true" src="{{imgHost}}eyes.png" wx:if="{{yan}}"></image>
+        <image class="yan" lazy-load="true" src="{{imgHost}}eyes_close.png" wx:else></image>
     </view>
     <view class="balance-num" bindtap="logTransfer" wx:if="{{yan}}">{{commission.commission}}</view>
     <view class="balance-num" wx:else>********</view>
