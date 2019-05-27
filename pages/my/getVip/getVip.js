@@ -6,7 +6,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        imgHost: ""
+        imgHost: "",
+        mask:true,
+        pop:false
     },
 
     /**
@@ -16,6 +18,22 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
+    },
+    popNotice:function(){
+        let pop = !this.data.pop
+        this.setData({
+            pop:pop
+        })
+    },
+    change:function(e){
+        console.log(e)
+        if (e.detail.value.length >= 1){
+            this.buy()
+        } else {
+            app.toast({
+                title:"不点击同意将无法升级为钻石会员"
+            })
+        }
     },
     buy: function () {
         let that = this;

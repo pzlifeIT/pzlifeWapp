@@ -13,7 +13,10 @@ Page({
     bindGetUserInfo: function (e) {
         let encrypteddata = e.detail.encryptedData ? e.detail.encryptedData : "",
             iv = e.detail.iv ? e.detail.iv : '',
-            that = this;
+            that = this,
+            route = app.globalData.routePage,
+            str = "pages/goods/detail",
+            index = 0;
         wx.login({
             success(res) {
                 if (res.code) {
@@ -23,14 +26,12 @@ Page({
                         data: {code: res.code, buid: app.globalData.pid, encrypteddata: encrypteddata, iv: iv},
                         nocon: true,
                         success(res) {
-                            let pages = getCurrentPages();
-                            let prevpage = pages[pages.length - 2]
                             app.setconid(res.con_id)
-                            console.log(prevpage)
+                            let index = app.getIndex(route)
+                            console.log(index)
                             wx.navigateBack({
-                                delta: prevpage
-                            });
-
+                                delta:index
+                            })
                         },
                         error(res) {
                             if (res == 3000 || res == 3002) {
@@ -104,6 +105,7 @@ Page({
                 a: options.a
             })
         }
+        app.getWxRoute()
     },
 
     /**
@@ -152,11 +154,6 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-        let that = this,
-            share = app.share({
-                title: "登陆",
-                path: '/pages/login/login'
-            })
-        return share
+        return app.share()
     }
 })

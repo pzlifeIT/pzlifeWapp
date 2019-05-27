@@ -477,7 +477,8 @@
 					"name": "getvip",
 					"pathName": "pages/diamActive/diamActive",
 					"query": "",
-					"scene": null
+					"scene": 1036,
+					"referrerInfo": {}
 				},
 				{
 					"id": -1,

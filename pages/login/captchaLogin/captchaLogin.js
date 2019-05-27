@@ -19,7 +19,7 @@ Page({
     /**
      * 获取输入的值
      */
-    inputwacth: function(e) {
+    inputwacth: function (e) {
         let item = e.currentTarget.dataset.model,
             mobile = e.detail.value
         mobile = mobile.replace(/[^\d]/g, '')
@@ -30,15 +30,15 @@ Page({
     /**
      * 获取短信验证码
      */
-    getcode: function(e) {
+    getcode: function (e) {
         let phone = this.data.phone,
             that = this
         if (phone == '' || phone == null) {
-            app.toast({ title: '请填写手机号码' })
+            app.toast({title: '请填写手机号码'})
             return
         }
         if (phone.length < 11) {
-            app.toast({ title: '请填写11位手机号码' })
+            app.toast({title: '请填写11位手机号码'})
             return
         }
         app.wxrequest({
@@ -69,10 +69,10 @@ Page({
         })
     },
 
-    timeOut: function() {
+    timeOut: function () {
         let num = this.data.time,
             that = this
-        let i = setInterval(function() {
+        let i = setInterval(function () {
             num--
             if (num < 1) {
                 that.setData({
@@ -91,7 +91,7 @@ Page({
     /**
      * 登录
      */
-    bindGetUserInfo: function(e) {
+    bindGetUserInfo: function (e) {
         console.log(this.data.a)
         this.getCode()
         let share_id = this.data.share_id
@@ -100,20 +100,21 @@ Page({
             iv = e.detail.iv,
             mobile = this.data.phone,
             vercode = this.data.code,
-            code = this.data.logcode
+            code = this.data.logcode,
+            route = app.globalData.routePage
         if (mobile == '') {
-            app.toast({ title: '请填写手机号码' })
+            app.toast({title: '请填写手机号码'})
             return
         }
         if (mobile.length < 11) {
-            app.toast({ title: '请填写11位手机号码' })
+            app.toast({title: '请填写11位手机号码'})
             return
         }
         if (vercode == '') {
-            app.toast({ title: '请输入验证码' })
+            app.toast({title: '请输入验证码'})
             return
         }
-        that.getUserRead(encrypteddata,iv)
+        that.getUserRead(encrypteddata, iv)
         app.wxrequest({
             url: "user/quicklogin",
             data: {
@@ -124,57 +125,36 @@ Page({
                 code: code,
                 buid: app.globalData.pid
             },
-            noloading:true,
+            noloading: true,
             nocon: true,
             success(res) {
-                let pages = getCurrentPages();
-                let prevpage = pages[pages.length - 3]
-                let str = "pages/goods/detail"
-                    //登录完成后将con_id存入本地缓存
+                //登录完成后将con_id存入本地缓存
                 app.setconid(res.con_id)
-
-                console.log(prevpage)
-                if (prevpage == false){
-                    wx.switchTab({
-                        url:"/pages/index/index"
-                    });
-                    return
-                }
-                //从商品详情页跳来的
-                if (prevpage.route == str) {
-                    wx.navigateBack({
-                        delta: pages.indexOf(prevpage)
-                    });
-                    return
-                } else {
-                    wx.reLaunch({
-                        url: "/" + prevpage.route + "?share_id=" + share_id
-
-                    });
-                    return
-                }
-
+                let index = app.getIndex(route)
+                wx.navigateBack({
+                    delta:index
+                })
             },
             error(code) {
                 switch (parseInt(code)) {
                     case 3000:
-                        app.toast({ title: '微信授权失败' })
+                        app.toast({title: '微信授权失败'})
                         break;
                     case 3001:
-                        app.toast({ title: '手机格式有误' })
+                        app.toast({title: '手机格式有误'})
                         break;
                     case 3004:
                     case 3006:
-                        app.toast({ title: '验证码错误' })
+                        app.toast({title: '验证码错误'})
                         break;
                     case 3005:
-                        app.toast({ title: '请先授权' })
+                        app.toast({title: '请先授权'})
                         break;
                     case 3009:
-                        app.toast({ title: '该微信号已绑定手机号' })
+                        app.toast({title: '该微信号已绑定手机号'})
                         break;
                     default:
-                        app.toast({ title: '意料之外的错误' })
+                        app.toast({title: '意料之外的错误'})
                         break;
                 }
             }
@@ -183,22 +163,22 @@ Page({
     getUserRead: function (encrypteddata = "", iv = "") {
         let pid = app.globalData.pid
         wx.login({
-            success(res){
+            success(res) {
                 if (res.code) {
                     app.wxrequest({
                         url: "user/getUserRead",
-                        noloading:true,
+                        noloading: true,
                         data: {
                             code: res.code,
                             view_uid: pid,
-                            encrypteddata:encrypteddata,
-                            iv:iv
+                            encrypteddata: encrypteddata,
+                            iv: iv
                         },
                         nocon: true,
                         success(res) {
                             console.log(res)
                         },
-                        error(res){
+                        error(res) {
                             console.log(res)
                         }
                     })
@@ -206,7 +186,7 @@ Page({
             }
         })
     },
-    getCode: function() {
+    getCode: function () {
         let that = this
         wx.login({
             success(res) {
@@ -219,7 +199,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.getCode()
         this.setData({
             imgHost: app.globalData.host.imgHost
@@ -239,54 +219,49 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
-        let that = this,
-            share = app.share({
-                title: "快捷登陆",
-                path: '/pages/captchaLogin/captchaLogin'
-            })
-        return share
+    onShareAppMessage: function () {
+        return app.share()
     }
 })

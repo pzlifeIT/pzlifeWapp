@@ -25,7 +25,8 @@ Page({
         let mobile = this.data.phone,
             password = this.data.pass,
             share_id = this.data.share_id,
-            that = this
+            that = this,
+            route = app.globalData.routePage
         let encrypteddata = e.detail.encryptedData,
             iv = e.detail.iv
         if (mobile == '') {
@@ -46,26 +47,11 @@ Page({
             data: { mobile: mobile, password: password, buid: app.globalData.pid },
             nocon: true,
             success(res) {
-                let pages = getCurrentPages();
-                let prevpage = pages[pages.length - 3]
-                let str = "pages/goods/detail";
                 app.setconid(res.con_id)
-                if (prevpage == false){
-                    wx.switchTab({
-                        url:"/pages/index/index"
-                    });
-                    return
-                }
-                    //从商品详情页跳来的
-                if (prevpage.route == str) {
-                    wx.navigateBack({
-                        delta: pages.indexOf(prevpage)
-                    })
-                } else {
-                    wx.reLaunch({
-                        url: "/" + prevpage.route+"?share_id="+share_id
-                    })
-                }
+                let index = app.getIndex(route)
+                wx.navigateBack({
+                    delta:index
+                })
             },
             fail(res) {
 
@@ -177,11 +163,7 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function() {
-        let that = this,
-            share = app.share({
-                title: "密码登陆",
-                path: '/pages/passLogin/passLogin'
-            })
-        return share
+
+        return app.share()
     }
 })

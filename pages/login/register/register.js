@@ -106,7 +106,8 @@ Page({
             vercode = this.data.code,
             password = this.data.pass,
             checkpass = this.data.checkpass,
-            that = this
+            that = this,
+            route = app.globalData.routePage
         if (mobile == '') {
             app.toast({title: '请填写手机号码'})
             return
@@ -146,31 +147,11 @@ Page({
                         },
                         nocon: true,
                         success(res) {
-                            let pages = getCurrentPages();
-                            let prevpage = pages[pages.length - 3]
-                            let str = "pages/goods/detail";
-                            console.log(pages)
-                            console.log(prevpage)
-                            app.toast({
-                                title: '注册成功'
-                            });
                             app.setconid(res.con_id)
-                            if (prevpage == false){
-                                wx.switchTab({
-                                    url:"/pages/index/index"
-                                });
-                                return
-                            }
-                            //从商品详情页跳来的
-                            if (prevpage.route == str) {
-                                wx.navigateBack({
-                                    delta: pages.indexOf(prevpage)
-                                })
-                            } else {
-                                wx.reLaunch({
-                                    url: "/" + prevpage.route
-                                })
-                            }
+                            let index = app.getIndex(route)
+                            wx.navigateBack({
+                                delta:index
+                            })
                         },
                         error(res) {
                             if (res == 3000) {
@@ -289,11 +270,7 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-        let that = this,
-            share = app.share({
-                title: "注册",
-                path: '/pages/register/register'
-            })
-        return share
+
+        return app.share()
     }
 })
