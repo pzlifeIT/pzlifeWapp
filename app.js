@@ -326,7 +326,6 @@ App({
         if (this.globalData.pid == '') return
         this.indexmain(this.globalData.pid)
     },
-
     getUserRead(pid = '') {
         let that = this
         if (that.globalData.con_id) return

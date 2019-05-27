@@ -14,9 +14,7 @@ Page({
         let encrypteddata = e.detail.encryptedData ? e.detail.encryptedData : "",
             iv = e.detail.iv ? e.detail.iv : '',
             that = this,
-            route = app.globalData.routePage,
-            str = "pages/goods/detail",
-            index = 0;
+            route = app.globalData.routePage;
         wx.login({
             success(res) {
                 if (res.code) {

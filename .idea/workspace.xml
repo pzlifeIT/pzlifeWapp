@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/passLogin/passLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/passLogin/passLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/register/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/getVip/getVip.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/getVip/getVip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/getVip/getVip.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/getVip/getVip.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/getVip/getVip.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/getVip/getVip.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,7 +75,7 @@
         <counts>
           <entry key="htm" value="36" />
           <entry key="html" value="45" />
-          <entry key="js" value="36414" />
+          <entry key="js" value="36415" />
           <entry key="json" value="285" />
           <entry key="wxml" value="23573" />
           <entry key="wxss" value="22242" />
@@ -93,7 +86,7 @@
           <entry key="CSS" value="22242" />
           <entry key="HTML" value="23654" />
           <entry key="JSON" value="285" />
-          <entry key="JavaScript" value="36414" />
+          <entry key="JavaScript" value="36415" />
         </counts>
       </usages-collector>
     </session>
@@ -124,7 +117,7 @@
             <entry file="file://$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="453">
-                  <caret line="256" column="32" lean-forward="true" selection-start-line="256" selection-start-column="32" selection-end-line="256" selection-end-column="32" />
+                  <caret line="281" column="32" lean-forward="true" selection-start-line="281" selection-start-column="32" selection-end-line="281" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -223,20 +216,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/login/login.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="427">
-                  <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+                <state relative-caret-position="182">
+                  <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+                <state relative-caret-position="286">
+                  <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -244,8 +237,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="780">
-                  <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+                <state relative-caret-position="598">
+                  <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -371,13 +364,13 @@
         <option value="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" />
         <option value="$PROJECT_DIR$/pages/my/my.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/pages/login/login.js" />
         <option value="$PROJECT_DIR$/pages/login/register/register.js" />
         <option value="$PROJECT_DIR$/pages/login/passLogin/passLogin.js" />
         <option value="$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js" />
         <option value="$PROJECT_DIR$/pages/my/getVip/getVip.js" />
         <option value="$PROJECT_DIR$/pages/my/getVip/getVip.wxml" />
         <option value="$PROJECT_DIR$/pages/my/getVip/getVip.wxss" />
+        <option value="$PROJECT_DIR$/pages/login/login.js" />
       </list>
     </option>
   </component>
@@ -515,12 +508,12 @@
       <workItem from="1558323906654" duration="4914000" />
       <workItem from="1558339265837" duration="3000" />
       <workItem from="1558686486392" duration="3334000" />
-      <workItem from="1558919377127" duration="20590000" />
+      <workItem from="1558919377127" duration="21102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="746649000" />
+    <option name="totallyTimeSpent" value="747161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -856,17 +849,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
-          <caret line="256" column="32" lean-forward="true" selection-start-line="256" selection-start-column="32" selection-end-line="256" selection-end-column="32" />
+          <caret line="281" column="32" lean-forward="true" selection-start-line="281" selection-start-column="32" selection-end-line="281" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -884,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -898,17 +877,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
         </state>
       </provider>
     </entry>
