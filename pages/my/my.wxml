@@ -58,9 +58,8 @@
                         <image class="yan" lazy-load="true" src="{{imgHost}}eyes_black_close.png"></image>
                     </view>
                 </view>
-                <view class="one-price" wx:if="{{boss.commission_all}}">{{yan_all ? boss.commission_all : '*******'}}
+                <view class="one-price">{{yan_all ? boss.commission_all : '*******'}}
                 </view>
-                <view class="one-price" wx:else>0</view>
             </view>
         </view>
         <view class="line-one wid50" bindtap="gocommiss" data-hidden="{{yan ? 1 : 2}}">

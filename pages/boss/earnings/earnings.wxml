@@ -3,15 +3,15 @@
     <view class="ch-statistics">
         <view class="ch-total">
             <text class="ct-text db unit">经营性收益总额</text>
-            <text class="ct-num db">{{all}}</text>
+            <text class="ct-num db">{{all || 0}}</text>
         </view>
         <view class="ch-half ch-left {{div == 2 ?'selected':''}}" bindtap="clickDiv" data-div="2">
             <text class="db ch-name unit">已入账</text>
-            <text class="db ch-num">{{entered}}</text>
+            <text class="db ch-num">{{entered || 0}}</text>
         </view>
         <view class="ch-half ch-right {{div == 1 ?'selected':''}}" bindtap="clickDiv" data-div="1">
             <text class="db ch-name unit">待入账</text>
-            <text class="db ch-num">{{enter}}</text>
+            <text class="db ch-num">{{enter || 0}}</text>
         </view>
     </view>
     <view class="bottom-wire"></view>
@@ -26,20 +26,20 @@
     <view class="redText" wx:if="{{num == 1}}">
         <view class="red-left" wx:if="{{div == 2 && eranList.length > 0}}">个人消费收益已入账合计</view>
         <view class="red-left" wx:if="{{div == 1 && eranList.length > 0}}">个人消费收益待入账合计</view>
-        <view class="red-right" wx:if="{{div == 2 && eranList.length > 0}}">{{total}} 元</view>
-        <view class="red-right" wx:if="{{div == 1 && eranList.length > 0}}">{{total}} 元</view>
+        <view class="red-right" wx:if="{{div == 2 && eranList.length > 0}}">{{total || 0}} 元</view>
+        <view class="red-right" wx:if="{{div == 1 && eranList.length > 0}}">{{total || 0}} 元</view>
     </view>
     <view class="redText" wx:if="{{num == 2}}">
         <view class="red-left" wx:if="{{div == 2 && huiyuan.length > 0}}">会员消费收益已入账合计</view>
         <view class="red-left" wx:if="{{div == 1 && huiyuan.length > 0}}">会员消费收益待入账合计</view>
-        <view class="red-right" wx:if="{{div == 2 && huiyuan.length > 0}}">{{total}} 元</view>
-        <view class="red-right" wx:if="{{div == 1 && huiyuan.length > 0}}">{{total}} 元</view>
+        <view class="red-right" wx:if="{{div == 2 && huiyuan.length > 0}}">{{total || 0}} 元</view>
+        <view class="red-right" wx:if="{{div == 1 && huiyuan.length > 0}}">{{total || 0}} 元</view>
     </view>
     <view class="redText" wx:if="{{num == 3}}">
         <view class="red-left" wx:if="{{div == 2 && qudao.length > 0}}">渠道收益已入账合计</view>
         <view class="red-left" wx:if="{{div == 1 && qudao.length > 0}}">渠道收益待入账合计</view>
-        <view class="red-right" wx:if="{{div == 2 && qudao.length > 0}}">{{total}} 元</view>
-        <view class="red-right" wx:if="{{div == 1 && qudao.length > 0}}">{{total}} 元</view>
+        <view class="red-right" wx:if="{{div == 2 && qudao.length > 0}}">{{total || 0}} 元</view>
+        <view class="red-right" wx:if="{{div == 1 && qudao.length > 0}}">{{total || 0}} 元</view>
     </view>
 </view>
 <view class="list" wx:if="{{num == 1 && eranList.length > 0 }}">

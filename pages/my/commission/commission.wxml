@@ -5,9 +5,9 @@
         <image class="yan" lazy-load="true" src="{{imgHost}}eyes.png" wx:if="{{yan}}"></image>
         <image class="yan" lazy-load="true" src="{{imgHost}}eyes_close.png" wx:else></image>
     </view>
-    <view class="balance-num" bindtap="logTransfer" wx:if="{{yan}}">{{commission.commission}}</view>
+    <view class="balance-num" bindtap="logTransfer" wx:if="{{yan}}">{{commission.commission || 0}}</view>
     <view class="balance-num" wx:else>********</view>
-    <view class="balance-total" wx:if="{{yan}}">佣金总额 {{commission.commission_all}} 元</view>
+    <view class="balance-total" wx:if="{{yan}}">佣金总额 {{commission.commission_all || 0}} 元</view>
     <view class="balance-total" wx:else>佣金总额 ******** 元</view>
     <view class="three">
         <view class="three-total {{tab == 2 ? 'three-active':''}}" bindtap="selectTab" data-tab="2">
