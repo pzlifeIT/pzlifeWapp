@@ -10,24 +10,24 @@ Page({
         mask: true,
         ident: 0,
         stype: 0,
-        pop:false
+        pop: false
     },
-    preventTouchMove:function(){
+    preventTouchMove: function() {
 
     },
-    popNotice:function(){
+    popNotice: function() {
         let pop = !this.data.pop
         this.setData({
-            pop:pop
+            pop: pop
         })
     },
-    change:function(e){
+    change: function(e) {
         console.log(e)
-        if (e.detail.value.length >= 1){
+        if (e.detail.value.length >= 1) {
             this.buy()
         } else {
             app.toast({
-                title:"不点击同意将无法升级为钻石会员"
+                title: "不点击同意将无法升级为钻石会员"
             })
         }
     },
@@ -78,83 +78,19 @@ Page({
     },
     pay: function(order_no) {
         let that = this
-        app.wxrequest({
-            url: "pay/pay",
-            data: {
-                order_no: order_no,
-                payment: '2',
-                platform: '1'
-            },
-            host: 2,
-            nocon: true,
+        app.wxpay({
+            order_no: order_no,
+            payment: '2',
             success(res) {
-                let parameters = res.parameters
-                wx.requestPayment({
-                    timeStamp: parameters.timeStamp,
-                    nonceStr: parameters.nonceStr,
-                    package: parameters.package,
-                    signType: parameters.signType,
-                    paySign: parameters.paySign,
-                    success(res) {
-                        that.setData({
-                            ident: 2,
-                            pop:false
-                        })
-                    },
-                    fail(res) {
-                        app.toast({
-                            title: "支付失败"
-                        })
-                    }
+                that.setData({
+                    ident: 2,
+                    pop: false
                 })
             },
-            error(code) {
-                switch (parseInt(code)) {
-                    case 3000:
-                        app.toast({
-                            title: '不存在需要支付的订单'
-                        })
-                        break;
-                    case 3001:
-                        app.toast({
-                            title: '订单号错误'
-                        })
-                        break;
-                    case 3002:
-                        app.toast({
-                            title: '订单类型错误'
-                        })
-                        break;
-                    case 3004:
-                        app.toast({
-                            title: '订单已取消'
-                        })
-                        break;
-                    case 3005:
-                        app.toast({
-                            title: '订单已关闭'
-                        })
-                        break;
-                    case 3006:
-                        app.toast({
-                            title: '订单已付款'
-                        })
-                        break;
-                    case 3007:
-                        app.toast({
-                            title: '订单已过期'
-                        })
-                        break;
-                    case 3010:
-                        app.toast({
-                            title: '支付失败'
-                        })
-                        break;
-                    default:
-                        app.toast({
-                            title: '意料之外的网络错误'
-                        })
-                }
+            fail(res) {
+                app.toast({
+                    title: "支付失败"
+                })
             }
         })
     },

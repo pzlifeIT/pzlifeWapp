@@ -17,7 +17,7 @@ Page({
         uid: "",
         ident: 1,
         imgHost: '',
-        navH:0
+        navH: 0
     },
     preventTouchMove: function() {
         //防止用户操作弹出层外界面
@@ -57,84 +57,15 @@ Page({
     },
     pay: function(order_no) {
         let that = this
-        app.wxrequest({
-            url: "pay/pay",
-            data: {
-                order_no: order_no,
-                payment: '2',
-                platform: '1'
-            },
-            host: 2,
-            nocon: true,
+        app.wxpay({
+            order_no: order_no,
+            payment: '2',
             success(res) {
-                let parameters = res.parameters
-                wx.requestPayment({
-                    timeStamp: parameters.timeStamp,
-                    nonceStr: parameters.nonceStr,
-                    package: parameters.package,
-                    signType: parameters.signType,
-                    paySign: parameters.paySign,
-                    success(res) {
-                        that.setData({
-                            mask: true
-                        })
-                    },
-                    fail(res) {
-                        that.gopaystatus({
-                            order_no: res.data.order_no,
-                            status: 2
-                        })
-                    }
+                that.setData({
+                    mask: true
                 })
             },
-            error(code) {
-                switch (parseInt(code)) {
-                    case 3000:
-                        app.toast({
-                            title: '不存在需要支付的订单'
-                        })
-                        break;
-                    case 3001:
-                        app.toast({
-                            title: '订单号错误'
-                        })
-                        break;
-                    case 3002:
-                        app.toast({
-                            title: '订单类型错误'
-                        })
-                        break;
-                    case 3004:
-                        app.toast({
-                            title: '订单已取消'
-                        })
-                        break;
-                    case 3005:
-                        app.toast({
-                            title: '订单已关闭'
-                        })
-                        break;
-                    case 3006:
-                        app.toast({
-                            title: '订单已付款'
-                        })
-                        break;
-                    case 3007:
-                        app.toast({
-                            title: '订单已过期'
-                        })
-                        break;
-                    case 3010:
-                        app.toast({
-                            title: '支付失败'
-                        })
-                        break;
-                    default:
-                        app.toast({
-                            title: '意料之外的网络错误'
-                        })
-                }
-            }
+            fail(res) {}
         })
     },
     /**
@@ -143,7 +74,7 @@ Page({
     onLoad: function(options) {
         this.setData({
             imgHost: app.globalData.host.imgHost,
-            navH:app.globalData.topHeadHeight
+            navH: app.globalData.topHeadHeight
         })
     },
 

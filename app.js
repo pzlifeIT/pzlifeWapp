@@ -1,7 +1,7 @@
 //app.js
 const config = require('config/config.js')
 App({
-    onLaunch: function (opt) {
+    onLaunch: function(opt) {
         // 展示本地存储能力
         //本地缓存
         let that = this
@@ -21,21 +21,20 @@ App({
         routePage: "",
         wxoptions: ''
     },
-    getIndex:function(route = ''){
+    getIndex: function(route = '') {
         let pages = getCurrentPages();
         let index = 100;
         console.log(pages)
-        for (let i=0;i<pages.length;i++){
-            if (pages[i].route == route){
+        for (let i = 0; i < pages.length; i++) {
+            if (pages[i].route == route) {
                 index = pages.length - i - 1;
             }
         }
         return index
     },
-    getWxRoute: function () {
+    getWxRoute: function() {
         let pages = getCurrentPages(),
-            prevpage = pages[pages.length - 1]
-        console.log(prevpage)
+            prevpage = pages[pages.length - 1];
         if (prevpage.route.indexOf('/login') == -1) {
             this.globalData.routePage = prevpage.route
             this.globalData.wxoptions = ''
@@ -43,14 +42,13 @@ App({
             for (let i in prevpage.options) {
                 option += i + '=' + prevpage.options[i] + "&"
             }
-            console.log(option)
             if (option) {
-                let newOption = option.slice(0,option.length - 1)
-                this.globalData.wxoptions = '?'+newOption
+                let newOption = option.slice(0, option.length - 1)
+                this.globalData.wxoptions = '?' + newOption
             }
         }
     },
-    getTopHeadHeight: function () {
+    getTopHeadHeight: function() {
         let that = this
         wx.getSystemInfo({
             success(res) {
@@ -59,7 +57,7 @@ App({
             }
         })
     },
-    getconid: function () {
+    getconid: function() {
         let that = this
         wx.getStorage({
             key: "con_id",
@@ -70,7 +68,7 @@ App({
         });
         this.getUserInfo()
     },
-    setconid: function (conid) {
+    setconid: function(conid = '') {
         wx.setStorage({
             key: "con_id",
             data: conid
@@ -78,14 +76,14 @@ App({
         this.globalData.con_id = conid
         this.getUserInfo()
     },
-    toast: function (data) {
+    toast: function(data = {}) {
         wx.showToast({
             title: data.title,
             icon: data.icon || "none",
             duration: data.duration || 2000
         })
     },
-    share: function (data = {}) {
+    share: function(data = {}) {
         if (!data.path) {
             data.path = '/pages/index/index'
         }
@@ -99,19 +97,19 @@ App({
             title: data.title || '776品质生活广场',
             path: data.path,
             imageUrl: data.imageUrl || 'https://webimages.pzlive.vip/share.jpg',
-            success: function (shareTickets) {
+            success: function(shareTickets) {
 
             },
-            fail: function (res) {
+            fail: function(res) {
 
             },
-            complete: function (res) {
+            complete: function(res) {
 
             }
         }
         return sharejson
     },
-    getUserInfo: function () {
+    getUserInfo: function() {
         let that = this
         this.wxrequest({
             url: "user/getuser",
@@ -121,7 +119,7 @@ App({
             }
         })
     },
-    judgelogin: function (obj) {
+    judgelogin: function(obj = {}) {
         this.wxrequest({
             url: "user/getuser",
             success(res) {
@@ -129,23 +127,22 @@ App({
             }
         })
     },
-    indexmain: function (id) {
+    indexmain: function(id = '') {
         this.wxrequest({
             url: 'user/indexmain',
             data: {
                 buid: id
             },
             nologin: true,
-            success: function (res) {
-            }
+            success: function(res) {}
         })
     },
-    setCartNum: function (id) {
+    setCartNum: function(id) {
         let that = this
         that.wxrequest({
             url: 'cart/getUserCartNum',
             nologin: true,
-            success: function (res) {
+            success: function(res) {
                 let n = res.total
                 that.globalData.updateNum = false
                 if (n == 0) {
@@ -161,7 +158,7 @@ App({
             }
         })
     },
-    modal: function (data) {
+    modal: function(data = {}) {
         wx.showModal({
             title: data.title || '',
             content: data.content || '',
@@ -178,7 +175,7 @@ App({
             }
         })
     },
-    login: function () {
+    login: function() {
         let that = this
         this.modal({
             title: "请先登录",
@@ -191,7 +188,90 @@ App({
             }
         })
     },
-    wxrequest: function (obj) {
+    wxpay: function(data = {}) {
+        let that = this
+        wx.login({
+            success(res) {
+                that.wxrequest({
+                    url: "pay/pay",
+                    data: {
+                        order_no: data.order_no || '',
+                        payment: data.payment || '1',
+                        platform: data.platform || '1',
+                        code: res.code || ''
+                    },
+                    host: 2,
+                    nocon: true,
+                    success(res) {
+                        let parameters = res.parameters || ''
+                        wx.requestPayment({
+                            timeStamp: parameters.timeStamp || '',
+                            nonceStr: parameters.nonceStr || '',
+                            package: parameters.package || '',
+                            signType: parameters.signType || '',
+                            paySign: parameters.paySign || '',
+                            success(res) {
+                                typeof data.success == 'function' ? data.success(res) : ''
+                            },
+                            fail(res) {
+                                typeof data.fail == 'function' ? data.fail(res) : ''
+                            }
+                        })
+                    },
+                    error(code) {
+                        switch (parseInt(code)) {
+                            case 3000:
+                                app.toast({
+                                    title: '不存在需要支付的订单'
+                                })
+                                break;
+                            case 3001:
+                                app.toast({
+                                    title: '订单号错误'
+                                })
+                                break;
+                            case 3002:
+                                app.toast({
+                                    title: '订单类型错误'
+                                })
+                                break;
+                            case 3004:
+                                app.toast({
+                                    title: '订单已取消'
+                                })
+                                break;
+                            case 3005:
+                                app.toast({
+                                    title: '订单已关闭'
+                                })
+                                break;
+                            case 3006:
+                                app.toast({
+                                    title: '订单已付款'
+                                })
+                                break;
+                            case 3007:
+                                app.toast({
+                                    title: '订单已过期'
+                                })
+                                break;
+                            case 3010:
+                                app.toast({
+                                    title: '支付失败'
+                                })
+                                break;
+                            default:
+                                app.toast({
+                                    title: '意料之外的网络错误'
+                                })
+                        }
+                        typeof data.error == 'function' ? data.error(code) : ''
+                    }
+                })
+            }
+        })
+    },
+    wxrequest: function(obj = {}) {
         let that = this,
             url = ''
         obj.data = obj.data || {}
@@ -204,7 +284,7 @@ App({
             obj.data.con_id = that.globalData.con_id
         }
         if (!obj.noloading) {
-            wx.showLoading({title: '加载中'})
+            wx.showLoading({ title: '加载中' })
         }
         obj.host = obj.host || 1
         if (obj.host == 2) {
@@ -243,14 +323,14 @@ App({
             },
             fail(err) {
                 wx.hideLoading()
-                that.toast({title: '网络错误'})
+                that.toast({ title: '网络错误' })
                 if (typeof obj.fail == 'function') {
                     obj.fail(err)
                 }
             }
         })
     },
-    networkerror: function (code) {
+    networkerror: function(code = 0) {
         let text = ''
         switch (parseInt(code)) {
             case 201:
@@ -311,9 +391,9 @@ App({
             default:
                 text = '意料之外的网络错误'
         }
-        this.toast({title: text})
+        this.toast({ title: text })
     },
-    onShow: function (opt) {
+    onShow: function(opt) {
         if (opt.query.scene) {
             this.globalData.pid = opt.query.scene
         }

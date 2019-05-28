@@ -7,35 +7,35 @@ Page({
      */
     data: {
         imgHost: "",
-        mask:true,
-        pop:false
+        mask: true,
+        pop: false
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
+    onLoad: function(options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
     },
-    popNotice:function(){
+    popNotice: function() {
         let pop = !this.data.pop
         this.setData({
-            pop:pop
+            pop: pop
         })
     },
-    change:function(e){
+    change: function(e) {
         console.log(e)
-        if (e.detail.value.length >= 1){
+        if (e.detail.value.length >= 1) {
             this.buy()
         } else {
             app.toast({
-                title:"不点击同意将无法升级为钻石会员"
+                title: "不点击同意将无法升级为钻石会员"
             })
         }
     },
-    buy: function () {
+    buy: function() {
         let that = this;
         let text = ""
         app.wxrequest({
@@ -58,139 +58,75 @@ Page({
                         break;
                 }
                 app.toast({
-                    title:text
+                    title: text
                 })
             }
         })
     },
-    pay: function (order_no) {
+    pay: function(order_no) {
         let that = this
-        app.wxrequest({
-            url: "pay/pay",
-            data: {
-                order_no: order_no,
-                payment: '2',
-                platform: '1'
-            },
-            host: 2,
-            nocon: true,
+        app.wxpay({
+            order_no: order_no,
+            payment: '2',
             success(res) {
-                let parameters = res.parameters
-                wx.requestPayment({
-                    timeStamp: parameters.timeStamp,
-                    nonceStr: parameters.nonceStr,
-                    package: parameters.package,
-                    signType: parameters.signType,
-                    paySign: parameters.paySign,
-                    success(res) {
-                        that.setData({
-                            mask: true
-                        })
-                    },
-                    fail(res) {
-                        that.gopaystatus({
-                            order_no: res.data.order_no,
-                            status: 2
-                        })
-                    }
+                that.setData({
+                    mask: true
                 })
             },
-            error(code) {
-                switch (parseInt(code)) {
-                    case 3000:
-                        app.toast({
-                            title: '不存在需要支付的订单'
-                        })
-                        break;
-                    case 3001:
-                        app.toast({
-                            title: '订单号错误'
-                        })
-                        break;
-                    case 3002:
-                        app.toast({
-                            title: '订单类型错误'
-                        })
-                        break;
-                    case 3004:
-                        app.toast({
-                            title: '订单已取消'
-                        })
-                        break;
-                    case 3005:
-                        app.toast({
-                            title: '订单已关闭'
-                        })
-                        break;
-                    case 3006:
-                        app.toast({
-                            title: '订单已付款'
-                        })
-                        break;
-                    case 3007:
-                        app.toast({
-                            title: '订单已过期'
-                        })
-                        break;
-                    case 3010:
-                        app.toast({
-                            title: '支付失败'
-                        })
-                        break;
-                    default:
-                        app.toast({
-                            title: '意料之外的网络错误'
-                        })
-                }
+            fail(res) {
+                that.gopaystatus({
+                    order_no: res.data.order_no,
+                    status: 2
+                })
             }
         })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {
+    onReady: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
+    onShow: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function () {
+    onHide: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {
+    onUnload: function() {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
+    onReachBottom: function() {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function () {
+    onShareAppMessage: function() {
 
     }
 })

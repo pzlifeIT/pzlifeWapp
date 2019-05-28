@@ -239,76 +239,33 @@ Page({
      */
     pay: function(data) {
         let that = this
-        app.wxrequest({
-            url: 'pay/pay',
-            data: {
-                order_no: data.order_no,
-                payment: '1',
-                platform: '1'
-            },
-            host: 2,
-            nocon: true,
-            success: function(res) {
-                let parameters = res.parameters
-                wx.requestPayment({
-                    timeStamp: parameters.timeStamp,
-                    nonceStr: parameters.nonceStr,
-                    package: parameters.package,
-                    signType: parameters.signType,
-                    paySign: parameters.paySign,
-                    success(res) {
-                        that.setData({
-                            payStatus: true
-                        })
-                        that.gopaystatus({
-                            order_no: data.order_no,
-                            status: 1
-                        })
-                    },
-                    fail(res) {
-                        that.setData({
-                            payStatus: false
-                        })
-                        that.gopaystatus({
-                            order_no: data.order_no,
-                            status: 2
-                        })
-                    }
+        app.wxpay({
+            order_no: data.order_no,
+            payment: '1',
+            success(res) {
+                that.setData({
+                    payStatus: true
+                })
+                that.gopaystatus({
+                    order_no: data.order_no,
+                    status: 1
                 })
             },
-            error: function(code) {
-                switch (parseInt(code)) {
-                    case 3000:
-                        app.toast({ title: '不存在需要支付的订单' })
-                        break;
-                    case 3001:
-                        app.toast({ title: '订单号错误' })
-                        break;
-                    case 3002:
-                        app.toast({ title: '订单类型错误' })
-                        break;
-                    case 3004:
-                        app.toast({ title: '订单已取消' })
-                        break;
-                    case 3005:
-                        app.toast({ title: '订单已关闭' })
-                        break;
-                    case 3006:
-                        app.toast({ title: '订单已付款' })
-                        break;
-                    case 3007:
-                        app.toast({ title: '订单已过期' })
-                        break;
-                    case 3010:
-                        app.toast({ title: '支付失败' })
-                        wx.switchTab({
-                            url: '/pages/cart/cart'
-                        })
-                        break;
-                    default:
-                        app.toast({ title: '意料之外的错误' })
+            fail(res) {
+                that.setData({
+                    payStatus: false
+                })
+                that.gopaystatus({
+                    order_no: data.order_no,
+                    status: 2
+                })
+            },
+            error(code) {
+                if (code == 3010) {
+                    wx.switchTab({
+                        url: '/pages/cart/cart'
+                    })
                 }
-
             }
         })
     },

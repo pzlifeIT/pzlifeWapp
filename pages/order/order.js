@@ -14,7 +14,7 @@ Page({
         order_list: [],
         user_identity: 0,
         imgHost: '',
-        orderno:''
+        orderno: ''
     },
     comfir: function(e) {
         this.setData({
@@ -51,11 +51,11 @@ Page({
     confirmOrder: function(e) {
         let orderno = e.currentTarget.dataset.orderno
         this.setData({
-            mask:true,
-            orderno:orderno
+            mask: true,
+            orderno: orderno
         })
     },
-    confirm:function(){
+    confirm: function() {
         let that = this,
             orderno = this.data.orderno
         app.wxrequest({
@@ -68,7 +68,7 @@ Page({
                     page: 1,
                     reach: true,
                     order_list: [],
-                    mask:false
+                    mask: false
                 })
                 that.getUserOrderList({
                     orderStatus: that.data.status
@@ -87,68 +87,21 @@ Page({
     gopay: function(e) {
         console.log(e.currentTarget.dataset.orderno)
         let that = this
-        app.wxrequest({
-            url: 'pay/pay',
-            data: {
-                order_no: e.currentTarget.dataset.orderno,
-                payment: '1',
-                platform: '1'
-            },
-            host: 2,
-            nocon: true,
-            success: function(res) {
-                let parameters = res.parameters
-                wx.requestPayment({
-                    timeStamp: parameters.timeStamp,
-                    nonceStr: parameters.nonceStr,
-                    package: parameters.package,
-                    signType: parameters.signType,
-                    paySign: parameters.paySign,
-                    success(res) {
-                        that.setData({
-                            page: 1,
-                            reach: true,
-                            order_list: []
-                        })
-                        that.getUserOrderList({
-                            orderStatus: that.data.status
-                        })
-                    },
-                    fail(res) {
-                        app.toast({ title: '支付失败' })
-                    }
+        app.wxpay({
+            order_no: e.currentTarget.dataset.orderno,
+            payment: '1',
+            success(res) {
+                that.setData({
+                    page: 1,
+                    reach: true,
+                    order_list: []
+                })
+                that.getUserOrderList({
+                    orderStatus: that.data.status
                 })
             },
-            error: function(code) {
-                switch (parseInt(code)) {
-                    case 3000:
-                        app.toast({ title: '不存在需要支付的订单' })
-                        break;
-                    case 3001:
-                        app.toast({ title: '订单号错误' })
-                        break;
-                    case 3002:
-                        app.toast({ title: '订单类型错误' })
-                        break;
-                    case 3004:
-                        app.toast({ title: '订单已取消' })
-                        break;
-                    case 3005:
-                        app.toast({ title: '订单已关闭' })
-                        break;
-                    case 3006:
-                        app.toast({ title: '订单已付款' })
-                        break;
-                    case 3007:
-                        app.toast({ title: '订单已过期' })
-                        break;
-                    case 3010:
-                        app.toast({ title: '支付失败' })
-                        break;
-                    default:
-                        app.toast({ title: '意料之外的网络错误' })
-                }
-
+            fail(res) {
+                app.toast({ title: '支付失败' })
             }
         })
     },
