@@ -134,6 +134,7 @@ Page({
         wx.login({
             success(res) {
                 if (res.code) {
+                    console.log(res.code)
                     app.wxrequest({
                         url: "user/register",
                         data: {
@@ -159,7 +160,7 @@ Page({
                             } else if (res == 3001) {
                                 app.toast({title: '手机格式有误'})
                             } else if (res == 3002) {
-                                app.toast({title: 'code无效'})
+                                app.toast({title: '请重新点击注册按钮'})
                             } else if (res == 3004) {
                                 app.toast({title: '验证码格式有误'})
                             } else if (res == 3005) {

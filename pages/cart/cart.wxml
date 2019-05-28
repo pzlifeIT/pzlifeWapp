@@ -20,7 +20,7 @@
 				</view>
 				<view class='goods_desc'>
 					<text class='goods_title'>{{goods.goods_name}}</text>
-					<text class='goods_subtitle'>{{goods.subtitle}}</text>
+					<text class='goods_subtitle'>{{goods.goods_sku_name}}</text>
 					<text class='goods_price'>￥{{goods.retail_price}}</text>
 					<text class='rebate'>钻石再让利</text><text class='rebate_money'>￥{{goods.brokerage}}</text>
 				</view>

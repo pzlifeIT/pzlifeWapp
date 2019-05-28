@@ -216,7 +216,7 @@ page {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 230rpx;
+    margin-top: 380rpx;
 }
 
 .not-case {

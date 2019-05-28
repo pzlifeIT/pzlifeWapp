@@ -404,6 +404,7 @@ swiper-item {
     font-size: 28rpx;
     color: #404040;
     display: block;
+    overflow: auto;
 }
 
 .present text {

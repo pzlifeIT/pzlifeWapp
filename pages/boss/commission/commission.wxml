@@ -9,16 +9,16 @@
             <view class="yan-d"  wx:if="{{ent == 1 && yan == false}}" bindtap="hidden">
                 <image class="yan" src="{{imgHost}}eyes_close.png" lazy-load="true"></image>
             </view>
-            <text class="ct-num db" wx:if="{{yan}}">{{info.commission_all}}</text>
+            <text class="ct-num db" wx:if="{{yan}}">{{info.commission_all || 0}}</text>
             <text class="ct-num db" wx:else>********</text>
         </view>
         <view class="ch-half ch-left {{div == 1 ?'selected':''}}" bindtap="clickDiv" data-div="1">
             <text class="db ch-name unit">经营性收益</text>
-            <text class="db ch-num">{{info.bonus}}</text>
+            <text class="db ch-num">{{info.bonus || 0}}</text>
         </view>
         <view class="ch-half ch-center {{div == 2 ?'selected':''}}" bindtap="clickDiv" data-div="2">
             <text class="db ch-name unit">招商代理收益</text>
-            <text class="db ch-num">{{info.merchants}}</text>
+            <text class="db ch-num">{{info.merchants || 0}}</text>
         </view>
         <view class="ch-half ch-right {{div == 3 ?'selected':''}}" bindtap="clickDiv" data-div="3">
             <text class="db ch-name unit">其他收益</text>
@@ -36,15 +36,15 @@
 <view class="redHint" wx:if="{{div == 1}}">
     <view class="redText" wx:if="{{num == 1 && eranList.length > 0}}">
         <view class="red-left">个人消费收益已入账合计</view>
-        <view class="red-right">{{total}} 元</view>
+        <view class="red-right">{{total || 0}} 元</view>
     </view>
     <view class="redText" wx:if="{{num == 2 && huiyuan.length > 0}}">
         <view class="red-left">会员消费收益已入账合计</view>
-        <view class="red-right">{{total}} 元</view>
+        <view class="red-right">{{total || 0}} 元</view>
     </view>
     <view class="redText" wx:if="{{num == 3 && qudao.length > 0}}">
         <view class="red-left">渠道收益已入账合计</view>
-        <view class="red-right">{{total}} 元</view>
+        <view class="red-right">{{total || 0}} 元</view>
     </view>
 </view>
 <view class="list " wx:if="{{num == 1 && div == 1}}">
