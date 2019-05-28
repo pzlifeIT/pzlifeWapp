@@ -43,7 +43,7 @@
 		<text class="jf-text">创建时间：</text><text class="jf-num rest">{{order_info.create_time}}</text>
 	</view>
 	<view class="or-footer">
-		<view class="footer-left"><text class="sum">共件 共付：<text class="total">￥{{order_info.pay_money}}</text></text></view>
+		<view class="footer-left"><text class="sum">共付：<text class="total">￥{{order_info.pay_money}}</text></text></view>
 	</view>
 </view>
 <view class="foot-back" ></view>

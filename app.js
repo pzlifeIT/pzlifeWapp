@@ -1,4 +1,4 @@
-//app.js
+//that.js
 const config = require('config/config.js')
 App({
     onLaunch: function(opt) {
@@ -219,52 +219,38 @@ App({
                         })
                     },
                     error(code) {
+                        let text = ''
                         switch (parseInt(code)) {
                             case 3000:
-                                app.toast({
-                                    title: '不存在需要支付的订单'
-                                })
+                                text = '不存在需要支付的订单'
                                 break;
                             case 3001:
-                                app.toast({
-                                    title: '订单号错误'
-                                })
+                                text = '订单号错误'
                                 break;
                             case 3002:
-                                app.toast({
-                                    title: '订单类型错误'
-                                })
+                                text = '订单类型错误'
                                 break;
                             case 3004:
-                                app.toast({
-                                    title: '订单已取消'
-                                })
+                                text = '订单已取消'
                                 break;
                             case 3005:
-                                app.toast({
-                                    title: '订单已关闭'
-                                })
+                                text = '订单已关闭'
                                 break;
                             case 3006:
-                                app.toast({
-                                    title: '订单已付款'
-                                })
+                                text = '订单已付款'
                                 break;
                             case 3007:
-                                app.toast({
-                                    title: '订单已过期'
-                                })
+                                text = '订单已过期'
                                 break;
                             case 3010:
-                                app.toast({
-                                    title: '支付失败'
-                                })
+                                text = '支付失败'
                                 break;
                             default:
-                                app.toast({
-                                    title: '意料之外的网络错误'
-                                })
+                                text = '意料之外的网络错误'
                         }
+                        that.toast({
+                            title: text
+                        })
                         typeof data.error == 'function' ? data.error(code) : ''
                     }
                 })
@@ -305,15 +291,13 @@ App({
                 if (res.statusCode == 200) {
                     let result = JSON.parse(res.data);
                     if (result.code == 200) {
-                        if (typeof obj.success == 'function') {
-                            obj.success(result)
-                        }
+                        typeof obj.success == 'function' ? obj.success(result) : ''
                     } else {
                         if (result.code == 5000) {
                             if (obj.nologin) return
                             that.login()
-                        } else if (typeof obj.error == 'function') {
-                            obj.error(result.code)
+                        } else {
+                            typeof obj.error == 'function' ? obj.error(result.code) : ''
                         }
                     }
                 } else {
