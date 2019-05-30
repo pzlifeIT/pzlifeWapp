@@ -379,16 +379,41 @@ App({
     },
     onShow: function(opt) {
         if (opt.query.scene) {
-            this.globalData.pid = opt.query.scene
+            this.globalData.pid = this.disScene(opt.query.scene).pid
         }
         if (opt.query.pid) {
             this.globalData.pid = opt.query.pid
         }
+        console.log(this.globalData.pid)
         this.getconid()
         this.globalData.host = config
         this.getUserRead(this.globalData.pid)
         if (this.globalData.pid == '') return
         this.indexmain(this.globalData.pid)
+    },
+    disScene(scene) {
+        // {
+        //   id:'',
+        //   pid:''
+        // }
+        let href = decodeURIComponent(scene),
+            list = {};
+        if (href.indexOf('&') != -1) {
+            let arr = href.split('&'),
+                len = arr.length
+            for (let i = 0; i < len; i++) {
+                if (arr[i].indexOf('=') != -1) {
+                    let l = arr[i].split('=')
+                    list[l[0]] = l[1]
+                }
+            }
+        } else if (href.indexOf('=') != -1) {
+            let arr = href.split('=')
+            list[arr[0]] = arr[1]
+        } else {
+            list.pid = href
+        }
+        return list
     },
     getUserRead(pid = '') {
         let that = this
