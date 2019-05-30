@@ -65,6 +65,7 @@ Page({
             id = dataset.id,
             idx = dataset.idx,
             dataattr = this.data.attr;
+        console.log(dataattr)
         if (dataattr[idx] == id) {
             dataattr[idx] = 0
         } else {

@@ -49,6 +49,7 @@ Page({
             },
             success: function(res) {
                 that.disaddress(id)
+                app.globalData.addressId = id
             }
         })
     },

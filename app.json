@@ -74,7 +74,9 @@
     "pages/diamActive/withdraw/record/record",
     "pages/diamActive/withdraw/selectCard/selectCard",
     "pages/diamActive/withdraw/submitStatus/submitStatus",
-    "pages/my/getVip/getVip"
+    "pages/my/getVip/getVip",
+    "pages/events/events",
+    "pages/events/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "dark",

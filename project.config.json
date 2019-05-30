@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 63,
+			"current": 65,
 			"list": [
 				{
 					"id": 0,
@@ -484,6 +484,20 @@
 					"id": -1,
 					"name": "button",
 					"pathName": "pages/button/button",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 65,
+					"name": "huodong ",
+					"pathName": "pages/events/events",
+					"query": "scene=id%3D3%26pid%3D24858",
+					"scene": 1047
+				},
+				{
+					"id": -1,
+					"name": "活动商品",
+					"pathName": "pages/events/detail/detail",
 					"query": "",
 					"scene": null
 				}

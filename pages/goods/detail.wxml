@@ -97,9 +97,7 @@
                         <text>{{item.spe_name}}</text>
                     </view>
                     <view class='attr'>
-                        <view wx:for="{{item.list}}" wx:for-item="item1" data-i="{{item1.id}}"
-                              class='attr_name {{ item1.id == attr[idx]?"active":"" }}' wx:key="{{item1.id}}"
-                              bindtap='selectAttr' data-idx='{{idx}}' data-id="{{item1.id}}">
+                        <view wx:for="{{item.list}}" wx:for-item="item1" data-i="{{item1.id}}" class='attr_name {{ item1.id == attr[idx]?"active":"" }}' wx:key="{{item1.id}}" bindtap='selectAttr' data-idx='{{idx}}' data-id="{{item1.id}}">
                             {{item1.attr_name}}
                         </view>
                     </view>
