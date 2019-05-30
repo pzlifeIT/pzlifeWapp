@@ -8,8 +8,9 @@ Page({
     data: {
         imgHost: "",
         num: 1,
-        data:{},
-        scene:{}
+        data: {},
+        scene: {},
+        enScene: ''
     },
 
     /**
@@ -19,14 +20,19 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
-        this.getEvents()
+        let that = this
         console.log(decodeURIComponent(options.scene))
         console.log(options)
-        if (options.scene){
+        console.log(options.scene)
+        if (options.scene) {
             this.setData({
+                enScene: options.scene,
                 scene: app.disScene(options.scene)
+            }, function () {
+                that.getEvents()
             })
         }
+
     },
     getEvents: function () {
         let that = this
@@ -39,7 +45,7 @@ Page({
             success(res) {
                 console.log(res)
                 that.setData({
-                    data:res.data
+                    data: res.data
                 })
             }
         })
@@ -102,6 +108,11 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        let that = this
+        let share = {
+            title: "线下活动",
+            path: "/pages/events/events?scene=" + that.data.enScene,
+        };
+        return share
     }
 })

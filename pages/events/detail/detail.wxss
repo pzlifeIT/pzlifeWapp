@@ -190,6 +190,7 @@ page{
     position: fixed;
     bottom: 0;
     background-color: #FFFFFF;
+    z-index: 66;
 }
 .left{
     width: 530rpx;
@@ -266,7 +267,7 @@ page{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 77;
 }
 .pop-box{
     width: 451rpx;

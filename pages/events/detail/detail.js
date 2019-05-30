@@ -263,6 +263,11 @@ Page({
             return false
         }
     },
+    hiddenPop:function(){
+        this.setData({
+            pop:false
+        })
+    },
     way: function (e) {
         // console.log(e)
         // if (this.data.attrText.indexOf("1") != -1){
@@ -335,9 +340,7 @@ Page({
       })
     },
     goEvents:function(){
-      wx.navigateTo({
-          url:''
-      })
+      wx.navigateBack()
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

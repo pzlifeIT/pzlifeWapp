@@ -98,14 +98,14 @@
     <view class="right" bindtap="buy">立即支付</view>
 </view>
 
-<view class="pop" wx:if="{{pop}}">
+<view class="pop" wx:if="{{pop}}" bindtap="hiddenPop">
     <view class="pop-box">
         <view class="icon">
             <view class="chang {{status?'':'fail-chang'}}"></view>
             <view class="duan {{status?'':'fail-duan'}}"></view>
         </view>
         <view class="success">{{status ? '支付成功':'支付失败'}}</view>
-        <view class="index" bindtap="goIndex">返回首页</view>
-        <view class="events" bindtap="goEvents">返回活动页</view>
+        <view class="index" catchtap="goIndex">返回首页</view>
+        <view class="events" catchtap="goEvents">返回活动页</view>
     </view>
 </view>
