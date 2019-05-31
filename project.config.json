@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
-	"appid": "wxa8c604ce63485956",
+	"appid": "wx1771b2e93c87e22c",
 	"projectname": "pzlifeWapp",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -498,7 +498,7 @@
 					"id": 66,
 					"name": "活动商品",
 					"pathName": "pages/events/events",
-					"query": "",
+					"query": "scene=id%3d1",
 					"scene": null
 				}
 			]
