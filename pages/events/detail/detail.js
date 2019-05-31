@@ -91,7 +91,8 @@ Page({
                     that.setData({
                         status:true,
                         pop:true
-                    })
+                    });
+                    that.getUserInfo()
                 } else {
                     that.pay({order_no:res.order_no})
                 }
@@ -163,7 +164,8 @@ Page({
                   that.setData({
                       status:true,
                       pop:true
-                  })
+                  });
+                  that.getUserInfo()
               } else {
                   that.pay({order_no:res.order_no})
               }
@@ -212,7 +214,8 @@ Page({
                 that.setData({
                     status: true,
                     pop:true
-                })
+                });
+                that.getUserInfo()
             },
             fail(res) {
                 that.setData({
