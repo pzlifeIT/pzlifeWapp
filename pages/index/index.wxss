@@ -213,8 +213,8 @@ page {
 }
 
 .new-more image {
-    width: 14rpx;
-    height: 24rpx;
+    width: 13rpx;
+    height: 23rpx;
 }
 
 .new-line {

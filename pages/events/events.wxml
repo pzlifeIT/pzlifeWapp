@@ -1,0 +1,25 @@
+<!--pages/events/events.wxml-->
+<view class="banner">
+    <!--<swiper class="slider" circular bindchange="slider">-->
+    <!--<swiper-item>-->
+    <image lazy-load="true" class="slider-img" src="{{data.image_path}}"></image>
+    <!--</swiper-item>-->
+    <!--</swiper>-->
+    <!--<view class="num">{{num}}/3</view>-->
+</view>
+
+<view class="goods-list">
+    <block wx:for="{{data.goods}}">
+        <view class="one-goods" bindtap="buy" data-goodsid="{{item.id}}">
+            <image class="goods-img" src="{{item.image}}"></image>
+            <view class="goods-info">
+                <view class="title">{{item.goods_name}}</view>
+                <view class="subtitle">{{item.subtitle}}</view>
+                <view class="price">￥{{item.min_retail_price}}
+                    <text wx:if="{{item.min_market_price != 0}}">￥{{item.min_market_price}}</text>
+                </view>
+            </view>
+            <view class="button">立即购买</view>
+        </view>
+    </block>
+</view>

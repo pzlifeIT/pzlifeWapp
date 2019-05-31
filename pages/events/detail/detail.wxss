@@ -1,0 +1,355 @@
+/* pages/events/detail/detail.wxss */
+page{
+    background-color: #F7F7F7;
+    width: 100%;
+}
+.yy{
+    width: 710rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+    background-color: #FFFFFF;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+}
+.goods-info{
+    display: flex;
+}
+.goods-img{
+    width: 226rpx;
+    height: 226rpx;
+    background-color: #389eec;
+    border-radius: 20rpx;
+}
+.detail{
+    width: 484rpx;
+    height: 226rpx;
+    padding: 12rpx 40rpx;
+    box-sizing: border-box;
+}
+.title{
+    font-size: 28rpx;
+    color: #404040;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+}
+.subtitle{
+    font-size: 24rpx;
+    color: #666666;
+    margin-top: 6rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+}
+.price{
+    font-size: 38rpx;
+    color: #E61F18;
+    margin-top: 41rpx;
+}
+.price text{
+    text-decoration: line-through;
+    color: #D6D6D6;
+    font-size: 24rpx;
+}
+.spec{
+    padding: 25rpx;
+    box-sizing: border-box;
+}
+.spec-one{
+    margin-left: 20rpx;
+}
+.attr-list{
+    margin-left: 10rpx;
+}
+.spec-text{
+    color: #757575;
+    font-size: 32rpx;
+    margin-bottom: 16rpx;
+}
+.spec-name{
+    color: #757575;
+    font-size: 30rpx;
+    margin: 10rpx 0;
+}
+.attr{
+    display: inline-block;
+    font-size: 32rpx;
+    color: #757575;
+    padding: 12rpx 20rpx;
+    background-color: #F7F7F7;
+    border-radius: 13rpx;
+    margin-right: 20rpx;
+    margin-bottom: 25rpx;
+}
+.active{
+    border: 1px solid #E61F18;
+    color: #E61F18;
+}
+.num{
+    padding: 25rpx 20rpx;
+    overflow: auto;
+    position: relative;
+}
+.num-text{
+    font-size: 32rpx;
+    color: #757575;
+    display: inline-block;
+    float: left;
+}
+.select-num{
+    /*display: inline-block;*/
+    float: right;
+    display: flex;
+    position: absolute;
+    right: 25rpx;
+    bottom: 20rpx;
+}
+.jian{
+    width: 57rpx;
+    text-align: center;
+    line-height: 52rpx;
+    color: #707070;
+    font-size: 36rpx;
+    border: 1px solid #D6D6D6;
+    border-right: none;
+    border-bottom-left-radius: 13rpx;
+    border-top-left-radius: 13rpx;
+    display: inline-block;
+}
+.input{
+    width: 59rpx;
+    height: 52rpx;
+    border: 1px solid #D6D6D6;
+    display: inline-block;
+    text-align: center;
+    color: #808080;
+    font-size: 27rpx;
+}
+.jia{
+    width: 57rpx;
+    text-align: center;
+    line-height: 52rpx;
+    color: #707070;
+    font-size: 36rpx;
+    border: 1px solid #D6D6D6;
+    border-bottom-right-radius: 13rpx;
+    border-top-right-radius: 13rpx;
+    display: inline-block;
+    border-left: none;
+}
+.way{
+    padding: 25rpx 20rpx;
+}
+.select-way{
+    width: 100%;
+    margin-top: 26rpx;
+}
+.radio-group{
+    width: 100%;
+    display: flex;
+}
+.auto ,.home{
+    width: 49%;
+    height: 58rpx;
+    display: inline-block;
+}
+.mid{
+    width: 0;
+    height: 58rpx;
+    border: 1rpx dashed #707070;
+    /*background-color: #707070;*/
+}
+.radio{
+    transform: scale(0.8);
+    margin-left: 58rpx;
+    color: #666666;
+}
+.dedu{
+    padding: 25rpx 20rpx;
+    /*margin-bottom: 111rpx;*/
+}
+.text{
+    display: inline-block;
+    color: #757575;
+    font-size: 32rpx;
+}
+.text text{
+    color: #B6B6B6;
+}
+.se{
+    display: inline-block;
+    float: right;
+}
+.footer{
+    width: 750rpx;
+    height: 92rpx;
+    position: fixed;
+    bottom: 0;
+    background-color: #FFFFFF;
+    z-index: 66;
+}
+.left{
+    width: 530rpx;
+    height: 92rpx;
+    display: inline-block;
+    text-align: left;
+    line-height: 92rpx;
+    padding-left: 10rpx;
+    box-sizing: border-box;
+    color: #202020;
+    font-size: 26rpx;
+}
+.left text{
+    color: #E61F18;
+    font-size: 30rpx;
+}
+.right{
+    width: 220rpx;
+    height: 92rpx;
+    font-size: 28rpx;
+    color: #fffefe;
+    text-align: center;
+    line-height: 92rpx;
+    background-color: #E61F18;
+    display: inline-block;
+}
+.san{
+    width: 22rpx;
+    height: 22rpx;
+    border-top: 1rpx solid #888888;
+    border-right: 1rpx solid #888888;
+    transform: rotate(45deg);
+}
+.address{
+    padding: 25rpx 20rpx;
+    height: 91rpx;
+    position: relative;
+}
+.jt{
+    width: 40rpx;
+    height: 100%;
+    position: absolute;
+    right: 20rpx;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add{
+    padding: 25rpx 20rpx;
+    position: relative;
+}
+.add-info{
+    width: 610rpx;
+}
+.name{
+    font-size: 30rpx;
+    color: #404040;
+    margin-bottom: 10rpx;
+}
+.add-detail{
+    font-size: 26rpx;
+    color: #888888;
+    margin-left: 20rpx;
+}
+.pop{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 77;
+}
+.pop-box{
+    width: 451rpx;
+    height: 275rpx;
+    background-color: #FFFFFF;
+    border-radius: 10rpx;
+}
+.success{
+    width: 100%;
+    text-align: center;
+    color: #666666;
+    font-size: 38rpx;
+    margin-bottom: 23rpx;
+}
+.icon{
+   position: relative;
+    height: 50rpx;
+    margin: 44rpx auto 22rpx;
+    /*margin-top: 44rpx;*/
+}
+.index{
+    width: 168rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    text-align: center;
+    color: #757575;
+    font-size: 28rpx;
+    border: 1px solid #707070;
+    border-radius: 13rpx;
+    margin-left: 35rpx;
+    display: inline-block;
+}
+.events{
+    width: 168rpx;
+    height: 60rpx;
+    border: 1px solid #707070;
+    line-height: 56rpx;
+    text-align: center;
+    color: #757575;
+    font-size: 28rpx;
+    border-radius: 13rpx;
+    margin-left: 45rpx;
+    display: inline-block;
+}
+.chang{
+    width: 3px;
+    height: 58rpx;
+    background-color: #1db816;
+    position: absolute;
+    top: 1rpx;
+    right: 203rpx;
+    transform: rotate(45deg);
+    border-radius: 2px;
+}
+.duan{
+    width: 3px;
+    height: 35rpx;
+    background-color: #1db816;
+    position: absolute;
+    top: 24rpx;
+    left: 213rpx;
+    transform: rotate(-45deg);
+    border-radius: 2px;
+}
+.fail-chang{
+    background-color: #E61F18;
+    right: 222rpx;
+}
+.fail-duan{
+    background-color: #E61F18;
+    height: 58rpx;
+    left: 222rpx;
+    top: 2rpx;
+}
+.exp{
+    font-size: 22rpx;
+    color: #B6B6B6;
+    display: block;
+    width: 154rpx;
+    margin-left: 122rpx;
+}
+.mar{
+    width: 750rpx;
+    height: 111rpx;
+}

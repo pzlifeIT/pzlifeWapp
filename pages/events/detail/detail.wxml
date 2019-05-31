@@ -1,0 +1,111 @@
+<!--pages/events/detail/detail.wxml-->
+<view class="goods-info yy">
+    <image class="goods-img" lazy-load src="{{goods_data.image}}"></image>
+    <view class="detail">
+        <view class="title">{{goods_data.goods_name}}</view>
+        <view class="subtitle">{{goods_data.subtitle}}</view>
+        <view class="price" wx:if="{{goods_data.min_retail_price != goods_data.max_retail_price}}">
+            ￥{{goods_data.min_retail_price}} - {{goods_data.max_retail_price}}
+            <text wx:if="{{goods_data.min_market_price != goods_data.max_market_price}}">
+                <text>￥{{goods_data.min_market_price}}</text> - <text>{{goods_data.max_market_price}}</text>
+            </text>
+            <text wx:else>￥{{goods_data.min_market_price}}</text>
+        </view>
+        <view class="price" wx:else>￥{{goods_data.min_retail_price}}
+            <text wx:if="{{goods_data.min_market_price != goods_data.max_market_price}}">
+                <text>￥{{goods_data.min_market_price}}</text> - <text>{{goods_data.max_market_price}}</text>
+            </text>
+            <text wx:else>￥{{goods_data.min_market_price}}</text>
+        </view>
+    </view>
+</view>
+
+<view class="spec yy">
+    <view class="spec-text">规格选择</view>
+    <view class="spec-one">
+        <block wx:for="{{goods_spec}}" wx:for-index="ind">
+            <!--<view class="spec-name">{{item.spe_name}}</view>-->
+            <view class="attr-list">
+                <block wx:for="{{item.list}}">
+                    <view class="attr {{attr[ind] == item.id ? 'active':''}}" bindtap="selectAttr" data-id="{{item.id}}"
+                          data-ind="{{ind}}" data-select="{{attr[ind] == item.id ? 'select' : ''}}">{{item.attr_name}}
+                    </view>
+                </block>
+            </view>
+        </block>
+    </view>
+</view>
+
+<view class="num yy">
+    <view class="num-text">数量选择</view>
+    <view class="select-num">
+        <view class="jian" bindtap="jian">-</view>
+        <input class="input" type="text" value="{{num}}" disabled/>
+        <view class="jia" bindtap="jia">+</view>
+    </view>
+</view>
+<view class="way yy">
+    <view class="spec-text">提货方式</view>
+    <view class="select-way">
+        <radio-group class="radio-group" bindchange="way">
+            <view class="auto fl">
+                <radio class="radio" color="#E61F18" value="1" checked> 线下自提</radio>
+            </view>
+            <view class="mid"></view>
+            <view class="home fl">
+                <radio class="radio" color="#E61F18" value="2"> 配送到家</radio>
+                <text class="exp">(价格含运费)</text>
+            </view>
+        </radio-group>
+    </view>
+</view>
+
+<view class="address yy" wx:if="{{addressId == '' && hidden == 2}}" bindtap="goAddress">
+    <view class="num-text">收货地址</view>
+    <view class="jt">
+        <view class="san"></view>
+    </view>
+</view>
+
+<view class="add yy" bindtap="goAddress" wx:elif="{{addressId != '' && hidden == 2}}">
+    <view class="spec-text">收货地址</view>
+    <view class="add-info">
+        <view class="name">{{address.name}} {{address.mobile}}</view>
+        <view class="add-detail">{{address.province_name}} {{address.city_name}} {{address.area_name}}
+            {{address.address}}
+        </view>
+    </view>
+    <view class="jt">
+        <view class="san"></view>
+    </view>
+</view>
+
+<view class="dedu yy">
+    <view class="text">使用商券抵扣金额
+        <text>(余额：￥{{info.balance || 0}})</text>
+    </view>
+    <radio-group class="se">
+        <radio color="#e61f18" bindtap="useCase" value="1" checked="{{use}}"></radio>
+    </radio-group>
+</view>
+
+<view class="mar"></view>
+
+<view class="footer">
+    <view class="left">总金额：
+        <text>￥{{total}}</text>
+    </view>
+    <view class="right" bindtap="buy">立即支付</view>
+</view>
+
+<view class="pop" wx:if="{{pop}}" bindtap="hiddenPop">
+    <view class="pop-box">
+        <view class="icon">
+            <view class="chang {{status?'':'fail-chang'}}"></view>
+            <view class="duan {{status?'':'fail-duan'}}"></view>
+        </view>
+        <view class="success">{{status ? '支付成功':'支付失败'}}</view>
+        <view class="index" catchtap="goIndex">返回首页</view>
+        <view class="events" catchtap="goEvents">返回活动页</view>
+    </view>
+</view>

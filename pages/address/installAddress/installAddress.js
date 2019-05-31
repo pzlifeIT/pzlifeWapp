@@ -208,6 +208,7 @@ Page({
                 address_id: id
             },
             success: function(res) {
+                app.globalData.addressId = id
                 wx.navigateBack()
             }
         })
