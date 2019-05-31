@@ -7,12 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/events/detail/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/detail/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/events/detail/detail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/detail/detail.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/events/detail/detail.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/detail/detail.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/events/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/events.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/events/events.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/events.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/case/case.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/case/case.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/commission/commission.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/commission/commission.wxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,14 +58,14 @@
           <entry key="js" value="364" />
           <entry key="json" value="70" />
           <entry key="php" value="4" />
-          <entry key="wxml" value="289" />
+          <entry key="wxml" value="290" />
           <entry key="wxss" value="179" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="179" />
-          <entry key="HTML" value="292" />
+          <entry key="HTML" value="293" />
           <entry key="JSON" value="70" />
           <entry key="JavaScript" value="364" />
           <entry key="PHP" value="4" />
@@ -81,14 +78,14 @@
           <entry key="html" value="45" />
           <entry key="js" value="42980" />
           <entry key="json" value="305" />
-          <entry key="wxml" value="27117" />
+          <entry key="wxml" value="27122" />
           <entry key="wxss" value="26051" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="26051" />
-          <entry key="HTML" value="27198" />
+          <entry key="HTML" value="27203" />
           <entry key="JSON" value="305" />
           <entry key="JavaScript" value="42980" />
         </counts>
@@ -96,7 +93,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5279248">
+    <splitter split-orientation="horizontal" split-proportion="0.3962375">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -151,6 +148,15 @@
       </split-first>
       <split-second>
         <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/my/commission/commission.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-130">
+                  <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/goods/detail.wxml">
               <provider selected="true" editor-type-id="text-editor">
@@ -163,8 +169,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/events/events.wxss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1040">
-                  <caret line="97" column="18" lean-forward="true" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+                <state relative-caret-position="494">
+                  <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -172,8 +178,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="15" column="17" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="17" />
+                <state relative-caret-position="520">
+                  <caret line="236" column="46" lean-forward="true" selection-start-line="236" selection-start-column="46" selection-end-line="236" selection-end-column="46" />
                 </state>
               </provider>
             </entry>
@@ -196,11 +202,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/events/detail/detail.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+                <state relative-caret-position="-5759">
+                  <caret line="56" column="28" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="28" />
                   <folding>
                     <element signature="e#9217#9237#0" />
                     <element signature="e#9683#9699#0" />
@@ -215,15 +221,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-2834">
                   <caret line="74" column="20" lean-forward="true" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.wxss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-743">
-                  <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -252,7 +249,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>createMemberOrder</find>
       <find>list-right</find>
       <find>previewImage</find>
       <find>bankId</find>
@@ -282,12 +278,14 @@
       <find>buypup</find>
       <find>getGoodsAway</find>
       <find>skus</find>
+      <find>库存告罄</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;image lazy-load=&quot;true&quot;</replace>
       <replace>&lt;image lazy-load='true'</replace>
       <replace>console.log</replace>
       <replace>bounty</replace>
+      <replace>库存已到极限</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -326,7 +324,6 @@
         <option value="$PROJECT_DIR$/pages/login/register/register.js" />
         <option value="$PROJECT_DIR$/pages/my/my.wxml" />
         <option value="$PROJECT_DIR$/pages/cart/cart.wxml" />
-        <option value="$PROJECT_DIR$/pages/my/commission/commission.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/boss.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/case/case.wxml" />
         <option value="$PROJECT_DIR$/pages/boss/commission/commission.wxml" />
@@ -340,13 +337,14 @@
         <option value="$PROJECT_DIR$/pages/goods/detail.wxml" />
         <option value="$PROJECT_DIR$/pages/goods/detail.js" />
         <option value="$PROJECT_DIR$/pages/events/events.wxml" />
-        <option value="$PROJECT_DIR$/pages/events/events.wxss" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.js" />
         <option value="$PROJECT_DIR$/pages/events/events.js" />
         <option value="$PROJECT_DIR$/pages/events/detail/detail.wxml" />
         <option value="$PROJECT_DIR$/pages/events/detail/detail.wxss" />
         <option value="$PROJECT_DIR$/pages/events/detail/detail.js" />
+        <option value="$PROJECT_DIR$/pages/events/events.wxss" />
+        <option value="$PROJECT_DIR$/pages/my/commission/commission.wxml" />
       </list>
     </option>
   </component>
@@ -404,13 +402,14 @@
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="my" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="openShop" type="462c0819:PsiDirectoryNode" />
+              <item name="my" type="462c0819:PsiDirectoryNode" />
+              <item name="commission" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -490,12 +489,12 @@
       <workItem from="1558339265837" duration="3000" />
       <workItem from="1558686486392" duration="3334000" />
       <workItem from="1558919377127" duration="31610000" />
-      <workItem from="1559093366770" duration="56977000" />
+      <workItem from="1559093366770" duration="59334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="814646000" />
+    <option name="totallyTimeSpent" value="817003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -672,13 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/commission/commission.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="7" column="96" selection-start-line="7" selection-start-column="96" selection-end-line="7" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -781,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/events/events.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="97" column="18" lean-forward="true" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/diamActive/withdraw/withdraw.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -878,22 +863,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/events/detail/detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+        <state relative-caret-position="-5759">
+          <caret line="56" column="28" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="28" />
           <folding>
             <element signature="e#9217#9237#0" />
             <element signature="e#9683#9699#0" />
             <element signature="e#9802#9818#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="236" column="46" lean-forward="true" selection-start-line="236" selection-start-column="46" selection-end-line="236" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/events/events.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/commission/commission.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
         </state>
       </provider>
     </entry>

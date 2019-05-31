@@ -26,7 +26,7 @@
 <view class="listtop">
     <block wx:for="{{list}}">
         <view class="list">
-            <view wx:for="{{item}}">
+            <blcok wx:for="{{item}}">
                 <!-- <view class="list-one">
                     <view class="touxiang">
                         <image src=""></image>
@@ -57,7 +57,7 @@
                     <view class="list-right active" wx:elif="{{tab == 1}}">-{{item.money}}元</view>
                     <view class="list-right active" wx:elif="{{tab == 2}}">-{{item.money}}元</view>
                 </view>
-            </view>
+            </blcok>
         </view>
     </block>
 </view>
