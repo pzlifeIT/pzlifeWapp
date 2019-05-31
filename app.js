@@ -392,10 +392,6 @@ App({
         this.indexmain(this.globalData.pid)
     },
     disScene(scene) {
-        // {
-        //   id:'',
-        //   pid:''
-        // }
         let href = decodeURIComponent(scene),
             list = {};
         if (href.indexOf('&') != -1) {
