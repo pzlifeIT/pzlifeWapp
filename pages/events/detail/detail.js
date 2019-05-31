@@ -24,7 +24,9 @@ Page({
         info: {},
         attrId:0,
         select:false,
-        pop:false
+        pop:false,
+        line:true,
+        home:false
     },
 
     /**
@@ -44,18 +46,90 @@ Page({
         })
     },
     buy: function () {
-        if (!this.data.buy) {
+        if (!this.data.attr[0]){
             app.toast({
                 title: "请选择规格"
             })
             return
         }
+        if (!this.data.buy) {
+            app.toast({
+                title: "库存告罄"
+            })
+            return
+        }
         console.log(this.data.hidden)
         if (this.data.hidden == 1){
-            app.toast({title:'线下'})
+            this.offLineBuy()
         } else {
             this.quickBuy()
         }
+    },
+    offLineBuy:function(){
+        let that = this,
+            use = this.data.use,
+            paytype = 0
+        if (!this.data.select){
+            app.toast({title:"请选择规格"})
+            return
+        }
+        if (use){
+            paytype = 2 //商票
+        } else {
+            paytype = 1 // 三方
+        }
+        app.wxrequest({
+            url:"OfflineActivities/createOfflineActivitiesOrder",
+            data: {
+                sku_id:that.data.attrId,
+                pay_type:paytype,
+                buy_num:that.data.num,
+                buid:app.globalData.pid
+            },
+            success(res){
+                if (res.is_pay == 1){
+                    that.setData({
+                        status:true,
+                        pop:true
+                    })
+                } else {
+                    that.pay({order_no:res.order_no})
+                }
+            },
+            error(res){
+                let text = ''
+                switch (parseInt(res)) {
+                    case 3000:
+                        text = '未获取到数据'
+                        break;
+                    case 3001:
+                        text = 'skuid错误'
+                        break;
+                    case 3003:
+                        text = '地址id错误'
+                        break;
+                    case 3004:
+                        text="商品已售完"
+                        break;
+                    case 3006:
+                        text = "商品不支持配送"
+                        break;
+                    case 3007:
+                        text = '商品库存不足'
+                        break;
+                    case 3008:
+                        text = '支付方式错误'
+                        break;
+                    case 3009:
+                        text = '创建订单失败'
+                        break;
+                }
+                app.toast({title:text})
+            },
+            fail(res){
+
+            }
+        })
     },
     quickBuy:function(){
         let that = this,
@@ -81,7 +155,8 @@ Page({
               sku_id:that.data.attrId,
               user_address_id:app.globalData.addressId,
               pay_type:paytype,
-              num:that.data.num
+              num:that.data.num,
+              buid:app.globalData.pid
           },
           success(res){
               if (res.is_pay == 1){
@@ -188,9 +263,13 @@ Page({
                 stock = goods_sku[i].stock
             }
         }
+        if (!attr[0]){
+            app.toast({title:"请选择规格"})
+            return
+        }
         let newTotal = Math.floor(newNum * retail_price * 100) / 100
-        if (newNum >= stock){
-            app.toast({title:"请先选择规格"})
+        if (newNum > stock){
+            app.toast({title:"库存告罄"})
             return
         }
         this.setData({
@@ -203,13 +282,29 @@ Page({
             ind = e.currentTarget.dataset.ind,
             attrId = this.data.attrId,
             select = e.currentTarget.dataset.select,
+            name = e.currentTarget.dataset.name,
             attr = this.data.attr;
         console.log(e)
-        console.log(attrId)
-        if (attr[ind] == id) {
-            attr[ind] = 0
-        } else {
+        console.log(name)
+        // if (attr[ind] == id) {
+        //     attr[ind] = 0
+        // } else {
             attr[ind] = id
+        // }
+        if (name.indexOf("配送") != -1){
+            app.toast({title:"当前规格只能配送到家"})
+            this.setData({
+                home:true,
+                line:false,
+                hidden:2
+            })
+        }else {
+            app.toast({title:"当前规格只能线下自提"})
+            this.setData({
+                line:true,
+                home:false,
+                hidden:1
+            })
         }
         let ok = false
         if (!select){
@@ -219,7 +314,8 @@ Page({
         }
         this.setData({
             attr: attr,
-            select:ok
+            select:ok,
+            attrText:name
         })
         this.skuPrice()
     },
@@ -269,16 +365,47 @@ Page({
         })
     },
     way: function (e) {
-        // console.log(e)
-        // if (this.data.attrText.indexOf("1") != -1){
+        // // console.log(e)
+        // if (this.data.attrText.indexOf("白") != -1){
         //     app.toast({
         //         title:"不可自提"
         //     })
         //     return
         // }
+        //可以 配送
+        //判断有没有白，有白就配送到家，没有就只能自提
+        if (!this.data.attrText) {
+            app.toast({title:"请选择规格"})
+            return
+        }
+        if (this.data.attrText.indexOf("白") != -1){ // 配送到家
+            app.toast({title:"当前规格只能配送到家"})
+            this.setData({
+                home:true,
+                line:false
+            })
+        }else {
+            app.toast({title:"当前规格只能线下自提"})
+            this.setData({
+                line:true,
+                home:false
+            })
+        }
         this.setData({
             hidden: e.detail.value
         })
+    },
+    line:function(){
+
+    },
+    exp:function(){
+        if (this.data.attrText.indexOf("白") == -1){ // 不可以配送
+            app.toast({title:"当前规格不能配送到家"})
+            this.setData({
+                home:false,
+                line:true
+            })
+        }
     },
     goAddress: function () {
         wx.navigateTo({
@@ -354,6 +481,7 @@ Page({
      */
     onShow: function () {
         this.getUserInfo()
+        console.log(app.globalData.addressId)
         if (!app.globalData.addressId) return
         console.log(app.globalData.addressId)
         this.setData({

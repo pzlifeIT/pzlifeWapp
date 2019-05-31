@@ -156,6 +156,7 @@ page{
     width: 49%;
     height: 58rpx;
     display: inline-block;
+    position: relative;
 }
 .mid{
     width: 0;
@@ -352,4 +353,12 @@ page{
 .mar{
     width: 750rpx;
     height: 111rpx;
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 55;
 }
