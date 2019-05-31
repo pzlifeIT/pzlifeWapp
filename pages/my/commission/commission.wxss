@@ -294,14 +294,16 @@ page {
     padding: 0 10rpx;
     box-sizing: border-box;
     margin-bottom: 2rpx;
+    margin-top: 10rpx;
 }
 
 .list-left {
     width: 470rpx;
-    height: 100rpx;
+    /* height: 100rpx; */
     margin-left: 12rpx;
     padding-top: 30rpx;
     float: left;
+    padding-bottom: 10rpx
 }
 
 .list-left .doim-title {

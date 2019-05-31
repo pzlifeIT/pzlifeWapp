@@ -28,7 +28,7 @@
             <view class="attr-list">
                 <block wx:for="{{item.list}}">
                     <view class="attr {{attr[ind] == item.id ? 'active':''}}" bindtap="selectAttr" data-id="{{item.id}}"
-                          data-ind="{{ind}}" data-select="{{attr[ind] == item.id ? 'select' : ''}}">{{item.attr_name}}
+                          data-ind="{{ind}}" data-select="{{attr[ind] == item.id ? 'select' : ''}}" data-name="{{item.attr_name}}">{{item.attr_name}}
                     </view>
                 </block>
             </view>
@@ -49,11 +49,13 @@
     <view class="select-way">
         <radio-group class="radio-group" bindchange="way">
             <view class="auto fl">
-                <radio class="radio" color="#E61F18" value="1" checked> 线下自提</radio>
+                <view class="mask"></view>
+                <radio class="radio" color="#E61F18" value="1"  checked="{{line}}"> 线下自提</radio>
             </view>
             <view class="mid"></view>
             <view class="home fl">
-                <radio class="radio" color="#E61F18" value="2"> 配送到家</radio>
+                <view class="mask"></view>
+                <radio class="radio" color="#E61F18" value="2"  checked="{{home}}"> 配送到家</radio>
                 <text class="exp">(价格含运费)</text>
             </view>
         </radio-group>

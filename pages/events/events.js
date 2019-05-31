@@ -107,11 +107,6 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function() {
-        let that = this
-        let share = {
-            title: "线下活动",
-            path: "/pages/events/events?scene=" + that.data.enScene,
-        };
-        return share
+        return app.share()
     }
 })
