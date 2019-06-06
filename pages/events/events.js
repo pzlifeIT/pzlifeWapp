@@ -28,8 +28,6 @@ Page({
             this.setData({
                 enScene: options.scene,
                 scene: app.disScene(options.scene)
-            }, function () {
-                that.getEvents()
             })
         }
 
@@ -73,7 +71,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this.getEvents()
     },
 
     /**

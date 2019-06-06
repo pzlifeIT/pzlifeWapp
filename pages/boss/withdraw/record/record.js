@@ -13,6 +13,16 @@ Page({
         pageNum:10,
         list:[]
     },
+    gomy:function(){
+        wx.switchTab({
+            url:"/pages/my/my"
+        })
+    },
+    gocardbag:function(){
+        wx.navigateTo({
+            url:"/pages/boss/cardBag/cardBag"
+        })
+    },
     selectDiv: function (e) {
         let div = e.currentTarget.dataset.div
         this.setData({

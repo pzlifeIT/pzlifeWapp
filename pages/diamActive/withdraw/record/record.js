@@ -51,12 +51,25 @@ Page({
      */
     onLoad: function (options) {
         this.setData({
-            imgHost: app.globalData.host.imgHost,
-            div: options.div
+            imgHost: app.globalData.host.imgHost
         })
         this.getRecord()
     },
-
+    gomy:function(){
+      wx.switchTab({
+          url:"/pages/my/my"
+      })
+    },
+    gocardbag:function(){
+      wx.navigateTo({
+          url:"/pages/boss/cardBag/cardBag"
+      })
+    },
+    goDiamAc:function(){
+      wx.navigateTo({
+          url:"/pages/diamActive/diamActive"
+      })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

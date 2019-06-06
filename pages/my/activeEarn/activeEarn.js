@@ -12,7 +12,8 @@ Page({
         list: [],
         bounty: 0,
         bountyAll: 0,
-        share_num:0
+        share_num:0,
+        imgHost:''
     },
 
     /**
@@ -20,6 +21,9 @@ Page({
      */
     onLoad: function (options) {
         this.getBountyDetail()
+        this.setData({
+            imgHost:app.globalData.host.imgHost
+        })
     },
     getBountyDetail: function () {
         let that = this

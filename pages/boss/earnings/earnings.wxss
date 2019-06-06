@@ -180,11 +180,15 @@ page{
 }
 .list-one{
     width: 750rpx;
-    height: 154rpx;
+    height: auto;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
+    padding: 10rpx 0;
+    box-sizing: border-box;
+    margin-bottom: 10rpx;
 }
 .touxiang{
     height: 100%;

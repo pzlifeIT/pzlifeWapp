@@ -8,14 +8,18 @@ Page({
     data: {
         recordlist: [],
         loading: true,
-        page: 1
+        page: 1,
+        imgHost:''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        this.getLogTransfer()
+
+        this.setData({
+            imgHost:app.globalData.host.imgHost
+        })
     },
     getLogTransfer() {
         let that = this
@@ -71,6 +75,11 @@ Page({
         }
         return text
     },
+    shiftCase:function(){
+      wx.navigateTo({
+          url:"/pages/shiftMoney/shiftMoney"
+      })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -82,7 +91,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-
+        this.getLogTransfer()
     },
 
     /**

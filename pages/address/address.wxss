@@ -2,12 +2,12 @@
 
 page {
     background-color: #f7f7f7;
+    height: 100%;
 }
 
 .address-list {
     height: 100%;
     overflow: auto;
-    margin-bottom: 100rpx;
 }
 
 .address-li {
@@ -102,4 +102,47 @@ page {
 .list-bottom {
     width: 100%;
     height: 100rpx;
+}
+.null{
+    width: 750rpx;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center{
+    width: 360rpx;
+    height: auto;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.center image{
+    width: 192rpx;
+    height: 200rpx;
+    margin-bottom: 48rpx;
+}
+.null-text{
+    color: #d6d6d6;
+    font-size: 28rpx;
+    width: 100%;
+    text-align: center;
+}
+
+.footer{
+    width: 460rpx;
+    height: 80rpx;
+    background: #fff;
+    border: 1px solid #e61f18;
+    border-radius: 15rpx;
+    box-shadow: 3rpx 4rpx 6rpx rgba(0,0,0,0.16);
+    font-size: 32rpx;
+    color: #E61F18;
+    text-align: center;
+    line-height: 80rpx;
+    position: fixed;
+    bottom: 200rpx;
+    left: 145rpx;
+    z-index: 99;
 }

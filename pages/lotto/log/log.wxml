@@ -1,0 +1,37 @@
+<!--pages/lotto/log/log.wxml-->
+<view class="log">
+    <view class="log-one">
+        <image class="goods-img"></image>
+        <view class="goods-info">
+            <view class="title">常山胡柚竞争五斤重</view>
+            <view class="time">2019-06-02 12:15:00</view>
+        </view>
+        <view class="button">立即领取</view>
+    </view>
+    <view class="log-one">
+        <image class="goods-img"></image>
+        <view class="goods-info">
+            <view class="title">常山胡柚竞争五斤重</view>
+            <view class="time">2019-06-02 12:15:00</view>
+        </view>
+        <view class="button">立即领取</view>
+    </view>
+    <view class="log-one">
+        <image class="goods-img"></image>
+        <view class="goods-info">
+            <view class="title">常山胡柚竞争五斤重</view>
+            <view class="time">2019-06-02 12:15:00</view>
+        </view>
+        <view class="button active">立即领取</view>
+    </view>
+</view>
+<view class="pop">
+    <view class="center">
+        <view class="center-title">恭喜你抽中了</view>
+        <view class="center-subtitle">君乐宝涨知识啦酸奶</view>
+        <image class="qrcode"></image>
+        <view class="pop-hint">凭二维码兑换奖品</view>
+        <!--<view class="little-hint">(可在中奖记录中查看)</view>-->
+        <view class="goHome">返回商城首页</view>
+    </view>
+</view>

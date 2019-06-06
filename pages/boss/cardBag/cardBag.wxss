@@ -10,7 +10,7 @@ page{
     flex-direction: column;
     align-items: center;
     background: #F7F7F7;
-    margin-bottom: 90rpx;
+    margin-bottom: 100rpx;
 }
 .kefu{
     width: 710rpx;
@@ -134,17 +134,44 @@ page{
     right: 0rpx;
 }
 .footer{
-    width: 750rpx;
-    height: 90rpx;
+    width: 460rpx;
+    height: 80rpx;
     background: #fff;
-    font-size: 36rpx;
+    border: 1px solid #e61f18;
+    border-radius: 15rpx;
+    box-shadow: 3rpx 4rpx 6rpx rgba(0,0,0,0.16);
+    font-size: 32rpx;
     color: #E61F18;
     text-align: center;
-    line-height: 90rpx;
+    line-height: 80rpx;
     position: fixed;
-    bottom: 0;
+    bottom: 300rpx;
+    left: 145rpx;
     z-index: 99;
 }
-.footer text{
+.null{
+    width: 750rpx;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center{
+    width: 212rpx;
+    height: auto;
+    overflow: auto;
+}
+.center image{
+    width: 210rpx;
+    height: 140rpx;
+    margin-bottom: 48rpx;
+}
+.null-text{
+    color: #d6d6d6;
     font-size: 28rpx;
+    width: 100%;
+    text-align: center;
+}
+.have{
+    bottom: 10rpx;
 }

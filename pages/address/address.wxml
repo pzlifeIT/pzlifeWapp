@@ -1,29 +1,44 @@
 <!--pages/address/address.wxml-->
-<view class="address-list" >
-<view class="address-li" wx:for="{{address}}" >
-  <view class="al-name" >
-    <text class="fl" >{{item.name}}</text>
-    <text class="fr" >{{item.mobile}}</text>
-  </view>
-  <text class="al-text" >{{item.province_name}} {{item.city_name}} {{item.area_name}} {{item.address}}</text>
-  <view class="al-operate" >
-    <view class="al-default" bindtap="default" data-id="{{item.id}}" >
-      <icon class="icon fl" wx:if="{{item.default == 1}}" type="success" size="34rpx" color="red" />
-      <view class="unsel fl" wx:else></view>
-      <text class="text din fl" >默认地址</text>
+<block wx:if="{{address.length >= 1}}">
+    <view class="address-list">
+        <view class="address-li" wx:for="{{address}}">
+            <view class="al-name">
+                <text class="fl">{{item.name}}</text>
+                <text class="fr">{{item.mobile}}</text>
+            </view>
+            <text class="al-text">{{item.province_name}} {{item.city_name}} {{item.area_name}} {{item.address}}</text>
+            <view class="al-operate">
+                <view class="al-default" bindtap="default" data-id="{{item.id}}">
+                    <icon class="icon fl" wx:if="{{item.default == 1}}" type="success" size="34rpx" color="red"/>
+                    <view class="unsel fl" wx:else></view>
+                    <text class="text din fl">默认地址</text>
+                </view>
+                <view class="al-o-btn din fr">
+                    <navigator url="installAddress/installAddress?id={{item.id}}" class="al-btn-amend din">
+                        <!-- <view class="al-btn-amend din" bindtap="redirect" data-id="{{item.id}}" > -->
+                        <image lazy-load="true" src="{{imgHost}}xie.png"/>
+                        <!-- </view> -->
+                    </navigator>
+                    <!-- <view  class="al-btn-del din"><image lazy-load="true" src="http://pnkp5i8sb.bkt.clouddn.com/del.png" /></view> -->
+                </view>
+            </view>
+        </view>
+        <view class="list-bottom"></view>
     </view>
-    <view class="al-o-btn din fr" >
-      <navigator url="installAddress/installAddress?id={{item.id}}" class="al-btn-amend din" >
-      <!-- <view class="al-btn-amend din" bindtap="redirect" data-id="{{item.id}}" > -->
-        <image lazy-load="true" src="{{imgHost}}xie.png"  />
-      <!-- </view> -->
-      </navigator>
-      <!-- <view  class="al-btn-del din"><image lazy-load="true" src="http://pnkp5i8sb.bkt.clouddn.com/del.png" /></view> -->
+    <navigator url="installAddress/installAddress">
+        <view class="address-new">新建</view>
+    </navigator>
+</block>
+<block wx:else>
+    <view class="null">
+        <view class="center">
+            <image lazy-load src="{{imgHost}}ditu.png"></image>
+            <view class="null-text">暂未添加地址</view>
+        </view>
+        <navigator url="installAddress/installAddress">
+            <view class="footer">
+                <text>添加地址</text>
+            </view>
+        </navigator>
     </view>
-  </view>
-</view>
-</view>
-<view class="list-bottom" ></view>
-<navigator url="installAddress/installAddress" >
-  <view  class="address-new" >新建</view>
-</navigator>
+</block>

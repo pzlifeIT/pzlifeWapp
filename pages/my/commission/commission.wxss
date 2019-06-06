@@ -310,6 +310,11 @@ page {
     color: #202020;
     font-size: 30rpx;
     margin-bottom: 12rpx;
+     overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
 }
 
 .list-left .order {

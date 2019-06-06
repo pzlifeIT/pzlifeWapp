@@ -112,3 +112,30 @@ text{
 .symbol{
     font-size: 22rpx;
 }
+.null{
+    width: 750rpx;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 504rpx;
+}
+.center{
+    width: 360rpx;
+    height: auto;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.center image{
+    width: 219rpx;
+    height: 200rpx;
+    margin-bottom: 48rpx;
+}
+.null-text{
+    color: #d6d6d6;
+    font-size: 28rpx;
+    width: 100%;
+    text-align: center;
+}

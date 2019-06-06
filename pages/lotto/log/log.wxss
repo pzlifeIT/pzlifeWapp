@@ -1,0 +1,126 @@
+/* pages/lotto/log/log.wxss */
+page{
+    height: 100%;
+    background: #f7f7f7;
+}
+.log{
+    width: 750rpx;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.log-one{
+    width: 710rpx;
+    height: auto;
+    overflow: auto;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 10rpx;
+}
+.goods-img{
+    width: 180rpx;
+    height: 180rpx;
+    background: #fedb5e;
+}
+.goods-info{
+    width: 530rpx;
+    height: 180rpx;
+    padding: 41rpx 0 0 30rpx;
+    box-sizing: border-box;
+}
+.title{
+    color: #404040;
+    font-size: 27rpx;
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.time{
+    color: #666666;
+    font-size: 24rpx;
+    margin-top: 30rpx;
+}
+.button{
+    width: 111rpx;
+    height: 46rpx;
+    background: #FF4848;
+    text-align: center;
+    line-height: 46rpx;
+    color: #FFFFFF;
+    font-size: 24rpx;
+    position: absolute;
+    top: 75rpx;
+    right: 20rpx;
+}
+.active{
+    background: #FCD8D8;
+    color: #404040;
+}
+.pop{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.center{
+    width: 451rpx;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 10rpx;
+}
+.center-title{
+    color: #666666;
+    font-size: 32rpx;
+    margin-top: 22rpx;
+    text-align: center;
+}
+.center-subtitle{
+    color: #e61f18;
+    font-size: 32rpx;
+    text-align: center;
+    margin-top: 5rpx;
+}
+.qrcode{
+    width: 340rpx;
+    height: 340rpx;
+    margin-left: 57rpx;
+    margin-top: 8rpx;
+}
+.pop-hint{
+    color: #666666;
+    font-size: 28rpx;
+    text-align: center;
+    margin-top: 2rpx;
+}
+.little-hint{
+    color: #666666;
+    font-size: 24rpx;
+    margin-top: 5rpx;
+    text-align: center;
+}
+.goHome{
+    width: 197rpx;
+    height: 46rpx;
+    border-radius: 13rpx;
+    margin-top: 35rpx;
+    margin-left: 127rpx;
+    border: 1px #707070 solid;
+    color: #757575;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 46rpx;
+    margin-bottom: 20rpx;
+}
+

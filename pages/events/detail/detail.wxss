@@ -272,16 +272,37 @@ page{
 }
 .pop-box{
     width: 451rpx;
-    height: 275rpx;
+    height: auto;
     background-color: #FFFFFF;
     border-radius: 10rpx;
+    padding-bottom: 20rpx;
+    position: relative;
 }
 .success{
     width: 100%;
     text-align: center;
     color: #666666;
     font-size: 38rpx;
-    margin-bottom: 23rpx;
+    margin-top: 92rpx;
+}
+.s-img{
+    width: 150rpx;
+    height: 150rpx;
+    position: absolute;
+    top: -75rpx;
+    left: 150rpx;
+    /*background: #FFFFFF;*/
+    border-radius: 50%;
+    z-index: 20;
+}
+.bg{
+    width: 120rpx;
+    height: 120rpx;
+    position: absolute;
+    top: -60rpx;
+    left: 165rpx;
+    background: #FFFFFF;
+    border-radius: 50%;
 }
 .icon{
    position: relative;
@@ -312,6 +333,17 @@ page{
     border-radius: 13rpx;
     margin-left: 45rpx;
     display: inline-block;
+}
+.qrcode{
+    width: 340rpx;
+    height: 340rpx;
+    margin-left: 56rpx;
+}
+.hint{
+    text-align: center;
+    color: #666666;
+    font-size: 28rpx;
+    margin-bottom: 20rpx;
 }
 .chang{
     width: 3px;

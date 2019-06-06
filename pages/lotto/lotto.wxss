@@ -1,0 +1,233 @@
+/* pages/lotto/lotto.wxss */
+page{
+    background: #FEFBF4;
+}
+.banner{
+    width: 750rpx;
+    height: 240rpx;
+}
+.slider,.slider-img{
+    width: 100%;
+    height: 100%;
+}
+.hint{
+    width: 750rpx;
+    height: 40rpx;
+    box-shadow: 0rpx 3rpx 6rpx rgba(0,0,0,0.16);
+    background: #FFFFFF;
+}
+.hint swiper{
+    width: 100%;
+    height: 100%;
+}
+.hint-text{
+    width: 100%;
+    height: 100%;
+    color: #404040;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 40rpx;
+    float: left;
+}
+.hint-text text{
+    color: #e61f18;
+}
+.lotto-area{
+    width: 750rpx;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fefbf4;
+    margin-top: 6rpx;
+}
+.lotto{
+    width: 650rpx;
+    height: 683rpx;
+    position: relative;
+    margin-top: 54rpx;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.area{
+    position: absolute;
+    top: 48rpx;
+    left: 45rpx;
+    z-index: 2;
+}
+.line{
+    /*width: 560rpx;*/
+    height:auto;
+}
+.box{
+    width: 180rpx;
+    height: 180rpx;
+    display: inline-block;
+    background: #FFFFFF;
+    margin: 5rpx;
+    border-radius: 20rpx;
+    position: relative;
+}
+.click{
+    background: transparent;
+    width: 190rpx;
+    height: 190rpx;
+}
+.lucklog{
+    width: 750rpx;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 64rpx;
+}
+.luck-area{
+    width: 650rpx;
+    height: auto;
+}
+.luck-text{
+    width: 100%;
+    height: auto;
+   overflow: hidden;
+}
+.left{
+    color: #404040;
+    font-size: 26rpx;
+    font-weight: bold;
+    float: left;
+}
+.right{
+    color: #404040;
+    font-size: 28rpx;
+    float: right;
+    display: inline-block;
+}
+.jt{
+    display: inline-block;
+    width: 18rpx;
+    height: 18rpx;
+    border-top: 1rpx #202020 solid;
+    border-right: 1rpx #202020 solid;
+    transform: rotate(45deg);
+    margin-left: 10rpx;
+    margin-right: 4rpx;
+}
+.log{
+    width: 650rpx;
+    height: auto;
+    background: #FFFFFF;
+    margin-top: 16rpx;
+    border-radius: 10rpx;
+    box-shadow:0rpx 3rpx 6rpx rgba(0,0,0,0.16);
+    padding: 0 36rpx 20rpx 36rpx;
+    box-sizing: border-box;
+}
+.log-o{
+    width: auto;
+    height: auto;
+    overflow: auto;
+    color: #404040;
+    font-size: 24rpx;
+    margin-top: 20rpx;
+}
+.user{
+    float: left;
+}
+.user text{
+    color: #e61f18;
+}
+.time{
+    float: right;
+}
+.statement{
+    width: 750rpx;
+    padding: 54rpx 53rpx 62rpx 54rpx;
+    color: #404040;
+    font-size: 24rpx;
+    line-height: 38rpx;
+    box-sizing: border-box;
+}
+.pop{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.center{
+    width: 451rpx;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 10rpx;
+}
+.center-title{
+    color: #666666;
+    font-size: 32rpx;
+    margin-top: 22rpx;
+    text-align: center;
+}
+.center-subtitle{
+    color: #e61f18;
+    font-size: 32rpx;
+    text-align: center;
+    margin-top: 5rpx;
+}
+.qrcode{
+    width: 340rpx;
+    height: 340rpx;
+    margin-left: 57rpx;
+    margin-top: 8rpx;
+}
+.pop-hint{
+    color: #666666;
+    font-size: 28rpx;
+    text-align: center;
+    margin-top: 2rpx;
+}
+.little-hint{
+    color: #666666;
+    font-size: 24rpx;
+    margin-top: 5rpx;
+    text-align: center;
+}
+.button{
+    width: 197rpx;
+    height: 46rpx;
+    border-radius: 13rpx;
+    margin-top: 35rpx;
+    margin-left: 127rpx;
+    border: 1px #707070 solid;
+    color: #757575;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 46rpx;
+    margin-bottom: 20rpx;
+}
+.goods-img{
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+}
+.active{
+    background: #ff0000;
+    border-radius: 20rpx;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+}
+
+
