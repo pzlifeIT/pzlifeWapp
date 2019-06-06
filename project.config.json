@@ -498,7 +498,7 @@
 					"id": 66,
 					"name": "活动商品",
 					"pathName": "pages/events/events",
-					"query": "scene=id%3d1",
+					"query": "scene=id%3d2",
 					"scene": null
 				}
 			]
