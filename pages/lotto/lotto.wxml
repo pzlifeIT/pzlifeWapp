@@ -32,40 +32,40 @@
             <view class="line">
                 <view class="box">
                     <image class="goods-img"></image>
-                    <view wx:if="{{idx==1}}" class="active"></view>
+                    <view style='opacity:{{color[0]}}' class="active"></view>
                 </view>
                 <view class="box">
                     <image class="goods-img"></image>
-                    <view wx:if="{{idx==2}}" class="active"></view>
+                    <view style='opacity:{{color[1]}}' class="active"></view>
                 </view>
                 <view class="box">
                     <image class="goods-img"></image>
-                    <view wx:if="{{idx==3}}" class="active"></view>
-                </view>
-            </view>
-            <view class="line">
-                <view class="box">
-                    <image class="goods-img"></image>
-                    <view wx:if="{{idx==8}}" class="active"></view>
-                </view>
-                <image class=" click" lazy-load src="{{imgHost}}click.png" bindtap="click"></image>
-                <view class="box">
-                    <image class="goods-img"></image>
-                    <view wx:if="{{idx==4}}" class="active"></view>
+                    <view style='opacity:{{color[2]}}' class="active"></view>
                 </view>
             </view>
             <view class="line">
                 <view class="box">
                     <image class="goods-img"></image>
-                    <view wx:if="{{idx==7}}" class="active"></view>
+                    <view style='opacity:{{color[7]}}' class="active"></view>
+                </view>
+                <image class=" click" lazy-load src="{{imgHost}}click.png" bindtap="{{click}}"></image>
+                <view class="box">
+                    <image class="goods-img"></image>
+                    <view style='opacity:{{color[3]}}' class="active"></view>
+                </view>
+            </view>
+            <view class="line">
+                <view class="box">
+                    <image class="goods-img"></image>
+                    <view style='opacity:{{color[6]}}' class="active"></view>
                 </view>
                 <view class="box">
                     <image class="goods-img"></image>
-                    <view wx:if="{{idx==6}}" class="active"></view>
+                    <view style='opacity:{{color[5]}}' class="active"></view>
                 </view>
                 <view class="box">
                     <image class="goods-img"></image>
-                    <view wx:if="{{idx==5}}" class="active"></view>
+                    <view style='opacity:{{color[4]}}' class="active"></view>
                 </view>
             </view>
         </view>
