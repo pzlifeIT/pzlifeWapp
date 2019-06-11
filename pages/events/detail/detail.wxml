@@ -105,7 +105,7 @@
         <image class="s-img" lazy-load src="{{imgHost}}success.png"></image>
         <view class="bg"></view>
         <view class="success">支付成功</view>
-        <image class="qrcode" lazy-load src="{{qrcodeHost}}"></image>
+        <image class="qrcode" lazy-load src="{{qrcode}}"></image>
         <view class="hint">扫码查看订单信息</view>
         <view class="index" bindtap="goIndex">返回首页</view>
         <view class="events" bindtap="goEvents">返回活动页</view>

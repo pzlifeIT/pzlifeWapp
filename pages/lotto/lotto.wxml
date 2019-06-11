@@ -2,25 +2,15 @@
 <view class="banner">
     <swiper class="slider" circular bindchange="slider">
         <swiper-item>
-            <image lazy-load="true" class="slider-img" src=""></image>
+            <image lazy-load="true" class="slider-img" src="{{imgHost}}12.jpg"></image>
         </swiper-item>
     </swiper>
 </view>
 <view class="hint">
     <swiper autoplay duration="4000" circular easing-function="linear">
-        <swiper-item>
-            <view class="hint-text">恭喜 用户222****7896 获得奖品
-                <text>君乐宝涨姿势啦酸奶君乐宝涨姿势啦酸奶君乐宝涨姿势啦酸奶</text>
-            </view>
-        </swiper-item>
-        <swiper-item>
-            <view class="hint-text">恭喜 用户888****7896 获得奖品
-                <text>君乐宝涨姿势啦酸奶</text>
-            </view>
-        </swiper-item>
-        <swiper-item>
-            <view class="hint-text">恭喜 用户156****7896 获得奖品
-                <text>君乐宝涨姿势啦酸奶</text>
+        <swiper-item wx:for="{{log}}">
+            <view class="hint-text">恭喜 用户{{item.user}} 获得
+                <text>{{item.goods_name}}</text>
             </view>
         </swiper-item>
     </swiper>
@@ -31,40 +21,40 @@
         <view class="area">
             <view class="line">
                 <view class="box">
-                    <image class="goods-img"></image>
+                    <image class="goods-img" lazy-load src="{{goods[0].image_path}}"></image>
                     <view style='opacity:{{color[0]}}' class="active"></view>
                 </view>
                 <view class="box">
-                    <image class="goods-img"></image>
+                    <image class="goods-img" lazy-load src="{{goods[1].image_path}}"></image>
                     <view style='opacity:{{color[1]}}' class="active"></view>
                 </view>
                 <view class="box">
-                    <image class="goods-img"></image>
+                    <image class="goods-img" lazy-load src="{{goods[2].image_path}}"></image>
                     <view style='opacity:{{color[2]}}' class="active"></view>
                 </view>
             </view>
             <view class="line">
                 <view class="box">
-                    <image class="goods-img"></image>
+                    <image class="goods-img" lazy-load src="{{goods[7].image_path}}"></image>
                     <view style='opacity:{{color[7]}}' class="active"></view>
                 </view>
                 <image class=" click" lazy-load src="{{imgHost}}click.png" bindtap="{{click}}"></image>
                 <view class="box">
-                    <image class="goods-img"></image>
+                    <image class="goods-img" lazy-load src="{{goods[3].image_path}}"></image>
                     <view style='opacity:{{color[3]}}' class="active"></view>
                 </view>
             </view>
             <view class="line">
                 <view class="box">
-                    <image class="goods-img"></image>
+                    <image class="goods-img" lazy-load src="{{goods[6].image_path}}"></image>
                     <view style='opacity:{{color[6]}}' class="active"></view>
                 </view>
                 <view class="box">
-                    <image class="goods-img"></image>
+                    <image class="goods-img" lazy-load src="{{goods[5].image_path}}"></image>
                     <view style='opacity:{{color[5]}}' class="active"></view>
                 </view>
                 <view class="box">
-                    <image class="goods-img"></image>
+                    <image class="goods-img" lazy-load src="{{goods[4].image_path}}"></image>
                     <view style='opacity:{{color[4]}}' class="active"></view>
                 </view>
             </view>
@@ -80,35 +70,17 @@
                 <text class="jt"></text>
             </view>
         </view>
-        <scroll-view class="log">
-            <view class="log-o">
-                <view class="user">恭喜
-                    <text>用户123****7894</text>
-                    中奖
+        <scroll-view class="log" style="height: 260rpx;" scroll-y
+                     bindscrolltolower="" scroll-with-animation>
+            <block wx:for="{{logAll}}">
+                <view class="log-o">
+                    <view class="user">恭喜
+                        <text>用户{{item.user}}</text>
+                        中奖
+                    </view>
+                    <view class="time">{{item.create_time}}</view>
                 </view>
-                <view class="time">2019-06-05 17:50:00</view>
-            </view>
-            <view class="log-o">
-                <view class="user">恭喜
-                    <text>用户123****7894</text>
-                    中奖
-                </view>
-                <view class="time">2019-06-05 17:50:00</view>
-            </view>
-            <view class="log-o">
-                <view class="user">恭喜
-                    <text>用户123****7894</text>
-                    中奖
-                </view>
-                <view class="time">2019-06-05 17:50:00</view>
-            </view>
-            <view class="log-o">
-                <view class="user">恭喜
-                    <text>用户123****7894</text>
-                    中奖
-                </view>
-                <view class="time">2019-06-05 17:50:00</view>
-            </view>
+            </block>
         </scroll-view>
     </view>
 </view>
@@ -121,10 +93,11 @@
 <view class="pop" wx:if="{{pop}}">
     <view class="center">
         <view class="center-title">恭喜你抽中了</view>
-        <view class="center-subtitle">君乐宝涨知识啦酸奶</view>
-        <image class="qrcode"></image>
+        <view class="center-subtitle">{{goods_name}}</view>
+        <image class="qrcode" lazy-load src="{{qrcode}}"></image>
         <view class="pop-hint">凭二维码兑换奖品</view>
         <view class="little-hint">(可在中奖记录中查看)</view>
-        <view class="button">返回商城首页</view>
+        <view class="button" bindtap="goHome">返回商城首页</view>
+        <image class="cha" bindtap="hiddenPop" src="{{imgHost}}cha.png"></image>
     </view>
 </view>

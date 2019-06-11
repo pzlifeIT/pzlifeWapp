@@ -39,8 +39,7 @@ Page({
         let base = app.base64(app.globalData.host.cmsHost+"?order_on=odr19053111360856501025");
         this.setData({
             goodsid: options.goodsid,
-            imgHost: app.globalData.host.imgHost,
-            qrcode:app.globalData.host.apiHost+'OfflineActivities/createOrderQrCode?data='+base
+            imgHost: app.globalData.host.imgHost
         })
         this.getGoodsInfo(options.goodsid)
     },
@@ -92,7 +91,8 @@ Page({
                 buid: app.globalData.pid
             },
             success(res) {
-                let base = app.base64(app.globalData.host.cmsHost+"?"+res.order_no)
+                let base = app.base64(app.globalData.host.cmsHost+"?order_on="+res.order_no)
+                console.log(app.globalData.host.apiHost+'OfflineActivities/createOrderQrCode?data='+base)
                 if (res.is_pay == 1) {
                     that.setData({
                         pop: true,
@@ -166,7 +166,7 @@ Page({
                 buid: app.globalData.pid
             },
             success(res) {
-                let base = app.base64(app.globalData.host.cmsHost+"?"+res.order_no)
+                let base = app.base64(app.globalData.host.cmsHost+"?order_on="+res.order_no)
                 if (res.is_pay == 1) {
                     that.setData({
                         pop: true,
@@ -218,7 +218,7 @@ Page({
             order_no: data.order_no,
             payment: '1',
             success(res) {
-                let base = app.base64(app.globalData.host.cmsHost+"?"+data.order_no)
+                let base = app.base64(app.globalData.host.cmsHost+"?order_on="+data.order_no)
                 that.setData({
                     pop: true,
                     qrcode:app.globalData.host.apiHost+'OfflineActivities/createOrderQrCode?data='+base

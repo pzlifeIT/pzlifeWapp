@@ -6,41 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/address/address.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/address/address.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/address/address.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/address/address.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/case/case.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/case/case.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/case/case.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/case/case.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/commission/commission.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/commission/commission.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/earnings/earnings.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/withdraw/record/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/withdraw/record/record.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/withdraw/record/record.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/withdraw/record/record.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/withdraw/record/record.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/withdraw/record/record.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/diamActive/withdraw/withdraw.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/withdraw/withdraw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/events/detail/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/detail/detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/events/detail/detail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/detail/detail.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/events/detail/detail.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/detail/detail.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/events/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/case/case.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/case/case.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/commission/commission.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/commission/commission.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/shiftMoney/record/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/shiftMoney/record/record.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/shiftMoney/record/record.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/shiftMoney/record/record.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/shiftMoney/record/record.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/shiftMoney/record/record.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lotto/log/log.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lotto/log/log.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lotto/log/log.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lotto/log/log.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lotto/lotto.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lotto/lotto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lotto/lotto.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lotto/lotto.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lotto/lotto.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lotto/lotto.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lotto/lotto.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lotto/lotto.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/notice/notice.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/notice/notice.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/openShop/writeInfo/writeInfo.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/openShop/writeInfo/writeInfo.wxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,14 +43,14 @@
     <session id="-1486475198">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="11" />
           <entry key="project.open.time.11" value="9" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="6" />
-          <entry key="project.open.time.14" value="4" />
+          <entry key="project.open.time.14" value="5" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="1" />
@@ -81,26 +58,26 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="45" />
+          <entry key="project.opened" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="htm" value="2" />
           <entry key="html" value="2" />
-          <entry key="js" value="383" />
-          <entry key="json" value="74" />
+          <entry key="js" value="389" />
+          <entry key="json" value="75" />
           <entry key="php" value="4" />
-          <entry key="wxml" value="311" />
+          <entry key="wxml" value="318" />
           <entry key="wxss" value="192" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="192" />
-          <entry key="HTML" value="314" />
-          <entry key="JSON" value="74" />
-          <entry key="JavaScript" value="383" />
+          <entry key="HTML" value="321" />
+          <entry key="JSON" value="75" />
+          <entry key="JavaScript" value="389" />
           <entry key="PHP" value="4" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
@@ -109,43 +86,52 @@
         <counts>
           <entry key="htm" value="36" />
           <entry key="html" value="45" />
-          <entry key="js" value="44622" />
-          <entry key="json" value="327" />
-          <entry key="wxml" value="29748" />
-          <entry key="wxss" value="29494" />
+          <entry key="js" value="48009" />
+          <entry key="json" value="330" />
+          <entry key="wxml" value="30510" />
+          <entry key="wxss" value="29604" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="29494" />
-          <entry key="HTML" value="29829" />
-          <entry key="JSON" value="327" />
-          <entry key="JavaScript" value="44622" />
+          <entry key="CSS" value="29604" />
+          <entry key="HTML" value="30591" />
+          <entry key="JSON" value="330" />
+          <entry key="JavaScript" value="48009" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6149324">
+    <splitter split-orientation="horizontal" split-proportion="0.5763962">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/events/events.wxml">
+            <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="28">
-                  <caret line="1" selection-start-line="1" selection-end-line="8" selection-end-column="7" />
+                <state relative-caret-position="449">
+                  <caret line="72" column="65" lean-forward="true" selection-start-line="72" selection-start-column="65" selection-end-line="72" selection-end-column="65" />
+                  <folding>
+                    <element signature="n#style#0;n#scroll-view#0;n#view#0;n#view#3;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.wxml">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/events/events.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-                  <folding>
-                    <element signature="n#style#0;n#view#4;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="1260">
+                  <caret line="63" column="25" lean-forward="true" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/openShop/writeInfo/writeInfo.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="532">
+                  <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
@@ -153,8 +139,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/config.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="532">
-                  <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+                <state relative-caret-position="28">
+                  <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
                 </state>
               </provider>
             </entry>
@@ -162,8 +148,53 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/lotto/log/log.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="645">
-                  <caret line="34" column="42" lean-forward="true" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+                <state relative-caret-position="560">
+                  <caret line="20" column="65" lean-forward="true" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/my/notice/notice.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="308">
+                  <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="448">
+                  <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/my/my.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="308">
+                  <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="421">
+                  <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="84">
+                  <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -171,12 +202,63 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="673">
-                  <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+                <state relative-caret-position="1457">
+                  <caret line="86" column="30" lean-forward="true" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#395#411#0" />
+                    <element signature="e#319#388#0" />
+                    <element signature="e#484#500#0" />
+                    <element signature="e#487#503#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="700">
+                  <caret line="121" column="14" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/addCard/addCard.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="224">
+                  <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/openShop/writeInfo/writeInfo.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="392">
+                  <caret line="101" column="22" lean-forward="true" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/lotto/log/log.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2115">
+                  <caret line="111" column="28" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/events/detail/detail.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="560">
+                  <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -184,8 +266,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.wxss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="86">
-                  <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+                <state relative-caret-position="729">
+                  <caret line="242" column="17" lean-forward="true" selection-start-line="242" selection-start-column="17" selection-end-line="242" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -193,7 +275,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/lotto/log/log.wxss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="309">
+                <state relative-caret-position="3136">
                   <caret line="112" column="7" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="7" />
                 </state>
               </provider>
@@ -205,7 +287,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>select</find>
       <find>goInte</find>
       <find>backout</find>
       <find>div</find>
@@ -235,6 +316,7 @@
       <find>var</find>
       <find>box</find>
       <find>box[2]</find>
+      <find>0.2</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;image lazy-load=&quot;true&quot;</replace>
@@ -244,6 +326,7 @@
       <replace>库存已到极限</replace>
       <replace>let</replace>
       <replace>idx</replace>
+      <replace>0.5</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -252,10 +335,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/cart/cart.wxml" />
-        <option value="$PROJECT_DIR$/pages/boss/boss.wxml" />
-        <option value="$PROJECT_DIR$/pages/boss/commission/commission.wxml" />
-        <option value="$PROJECT_DIR$/pages/boss/earnings/earnings.wxml" />
         <option value="$PROJECT_DIR$/pages/order/order.wxss" />
         <option value="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxss" />
         <option value="$PROJECT_DIR$/pages/address/address.js" />
@@ -293,16 +372,20 @@
         <option value="$PROJECT_DIR$/pages/boss/withdraw/record/record.wxml" />
         <option value="$PROJECT_DIR$/pages/shiftMoney/record/record.wxml" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/pages/events/detail/detail.js" />
-        <option value="$PROJECT_DIR$/pages/events/detail/detail.wxml" />
-        <option value="$PROJECT_DIR$/pages/lotto/lotto.json" />
         <option value="$PROJECT_DIR$/pages/lotto/log/log.json" />
         <option value="$PROJECT_DIR$/pages/lotto/log/log.wxss" />
-        <option value="$PROJECT_DIR$/pages/lotto/log/log.wxml" />
+        <option value="$PROJECT_DIR$/pages/events/detail/detail.js" />
+        <option value="$PROJECT_DIR$/pages/events/detail/detail.wxml" />
+        <option value="$PROJECT_DIR$/pages/openShop/writeInfo/writeInfo.wxml" />
         <option value="$PROJECT_DIR$/pages/lotto/lotto.wxss" />
         <option value="$PROJECT_DIR$/config/config.js" />
+        <option value="$PROJECT_DIR$/pages/lotto/lotto.json" />
         <option value="$PROJECT_DIR$/pages/lotto/lotto.js" />
         <option value="$PROJECT_DIR$/pages/lotto/lotto.wxml" />
+        <option value="$PROJECT_DIR$/pages/lotto/log/log.wxml" />
+        <option value="$PROJECT_DIR$/pages/lotto/log/log.js" />
+        <option value="$PROJECT_DIR$/pages/my/notice/notice.wxml" />
+        <option value="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" />
       </list>
     </option>
   </component>
@@ -343,31 +426,26 @@
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="events" type="462c0819:PsiDirectoryNode" />
+              <item name="diamActive" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="lotto" type="462c0819:PsiDirectoryNode" />
+              <item name="my" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="lotto" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
+              <item name="my" type="462c0819:PsiDirectoryNode" />
+              <item name="notice" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -458,18 +536,19 @@
       <workItem from="1559617607254" duration="1088000" />
       <workItem from="1559618837624" duration="136000" />
       <workItem from="1559621451463" duration="1452000" />
-      <workItem from="1559631621434" duration="44063000" />
+      <workItem from="1559631621434" duration="44676000" />
+      <workItem from="1560129869254" duration="28204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="873229000" />
+    <option name="totallyTimeSpent" value="902046000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.103793465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.103793465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -489,6 +568,27 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.103793465" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.329718" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -501,58 +601,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/index/index.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/openShop/notice/notice.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/goods/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5876">
-          <caret line="74" column="20" lean-forward="true" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/commission/commission.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/goods/detail.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/address/address.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/register/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="134" column="12" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
-          <caret line="136" column="14" selection-start-line="136" selection-start-column="14" selection-end-line="136" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/my/case/case.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
@@ -564,13 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="784">
           <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="49" column="11" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="49" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -620,9 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="939">
           <caret line="161" column="7" selection-start-line="161" selection-start-column="7" selection-end-line="161" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#view#11;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,13 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/events/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="63" column="25" lean-forward="true" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/events/detail/detail.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
@@ -759,38 +790,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/events/detail/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="172" column="107" selection-start-line="172" selection-start-column="107" selection-end-line="172" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3640">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/events/detail/detail.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="107" column="39" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/shiftMoney/shiftMoney.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/events/events.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" selection-start-line="1" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -801,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/lotto/log/log.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -815,48 +811,159 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/events/events.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" selection-start-line="1" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/lotto/log/log.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
+        <state relative-caret-position="3136">
           <caret line="112" column="7" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/lotto/log/log.wxml">
+    <entry file="file://$PROJECT_DIR$/pages/events/detail/detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="34" column="42" lean-forward="true" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        <state relative-caret-position="560">
+          <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.js">
+    <entry file="file://$PROJECT_DIR$/pages/events/detail/detail.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="107" column="53" selection-start-line="107" selection-start-column="53" selection-end-line="107" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/cardBag.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="49" column="11" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="49" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/boss/cardBag/addCard/addCard.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/openShop/writeInfo/writeInfo.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/openShop/writeInfo/writeInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="101" column="22" lean-forward="true" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+        <state relative-caret-position="729">
+          <caret line="242" column="17" lean-forward="true" selection-start-line="242" selection-start-column="17" selection-end-line="242" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="121" column="14" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/events/events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="63" column="25" lean-forward="true" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        <state relative-caret-position="1457">
+          <caret line="86" column="30" lean-forward="true" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+          <folding>
+            <element signature="e#395#411#0" />
+            <element signature="e#319#388#0" />
+            <element signature="e#484#500#0" />
+            <element signature="e#487#503#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        <state relative-caret-position="449">
+          <caret line="72" column="65" lean-forward="true" selection-start-line="72" selection-start-column="65" selection-end-line="72" selection-end-column="65" />
           <folding>
-            <element signature="n#style#0;n#view#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#scroll-view#0;n#view#0;n#view#3;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/lotto/log/log.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2115">
+          <caret line="111" column="28" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/lotto/log/log.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="20" column="65" lean-forward="true" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/notice/notice.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
         </state>
       </provider>
     </entry>

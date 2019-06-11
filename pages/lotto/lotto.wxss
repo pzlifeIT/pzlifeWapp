@@ -76,7 +76,7 @@ page{
 .click{
     background: transparent;
     width: 190rpx;
-    height: 190rpx;
+    height: 184rpx;
 }
 .lucklog{
     width: 750rpx;
@@ -124,7 +124,7 @@ page{
     margin-top: 16rpx;
     border-radius: 10rpx;
     box-shadow:0rpx 3rpx 6rpx rgba(0,0,0,0.16);
-    padding: 0 36rpx 20rpx 36rpx;
+    padding: 10rpx 36rpx 20rpx 36rpx;
     box-sizing: border-box;
 }
 .log-o{
@@ -169,6 +169,7 @@ page{
     height: auto;
     background: #FFFFFF;
     border-radius: 10rpx;
+    position: relative;
 }
 .center-title{
     color: #666666;
@@ -229,5 +230,16 @@ page{
     left: 0;
     opacity: 0.2;
 }
-
-
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.cha{
+    width: 80rpx;
+    height: 80rpx;
+    position: absolute;
+    bottom: -110rpx;
+    left: 188rpx;
+    z-index: 66;
+}
