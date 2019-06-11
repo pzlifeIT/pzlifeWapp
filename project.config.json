@@ -1,5 +1,5 @@
 {
-	"description": "é¡¹ç›®é…ç½®æ–‡ä»¶",
+	"description": "ÏîÄ¿ÅäÖÃÎÄ¼ş",
 	"packOptions": {
 		"ignore": []
 	},
@@ -55,13 +55,13 @@
 				},
 				{
 					"id": -1,
-					"name": "ç¡®è®¤è®¢å•",
+					"name": "È·ÈÏ¶©µ¥",
 					"pathName": "pages/comfirOrder/comfirOrder",
 					"query": ""
 				},
 				{
 					"id": 3,
-					"name": "æˆ‘çš„è®¢å•",
+					"name": "ÎÒµÄ¶©µ¥",
 					"pathName": "pages/order/order",
 					"query": "",
 					"scene": null
@@ -117,7 +117,7 @@
 				},
 				{
 					"id": -1,
-					"name": "æ³¨å†Œ",
+					"name": "×¢²á",
 					"pathName": "pages/login/register/register",
 					"query": "",
 					"scene": null
@@ -145,70 +145,70 @@
 				},
 				{
 					"id": -1,
-					"name": "ä¼˜æƒ åˆ¸",
+					"name": "ÓÅ»İÈ¯",
 					"pathName": "pages/coupon/coupon",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "å•†åˆ¸",
+					"name": "ÉÌÈ¯",
 					"pathName": "pages/my/case/case",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "ç§¯åˆ†",
+					"name": "»ı·Ö",
 					"pathName": "pages/my/integ/integ",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "æ”¯ä»˜ç»“æœ",
+					"name": "Ö§¸¶½á¹û",
 					"pathName": "pages/paystatus/paystatus",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "æ”¶è—",
+					"name": "ÊÕ²Ø",
 					"pathName": "pages/collect/collect",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "é¢†åˆ¸ä¸­å¿ƒ",
+					"name": "ÁìÈ¯ÖĞĞÄ",
 					"pathName": "pages/coupon/getcoupon/getcoupon",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "åº—é“ºç®¡ç†",
+					"name": "µêÆÌ¹ÜÀí",
 					"pathName": "pages/boss/boss",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "æ–°å»ºä¼˜æƒ åˆ¸",
+					"name": "ĞÂ½¨ÓÅ»İÈ¯",
 					"pathName": "pages/boss/addcoupon/addcoupon",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "æ´»åŠ¨",
+					"name": "»î¶¯",
 					"pathName": "pages/activity/activity",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "è´­ä¹°é’»çŸ³ä¼šå‘˜",
+					"name": "¹ºÂò×êÊ¯»áÔ±",
 					"pathName": "pages/activity/buyvip/buyvip",
 					"query": "",
 					"scene": null
@@ -229,35 +229,35 @@
 				},
 				{
 					"id": -1,
-					"name": "åˆ†ç±»",
+					"name": "·ÖÀà",
 					"pathName": "pages/category/category",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "å•†å“åˆ—è¡¨",
+					"name": "ÉÌÆ·ÁĞ±í",
 					"pathName": "pages/category/goods/goods",
 					"query": "sub_id=53",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "åœ°å€",
+					"name": "µØÖ·",
 					"pathName": "pages/address/address",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "é’»çŸ³å¡åˆ—è¡¨",
+					"name": "×êÊ¯¿¨ÁĞ±í",
 					"pathName": "pages/diamondlist/diamondlist",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 32,
-					"name": "é¦–é¡µ",
+					"name": "Ê×Ò³",
 					"pathName": "pages/index/index",
 					"query": "",
 					"scene": null
@@ -271,28 +271,28 @@
 				},
 				{
 					"id": -1,
-					"name": "å•†åˆ¸",
+					"name": "ÉÌÈ¯",
 					"pathName": "pages/boss/case/case",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 35,
-					"name": "å•†åˆ¸",
+					"name": "ÉÌÈ¯",
 					"pathName": "pages/boss/earnings/earnings",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "ä¼šå‘˜",
+					"name": "»áÔ±",
 					"pathName": "pages/boss/join/join",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 38,
-					"name": "ä¹°ä¸»",
+					"name": "ÂòÖ÷",
 					"pathName": "pages/boss/circle/circle",
 					"query": "",
 					"scene": null
@@ -306,168 +306,168 @@
 				},
 				{
 					"id": -1,
-					"name": "ä¸ªäººä¸­å¿ƒ",
+					"name": "¸öÈËÖĞĞÄ",
 					"pathName": "pages/my/my",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "ä¼šå‘˜-æ”¶ç›Š",
+					"name": "»áÔ±-ÊÕÒæ",
 					"pathName": "pages/my/earnings/earnings",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "ä¼šå‘˜-ä½£é‡‘",
+					"name": "»áÔ±-Ó¶½ğ",
 					"pathName": "pages/my/commission/commission",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "åº—ç®¡-ä½£é‡‘",
+					"name": "µê¹Ü-Ó¶½ğ",
 					"pathName": "pages/boss/commission/commission",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "è½¬å…¥å•†åˆ¸",
+					"name": "×ªÈëÉÌÈ¯",
 					"pathName": "pages/shiftMoney/shiftMoney",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "æå‡ºç”³è¯·",
+					"name": "Ìá³öÉêÇë",
 					"pathName": "pages/shiftMoney/shiftSuccess/shiftSuccess",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "å•†åˆ¸ç”³è¯·çºªå½•",
+					"name": "ÉÌÈ¯ÉêÇë¼ÍÂ¼",
 					"pathName": "pages/shiftMoney/record/record",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "é¡»çŸ¥",
+					"name": "ĞëÖª",
 					"pathName": "pages/my/notice/notice",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "ä½£é‡‘ä½™é¢",
+					"name": "Ó¶½ğÓà¶î",
 					"pathName": "pages/my/commission/commission",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "æ‰«ç å¼€åº—",
+					"name": "É¨Âë¿ªµê",
 					"pathName": "pages/openShop/openShop",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 49,
-					"name": "åˆä¼™äººé¡»çŸ¥",
+					"name": "ºÏ»ïÈËĞëÖª",
 					"pathName": "pages/openShop/notice/notice",
 					"query": "scene=EE",
 					"scene": 1011
 				},
 				{
 					"id": -1,
-					"name": "å¡«å†™å¼€åº—ä¿¡æ¯",
+					"name": "ÌîĞ´¿ªµêĞÅÏ¢",
 					"pathName": "pages/openShop/writeInfo/writeInfo",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "æäº¤æˆåŠŸ",
+					"name": "Ìá½»³É¹¦",
 					"pathName": "pages/openShop/submitStatus/submitStatus",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 52,
-					"name": "é€‰æ‹©ä»˜æ¬¾æ–¹å¼",
+					"name": "Ñ¡Ôñ¸¶¿î·½Ê½",
 					"pathName": "pages/openShop/payWay/payWay",
 					"query": "ptype=1",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "æ”¶è—",
+					"name": "ÊÕ²Ø",
 					"pathName": "pages/collect/collect",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "æ´»åŠ¨æ”¶ç›Š",
+					"name": "»î¶¯ÊÕÒæ",
 					"pathName": "pages/my/activeEarn/activeEarn",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "é’»çŸ³åˆä¼™äºº",
+					"name": "×êÊ¯ºÏ»ïÈË",
 					"pathName": "pages/diamActive/diamActive",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "æ“ä½œæŒ‡å—",
+					"name": "²Ù×÷Ö¸ÄÏ",
 					"pathName": "pages/my/instructions/instructions",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "å¥–åŠ±é‡‘è½¬å•†åˆ¸",
+					"name": "½±Àø½ğ×ªÉÌÈ¯",
 					"pathName": "pages/diamActive/shiftMoney/shiftMoney",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "å¥–åŠ±é‡‘è½¬å•†åˆ¸è®°å½•",
+					"name": "½±Àø½ğ×ªÉÌÈ¯¼ÇÂ¼",
 					"pathName": "pages/diamActive/shiftMoney/record/record",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "å¥–åŠ±é‡‘æç°",
+					"name": "½±Àø½ğÌáÏÖ",
 					"pathName": "pages/diamActive/withdraw/withdraw",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "ä½£é‡‘æç°",
+					"name": "Ó¶½ğÌáÏÖ",
 					"pathName": "pages/boss/withdraw/withdraw",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 61,
-					"name": "å•†å“è¯¦æƒ…",
+					"name": "ÉÌÆ·ÏêÇé",
 					"pathName": "pages/goods/detail",
 					"query": "goodid=1269",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "å•†å“åˆ†ç±»",
+					"name": "ÉÌÆ··ÖÀà",
 					"pathName": "pages/category/category",
 					"query": "",
 					"scene": null
@@ -496,7 +496,7 @@
 				},
 				{
 					"id": 66,
-					"name": "æ´»åŠ¨å•†å“",
+					"name": "»î¶¯ÉÌÆ·",
 					"pathName": "pages/events/events",
 					"query": "scene=id%3d2",
 					"scene": null
