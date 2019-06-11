@@ -76,7 +76,9 @@
     "pages/diamActive/withdraw/submitStatus/submitStatus",
     "pages/my/getVip/getVip",
     "pages/events/events",
-    "pages/events/detail/detail"
+    "pages/events/detail/detail",
+    "pages/lotto/lotto",
+    "pages/lotto/log/log"
   ],
   "window": {
     "backgroundTextStyle": "dark",

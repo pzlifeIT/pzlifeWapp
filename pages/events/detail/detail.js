@@ -19,14 +19,16 @@ Page({
         attrText: '',
         total: 0,
         buy: false,
-        status: false,
+        status: true,
         use: false,
         info: {},
-        attrId:0,
-        select:false,
-        pop:false,
-        line:true,
-        home:false
+        attrId: 0,
+        select: false,
+        pop: false,
+        line: true,
+        home: false,
+        imgHost: '',
+        qrcode: ''
     },
 
     /**
@@ -34,8 +36,10 @@ Page({
      */
     onLoad: function (options) {
         console.log(options.goodsid)
+        let base = app.base64(app.globalData.host.cmsHost+"?order_on=odr19053111360856501025");
         this.setData({
-            goodsid: options.goodsid
+            goodsid: options.goodsid,
+            imgHost: app.globalData.host.imgHost
         })
         this.getGoodsInfo(options.goodsid)
     },
@@ -46,7 +50,7 @@ Page({
         })
     },
     buy: function () {
-        if (!this.data.attr[0]){
+        if (!this.data.attr[0]) {
             app.toast({
                 title: "请选择规格"
             })
@@ -59,44 +63,47 @@ Page({
             return
         }
         console.log(this.data.hidden)
-        if (this.data.hidden == 1){
+        if (this.data.hidden == 1) {
             this.offLineBuy()
         } else {
             this.quickBuy()
         }
     },
-    offLineBuy:function(){
+    offLineBuy: function () {
         let that = this,
             use = this.data.use,
             paytype = 0
-        if (!this.data.select){
-            app.toast({title:"请选择规格"})
+        if (!this.data.select) {
+            app.toast({title: "请选择规格"})
             return
         }
-        if (use){
+        if (use) {
             paytype = 2 //商票
         } else {
             paytype = 1 // 三方
         }
         app.wxrequest({
-            url:"OfflineActivities/createOfflineActivitiesOrder",
+            url: "OfflineActivities/createOfflineActivitiesOrder",
             data: {
-                sku_id:that.data.attrId,
-                pay_type:paytype,
-                buy_num:that.data.num,
-                buid:app.globalData.pid
+                sku_id: that.data.attrId,
+                pay_type: paytype,
+                buy_num: that.data.num,
+                buid: app.globalData.pid
             },
-            success(res){
-                if (res.is_pay == 1){
+            success(res) {
+                let base = app.base64(app.globalData.host.cmsHost+"?order_on="+res.order_no)
+                console.log(app.globalData.host.apiHost+'OfflineActivities/createOrderQrCode?data='+base)
+                if (res.is_pay == 1) {
                     that.setData({
-                        status:true,
-                        pop:true
-                    })
+                        pop: true,
+                        qrcode:app.globalData.host.apiHost+'OfflineActivities/createOrderQrCode?data='+base
+                    });
+                    that.getUserInfo()
                 } else {
-                    that.pay({order_no:res.order_no})
+                    that.pay({order_no: res.order_no})
                 }
             },
-            error(res){
+            error(res) {
                 let text = ''
                 switch (parseInt(res)) {
                     case 3000:
@@ -109,7 +116,7 @@ Page({
                         text = '地址id错误'
                         break;
                     case 3004:
-                        text="商品已售完"
+                        text = "商品已售完"
                         break;
                     case 3006:
                         text = "商品不支持配送"
@@ -124,56 +131,58 @@ Page({
                         text = '创建订单失败'
                         break;
                 }
-                app.toast({title:text})
+                app.toast({title: text})
             },
-            fail(res){
+            fail(res) {
 
             }
         })
     },
-    quickBuy:function(){
+    quickBuy: function () {
         let that = this,
             use = this.data.use,
             paytype = 0
         console.log(this.data.attrId)
         if (!app.globalData.addressId) {
-            app.toast({title:"请选择地址"})
+            app.toast({title: "请选择地址"})
             return
         }
-        if (!this.data.select){
-            app.toast({title:"请选择规格"})
+        if (!this.data.select) {
+            app.toast({title: "请选择规格"})
             return
         }
-        if (use){
+        if (use) {
             paytype = 2 //商票
         } else {
             paytype = 1 // 三方
         }
-      app.wxrequest({
-          url:"order/quickcreateorder",
-          data: {
-              sku_id:that.data.attrId,
-              user_address_id:app.globalData.addressId,
-              pay_type:paytype,
-              num:that.data.num,
-              buid:app.globalData.pid
-          },
-          success(res){
-              if (res.is_pay == 1){
-                  that.setData({
-                      status:true,
-                      pop:true
-                  })
-              } else {
-                  that.pay({order_no:res.order_no})
-              }
-          },
-          error(res){
-              let text = ''
+        app.wxrequest({
+            url: "order/quickcreateorder",
+            data: {
+                sku_id: that.data.attrId,
+                user_address_id: app.globalData.addressId,
+                pay_type: paytype,
+                num: that.data.num,
+                buid: app.globalData.pid
+            },
+            success(res) {
+                let base = app.base64(app.globalData.host.cmsHost+"?order_on="+res.order_no)
+                if (res.is_pay == 1) {
+                    that.setData({
+                        pop: true,
+                        qrcode:app.globalData.host.apiHost+'OfflineActivities/createOrderQrCode?data='+base
+                    });
+                    that.getUserInfo()
+                } else {
+                    that.pay({order_no: res.order_no})
+                }
+            },
+            error(res) {
+                let text = ''
                 switch (parseInt(res)) {
                     case 3000:
-                      text = '未获取到数据'
-                      break;
+                        text = '未获取到数据'
+                        break;
                     case 3001:
                         text = 'skuid错误'
                         break;
@@ -181,7 +190,7 @@ Page({
                         text = '地址id错误'
                         break;
                     case 3004:
-                        text="商品已售完"
+                        text = "商品已售完"
                         break;
                     case 3006:
                         text = "商品不支持配送"
@@ -196,35 +205,28 @@ Page({
                         text = '创建订单失败'
                         break;
                 }
-                app.toast({title:text})
-          },
-          fail(res){
+                app.toast({title: text})
+            },
+            fail(res) {
 
-          }
-      })
+            }
+        })
     },
-    pay: function(data) {
+    pay: function (data) {
         let that = this
         app.wxpay({
             order_no: data.order_no,
             payment: '1',
             success(res) {
+                let base = app.base64(app.globalData.host.cmsHost+"?order_on="+data.order_no)
                 that.setData({
-                    status: true,
-                    pop:true
-                })
+                    pop: true,
+                    qrcode:app.globalData.host.apiHost+'OfflineActivities/createOrderQrCode?data='+base
+                });
+                that.getUserInfo()
             },
             fail(res) {
-                that.setData({
-                    status: false,
-                    pop:true
-                })
-            },
-            error(code) {
-                that.setData({
-                    status: false,
-                    pop:true
-                })
+
             }
         })
     },
@@ -257,19 +259,19 @@ Page({
         let newNum = num + 1,
             retail_price = 0,
             stock = 0
-        for (let i = 0;i<goods_sku.length;i++){
-            if (goods_sku[i].spec == attr[0]){
+        for (let i = 0; i < goods_sku.length; i++) {
+            if (goods_sku[i].spec == attr[0]) {
                 retail_price = goods_sku[i].retail_price
                 stock = goods_sku[i].stock
             }
         }
-        if (!attr[0]){
-            app.toast({title:"请选择规格"})
+        if (!attr[0]) {
+            app.toast({title: "请选择规格"})
             return
         }
         let newTotal = Math.floor(newNum * retail_price * 100) / 100
-        if (newNum > stock){
-            app.toast({title:"库存告罄"})
+        if (newNum > stock) {
+            app.toast({title: "库存告罄"})
             return
         }
         this.setData({
@@ -289,33 +291,33 @@ Page({
         // if (attr[ind] == id) {
         //     attr[ind] = 0
         // } else {
-            attr[ind] = id
+        attr[ind] = id
         // }
-        if (name.indexOf("配送") != -1){
-            app.toast({title:"当前规格只能配送到家"})
+        if (name.indexOf("配送") != -1) {
+            app.toast({title: "当前规格只能配送到家"})
             this.setData({
-                home:true,
-                line:false,
-                hidden:2
+                home: true,
+                line: false,
+                hidden: 2
             })
-        }else {
-            app.toast({title:"当前规格只能线下自提"})
+        } else {
+            app.toast({title: "当前规格只能线下自提"})
             this.setData({
-                line:true,
-                home:false,
-                hidden:1
+                line: true,
+                home: false,
+                hidden: 1
             })
         }
         let ok = false
-        if (!select){
+        if (!select) {
             ok = true
         } else {
-             ok = false
+            ok = false
         }
         this.setData({
             attr: attr,
-            select:ok,
-            attrText:name
+            select: ok,
+            attrText: name
         })
         this.skuPrice()
     },
@@ -332,7 +334,7 @@ Page({
                         this.setData({
                             total: Math.floor(skus[i].retail_price * num * 100) / 100,
                             buy: true,
-                            attrId:skus[i].id
+                            attrId: skus[i].id
                         })
                     } else {
                         this.setData({
@@ -359,51 +361,37 @@ Page({
             return false
         }
     },
-    hiddenPop:function(){
-        this.setData({
-            pop:false
-        })
-    },
     way: function (e) {
-        // // console.log(e)
-        // if (this.data.attrText.indexOf("白") != -1){
-        //     app.toast({
-        //         title:"不可自提"
-        //     })
-        //     return
-        // }
-        //可以 配送
-        //判断有没有白，有白就配送到家，没有就只能自提
         if (!this.data.attrText) {
-            app.toast({title:"请选择规格"})
+            app.toast({title: "请选择规格"})
             return
         }
-        if (this.data.attrText.indexOf("白") != -1){ // 配送到家
-            app.toast({title:"当前规格只能配送到家"})
+        if (this.data.attrText.indexOf("白") != -1) { // 配送到家
+            app.toast({title: "当前规格只能配送到家"})
             this.setData({
-                home:true,
-                line:false
+                home: true,
+                line: false
             })
-        }else {
-            app.toast({title:"当前规格只能线下自提"})
+        } else {
+            app.toast({title: "当前规格只能线下自提"})
             this.setData({
-                line:true,
-                home:false
+                line: true,
+                home: false
             })
         }
         this.setData({
             hidden: e.detail.value
         })
     },
-    line:function(){
-
+    qrcode: function () {
+        let base = new Base64()
     },
-    exp:function(){
-        if (this.data.attrText.indexOf("白") == -1){ // 不可以配送
-            app.toast({title:"当前规格不能配送到家"})
+    exp: function () {
+        if (this.data.attrText.indexOf("白") == -1) { // 不可以配送
+            app.toast({title: "当前规格不能配送到家"})
             this.setData({
-                home:false,
-                line:true
+                home: false,
+                line: true
             })
         }
     },
@@ -461,13 +449,13 @@ Page({
             }
         })
     },
-    goIndex:function(){
-      wx.switchTab({
-          url:'/pages/index/index'
-      })
+    goIndex: function () {
+        wx.switchTab({
+            url: '/pages/index/index'
+        })
     },
-    goEvents:function(){
-      wx.navigateBack()
+    goEvents: function () {
+        wx.navigateBack()
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

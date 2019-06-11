@@ -16,24 +16,23 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
         let that = this
         console.log(decodeURIComponent(options.scene))
         console.log(options)
+        console.log(options.scene)
         if (options.scene) {
             this.setData({
                 enScene: options.scene,
                 scene: app.disScene(options.scene)
-            }, function() {
-                that.getEvents()
             })
         }
 
     },
-    getEvents: function() {
+    getEvents: function () {
         let that = this
         app.wxrequest({
             url: "OfflineActivities/getOfflineActivities",
@@ -49,14 +48,14 @@ Page({
             }
         })
     },
-    slider: function(e) {
+    slider: function (e) {
         console.log(e)
         let num = this.data.num
         this.setData({
             num: e.detail.current + 1
         })
     },
-    buy: function(e) {
+    buy: function (e) {
         wx.navigateTo({
             url: "/pages/events/detail/detail?goodsid=" + e.currentTarget.dataset.goodsid
         })
@@ -64,49 +63,49 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
-
+    onShow: function () {
+        this.getEvents()
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
         return app.share()
     }
 })

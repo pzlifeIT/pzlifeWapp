@@ -39,7 +39,7 @@
             "list": []
         },
         "miniprogram": {
-            "current": 66,
+            "current": 69,
             "list": [{
                     "id": 0,
                     "name": "goods",
@@ -353,10 +353,10 @@
                     "scene": null
                 },
                 {
-                    "id": -1,
+                    "id": 46,
                     "name": "须知",
                     "pathName": "pages/my/notice/notice",
-                    "query": "",
+                    "query": "iden=3",
                     "scene": null
                 },
                 {
@@ -437,7 +437,7 @@
                     "scene": null
                 },
                 {
-                    "id": -1,
+                    "id": 58,
                     "name": "奖励金转商券记录",
                     "pathName": "pages/diamActive/shiftMoney/record/record",
                     "query": "",
@@ -490,14 +490,35 @@
                     "id": 65,
                     "name": "huodong ",
                     "pathName": "pages/events/events",
-                    "query": "scene=id%3D4%26pid%3D24858",
+                    "query": "scene=id%3D5%26pid%3D24858",
                     "scene": 1047
                 },
                 {
                     "id": 66,
                     "name": "活动商品",
-                    "pathName": "pages/events/events",
-                    "query": "scene=id%3d2",
+                    "pathName": "pages/events/detail/detail",
+                    "query": "goodsid=1514",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "zhuanpan ",
+                    "pathName": "pages/lotto/lotto",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "log",
+                    "pathName": "pages/lotto/log/log",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "goumeizuanshi",
+                    "pathName": "pages/my/getVip/getVip",
+                    "query": "",
                     "scene": null
                 }
             ]

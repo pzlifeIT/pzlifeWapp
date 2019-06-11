@@ -21,7 +21,7 @@
 </view>
 <view class="" wx:for="{{detailList}}" wx:if="{{detailList.length > 0}}">
     <view class="one-detail" wx:for="{{item}}">
-        <view class="">
+        <view class="" style="width: 70%;">
             <view class="detail-title">{{item.ctype}}</view>
             <view class="detail-desc" wx:if="{{item.order_on}}">订单号:{{item.order_on}}</view>
             <view class="detail-time">{{item.create_time}}</view>

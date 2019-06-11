@@ -1,28 +1,54 @@
 <!-- pages/boss/withdraw/record/record.wxml -->
-<block wx:if="{{div == 1}}">
-  <view class="list">
-    <block wx:for="{{list}}">
-      <view class="list-one" wx:for="{{item}}">
-        <view class="line">
-          <view class="left color">提现状态</view>
-          <view class="right color" wx:if="{{item.status == 1}}">待处理</view>
-          <view class="right color" wx:if="{{item.status == 2}}">提现成功</view>
-          <view class="right color" wx:if="{{item.status == 3}}">提现失败</view>
+<block wx:if="{{list.length >= 1}}">
+    <view class="list">
+        <block wx:for="{{list}}">
+            <view class="list-one" wx:for="{{item}}">
+                <view class="line">
+                    <view class="left color">提现状态</view>
+                    <view class="right color" wx:if="{{item.status == 1}}">待处理</view>
+                    <view class="right color" wx:if="{{item.status == 2}}">提现成功</view>
+                    <view class="right color" wx:if="{{item.status == 3}}">提现失败</view>
+                </view>
+                <view class="line">
+                    <view class="left">提现金额</view>
+                    <view class="right">{{item.money}}元</view>
+                </view>
+                <view class="line">
+                    <view class="left">转账银行</view>
+                    <view class="right">{{item.bank_name}}({{item.bank_card}})</view>
+                </view>
+                <view class="line">
+                    <view class="left">提现日期</view>
+                    <!-- <view class="right">{{item.message}}</view> -->
+                    <view class="right">{{item.create_time}}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</block>
+<block wx:else>
+    <view class="null">
+        <view class="center">
+            <image lazy-load src="{{imgHost}}jilu.png"></image>
+            <view class="null-text">暂无申请记录</view>
+            <view class="go" bindtap="goDiamAc">
+                <view class="bg"></view>
+                <view class="go-way">我缺钱花</view>
+                <view class="go-text">GO</view>
+                <image lazy-load src="{{imgHost}}shouzhi.png"></image>
+            </view>
+            <view class="go" bindtap="gocardbag">
+                <view class="bg"></view>
+                <view class="go-way">添加银行卡</view>
+                <view class="go-text long">GO</view>
+                <image lazy-load src="{{imgHost}}shouzhi.png"></image>
+            </view>
+            <view class="go" bindtap="gomy">
+                <view class="bg"></view>
+                <view class="go-way">个人中心</view>
+                <view class="go-text">GO</view>
+                <image lazy-load src="{{imgHost}}shouzhi.png"></image>
+            </view>
         </view>
-        <view class="line">
-          <view class="left">提现金额</view>
-          <view class="right">{{item.money}}元</view>
-        </view>
-        <view class="line">
-          <view class="left">转账银行</view>
-          <view class="right">{{item.bank_name}}({{item.bank_card}})</view>
-        </view>
-        <view class="line">
-          <view class="left">提现日期</view>
-          <!-- <view class="right">{{item.message}}</view> -->
-          <view class="right">{{item.create_time}}</view>
-        </view>
-      </view>
-    </block>
-  </view>
+    </view>
 </block>

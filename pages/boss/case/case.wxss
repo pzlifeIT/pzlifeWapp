@@ -90,7 +90,7 @@ page{
 }
 .one-detail{
     width: 750rpx;
-    height: 180rpx;
+    height: auto;
     background-color: #FFFFFF;
     margin-bottom: 2rpx;
     display: flex;
@@ -98,11 +98,17 @@ page{
     align-items: center;
     padding: 0 7rpx 0 9rpx ;
     box-sizing: border-box;
+     
 }
 .detail-title{
     color: #202020;
     font-size: 30rpx;
     margin-bottom: 19rpx;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
 }
 .detail-desc{
     color: #666;

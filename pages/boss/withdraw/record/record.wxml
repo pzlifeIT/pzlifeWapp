@@ -3,7 +3,7 @@
   <view class="div {{div == 1?'active':''}}" bindtap="selectDiv" data-div="1">申请记录</view>
   <view class="div {{div == 2?'active':''}}" bindtap="selectDiv" data-div="2">发票信息</view>
 </view>
-<block wx:if="{{div == 1}}">
+<block wx:if="{{div == 1 && list.length >= 1}}">
   <view class="list">
     <block wx:for="{{list}}">
       <view class="list-one" wx:for="{{item}}">
@@ -41,6 +41,32 @@
         </view>
       </view>
     </block>
+  </view>
+</block>
+<block wx:if="{{div == 1 && list.length <= 0}}">
+  <view class="null">
+    <view class="center">
+      <image lazy-load src="{{imgHost}}jilu.png"></image>
+      <view class="null-text">暂无申请记录</view>
+      <!--<view class="go">-->
+        <!--<view class="bg"></view>-->
+        <!--<view class="go-way">我缺钱花</view>-->
+        <!--<view class="go-text">GO</view>-->
+        <!--<image lazy-load src="{{imgHost}}shouzhi.png"></image>-->
+      <!--</view>-->
+      <view class="go" bindtap="gocardbag">
+        <view class="bg"></view>
+        <view class="go-way">添加银行卡</view>
+        <view class="go-text long">GO</view>
+        <image lazy-load src="{{imgHost}}shouzhi.png"></image>
+      </view>
+      <view class="go" bindtap="gomy">
+        <view class="bg"></view>
+        <view class="go-way">个人中心</view>
+        <view class="go-text">GO</view>
+        <image lazy-load src="{{imgHost}}shouzhi.png"></image>
+      </view>
+    </view>
   </view>
 </block>
 <!-- 发票信息 -->

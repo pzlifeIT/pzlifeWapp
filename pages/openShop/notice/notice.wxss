@@ -3,21 +3,16 @@ page{
     height: 100%;
     overflow: auto;
 }
+image{
+    display: block;
+}
 .kuang{
     width: 750rpx;
     margin-bottom: 80rpx;
 }
-.shang{
-    width: 750rpx;
-    height: 800rpx;
-}
-.xia{
-    width: 750rpx;
-    height: 617rpx;
-}
 .h-shang{
     width: 750rpx;
-    height: 1003rpx;
+    height: 1253rpx;
 }
 .h-zhong{
     width: 750rpx;
@@ -25,7 +20,11 @@ page{
 }
 .h-xia{
     width: 750rpx;
-    height: 843rpx;
+    height: 1020rpx;
+}
+.h-bottom{
+    width: 750rpx;
+    height: 1085rpx;
 }
 .footer{
     width: 750rpx;

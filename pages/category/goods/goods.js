@@ -113,7 +113,7 @@ Page({
         let that = this,
             sub_id = this.data.sub_id,
             share = app.share({
-                title: this.data.sub_name,
+                title: this.data.sub_name || '商品列表',
                 path: '/pages/category/goods/goods?sub_id=' + sub_id + "&sub_name=" + this.data.sub_name
             })
         return share

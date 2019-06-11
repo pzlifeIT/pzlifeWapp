@@ -135,7 +135,7 @@ Page({
     selectDiv: function (e) {
         let div = e.currentTarget.dataset.div;
         wx.navigateTo({
-            url: "record/record?div=" + div
+            url: "record/record"
         })
     },
     selectBank: function () {

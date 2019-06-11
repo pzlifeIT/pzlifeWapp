@@ -143,6 +143,9 @@ Page({
                     case 3001:
                         app.toast({title: '手机格式有误'})
                         break;
+                    case 3002:
+                        app.toast({title:"code码错误"})
+                        break;
                     case 3004:
                     case 3006:
                         app.toast({title: '验证码错误'})

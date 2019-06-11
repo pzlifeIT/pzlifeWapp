@@ -126,7 +126,8 @@ page{
 }
 .detail-one{
 	width: 750rpx;
-	height: 180rpx;
+	height: auto;
+  overflow: auto;
 	border-bottom: 1rpx solid #F7F7F7;
 	background: #fff;
 }
@@ -196,7 +197,7 @@ page{
 }
 .list-left{
 	width: 70%;
-	height: 150rpx;
+	height: auto;
 	margin-left: 12rpx;
 	padding-top: 30rpx;
 	float: left;

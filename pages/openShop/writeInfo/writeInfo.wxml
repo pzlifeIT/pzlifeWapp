@@ -12,7 +12,7 @@
 </view>
 <view class="input-line">
     <view class="line">
-        <input class="input" type="number" placeholder="请输入身份证号"  bindinput="watchInput" data-model="idCard"/>
+        <input class="input" type="text" placeholder="请输入身份证号"  bindinput="watchInput" data-model="idCard"/>
     </view>
 </view>
 <view class="input-line">

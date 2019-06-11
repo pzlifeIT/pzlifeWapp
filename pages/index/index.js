@@ -36,9 +36,10 @@ Page({
     },
     goUrl(e) {
         let con = e.currentTarget.dataset
+        console.log(con)
         if (con.jump == 1) {
             wx.navigateTo({
-                url: "/pages/category/goods/goods?sub_id=" + con.content
+                url: "/pages/category/goods/goods?sub_id=" + con.content + "&sub_name="+con.subname
             })
         } else if (con.jump == 2) {
             wx.navigateTo({

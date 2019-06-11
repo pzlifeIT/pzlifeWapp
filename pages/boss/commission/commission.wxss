@@ -189,11 +189,12 @@ page{
 }
 .list-one{
     width: 750rpx;
-    height: 154rpx;
+    height: auto;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10rpx;
 }
 .touxiang{
     height: 100%;
@@ -213,7 +214,7 @@ page{
 }
 .one-info{
     width: 596rpx;
-    height: 100%;
+    height: auto;
 }
 .one-title{
     font-size: 26rpx;
@@ -260,6 +261,12 @@ page{
     color: #202020;
     font-size: 30rpx;
     float: left;
+    width: 70%;
+     overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
 }
 .ident{
     display: inline-block;
