@@ -45,13 +45,13 @@ Page({
                 url: "/pages/goods/detail?goodid=" + con.content
             })
         } else if (con.jump == 3) {
-            if (con.content == "/pages/index/index" || con.content == '/pages/category/category' || con.content == '/pages/cart/cart' || con.content == '/pages/my/my'){
+            if (con.content == "/pages/index/index" || con.content == '/pages/category/category' || con.content == '/pages/cart/cart' || con.content == '/pages/my/my') {
                 wx.switchTab({
                     url: con.content
                 })
             } else {
                 wx.navigateTo({
-                    url:con.content
+                    url: con.content
                 })
             }
         }
