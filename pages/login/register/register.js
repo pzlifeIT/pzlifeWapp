@@ -151,7 +151,7 @@ Page({
                             app.setconid(res.con_id)
                             let index = app.getIndex(route)
                             wx.navigateBack({
-                                delta:index
+                                delta: index
                             })
                         },
                         error(res) {
@@ -175,7 +175,7 @@ Page({
                                 app.toast({title: '请先授权'})
                             }
                             else {
-                                app.toast({title: '意料之外的错误'})
+                                app.toast({title: '注册失败错误码：' + res})
                             }
                         },
                         fail(res) {
@@ -183,7 +183,7 @@ Page({
                         }
                     })
                 } else {
-                    app.toast({title:"未获取到code码"})
+                    app.toast({title: "未获取到code码"})
                 }
             }
         })
