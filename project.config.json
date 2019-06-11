@@ -1,507 +1,506 @@
 {
-	"description": "œÓƒø≈‰÷√Œƒº˛",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"autoAudits": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.4.3",
-	"appid": "wx1771b2e93c87e22c",
-	"projectname": "pzlifeWapp",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 66,
-			"list": [
-				{
-					"id": 0,
-					"name": "goods",
-					"pathName": "pages/goods/detail",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "cart",
-					"pathName": "pages/cart/cart",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "»∑»œ∂©µ•",
-					"pathName": "pages/comfirOrder/comfirOrder",
-					"query": ""
-				},
-				{
-					"id": 3,
-					"name": "Œ“µƒ∂©µ•",
-					"pathName": "pages/order/order",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 4,
-					"name": "orderDetail",
-					"pathName": "pages/shiftMoney/shiftMoney",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "login",
-					"pathName": "pages/login/login",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "logi",
-					"pathName": "pages/login/register/register",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "captcha",
-					"pathName": "pages/login/captchaLogin/captchaLogin",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "pass",
-					"pathName": "pages/login/passLogin/passLogin",
-					"query": ""
-				},
-				{
-					"id": 10,
-					"name": "pay",
-					"pathName": "pages/paystatus/paystatus",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "search",
-					"pathName": "pages/search/search",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "info",
-					"pathName": "pages/my/myInfo/myInfo",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "◊¢≤·",
-					"pathName": "pages/login/register/register",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "my",
-					"pathName": "pages/my/my",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "cart",
-					"pathName": "pages/cart/cart",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "newpass",
-					"pathName": "pages/my/newpassword/newpassword",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "”≈ª›»Ø",
-					"pathName": "pages/coupon/coupon",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "…Ã»Ø",
-					"pathName": "pages/my/case/case",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "ª˝∑÷",
-					"pathName": "pages/my/integ/integ",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "÷ß∏∂Ω·π˚",
-					"pathName": "pages/paystatus/paystatus",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": " ’≤ÿ",
-					"pathName": "pages/collect/collect",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "¡Ï»Ø÷––ƒ",
-					"pathName": "pages/coupon/getcoupon/getcoupon",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "µÍ∆Ãπ‹¿Ì",
-					"pathName": "pages/boss/boss",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "–¬Ω®”≈ª›»Ø",
-					"pathName": "pages/boss/addcoupon/addcoupon",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "ªÓ∂Ø",
-					"pathName": "pages/activity/activity",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "π∫¬Ú◊Í Øª·‘±",
-					"pathName": "pages/activity/buyvip/buyvip",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 25,
-					"name": "1",
-					"pathName": "pages/my/case/case",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 26,
-					"name": "goodslist",
-					"pathName": "pages/category/goods/goods",
-					"query": "sub_id=51",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "∑÷¿‡",
-					"pathName": "pages/category/category",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "…Ã∆∑¡–±Ì",
-					"pathName": "pages/category/goods/goods",
-					"query": "sub_id=53",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "µÿ÷∑",
-					"pathName": "pages/address/address",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "◊Í Øø®¡–±Ì",
-					"pathName": "pages/diamondlist/diamondlist",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 32,
-					"name": " ◊“≥",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "jiameng",
-					"pathName": "pages/boss/join/join",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "…Ã»Ø",
-					"pathName": "pages/boss/case/case",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 35,
-					"name": "…Ã»Ø",
-					"pathName": "pages/boss/earnings/earnings",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "ª·‘±",
-					"pathName": "pages/boss/join/join",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 38,
-					"name": "¬Ú÷˜",
-					"pathName": "pages/boss/circle/circle",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "shejiao",
-					"pathName": "pages/boss/circle/circle",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "∏ˆ»À÷––ƒ",
-					"pathName": "pages/my/my",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "ª·‘±- ’“Ê",
-					"pathName": "pages/my/earnings/earnings",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "ª·‘±-”∂Ω",
-					"pathName": "pages/my/commission/commission",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "µÍπ‹-”∂Ω",
-					"pathName": "pages/boss/commission/commission",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "◊™»Î…Ã»Ø",
-					"pathName": "pages/shiftMoney/shiftMoney",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Ã·≥ˆ…Í«Î",
-					"pathName": "pages/shiftMoney/shiftSuccess/shiftSuccess",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "…Ã»Ø…Í«ÎºÕ¬º",
-					"pathName": "pages/shiftMoney/record/record",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "–Î÷™",
-					"pathName": "pages/my/notice/notice",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "”∂Ω”‡∂Ó",
-					"pathName": "pages/my/commission/commission",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "…®¬Îø™µÍ",
-					"pathName": "pages/openShop/openShop",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 49,
-					"name": "∫œªÔ»À–Î÷™",
-					"pathName": "pages/openShop/notice/notice",
-					"query": "scene=EE",
-					"scene": 1011
-				},
-				{
-					"id": -1,
-					"name": "ÃÓ–¥ø™µÍ–≈œ¢",
-					"pathName": "pages/openShop/writeInfo/writeInfo",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Ã·Ωª≥…π¶",
-					"pathName": "pages/openShop/submitStatus/submitStatus",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 52,
-					"name": "—°‘Ò∏∂øÓ∑Ω Ω",
-					"pathName": "pages/openShop/payWay/payWay",
-					"query": "ptype=1",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": " ’≤ÿ",
-					"pathName": "pages/collect/collect",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "ªÓ∂Ø ’“Ê",
-					"pathName": "pages/my/activeEarn/activeEarn",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "◊Í Ø∫œªÔ»À",
-					"pathName": "pages/diamActive/diamActive",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "≤Ÿ◊˜÷∏ƒœ",
-					"pathName": "pages/my/instructions/instructions",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Ω±¿¯Ω◊™…Ã»Ø",
-					"pathName": "pages/diamActive/shiftMoney/shiftMoney",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Ω±¿¯Ω◊™…Ã»Øº«¬º",
-					"pathName": "pages/diamActive/shiftMoney/record/record",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Ω±¿¯ΩÃ·œ÷",
-					"pathName": "pages/diamActive/withdraw/withdraw",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "”∂ΩÃ·œ÷",
-					"pathName": "pages/boss/withdraw/withdraw",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 61,
-					"name": "…Ã∆∑œÍ«È",
-					"pathName": "pages/goods/detail",
-					"query": "goodid=1269",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "…Ã∆∑∑÷¿‡",
-					"pathName": "pages/category/category",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 63,
-					"name": "getvip",
-					"pathName": "pages/diamActive/diamActive",
-					"query": "",
-					"scene": 1036,
-					"referrerInfo": {}
-				},
-				{
-					"id": -1,
-					"name": "button",
-					"pathName": "pages/button/button",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 65,
-					"name": "huodong ",
-					"pathName": "pages/events/events",
-					"query": "scene=id%3D4%26pid%3D24858",
-					"scene": 1047
-				},
-				{
-					"id": 66,
-					"name": "ªÓ∂Ø…Ã∆∑",
-					"pathName": "pages/events/events",
-					"query": "scene=id%3d2",
-					"scene": null
-				}
-			]
-		}
-	}
+    "description": "È°πÁõÆÈÖçÁΩÆÊñá‰ª∂",
+    "packOptions": {
+        "ignore": []
+    },
+    "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
+        "newFeature": true,
+        "autoAudits": false
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.4.3",
+    "appid": "wx1771b2e93c87e22c",
+    "projectname": "pzlifeWapp",
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "isGameTourist": false,
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "search": {
+            "current": -1,
+            "list": []
+        },
+        "conversation": {
+            "current": -1,
+            "list": []
+        },
+        "plugin": {
+            "current": -1,
+            "list": []
+        },
+        "game": {
+            "currentL": -1,
+            "list": []
+        },
+        "miniprogram": {
+            "current": 66,
+            "list": [{
+                    "id": 0,
+                    "name": "goods",
+                    "pathName": "pages/goods/detail",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "cart",
+                    "pathName": "pages/cart/cart",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "Á°ÆËÆ§ËÆ¢Âçï",
+                    "pathName": "pages/comfirOrder/comfirOrder",
+                    "query": ""
+                },
+                {
+                    "id": 3,
+                    "name": "ÊàëÁöÑËÆ¢Âçï",
+                    "pathName": "pages/order/order",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 4,
+                    "name": "orderDetail",
+                    "pathName": "pages/shiftMoney/shiftMoney",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "login",
+                    "pathName": "pages/login/login",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "logi",
+                    "pathName": "pages/login/register/register",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "captcha",
+                    "pathName": "pages/login/captchaLogin/captchaLogin",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "pass",
+                    "pathName": "pages/login/passLogin/passLogin",
+                    "query": ""
+                },
+                {
+                    "id": 10,
+                    "name": "pay",
+                    "pathName": "pages/paystatus/paystatus",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "search",
+                    "pathName": "pages/search/search",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "info",
+                    "pathName": "pages/my/myInfo/myInfo",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "Ê≥®ÂÜå",
+                    "pathName": "pages/login/register/register",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "my",
+                    "pathName": "pages/my/my",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "cart",
+                    "pathName": "pages/cart/cart",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "newpass",
+                    "pathName": "pages/my/newpassword/newpassword",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "‰ºòÊÉ†Âà∏",
+                    "pathName": "pages/coupon/coupon",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ÂïÜÂà∏",
+                    "pathName": "pages/my/case/case",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ÁßØÂàÜ",
+                    "pathName": "pages/my/integ/integ",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ÊîØ‰ªòÁªìÊûú",
+                    "pathName": "pages/paystatus/paystatus",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Êî∂Ëóè",
+                    "pathName": "pages/collect/collect",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "È¢ÜÂà∏‰∏≠ÂøÉ",
+                    "pathName": "pages/coupon/getcoupon/getcoupon",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Â∫óÈì∫ÁÆ°ÁêÜ",
+                    "pathName": "pages/boss/boss",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Êñ∞Âª∫‰ºòÊÉ†Âà∏",
+                    "pathName": "pages/boss/addcoupon/addcoupon",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Ê¥ªÂä®",
+                    "pathName": "pages/activity/activity",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Ë¥≠‰π∞ÈíªÁü≥‰ºöÂëò",
+                    "pathName": "pages/activity/buyvip/buyvip",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 25,
+                    "name": "1",
+                    "pathName": "pages/my/case/case",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 26,
+                    "name": "goodslist",
+                    "pathName": "pages/category/goods/goods",
+                    "query": "sub_id=51",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ÂàÜÁ±ª",
+                    "pathName": "pages/category/category",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ÂïÜÂìÅÂàóË°®",
+                    "pathName": "pages/category/goods/goods",
+                    "query": "sub_id=53",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Âú∞ÂùÄ",
+                    "pathName": "pages/address/address",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ÈíªÁü≥Âç°ÂàóË°®",
+                    "pathName": "pages/diamondlist/diamondlist",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 32,
+                    "name": "È¶ñÈ°µ",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "jiameng",
+                    "pathName": "pages/boss/join/join",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ÂïÜÂà∏",
+                    "pathName": "pages/boss/case/case",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 35,
+                    "name": "ÂïÜÂà∏",
+                    "pathName": "pages/boss/earnings/earnings",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "‰ºöÂëò",
+                    "pathName": "pages/boss/join/join",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 38,
+                    "name": "‰π∞‰∏ª",
+                    "pathName": "pages/boss/circle/circle",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "shejiao",
+                    "pathName": "pages/boss/circle/circle",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "‰∏™‰∫∫‰∏≠ÂøÉ",
+                    "pathName": "pages/my/my",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "‰ºöÂëò-Êî∂Áõä",
+                    "pathName": "pages/my/earnings/earnings",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "‰ºöÂëò-‰Ω£Èáë",
+                    "pathName": "pages/my/commission/commission",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Â∫óÁÆ°-‰Ω£Èáë",
+                    "pathName": "pages/boss/commission/commission",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ËΩ¨ÂÖ•ÂïÜÂà∏",
+                    "pathName": "pages/shiftMoney/shiftMoney",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ÊèêÂá∫Áî≥ËØ∑",
+                    "pathName": "pages/shiftMoney/shiftSuccess/shiftSuccess",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ÂïÜÂà∏Áî≥ËØ∑Á∫™ÂΩï",
+                    "pathName": "pages/shiftMoney/record/record",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "È°ªÁü•",
+                    "pathName": "pages/my/notice/notice",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "‰Ω£Èáë‰ΩôÈ¢ù",
+                    "pathName": "pages/my/commission/commission",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Êâ´Á†ÅÂºÄÂ∫ó",
+                    "pathName": "pages/openShop/openShop",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 49,
+                    "name": "Âêà‰ºô‰∫∫È°ªÁü•",
+                    "pathName": "pages/openShop/notice/notice",
+                    "query": "scene=EE",
+                    "scene": 1011
+                },
+                {
+                    "id": -1,
+                    "name": "Â°´ÂÜôÂºÄÂ∫ó‰ø°ÊÅØ",
+                    "pathName": "pages/openShop/writeInfo/writeInfo",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Êèê‰∫§ÊàêÂäü",
+                    "pathName": "pages/openShop/submitStatus/submitStatus",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 52,
+                    "name": "ÈÄâÊã©‰ªòÊ¨æÊñπÂºè",
+                    "pathName": "pages/openShop/payWay/payWay",
+                    "query": "ptype=1",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Êî∂Ëóè",
+                    "pathName": "pages/collect/collect",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Ê¥ªÂä®Êî∂Áõä",
+                    "pathName": "pages/my/activeEarn/activeEarn",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ÈíªÁü≥Âêà‰ºô‰∫∫",
+                    "pathName": "pages/diamActive/diamActive",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Êìç‰ΩúÊåáÂçó",
+                    "pathName": "pages/my/instructions/instructions",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Â•ñÂä±ÈáëËΩ¨ÂïÜÂà∏",
+                    "pathName": "pages/diamActive/shiftMoney/shiftMoney",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Â•ñÂä±ÈáëËΩ¨ÂïÜÂà∏ËÆ∞ÂΩï",
+                    "pathName": "pages/diamActive/shiftMoney/record/record",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Â•ñÂä±ÈáëÊèêÁé∞",
+                    "pathName": "pages/diamActive/withdraw/withdraw",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "‰Ω£ÈáëÊèêÁé∞",
+                    "pathName": "pages/boss/withdraw/withdraw",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 61,
+                    "name": "ÂïÜÂìÅËØ¶ÊÉÖ",
+                    "pathName": "pages/goods/detail",
+                    "query": "goodid=1269",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "ÂïÜÂìÅÂàÜÁ±ª",
+                    "pathName": "pages/category/category",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 63,
+                    "name": "getvip",
+                    "pathName": "pages/diamActive/diamActive",
+                    "query": "",
+                    "scene": 1036,
+                    "referrerInfo": {}
+                },
+                {
+                    "id": -1,
+                    "name": "button",
+                    "pathName": "pages/button/button",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 65,
+                    "name": "huodong ",
+                    "pathName": "pages/events/events",
+                    "query": "scene=id%3D4%26pid%3D24858",
+                    "scene": 1047
+                },
+                {
+                    "id": 66,
+                    "name": "Ê¥ªÂä®ÂïÜÂìÅ",
+                    "pathName": "pages/events/events",
+                    "query": "scene=id%3d2",
+                    "scene": null
+                }
+            ]
+        }
+    }
 }
