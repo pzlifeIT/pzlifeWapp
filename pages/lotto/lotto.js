@@ -1,6 +1,6 @@
 // pages/lotto/lotto.js
 const app = getApp()
-let speed = 50,
+let speed = 20,
     timer = null,
     scroll = 10
 Page({
@@ -151,6 +151,7 @@ Page({
         that.stopLuck(luckNum, index, speed, 10)
     },
     stopLuck: function (luckNum, index, time, addtime) {
+        console.log(time)
         let color = this.data.color,
             that = this,
             luck = this.data.luck;

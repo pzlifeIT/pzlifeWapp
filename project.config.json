@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
-	"appid": "wxa8c604ce63485956",
+	"appid": "wx1771b2e93c87e22c",
 	"projectname": "pzlifeWapp",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 68,
+			"current": 69,
 			"list": [
 				{
 					"id": 0,
@@ -354,10 +354,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 46,
 					"name": "须知",
 					"pathName": "pages/my/notice/notice",
-					"query": "",
+					"query": "iden=3",
 					"scene": null
 				},
 				{
@@ -491,7 +491,7 @@
 					"id": 65,
 					"name": "huodong ",
 					"pathName": "pages/events/events",
-					"query": "scene=id%3D6%26pid%3D24858",
+					"query": "scene=id%3D5%26pid%3D24858",
 					"scene": 1047
 				},
 				{
@@ -512,6 +512,13 @@
 					"id": -1,
 					"name": "log",
 					"pathName": "pages/lotto/log/log",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "goumeizuanshi",
+					"pathName": "pages/my/getVip/getVip",
 					"query": "",
 					"scene": null
 				}

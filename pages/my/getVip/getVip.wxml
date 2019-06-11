@@ -7,7 +7,8 @@
 <view class="pop p" catchtouchmove='preventTouchMove' wx:if="{{pop}}">
     <view class="kg">
         <scroll-view scroll-y class="notice">
-            <image class="img" lazy-load="true" src="{{imgHost}}zsxz1.png"></image>
+            <image class="img-top" lazy-load="true" src="{{imgHost}}domiboss_03.jpg"></image>
+            <image class="img-bottom" lazy-load="true" src="{{imgHost}}domiboss_05.jpg"></image>
         </scroll-view>
         <checkbox-group bindchange="change">
             <view class="check">

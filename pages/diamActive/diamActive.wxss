@@ -121,9 +121,15 @@
 ::-webkit-scrollbar{
     display: none;
 }
-.img{
+.img-top{
     width: 700rpx;
-    height: 1302rpx;
+    height: 1116rpx;
+    display: block;
+}
+.img-bottom{
+    width: 700rpx;
+    height:1237rpx;
+    display: block;
 }
 .check{
     width: 100%;

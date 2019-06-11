@@ -11,7 +11,8 @@ Page({
         qrcode:'',
         page:1,
         pageNum:10,
-        reach:true
+        reach:true,
+        goods_name:''
     },
     goHome: function () {
         wx.switchTab({
@@ -28,7 +29,8 @@ Page({
         let base = app.base64(app.globalData.host.cmsHost + "lucky.html?pid=" + app.globalData.userInfo.uid + "&wid=" + wid);
         this.setData({
             qrcode: app.globalData.host.apiHost + "OfflineActivities/createOrderQrCode?data=" + base,
-            pop:true
+            pop:true,
+            goods_name:e.currentTarget.dataset.name
         })
     },
     null: function () {

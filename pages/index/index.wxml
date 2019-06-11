@@ -26,7 +26,7 @@
             <view class="icon-one" wx:for="{{icon.son}}">
                 <image lazy-load="true" bindtap="goUrl" data-jump="{{item.jump_type}}"
                        data-content="{{item.jump_content}}"
-                       src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
+                       src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}" data-subName="{{item.title}}"></image>
                 <view class="icon-text">{{item.title}}</view>
             </view>
 

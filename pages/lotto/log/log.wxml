@@ -8,7 +8,7 @@
                     <view class="title">{{item.goods_name}}</view>
                     <view class="time">{{item.create_time}}</view>
                 </view>
-                <view class="button " wx:if="{{item.status == 1}}" bindtap="lingqu" data-wid="{{item.id}}">立即领取</view>
+                <view class="button " wx:if="{{item.status == 1}}" bindtap="lingqu" data-wid="{{item.id}}" data-name="{{item.goods_name}}">立即领取</view>
                 <view class="button active" wx:else>已领取</view>
             </view>
         </block>
@@ -17,7 +17,7 @@
 <view class="pop" wx:if="{{pop}}" catchtap="hiddenPop">
     <view class="center" catchtap="null">
         <view class="center-title">恭喜你抽中了</view>
-        <view class="center-subtitle">君乐宝涨知识啦酸奶</view>
+        <view class="center-subtitle">{{goods_name}}</view>
         <image class="qrcode" lazy-load src="{{qrcode}}"></image>
         <view class="pop-hint">凭二维码兑换奖品</view>
         <!--<view class="little-hint">(可在中奖记录中查看)</view>-->

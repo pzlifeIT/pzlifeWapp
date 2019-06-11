@@ -5,6 +5,11 @@ page{
 }
 .kuang{
     width: 750rpx;
+    margin-bottom: 70rpx;
+}
+image{
+    display: block;
+    background: #FFFFFF;
 }
 .shang{
     width: 750rpx;
@@ -12,7 +17,7 @@ page{
 }
 .xia{
     width: 750rpx;
-    height: 568rpx;
+    height: 1384rpx;
 }
 .h-shang{
     width: 750rpx;
@@ -24,7 +29,27 @@ page{
 }
 .h-xia{
     width: 750rpx;
-    height: 843rpx;
+    height: 1020rpx;
+}
+.h-bottom{
+    width: 750rpx;
+    height: 1085rpx;
+}
+.c-shang{
+    width: 750rpx;
+    height: 1003rpx;
+}
+.c-zhong{
+    width: 750rpx;
+    height: 1095rpx;
+}
+.c-xia{
+    width: 750rpx;
+    height: 1020rpx;
+}
+.c-bottom{
+    width: 750rpx;
+    height: 1093rpx;
 }
 .footer{
     width: 750rpx;
@@ -34,8 +59,8 @@ page{
     align-items: center;
 }
 .button{
-    width: 520rpx;
-    height: 80rpx;
+    width: 720rpx;
+    height: 75rpx;
     background-image: linear-gradient(0deg,
     #db3030 0%,
     #fe5849 100%),
@@ -44,12 +69,12 @@ page{
             #db3030);
     background-blend-mode: normal,
     normal;
-    border-radius: 40px;
+    /*border-radius: 40px;*/
     color: #ffffff;
     font-size: 30rpx;
     text-align: center;
     line-height: 80rpx;
-}
-.foo{
-    margin-bottom: 20rpx;
+    position: fixed;
+    bottom: 20rpx;
+    left: 15rpx;
 }
