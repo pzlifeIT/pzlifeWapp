@@ -190,7 +190,7 @@
                         <view class="vipprice">钻石再让利 {{third.goods_min_brokerage}}</view>
                     </view>
                     <view class="goods-one" bindtap="goUrl" data-jump="{{item.jump_type}}"
-                          data-content="{{item.jump_content}}">
+                          data-content="{{item.jump_content}}" data-subName="{{item.title}}">
                         <image class="right-bottom-img" lazy-load="true"
                                src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
                     </view>
