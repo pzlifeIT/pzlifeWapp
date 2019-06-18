@@ -38,7 +38,7 @@
             <view class="div-left" wx:for="{{sub.son}}">
                 <image lazy-load="true" bindtap="goUrl" data-jump="{{item.jump_type}}"
                        data-content="{{item.jump_content}}"
-                       src="{{item.image_path+'?imageMogr2/thumbnail/450x'}}"></image>
+                       src="{{item.image_path+'?imageMogr2/thumbnail/450x'}}" data-subName="{{item.title}}"></image>
             </view>
         </view>
     </view>
