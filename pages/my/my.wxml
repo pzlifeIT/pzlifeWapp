@@ -211,10 +211,10 @@
             <image lazy-load="true" src="{{imgHost}}hdgl_15.png"></image>
             <view class="equity-title">转商券</view>
         </view>
-        <view class="equity-one" bindtap="bountyWithdraw">
-            <image lazy-load="true" src="{{imgHost}}hdgl_13.png"></image>
-            <view class="equity-title">提现</view>
-        </view>
+        <!--<view class="equity-one" bindtap="bountyWithdraw">-->
+            <!--<image lazy-load="true" src="{{imgHost}}hdgl_13.png"></image>-->
+            <!--<view class="equity-title">提现</view>-->
+        <!--</view>-->
         <view class="equity-one" bindtap="instr">
             <image lazy-load="true" src="{{imgHost}}hdgl_14.png"></image>
             <view class="equity-title" style="color: #e61f18;">操作指南</view>

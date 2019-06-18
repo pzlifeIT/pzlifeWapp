@@ -18,8 +18,6 @@ Page({
         wx.login({
             success(res) {
                 if (res.code) {
-                    console.log(res.code)
-                    return
                     that.getUserRead(encrypteddata, iv);
                     app.wxrequest({
                         url: "user/loginuserbywx",

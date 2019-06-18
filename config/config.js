@@ -9,7 +9,7 @@ if (appid == 'wx1771b2e93c87e22c') { //正式
         notifyHost: 'https://notifyapi.pzlive.vip', //正式通知接口域名
         payHost: 'https://payapi.pzlive.vip/', //正式支付接口域名
         imgHost: 'https://webimages.pzlive.vip/', //正式图片域名前缀
-        cmsHost:'https://sj.cms.pzlive.vip/'  //cms域名
+        cmsHost:'http://sj.cms.pzlive.vip/'  //cms域名
     }
 } else if (appid == 'wxa8c604ce63485956') { //测试
     config = {

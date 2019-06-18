@@ -25,6 +25,7 @@ Page({
         if (sub_id) {
             this.getSubGoodsList(sub_id)
         }
+        console.log(options)
         wx.setNavigationBarTitle({
             title: options.sub_name || "商品列表"
         })

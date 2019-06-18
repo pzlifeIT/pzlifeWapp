@@ -24,8 +24,16 @@ Page({
             })
         } else if (options.iden == 4){
             wx.setNavigationBarTitle({
-                title:"合伙人须知"
+              title:"合伙人和兼职市场总监权益规定"
             })
+        } else if (options.iden == 3){
+            wx.setNavigationBarTitle({
+                title:"创业店主和兼职市场经理须知"
+            })
+        } else{
+          wx.setNavigationBarTitle({
+            title: "会员权益须知"
+          })
         }
     },
     back:function(){

@@ -21,6 +21,11 @@ Page({
             imgHost:app.globalData.host.imgHost
         })
     },
+    getMoney:function(){
+      wx.navigateTo({
+          url:'/pages/diamActive/diamActive'
+      })
+    },
     getLogTransfer() {
         let that = this
         app.wxrequest({

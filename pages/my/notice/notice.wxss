@@ -33,7 +33,7 @@ image{
 }
 .h-bottom{
     width: 750rpx;
-    height: 1085rpx;
+    height: 1050rpx;
 }
 .c-shang{
     width: 750rpx;
@@ -57,6 +57,10 @@ image{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0rpx;
+    left: 0rpx;
+    background: #ffffff;
 }
 .button{
     width: 720rpx;
@@ -74,7 +78,5 @@ image{
     font-size: 30rpx;
     text-align: center;
     line-height: 80rpx;
-    position: fixed;
-    bottom: 20rpx;
-    left: 15rpx;
+    
 }

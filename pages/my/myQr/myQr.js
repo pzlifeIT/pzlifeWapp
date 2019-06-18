@@ -51,12 +51,15 @@ Page({
             scope: "scope.writePhotosAlbum",
             success(res) {
                 console.log(res)
+                console.log("授权了")
                 wx.downloadFile({
                     url: img,
                     success(res) {
+                        console.log("下载成功")
                         wx.saveImageToPhotosAlbum({
                             filePath:res.tempFilePath,
                             success(res){
+                                console.log("保存成功")
                                 app.toast({
                                     title:"保存成功，请进入相册查看"
                                 })
@@ -66,6 +69,7 @@ Page({
                 })
             },
             fail(res) {
+                console.log("没授权")
                 app.modal({
                     content: "您未授权保存到相册，请点击确定打开权限",
                     success(res) {
