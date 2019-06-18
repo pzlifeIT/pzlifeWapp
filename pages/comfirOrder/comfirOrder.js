@@ -14,7 +14,7 @@ Page({
         siteid: '',
         site: {},
         buypup: false,
-        paytype: 0,
+        paytype: 1,
         paymoney: {},
         num: 1,
         quick: 0,
