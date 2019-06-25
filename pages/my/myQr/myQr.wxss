@@ -10,3 +10,9 @@ view{
     width: 750rpx;
     height: 750rpx;
 }
+.hint{
+    font-size: 36rpx;
+    color: #202020;
+    text-align: center;
+    margin-top: 60rpx;
+}

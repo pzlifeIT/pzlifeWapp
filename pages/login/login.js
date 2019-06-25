@@ -18,7 +18,7 @@ Page({
         wx.login({
             success(res) {
                 if (res.code) {
-                    that.getUserRead(encrypteddata,iv);
+                    that.getUserRead(encrypteddata, iv);
                     app.wxrequest({
                         url: "user/loginuserbywx",
                         data: {code: res.code, buid: app.globalData.pid, encrypteddata: encrypteddata, iv: iv},
@@ -28,7 +28,7 @@ Page({
                             let index = app.getIndex(route)
                             console.log(index)
                             wx.navigateBack({
-                                delta:index
+                                delta: index
                             })
                         },
                         error(res) {
@@ -41,8 +41,7 @@ Page({
                                         url: "/pages/login/captchaLogin/captchaLogin"
                                     })
                                     clearTimeout(timer)
-                                }, 1500);
-
+                                }, 2000);
                             } else if (res == 3003) {
                                 app.toast({
                                     title: "登录失败,请稍后重试",
@@ -50,6 +49,10 @@ Page({
                             } else if (res == 3001) {
                                 app.toast({
                                     title: "用户授权失败",
+                                })
+                            } else {
+                                app.toast({
+                                    title: "登录失败，错误码：" + res
                                 })
                             }
                         }
@@ -62,22 +65,22 @@ Page({
     getUserRead: function (encrypteddata = "", iv = "") {
         let pid = app.globalData.pid
         wx.login({
-            success(res){
+            success(res) {
                 if (res.code) {
                     app.wxrequest({
                         url: "user/getUserRead",
-                        noloading:true,
+                        noloading: true,
                         data: {
                             code: res.code,
                             view_uid: pid,
-                            encrypteddata:encrypteddata,
-                            iv:iv
+                            encrypteddata: encrypteddata,
+                            iv: iv
                         },
                         nocon: true,
                         success(res) {
                             console.log(res)
                         },
-                        error(res){
+                        error(res) {
                             console.log(res)
                         }
                     })

@@ -148,7 +148,7 @@ Page({
 
         }
         let index = current + 1
-        that.stopLuck(luckNum, index, speed, 10)
+        that.stopLuck(luckNum, index, speed, 3)
     },
     stopLuck: function (luckNum, index, time, addtime) {
         console.log(time)

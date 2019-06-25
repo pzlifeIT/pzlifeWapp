@@ -26,7 +26,7 @@
         <view class="center">
             <image lazy-load src="{{imgHost}}jilu.png"></image>
             <view class="null-text">暂无申请记录</view>
-            <view class="go">
+            <view class="go" bindtap="getMoney">
                 <view class="bg"></view>
                 <view class="go-way">赚钱秘籍</view>
                 <view class="go-text">GO</view>

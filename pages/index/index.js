@@ -29,18 +29,20 @@ Page({
         hotson: []
     },
     //事件处理函数
-    bindViewTap: function() {
+    bindViewTap: function () {
         wx.navigateTo({
             url: '../logs/logs'
         })
     },
     goUrl(e) {
         let con = e.currentTarget.dataset
+        let subname = con.subname || ''
         console.log(con)
         if (con.jump == 1) {
             wx.navigateTo({
-                url: "/pages/category/goods/goods?sub_id=" + con.content + "&sub_name="+con.subname
+                url: "/pages/category/goods/goods?sub_id=" + con.content + "&sub_name=" + subname
             })
+            console.log("/pages/category/goods/goods?sub_id=" + con.content + "&sub_name=" + subname )
         } else if (con.jump == 2) {
             wx.navigateTo({
                 url: "/pages/goods/detail?goodid=" + con.content
@@ -57,12 +59,12 @@ Page({
             }
         }
     },
-    swiper: function(e) {
+    swiper: function (e) {
         this.setData({
             num: parseInt(e.detail.current) + 1
         })
     },
-    movescroll: function(e) {
+    movescroll: function (e) {
         console.log(e)
         if (e.detail.scrollLeft >= 500) {
             e.detail.scrollLeft = 500
@@ -71,7 +73,7 @@ Page({
             pos_scroll: parseInt(e.detail.scrollLeft)
         })
     },
-    home: function(home) {
+    home: function (home) {
         let that = this
         for (let i = 0; i < home.length; i++) {
             //一个元素是一个模块，具体是哪个模块根据当前元素里面的model——id
@@ -129,25 +131,25 @@ Page({
     /**
      * 下拉刷新
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
         wx.showNavigationBarLoading() //在标题栏中显示加载
-            //模拟加载
+        //模拟加载
         let that = this
-        setTimeout(function() {
+        setTimeout(function () {
             that.getIndex()
             wx.hideNavigationBarLoading() //完成停止加载
             wx.stopPullDownRefresh() //停止下拉刷新
         }, 1500);
     },
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
     },
-    bindRegionChange: function(e) {
+    bindRegionChange: function (e) {
         console.log(e)
     },
-    getUserInfo: function(e) {
+    getUserInfo: function (e) {
         console.log(e)
         app.globalData.userInfo = e.detail.userInfo
         this.setData({
@@ -158,7 +160,7 @@ Page({
     /**
      * 获取首页接口
      */
-    getIndex: function() {
+    getIndex: function () {
         let that = this
         app.wxrequest({
             url: "Recommend/getRecommend",
@@ -176,7 +178,7 @@ Page({
             }
         })
     },
-    onShow: function() {
+    onShow: function () {
         this.getIndex()
         if (app.globalData.updateNum) {
             app.setCartNum()
@@ -185,7 +187,7 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
         return app.share()
     }
 })

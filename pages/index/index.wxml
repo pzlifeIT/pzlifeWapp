@@ -38,7 +38,7 @@
             <view class="div-left" wx:for="{{sub.son}}">
                 <image lazy-load="true" bindtap="goUrl" data-jump="{{item.jump_type}}"
                        data-content="{{item.jump_content}}"
-                       src="{{item.image_path+'?imageMogr2/thumbnail/450x'}}"></image>
+                       src="{{item.image_path+'?imageMogr2/thumbnail/450x'}}" data-subName="{{item.title}}"></image>
             </view>
         </view>
     </view>
@@ -47,7 +47,7 @@
         <view class="title">
             <view class="newpro-text">{{newGoods.title}}</view>
             <view class="new-more" bindtap="goUrl" data-jump="{{newGoods.jump_type}}"
-                  data-content="{{newGoods.jump_content}}">
+                  data-content="{{newGoods.jump_content}}" data-subName="{{newGoods.title}}">
                 更多
                 <image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
             </view>
@@ -87,7 +87,7 @@
             <view class="title">
                 <view class="newpro-text">{{hotGoods.title}}</view>
                 <view class="new-more" bindtap="goUrl" data-jump="{{hotGoods.jump_type}}"
-                      data-content="{{hotGoods.jump_content}}">更多
+                      data-content="{{hotGoods.jump_content}}" data-subName="{{hotGoods.title}}">更多
                     <image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
                 </view>
             </view>
@@ -156,7 +156,7 @@
         <view class="title">
             <view class="newpro-text">{{maizhu.title}}</view>
             <view class="new-more" bindtap="goUrl" data-jump="{{maizhu.jump_type}}"
-                  data-content="{{maizhu.jump_content}}">
+                  data-content="{{maizhu.jump_content}}" data-subName="{{maizhu.title}}">
                 更多
                 <image lazy-load="true" src="{{maizhu.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
             </view>
@@ -176,7 +176,7 @@
                 <view class="title">
                     <view class="newpro-text">{{item.title}}</view>
                     <view class="new-more" bindtap="goUrl" data-jump="{{item.jump_type}}"
-                          data-content="{{item.jump_content}}">
+                          data-content="{{item.jump_content}}" data-subName="{{item.title}}">
                         更多
                         <image lazy-load="true" src="{{imgHost}}jt_18.png"></image>
                     </view>
@@ -190,7 +190,7 @@
                         <view class="vipprice">钻石再让利 {{third.goods_min_brokerage}}</view>
                     </view>
                     <view class="goods-one" bindtap="goUrl" data-jump="{{item.jump_type}}"
-                          data-content="{{item.jump_content}}">
+                          data-content="{{item.jump_content}}" data-subName="{{item.title}}">
                         <image class="right-bottom-img" lazy-load="true"
                                src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
                     </view>

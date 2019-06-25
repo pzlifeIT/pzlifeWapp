@@ -132,7 +132,7 @@ Page({
                 app.setconid(res.con_id)
                 let index = app.getIndex(route)
                 wx.navigateBack({
-                    delta:index
+                    delta: index
                 })
             },
             error(code) {
@@ -144,7 +144,7 @@ Page({
                         app.toast({title: '手机格式有误'})
                         break;
                     case 3002:
-                        app.toast({title:"code码错误"})
+                        app.toast({title: "code码错误"})
                         break;
                     case 3004:
                     case 3006:
@@ -157,7 +157,7 @@ Page({
                         app.toast({title: '该微信号已绑定手机号'})
                         break;
                     default:
-                        app.toast({title: '意料之外的错误'})
+                        app.toast({title: '登录失败，错误码：' + code})
                         break;
                 }
             }

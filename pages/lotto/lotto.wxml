@@ -89,7 +89,6 @@
 </view>
 
 <view style="width: 750rpx;height: 20rpx;"></view>
-
 <view class="pop" wx:if="{{pop}}">
     <view class="center">
         <view class="center-title">恭喜你抽中了</view>
