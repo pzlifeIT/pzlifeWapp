@@ -4,6 +4,8 @@ page {
     background: #f7f7f7;
     height: 100%;
     overflow: auto;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 }
 .view-page{
     background-color: #FFFFFF;

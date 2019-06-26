@@ -185,7 +185,7 @@ lose_title {
 }
 
 .lose {
-    padding-bottom: 90rpx;
+    /* padding-bottom: 90rpx; */
 }
 
 .lose_goods {

@@ -40,7 +40,7 @@ Page({
             })
             withdraw = false
         }
-        let num = val ? (parseFloat(val) * 1.25) + '' : 0
+        let num = val ? (parseFloat(val) ) : 0
         num = Math.floor(num * 100) / 100
         this.setData({
             reality: num,

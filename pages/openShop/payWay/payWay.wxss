@@ -25,9 +25,12 @@
 }
 image{
     width: 750rpx;
-    height: 1018rpx;
+    height: 1131rpx;
     margin-top: 22rpx;
 }
 .yh{
     text-align: left;
+}
+.wx{
+    height: 1031rpx;
 }

@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
-	"appid": "wx1771b2e93c87e22c",
+	"appid": "wxa8c604ce63485956",
 	"projectname": "pzlifeWapp",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 46,
+			"current": 55,
 			"list": [
 				{
 					"id": 0,
@@ -357,7 +357,7 @@
 					"id": 46,
 					"name": "须知",
 					"pathName": "pages/my/notice/notice",
-					"query": "iden=4",
+					"query": "iden=2",
 					"scene": null
 				},
 				{
@@ -417,7 +417,7 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 55,
 					"name": "钻石合伙人",
 					"pathName": "pages/diamActive/diamActive",
 					"query": "",
@@ -520,6 +520,13 @@
 					"name": "goumeizuanshi",
 					"pathName": "pages/my/getVip/getVip",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "webapp",
+					"pathName": "pages/webapp/webapp",
+					"query": "iden=2",
 					"scene": null
 				}
 			]
