@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 46,
+			"current": 71,
 			"list": [
 				{
 					"id": 0,
@@ -519,6 +519,20 @@
 					"id": -1,
 					"name": "goumeizuanshi",
 					"pathName": "pages/my/getVip/getVip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "任务进度",
+					"pathName": "pages/task/task",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "任务详情",
+					"pathName": "pages/task/taskdetails/taskdetails",
 					"query": "",
 					"scene": null
 				}

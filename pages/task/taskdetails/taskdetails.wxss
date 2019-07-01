@@ -1,0 +1,184 @@
+/* pages/task/task.wxss */
+
+page {
+    background-color: #f7f7f7;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 750rpx;
+    height: 260rpx;
+    color: #fff;
+}
+
+.header-mat {
+    width: 750rpx;
+    height: 260rpx;
+}
+
+.header-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 750rpx;
+    height: 260rpx;
+    z-index: -1;
+}
+
+.header-money,
+.header-plan,
+.header-status {
+    display: inline-block;
+    float: left;
+    height: 190rpx;
+}
+
+.header-money {
+    width: 290rpx;
+}
+
+.header-money .money {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 55rpx;
+    margin-top: 10rpx;
+}
+
+.header-plan {
+    width: 240rpx;
+}
+
+.header-plan progress {
+    width: 150rpx;
+    margin: 35rpx auto 0;
+}
+
+.header-status {
+    float: right;
+    width: 220rpx;
+}
+
+.name {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 26rpx;
+    margin-top: 50rpx;
+}
+
+.tk-btn {
+    width: 100rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #fff;
+    margin: 20rpx auto 0;
+}
+
+.ongoing {
+    background-color: #ff0000;
+}
+
+.failure {
+    background-color: #666666;
+}
+
+.success {
+    background-color: #60c34e;
+}
+
+.start-stop-time {
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 26rpx;
+}
+
+.start-stop-time text {
+    font-size: 30rpx;
+}
+
+.item-header {
+    width: 730rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 10rpx auto 0;
+    background-color: #fff;
+    font-size: 24rpx;
+    color: #202020;
+}
+
+.headPortraits,
+.nickname,
+.identity,
+.bonus,
+.invitationDate {
+    display: inline-block;
+    text-align: center;
+    color: #202020;
+}
+
+.headPortraits {
+    width: 120rpx;
+}
+
+.nickname {
+    width: 210rpx;
+}
+
+.identity {
+    width: 120rpx;
+}
+
+.bonus {
+    width: 150rpx;
+}
+
+.invitationDate {
+    width: 120rpx;
+}
+
+.item-li {
+    width: 730rpx;
+    height: 110rpx;
+    margin: 0 auto;
+    background-color: #fff;
+    border-top: 1px solid #f7f7f7;
+    overflow: auto;
+}
+
+.item-li .nickname,
+.item-li .identity,
+.item-li .bonus {
+    float: left;
+    height: 110rpx;
+    line-height: 110rpx;
+    font-size: 28rpx;
+}
+
+.item-li .headPortraits,
+.item-li .invitationDate {
+    float: left;
+    height: 110rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headPortraits .img {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #202020;
+}
+
+.item-li .invitationDate {
+    font-size: 24rpx;
+}

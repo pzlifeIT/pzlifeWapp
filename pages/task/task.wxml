@@ -1,0 +1,67 @@
+<!--pages/task/task.wxml-->
+<view class="header" >
+  <view class="header-con" >
+    <text >已结算奖金(元)</text>
+    <text>24.00</text>
+  </view>
+  <view class="header-con">
+    <text>未结算奖金(元)</text>
+    <text>24.00</text>
+  </view>
+  <image class="header-back" lazy-load="true" src="{{imgHost}}bg.png" alt="" />
+</view>
+<view class="header-mat"></view>
+<view class="item-header">
+  <text class="name">任务名称</text>
+  <text class="totalTarget">总目标</text>
+  <text class="completeTarget">已完成目标</text>
+  <text class="bonus">任务奖金</text>
+  <text class="status">任务状态</text>
+</view>
+<view >
+  <navigator class="item-li" url="/pages/task/taskdetails/taskdetails" hover-class="navigator-hover">
+    <view class="name">
+      <view class="item-name" >第二期升级任务</view>
+      <view class="item-date" >6/19~7/19</view>
+      <view class="" ></view>
+    </view>
+    <text class="totalTarget">5</text>
+    <text class="completeTarget" >3</text>
+    <text class="bonus" >24.00</text>
+    <view class="status">
+      <view class="tk-btn ongoing" >进行中</view>
+    </view>
+  </navigator>
+  <navigator class="item-li" url="/pages/task/taskdetails/taskdetails" hover-class="navigator-hover">
+    <view class="name">
+      <view class="item-name" >第一期升级任务</view>
+      <view class="item-date" >6/19~7/19</view>
+      <view class="settlement" >
+        <icon class="icon fl" type="success" size="32rpx" color="#666666" />
+        <text class="fl" >已结算</text>
+      </view>
+    </view>
+    <text class="totalTarget">10000</text>
+    <text class="completeTarget" >9000</text>
+    <text class="bonus" >7200.00</text>
+    <view class="status">
+      <view class="tk-btn failure" >失败</view>
+    </view>
+  </navigator>
+  <navigator class="item-li" url="/pages/task/taskdetails/taskdetails" hover-class="navigator-hover">
+    <view class="name">
+      <view class="item-name" >第一期升级任务</view>
+      <view class="item-date" >6/19~7/19</view>
+      <view class="settlement" >
+        <icon class="icon fl" type="success" size="32rpx" color="#666666" />
+        <text class="fl" >已结算</text>
+      </view>
+    </view>
+    <text class="totalTarget">10000</text>
+    <text class="completeTarget" >9000</text>
+    <text class="bonus" >7200.00</text>
+    <view class="status">
+      <view class="tk-btn success" >成功</view>
+    </view>
+  </navigator>
+</view>
