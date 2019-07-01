@@ -103,6 +103,12 @@
         "selectedIconPath": "/pages/images/class1.png"
       },
       {
+        "pagePath": "pages/my/getVip/getVip",
+        "text": "钻石会员",
+        "iconPath": "/pages/images/diamond.png",
+        "selectedIconPath": "/pages/images/diamond.png"
+      },
+      {
         "pagePath": "pages/cart/cart",
         "text": "购物车",
         "iconPath": "/pages/images/cart.png",

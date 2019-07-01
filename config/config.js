@@ -17,7 +17,7 @@ if (appid == 'wx1771b2e93c87e22c') { //正式
         notifyHost: 'https://wwwapi.pzlive.vip/notify/', //通知接口域名
         payHost: 'https://wwwapi.pzlive.vip/pay/', //支付接口域名
         imgHost: 'https://webimages.pzlive.vip/', //图片域名前缀
-        cmsHost:'http://sj.cmsdev.pzlive.vip/' //cms域名
+        cmsHost:'https://mobilecmsdev.pzlive.vip/' //cms域名
     }
 }
 

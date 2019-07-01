@@ -266,7 +266,7 @@ page {
 
 .date-left,
 .date-left image {
-    width: 350rpx;
+    width: 360rpx;
     height: 180rpx;
     border-radius: 20rpx;
 }
