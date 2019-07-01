@@ -61,7 +61,7 @@
                     <text class='title'>{{item.goods_name}}</text>
                     <text class='subtitle'>{{item.subtitle}}</text>
                     <text class='price'>￥{{item.min_retail_price}}</text>
-                    <view class="vipprice">钻石再让利 {{item.min_brokerage}}</view>
+                    <view class="vipprice">钻石再补贴 {{item.min_brokerage}}</view>
                 </view>
             </navigator>
         </view>

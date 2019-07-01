@@ -24,7 +24,7 @@
                 </text>
             </view>
             <view class="vipprice">
-                钻石再让利 {{goodInfo.goods_data.min_brokerage}}
+                钻石再补贴 {{goodInfo.goods_data.min_brokerage}}
                 <text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}">-￥{{goodInfo.goods_data.max_brokerage}}
                 </text>
             </view>
@@ -84,9 +84,9 @@
                         <text>{{goodInfo.goods_data.min_integral_active}}</text><text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">-{{goodInfo.goods_data.max_integral_active}}
                         </text><text>积分</text>
                     </text>
-                    <text class="present" wx:if="{{buy}}">钻石再让利: ￥{{goodData.brokerage}}</text>
+                    <text class="present" wx:if="{{buy}}">钻石再补贴: ￥{{goodData.brokerage}}</text>
                     <text class="present" wx:else>
-                      <text >钻石再让利: ￥{{goodInfo.goods_data.min_brokerage}}</text><text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}"> -￥{{goodInfo.goods_data.max_brokerage}}</text>
+                      <text >钻石再补贴: ￥{{goodInfo.goods_data.min_brokerage}}</text><text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}"> -￥{{goodInfo.goods_data.max_brokerage}}</text>
                     </text>
                 </view>
                 <view class='goods_desc fl' wx:else>
@@ -143,7 +143,7 @@
                     <view class="goods_name">{{item.goods_name}}</view>
                     <view class="re-price">￥{{item.min_retail_price}}</view>
                     <view class="vip_money">
-                        <text class="vip-text">钻石再让利</text>
+                        <text class="vip-text">钻石再补贴</text>
                         <text class="vip-money">{{item.min_brokerage}}</text>
                     </view>
                 </view>

@@ -3,7 +3,7 @@
 	<view class="pay-status fail" wx:if="{{status == 2}}">支付失败</view>
   <view class="pay-status success" wx:if="{{status == 1}}">支付成功</view>
   <view class="pay-hint" wx:if="{{status == 1}}">
-    <view >钻石再让利在发货后的第15天</view>
+    <view >钻石再补贴在发货后的第15天</view>
     <view >自动到账，请在“我的商券”中查看</view>
   </view>
 	<view class="botton {{status == 2?'mt':''}}">

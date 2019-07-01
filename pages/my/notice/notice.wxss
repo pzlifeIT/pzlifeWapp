@@ -33,7 +33,7 @@ image{
 }
 .h-bottom{
     width: 750rpx;
-    height: 1050rpx;
+    height: 1141rpx;
 }
 .c-shang{
     width: 750rpx;

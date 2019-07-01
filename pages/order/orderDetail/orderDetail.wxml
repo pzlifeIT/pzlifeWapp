@@ -31,7 +31,7 @@
 		<text class="jf-text">含运费</text><text class="jf-num">￥{{order_info.express_money}}</text>
   </view>
   	<view class="jf"  wx:if="{{user_identity != 1}}">
-		<text class="jf-text">钻石再让利</text><text class="jf-num">￥{{order_info.commission}}</text>
+		<text class="jf-text">钻石再补贴</text><text class="jf-num">￥{{order_info.commission}}</text>
 	</view>
 	<view class="jf">
 		<text class="jf-text">支付方式：</text><text class="jf-num rest"><text wx:if="{{order_info.deduction_money > 0}}" >商券支付{{order_info.deduction_money}}元</text>   <text wx:if="{{order_info.third_money > 0}}" >微信支付{{order_info.third_money}}元</text></text>

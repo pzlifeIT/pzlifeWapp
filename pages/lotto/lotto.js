@@ -82,7 +82,8 @@ Page({
                         text = '未获取到数据'
                         break;
                     case 3001:
-                        text = '用户不存在'
+                       that.getUserInfo()
+                        text = '请重新登录'
                         break;
                     case 3002:
                         text = 'conid错误'
@@ -232,6 +233,7 @@ Page({
     qrcode: function () {
         let wid = this.data.winning_id
         let base = app.base64(app.globalData.host.cmsHost + "lucky.html?pid=" + app.globalData.userInfo.uid + "&wid=" + wid);
+        console.log(base);
         this.setData({
             qrcode: app.globalData.host.apiHost + "OfflineActivities/createOrderQrCode?data=" + base
         })

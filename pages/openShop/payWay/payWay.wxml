@@ -2,17 +2,17 @@
 <view class="alipay" wx:if="{{ptype == 1}}">
     <view class="hint-title">长按保存图片，打开支付宝扫一扫支付</view>
     <view class="hint-text">注：付款时请备注您的真实姓名，缩短您的审核时间</view>
-    <image bindlongpress="save" data-img="{{imgHost}}zfb_02.png" lazy-load="true" src="{{imgHost}}zfb_02.png"></image>
+    <image bindlongpress="save" data-img="{{imgHost}}zfb_02.png" lazy-load="true" src="{{imgHost}}alipay.jpg"></image>
 </view>
 
 <view class="alipay" wx:if="{{ptype == 2}}">
     <view class="hint-title">长按保存图片，打开微信扫一扫支付</view>
     <view class="hint-text">注：付款时请备注您的真实姓名，缩短您的审核时间</view>
-    <image  bindlongpress="save" data-img="{{imgHost}}wx_02.png" lazy-load="true" src="{{imgHost}}wx_02.png"></image>
+    <image class="wx"  bindlongpress="save" data-img="{{imgHost}}wx_02.png" lazy-load="true" src="{{imgHost}}wxzz.jpg"></image>
 </view>
 
 <view class="alipay" wx:if="{{ptype == 3}}">
     <view class="hint-title yh">将货款汇入下方的银行账户中，汇款账户信息请保存</view>
     <view class="hint-text">注：付款时请备注您的真实姓名，缩短您的审核时间</view>
-    <image lazy-load="true" src="{{imgHost}}yhzz_02.png"></image>
+    <image lazy-load="true" src="{{imgHost}}yhzz.jpg"></image>
 </view>

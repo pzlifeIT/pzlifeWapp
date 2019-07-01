@@ -77,17 +77,17 @@ page {
 
 .slider {
     width: 750rpx;
-    height: 456rpx;
+    height: 680rpx;
 }
 
 .pz-swiper {
     width: 750rpx;
-    height: 456rpx;
+    height: 680rpx;
 }
 
 .pz-swiper image {
     width: 100%;
-    height: 456rpx;
+    height: 680rpx;
 }
 
 .num {
@@ -138,21 +138,24 @@ page {
 
 .double-div {
     width: 750rpx;
-    height: 185rpx;
+    height: 200rpx;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+    margin-bottom: 10rpx;
 }
 
 .div-left,
 .div-right {
-    width: 350rpx;
-    height: 145rpx;
-    float: left;
+    width: 360rpx;
+    height: 200rpx;
+    /*float: left;*/
 }
 
 .div-left {
-    margin-right: 10rpx;
+    /*margin-right: 6rpx;*/
 }
 
 .div-left image,
@@ -179,7 +182,7 @@ page {
 }
 
 .new-one {
-    width: 710rpx;
+    width: 730rpx;
     height: 240rpx;
     border-radius: 20rpx;
     margin: 0 auto;
@@ -244,7 +247,7 @@ page {
 
 .date-banner image {
     width: 750rpx;
-    height: 117rpx;
+    height: 200rpx;
     margin-top: 20rpx;
 }
 
@@ -263,7 +266,7 @@ page {
 
 .date-left,
 .date-left image {
-    width: 350rpx;
+    width: 360rpx;
     height: 180rpx;
     border-radius: 20rpx;
 }
@@ -275,42 +278,65 @@ page {
 .goods-line {
     width: 750rpx;
     overflow: hidden;
-    margin-left: 20rpx;
+    margin-left: 5rpx;
 }
 
 .goods-one {
-    width: 230rpx;
-    height: 360rpx;
+    width: 360rpx;
+    /* height: 360rpx; */
     overflow: hidden;
     text-align: left;
     margin: 15rpx 5rpx;
     float: left;
     background: #fff;
+    height: 532rpx;
 }
 
 .goods-one image {
-    width: 230rpx;
-    height: 230rpx;
+    width: 360rpx;
+    height: 360rpx;
     border-radius: 15rpx;
 }
 
 .goods-title {
     font-size: 28rpx;
     color: #000;
-    width: 100%;
+    /* width: 100%; */
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    width: 340rpx;
+    height: 76rpx;
+    padding-left: 10rpx;
+    box-sizing: border-box;
 }
 
 .goods-price {
     color: #E61F18;
     font-size: 30rpx;
+    padding-left: 10rpx;
+    box-sizing: border-box;
+    font-weight: bold;
 }
 
 .vipprice {
-    color: #eab700;
+    color: #e61f18;
+    font-size: 28rpx;
+    padding-left: 10rpx;
+    box-sizing: border-box;
+}
+.vipprice-text{
+    display: inline-block;
+    padding: 5rpx;
+    background: #e61f18;
+    color: #FFFFFF;
+    width: 135rpx;
+    height: 30rpx;
     font-size: 24rpx;
+    text-align: center;
+    border-radius: 2rpx;
 }
 
 .life-recommend {
@@ -388,7 +414,7 @@ page {
 }
 
 .desc-vipprice {
-    color: #eab700;
+    color: #e61f18;
     font-size: 24rpx;
     margin-bottom: 10rpx;
 }
@@ -450,8 +476,8 @@ page {
 }
 
 .goods-one .right-bottom-img {
-    width: 230rpx;
-    height: 270rpx;
+    width: 360rpx;
+    height: 360rpx;
 }
 
 .footer {
@@ -513,7 +539,7 @@ page {
 
 .re-vipprice {
     color: #EAB700;
-    font-size: 24rpx;
+    font-size: 28rpx;
 }
 
 .re-vipprice view {
@@ -559,5 +585,5 @@ page {
 
 .oneday {
     width: 750rpx;
-    height: 157rpx;
+    height: 240rpx;
 }
