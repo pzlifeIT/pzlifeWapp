@@ -76,10 +76,7 @@ Page({
                 })
             },
             fail(res) {
-                that.gopaystatus({
-                    order_no: res.data.order_no,
-                    status: 2
-                })
+                app.toast({title:"支付失败"})
             }
         })
     },
