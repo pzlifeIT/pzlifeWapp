@@ -80,7 +80,8 @@
         "pages/lotto/lotto",
         "pages/lotto/log/log",
         "pages/task/task",
-        "pages/task/taskdetails/taskdetails"
+        "pages/task/taskdetails/taskdetails",
+        "pages/notice/notice"
     ],
     "window": {
         "backgroundTextStyle": "dark",

@@ -1,0 +1,82 @@
+/* pages/my/notice/notice.wxss */
+page{
+    height: 100%;
+    overflow: auto;
+}
+.kuang{
+    width: 750rpx;
+    margin-bottom: 70rpx;
+}
+image{
+    display: block;
+    background: #FFFFFF;
+}
+.shang{
+    width: 750rpx;
+    height: 800rpx;
+}
+.xia{
+    width: 750rpx;
+    height: 1384rpx;
+}
+.h-shang{
+    width: 750rpx;
+    height: 1253rpx;
+}
+.h-zhong{
+    width: 750rpx;
+    height: 1095rpx;
+}
+.h-xia{
+    width: 750rpx;
+    height: 1020rpx;
+}
+.h-bottom{
+    width: 750rpx;
+    height: 1141rpx;
+}
+.c-shang{
+    width: 750rpx;
+    height: 1221rpx;
+}
+.c-zhong{
+    width: 750rpx;
+    height: 1095rpx;
+}
+.c-xia{
+    width: 750rpx;
+    height: 1020rpx;
+}
+.c-bottom{
+    width: 750rpx;
+    height: 1093rpx;
+}
+.footer{
+    width: 750rpx;
+    height: 120rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0rpx;
+    left: 0rpx;
+    background: #ffffff;
+}
+.button{
+    width: 720rpx;
+    height: 75rpx;
+    background-image: linear-gradient(0deg,
+    #db3030 0%,
+    #fe5849 100%),
+    linear-gradient(
+            #db3030,
+            #db3030);
+    background-blend-mode: normal,
+    normal;
+    /*border-radius: 40px;*/
+    color: #ffffff;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 80rpx;
+    
+}

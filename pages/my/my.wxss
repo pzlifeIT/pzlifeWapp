@@ -36,7 +36,7 @@ page {
     color: #FFFFFF;
     font-size: 26rpx;
     line-height: 40rpx;
-    margin: 100rpx auto;
+    margin: 62rpx 0 0 0;
     float: right;
     margin-right: 7rpx;
     width: 185rpx;
@@ -55,6 +55,9 @@ page {
     font-size: 32rpx;
     margin: 100rpx auto;
     color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .userCost {
@@ -350,4 +353,18 @@ page {
     width: 70rpx;
     height: 44rpx;
     display: inline-block;
+}
+.maj{
+    display: block;
+}
+.goShop{
+    margin-top: 38rpx;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.manag{
+    margin-top: 100rpx;
 }

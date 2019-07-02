@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 71,
+			"current": 72,
 			"list": [
 				{
 					"id": 0,
@@ -305,10 +305,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 39,
 					"name": "个人中心",
 					"pathName": "pages/my/my",
-					"query": "",
+					"query": "id=2",
 					"scene": null
 				},
 				{
@@ -357,7 +357,7 @@
 					"id": 46,
 					"name": "须知",
 					"pathName": "pages/my/notice/notice",
-					"query": "iden=4",
+					"query": "iden=3",
 					"scene": null
 				},
 				{
@@ -534,6 +534,13 @@
 					"name": "任务详情",
 					"pathName": "pages/task/taskdetails/taskdetails",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "升级须知",
+					"pathName": "pages/notice/notice",
+					"query": "iden=3",
 					"scene": null
 				}
 			]

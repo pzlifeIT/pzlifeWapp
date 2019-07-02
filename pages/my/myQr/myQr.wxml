@@ -1,5 +1,6 @@
 <!--pages/my/myQr/myQr.wxml-->
 <view>
-    <image class="qr" src="{{qrcode}}" alt="" bindlongpress="saveImg" data-img="{{qrcode}}"/>
+    <image class="qr" src="{{qrcode}}" alt="" bindtap="save" data-img="{{qrcode}}"/>
 </view>
-<view class="hint">我分享，我快乐（长按保存图片）</view>
+<view class="hint">我分享，我快乐</view>
+<view class="hint">（点击二维码查看大图，长按保存）</view>

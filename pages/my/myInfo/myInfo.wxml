@@ -3,10 +3,10 @@
 	<text class="title">用户名</text>
 	<input class="cont" placeholder-class=""  value="{{name}}" disabled="disabled"/>
 </view>
-<view class="user-info">
-	<text class="title">买主号</text>
-	<input class="cont" placeholder-class=""  value="A21431" disabled="disabled"/>
-</view>
+<!--<view class="user-info">-->
+	<!--<text class="title">买主号</text>-->
+	<!--<input class="cont" placeholder-class=""  value="A21431" disabled="disabled"/>-->
+<!--</view>-->
 <view class="user-info">
 	<text class="title">账号</text>
 	<input class="cont" placeholder-class=""  value="微信" disabled="disabled"/>
