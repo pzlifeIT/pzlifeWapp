@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/pages/my/getVip/getVip.js" line="23" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/getVip/getVip.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/getVip/getVip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/getVip/getVip.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/getVip/getVip.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/myQr/myQr.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/myQr/myQr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/myQr/myQr.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/myQr/myQr.wxml" afterDir="false" />
-    </list>
+    <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +121,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.wxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
@@ -136,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="100" column="21" lean-forward="true" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
+            <state relative-caret-position="392">
+              <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -460,12 +454,12 @@
       <workItem from="1561450257636" duration="2223000" />
       <workItem from="1561458219114" duration="8447000" />
       <workItem from="1561945309854" duration="1335000" />
-      <workItem from="1562051355254" duration="612000" />
+      <workItem from="1562051355254" duration="1853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="954945000" />
+    <option name="totallyTimeSpent" value="956186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -860,17 +854,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="100" column="21" lean-forward="true" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="3" column="93" lean-forward="true" selection-start-line="3" selection-start-column="93" selection-end-line="3" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
         </state>
       </provider>
     </entry>
