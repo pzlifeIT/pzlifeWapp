@@ -1,7 +1,7 @@
 <!--pages/my/getVip/getVip.wxml-->
 <view class="wai">
     <image class="image" lazy-load="true" src="{{imgHost}}108.jpg"></image>
-    <view class="buy" bindtap="popNotice">立即开通</view>
+    <view class="buy" bindtap="popNotice" wx:if="{{userInfo.user_identity == 1}}">立即开通</view>
 </view>
 
 <view class="pop p" catchtouchmove='preventTouchMove' wx:if="{{pop}}">

@@ -8,24 +8,26 @@ Page({
     data: {
         imgHost: "",
         mask: true,
-        pop: false
+        pop: false,
+        userInfo:{}
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
     },
-    popNotice: function() {
-        let pop = !this.data.pop
+    popNotice: function () {
+        let pop = !this.data.pop;
         this.setData({
             pop: pop
         })
     },
-    change: function(e) {
+
+    change: function (e) {
         console.log(e)
         if (e.detail.value.length >= 1) {
             this.buy()
@@ -35,7 +37,7 @@ Page({
             })
         }
     },
-    buy: function() {
+    buy: function () {
         let that = this;
         let text = ""
         app.wxrequest({
@@ -63,7 +65,7 @@ Page({
             }
         })
     },
-    pay: function(order_no) {
+    pay: function (order_no) {
         let that = this
         app.wxpay({
             order_no: order_no,
@@ -84,49 +86,56 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
-
+    onShow: function () {
+        let that = this
+        app.judgelogin({
+            success(res){
+                that.setData({
+                    userInfo:res.data
+                })
+            }
+        })
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
 
     }
 })
