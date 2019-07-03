@@ -35,7 +35,7 @@
                url="/pages/task/task?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
                open-type="navigate">
         <view class="bossShop manag">
-            任务进度 3/5
+            {{progress}}
             <image src="{{imgHost}}jt_b_03.png"></image>
         </view>
     </navigator>
@@ -44,7 +44,7 @@
         <navigator wx:if="{{ userInfo.user_market == 3 || userInfo.user_market == 4}}"
                    url="/pages/task/task?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
                    open-type="navigate">
-            <view class="flex"> 任务进度 3/5
+            <view class="flex"> {{progress}}
                 <image src="{{imgHost}}jt_b_03.png"></image>
             </view>
         </navigator>

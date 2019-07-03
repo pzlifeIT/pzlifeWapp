@@ -13,7 +13,19 @@ Page({
         orderCount: {},
         boss: {},
         yan: true,
-        yan_all: true
+        yan_all: true,
+        progress:''
+    },
+    getTaskProgress:function(){
+        let that = this
+      app.wxrequest({
+          url:"rights/userTaskProgress",
+          success(res){
+              that.setData({
+                  progress:res.taskprogress
+              })
+          }
+      })
     },
     yanAll: function () {
         let yanAll = !this.data.yan_all
@@ -271,8 +283,8 @@ Page({
         });
     },
     gosxy: function () {
-        app.toast({
-            title: "敬请期待"
+        wx.navigateTo({
+            url:"/pages/my/inviteQr/inviteQr"
         })
     },
 
@@ -428,6 +440,7 @@ Page({
                 that.getStorage()
                 that.getUserOrderCount()
                 that.getBoss()
+                that.getTaskProgress()
             }
         })
 

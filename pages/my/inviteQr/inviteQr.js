@@ -1,4 +1,4 @@
-// pages/my/myQr/inviteQr.js
+// pages/my/inviteQr/inviteQr.js
 const app = getApp()
 Page({
 
@@ -27,9 +27,9 @@ Page({
         app.wxrequest({
             url: 'user/getUserQrcode',
             data: {
-                page: 'pages/index/index',
-                scene: pid,
-                stype: 1
+                page: 'pages/notice/notice',
+                scene: "pid="+pid+"&iden=3&type=2",
+                stype: 3
             },
             nocon: false,
             method: "GET",

@@ -1,4 +1,4 @@
-<!--pages/my/myQr/inviteQr.wxml-->
+<!--pages/my/inviteQr/inviteQr.wxml-->
 <view>
     <image class="qr" src="{{qrcode}}" alt="" bindtap="save" data-img="{{qrcode}}"/>
 </view>

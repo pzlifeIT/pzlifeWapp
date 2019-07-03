@@ -43,6 +43,9 @@ page {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0rpx;
 }
 
 .bossShop image {
@@ -367,5 +370,5 @@ page {
     align-items: center;
 }
 .manag{
-    margin-top: 100rpx;
+    /* margin-top: 100rpx; */
 }
