@@ -39,7 +39,7 @@ Page({
             success(res) {
                 console.log(res)
                 that.setData({
-                    detail: res.usertask,
+                    detail: that.disTime(res.usertask),
                     percent: (res.usertask.has_target / res.usertask.target) * 100
                 })
             },
@@ -106,6 +106,13 @@ Page({
                 app.toast({title:text})
             }
         })
+    },
+    disTime(data){
+
+            data._start_time = data.start_time.replace(/-/g,'/').replace(/20/g,'').split(' ')[0]
+            data._end_time = data.end_time.replace(/-/g,'/').replace(/20/g,'').split(' ')[0]
+
+        return data
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

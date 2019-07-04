@@ -15,7 +15,7 @@
         <view class="tk-btn success" wx:elif="{{detail.status == '成功'}}">{{detail.status}}</view>
     </view>
     <view class="start-stop-time fl">起止时间
-        <text>{{detail.start_time}}--{{detail.end_time}}</text>
+        <text>{{detail._start_time}}--{{detail._end_time}}</text>
     </view>
     <image class="header-back" lazy-load="true" src="{{imgHost}}bg.png" alt=""/>
 </view>

@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/pages/my/inviteQr/inviteQr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/inviteQr/inviteQr.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/inviteQr/inviteQr.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/inviteQr/inviteQr.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/myQr/myQr.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/myQr/myQr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/myQr/myQr.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/myQr/myQr.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/myQr/myQr.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/myQr/myQr.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/task/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/task/task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/task/task.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/task/task.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/task/taskdetails/taskdetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/task/taskdetails/taskdetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/task/taskdetails/taskdetails.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/task/taskdetails/taskdetails.wxml" afterDir="false" />
     </list>
@@ -107,34 +96,34 @@
     <session id="2098064789">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="8" />
+          <entry key="js" value="12" />
           <entry key="json" value="1" />
-          <entry key="wxml" value="2" />
-          <entry key="wxss" value="2" />
+          <entry key="wxml" value="6" />
+          <entry key="wxss" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
-          <entry key="HTML" value="2" />
+          <entry key="CSS" value="3" />
+          <entry key="HTML" value="6" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="8" />
+          <entry key="JavaScript" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1920" />
+          <entry key="js" value="2092" />
           <entry key="json" value="10" />
-          <entry key="wxml" value="589" />
+          <entry key="wxml" value="597" />
           <entry key="wxss" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="8" />
-          <entry key="HTML" value="589" />
+          <entry key="HTML" value="597" />
           <entry key="JSON" value="10" />
-          <entry key="JavaScript" value="1920" />
+          <entry key="JavaScript" value="2092" />
         </counts>
       </usages-collector>
     </session>
@@ -144,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+            <state relative-caret-position="588">
+              <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
               <folding>
                 <element signature="e#2104#2616#0" />
               </folding>
@@ -153,74 +142,43 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/order/order.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/order/order.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1092">
+              <caret line="150" column="17" selection-start-line="150" selection-start-column="17" selection-end-line="150" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/task/taskdetails/taskdetails.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="112" column="34" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.wxss">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/my/my.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="442" column="37" selection-start-line="442" selection-start-column="37" selection-end-line="442" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/my/myQr/myQr.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-112">
-              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/my/inviteQr/inviteQr.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="30" column="51" lean-forward="true" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/openShop/openShop.js">
+        <entry file="file://F:/pzlifeWapp/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="672">
-              <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/my/inviteQr/inviteQr.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="12" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/my/inviteQr/inviteQr.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21" selection-start-column="21" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/my/inviteQr/inviteQr.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/notice/notice.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+              <caret line="153" column="32" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -228,8 +186,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-367">
-              <caret line="396" column="38" lean-forward="true" selection-start-line="396" selection-start-column="38" selection-end-line="396" selection-end-column="38" />
+            <state relative-caret-position="252">
+              <caret line="138" column="6" lean-forward="true" selection-start-line="138" selection-start-column="6" selection-end-line="138" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/task/taskdetails/taskdetails.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-307" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="9" column="105" lean-forward="true" selection-start-line="9" selection-start-column="105" selection-end-line="9" selection-end-column="105" />
             </state>
           </provider>
         </entry>
@@ -290,8 +273,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/lotto/log/log.wxss" />
-        <option value="$PROJECT_DIR$/pages/events/detail/detail.js" />
         <option value="$PROJECT_DIR$/pages/events/detail/detail.wxml" />
         <option value="$PROJECT_DIR$/pages/openShop/writeInfo/writeInfo.wxml" />
         <option value="$PROJECT_DIR$/pages/lotto/lotto.wxss" />
@@ -323,7 +304,6 @@
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftMoney.wxml" />
         <option value="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftMoney.js" />
-        <option value="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" />
         <option value="$PROJECT_DIR$/config/config.js" />
         <option value="$PROJECT_DIR$/pages/lotto/lotto.js" />
         <option value="$PROJECT_DIR$/pages/lotto/lotto.wxml" />
@@ -332,15 +312,18 @@
         <option value="$PROJECT_DIR$/pages/my/getVip/getVip.wxml" />
         <option value="$PROJECT_DIR$/pages/my/getVip/getVip.js" />
         <option value="$PROJECT_DIR$/pages/task/task.js" />
-        <option value="$PROJECT_DIR$/pages/task/taskdetails/taskdetails.js" />
         <option value="$PROJECT_DIR$/pages/task/task.wxml" />
-        <option value="$PROJECT_DIR$/pages/task/taskdetails/taskdetails.wxml" />
         <option value="$PROJECT_DIR$/pages/my/inviteQr/inviteQr.wxss" />
         <option value="$PROJECT_DIR$/pages/my/inviteQr/inviteQr.wxml" />
         <option value="$PROJECT_DIR$/pages/my/inviteQr/inviteQr.json" />
         <option value="$PROJECT_DIR$/pages/my/inviteQr/inviteQr.js" />
-        <option value="$PROJECT_DIR$/pages/my/my.wxml" />
         <option value="$PROJECT_DIR$/pages/my/my.js" />
+        <option value="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" />
+        <option value="$PROJECT_DIR$/pages/my/my.wxml" />
+        <option value="$PROJECT_DIR$/pages/task/taskdetails/taskdetails.wxml" />
+        <option value="$PROJECT_DIR$/pages/task/taskdetails/taskdetails.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="F:/pzlifeWapp/app.js" />
       </list>
     </option>
   </component>
@@ -393,6 +376,12 @@
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="diamActive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="goods" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -405,26 +394,6 @@
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="my" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="my" type="462c0819:PsiDirectoryNode" />
-              <item name="inviteQr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="my" type="462c0819:PsiDirectoryNode" />
-              <item name="myQr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="notice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -432,6 +401,25 @@
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="openShop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="task" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="task" type="462c0819:PsiDirectoryNode" />
+              <item name="taskdetails" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -538,7 +526,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="973349000" />
+    <option name="totallyTimeSpent" value="977798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -597,37 +585,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/login/register/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4956">
-          <caret line="177" column="68" lean-forward="true" selection-start-line="177" selection-start-column="32" selection-end-line="177" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/notice/notice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/myQr/myQr.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/cart/cart.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/category/goods/goods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3276">
-          <caret line="117" column="77" selection-start-line="117" selection-start-column="77" selection-end-line="117" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="784">
@@ -720,13 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
           <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="75" lean-forward="true" selection-start-line="1" selection-start-column="75" selection-end-line="1" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -851,13 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/task/taskdetails/taskdetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/task/task.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -869,13 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="85" column="8" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/task/taskdetails/taskdetails.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="17" column="63" lean-forward="true" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -907,13 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-367">
-          <caret line="396" column="38" lean-forward="true" selection-start-line="396" selection-start-column="38" selection-end-line="396" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/openShop/openShop.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -935,20 +864,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4228">
+          <caret line="442" column="37" selection-start-line="442" selection-start-column="37" selection-end-line="442" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/activeEarn/activeEarn.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-307" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="105" lean-forward="true" selection-start-line="9" selection-start-column="105" selection-end-line="9" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+        <state relative-caret-position="588">
+          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
           <folding>
             <element signature="e#2104#2616#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
+    <entry file="file://$PROJECT_DIR$/pages/order/order.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="442" column="37" selection-start-line="442" selection-start-column="37" selection-end-line="442" selection-end-column="37" />
+        <state relative-caret-position="504">
+          <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order/order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1092">
+          <caret line="150" column="17" selection-start-line="150" selection-start-column="17" selection-end-line="150" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/task/taskdetails/taskdetails.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/task/taskdetails/taskdetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="112" column="34" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.wxss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="138" column="6" lean-forward="true" selection-start-line="138" selection-start-column="6" selection-end-line="138" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/pzlifeWapp/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="153" column="32" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
         </state>
       </provider>
     </entry>

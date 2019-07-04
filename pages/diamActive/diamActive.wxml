@@ -7,6 +7,7 @@
         <image wx:if="{{ident == 1}}" lazy-load="true" class="text" src="{{imgHost}}hint_01.png"></image>
         <image wx:elif="{{ident == 2}}" lazy-load="true" class="text" src="{{imgHost}}hint_02.png"></image>
         <image wx:elif="{{ident == 4}}" lazy-load="true" class="text" src="{{imgHost}}hhrts.png"></image>
+        <image wx:elif="{{ident == 3}}" lazy-load="true" class="text" src="{{imgHost}}hhrts.png"></image>
         <view class="button" bindtap="editstatus">
             <view>我知道了</view>
         </view>
