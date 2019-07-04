@@ -147,11 +147,11 @@ App({
                 that.globalData.updateNum = false
                 if (n == 0) {
                     wx.removeTabBarBadge({
-                        index: 2
+                        index: 3
                     })
                 } else {
                     wx.setTabBarBadge({
-                        index: 2,
+                        index: 3,
                         text: n.toString()
                     })
                 }
