@@ -1,4 +1,5 @@
 <!-- pages/goods/detail.wxml -->
+<home  page-name="商品详情"></home>
 <view class="detail">
     <view class="detail-swiper">
         <swiper autoplay='true' interval='3000' bindchange="changeSwiper" circular='true'>

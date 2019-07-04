@@ -1,4 +1,5 @@
 <!--pages/order/order.wxml-->
+<home  page-name="我的订单"></home>
 <view class="order">
     <view class="or-header">
         <view class="or-head-li {{status == ''?'active':''}}" bindtap="headtap" data-num="">全部</view>

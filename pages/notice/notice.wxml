@@ -1,4 +1,5 @@
 <!--pages/my/notice/notice.wxml-->
+<home page-name="{{title}}"></home>
 <view class="kuang" wx:if="{{ident == 2}}">
     <image lazy-load="true" class="shang" src="{{imgHost}}new_diam02.jpg"></image>
     <image lazy-load="true" class="xia" src="{{imgHost}}new_diam03.jpg"></image>

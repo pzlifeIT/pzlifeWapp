@@ -6,6 +6,7 @@ page{
 .kuang{
     width: 750rpx;
     margin-bottom: 70rpx;
+    margin-top: 144rpx;
 }
 image{
     display: block;

@@ -11,6 +11,7 @@ page {
     background: #fff;
     padding-left: 8rpx;
     margin-bottom: 9rpx;
+    margin-top: 144rpx;
 }
 
 .address-info .info-text {

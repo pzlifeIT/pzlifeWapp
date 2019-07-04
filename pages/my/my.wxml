@@ -34,7 +34,7 @@
     <navigator wx:elif="{{ userInfo.user_market == 1 || userInfo.user_market == 2}}"
                url="/pages/task/task?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
                open-type="navigate">
-        <view class="bossShop manag">
+        <view class="bossShop manag" wx:if="{{progress != ''}}">
             {{progress}}
             <image src="{{imgHost}}jt_b_03.png"></image>
         </view>
@@ -44,7 +44,7 @@
         <navigator wx:if="{{ userInfo.user_market == 3 || userInfo.user_market == 4}}"
                    url="/pages/task/task?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
                    open-type="navigate">
-            <view class="flex"> {{progress}}
+            <view class="flex" wx:if="{{progress != ''}}"> {{progress}}
                 <image src="{{imgHost}}jt_b_03.png"></image>
             </view>
         </navigator>

@@ -22,13 +22,14 @@
     font-size: 30rpx;
 }
 .back{
-    width: 54rpx;
-    height: 54rpx;
+    width: 56rpx;
+    height: 56rpx;
+    margin-right: 10rpx;
 }
 .home{
-    width: 54rpx;
-    height: 52rpx;
-    margin-left: 14rpx;
+    width: 56rpx;
+    height: 54rpx;
+    margin-left: 18rpx;
     margin-right: 14rpx;
 }
 .mid{
@@ -38,17 +39,29 @@
     display: inline-block;
 }
 .navbar-action-group{
-    position:absolute;
-    top:7px;
-    left:32rpx;
-    z-index:120;
-    color:#000;
-    line-height: 1;
-    border:1px solid #e8e8e8;
-    border-radius: 20px;
+    position: absolute;
+bottom: 7px;
+left: 0rpx;
+z-index: 120;
+color: #000;
+line-height: 1;
+border: 1px solid #e8e8e8;
+border-radius: 20px;
+overflow: hidden;
+padding: 4rpx 6rpx;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 168rpx;
+height: 55rpx;
+
+}
+.title{
+    text-align: center;
+    width: 44%;
+    margin: 0 auto;
+    height: 100%;
     overflow: hidden;
-    padding: 4rpx 6rpx;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

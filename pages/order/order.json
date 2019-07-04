@@ -1,4 +1,8 @@
 {
-    "usingComponents": {},
-    "navigationBarTitleText": "我的订单"
+  "usingComponents": {
+    "home":"/components/home/home"
+  },
+  "navigationBarTitleText": "我的订单",
+  "navigationStyle": "custom",
+  "component":true
 }

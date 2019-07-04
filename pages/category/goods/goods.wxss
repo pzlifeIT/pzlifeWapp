@@ -2,6 +2,10 @@
 page{
   background-color: rgb(247, 247, 247)
 }
+.goods{
+    overflow-y: auto;
+    margin-top: 144rpx;
+}
 .one_goods{
   width: 368rpx;
   height: 544rpx;

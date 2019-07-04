@@ -1,4 +1,5 @@
 <!--pages/order/orderDetail/orderDetail.wxml-->
+<home  page-name="订单详情"></home>
 <view class="address">
 	<view class="address-info">
 		<text class="info-text">收货人：</text>

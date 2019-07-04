@@ -1,17 +1,19 @@
 <!--pages/category/goods/goods.wxml-->
-<view class='goods' wx:for='{{goodsList}}' >
-<navigator url='/pages/goods/detail?goodid={{item.id}}' wx:for='{{item}}' wx:key='{{item.id}}'>
-  <view class='one_goods'>
-    <view class='img'>
-      <image  class='goods_img' src='{{item.image+"?imageMogr2/thumbnail/370x"}}' lazy-load="true"></image>
-    </view> 
-    <text class='title'>{{item.goods_name}}</text>
-    <text class='subtitle'>{{item.subtitle}}</text>
-    <text class='price'>￥{{item.min_retail_price}}</text>
-		<text class="vipprice">钻石再补贴 {{item.min_brokerage}}</text>
-  </view>
-</navigator>
-  
+<home page-name="{{sub_name}}"></home>
+<view class='goods'>
+    <block wx:for='{{goodsList}}'>
+        <navigator url='/pages/goods/detail?goodid={{item.id}}' wx:for='{{item}}' wx:key='{{item.id}}'>
+            <view class='one_goods'>
+                <view class='img'>
+                    <image class='goods_img' src='{{item.image+"?imageMogr2/thumbnail/370x"}}' lazy-load="true"></image>
+                </view>
+                <text class='title'>{{item.goods_name}}</text>
+                <text class='subtitle'>{{item.subtitle}}</text>
+                <text class='price'>￥{{item.min_retail_price}}</text>
+                <text class="vipprice">钻石再补贴 {{item.min_brokerage}}</text>
+            </view>
+        </navigator>
+    </block>
 </view>
 
 

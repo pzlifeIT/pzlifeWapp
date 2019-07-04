@@ -9,7 +9,8 @@ Page({
         imgHost: "",
         ident: 0,
         refe_type: 0,
-        parent_id: ''
+        parent_id: '',
+        title:""
     },
 
     /**
@@ -17,36 +18,52 @@ Page({
      */
     onLoad: function (options) {
         this.setData({
-            imgHost: app.globalData.host.imgHost,
-            ident: options.iden
-        })
-        if (options.iden == 4) {
-            wx.setNavigationBarTitle({
-                title: "合伙人和兼职市场总监权益规定"
-            })
+            imgHost: app.globalData.host.imgHost
 
-        } else if (options.iden == 3) {
-            wx.setNavigationBarTitle({
+        })
+        // console.log(app.disScene(options.scene))
+        if (options.scene) {
+            let scene = app.disScene(options.scene)
+            this.setData({
+                ident: scene.iden,
+                parent_id: scene.pid,
+                refe_type: 1,
                 title: "创业店主和兼职市场经理须知"
-            })
+            });
         } else {
-            wx.setNavigationBarTitle({
-                title: "会员权益须知"
+            this.setData({
+                ident: options.iden
             })
+            if (options.iden == 4) {
+               this.setData({
+                    title: "合伙人和兼职市场总监权益规定"
+                })
+
+            } else if (options.iden == 3) {
+                this.setData({
+                    title: "创业店主和兼职市场经理须知"
+                })
+            } else {
+                this.setData({
+                    title: "会员权益须知"
+                })
+            }
+            if (options.type == 2) {
+                this.setData({
+                    refe_type: 1
+                })
+            } else if (options.type == 3) {
+                this.setData({
+                    refe_type: 2
+                })
+            } else if (options.type == 4) {
+                this.setData({
+                    refe_type: 3
+                })
+            }
         }
-        if (options.type == 2) {
-            this.setData({
-                refe_type: 1
-            })
-        } else if (options.type == 3) {
-            this.setData({
-                refe_type: 2
-            })
-        } else if (options.type == 4) {
-            this.setData({
-                refe_type: 3
-            })
-        }
+
+
     },
     back: function () {
         let that = this
@@ -60,10 +77,12 @@ Page({
     },
     upgrade: function () {
         let refe_type = this.data.refe_type;
+        let pid = this.data.parent_id;
         app.wxrequest({
             url: "rights/userUpgrade",
             data: {
-                refe_type:refe_type
+                refe_type: refe_type,
+                parent_id: pid
             },
             success(res) {
                 app.toast({
@@ -97,7 +116,7 @@ Page({
                     default:
                         text = '错误码：' + res
                 }
-                app.toast({title:text})
+                app.toast({title: text})
             }
         })
     },
@@ -147,6 +166,6 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return app.share()
     }
 })

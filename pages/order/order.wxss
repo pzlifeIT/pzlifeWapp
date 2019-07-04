@@ -9,11 +9,12 @@ page {
 
 .order {
     height: 100%;
+    margin-top: 140rpx;
 }
 
 .or-header {
     position: fixed;
-    top: 0;
+    top: 133rpx;
     left: 0;
     width: 100%;
     overflow: auto;
