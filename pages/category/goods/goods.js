@@ -20,7 +20,7 @@ Page({
         let sub_id = options.sub_id
         this.setData({
             sub_id: options.sub_id,
-            sub_name: options.sub_name
+            sub_name: options.sub_name || '商品列表'
         })
         if (sub_id) {
             this.getSubGoodsList(sub_id)
