@@ -78,7 +78,9 @@
     "pages/events/events",
     "pages/events/detail/detail",
     "pages/lotto/lotto",
-    "pages/lotto/log/log"
+    "pages/lotto/log/log",
+    "pages/article/article",
+    "pages/article/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "dark",

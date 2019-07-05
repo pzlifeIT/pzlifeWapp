@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
-	"appid": "wx1771b2e93c87e22c",
+	"appid": "wxa8c604ce63485956",
 	"projectname": "pzlifeWapp",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 71,
+			"current": 72,
 			"list": [
 				{
 					"id": 0,
@@ -534,6 +534,12 @@
 					"name": "购买会员",
 					"pathName": "pages/my/getVip/getVip",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "wenzhang",
+					"pathName": "pages/article/article",
 					"scene": null
 				}
 			]

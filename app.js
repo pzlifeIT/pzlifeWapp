@@ -84,6 +84,7 @@ App({
         })
     },
     share: function(data = {}) {
+        console.log(data.imageUrl)
         if (!data.path) {
             data.path = '/pages/index/index'
         }
@@ -96,7 +97,7 @@ App({
         let sharejson = {
             title: data.title || '776品质生活广场',
             path: data.path,
-            imageUrl: data.imageUrl || 'https://webimages.pzlive.vip/share.jpg',
+            imageUrl: data.imageUrl == undefined ? 'https://webimages.pzlive.vip/share.jpg' : data.imageUrl,
             success: function(shareTickets) {
 
             },
