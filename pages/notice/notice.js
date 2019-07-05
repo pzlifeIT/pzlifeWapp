@@ -20,8 +20,11 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost
 
-        })
-        // console.log(app.disScene(options.scene))
+        });
+        console.log(123)
+        console.log(options)
+        console.log(options.scene)
+        console.log(app.disScene(options.scene))
         if (options.scene) {
             let scene = app.disScene(options.scene)
             this.setData({
@@ -62,8 +65,6 @@ Page({
                 })
             }
         }
-
-
     },
     back: function () {
         let that = this

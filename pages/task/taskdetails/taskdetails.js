@@ -43,7 +43,7 @@ Page({
                     percent: (res.usertask.has_target / res.usertask.target) * 100
                 })
             },
-            error(res){
+            error(res) {
                 let text = '';
                 switch (parseInt(res)) {
                     case 3000:
@@ -53,10 +53,10 @@ Page({
                         text = '页码错误';
                         break;
                     default:
-                        text = '错误码：'+res
+                        text = '错误码：' + res
                         break;
                 }
-                app.toast({title:text})
+                app.toast({title: text})
             }
         })
     },
@@ -84,7 +84,7 @@ Page({
                     })
                 }
             },
-            error(res){
+            error(res) {
                 let text = '';
                 switch (parseInt(res)) {
                     case 3000:
@@ -100,17 +100,17 @@ Page({
                         text = '页码错误';
                         break;
                     default:
-                        text = '错误码：'+res
+                        text = '错误码：' + res
                         break;
                 }
-                app.toast({title:text})
+                app.toast({title: text})
             }
         })
     },
-    disTime(data){
+    disTime(data) {
 
-            data._start_time = data.start_time.replace(/-/g,'/').replace(/20/g,'').split(' ')[0]
-            data._end_time = data.end_time.replace(/-/g,'/').replace(/20/g,'').split(' ')[0]
+        data._start_time = data.start_time.replace(/-/g, '/').replace(/20/g, '').split(' ')[0]
+        data._end_time = data.end_time.replace(/-/g, '/').replace(/20/g, '').split(' ')[0]
 
         return data
     },
@@ -146,21 +146,21 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-        if (!this.data.reach) return
-        this.getTaskUser(this.data.id)
+
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-
+        if (!this.data.reach) return
+        this.getTaskUser(this.data.id)
     },
 
     /**
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return app.share()
     }
 })

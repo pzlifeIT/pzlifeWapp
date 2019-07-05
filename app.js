@@ -52,7 +52,7 @@ App({
         let that = this
         wx.getSystemInfo({
             success(res) {
-                console.log(res.statusBarHeight)
+          
                 that.globalData.topHeadHeight = res.statusBarHeight + 46;
             }
         })
@@ -384,7 +384,7 @@ App({
         if (opt.query.pid) {
             this.globalData.pid = opt.query.pid
         }
-        console.log(this.globalData.pid)
+       
         this.getconid()
         this.globalData.host = config
         this.getUserRead(this.globalData.pid)

@@ -41,7 +41,7 @@ Page({
                     })
                 }
             },
-            error(res){
+            error(res) {
                 let text = '';
                 switch (parseInt(res)) {
                     case 3000:
@@ -51,20 +51,20 @@ Page({
                         text = '页码错误';
                         break;
                     default:
-                        text = '错误码：'+res
+                        text = '错误码：' + res
                         break;
                 }
-                app.toast({title:text})
+                app.toast({title: text})
             }
         })
     },
     disposeTime: function (data) {
         for (let i = 0; i < data.length; i++) {
-            data[i]._end_time = data[i].end_time.split(' ')[0].replace(/-/g,'/').replace(/20/g,'');
-            data[i]._start_time = data[i].start_time.split(' ')[0].replace(/-/g,'/').replace(/20/g,'')
+            data[i]._end_time = data[i].end_time.split(' ')[0].replace(/-/g, '/').replace(/20/g, '');
+            data[i]._start_time = data[i].start_time.split(' ')[0].replace(/-/g, '/').replace(/20/g, '')
         }
         console.log(data)
-       return data
+        return data
     },
     /**
      * 生命周期函数--监听页面加载
@@ -108,21 +108,21 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-        if (!this.data.reach) return
-        this.getTask()
+
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-
+        if (!this.data.reach) return
+        this.getTask()
     },
 
     /**
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return app.share()
     }
 })

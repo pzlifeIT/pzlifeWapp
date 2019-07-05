@@ -1,8 +1,8 @@
-console.log(wx.getAccountInfoSync())
+// console.log(wx.getAccountInfoSync())
 
 let config = {},
     appid = wx.getAccountInfoSync().miniProgram.appId || 'wxa8c604ce63485956';
-console.log(appid)
+// console.log(appid)
 if (appid == 'wx1771b2e93c87e22c') { //正式
     config = {
         apiHost: 'https://api.pzlive.vip/', //正式前端接口域名
