@@ -81,7 +81,9 @@
         "pages/lotto/log/log",
         "pages/task/task",
         "pages/task/taskdetails/taskdetails",
-        "pages/notice/notice"
+        "pages/notice/notice",
+"pages/article/article",
+    "pages/article/detail/detail"
     ],
     "window": {
         "backgroundTextStyle": "dark",

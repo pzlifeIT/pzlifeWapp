@@ -1,0 +1,14 @@
+<!--pages/article/article.wxml-->
+<view class="msk">
+    <block wx:for="{{list}}">
+        <block wx:for="{{item}}">
+            <view class="one-art" bindtap="goDetail" data-url="{{item.url}}">
+                <view class="article-info">
+                    <view class="title">{{item.title}}</view>
+                    <view class="time">{{item.create_time}}</view>
+                </view>
+                <image src="{{item.thumb_url}}" lazy-load class="goods-img"></image>
+            </view>
+        </block>
+    </block>
+</view>
