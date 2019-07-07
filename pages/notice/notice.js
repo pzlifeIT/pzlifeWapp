@@ -28,7 +28,7 @@ Page({
         if (options.scene) {
             let scene = app.disScene(options.scene)
             this.setData({
-                ident: scene.iden,
+                ident: 3,
                 parent_id: scene.pid,
                 refe_type: 1,
                 title: "创业店主和兼职市场经理须知"

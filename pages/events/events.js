@@ -24,6 +24,7 @@ Page({
         console.log(decodeURIComponent(options.scene))
         console.log(options)
         console.log(options.scene)
+        console.log(app.disScene(options.scene))
         if (options.scene) {
             this.setData({
                 enScene: options.scene,

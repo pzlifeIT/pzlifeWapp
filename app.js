@@ -395,6 +395,7 @@ App({
     disScene(scene) {
         let href = decodeURIComponent(scene),
             list = {};
+            console.log(href)
         if (href.indexOf('&') != -1) {
             let arr = href.split('&'),
                 len = arr.length

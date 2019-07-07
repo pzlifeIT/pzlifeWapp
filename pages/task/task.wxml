@@ -6,7 +6,7 @@
   </view>
   <view class="header-con">
     <text>未结算奖金(元)</text>
-    <text>{{had_bonus}}</text>
+    <text>{{no_bonus}}</text>
   </view>
   <image class="header-back" lazy-load="true" src="{{imgHost}}bg.png" alt="" />
 </view>
@@ -36,7 +36,8 @@
     <view class="status">
       <view class="tk-btn ongoing" wx:if="{{item.status == '进行中'}}">{{item.status}}</view>
       <view class="tk-btn failure" wx:elif="{{item.status == '失败'}}">{{item.status}}</view>
-      <view class="tk-btn success" wx:elif="{{item.status == '成功'}}">{{item.status}}</view>
+      <view class="tk-btn success" wx:elif="{{item.status == '已完成'}}">{{item.status}}</view>
+      <view class="tk-btn failure" wx:else>{{item.status}}</view>
     </view>
   </navigator>
     </block>

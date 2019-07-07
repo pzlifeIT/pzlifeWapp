@@ -28,7 +28,7 @@ Page({
             url: 'user/getUserQrcode',
             data: {
                 page: 'pages/notice/notice',
-                scene: "pid="+pid+"&iden=3&type=2",
+                scene: pid,
                 stype: 3
             },
             nocon: false,

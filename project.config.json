@@ -540,7 +540,7 @@
 					"id": 72,
 					"name": "升级须知",
 					"pathName": "pages/notice/notice",
-					"query": "scene=pid%3dQQgoME%26iden%3d3%26type%3d2",
+					"query": "scene=QQgoME",
 					"scene": 1011
 				}
 			]

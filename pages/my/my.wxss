@@ -39,7 +39,7 @@ page {
     margin: 62rpx 0 0 0;
     float: right;
     margin-right: 7rpx;
-    width: 185rpx;
+    /* width: 185rpx; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,10 +51,12 @@ page {
 .bossShop image {
     width: 15rpx;
     height: 28rpx;
+    margin-left: 14rpx;
 }
 
 .userLogin {
-    width: 156rpx;
+  width: auto;
+    max-width: 156rpx;
     line-height: 40rpx;
     font-size: 32rpx;
     margin: 100rpx auto;
@@ -331,10 +333,12 @@ page {
     float: left;
     margin: 106rpx auto;
     margin-left: 10rpx;
+  
+    box-sizing: border-box;
 }
 
 .vid text {
-    margin: 0 12rpx;
+    margin:0 12rpx;
 }
 
 .diamond-card {
