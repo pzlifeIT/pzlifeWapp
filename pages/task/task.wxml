@@ -24,7 +24,8 @@
   <navigator class="item-li" url="/pages/task/taskdetails/taskdetails?taskid={{item.id}}" hover-class="navigator-hover">
     <view class="name">
       <view class="item-name" >{{item.title}}</view>
-      <view class="item-date" >{{item._start_time}}~{{item._end_time}}</view>
+      <view class="item-date" wx:if='{{item._end_time}}'>{{item._start_time}}~{{item._end_time}}</view>
+       <view class="item-date" wx:else>{{item.start_time}}</view>
       <view class="settlement" >
         <icon class="icon fl" type="success" size="32rpx" color="#666666" />
         <text class="fl" >{{item.bonus_status}}</text>

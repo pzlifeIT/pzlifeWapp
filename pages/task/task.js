@@ -60,8 +60,14 @@ Page({
     },
     disposeTime: function (data) {
         for (let i = 0; i < data.length; i++) {
-            data[i]._end_time = data[i].end_time.split(' ')[0].replace(/-/g, '/').replace(/20/g, '');
-            data[i]._start_time = data[i].start_time.split(' ')[0].replace(/-/g, '/').replace(/20/g, '')
+            if(data[i].end_time != null){
+                data[i]._end_time = data[i].end_time.split(' ')[0].replace(/-/g, '/').replace(/20/g, '');
+                data[i]._start_time = data[i].start_time.split(' ')[0].replace(/-/g, '/').replace(/20/g, '')
+            }else{
+                data[i]._end_time = data[i].end_time
+                data[i]._start_time = data[i].start_time
+            }
+            
         }
         console.log(data)
         return data
