@@ -45,8 +45,8 @@
 </view>
 <view class='stat'>
   <view class='summation'><text class='sum_text'>含运费</text><text class='sum_price'>￥{{stat.total_freight_price}}</text></view>
-  <view class='summation rebate'><text class='sum_text'>钻石返利</text><text class='sum_price fr'>￥{{stat.rebate_all}}</text>
-  <view class="small fl">* 让利金额在下单后自动转入“我的商券”</view>
+  <view class='summation rebate'><text class='sum_text'>钻石再补贴</text><text class='sum_price fr'>￥{{stat.rebate_all}}</text>
+  <view class="small fl">* 补贴金额在下单后自动转入“我的商券”</view>
   </view>
   <view class='summation'><text class='sum_text'>共计{{stat.goods_count}}件商品</text><text class='sum_price'>合计￥{{stat.total_goods_price}}</text></view>
 </view>

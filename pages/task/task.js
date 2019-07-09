@@ -61,9 +61,11 @@ Page({
     disposeTime: function (data) {
         for (let i = 0; i < data.length; i++) {
             if(data[i].end_time != null){
-                data[i]._end_time = data[i].end_time.split(' ')[0].replace(/-/g, '/').replace(/20/g, '');
-                data[i]._start_time = data[i].start_time.split(' ')[0].replace(/-/g, '/').replace(/20/g, '')
-            }else{
+                data[i]._end_time = data[i].end_time.split(' ')[0].replace(/-/g, '/').replace(/20/, '');
+                data[i]._start_time = data[i].start_time.split(' ')[0].replace(/-/g, '/').replace(/20/, '')
+            }else if (data[i].end_time == null && data[i].start_time == null){
+                return data
+            } else{
                 data[i]._end_time = data[i].end_time
                 data[i]._start_time = data[i].start_time
             }

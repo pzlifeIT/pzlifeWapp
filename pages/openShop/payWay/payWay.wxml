@@ -1,14 +1,14 @@
 <!--pages/openShop/payWay/payWay.wxml-->
 <view class="alipay" wx:if="{{ptype == 1}}">
-    <view class="hint-title">长按保存图片，打开支付宝扫一扫支付</view>
+    <view class="hint-title">点击图片长按保存，打开支付宝扫一扫支付</view>
     <view class="hint-text">注：付款时请备注您的真实姓名，缩短您的审核时间</view>
-    <image bindlongpress="save" data-img="{{imgHost}}zfb_02.png" lazy-load="true" src="{{imgHost}}alipay.jpg"></image>
+    <image bindtap="save" data-img="{{imgHost}}zfb_02.png" lazy-load="true" src="{{imgHost}}alipay.jpg"></image>
 </view>
 
 <view class="alipay" wx:if="{{ptype == 2}}">
-    <view class="hint-title">长按保存图片，打开微信扫一扫支付</view>
+    <view class="hint-title">点击图片长按保存，打开微信扫一扫支付</view>
     <view class="hint-text">注：付款时请备注您的真实姓名，缩短您的审核时间</view>
-    <image class="wx"  bindlongpress="save" data-img="{{imgHost}}wx_02.png" lazy-load="true" src="{{imgHost}}wxzz.jpg"></image>
+    <image class="wx"  bindtap="save" data-img="{{imgHost}}wx_02.png" lazy-load="true" src="{{imgHost}}wxzz.jpg"></image>
 </view>
 
 <view class="alipay" wx:if="{{ptype == 3}}">

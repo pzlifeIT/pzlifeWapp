@@ -9,7 +9,7 @@ Page({
         imgHost: "",
         mask: true,
         pop: false,
-        userInfo:{}
+        userInfo: {}
     },
 
     /**
@@ -56,7 +56,7 @@ Page({
                         text = "购买权益等级低于现有权益等级"
                         break;
                     default:
-                        text = "发起支付失败"
+                        text = "错误码：" + res
                         break;
                 }
                 app.toast({
@@ -70,13 +70,17 @@ Page({
         app.wxpay({
             order_no: order_no,
             payment: '2',
+            noloading:true,
             success(res) {
-                that.setData({
-                    mask: true
-                })
+                app.toast({title: "恭喜升级为钻石会员！"});
+                setTimeout(function () {
+                    wx.switchTab({
+                        url: '/pages/my/my'
+                    })
+                }, 1000)
             },
             fail(res) {
-                app.toast({title:"支付失败"})
+                app.toast({title: "支付失败"})
             }
         })
     },
@@ -93,9 +97,9 @@ Page({
     onShow: function () {
         let that = this
         app.judgelogin({
-            success(res){
+            success(res) {
                 that.setData({
-                    userInfo:res.data
+                    userInfo: res.data
                 })
             }
         })

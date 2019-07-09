@@ -176,7 +176,6 @@ page {
     height: 80rpx;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #202020;
 }
 
 .item-li .invitationDate {

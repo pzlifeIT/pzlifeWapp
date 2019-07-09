@@ -31,7 +31,7 @@ Page({
                 ident: 3,
                 parent_id: scene.pid,
                 refe_type: 1,
-                title: "创业店主和兼职市场经理须知"
+                title: "须知"
             });
         } else {
             this.setData({
@@ -39,16 +39,16 @@ Page({
             })
             if (options.iden == 4) {
                this.setData({
-                    title: "合伙人和兼职市场总监权益规定"
+                    title: "须知"
                 })
 
             } else if (options.iden == 3) {
                 this.setData({
-                    title: "创业店主和兼职市场经理须知"
+                    title: "须知"
                 })
             } else {
                 this.setData({
-                    title: "会员权益须知"
+                    title: "须知"
                 })
             }
             if (options.type == 2) {

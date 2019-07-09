@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 72,
+			"current": 46,
 			"list": [
 				{
 					"id": 0,
@@ -357,7 +357,7 @@
 					"id": 46,
 					"name": "须知",
 					"pathName": "pages/my/notice/notice",
-					"query": "iden=3",
+					"query": "iden=2",
 					"scene": null
 				},
 				{
@@ -540,7 +540,7 @@
 					"id": 72,
 					"name": "升级须知",
 					"pathName": "pages/notice/notice",
-					"query": "scene=QQgoME",
+					"query": "iden=2",
 					"scene": 1011
 				}
 			]

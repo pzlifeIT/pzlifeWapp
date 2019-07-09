@@ -108,10 +108,10 @@ Page({
         })
     },
     disTime(data) {
-
-        data._start_time = data.start_time.replace(/-/g, '/').replace(/20/g, '').split(' ')[0]
-        data._end_time = data.end_time.replace(/-/g, '/').replace(/20/g, '').split(' ')[0]
-
+        if ( data.start_time != null && data.end_time != null) {
+            data._start_time = data.start_time.replace(/-/g, '/').replace(/20/, '').split(' ')[0]
+            data._end_time = data.end_time.replace(/-/g, '/').replace(/20/, '').split(' ')[0]
+        }
         return data
     },
     /**

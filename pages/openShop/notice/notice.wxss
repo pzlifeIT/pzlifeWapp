@@ -12,19 +12,23 @@ image{
 }
 .h-shang{
     width: 750rpx;
-    height: 1253rpx;
+    height: 896rpx;
 }
 .h-zhong{
     width: 750rpx;
-    height: 1095rpx;
+    height: 792rpx;
 }
 .h-xia{
     width: 750rpx;
-    height: 1020rpx;
+    height: 936rpx;
 }
 .h-bottom{
     width: 750rpx;
-    height: 1085rpx;
+    height: 994rpx;
+}
+.h-footer{
+    width: 750rpx;
+    height: 1379rpx;
 }
 .footer{
     width: 750rpx;

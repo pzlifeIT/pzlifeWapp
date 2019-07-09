@@ -25,6 +25,7 @@
     <view class="name">
       <view class="item-name" >{{item.title}}</view>
       <view class="item-date" wx:if='{{item._end_time}}'>{{item._start_time}}~{{item._end_time}}</view>
+       <view class="item-date" wx:elif="{{item.start_time == null && item.end_time == null}}"></view>
        <view class="item-date" wx:else>{{item.start_time}}</view>
       <view class="settlement" >
         <icon class="icon fl" type="success" size="32rpx" color="#666666" />

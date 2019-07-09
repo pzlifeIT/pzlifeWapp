@@ -5,27 +5,30 @@
         <view class="headPhoto din fl">
             <image lazy-load="true" src="{{imgHost}}logo_03.png"/>
         </view>
-        <text class="userLogin din fl">请登录</text>
+        <text class="userLogin din fl mar">请登录</text>
     </navigator>
     <image lazy-load="true" class="userBack" src="{{imgHost}}myback_02.png"/>
 </view>
-<view class="userheader" wx:if="{{loginStatus}}">
+<view class="userheader haveHeader" wx:if="{{loginStatus}}">
+
     <navigator url='/pages/my/myInfo/myInfo?name={{userInfo.nick_name}}&phone={{userInfo.mobile}}' hover-class="none"
                open-type="navigate">
         <view class="headPhoto din fl">
             <image lazy-load="true" src="{{userInfo.avatar}}"/>
         </view>
-        <text class="userLogin din fl">{{userInfo.nick_name}}</text>
     </navigator>
-    <view class="vid" bindtap="notice" data-identity="{{userInfo.user_identity}}">
-        <text wx:if="{{userInfo.user_market == 0}}">{{userInfo.user_vid}}</text>
-        <text wx:else>{{userInfo.user_mid}}</text>
-    </view>
+        <view class="din fl name-iden">
+            <view class="userLogin">{{userInfo.nick_name}}</view>
+            <view class="ident" wx:if="{{userInfo.user_identity != 1}}" bindtap="notice" data-identity="2">钻石会员</view>
+            <view class="ident" wx:else>普通会员</view>
+        </view>
+
+
     <!--合伙人-->
     <navigator wx:if="{{userInfo.user_identity == 4 && userInfo.user_market == 0}}"
                url="/pages/boss/boss?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
                open-type="navigate">
-        <view class="bossShop">
+        <view class="of-ex">
             进入店铺管理
             <image src="{{imgHost}}jt_b_03.png"></image>
         </view>
@@ -34,55 +37,143 @@
     <navigator wx:elif="{{ userInfo.user_market == 1 || userInfo.user_market == 2}}"
                url="/pages/task/task?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
                open-type="navigate">
-        <view class="bossShop manag" wx:if="{{progress != ''}}">
+        <view class="of-ex " wx:if="{{progress != ''}}">
             {{progress}}
             <image src="{{imgHost}}jt_b_03.png"></image>
         </view>
     </navigator>
     <!--市场总监-->
-    <view class="bossShop maj">
-        <navigator wx:if="{{ userInfo.user_market == 3 || userInfo.user_market == 4}}"
-                   url="/pages/task/task?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
+    <view class="bossShop maj" wx:if="{{ userInfo.user_market == 3 || userInfo.user_market == 4}}">
+        <navigator url="/pages/task/task?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
                    open-type="navigate">
-            <view class="flex" wx:if="{{progress != ''}}"> {{progress}}
+            <view class=" of-ex" wx:if="{{progress != ''}}"> {{progress}}
                 <image src="{{imgHost}}jt_b_03.png"></image>
             </view>
         </navigator>
-        <navigator wx:if="{{userInfo.user_market == 4 || userInfo.user_market == 3}}"
+        <navigator
                    url="/pages/boss/boss?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
                    open-type="navigate">
-            <view class="goShop flex"> 进入店铺管理
+            <view class="flex " > 进入店铺管理
                 <image src="{{imgHost}}jt_b_03.png"></image>
             </view>
         </navigator>
     </view>
 
-    <image lazy-load="true" class="userBack" src="{{imgHost}}myback_02.png"/>
+    <image lazy-load="true" class="userBack" src="{{imgHost}}myback_02.png" wx:if="{{userInfo.user_identity == 1}}"/>
+    <image lazy-load="true" class="userBack" src="{{imgHost}}bg-zs_03.jpg" wx:else/>
     <!--普通会员-->
-    <view class="diamond-card" catchtap="buyDiam"
-          wx:if="{{userInfo.user_identity == 1 && userInfo.user_market == 0}}">
-        <image lazy-load="true" src="{{imgHost}}diamond.png"></image>
+    <view class="diamond-card" catchtap="buyDiam" wx:if="{{userInfo.user_identity == 1 && userInfo.user_market == 0}}">
+        <view class="card-top">
+            <view class="top-left">
+                <image class="ic-z" src="{{imgHost}}ic-z.png"></image>
+                开通钻石会员
+            </view>
+            <text class="more">更多福利>></text>
+        </view>
+        <view class="card-bottom">全场享可分配利润的75%</view>
     </view>
     <!--钻石会员-->
     <view class="diamond-card" catchtap="upgrade" data-iden="3" data-type="2"
           wx:elif="{{userInfo.user_identity == 2 && userInfo.user_market == 0}}">
-        <image lazy-load="true" src="{{imgHost}}cboss.png"></image>
+        <view class="card-top">
+            <view class="top-left">
+                <image class="ic-z" src="{{imgHost}}ic-z.png"></image>
+                免费开通为创业店主
+            </view>
+            <text class="more">更多福利>></text>
+        </view>
+        <view class="card-bottom">可获得商品分享收益</view>
     </view>
     <!--创业店主-->
     <view class="diamond-card" catchtap="upgrade" data-iden="3" data-type="3"
           wx:elif="{{userInfo.user_identity == 3 && userInfo.user_market == 0}}">
-        <image lazy-load="true" src="{{imgHost}}manager.png"></image>
+        <view class="card-top">
+            <view class="top-left">
+                <image class="ic-z" src="{{imgHost}}ic-z.png"></image>
+                免费开通为兼职市场经理
+            </view>
+            <text class="more">更多福利>></text>
+        </view>
+        <view class="card-bottom">可获得市场开发收益</view>
     </view>
     <!--合伙人-->
     <view class="diamond-card" catchtap="upgrade" data-iden="4" data-type="4"
           wx:elif="{{userInfo.user_identity == 4 && userInfo.user_market == 0}}">
-        <image lazy-load="true" src="{{imgHost}}major.png"></image>
+        <view class="card-top">
+            <view class="top-left">
+                <image class="ic-z" src="{{imgHost}}ic-z.png"></image>
+                升级开通为兼职市场总监
+            </view>
+            <text class="more">更多福利>></text>
+        </view>
+        <view class="card-bottom">可获得市场开发收益</view>
     </view>
     <!--市场经理-->
     <!--<view class="diamond-card" catchtap="upgrade"-->
-          <!--wx:elif="{{ userInfo.user_market == 1 || userInfo.user_market == 2}}">-->
-        <!--<image lazy-load="true" src="{{imgHost}}boss.png"></image>-->
+    <!--wx:elif="{{ userInfo.user_market == 1 || userInfo.user_market == 2}}">-->
+    <!--<image lazy-load="true" src="{{imgHost}}boss.png"></image>-->
     <!--</view>-->
+</view>
+<view class="userCost user_ident" wx:if="{{userInfo.user_identity != 1 && userInfo.user_identity != 2 }}">
+    <view class="cost-title">我的经营身份</view>
+    <view class="ident-line">
+        <!--创业店主-->
+        <view class="equity-one ident-one" wx:if="{{userInfo.user_identity == 3}}" bindtap="notice" data-identity="3">
+            <image lazy-load="true" src="{{imgHost}}cy_color.png" style="width:52rpx;height: 44rpx"></image>
+            <view class="equity-title">创业店主</view>
+        </view>
+        <view class="equity-one ident-one" wx:else bindtap="noUpgrade">
+            <image lazy-load="true" src="{{imgHost}}cy_nocolor.png" style="width:52rpx;height: 44rpx"></image>
+            <view class="equity-title color">创业店主</view>
+        </view>
+        <!--市场经理-->
+        <view class="equity-one ident-one" wx:if="{{userInfo.user_market == 1 || userInfo.user_market == 2}}" bindtap="notice" data-identity="3">
+            <image lazy-load="true" src="{{imgHost}}jl_color.png" style="width: 40rpx;height: 45rpx;"></image>
+            <view class="equity-title" wx:if="{{userInfo.user_market == 1}}">兼职市场经理(体验)</view>
+            <view class="equity-title" wx:elif="{{userInfo.user_market == 2}}">兼职市场经理</view>
+        </view>
+        <view class="equity-one ident-one" wx:else bindtap="noUpgrade">
+            <image lazy-load="true" src="{{imgHost}}jl_nocolor.png" style="width: 40rpx;height: 45rpx;"></image>
+            <view class="equity-title color">兼职市场经理</view>
+        </view>
+    </view>
+
+    <view class="ident-line">
+        <!--合伙人-->
+        <view class="equity-one ident-one"  wx:if="{{userInfo.user_identity == 4}}" bindtap="notice" data-identity="4">
+            <image lazy-load="true" src="{{imgHost}}boss_color.png" style="width: 49rpx;height: 47rpx;"></image>
+            <view class="equity-title {{userInfo.user_identity == 4 ? '':'color'}}">合伙人</view>
+        </view>
+        <view class="equity-one ident-one" bindtap="noUpgrade"  wx:else >
+            <image lazy-load="true" src="{{imgHost}}boss_nocolor.png" style="width: 49rpx;height: 47rpx;"></image>
+            <view class="equity-title color">合伙人</view>
+        </view>
+        <!--市场总监-->
+        <view class="equity-one ident-one" wx:if="{{userInfo.user_market == 3 || userInfo.user_market == 4}}" bindtap="notice" data-identity="4">
+            <view class="mask" >
+                <image lazy-load="true" src="{{imgHost}}zj_color.png"
+                       style="width: 41rpx;height: 45rpx;margin-top: 20rpx;"></image>
+                <text class="zj-title">兼职市场总监</text>
+            </view>
+            <view class="equity-title ident-number">
+                <text class="number {{userInfo.user_market == 3 ? '':'color'}}">1</text>
+                <text class="mid"></text>
+                <text class="number {{userInfo.user_market == 4 ? '':'color'}}">2</text>
+            </view>
+        </view>
+        <view class="equity-one ident-one" wx:else bindtap="noUpgrade">
+            <view class="mask" >
+                <image lazy-load="true" src="{{imgHost}}zj_nocolor.png"
+                       style="width: 41rpx;height: 45rpx;margin-top: 20rpx;"></image>
+                <text class="zj-title color" >兼职市场总监</text>
+            </view>
+            <view class="equity-title ident-number">
+                <text class="number color">1</text>
+                <text class="mid"></text>
+                <text class="number color">2</text>
+            </view>
+        </view>
+    </view>
 </view>
 <!-- 资产中心 -->
 <view class="userCost">
@@ -205,10 +296,6 @@
         </view>
         <view class="uoLi nobr" bindtap="checkOrder" data-status="6">
             <image lazy-load="true" class="uoIcon" src="{{imgHost}}dd_09.png"/>
-            <view class="or-num" wx:if="{{orderCount.rating > 0 && orderCount.rating < 99}}">
-                {{orderCount.rating}}
-            </view>
-            <view class="or-num or-num-nine" wx:if="{{orderCount.rating > 99}}">99+</view>
             <text class="userText">已收货</text>
         </view>
     </view>
@@ -249,16 +336,16 @@
     <view class="equity">
         <view class="equity-one" bindtap="diamBoss" hover-class="other-navigator-hover" data-stype="1">
             <image lazy-load="true" src="{{imgHost}}hdgl_08.png"></image>
-            <view class="equity-title">钻石合伙人</view>
+            <view class="equity-title">邀请钻石会员</view>
         </view>
         <view class="equity-one" bindtap="activeEarn">
             <image lazy-load="true" src="{{imgHost}}hdgl_03.png"></image>
             <view class="equity-title">活动收益</view>
         </view>
-        <view class="equity-one" bindtap="addCard">
-            <image lazy-load="true" src="{{imgHost}}hdgl_05.png"></image>
-            <view class="equity-title">添加银行卡</view>
-        </view>
+        <!--<view class="equity-one" bindtap="addCard">-->
+            <!--<image lazy-load="true" src="{{imgHost}}hdgl_05.png"></image>-->
+            <!--<view class="equity-title">添加银行卡</view>-->
+        <!--</view>-->
         <view class="equity-one" bindtap="toShangpiao">
             <image lazy-load="true" src="{{imgHost}}hdgl_15.png"></image>
             <view class="equity-title">转商券</view>
@@ -267,10 +354,10 @@
         <!--<image lazy-load="true" src="{{imgHost}}hdgl_13.png"></image>-->
         <!--<view class="equity-title">提现</view>-->
         <!--</view>-->
-        <view class="equity-one" bindtap="instr">
-            <image lazy-load="true" src="{{imgHost}}hdgl_14.png"></image>
-            <view class="equity-title" style="color: #e61f18;">操作指南</view>
-        </view>
+        <!--<view class="equity-one" bindtap="instr">-->
+            <!--<image lazy-load="true" src="{{imgHost}}hdgl_14.png"></image>-->
+            <!--<view class="equity-title" style="color: #e61f18;">操作指南</view>-->
+        <!--</view>-->
     </view>
 </view>
 <!-- 常用设置 -->

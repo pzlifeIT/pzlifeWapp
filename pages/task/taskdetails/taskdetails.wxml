@@ -12,7 +12,8 @@
         <text class="name">任务状态</text>
         <view class="tk-btn ongoing" wx:if="{{detail.status == '进行中'}}">{{detail.status}}</view>
         <view class="tk-btn failure" wx:elif="{{detail.status == '失败'}}">{{detail.status}}</view>
-        <view class="tk-btn success" wx:elif="{{detail.status == '成功'}}">{{detail.status}}</view>
+        <view class="tk-btn success" wx:elif="{{detail.status == '已完成'}}">{{detail.status}}</view>
+        <view class="tk-btn failure" wx:else>{{detail.status}}</view>
     </view>
     <view class="start-stop-time fl">起止时间
         <text>{{detail._start_time}}--{{detail._end_time}}</text>
@@ -32,9 +33,9 @@
         <block wx:for="{{item}}">
             <view class="item-li">
                 <view class="headPortraits">
-                    <image class="img" src="{{item.user[0].avatar}}"/>
+                    <image class="img" src="{{item.user.avatar}}"/>
                 </view>
-                <text class="nickname">{{item.user[0].nick_name}}</text>
+                <text class="nickname">{{item.user.nick_name}}</text>
                 <text class="identity">{{item.user_identity}}</text>
                 <text class="bonus">{{item.bonus}}</text>
                 <text class="invitationDate">{{item.create_time}}</text>

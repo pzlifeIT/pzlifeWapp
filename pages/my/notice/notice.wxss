@@ -13,43 +13,51 @@ image{
 }
 .shang{
     width: 750rpx;
-    height: 800rpx;
+    height: 896rpx;
+}
+.zhong{
+    width: 750rpx;
+    height: 792rpx;
 }
 .xia{
     width: 750rpx;
-    height: 1384rpx;
+    height: 852rpx;
 }
 .h-shang{
     width: 750rpx;
-    height: 1003rpx;
+    height: 896rpx;
 }
 .h-zhong{
     width: 750rpx;
-    height: 1095rpx;
+    height: 792rpx;
 }
 .h-xia{
     width: 750rpx;
-    height: 1020rpx;
+    height: 936rpx;
 }
 .h-bottom{
     width: 750rpx;
-    height: 1141rpx;
+    height: 994rpx;
+}
+.h-footer{
+    width: 750rpx;
+    height: 1379rpx;
 }
 .c-shang{
     width: 750rpx;
-    height: 1003rpx;
+    height: 896rpx;
 }
 .c-zhong{
     width: 750rpx;
-    height: 1095rpx;
+    height: 792rpx;
 }
 .c-xia{
     width: 750rpx;
-    height: 1020rpx;
+    height: 936rpx;
 }
 .c-bottom{
     width: 750rpx;
-    height: 1093rpx;
+    height: 994rpx;
 }
 .footer{
     width: 750rpx;
@@ -78,5 +86,5 @@ image{
     font-size: 30rpx;
     text-align: center;
     line-height: 80rpx;
-    
+
 }

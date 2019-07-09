@@ -48,6 +48,11 @@ Page({
             url: "/pages/my/notice/notice?iden=" + user_identity
         })
     },
+    noUpgrade:function(){
+      app.toast({
+          title:"只能查看与您身份对应的须知"
+      })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -470,6 +475,7 @@ Page({
             that.getStorage()
             that.getUserOrderCount()
             that.getBoss()
+            that.getTaskProgress()
             wx.hideNavigationBarLoading() //完成停止加载
             wx.stopPullDownRefresh({}) //停止下拉刷新
         }, 1500);
