@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-
+    "home":"/components/home/home"
   },
-  "navigationBarTitleText": "发起活动"
+  "navigationStyle": "custom",
+  "component":true
 }

@@ -1,5 +1,8 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "文章列表",
+  "usingComponents": {
+    "home":"/components/home/home"
+  },
+  "navigationStyle": "custom",
+  "component":true,
   "enablePullDownRefresh": true
 }

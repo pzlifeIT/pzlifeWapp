@@ -3,6 +3,7 @@
     width: 750rpx;
     height: 804rpx;
     display: block;
+    margin-top: 140rpx;
 }
 .second{
     width: 750rpx;

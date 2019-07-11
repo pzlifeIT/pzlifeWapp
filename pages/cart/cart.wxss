@@ -112,13 +112,16 @@ lose_title {
 
 .goods_desc .rebate {
     display: inline-block;
-    width: 125rpx;
-    height: 30rpx;
-    background: #ffe4aa;
-    color: #f99f36;
-    font-size: 24rpx;
-    text-align: center;
-    line-height: 30rpx;
+padding: 5rpx;
+background: #e61f18;
+color: #FFFFFF;
+width: 135rpx;
+height: 30rpx;
+font-size: 24rpx;
+text-align: center;
+border-radius: 2rpx;
+margin-top: 20rpx;
+
 }
 
 .goods_desc .rebate_money {

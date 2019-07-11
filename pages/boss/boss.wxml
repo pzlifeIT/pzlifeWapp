@@ -6,11 +6,12 @@
         </view>
         <view class="nickname">
             <view class="name">{{bossname}}</view>
-            <view class="identity">合伙人</view>
+            <view class="identity">钻石会员</view>
             <!--<view class="shop-id">店铺ID：122345</view>-->
         </view>
     </view>
     <!--<image lazy-load="true" class="sz" src="{{imgHost}}sz.png"></image>-->
+    <image lazy-load="true" class="bg" src="{{imgHost}}bgboss_02.jpg"></image>
 </view>
 <view class="asset">
     <view class="asset-title">

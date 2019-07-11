@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "合伙人和兼职市场总监权益规定"
+  "usingComponents": {
+    "home":"/components/home/home"
+  },
+  "navigationStyle": "custom",
+  "component":true
 }

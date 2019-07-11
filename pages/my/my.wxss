@@ -6,7 +6,7 @@ page {
 
 .userheader {
     position: relative;
-    height: 240rpx;
+    height: 286rpx;
     overflow: hidden;
 }
 
@@ -15,7 +15,7 @@ page {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 388rpx;
     z-index: -1;
 }
 
@@ -522,5 +522,5 @@ box-sizing: border-box;
     max-width: 340rpx;
 }
 .mar{
-    margin: 120rpx auto;
+    margin: 114rpx auto;
 }

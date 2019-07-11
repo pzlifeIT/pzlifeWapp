@@ -14,7 +14,7 @@
       <text class='phone'>{{site.mobile}}</text>
     </view>
     <view class='addres_detail'>
-      <text class='default'>默认</text>
+      <text class='default' wx:if="{{site.default == 1}}">默认</text>
       <text class='location'>{{site.province_name}} {{site.city_name}} {{site.area_name}} {{site.address}}</text>
     </view> 
   </view>

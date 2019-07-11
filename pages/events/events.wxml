@@ -1,4 +1,5 @@
 <!--pages/events/events.wxml-->
+<home page-name="线下活动"></home>
 <view class="banner">
     <!--<swiper class="slider" circular bindchange="slider">-->
     <!--<swiper-item>-->

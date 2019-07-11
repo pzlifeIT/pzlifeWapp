@@ -112,6 +112,9 @@ page {
     background-color: #fff;
     font-size: 24rpx;
     color: #202020;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
 }
 
 .headPortraits,
@@ -130,10 +133,16 @@ page {
 
 .nickname {
     width: 210rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .identity {
     width: 120rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .bonus {

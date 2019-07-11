@@ -2,7 +2,7 @@
 
 page {
     background: #f7f7f7;
-    height: 100%;
+    /* height: 100%; */
     overflow: auto;
     overflow-scrolling: touch;
     -webkit-overflow-scrolling: touch;
@@ -18,6 +18,7 @@ page {
     background: #f7f7f7;
     height: 100%;
     overflow: auto;
+    margin-top: 140rpx;
 }
 
 swiper {
@@ -156,8 +157,8 @@ swiper-item {
 }
 
 .desc .vipprice {
-    font-size: 24rpx;
-    color: #EAB700;
+
+font-size: 28rpx;
 }
 
 .desc .vipprice text {
@@ -622,7 +623,7 @@ swiper-item {
 }
 
 .re-goods {
-    padding: 0 16rpx 20rpx 16rpx;
+    padding: 0 16rpx 0rpx 16rpx;
     box-sizing: border-box;
     height: 360rpx;
     white-space: nowrap;
@@ -655,19 +656,33 @@ swiper-item {
 }
 
 .vip-text {
-    width: 134rpx;
-    height: 30rpx;
-    background-color: #F99F36;
-    color: #FFFFFF;
-    font-size: 24rpx;
-    text-align: center;
-    line-height: 30rpx;
-    padding: 0 6rpx;
+    display: inline-block;
+padding: 5rpx;
+background: #e61f18;
+color: #FFFFFF;
+width: 135rpx;
+height: 30rpx;
+font-size: 24rpx;
+text-align: center;
+border-radius: 2rpx;
+margin-top: 20rpx;
 }
 
 .vip-money {
-    color: #F99F36;
-    font-size: 26rpx;
+    color: #f61f18;
+    font-size: 28rpx;
     display: inline-block;
     margin-left: 6rpx;
+}
+.butie{
+    display: inline-block;
+    padding: 5rpx;
+    background: #e61f18;
+    color: #FFFFFF;
+    width: 135rpx;
+    height: 30rpx;
+    font-size: 24rpx;
+    text-align: center;
+    border-radius: 2rpx;
+    margin-top: 20rpx;
 }

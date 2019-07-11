@@ -9,6 +9,7 @@ image{
 .kuang{
     width: 750rpx;
     margin-bottom: 80rpx;
+    margin-top: 140rpx;
 }
 .h-shang{
     width: 750rpx;

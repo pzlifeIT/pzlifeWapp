@@ -1,3 +1,4 @@
+<home page-name="钻石合伙人"></home>
 <image lazy-load="true" class="first" src="{{imgHost}}guiz02.png"></image>
 <image lazy-load="true" class="second" src="{{imgHost}}guiz03.png"></image>
 

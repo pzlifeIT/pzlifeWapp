@@ -6,6 +6,7 @@ page{
     width: 750rpx;
     height: 500rpx;
     position: relative;
+    margin-top: 140rpx;
 }
 .slider{
     width: 750rpx;

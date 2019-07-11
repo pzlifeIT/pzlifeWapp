@@ -1,5 +1,5 @@
 <!--pages/activity/buyvip/buyvip.wxml-->
-<!--<navbar page-name="购买钻石会员"></navbar>-->
+<home page-name="购买钻石会员"></home>
 <swiper class='pz-swiper' autoplay='true' indicator-dots="true" circular='true' >
 	<block wx:for="{{imgUrls}}">
 		<swiper-item>

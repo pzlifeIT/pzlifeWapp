@@ -99,7 +99,9 @@ page {
     color: #202020;
     display: inline-block;
     background: #fff;
-    width: 150rpx;
+    /* width: 150rpx; */
+    width: auto;
+    padding: 0 30rpx;
 }
 
 .cate_three {

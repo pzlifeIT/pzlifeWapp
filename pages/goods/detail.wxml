@@ -25,7 +25,7 @@
                 </text>
             </view>
             <view class="vipprice">
-                钻石再补贴 {{goodInfo.goods_data.min_brokerage}}
+                <text class="butie">钻石再补贴</text> {{goodInfo.goods_data.min_brokerage}}
                 <text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}">-￥{{goodInfo.goods_data.max_brokerage}}
                 </text>
             </view>

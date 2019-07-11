@@ -200,6 +200,7 @@ page {
     /* margin: 25rpx 0 23rpx 0; */
     line-height: 80rpx;
     padding: 0 20rpx 0 20rpx;
+    background: #fff;
 }
 
 .newpro-text {
@@ -252,7 +253,7 @@ page {
 }
 
 .goods-content {
-    background: #fff;
+    /* background: #fff; */
     overflow: hidden;
 }
 
@@ -286,10 +287,12 @@ page {
     /* height: 360rpx; */
     overflow: hidden;
     text-align: left;
-    margin: 15rpx 5rpx;
+    margin: 6rpx 5rpx;
     float: left;
     background: #fff;
     height: 532rpx;
+    border-top-right-radius: 15rpx;
+    border-top-left-radius: 15rpx;
 }
 
 .goods-one image {
@@ -492,7 +495,7 @@ page {
 }
 
 .one-div {
-    margin-top: 20rpx;
+    margin-top: 8rpx;
 }
 
 .re-goods-one {
@@ -586,4 +589,8 @@ page {
 .oneday {
     width: 750rpx;
     height: 240rpx;
+}
+.info{
+    background: #FFFFFF;
+    overflow: auto;
 }

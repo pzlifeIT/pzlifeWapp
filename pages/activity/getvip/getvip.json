@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-
+    "home":"/components/home/home"
   },
-  "navigationBarTitleText": "领取钻石会员"
+  "navigationStyle": "custom",
+  "component":true
 }

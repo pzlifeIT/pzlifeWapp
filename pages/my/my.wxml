@@ -114,7 +114,8 @@
     <!--<image lazy-load="true" src="{{imgHost}}boss.png"></image>-->
     <!--</view>-->
 </view>
-<view class="userCost user_ident" wx:if="{{userInfo.user_identity != 1 && userInfo.user_identity != 2 }}">
+
+<view class="userCost user_ident" wx:if="{{userInfo.user_identity == 3 || userInfo.user_identity == 4 || userInfo.user_market == 1 || userInfo.user_market == 2 || userInfo.user_market == 3 || userInfo.user_market == 4}}">
     <view class="cost-title">我的经营身份</view>
     <view class="ident-line">
         <!--创业店主-->
@@ -179,7 +180,7 @@
 <view class="userCost">
     <view class="cost-title">资产中心</view>
     <view class="cost-line"
-          wx:if="{{userInfo.user_identity != 1 && userInfo.user_identity != 2 }}">
+          wx:if="{{userInfo.user_identity == 3 || userInfo.user_identity == 4 }}">
         <!-- <view class="line-one" bindtap="goearn" data-earn="2" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
                 <view class="one-content">
                     <view class="one-title">经营性收益余额
@@ -385,6 +386,10 @@
         <view class="equity-one" bindtap="gosxy">
             <image lazy-load="true" src="{{imgHost}}cysz_08.png"></image>
             <view class="equity-title">创业店主邀请码</view>
+        </view>
+        <view class="equity-one" bindtap="goOpenShop" wx:if="{{userInfo.user_market != 0}}">
+            <image lazy-load="true" src="{{imgHost}}yq4.png"></image>
+            <view class="equity-title">开店邀请</view>
         </view>
     </view>
 </view>

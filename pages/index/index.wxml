@@ -73,8 +73,9 @@
         </view>
     </view>
     <!-- 每日轮播 -->
-    <swiper class="oneday" style="order: {{oneDay.model_order}}" autoplay="true" circular="true" wx:if="{{oneDay.is_show == 1 }}">
-        <swiper-item class="date-banner" wx:for="{{oneDay.son}}" >
+    <swiper class="oneday" style="order: {{oneDay.model_order}}" autoplay="true" circular="true"
+            wx:if="{{oneDay.is_show == 1 }}">
+        <swiper-item class="date-banner" wx:for="{{oneDay.son}}">
             <image lazy-load="true" bindtap="goUrl" data-jump="{{item.jump_type}}"
                    data-content="{{item.jump_content}}"
                    src="{{item.image_path+'?imageMogr2/thumbnail/710x'}}"></image>
@@ -105,9 +106,14 @@
                 <view class="goods-one" wx:for="{{hotson}}" bindtap="goUrl" data-jump="{{item.jump_type}}"
                       data-content="{{item.jump_content}}">
                     <image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
-                    <view class="goods-title">{{item.title}}</view>
-                    <view class="goods-price">￥{{item.goods_retail_price}}</view>
-                    <view class="vipprice"><text class="vipprice-text">钻石再补贴</text> {{item.goods_min_brokerage}}</view>
+                    <!--<view class="info">-->
+                        <view class="goods-title">{{item.title}}</view>
+                        <view class="goods-price">￥{{item.goods_retail_price}}</view>
+                        <view class="vipprice">
+                            <text class="vipprice-text">钻石再补贴</text>
+                            {{item.goods_min_brokerage}}
+                        </view>
+                    <!--</view>-->
                 </view>
             </view>
         </view>
@@ -128,7 +134,10 @@
                     <view class="life-goods-desc">
                         <view class="desc-title">{{item.title}}</view>
                         <view class="desc-price">￥{{item.goods_retail_price}}</view>
-                        <view class="desc-vipprice"><text class="vipprice-text">钻石再补贴</text> {{item.goods_min_brokerage}}</view>
+                        <view class="desc-vipprice">
+                            <text class="vipprice-text">钻石再补贴</text>
+                            {{item.goods_min_brokerage}}
+                        </view>
                     </view>
                 </view>
             </view>
@@ -147,7 +156,10 @@
                 <image lazy-load="true" src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
                 <view class="desc-title slsp-title">{{item.title}}</view>
                 <view class="desc-price slsp-price">￥{{item.goods_retail_price}}</view>
-                <view class="desc-vipprice slsp-vipprice"><text class="vipprice-text">钻石再补贴</text> {{item.goods_min_brokerage}}</view>
+                <view class="desc-vipprice slsp-vipprice">
+                    <text class="vipprice-text">钻石再补贴</text>
+                    {{item.goods_min_brokerage}}
+                </view>
             </view>
         </scroll-view>
     </view>
@@ -185,14 +197,19 @@
                     <view class="goods-one" wx:for="{{item.third}}" wx:for-item="third" bindtap="goUrl"
                           data-jump="{{third.jump_type}}" data-content="{{third.jump_content}}">
                         <image lazy-load="true" src="{{third.image_path+'?imageMogr2/thumbnail/250x'}}"></image>
-                        <view class="goods-title">{{third.goods_name}}</view>
-                        <view class="goods-price">￥{{third.goods_retail_price}}</view>
-                        <view class="vipprice"><text class="vipprice-text">钻石再补贴</text> {{third.goods_min_brokerage}}</view>
+                        <!--<view class="info">-->
+                            <view class="goods-title">{{third.goods_name}}</view>
+                            <view class="goods-price">￥{{third.goods_retail_price}}</view>
+                            <view class="vipprice">
+                                <text class="vipprice-text">钻石再补贴</text>
+                                {{third.goods_min_brokerage}}
+                            </view>
+                        <!--</view>-->
                     </view>
                     <!--<view class="goods-one" bindtap="goUrl" data-jump="{{item.jump_type}}"-->
-                          <!--data-content="{{item.jump_content}}" data-subName="{{item.title}}">-->
-                        <!--<image class="right-bottom-img" lazy-load="true"-->
-                               <!--src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>-->
+                    <!--data-content="{{item.jump_content}}" data-subName="{{item.title}}">-->
+                    <!--<image class="right-bottom-img" lazy-load="true"-->
+                    <!--src="{{item.image_path+'?imageMogr2/thumbnail/250x'}}"></image>-->
                     <!--</view>-->
                 </view>
             </view>

@@ -90,6 +90,11 @@ Page({
             }
         })
     },
+    goOpenShop: function() {
+        wx.navigateTo({
+            url: "/pages/openShop/openShop"
+        })
+    },
     getBoss: function () {
         let that = this
         app.wxrequest({

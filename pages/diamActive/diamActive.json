@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "钻石合伙人"
+  "usingComponents": {
+    "home":"/components/home/home"
+  },
+  "navigationStyle": "custom",
+  "component":true
 }

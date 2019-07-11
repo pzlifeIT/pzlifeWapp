@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "线下活动"
+  "usingComponents": {
+    "home":"/components/home/home"
+  },
+  "navigationStyle": "custom",
+  "component":true
 }
