@@ -83,7 +83,8 @@
         "pages/task/taskdetails/taskdetails",
         "pages/notice/notice",
         "pages/article/article",
-        "pages/article/detail/detail"
+        "pages/article/detail/detail",
+        "pages/lucky/lucky"
     ],
     "window": {
         "backgroundTextStyle": "dark",

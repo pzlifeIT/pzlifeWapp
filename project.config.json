@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 74,
+			"current": 75,
 			"list": [
 				{
 					"id": 0,
@@ -555,6 +555,12 @@
 					"name": "1",
 					"pathName": "pages/article/article",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "抽奖",
+					"pathName": "pages/lucky/lucky",
 					"scene": null
 				}
 			]

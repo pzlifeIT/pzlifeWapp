@@ -1,0 +1,327 @@
+/* pages/lucky/lucky.wxss */
+
+.dial {
+    position: relative;
+    width: 750rpx;
+    height: auto;
+    overflow: auto;
+}
+
+.dialBack {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1240rpx;
+    z-index: 1;
+}
+
+.wrapper {
+    position: relative;
+    width: 660rpx;
+    height: 660rpx;
+    background-color: transparent;
+    border-radius: 50%;
+    margin: 263rpx auto 106rpx;
+    background: linear-gradient(to bottom right, #ffe4b7, #feb978);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.panel {
+    position: absolute;
+    top: 60rpx;
+    left: 60rpx;
+    width: 550rpx;
+    height: 550rpx;
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    transform: rotate(22.5deg);
+    overflow: hidden;
+}
+
+.panel-within {
+    position: absolute;
+    top: 70rpx;
+    left: 70rpx;
+    width: 530rpx;
+    height: 530rpx;
+    border-radius: 50%;
+    transform: rotate(22.5deg);
+    overflow: hidden;
+}
+
+.sector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 550rpx;
+    height: 550rpx;
+    /* background: #ffeab1; */
+    clip: rect(0 550rpx 550rpx 275rpx);
+    overflow: hidden;
+    /* transform: rotate(-18deg); */
+}
+
+.panel-within .sector {
+    width: 530rpx;
+    height: 530rpx;
+    clip: rect(0 530rpx 530rpx 265rpx);
+}
+
+.sector::after {
+    content: '';
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    clip: rect(0 275rpx 550rpx 0);
+}
+
+.panel-within .sector::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    clip: rect(0 265rpx 530rpx 0);
+}
+
+.sector:nth-child(odd)::after {
+    background: #f58255;
+}
+
+.panel-within .sector:nth-child(odd)::after {
+    background: #f87f9f;
+}
+
+.sector:nth-child(even)::after {
+    background: #ffc26b;
+}
+
+.panel-within .sector:nth-child(even)::after {
+    background: #fbcd8c;
+}
+
+.sector:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.sector:nth-child(2) {
+    transform: rotate(90deg);
+}
+
+.sector:nth-child(3) {
+    transform: rotate(135deg);
+}
+
+.sector:nth-child(4) {
+    transform: rotate(180deg);
+}
+
+.sector:nth-child(5) {
+    transform: rotate(225deg);
+}
+
+.sector:nth-child(6) {
+    transform: rotate(270deg);
+}
+
+.sector:nth-child(7) {
+    transform: rotate(315deg);
+}
+
+.sector:nth-child(8) {
+    transform: rotate(360deg);
+}
+
+.goodsList {
+    position: absolute;
+    top: 70rpx;
+    left: 70rpx;
+    width: 530rpx;
+    height: 530rpx;
+    background: radial-gradient(transparent, transparent, transparent, transparent, transparent, rgba(255, 255, 255, .5), #fff, #fff);
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.goodsList .li {
+    position: absolute;
+    width: 202.82rpx;
+    height: 244.83rpx;
+    line-height: 30rpx;
+    font-size: 24rpx;
+    color: #fff;
+    overflow: hidden;
+}
+
+.goodsList .li text {
+    text-align: center;
+    display: block;
+}
+
+.goodsList .li:nth-child(odd) {
+    color: #db0037;
+}
+
+.goodsList .li:nth-child(even) {
+    color: #e1490d;
+}
+
+.goodsList .li:nth-child(1) {
+    top: -51.53rpx;
+    left: 193.3rpx;
+    transform: rotate(45deg);
+    transform-origin: left bottom;
+}
+
+.goodsList .li:nth-child(2) {
+    top: -80.73rpx;
+    left: 265rpx;
+    transform: rotate(90deg);
+    transform-origin: left bottom;
+}
+
+.goodsList .li:nth-child(3) {
+    top: -51.53rpx;
+    left: 336.7rpx;
+    transform: rotate(135deg);
+    transform-origin: left bottom;
+}
+
+.goodsList .li:nth-child(4) {
+    top: 265rpx;
+    left: 163.6rpx;
+    transform: rotate(180deg);
+}
+
+.goodsList .li:nth-child(5) {
+    top: 91.87rpx;
+    left: 336.7rpx;
+    transform: rotate(225deg);
+    transform-origin: left bottom;
+}
+
+.goodsList .li:nth-child(6) {
+    top: 121.57rpx;
+    left: 265rpx;
+    transform: rotate(270deg);
+    transform-origin: left bottom;
+}
+
+.goodsList .li:nth-child(7) {
+    top: 91.87rpx;
+    left: 193.3rpx;
+    transform: rotate(315deg);
+    transform-origin: left bottom;
+}
+
+.goodsList .li:nth-child(8) {
+    top: 20.7rpx;
+    left: 163.6rpx;
+}
+
+.ring {
+    position: absolute;
+    top: 212rpx;
+    left: 212rpx;
+    width: 236rpx;
+    height: 236rpx;
+    background-color: #fec837;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.Pointer {
+    position: absolute;
+    top: 223rpx;
+    left: 223rpx;
+    width: 214rpx;
+    height: 214rpx;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #f9527d, #f8537f);
+    z-index: 4;
+}
+
+
+/* .wrapper {
+    animation: spin 2s linear infinite;
+} */
+
+.Pointer::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -55rpx;
+    left: 79rpx;
+    width: 28rpx;
+    height: 72rpx;
+    border-width: 72rpx;
+    /* transform: rotateX(10deg); */
+    background: linear-gradient(to bottom right, #e43e6c, #fe7497);
+    clip-path: polygon(0% 85%, 100% 0%, 100% 100%);
+}
+
+.Pointer::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -55rpx;
+    left: 107rpx;
+    width: 28rpx;
+    height: 72rpx;
+    border-width: 72rpx;
+    /* transform: rotateX(10deg); */
+    background: #e22857;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 84%);
+}
+
+@-webkit-keyframes spin1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    99% {
+        -webkit-transform: rotate(270deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+.btn {
+    position: absolute;
+    top: 240rpx;
+    left: 240rpx;
+    width: 180rpx;
+    height: 180rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #d42653, #fd6d91);
+    border-radius: 50%;
+    font-weight: normal;
+    font-size: 46rpx;
+    line-height: 60rpx;
+    color: #fffffe;
+    text-align: center;
+    z-index: 5;
+}
+
+.debris-box {
+    position: relative;
+    width: 730rpx;
+    height: 372rpx;
+    background-color: #fce4f2;
+    border-radius: 10rpx;
+    margin: 0 auto;
+    z-index: 2;
+}

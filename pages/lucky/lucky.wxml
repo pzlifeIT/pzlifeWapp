@@ -1,0 +1,45 @@
+<!--pages/lucky/lucky.wxml-->
+<view class="dial">
+  <image  class="dialBack" lazy-load="{{true}}" src="{{imgHost}}dialBack.png" alt="" />
+  <view class="wrapper" >
+    <view class="panel " >
+      <view wx:for="{{list}}"  class="sector"></view>
+      </view>
+    <view class="panel-within ">
+      <view  wx:for="{{list}}" class="sector"></view>
+    </view>
+    <view class="goodsList" >
+      <view wx:for="{{list}}" class="li">
+        <text >{{item.title}}</text>
+        <text >{{item.subtitle}}</text>
+        <image wx:if="{{false}}" src="{{item.img}}" />
+      </view>
+    </view>
+    <view class="ring" ></view>
+    <view class="Pointer"  animation="{{animation}}" ></view>
+    <view class="btn" bindtap="zhuanpan" ><text > {{btn}}</text></view>
+  </view>
+  <view class="debris-box">
+    <view >集满任意商品碎片，即可包邮到家</view>
+    <view >
+      <view >
+        <image src="" />
+        <text >6包抽纸</text>
+        <text >1/10</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view >爆款专区</view>
+<view >
+  <view >
+    <image src="" /> 
+    <view >
+      <text >大标题灰思宏购货够仪和大标题不要垂头丧气，因为显矮啊哈哈</text>
+      <text >￥265.22</text>
+      <text >钻石再补贴</text>
+      <text >55.5</text>
+      <text >销量：99999+</text> 
+    </view>
+  </view>
+</view>
