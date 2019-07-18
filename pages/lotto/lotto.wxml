@@ -1,4 +1,5 @@
 <!--pages/lotto/lotto.wxml-->
+<home page-name="幸运九宫格"></home>
 <view class="banner">
     <swiper class="slider" circular bindchange="slider">
         <swiper-item>

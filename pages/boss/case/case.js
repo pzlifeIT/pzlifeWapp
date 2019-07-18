@@ -14,7 +14,7 @@ Page({
         reach: true,
         boss: {}
     },
-    clickDiv: function(e) {
+    clickDiv: function (e) {
         let i = e.currentTarget.dataset.i
         this.setData({
             i: i,
@@ -33,7 +33,7 @@ Page({
         }
         this.getCaseDetail(i)
     },
-    getCaseDetail: function(i) {
+    getCaseDetail: function (i) {
         let that = this
         app.wxrequest({
             url: "user/getshopbalance",
@@ -62,7 +62,7 @@ Page({
             }
         })
     },
-    getbossshop: function() {
+    getbossshop: function () {
         let that = this
         app.wxrequest({
             url: "user/getbossshop",
@@ -77,7 +77,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
@@ -105,42 +105,42 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
         if (!this.data.reach) return;
         this.getCaseDetail(this.data.i)
     },
@@ -148,7 +148,7 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
-return app.share()
+    onShareAppMessage: function () {
+        return app.share()
     }
 })

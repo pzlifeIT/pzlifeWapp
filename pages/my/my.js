@@ -14,18 +14,19 @@ Page({
         boss: {},
         yan: true,
         yan_all: true,
-        progress:''
+        progress: '',
+        couponNum:0
     },
-    getTaskProgress:function(){
+    getTaskProgress: function () {
         let that = this
-      app.wxrequest({
-          url:"rights/userTaskProgress",
-          success(res){
-              that.setData({
-                  progress:res.taskprogress
-              })
-          }
-      })
+        app.wxrequest({
+            url: "rights/userTaskProgress",
+            success(res) {
+                that.setData({
+                    progress: res.taskprogress
+                })
+            }
+        })
     },
     yanAll: function () {
         let yanAll = !this.data.yan_all
@@ -48,10 +49,10 @@ Page({
             url: "/pages/my/notice/notice?iden=" + user_identity
         })
     },
-    noUpgrade:function(){
-      app.toast({
-          title:"只能查看与您身份对应的须知"
-      })
+    noUpgrade: function () {
+        app.toast({
+            title: "只能查看与您身份对应的须知"
+        })
     },
     /**
      * 生命周期函数--监听页面加载
@@ -90,7 +91,7 @@ Page({
             }
         })
     },
-    goOpenShop: function() {
+    goOpenShop: function () {
         wx.navigateTo({
             url: "/pages/openShop/openShop"
         })
@@ -294,7 +295,7 @@ Page({
     },
     gosxy: function () {
         wx.navigateTo({
-            url:"/pages/my/inviteQr/inviteQr"
+            url: "/pages/my/inviteQr/inviteQr"
         })
     },
 
@@ -426,9 +427,44 @@ Page({
     },
     buyDiam: function () {
         console.log(123)
-        wx.navigateTo({
+        wx.switchTab({
             url: "/pages/my/getVip/getVip"
         })
+    },
+    goCoupon: function () {
+        if (this.data.con_id) {
+            wx.navigateTo({
+                url: "/pages/coupon/coupon"
+            })
+        } else {
+            app.toast({
+                title: "请先登录"
+            })
+        }
+    },
+    getCountUserCoupon: function () {
+        let that = this
+        app.wxrequest({
+            url: "user/getusercouponlist",
+            data: {
+                is_useL: 2
+            },
+            success(res) {
+                let num = that.disCoupon(res.data)
+                that.setData({
+                    couponNum:num
+                })
+            }
+        })
+    },
+    disCoupon: function (data) {
+        let arr = [];
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].is_use == 2){
+                arr.push(data[i])
+            }
+        }
+        return (arr.length)
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -451,6 +487,7 @@ Page({
                 that.getUserOrderCount()
                 that.getBoss()
                 that.getTaskProgress()
+                that.getCountUserCoupon()
             }
         })
 
@@ -481,6 +518,7 @@ Page({
             that.getUserOrderCount()
             that.getBoss()
             that.getTaskProgress()
+            that.getCountUserCoupon()
             wx.hideNavigationBarLoading() //完成停止加载
             wx.stopPullDownRefresh({}) //停止下拉刷新
         }, 1500);

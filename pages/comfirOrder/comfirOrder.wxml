@@ -1,124 +1,161 @@
 <!--pages/comfirOrder/comfirOrder.wxml-->
-<view class='addres nullad' wx:if="{{siteid == ''}}" bindtap="selsite"  >
-  <view >
-    <text class="ad-hint din" >你的收货地址为空，点击添加收货地址</text>
-    <image lazy-load="true" class="jt" src="{{imgHost}}jt_18.png" />
-  </view>
-  <image lazy-load="true" class='blue_red' src='{{imgHost}}add.png'></image>
+<view class='addres nullad' wx:if="{{siteid == ''}}" bindtap="selsite">
+    <view>
+        <text class="ad-hint din">你的收货地址为空，点击添加收货地址</text>
+        <image lazy-load="true" class="jt" src="{{imgHost}}jt_18.png"/>
+    </view>
+    <image lazy-load="true" class='blue_red' src='{{imgHost}}add.png'></image>
 </view>
 
 <view class='addres' wx:else bindtap="selsite">
-  <view class='addres_outer'>
-    <view class='name_phone'>
-      <text class='name'>{{site.name}}</text>
-      <text class='phone'>{{site.mobile}}</text>
-    </view>
-    <view class='addres_detail'>
-      <text class='default' wx:if="{{site.default == 1}}">默认</text>
-      <text class='location'>{{site.province_name}} {{site.city_name}} {{site.area_name}} {{site.address}}</text>
-    </view> 
-  </view>
-  <view class='jt'>
-    <image lazy-load="true" src='{{imgHost}}jt_18.png'></image>
-  </view>
-  <image lazy-load="true" class='blue_red' src='{{imgHost}}add.png'></image>
-</view>
-
-<view class='goods'>
-  <view wx:for="{{datalist}}" >
-    <view class="s-name" ><image lazy-load="true" class="icon-img fl" src="{{item.image}}" /> <text >{{item.name}}</text> </view>
-    <view wx:for="{{item.shop_list}}" >
-      <view class="s-name"><image lazy-load="true" class="icon-img fl" src="{{item.shop_image}}" /> <text >{{item.shop_name}}</text></view>
-      <view wx:for="{{item.goods_list}}" >
-        <view class='goods_info' >
-          <view class='goods_img'><image lazy-load="true" src='{{item.sku_image}}'></image></view>
-          <view class='goods_detail'>
-            <text class='goods_title'>{{item.goods_name}}</text>
-            <text class='goods_subtitle'>{{item.attr}}</text>
-            <text class='price'>￥{{item.retail_price}}</text>
-          </view>
-          <view class='sum'>x{{item.buySum}}</view>
+    <view class='addres_outer'>
+        <view class='name_phone'>
+            <text class='name'>{{site.name}}</text>
+            <text class='phone'>{{site.mobile}}</text>
         </view>
-      </view>
+        <view class='addres_detail'>
+            <text class='default' wx:if="{{site.default == 1}}">默认</text>
+            <text class='location'>{{site.province_name}} {{site.city_name}} {{site.area_name}} {{site.address}}</text>
+        </view>
     </view>
-  </view>
+    <view class='jt'>
+        <image lazy-load="true" src='{{imgHost}}jt_18.png'></image>
+    </view>
+    <image lazy-load="true" class='blue_red' src='{{imgHost}}add.png'></image>
+</view>
+<view class="stat coupon">
+    <view class="summation">
+        <text class="sum_text">优惠券</text>
+        <navigator url="selectCoupon/selectCoupon">
+            <text class="sum_price select_coupon" wx:if="{{couponTitle == ''}}">选择优惠券</text>
+            <text class="sum_price select_coupon" wx:else>已选择 {{couponTitle}} 元优惠券</text>
+            <image class="jt" lazy-load src="{{imgHost}}jt_black.png"></image>
+        </navigator>
+    </view>
+</view>
+<view class='goods'>
+    <view wx:for="{{datalist}}">
+        <view class="s-name">
+            <image lazy-load="true" class="icon-img fl" src="{{item.image}}"/>
+            <text>{{item.name}}</text>
+        </view>
+        <view wx:for="{{item.shop_list}}">
+            <view class="s-name">
+                <image lazy-load="true" class="icon-img fl" src="{{item.shop_image}}"/>
+                <text>{{item.shop_name}}</text>
+            </view>
+            <view wx:for="{{item.goods_list}}">
+                <view class='goods_info'>
+                    <view class='goods_img'>
+                        <image lazy-load="true" src='{{item.sku_image}}'></image>
+                    </view>
+                    <view class='goods_detail'>
+                        <text class='goods_title'>{{item.goods_name}}</text>
+                        <text class='goods_subtitle'>{{item.attr}}</text>
+                        <text class='price'>￥{{item.retail_price}}</text>
+                    </view>
+                    <view class='sum'>x{{item.buySum}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>
 <view class='stat'>
-  <view class='summation'><text class='sum_text'>含运费</text><text class='sum_price'>￥{{stat.total_freight_price}}</text></view>
-  <view class='summation rebate'><text class='sum_text'>钻石再补贴</text><text class='sum_price fr'>￥{{stat.rebate_all}}</text>
-  <view class="small fl">* 补贴金额在下单后自动转入“我的商券”</view>
-  </view>
-  <view class='summation'><text class='sum_text'>共计{{stat.goods_count}}件商品</text><text class='sum_price'>合计￥{{stat.total_goods_price}}</text></view>
+    <view class='summation'>
+        <text class='sum_text'>含运费</text>
+        <text class='sum_price'>￥{{stat.total_freight_price}}</text>
+    </view>
+    <view class='summation rebate'>
+        <text class='sum_text'>钻石再补贴</text>
+        <text class='sum_price fr'>￥{{stat.rebate_all}}</text>
+        <view class="small fl">* 补贴金额在下单后自动转入“我的商券”</view>
+    </view>
+    <view class='summation'>
+        <text class='sum_text'>共计{{stat.goods_count}}件商品</text>
+        <text class='sum_price'>合计￥{{stat.total_goods_price}}</text>
+    </view>
 </view>
-<view class="payment" >
-  <view class="pt-header" >选择支付方式</view>
-  <view class="bm-mode be fl" bindtap="selpaytype"  data-type="2">
-      <view class="din fl" ><image lazy-load="true" class="buyIcon" src="{{imgHost}}pay_03.png" /></view>
-      <view  class="bm-info din fl" >
-        <text class="db ">商券抵扣</text>
-      </view>
-      <view  class="din fl" >
-        <icon class="bm-btn" wx:if="{{paytype == 2}}" type="success" size="36rpx" />
-        <view class="bm-btn no-btn" wx:else ></view>
-      </view>
-      <view class="bm-balance fl">(余额:￥{{stat.balance}})</view>
-  </view>
-  <view class="bm-mode fl" bindtap="selpaytype"  data-type="1">
-      <view class="din fl" ><image lazy-load="true" class="buyIcon wxIcon" src="{{imgHost}}pay_08.png" /></view>
-      <view class="bm-info din fl" >
-        <text class="db">微信支付</text>
-      </view>
-      <view class=" din fl" >
-        <icon class="bm-btn" wx:if="{{paytype == 1}}" type="success" size="36rpx" />
-        <view class="bm-btn no-btn" wx:else  ></view>
-      </view>
-  </view>
+<view class="payment">
+    <view class="pt-header">选择支付方式</view>
+    <view class="bm-mode be fl" bindtap="selpaytype" data-type="2">
+        <view class="din fl">
+            <image lazy-load="true" class="buyIcon" src="{{imgHost}}pay_03.png"/>
+        </view>
+        <view class="bm-info din fl">
+            <text class="db ">商券抵扣</text>
+        </view>
+        <view class="din fl">
+            <icon class="bm-btn" wx:if="{{paytype == 2}}" type="success" size="36rpx"/>
+            <view class="bm-btn no-btn" wx:else></view>
+        </view>
+        <view class="bm-balance fl">(余额:￥{{stat.balance}})</view>
+    </view>
+    <view class="bm-mode fl" bindtap="selpaytype" data-type="1">
+        <view class="din fl">
+            <image lazy-load="true" class="buyIcon wxIcon" src="{{imgHost}}pay_08.png"/>
+        </view>
+        <view class="bm-info din fl">
+            <text class="db">微信支付</text>
+        </view>
+        <view class=" din fl">
+            <icon class="bm-btn" wx:if="{{paytype == 1}}" type="success" size="36rpx"/>
+            <view class="bm-btn no-btn" wx:else></view>
+        </view>
+    </view>
 </view>
 <view class='footer'>
-  <view class='total'><text class='total_text'>总计金额：</text><text class='total_price'>￥{{stat.total_price}}</text></view>
-	<navigator hover-class="none" open-type="navigateBack" delta="1">
-  <view class='back' wx:if="{{quick == 1}}">
-    <image lazy-load="true" src='{{imgHost}}back_jt_03.png'></image>
-    <text>返回上一页</text>
-  </view>
-  <view class='back' wx:else>
-    <image class="cartImg" lazy-load="true" src='{{imgHost}}cartwhite.png'></image>
-    <text>返回购物车</text>
-  </view>
-	</navigator>
-  <view class='pay' bindtap="showaddres" >去付款</view>
+    <view class='total'>
+        <text class='total_text'>总计金额：</text>
+        <text class='total_price'>￥{{stat.total_price}}</text>
+    </view>
+    <navigator hover-class="none" open-type="navigateBack" delta="1">
+        <view class='back' wx:if="{{quick == 1}}">
+            <image lazy-load="true" src='{{imgHost}}back_jt_03.png'></image>
+            <text>返回上一页</text>
+        </view>
+        <view class='back' wx:else>
+            <image class="cartImg" lazy-load="true" src='{{imgHost}}cartwhite.png'></image>
+            <text>返回购物车</text>
+        </view>
+    </navigator>
+    <view class='pay' bindtap="showaddres">去付款</view>
 </view>
 
 <view class="hint-popup" wx:if="{{addressshow}}">
-  <view class="fill" bindtap="hideaddress" ></view>
-  <view class="hp-cen" >
-    <view class="b_xie" ><image lazy-load="true" class="b-image" src="{{imgHost}}b_xie.png" /></view>
-    <view class="hp-con" >
-      <view class="hp-info" >
-        <text class="hp-info-name">{{site.name}}</text>
-        <text class="hp-info-moblie">{{site.mobile}}</text>
-      </view>
-      <view class="hp-address" >{{site.province_name}} {{site.city_name}} {{site.area_name}} {{site.address}}</view>
+    <view class="fill" bindtap="hideaddress"></view>
+    <view class="hp-cen">
+        <view class="b_xie">
+            <image lazy-load="true" class="b-image" src="{{imgHost}}b_xie.png"/>
+        </view>
+        <view class="hp-con">
+            <view class="hp-info">
+                <text class="hp-info-name">{{site.name}}</text>
+                <text class="hp-info-moblie">{{site.mobile}}</text>
+            </view>
+            <view class="hp-address">{{site.province_name}} {{site.city_name}} {{site.area_name}} {{site.address}}
+            </view>
+        </view>
+        <view>
+            <button class="hp-else din fl" plain="true" bindtap="selsite">选择其他地址</button>
+            <!-- <button bindtap="showbuypup" class="hp-confirm din fl" >地址确定</button> -->
+            <button bindtap="gobuy" class="hp-confirm din fl">地址确定</button>
+        </view>
     </view>
-    <view >
-      <button class="hp-else din fl" plain="true" bindtap="selsite"  >选择其他地址</button>
-      <!-- <button bindtap="showbuypup" class="hp-confirm din fl" >地址确定</button> -->
-      <button bindtap="gobuy" class="hp-confirm din fl" >地址确定</button>
-    </view>
-  </view>
 </view>
 <view class="hint-popup" wx:if="{{distribution}}">
-  <view class="fill" bindtap="" ></view>
-  <view class="hp-cen" >
-    <view class="b_xie" ><image lazy-load="true" class="b-image" src="{{imgHost}}b_xie.png" /></view>
-    <view class="hp-con" >
-      <view class="hb-address" >该地址商品不支持配送</view>
+    <view class="fill" bindtap=""></view>
+    <view class="hp-cen">
+        <view class="b_xie">
+            <image lazy-load="true" class="b-image" src="{{imgHost}}b_xie.png"/>
+        </view>
+        <view class="hp-con">
+            <view class="hb-address">该地址商品不支持配送</view>
+        </view>
+        <view>
+            <button class="hp-else din fl" plain="true" bindtap="selsite">选择其他地址</button>
+            <button bindtap="cancelbuypup" class="hp-confirm din fl">取消购买</button>
+        </view>
     </view>
-    <view >
-      <button class="hp-else din fl" plain="true" bindtap="selsite"  >选择其他地址</button>
-      <button bindtap="cancelbuypup" class="hp-confirm din fl" >取消购买</button>
-    </view>
-  </view>
 </view>
 <!-- <view class="cobuy" wx:if="{{buypup}}">
   <view class="fill" bindtap="hidepay" ></view>

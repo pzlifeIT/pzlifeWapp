@@ -16,12 +16,12 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
     },
-    setmoney: function(e) {
+    setmoney: function (e) {
         let val = e.detail.value,
             withdraw = false,
             twoPoint = /[0-9]+\.((\d*\.\d*)|(\d{3,}))/;
@@ -40,7 +40,7 @@ Page({
             })
             withdraw = false
         }
-        let num = val ? (parseFloat(val) ) : 0
+        let num = val ? (parseFloat(val)) : 0
         num = Math.floor(num * 100) / 100
         this.setData({
             reality: num,
@@ -48,14 +48,14 @@ Page({
             withdraw: withdraw
         })
     },
-    clear: function() {
+    clear: function () {
         this.setData({
             reality: 0,
             money: '',
             withdraw: false
         })
     },
-    transferBalance: function() {
+    transferBalance: function () {
         let that = this
         if (!that.data.withdraw) return
         app.wxrequest({
@@ -93,7 +93,7 @@ Page({
             }
         })
     },
-    getUserInfo: function() {
+    getUserInfo: function () {
         let that = this
         app.wxrequest({
             url: "user/getuser",
@@ -108,14 +108,14 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
         this.getUserInfo()
         this.setData({
             money: '',
@@ -126,35 +126,35 @@ Page({
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
-
+    onShareAppMessage: function () {
+        return app.share()
     }
 })

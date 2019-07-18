@@ -9,22 +9,22 @@ Page({
         recordlist: [],
         loading: true,
         page: 1,
-        imgHost:""
+        imgHost: ""
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
 
         this.setData({
-            imgHost:app.globalData.host.imgHost
+            imgHost: app.globalData.host.imgHost
         })
     },
-    getMoney:function(){
-      wx.navigateTo({
-          url:'/pages/diamActive/diamActive'
-      })
+    getMoney: function () {
+        wx.navigateTo({
+            url: '/pages/diamActive/diamActive'
+        })
     },
     getLogTransfer() {
         let that = this
@@ -80,50 +80,50 @@ Page({
         }
         return text
     },
-    shiftCase:function(){
+    shiftCase: function () {
         wx.navigateTo({
-            url:"/pages/diamActive/shiftMoney/shiftMoney"
+            url: "/pages/diamActive/shiftMoney/shiftMoney"
         })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
         this.getLogTransfer()
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
         if (this.data.loading) {
             this.getLogTransfer()
         }
@@ -132,7 +132,7 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
-
+    onShareAppMessage: function () {
+        return app.share()
     }
 })

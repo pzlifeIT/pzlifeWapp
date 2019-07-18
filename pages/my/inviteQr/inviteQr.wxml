@@ -3,4 +3,4 @@
     <image class="qr" src="{{qrcode}}" lazy-load alt="" bindtap="save" data-img="{{qrcode}}"/>
 </view>
 <view class="hint">我分享，我快乐</view>
-<view class="hint">（点击二维码查看大图，长按保存）</view>
+<view class="hint">（点击二维码查看大图，长按保存发送给好友）</view>

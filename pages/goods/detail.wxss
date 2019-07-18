@@ -630,9 +630,10 @@ font-size: 28rpx;
 }
 
 .re-one {
-    width: 226rpx;
+    width: 232rpx;
     /*height: 309rpx;*/
     display: inline-block;
+    margin-right: 20rpx;
 }
 
 .re-one image {

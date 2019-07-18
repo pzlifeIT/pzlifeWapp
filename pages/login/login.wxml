@@ -1,7 +1,7 @@
 <!--pages/login/login.wxml-->
 <view class="centert">
 	<view class="logo">
-		<image lazy-load="true" src="{{imgHost}}logo1.png"></image>
+		<image lazy-load="true" src="{{imgHost}}newlogo.png"></image>
 	</view>
 	<button class="wechat" open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo' lang="zh_CN" >微信登录</button>
   <navigator url='/pages/login/captchaLogin/captchaLogin?share_id={{share_id}}' hover-class="none">

@@ -13,33 +13,43 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         // this.getUserAddress()
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
     },
-    redirect: function(e) {
+    redirect: function (e) {
         console.log(e.currentTarget.dataset.id)
         wx.redirectTo({
             url: 'installAddress/installAddress?id=' + e.currentTarget.dataset.id
         })
     },
-    getUserAddress: function() {
+    delete: function () {
+        app.modal({
+            content:"是否删除该地址?",
+            confirmColor:"#e61f18",
+            confirmText:"删除",
+            success(){
+
+            }
+        })
+    },
+    getUserAddress: function () {
         let that = this
         app.wxrequest({
             url: 'user/getUserAddress',
             data: {
                 address_id: ''
             },
-            success: function(res) {
+            success: function (res) {
                 that.setData({
                     address: res.data || []
                 })
             }
         })
     },
-    default: function(e) {
+    default: function (e) {
         let that = this,
             id = e.currentTarget.dataset.id
         app.wxrequest({
@@ -47,13 +57,13 @@ Page({
             data: {
                 address_id: id
             },
-            success: function(res) {
+            success: function (res) {
                 that.disaddress(id)
                 app.globalData.addressId = id
             }
         })
     },
-    disaddress: function(id) {
+    disaddress: function (id) {
         let data = this.data.address,
             len = data.length
         for (let i = 0; i < len; i++) {
@@ -69,49 +79,42 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
         this.getUserAddress()
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function() {
+    onReachBottom: function () {
 
     }
 })

@@ -8,15 +8,15 @@ Page({
     data: {
         page: 1,
         pageNum: 10,
-        reach:true,
-        list:[],
-        imgHost:"",
-        num:1
+        reach: true,
+        list: [],
+        imgHost: "",
+        num: 1
     },
-    clickSelect:function(e){
+    clickSelect: function (e) {
         let num = parseInt(e.currentTarget.dataset.num)
         this.setData({
-            num:num
+            num: num
         })
     },
     getMerchants() {
@@ -28,23 +28,23 @@ Page({
                 pageNum: that.data.pageNum || 10
             },
             success(res) {
-                console.log(res,123)
-                if (res.data.length < 10){
+                console.log(res, 123)
+                if (res.data.length < 10) {
                     that.setData({
-                        reach:false
+                        reach: false
                     })
                 }
-                if (res.data.length > 0){
+                if (res.data.length > 0) {
                     let list = that.data.list
                     list.push(res.data)
                     that.setData({
-                        list:list,
-                        page:that.data.page + 1
+                        list: list,
+                        page: that.data.page + 1
                     })
                 }
             },
-            error(res){
-                console.log(res,456)
+            error(res) {
+                console.log(res, 456)
             }
         })
     },
@@ -54,7 +54,7 @@ Page({
     onLoad: function (options) {
         this.getMerchants()
         this.setData({
-            imgHost:app.globalData.host.imgHost
+            imgHost: app.globalData.host.imgHost
         })
     },
 
@@ -105,6 +105,6 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return app.share()
     }
 })

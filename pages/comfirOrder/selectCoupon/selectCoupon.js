@@ -1,55 +1,33 @@
-// pages/coupon/coupon.js
+// pages/comfirOrder/selectCoupon/selectCoupon.js
 const app = getApp()
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        head: 2,
-        imgHost: '',
-        type: 0,
         list: []
     },
-    select: function (e) {
-        let num = e.currentTarget.dataset.num
-        console.log(num)
-        this.setData({
-            head: num,
-            list: []
-        }, function () {
-            this.getCouponList()
+    radio: function (e) {
+        let pages = getCurrentPages();
+        let prevPage = pages[pages.length - 2];
+        prevPage.setData({
+            couponText: e.detail.value
+        });
+        wx.navigateBack({
+            delta: -1
         })
     },
-    goUse: function (e) {
-        let id = e.currentTarget.dataset.couponid;
-        let type = e.currentTarget.dataset.type;
-        if (type == 1){
-            wx.navigateTo({
-                url:"/pages/goods/detail?goodid="+id
-            })
-        } else if (type == 2){
-            wx.navigateTo({
-                url: "/pages/category/goods/goods?sub_id=" + id
-            })
-        }else {
-            app.toast({title:"优惠券类型错误"})
-        }
-    },
-    getCouponList: function () {
-        let type = this.data.head;
-        let that = this;
-        if (!type) {
-            app.toast({title: "类型错误"})
-            return
-        }
+    getUseCoupon: function () {
+        let that = this
         app.wxrequest({
             url: "user/getusercouponlist",
             data: {
-                is_use: type
+                is_use: 2
             },
             success(res) {
-                let coupon = that.disPrice(res.data)
+                let coupon = that.disPrice(res.data);
                 that.setData({
                     list: coupon
                 })
@@ -77,62 +55,67 @@ Page({
         }
         return data
     },
-
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.setData({
-            imgHost: app.globalData.host.imgHost
-        })
-    },
+        this.getUseCoupon()
+    }
+
+    ,
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
 
-    },
+    }
+    ,
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        this.getCouponList()
-    },
+
+    }
+    ,
 
     /**
      * 生命周期函数--监听页面隐藏
      */
     onHide: function () {
 
-    },
+    }
+    ,
 
     /**
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
 
-    },
+    }
+    ,
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
 
-    },
+    }
+    ,
 
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
 
-    },
+    }
+    ,
 
     /**
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-        return app.share()
+
     }
 })

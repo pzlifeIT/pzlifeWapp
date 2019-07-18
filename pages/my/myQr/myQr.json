@@ -1,4 +1,7 @@
 {
-    "usingComponents": {},
-    "navigationBarTitleText": "我的二维码"
+    "usingComponents": {
+        "home":"/components/home/home"
+    },
+    "navigationStyle": "custom",
+    "component":true
 }

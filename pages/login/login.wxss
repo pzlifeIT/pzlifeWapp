@@ -16,8 +16,8 @@ page{
 	margin-bottom: 140rpx;
 }
 image{
-	width: 266rpx;
-	height: 122rpx;
+	width: 204rpx;
+	height: 204rpx;
 }
 .wechat{
 	width: 100%;

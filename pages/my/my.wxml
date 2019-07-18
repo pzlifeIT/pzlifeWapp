@@ -241,13 +241,13 @@
                 <view class="one-price">{{userInfo.balance || 0}}</view>
             </view>
         </view>
-        <view class="line-one">
+        <view class="line-one" bindtap="goCoupon">
             <view class="one-content">
                 <view class="one-title">
                     优惠券
                     <text>(张)</text>
                 </view>
-                <view class="one-price">0</view>
+                <view class="one-price">{{couponNum}}</view>
             </view>
         </view>
         <view class="line-one" bindtap="goInte" data-int="{{userInfo.integral}}">
@@ -383,10 +383,10 @@
             <image lazy-load="true" src="{{imgHost}}cysz_14.png"></image>
             <view class="equity-title">客服电话</view>
         </view>
-        <view class="equity-one" bindtap="gosxy">
-            <image lazy-load="true" src="{{imgHost}}cysz_08.png"></image>
-            <view class="equity-title">创业店主邀请码</view>
-        </view>
+        <!--<view class="equity-one" bindtap="gosxy">-->
+            <!--<image lazy-load="true" src="{{imgHost}}cysz_08.png"></image>-->
+            <!--<view class="equity-title">创业店主邀请码</view>-->
+        <!--</view>-->
         <view class="equity-one" bindtap="goOpenShop" wx:if="{{userInfo.user_market != 0}}">
             <image lazy-load="true" src="{{imgHost}}yq4.png"></image>
             <view class="equity-title">开店邀请</view>

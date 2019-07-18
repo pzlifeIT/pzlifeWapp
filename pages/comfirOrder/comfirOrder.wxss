@@ -622,3 +622,10 @@ radio-group {
     height: 54rpx;
     background-color: #f7f7f7;
 }
+.coupon{
+    padding: 0;
+}
+.select_coupon{
+    margin-right: 40rpx;
+    color: #e61f18;
+}

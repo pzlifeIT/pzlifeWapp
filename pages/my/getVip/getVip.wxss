@@ -18,7 +18,7 @@
     line-height: 88rpx;
     color: #E61F18;
     font-size: 36rpx;
-    position: absolute;
+    position: fixed;
     bottom: 44rpx;
     left: 41rpx;
 }

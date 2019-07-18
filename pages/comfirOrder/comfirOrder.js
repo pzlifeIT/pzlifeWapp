@@ -20,19 +20,22 @@ Page({
         quick: 0,
         imgHost: '',
         distribution: false,
-        payStatus: false
+        payStatus: false,
+        coupon: 0,
+        couponText: '',
+        couponTitle: ''
     },
-    hideModel: function(e) {
+    hideModel: function (e) {
         this.setData({
             isShow: false
         })
     },
-    showModel: function(e) {
+    showModel: function (e) {
         this.setData({
             isShow: true
         })
     },
-    hideaddress: function(e) {
+    hideaddress: function (e) {
         this.setData({
             addressshow: false
         })
@@ -42,7 +45,7 @@ Page({
             distribution: false
         })
     },
-    hidepay: function() {
+    hidepay: function () {
         this.setData({
             buypup: false
         })
@@ -50,7 +53,7 @@ Page({
     cancelbuypup() {
         wx.navigateBack()
     },
-    selpaytype: function(e) {
+    selpaytype: function (e) {
         let type = e.currentTarget.dataset.type,
             paym = {},
             stat = this.data.stat
@@ -72,13 +75,13 @@ Page({
             paymoney: paym
         })
     },
-    gobuy: function() {
+    gobuy: function () {
         if (this.data.paytype == 0) {
-            app.toast({ title: '请选择支付方式' })
+            app.toast({title: '请选择支付方式'})
             return
         }
         if (this.data.siteid == '') {
-            app.toast({ title: '请选择地址' })
+            app.toast({title: '请选择地址'})
             return
         }
         if (this.data.quick == 1) {
@@ -87,7 +90,7 @@ Page({
             this.createorder()
         }
     },
-    showaddres: function(e) {
+    showaddres: function (e) {
         if (!this.data.siteid) {
             app.toast({
                 title: '请选择地址'
@@ -104,7 +107,7 @@ Page({
             addressshow: true
         })
     },
-    showbuypup: function() {
+    showbuypup: function () {
 
         // this.setData({
         //     buypup: true
@@ -113,7 +116,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
             imgHost: app.globalData.host.imgHost,
             skus: options.skus,
@@ -125,16 +128,17 @@ Page({
     /**
      * 创建订单接口
      */
-    createorder: function(data) {
+    createorder: function (data) {
         let that = this
         app.wxrequest({
             url: 'order/createorder',
             data: {
                 sku_id_list: that.data.skus,
                 user_address_id: that.data.siteid,
-                pay_type: that.data.paytype
+                pay_type: that.data.paytype,
+                user_coupon_id:that.data.coupon
             },
-            success: function(res) {
+            success: function (res) {
 
                 if (res.is_pay == 1) {
                     that.gopaystatus({
@@ -148,18 +152,18 @@ Page({
                 }
                 app.globalData.updateNum = true
             },
-            error: function(code) {
+            error: function (code) {
                 switch (parseInt(code)) {
                     case 3000:
                     case 3001:
                     case 3003:
-                        app.toast({ title: '商品信息出错' })
+                        app.toast({title: '商品信息出错'})
                         break;
                     case 3004:
-                        app.toast({ title: '商品已售完' })
+                        app.toast({title: '商品已售完'})
                         break;
                     case 3005:
-                        app.toast({ title: '商品未加入购物车' })
+                        app.toast({title: '商品未加入购物车'})
                         wx.switchTab({
                             url: '/pages/cart/cart'
                         })
@@ -168,19 +172,35 @@ Page({
                         that.setData({
                             distribution: true
                         })
-                        app.toast({ title: '该地区商品不支持配送' })
+                        app.toast({title: '该地区商品不支持配送'})
                         break;
                     case 3007:
-                        app.toast({ title: '商品库存不足' })
+                        app.toast({title: '商品库存不足'})
+                        break;
+                    case 3010:
+                        app.modal({
+                           title:"钻石会员专享",
+                           content:"该商品为钻石会员专享，是否去升级为钻石会员？",
+                           success(){
+                               wx.switchTab({
+                                   url:'/pages/my/getVip/getVip'
+                               })
+                           }
+                        });
+                        break;
+                    case 3013:
+                        app.toast({
+                            title:"优惠券不可用"
+                        });
                         break;
                     default:
-                        app.toast({ title: '意料之外的错误' })
+                        app.toast({title: '错误码：' + code})
                 }
 
             }
         })
     },
-    quickcreateorder: function(data) {
+    quickcreateorder: function (data) {
         let that = this
         app.wxrequest({
             url: 'order/quickcreateorder',
@@ -189,9 +209,10 @@ Page({
                 sku_id: that.data.skus,
                 user_address_id: that.data.siteid,
                 pay_type: that.data.paytype,
-                num: that.data.num
+                num: that.data.num,
+                user_coupon_id:that.data.coupon
             },
-            success: function(res) {
+            success: function (res) {
                 if (res.is_pay == 1) {
                     that.gopaystatus({
                         order_no: res.order_no,
@@ -208,27 +229,41 @@ Page({
                     case 3000:
                     case 3001:
                     case 3003:
-                        app.toast({ title: '商品信息出错' })
+                        app.toast({title: '商品信息出错'})
                         break;
                     case 3004:
-                        app.toast({ title: '商品已售完' })
+                        app.toast({title: '商品已售完'})
                         break;
                     case 3006:
                         that.setData({
                             distribution: true
                         })
-                        app.toast({ title: '该地区商品不支持配送' })
+                        app.toast({title: '该地区商品不支持配送'})
                         break;
                     case 3007:
-                        app.toast({ title: '商品库存不够' })
+                        app.toast({title: '商品库存不够'})
+                        break;
+                    case 3010:
+                        app.modal({
+                            title: "钻石会员专属",
+                            content: "该商品为钻石会员及以上身份专属，是否去升级为钻石会员？",
+                            success() {
+                                wx.switchTab({
+                                    url: "/pages/my/getVip/getVip"
+                                })
+                            }
+                        });
+                        break;
+                    case 3013:
+                        app.toast({title:"优惠券不可用"});
                         break;
                     default:
-                        app.toast({ title: '意料之外的错误' })
+                        app.toast({title: '错误码：' + code})
                 }
             }
         })
     },
-    gopaystatus: function(data) {
+    gopaystatus: function (data) {
         let that = this
         wx.redirectTo({
             url: '/pages/paystatus/paystatus?status=' + data.status + '&orderno=' + data.order_no + '&siteid=' + that.data.siteid + '&price=' + that.data.stat.total_price
@@ -237,7 +272,7 @@ Page({
     /**
      * 支付
      */
-    pay: function(data) {
+    pay: function (data) {
         let that = this
         app.wxpay({
             order_no: data.order_no,
@@ -272,7 +307,7 @@ Page({
     /**
      * 跳转选择地址
      */
-    selsite: function() {
+    selsite: function () {
         wx.navigateTo({
             url: 'address/address'
         })
@@ -280,14 +315,14 @@ Page({
     /**
      * 获取地址接口
      */
-    getUserAddress: function(data) {
+    getUserAddress: function (data) {
         let that = this
         app.wxrequest({
             url: 'user/getUserAddress',
             data: {
                 address_id: data.address_id
             },
-            success: function(res) {
+            success: function (res) {
                 that.setData({
                     site: res.data || {}
                 })
@@ -297,13 +332,14 @@ Page({
     /**
      * 创建结算页
      */
-    createsettlement: function(data) {
+    createsettlement: function (data) {
         let that = this
         app.wxrequest({
             url: "order/createsettlement",
             data: {
                 sku_id_list: that.data.skus,
-                user_address_id: that.data.siteid
+                user_address_id: that.data.siteid,
+                user_coupon_id:that.data.coupon
             },
             success(res) {
                 let stat = {
@@ -323,19 +359,19 @@ Page({
                     address_id: res.default_address_id
                 })
             },
-            error: function(code) {
+            error: function (code) {
                 switch (parseInt(code)) {
                     case 3001:
-                        app.toast({ title: '未选择商品' })
+                        app.toast({title: '未选择商品'})
                         break;
                     case 3003:
-                        app.toast({ title: '地址错误' })
+                        app.toast({title: '地址错误'})
                         break;
                     case 3004:
-                        app.toast({ title: '商品售罄' })
+                        app.toast({title: '商品售罄'})
                         break;
                     case 3005:
-                        app.toast({ title: '商品未加入购物车' })
+                        app.toast({title: '商品未加入购物车'})
                         wx.switchTab({
                             url: '/pages/cart/cart'
                         })
@@ -344,18 +380,33 @@ Page({
                         that.setData({
                             distribution: true
                         })
-                        app.toast({ title: '该地区商品不支持配送' })
+                        app.toast({title: '该地区商品不支持配送'})
                         break;
                     case 3007:
-                        app.toast({ title: '商品库存不够' })
+                        app.toast({title: '商品库存不够'})
+                        break;
+                    case 3010:
+                        app.modal({
+                            title: "钻石会员专享",
+                            content: "该商品为钻石会员及以上身份专享，是否升级为钻石会员？",
+                            success: function () {
+                                wx.switchTab({
+                                    url: "/pages/my/getVip/getVip"
+                                })
+                            }
+                        });
+                        break;
+                    case 3013:
+                        app.toast({title:"优惠券不可用"});
                         break;
                     default:
-                        app.toast({ title: '意料之外的错误' })
+                        app.toast({title: '错误码：' + code})
+                        break;
                 }
             }
         })
     },
-    quickSettlement: function(data) {
+    quickSettlement: function (data) {
         let that = this
         app.wxrequest({
             url: "order/quicksettlement",
@@ -363,7 +414,8 @@ Page({
                 buid: app.globalData.pid,
                 sku_id: that.data.skus,
                 num: that.data.num,
-                user_address_id: that.data.siteid
+                user_address_id: that.data.siteid,
+                user_coupon_id:that.data.coupon
             },
             success(res) {
                 let stat = {
@@ -383,44 +435,69 @@ Page({
                     address_id: res.default_address_id
                 })
             },
-            error: function(code) {
+            error: function (code) {
                 switch (parseInt(code)) {
                     case 3001:
-                        app.toast({ title: '未选择商品' })
+                        app.toast({title: '未选择商品'})
                         break;
                     case 3003:
-                        app.toast({ title: '地址错误' })
+                        app.toast({title: '地址错误'})
                         break;
                     case 3004:
-                        app.toast({ title: '商品售罄' })
+                        app.toast({title: '商品售罄'})
                         break;
                     case 3006:
                         that.setData({
                             distribution: true
                         })
-                        app.toast({ title: '该地区商品不支持配送' })
+                        app.toast({title: '该地区商品不支持配送'})
                         break;
                     case 3007:
-                        app.toast({ title: '商品库存不够' })
+                        app.toast({title: '商品库存不够'})
+                        break;
+                    case 3010:
+                        app.modal({
+                            title: "钻石会员专享",
+                            content: "该商品为钻石会员及以上身份专享，是否升级为钻石会员？",
+                            success() {
+                                wx.switchTab({
+                                    url: "/pages/my/getVip/getVip"
+                                })
+                            }
+                        });
+                        break;
+                    case 3013:
+                        app.toast({title:"优惠券不可用"});
                         break;
                     default:
-                        app.toast({ title: '意料之外的错误' })
+                        app.toast({title: '意料之外的错误'})
                 }
             }
+        })
+    },
+    disCoupon: function (data) {
+        console.log(data)
+        let arr = data.split("-");
+        this.setData({
+            coupon: arr[0],
+            couponTitle: arr[1]
         })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function(o) {
-        if (this.data.payStatus) return
+    onShow: function (o) {
+        if (this.data.payStatus) return;
+        if (this.data.couponText) {
+            this.disCoupon(this.data.couponText);
+        }
         this.setData({
             siteid: app.globalData.addressId,
             distribution: false
@@ -440,35 +517,28 @@ Page({
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function() {
+    onReachBottom: function () {
 
     }
 })

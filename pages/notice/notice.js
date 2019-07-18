@@ -91,6 +91,7 @@ Page({
                 })
             },
             error(res) {
+                console.log(res)
                 let text = ''
                 switch (parseInt(res)) {
                     case 3001:
@@ -115,7 +116,7 @@ Page({
                         text = '正在冷却期内无法升级';
                         break;
                     default:
-                        text = '错误码：' + res
+                        text = '错误码：' + parseInt(res)
                 }
                 app.toast({title: text})
             }
