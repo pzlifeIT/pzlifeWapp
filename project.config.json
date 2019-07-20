@@ -182,7 +182,7 @@
 					"id": 21,
 					"name": "领券中心",
 					"pathName": "pages/coupon/getcoupon/getcoupon",
-					"query": "scene=id%3D13",
+					"query": "scene=id%3D30",
 					"scene": null
 				},
 				{

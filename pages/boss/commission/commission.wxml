@@ -82,7 +82,8 @@
                     <text class="ident" wx:if="{{item.user_identity == 1}}">普通会员</text>
                     <text class="ident" wx:if="{{item.user_identity == 2}}">钻石会员</text>
                     <text class="ident" wx:if="{{item.user_identity == 3}}">合伙人</text>
-                    <view class="money ">+{{item.result_price}} 元</view>
+                    <view class="money" wx:if="{{item.result_price > 0}}">+{{item.result_price}} 元</view>
+                    <view class="money" wx:elif="{{item.result_price <= 0}}">{{item.result_price}} 元</view>
                 </view>
                 <view class="shijian">{{item.create_time}}</view>
 
@@ -99,7 +100,8 @@
             <view class="one-info">
                 <view class="nickname qudao">
                     <view class="name">{{item.nick_name}}</view>
-                    <view class="money ">+{{item.result_price}} 元</view>
+                    <view class="money " wx:if="{{item.result_price > 0}}">+{{item.result_price}} 元</view>
+                    <view class="money " wx:elif="{{item.result_price <= 0}}">{{item.result_price}} 元</view>
                 </view>
             </view>
         </view>
@@ -115,7 +117,8 @@
             <view class="one-info">
                 <view class="nickname qudao">
                     <view class="name">{{item.nick_name}}</view>
-                    <view class="money ">+{{item.money}}元</view>
+                    <view class="money" wx:if="{{item.money > 0}}">+{{item.money}}元</view>
+                    <view class="money" wx:elif="{{item.money <= 0}}">{{item.money}}元</view>
                 </view>
             </view>
         </view>
@@ -128,7 +131,8 @@
             <view class="one-info qi">
                 <view class="nickname">
                     <view class="name">{{item.message}}</view>
-                    <view class="money ">+{{item.money}} 元</view>
+                    <view class="money " wx:if="{{item.money > 0}}">+{{item.money}} 元</view>
+                    <view class="money " wx:elif="{{item.money <= 0}}">{{item.money}} 元</view>
                 </view>
                 <view class="shijian">{{item.create_time}}</view>
             </view>

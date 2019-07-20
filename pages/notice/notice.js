@@ -88,7 +88,12 @@ Page({
             success(res) {
                 app.toast({
                     title: "升级成功！"
-                })
+                });
+                setTimeout(function () {
+                    wx.switchTab({
+                        url:"/pages/my/my"
+                    })
+                },1000)
             },
             error(res) {
                 console.log(res)
