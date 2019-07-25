@@ -194,6 +194,12 @@ Page({
                             }
                         });
                         break;
+                    case 3011:
+                        app.toast({title:"创业店主及以上身份专享商品"});
+                        break;
+                    case 3012:
+                        app.toast({title:"合伙人及以上身份专享商品"});
+                        break;
                     case 3013:
                         app.toast({
                             title: "优惠券不可用"
@@ -265,6 +271,12 @@ Page({
                                 })
                             }
                         });
+                        break;
+                    case 3011:
+                        app.toast({title:"创业店主及以上身份专享商品"});
+                        break;
+                    case 3012:
+                        app.toast({title:"合伙人及以上身份专享"});
                         break;
                     case 3013:
                         app.toast({title: "优惠券不可用"});
@@ -410,6 +422,12 @@ Page({
                             }
                         });
                         break;
+                    case 3011:
+                        app.toast({title:"创业店主及以上身份专享商品"});
+                        break;
+                    case 3012:
+                        app.toast({title:"合伙人及以上身份专享商品"});
+                        break;
                     case 3013:
                         app.toast({title: "优惠券不可用"});
                         break;
@@ -491,6 +509,12 @@ Page({
                                 })
                             }
                         });
+                        break;
+                    case 3011:
+                        app.toast({title:"该商品为创业店主及以上身份专属"});
+                        break;
+                    case 3012:
+                        app.toast({title:"该商品为合伙人及以上身份专属"});
                         break;
                     case 3013:
                         app.toast({title: "优惠券不可用"});

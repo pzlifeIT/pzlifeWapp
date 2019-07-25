@@ -35,6 +35,7 @@ App({
     getWxRoute: function() {
         let pages = getCurrentPages(),
             prevpage = pages[pages.length - 1];
+        //如果当前页不是login页面，那就把当前页的路由存进全局变量
         if (prevpage.route.indexOf('/login') == -1) {
             this.globalData.routePage = prevpage.route
             this.globalData.wxoptions = ''

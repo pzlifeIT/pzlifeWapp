@@ -256,6 +256,15 @@ Page({
                             }
                         });
                         break;
+                    case 3006:
+                        app.toast({title:"库存不足"});
+                        break;
+                    case 3007:
+                        app.toast({title:"该商品为创业店主及以上身份专享"});
+                        break;
+                    case 3008:
+                        app.toast({title:"该商品为合伙人及以上身份专享"});
+                        break;
                     default:
                         app.toast({
                             title: "错误码：" + res

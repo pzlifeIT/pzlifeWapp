@@ -73,11 +73,10 @@ Page({
             noloading:true,
             success(res) {
                 app.toast({title: "恭喜升级为钻石会员！"});
-                setTimeout(function () {
-                    wx.switchTab({
-                        url: '/pages/my/my'
-                    })
-                }, 1000)
+                that.setData({
+                    pop:false
+                });
+                app.judgelogin({})
             },
             fail(res) {
                 app.toast({title: "支付失败"})
