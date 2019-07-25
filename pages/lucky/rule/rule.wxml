@@ -6,7 +6,7 @@
   <view class="rule-li" data-index="2、" >通用碎片可以通用于所有抽奖的任意奖品碎片,前提必须要有该奖品碎片1个以上;1个通用碎片兑换1个奖品碎片;
   </view>
   <view class="rule-li" data-index="3、" >碎片集满,点击碎片即可合成商品券,进行商品购物;点击通用碎片选择兑换的商品碎片。
-  </view>
+  </view> 
   <view class="rule-li" data-index="4、" >抽纸、酸奶、钻石会员、免费体检和宝宝天赋检测为碎片类奖品,只要集齐对应商品的碎片即可免费领取此商品,无需邮费等任何费用
   </view>
   <view class="rule-li" data-index="5、" >每天抽奖可大大增加抽中宝宝天赋检测的中奖几率哦

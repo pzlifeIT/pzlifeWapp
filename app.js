@@ -291,6 +291,7 @@ App({
                         typeof obj.success == 'function' ? obj.success(result) : ''
                     } else {
                         if (result.code == 5000) {
+                            if (obj.nologin) return
                             that.login()
                         } else {
                             typeof obj.error == 'function' ? obj.error(result.code) : ''
