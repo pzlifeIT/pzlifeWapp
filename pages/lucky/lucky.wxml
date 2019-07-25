@@ -1,4 +1,5 @@
 <!--pages/lucky/lucky.wxml-->
+<home  page-name="幸运转转转"></home>
 <view class="lucky {{bounced?'ovhidden':''}}">
 <view class="dial">
   <image  class="dialBack" lazy-load="{{true}}" src="{{imgHost}}dialBack.png" alt="" />

@@ -1,4 +1,5 @@
 /* components/home/home.wxss */
+
 .navbar {
     width: 100%;
     overflow: hidden;
@@ -8,7 +9,8 @@
     z-index: 100;
     background-color: #FFFFFF;
 }
-.navbar-title{
+
+.navbar-title {
     width: 100%;
     height: 46px;
     line-height: 46px;
@@ -21,42 +23,46 @@
     color: #333;
     font-size: 30rpx;
 }
-.back{
+
+.back {
     width: 56rpx;
     height: 56rpx;
     margin-right: 10rpx;
 }
-.home{
+
+.home {
     width: 56rpx;
     height: 54rpx;
     margin-left: 18rpx;
     margin-right: 14rpx;
 }
-.mid{
+
+.mid {
     height: 40rpx;
     width: 2rpx;
     background: #e8e8e8;
     display: inline-block;
 }
-.navbar-action-group{
-    position: absolute;
-bottom: 7px;
-left: 0rpx;
-z-index: 120;
-color: #000;
-line-height: 1;
-border: 1px solid #e8e8e8;
-border-radius: 20px;
-overflow: hidden;
-padding: 4rpx 6rpx;
-display: flex;
-justify-content: center;
-align-items: center;
-width: 168rpx;
-height: 55rpx;
 
+.navbar-action-group {
+    position: absolute;
+    bottom: 7px;
+    left: 0rpx;
+    z-index: 120;
+    color: #000;
+    line-height: 1;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 4rpx 6rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168rpx;
+    height: 55rpx;
 }
-.title{
+
+.title {
     text-align: center;
     width: 44%;
     margin: 0 auto;

@@ -1,4 +1,7 @@
 {
-    "usingComponents": {},
-    "navigationBarTitleText": "幸运转转转"
+    "usingComponents": {
+        "home": "/components/home/home"
+    },
+    "navigationStyle": "custom",
+    "component": true
 }
