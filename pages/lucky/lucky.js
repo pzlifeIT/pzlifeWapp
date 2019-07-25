@@ -176,7 +176,7 @@ Page({
             },
             success: res => {
                 app.toast({ title: '兑换成功' });
-                this.cancelExchange()
+                this.cancelBounced()
                 this.getUserHdLucky()
                 this.setData({
                     isExchange: false
