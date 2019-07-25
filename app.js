@@ -263,8 +263,7 @@ App({
         obj.data = obj.data || {}
         if (!obj.nocon) {
             if (that.globalData.con_id == '') {
-                if (obj.nologin) return
-                that.login()
+                !obj.nologin && that.login()
                 return
             }
             obj.data.con_id = that.globalData.con_id
@@ -291,8 +290,7 @@ App({
                         typeof obj.success == 'function' ? obj.success(result) : ''
                     } else {
                         if (result.code == 5000) {
-                            if (obj.nologin) return
-                            that.login()
+                            !obj.nologin && that.login()
                         } else {
                             typeof obj.error == 'function' ? obj.error(result.code) : ''
                         }
