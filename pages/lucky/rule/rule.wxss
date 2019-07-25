@@ -1,0 +1,42 @@
+/* pages/lucky/rule/rule.wxss */
+
+page {
+    background-color: #f7f7f7;
+}
+
+.rule {
+    width: 710rpx;
+    margin: 20rpx;
+    padding-bottom: 20rpx;
+    background-color: #fff;
+    font-size: 32rpx;
+    color: #1f1f1f;
+    overflow: auto;
+}
+
+.rule-headr {
+    line-height: 80rpx;
+    font-size: 34rpx;
+    margin-left: 25rpx;
+    margin-top: 15rpx;
+    color: #1f1f1f;
+    font-weight: bolder;
+}
+
+.rule-li {
+    position: relative;
+    float: right;
+    width: 615rpx;
+    margin: 0 auto;
+    padding: 0 20rpx 0 50rpx;
+    overflow: auto;
+    line-height: 55rpx;
+    text-align: justify;
+}
+
+.rule-li::before {
+    content: attr(data-index);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}

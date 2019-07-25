@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 75,
+			"current": 77,
 			"list": [
 				{
 					"id": 0,
@@ -561,6 +561,20 @@
 					"id": -1,
 					"name": "抽奖",
 					"pathName": "pages/lucky/lucky",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的奖品",
+					"pathName": "pages/lucky/myPrize/myPrize",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "规则",
+					"pathName": "pages/lucky/rule/rule",
 					"scene": null
 				}
 			]

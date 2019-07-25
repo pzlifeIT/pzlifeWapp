@@ -84,7 +84,10 @@
         "pages/notice/notice",
         "pages/article/article",
         "pages/article/detail/detail",
-        "pages/lucky/lucky"
+        "pages/lucky/lucky",
+        "pages/lucky/getLuckyGood/getLuckyGood",
+        "pages/lucky/myPrize/myPrize",
+        "pages/lucky/rule/rule"
     ],
     "window": {
         "backgroundTextStyle": "dark",

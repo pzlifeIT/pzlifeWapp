@@ -52,7 +52,7 @@ App({
         let that = this
         wx.getSystemInfo({
             success(res) {
-          
+
                 that.globalData.topHeadHeight = res.statusBarHeight + 46;
             }
         })
@@ -385,7 +385,7 @@ App({
         if (opt.query.pid) {
             this.globalData.pid = opt.query.pid
         }
-       
+
         this.getconid()
         this.globalData.host = config
         this.getUserRead(this.globalData.pid)
@@ -395,7 +395,7 @@ App({
     disScene(scene) {
         let href = decodeURIComponent(scene),
             list = {};
-            console.log(href)
+        console.log(href)
         if (href.indexOf('&') != -1) {
             let arr = href.split('&'),
                 len = arr.length
@@ -413,7 +413,7 @@ App({
         }
         return list
     },
-    base64:function(str){
+    base64: function(str) {
         let keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
         let output = "";
         let chr1, chr2, chr3, enc1, enc2, enc3, enc4;
@@ -436,14 +436,14 @@ App({
         }
         return output;
     },
-    _utf8_encode:function(string){
-        string = string.replace(/\r\n/g,"\n");
+    _utf8_encode: function(string) {
+        string = string.replace(/\r\n/g, "\n");
         let utftext = "";
         for (let n = 0; n < string.length; n++) {
             let c = string.charCodeAt(n);
             if (c < 128) {
                 utftext += String.fromCharCode(c);
-            } else if((c > 127) && (c < 2048)) {
+            } else if ((c > 127) && (c < 2048)) {
                 utftext += String.fromCharCode((c >> 6) | 192);
                 utftext += String.fromCharCode((c & 63) | 128);
             } else {
