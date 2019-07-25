@@ -1,7 +1,21 @@
 <!--pages/my/getVip/getVip.wxml-->
 <view class="wai">
-    <image class="image" lazy-load="true" src="{{imgHost}}108.jpg"></image>
-    <view class="buy" bindtap="popNotice" wx:if="{{userInfo.user_identity == 1}}">立即开通</view>
+    <image class="top" lazy-load="true" src="{{imgHost}}buydoim_02.jpg"></image>
+    <image class="bottom" lazy-load="true" src="{{imgHost}}buydoim_03.jpg"></image>
+    <view class="floor"></view>
+    <view class="mask" wx:if="{{userInfo.user_identity == 1}}">
+    <view class="buy" bindtap="popNotice" >
+        <view class="one"></view>
+        <view class="two">
+            <text class="text">￥</text>
+            <text class="text">118</text>
+            <view class="desc">购物永久获得商品利润的75%</view>
+        </view>
+        <view class="three">
+            <text class="nowbuy">立即开通</text>
+        </view>
+    </view>
+    </view>
 </view>
 
 <view class="pop p" catchtouchmove='preventTouchMove' wx:if="{{pop}}">

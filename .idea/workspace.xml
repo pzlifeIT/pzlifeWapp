@@ -3,9 +3,54 @@
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/boss/commission/commission.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/boss/commission/commission.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/activity/activity.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activity/activity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/activity/activity.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activity/activity.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/activity/buyvip/buyvip.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activity/buyvip/buyvip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/activity/buyvip/buyvip.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activity/buyvip/buyvip.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/activity/getvip/getvip.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activity/getvip/getvip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/activity/getvip/getvip.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activity/getvip/getvip.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/article/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/article/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/article/article.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/article/article.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/category/goods/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/category/goods/goods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/category/goods/goods.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/category/goods/goods.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/category/goods/goods.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/category/goods/goods.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/coupon/coupon.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/coupon/coupon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/coupon/coupon.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/coupon/coupon.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/coupon/coupon.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/coupon/coupon.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/diamActive/diamActive.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/diamActive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/events/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/events.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/events/events.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/events.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/goods/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/goods/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/goods/detail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/goods/detail.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/goods/detail.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/goods/detail.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lotto/lotto.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lotto/lotto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lotto/lotto.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lotto/lotto.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/getVip/getVip.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/getVip/getVip.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/getVip/getVip.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/getVip/getVip.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/notice/notice.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/notice/notice.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/notice/notice.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/notice/notice.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/notice/notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/notice/notice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/task/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/task/task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/notice/notice.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/notice/notice.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/notice/notice.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/notice/notice.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/openShop/notice/notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/openShop/notice/notice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/openShop/notice/notice.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/openShop/notice/notice.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/openShop/notice/notice.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/openShop/notice/notice.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/order.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/order.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/order.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/order.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,6 +85,8 @@
           <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.13" value="7" />
           <entry key="project.open.time.14" value="5" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="6" />
@@ -49,27 +96,27 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="60" />
+          <entry key="project.opened" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="htm" value="2" />
           <entry key="html" value="2" />
-          <entry key="js" value="496" />
-          <entry key="json" value="116" />
+          <entry key="js" value="526" />
+          <entry key="json" value="120" />
           <entry key="php" value="4" />
-          <entry key="wxml" value="394" />
+          <entry key="wxml" value="426" />
           <entry key="wxs" value="1" />
-          <entry key="wxss" value="224" />
+          <entry key="wxss" value="235" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="224" />
-          <entry key="HTML" value="397" />
-          <entry key="JSON" value="116" />
-          <entry key="JavaScript" value="496" />
+          <entry key="CSS" value="235" />
+          <entry key="HTML" value="429" />
+          <entry key="JSON" value="120" />
+          <entry key="JavaScript" value="526" />
           <entry key="PHP" value="4" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
@@ -78,31 +125,31 @@
         <counts>
           <entry key="htm" value="36" />
           <entry key="html" value="45" />
-          <entry key="js" value="54770" />
-          <entry key="json" value="365" />
-          <entry key="wxml" value="34234" />
-          <entry key="wxss" value="32179" />
+          <entry key="js" value="55295" />
+          <entry key="json" value="367" />
+          <entry key="wxml" value="34696" />
+          <entry key="wxss" value="33604" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="32179" />
-          <entry key="HTML" value="34315" />
-          <entry key="JSON" value="365" />
-          <entry key="JavaScript" value="54770" />
+          <entry key="CSS" value="33604" />
+          <entry key="HTML" value="34777" />
+          <entry key="JSON" value="367" />
+          <entry key="JavaScript" value="55295" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6690182">
+    <splitter split-orientation="horizontal" split-proportion="0.48442093">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxml">
+            <entry file="file://$PROJECT_DIR$/pages/notice/notice.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1008">
-                  <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+                <state relative-caret-position="364">
+                  <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
@@ -110,37 +157,37 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/my/my.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+                <state relative-caret-position="5348">
+                  <caret line="191" column="28" selection-start-line="191" selection-start-column="28" selection-end-line="191" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
+            <entry file="file://$PROJECT_DIR$/pages/openShop/notice/notice.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="10836">
-                  <caret line="387" column="60" lean-forward="true" selection-start-line="387" selection-start-column="60" selection-end-line="387" selection-end-column="60" />
+                <state relative-caret-position="280">
+                  <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/boss/commission/commission.wxml">
+            <entry file="file://$PROJECT_DIR$/pages/order/orderDetail/orderDetail.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="814">
-                  <caret line="103" column="78" selection-start-line="103" selection-start-column="78" selection-end-line="103" selection-end-column="78" />
+                <state relative-caret-position="336">
+                  <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxml">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="840">
-                  <caret line="30" column="89" lean-forward="true" selection-start-line="30" selection-start-column="89" selection-end-line="30" selection-end-column="89" />
+                <state relative-caret-position="504">
+                  <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
                   <folding>
-                    <element signature="n#view#4;n#!!top" />
+                    <element signature="n#style#0;n#view#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -149,44 +196,39 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/comfirOrder/comfirOrder.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="14196">
-                  <caret line="507" column="23" selection-start-line="507" selection-start-column="17" selection-end-line="507" selection-end-column="23" />
+                <state relative-caret-position="10164">
+                  <caret line="363" column="53" selection-start-line="363" selection-start-column="53" selection-end-line="363" selection-end-column="53" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.js">
+            <entry file="file://$PROJECT_DIR$/pages/order/order.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3612">
-                  <caret line="129" column="19" lean-forward="true" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
+                <state relative-caret-position="476">
+                  <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/coupon/coupon.js">
+            <entry file="file://$PROJECT_DIR$/pages/order/order.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2184">
-                  <caret line="78" column="6" lean-forward="true" selection-start-line="71" selection-start-column="3" selection-end-line="78" selection-end-column="6" />
+                <state relative-caret-position="1736">
+                  <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+                  <folding>
+                    <element signature="n#style#0;n#view#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#view#0;n#view#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.js">
+            <entry file="file://$PROJECT_DIR$/pages/order/order.wxss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="28">
-                  <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pages/task/task.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+                <state relative-caret-position="420">
+                  <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
@@ -195,20 +237,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pages/order/logisticsInfo/logisticsInfo.wxss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="813">
-                  <caret line="158" column="22" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.wxml">
+            <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="112">
-                  <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+                <state relative-caret-position="952">
+                  <caret line="34" column="11" selection-start-line="27" selection-start-column="4" selection-end-line="34" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -216,26 +249,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7896">
-                  <caret line="282" column="18" selection-start-line="282" selection-start-column="18" selection-end-line="282" selection-end-column="18" />
+                <state relative-caret-position="7588">
+                  <caret line="271" column="14" selection-start-line="271" selection-start-column="14" selection-end-line="271" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/notice/notice.js">
+            <entry file="file://$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/coupon/coupon.wxss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7000">
-                  <caret line="250" column="21" lean-forward="true" selection-start-line="250" selection-start-column="21" selection-end-line="250" selection-end-column="21" />
+                <state relative-caret-position="56">
+                  <caret line="2" column="40" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="65" />
                 </state>
               </provider>
             </entry>
@@ -243,8 +267,65 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/coupon/coupon.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="756">
-                  <caret line="27" column="77" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="77" />
+                <state relative-caret-position="252">
+                  <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="476">
+                  <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/goods/detail.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="11984">
+                  <caret line="428" column="9" lean-forward="true" selection-start-line="426" selection-start-column="7" selection-end-line="428" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/coupon/coupon.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1988">
+                  <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="813">
+                  <caret line="79" selection-start-line="79" selection-end-line="79" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/goods/detail.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="140">
+                  <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/goods/detail.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="5712">
+                  <caret line="204" column="7" selection-start-line="204" selection-start-column="7" selection-end-line="204" selection-end-column="7" />
+                  <folding>
+                    <element signature="n#style#0;n#view#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -255,14 +336,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>buypup</find>
-      <find>getGoodsAway</find>
-      <find>skus</find>
-      <find>库存告罄</find>
-      <find>var</find>
-      <find>box</find>
-      <find>box[2]</find>
-      <find>0.2</find>
       <find>speed</find>
       <find>vipprice</find>
       <find>right-bottom-img</find>
@@ -278,13 +351,21 @@
       <find>返利</find>
       <find>createSettlement</find>
       <find>buyDiam</find>
-      <find>quickCreateOrder</find>
       <find>joinCart</find>
       <find>CreateOrder</find>
       <find>a1</find>
       <find>getCoupon</find>
       <find>ff7749</find>
       <find>create</find>
+      <find>quickCreateOrder</find>
+      <find>bossxz</find>
+      <find>cydzxz</find>
+      <find>noe</find>
+      <find>意料之外</find>
+      <find>pid</find>
+      <find>order</find>
+      <find>style</find>
+      <find>stype</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;image lazy-load=&quot;true&quot;</replace>
@@ -297,6 +378,8 @@
       <replace>0.5</replace>
       <replace>钻石再补贴</replace>
       <replace>getCouponList</replace>
+      <replace>hehuoren</replace>
+      <replace>chuangyeboss</replace>
     </replaceStrings>
     <dirStrings>
       <dir>F:\pzlifeWapp</dir>
@@ -309,57 +392,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/diamActive/withdraw/record/record.js" />
-        <option value="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftMoney.js" />
-        <option value="$PROJECT_DIR$/pages/diamActive/shiftMoney/shiftSuccess/shiftSuccess.js" />
-        <option value="$PROJECT_DIR$/pages/diamActive/shiftMoney/record/record.js" />
-        <option value="$PROJECT_DIR$/pages/comfirOrder/address/address.js" />
-        <option value="$PROJECT_DIR$/pages/boss/boss.js" />
-        <option value="$PROJECT_DIR$/pages/boss/setShopInfo/setShopInfo.js" />
-        <option value="$PROJECT_DIR$/pages/boss/case/case.js" />
-        <option value="$PROJECT_DIR$/pages/boss/cardBag/cardBag.js" />
-        <option value="$PROJECT_DIR$/pages/boss/cardBag/addCard/addCard.js" />
-        <option value="$PROJECT_DIR$/pages/boss/addcoupon/addcoupon.js" />
-        <option value="$PROJECT_DIR$/pages/address/installAddress/installAddress.js" />
-        <option value="$PROJECT_DIR$/pages/my/activeEarn/activeEarn.js" />
-        <option value="$PROJECT_DIR$/pages/my/case/grantcase/grantcase.js" />
-        <option value="$PROJECT_DIR$/pages/my/earnings/earnings.js" />
-        <option value="$PROJECT_DIR$/pages/my/inviteQr/inviteQr.js" />
-        <option value="$PROJECT_DIR$/pages/my/join/join.js" />
-        <option value="$PROJECT_DIR$/pages/my/newpassword/newpassword.js" />
-        <option value="$PROJECT_DIR$/pages/dial/dial.js" />
-        <option value="$PROJECT_DIR$/pages/dial/dial.wxml" />
-        <option value="$PROJECT_DIR$/pages/dial/dial.wxss" />
-        <option value="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.json" />
-        <option value="$PROJECT_DIR$/pages/coupon/coupon.json" />
-        <option value="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.json" />
-        <option value="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss" />
-        <option value="$PROJECT_DIR$/pages/goods/detail.js" />
-        <option value="$PROJECT_DIR$/pages/order/logisticsInfo/logisticsInfo.js" />
-        <option value="$PROJECT_DIR$/pages/order/logisticsInfo/logisticsInfo.wxml" />
-        <option value="$PROJECT_DIR$/pages/order/logisticsInfo/logisticsInfo.wxss" />
-        <option value="$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.wxml" />
-        <option value="$PROJECT_DIR$/pages/login/register/register.wxml" />
-        <option value="$PROJECT_DIR$/pages/login/login.wxml" />
-        <option value="$PROJECT_DIR$/pages/address/address.wxml" />
-        <option value="$PROJECT_DIR$/pages/address/address.js" />
         <option value="$PROJECT_DIR$/pages/login/passLogin/passLogin.wxml" />
-        <option value="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxss" />
-        <option value="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxml" />
-        <option value="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.js" />
-        <option value="$PROJECT_DIR$/pages/coupon/coupon.wxss" />
-        <option value="$PROJECT_DIR$/pages/coupon/coupon.wxml" />
-        <option value="$PROJECT_DIR$/pages/coupon/coupon.js" />
-        <option value="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.js" />
-        <option value="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxml" />
-        <option value="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.js" />
-        <option value="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxml" />
         <option value="$PROJECT_DIR$/pages/my/my.js" />
         <option value="$PROJECT_DIR$/pages/my/my.wxml" />
-        <option value="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxss" />
-        <option value="$PROJECT_DIR$/pages/notice/notice.js" />
         <option value="$PROJECT_DIR$/pages/boss/commission/commission.wxml" />
         <option value="$PROJECT_DIR$/pages/task/task.js" />
+        <option value="$PROJECT_DIR$/pages/my/getVip/getVip.wxss" />
+        <option value="$PROJECT_DIR$/pages/coupon/coupon.wxml" />
+        <option value="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxss" />
+        <option value="$PROJECT_DIR$/pages/openShop/notice/notice.wxss" />
+        <option value="$PROJECT_DIR$/pages/my/notice/notice.wxml" />
+        <option value="$PROJECT_DIR$/pages/my/notice/notice.wxss" />
+        <option value="$PROJECT_DIR$/pages/notice/notice.wxss" />
+        <option value="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxml" />
+        <option value="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss" />
+        <option value="$PROJECT_DIR$/pages/coupon/coupon.wxss" />
+        <option value="$PROJECT_DIR$/pages/coupon/coupon.js" />
+        <option value="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.js" />
+        <option value="$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxml" />
+        <option value="$PROJECT_DIR$/pages/activity/activity.js" />
+        <option value="$PROJECT_DIR$/pages/activity/activity.wxml" />
+        <option value="$PROJECT_DIR$/pages/activity/buyvip/buyvip.js" />
+        <option value="$PROJECT_DIR$/pages/activity/buyvip/buyvip.wxml" />
+        <option value="$PROJECT_DIR$/pages/activity/getvip/getvip.wxml" />
+        <option value="$PROJECT_DIR$/pages/activity/getvip/getvip.js" />
+        <option value="$PROJECT_DIR$/pages/article/article.js" />
+        <option value="$PROJECT_DIR$/pages/article/article.wxml" />
+        <option value="$PROJECT_DIR$/pages/category/goods/goods.wxml" />
+        <option value="$PROJECT_DIR$/pages/category/goods/goods.js" />
+        <option value="$PROJECT_DIR$/pages/diamActive/diamActive.js" />
+        <option value="$PROJECT_DIR$/pages/diamActive/diamActive.wxml" />
+        <option value="$PROJECT_DIR$/pages/events/events.wxml" />
+        <option value="$PROJECT_DIR$/pages/events/events.js" />
+        <option value="$PROJECT_DIR$/pages/lotto/lotto.wxml" />
+        <option value="$PROJECT_DIR$/pages/lotto/lotto.js" />
+        <option value="$PROJECT_DIR$/pages/notice/notice.js" />
+        <option value="$PROJECT_DIR$/pages/notice/notice.wxml" />
+        <option value="$PROJECT_DIR$/pages/openShop/notice/notice.wxml" />
+        <option value="$PROJECT_DIR$/pages/openShop/notice/notice.js" />
+        <option value="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.js" />
+        <option value="$PROJECT_DIR$/pages/order/order.js" />
+        <option value="$PROJECT_DIR$/pages/my/getVip/getVip.wxml" />
+        <option value="$PROJECT_DIR$/pages/order/order.wxss" />
+        <option value="$PROJECT_DIR$/pages/goods/detail.js" />
+        <option value="$PROJECT_DIR$/pages/goods/detail.json" />
+        <option value="$PROJECT_DIR$/pages/goods/detail.wxml" />
+        <option value="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.js" />
+        <option value="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxml" />
+        <option value="$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxss" />
+        <option value="$PROJECT_DIR$/pages/comfirOrder/comfirOrder.js" />
+        <option value="$PROJECT_DIR$/pages/order/order.wxml" />
+        <option value="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml" />
       </list>
     </option>
   </component>
@@ -383,10 +466,9 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1935" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
@@ -406,25 +488,6 @@
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="address" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="boss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="boss" type="462c0819:PsiDirectoryNode" />
-              <item name="commission" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
@@ -456,31 +519,20 @@
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="events" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="my" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="notice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="orderDetail" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -491,7 +543,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="钻石再让利&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="F:/elementUI/app" />
+    <property name="last_opened_file_path" value="F:/learn" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
@@ -589,17 +641,19 @@
       <workItem from="1563152255077" duration="54906000" />
       <workItem from="1563504808475" duration="599000" />
       <workItem from="1563590280475" duration="673000" />
+      <workItem from="1563757912168" duration="32804000" />
+      <workItem from="1563929553136" duration="1801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1085601000" />
+    <option name="totallyTimeSpent" value="1120206000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="0" width="1935" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.103793465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10384818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -620,7 +674,7 @@
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.103793465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10384818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -657,337 +711,354 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/my/inviteQr/inviteQr.js">
+    <entry file="file://$PROJECT_DIR$/pages/my/notice/notice.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+        <state relative-caret-position="812">
+          <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/join/join.js">
+    <entry file="file://$PROJECT_DIR$/pages/notice/notice.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="100" column="25" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/myInfo/myInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1399" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/myQr/myQr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/inviteQr/inviteQr.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/newpassword/newpassword.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="197" column="17" selection-start-line="197" selection-start-column="17" selection-end-line="197" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/integ/integ.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="90" column="7" lean-forward="true" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/inviteQr/inviteQr.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/dial/dial.wxml" />
-    <entry file="file://$PROJECT_DIR$/pages/dial/dial.wxss" />
-    <entry file="file://$PROJECT_DIR$/pages/dial/dial.js" />
-    <entry file="file://$PROJECT_DIR$/pages/openShop/writeInfo/writeInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="74" column="56" lean-forward="true" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/activity/activity.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="4" selection-start-line="1" selection-start-column="1" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        <state relative-caret-position="420">
+          <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="757">
-          <caret line="628" column="24" lean-forward="true" selection-start-line="628" selection-start-column="24" selection-end-line="628" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/paystatus/paystatus.wxml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/goods/detail.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="199" column="31" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/goods/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="256" column="30" lean-forward="true" selection-start-line="256" selection-start-column="30" selection-end-line="256" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order/logisticsInfo/logisticsInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/register/register.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order/logisticsInfo/logisticsInfo.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/address/address.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/address/address.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/coupon/coupon.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/passLogin/passLogin.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="408" column="37" lean-forward="true" selection-start-line="408" selection-start-column="37" selection-end-line="408" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/events/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/case/case.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-924" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="29" column="114" selection-start-line="29" selection-start-column="114" selection-end-line="29" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="44" column="60" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/login.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7168">
-          <caret line="256" column="23" selection-start-line="256" selection-start-column="23" selection-end-line="256" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10836">
-          <caret line="387" column="60" lean-forward="true" selection-start-line="387" selection-start-column="60" selection-end-line="387" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="30" column="89" lean-forward="true" selection-start-line="30" selection-start-column="89" selection-end-line="30" selection-end-column="89" />
-          <folding>
-            <element signature="n#view#4;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/comfirOrder/comfirOrder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14196">
-          <caret line="507" column="23" selection-start-line="507" selection-start-column="17" selection-end-line="507" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3612">
-          <caret line="129" column="19" lean-forward="true" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/coupon/coupon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2184">
-          <caret line="78" column="6" lean-forward="true" selection-start-line="71" selection-start-column="3" selection-end-line="78" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/boss/commission/commission.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="103" column="78" selection-start-line="103" selection-start-column="78" selection-end-line="103" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order/logisticsInfo/logisticsInfo.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="158" column="22" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/captchaLogin/captchaLogin.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7896">
-          <caret line="282" column="18" selection-start-line="282" selection-start-column="18" selection-end-line="282" selection-end-column="18" />
+          <caret line="632" column="19" selection-start-line="632" selection-start-column="19" selection-end-line="632" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/coupon/coupon.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7000">
-          <caret line="250" column="21" lean-forward="true" selection-start-line="250" selection-start-column="21" selection-end-line="250" selection-end-column="21" />
+        <state relative-caret-position="366">
+          <caret line="276" column="23" lean-forward="true" selection-start-line="276" selection-start-column="23" selection-end-line="276" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/coupon/coupon.wxml">
+    <entry file="file://$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="159" column="23" lean-forward="true" selection-start-line="159" selection-start-column="23" selection-end-line="159" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/comfirOrder/comfirOrder.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/home/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/address/installAddress/installAddress.wxml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/activity/activity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/activity/activity.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/activity/buyvip/buyvip.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="120" selection-start-line="2" selection-start-column="120" selection-end-line="2" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/activity/getvip/getvip.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/activity/getvip/getvip.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="119" selection-start-line="2" selection-start-column="119" selection-end-line="2" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/activity/buyvip/buyvip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/activity/getvip/getvip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/category/goods/goods.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="59" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/diamondlist/diamondlist.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/article/article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/events/events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/events/detail/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="511" lean-forward="true" selection-start-line="511" selection-end-line="511" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/freightHouse/freightHouse.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/events/events.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="60" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/lotto/lotto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/notice/notice.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/openShop/notice/notice.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/diamActive/diamActive.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="105" selection-start-line="1" selection-start-column="105" selection-end-line="1" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/article/article.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/category/goods/goods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
-          <caret line="27" column="77" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="77" />
+          <caret line="399" column="38" lean-forward="true" selection-start-line="399" selection-start-column="38" selection-end-line="399" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/notice/notice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
+        <state relative-caret-position="364">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/task/task.js">
+    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5348">
+          <caret line="191" column="28" selection-start-line="191" selection-start-column="28" selection-end-line="191" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/openShop/notice/notice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order/orderDetail/orderDetail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/comfirOrder/comfirOrder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10164">
+          <caret line="363" column="53" selection-start-line="363" selection-start-column="53" selection-end-line="363" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order/order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order/order.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1736">
+          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#0;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order/order.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="34" column="11" selection-start-line="27" selection-start-column="4" selection-end-line="34" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7588">
+          <caret line="271" column="14" selection-start-line="271" selection-start-column="14" selection-end-line="271" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/coupon/getcoupon/getcoupon.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/coupon/coupon.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/getVip/getVip.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/goods/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11984">
+          <caret line="428" column="9" lean-forward="true" selection-start-line="426" selection-start-column="7" selection-end-line="428" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/coupon/coupon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1988">
+          <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/goods/detail.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/goods/detail.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5712">
+          <caret line="204" column="7" selection-start-line="204" selection-start-column="7" selection-end-line="204" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/comfirOrder/selectCoupon/selectCoupon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="813">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>

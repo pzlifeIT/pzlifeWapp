@@ -1,5 +1,5 @@
 <home page-name="钻石接龙"></home>
-<view class="bg">
+<view class="bg" style="margin-top: {{navHight * 2}}rpx">
 	<image class="nomember01"  lazy-load="true" src="{{imgHost}}nomember01.png"></image>
 	<image class="nomember02" lazy-load="true" src="{{imgHost}}nomember02.png"></image>
 </view>

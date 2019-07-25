@@ -14,7 +14,8 @@ Page({
         order_list: [],
         user_identity: 0,
         imgHost: '',
-        orderno: ''
+        orderno: '',
+        navHight:app.globalData.topHeadHeight
     },
     comfir: function(e) {
         this.setData({

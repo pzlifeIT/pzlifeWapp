@@ -50,8 +50,8 @@ Page({
     disPrice: function (data) {
         for (let i = 0; i < data.length; i++) {
             data[i].price = data[i].price * 100 / 100;
-            data[i].create_time = data[i].create_time.split(' ')[0]
-            data[i].end_time = data[i].end_time.split(' ')[0]
+            data[i].create_time = data[i].create_time.split(' ')[0].replace(/-/g,'/')
+            data[i].end_time = data[i].end_time.split(' ')[0].replace(/-/g,'/')
         }
         return data
     },
@@ -59,7 +59,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.getUseCoupon()
+
     }
 
     ,
@@ -76,7 +76,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this.getUseCoupon()
     }
     ,
 

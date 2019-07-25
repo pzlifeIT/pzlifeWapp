@@ -7,7 +7,8 @@ Page({
      */
     data: {
         imgHost:"",
-        pid:""
+        pid:"",
+        navHight:app.globalData.topHeadHeight
     },
 
     /**
@@ -19,7 +20,7 @@ Page({
             pid:options.scene
         })
         
-        console.log(options)
+        console.log(options.scene)
     },
     test:function(id){
         app.toast({

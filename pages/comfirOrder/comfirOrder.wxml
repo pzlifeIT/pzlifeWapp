@@ -62,6 +62,10 @@
 </view>
 <view class='stat'>
     <view class='summation'>
+        <text class='sum_text'>优惠金额</text>
+        <text class='sum_price color'>￥{{stat.discount_money}}</text>
+    </view>
+    <view class='summation'>
         <text class='sum_text'>含运费</text>
         <text class='sum_price'>￥{{stat.total_freight_price}}</text>
     </view>

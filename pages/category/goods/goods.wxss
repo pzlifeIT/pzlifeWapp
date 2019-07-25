@@ -8,7 +8,7 @@ page{
 }
 .one_goods{
   width: 368rpx;
-  height: 544rpx;
+  height: 555rpx;
   overflow: hidden;
   float: left;
   margin: 5rpx 3rpx;
@@ -16,6 +16,7 @@ page{
 	box-sizing: border-box;
 	background: #fff;
 	/* margin: 4rpx; */
+  /* padding-bottom: 4rpx; */
 }
 .one_goods .goods_img{
   width: 100%;
@@ -29,7 +30,7 @@ page{
   /* margin-top: 31rpx; */
   
 }
-.one_goods text{
+ text{
   display: block;
   text-align: left;
 	margin-left: 20rpx;
@@ -57,11 +58,24 @@ page{
 	margin-bottom: 5rpx;
 }
 .vipprice{
-	font-size: 24rpx;
+	/* font-size: 24rpx;
 	color: #EAB700;
-	margin-bottom: 10rpx;
+	margin-bottom: 10rpx; */
+  display: inline-block;
+padding: 5rpx;
+background: #e61f18;
+color: #FFFFFF;
+width: 135rpx;
+height: 30rpx;
+font-size: 24rpx;
+text-align: center;
+border-radius: 2rpx;
 }
-
+.pr{
+  color: #e61f18;
+  font-size: 26rpx;
+margin-bottom: 5rpx
+}
 
 
 

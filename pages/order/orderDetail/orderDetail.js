@@ -9,7 +9,8 @@ Page({
         orderno: '',
         order_info: {},
         imgHost: '',
-        user_identity: 0
+        user_identity: 0,
+        navHight:app.globalData.topHeadHeight
     },
 
     /**

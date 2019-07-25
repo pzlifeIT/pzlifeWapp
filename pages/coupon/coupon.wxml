@@ -4,17 +4,6 @@
     <view class="state-text {{head == 1 ?'active':''}}" bindtap="select" data-num="1">已使用</view>
     <i class="line"><s></s></i>
 </view>
-<!--<view class="convert">-->
-<!--<input type="text" class="convert-input" placeholder="请输入优惠码" placeholder-class="place" />-->
-<!--<view class="button-convert">兑换</view>-->
-<!--</view>-->
-
-<!--<view class="getCoupon" wx:if="{{coupon.length>=1}}">-->
-<!--<image lazy-load="true" src="{{imgHost}}12121_05.png" class="coupon-icon"></image>-->
-<!--<text class="get-text">领券中心</text>-->
-<!--<image lazy-load="true" src="{{imgHost}}jt_18.png" class="jt-icon"></image>-->
-<!--</view>-->
-
 <view class="coupon-list {{head == 1 ? 'a1':''}}">
     <block wx:for="{{list}}">
         <view class="coupon">
@@ -32,7 +21,7 @@
                     </view>
                 </view>
                 <view class="left-bottom">
-                    有效期：{{item.create_time}}-{{item.end_time}}
+                    有效期：{{item.create_time}}--{{item.end_time}}
                 </view>
                 <view class="left-circle"></view>
                 <view class="right-circle {{item.is_use == 2 ? '':'bg-used'}}"></view>

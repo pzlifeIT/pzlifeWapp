@@ -10,7 +10,8 @@ Page({
         mask: true,
         ident: 0,
         stype: 0,
-        pop: false
+        pop: false,
+        navHight:app.globalData.topHeadHeight
     },
     preventTouchMove: function() {
 

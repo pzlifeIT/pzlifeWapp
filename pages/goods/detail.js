@@ -21,7 +21,8 @@ Page({
         status: 0,
         cartNum: 0,
         recommend: [],
-        navH: 0
+        navH: 0,
+        navHight:app.globalData.topHeadHeight
     },
     showModel: function () {
         this.setData({
@@ -346,8 +347,10 @@ Page({
                 // t.getgoodsrecommend(id)
             },
             error: function (code) {
-                app.toast({title: '未获取到商品信息'})
-                wx.navigateBack({})
+                app.toast({title: '商品已下架'})
+                setTimeout(function () {
+                    wx.navigateBack()
+                },1000)
             }
         })
     },
@@ -421,9 +424,9 @@ Page({
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
-
-    },
+    // onReachBottom: function () {
+    //
+    // },
 
     /**
      * 用户点击右上角分享

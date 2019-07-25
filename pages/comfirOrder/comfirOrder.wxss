@@ -629,3 +629,6 @@ radio-group {
     margin-right: 40rpx;
     color: #e61f18;
 }
+.color{
+    color: #E61F18;
+}

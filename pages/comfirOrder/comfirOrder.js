@@ -21,7 +21,7 @@ Page({
         imgHost: '',
         distribution: false,
         payStatus: false,
-        coupon: 0,
+        coupon: '',
         couponText: '',
         couponTitle: ''
     },
@@ -136,7 +136,7 @@ Page({
                 sku_id_list: that.data.skus,
                 user_address_id: that.data.siteid,
                 pay_type: that.data.paytype,
-                user_coupon_id:that.data.coupon
+                user_coupon_id: that.data.coupon
             },
             success: function (res) {
 
@@ -177,20 +177,26 @@ Page({
                     case 3007:
                         app.toast({title: '商品库存不足'})
                         break;
+                    case 3008:
+                        app.toast({title:"支付方式错误"})
+                        break;
+                    case 3009:
+                        app.toast({title:"创建订单失败"})
+                        break;
                     case 3010:
                         app.modal({
-                           title:"钻石会员专享",
-                           content:"该商品为钻石会员专享，是否去升级为钻石会员？",
-                           success(){
-                               wx.switchTab({
-                                   url:'/pages/my/getVip/getVip'
-                               })
-                           }
+                            title: "钻石会员专享",
+                            content: "该商品为钻石会员专享，是否去升级为钻石会员？",
+                            success() {
+                                wx.switchTab({
+                                    url: '/pages/my/getVip/getVip'
+                                })
+                            }
                         });
                         break;
                     case 3013:
                         app.toast({
-                            title:"优惠券不可用"
+                            title: "优惠券不可用"
                         });
                         break;
                     default:
@@ -210,7 +216,7 @@ Page({
                 user_address_id: that.data.siteid,
                 pay_type: that.data.paytype,
                 num: that.data.num,
-                user_coupon_id:that.data.coupon
+                user_coupon_id: that.data.coupon
             },
             success: function (res) {
                 if (res.is_pay == 1) {
@@ -243,6 +249,12 @@ Page({
                     case 3007:
                         app.toast({title: '商品库存不够'})
                         break;
+                    case 3008:
+                        app.toast({title:"支付方式错误"})
+                        break;
+                    case 3009:
+                        app.toast({title:"创建订单失败"})
+                        break;
                     case 3010:
                         app.modal({
                             title: "钻石会员专属",
@@ -255,7 +267,7 @@ Page({
                         });
                         break;
                     case 3013:
-                        app.toast({title:"优惠券不可用"});
+                        app.toast({title: "优惠券不可用"});
                         break;
                     default:
                         app.toast({title: '错误码：' + code})
@@ -339,7 +351,7 @@ Page({
             data: {
                 sku_id_list: that.data.skus,
                 user_address_id: that.data.siteid,
-                user_coupon_id:that.data.coupon
+                user_coupon_id: that.data.coupon
             },
             success(res) {
                 let stat = {
@@ -348,13 +360,15 @@ Page({
                     total_freight_price: res.total_freight_price,
                     total_goods_price: res.total_goods_price,
                     total_price: res.total_price,
-                    balance: res.balance
+                    balance: res.balance,
+                    discount_money:res.discount_money
                 }
                 that.setData({
                     datalist: res.supplier_list,
                     stat: stat,
                     siteid: res.default_address_id
                 })
+                app.globalData.addressId = res.default_address_id
                 that.getUserAddress({
                     address_id: res.default_address_id
                 })
@@ -397,12 +411,22 @@ Page({
                         });
                         break;
                     case 3013:
-                        app.toast({title:"优惠券不可用"});
+                        app.toast({title: "优惠券不可用"});
                         break;
                     default:
                         app.toast({title: '错误码：' + code})
                         break;
                 }
+                // if (!that.data.siteid) {
+                //     that.getUserAddress({
+                //         address_id: app.globalData.addressId
+                //     })
+                // }else {
+                //     that.getUserAddress({
+                //         address_id: that.data.siteid
+                //     })
+                // }
+
             }
         })
     },
@@ -415,7 +439,7 @@ Page({
                 sku_id: that.data.skus,
                 num: that.data.num,
                 user_address_id: that.data.siteid,
-                user_coupon_id:that.data.coupon
+                user_coupon_id: that.data.coupon
             },
             success(res) {
                 let stat = {
@@ -424,13 +448,15 @@ Page({
                     total_freight_price: res.total_freight_price,
                     total_goods_price: res.total_goods_price,
                     total_price: res.total_price,
-                    balance: res.balance
+                    balance: res.balance,
+                    discount_money:res.discount_money
                 }
                 that.setData({
                     datalist: res.supplier_list,
                     stat: stat,
                     siteid: res.default_address_id
                 })
+                app.globalData.addressId = res.default_address_id
                 that.getUserAddress({
                     address_id: res.default_address_id
                 })
@@ -467,21 +493,39 @@ Page({
                         });
                         break;
                     case 3013:
-                        app.toast({title:"优惠券不可用"});
+                        app.toast({title: "优惠券不可用"});
                         break;
                     default:
-                        app.toast({title: '意料之外的错误'})
+                        app.toast({title: '错误码：'+ code})
                 }
+                // if (!that.data.siteid){
+                //     that.getUserAddress({
+                //         address_id: app.globalData.addressId
+                //     })
+                // } else {
+                //     that.getUserAddress({
+                //         address_id: that.data.siteid
+                //     })
+                // }
+
             }
         })
     },
     disCoupon: function (data) {
         console.log(data)
-        let arr = data.split("-");
-        this.setData({
-            coupon: arr[0],
-            couponTitle: arr[1]
-        })
+        if (data.length > 0) {
+            let arr = data.split("-");
+            console.log(arr)
+            this.setData({
+                coupon: arr[0],
+                couponTitle: arr[1]
+            })
+        } else {
+            this.setData({
+                coupon: '',
+                couponTitle: ''
+            })
+        }
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -495,23 +539,26 @@ Page({
      */
     onShow: function (o) {
         if (this.data.payStatus) return;
-        if (this.data.couponText) {
-            this.disCoupon(this.data.couponText);
-        }
+        console.log('siteid', app.globalData.addressId)
+
+        console.log(this.data.couponText)
+
         this.setData({
             siteid: app.globalData.addressId,
             distribution: false
         })
+
+        this.disCoupon(this.data.couponText);
         if (this.data.quick == 1) {
             this.quickSettlement()
         } else {
             this.createsettlement()
         }
-        console.log('siteid', app.globalData.addressId)
         if (!this.data.siteid) return
         this.getUserAddress({
             address_id: this.data.siteid
         })
+
     },
 
     /**

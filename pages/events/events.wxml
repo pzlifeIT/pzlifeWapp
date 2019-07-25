@@ -1,6 +1,6 @@
 <!--pages/events/events.wxml-->
 <home page-name="线下活动"></home>
-<view class="banner">
+<view class="banner" style="margin-top: {{navHight * 2}}rpx">
     <!--<swiper class="slider" circular bindchange="slider">-->
     <!--<swiper-item>-->
     <image lazy-load="true" class="slider-img" src="{{data.image_path}}"></image>

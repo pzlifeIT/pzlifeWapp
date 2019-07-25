@@ -1,6 +1,6 @@
 <!--pages/activity/buyvip/buyvip.wxml-->
 <home page-name="购买钻石会员"></home>
-<swiper class='pz-swiper' autoplay='true' indicator-dots="true" circular='true' >
+<swiper class='pz-swiper' autoplay='true' indicator-dots="true" circular='true'  style="margin-top: {{navHight * 2}}rpx">
 	<block wx:for="{{imgUrls}}">
 		<swiper-item>
 			<image lazy-load="true" src="{{item}}" class="slide-image" />

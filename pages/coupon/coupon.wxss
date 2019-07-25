@@ -10,7 +10,7 @@ page{
 	height: 86rpx;
 	background: #fff;
 	margin-bottom: 10rpx;
-	margin-top: 2rpx;
+  border-top: 1rpx solid #f7f7f7;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -149,6 +149,10 @@ page{
 	width: 206rpx;
     margin-left: 10rpx;
     position: relative;
+    max-width: 252rpx;
+	/*overflow: hidden;*/
+	/*text-overflow: ellipsis;*/
+	/*white-space: nowrap;*/
 }
 .left-bottom{
     color: #e61f18;
@@ -205,7 +209,7 @@ page{
 	color: #fff;
 	font-size: 28rpx;
 	writing-mode: vertical-lr;
-	padding:48rpx 0 0 60rpx ;
+	padding:50rpx 0 0 60rpx ;
 	border-radius: 0 20rpx 20rpx 0;
 	box-sizing: border-box;
     position: absolute;
@@ -280,4 +284,7 @@ max-width: 300rpx;
 .lo{
 	padding-right:46rpx;
 	/*box-sizing: border-box;*/
+}
+.noe{
+    padding-top: 71rpx;
 }

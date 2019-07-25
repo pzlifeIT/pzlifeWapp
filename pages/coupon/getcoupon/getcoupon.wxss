@@ -88,7 +88,7 @@ page{
 	color: #888;
 }
 .coupon-list{
-	margin-top: 141rpx;
+	margin-top: 182rpx;
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: column;
@@ -149,6 +149,10 @@ page{
 	width: 206rpx;
 	margin-left: 10rpx;
 	position: relative;
+    max-width: 252rpx;
+	/*overflow: hidden;*/
+	/*text-overflow: ellipsis;*/
+	/*white-space: nowrap;*/
 }
 .left-bottom{
 	color: #e61f18;
@@ -282,4 +286,7 @@ page{
 }
 .bcolor{
     background: #ff7749;
+}
+.lo{
+	padding-right: 46rpx;
 }

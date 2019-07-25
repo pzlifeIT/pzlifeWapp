@@ -1,6 +1,6 @@
 <!--pages/article/article.wxml-->
 <home page-name="文章列表"></home>
-<view class="msk">
+<view class="msk" style="margin-top: {{navHight * 2}}rpx">
     <block wx:for="{{list}}">
         <block wx:for="{{item}}">
             <view class="one-art" bindtap="goDetail" data-url="{{item.url}}">

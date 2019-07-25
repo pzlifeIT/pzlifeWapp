@@ -1,6 +1,6 @@
 <!--pages/lotto/lotto.wxml-->
 <home page-name="幸运九宫格"></home>
-<view class="banner">
+<view class="banner" style="margin-top: {{navHight * 2}}rpx">
     <swiper class="slider" circular bindchange="slider">
         <swiper-item>
             <image lazy-load="true" class="slider-img" src="{{imgHost}}12.jpg"></image>

@@ -1,6 +1,6 @@
 <!--pages/order/orderDetail/orderDetail.wxml-->
 <home  page-name="订单详情"></home>
-<view class="address">
+<view class="address" style="margin-top: {{navHight * 2}}rpx">
 	<view class="address-info">
 		<text class="info-text">收货人：</text>
 		<text class="info-name-phone">{{order_info.linkman}} {{order_info.linkphone}}</text>
@@ -33,6 +33,9 @@
   </view>
   	<view class="jf"  wx:if="{{user_identity != 1}}">
 		<text class="jf-text">钻石再补贴</text><text class="jf-num">￥{{order_info.commission}}</text>
+	</view>
+	<view class="jf">
+		<text class="jf-text">优惠金额</text><text class="jf-num">￥{{order_info.discount_money}}</text>
 	</view>
 	<view class="jf">
 		<text class="jf-text">支付方式：</text><text class="jf-num rest"><text wx:if="{{order_info.deduction_money > 0}}" >商券支付{{order_info.deduction_money}}元</text>   <text wx:if="{{order_info.third_money > 0}}" >微信支付{{order_info.third_money}}元</text></text>

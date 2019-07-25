@@ -22,7 +22,8 @@ Page({
         goods_name: '',
         winning_id: -1,
         log: [],
-        logAll: []
+        logAll: [],
+        navHight:app.globalData.topHeadHeight
     },
     getLuckGood: function () {
         let that = this

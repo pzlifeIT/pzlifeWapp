@@ -1,14 +1,14 @@
 <!--pages/coupon/coupon.wxml-->
 <home page-name="领取优惠券"></home>
-<view class="coupon-list" wx:if="{{coupon.length > 0}}">
+<view class="coupon-list" style="margin-top: {{navHight * 2}}rpx" wx:if="{{coupon.length > 0}}">
     <block wx:for="{{coupon}}">
         <block wx:for="{{item}}">
             <view class="coupon">
                 <view class="left">
                     <view class="left-top">
-                        <view class="lt-left">
-                            <text class="price">{{item.price}}</text>
-                            <text class="symbol">￥</text>
+                        <view class="lt-left {{item.price >= 100 ? 'lo' : ''}}">
+                            <text class="price {{item.is_use == 1 ? 'used' : ''}}">{{item.price}}</text>
+                            <text class="symbol {{item.is_use == 1 ? 'used' : ''}}">￥</text>
                         </view>
                         <view class="lt-mid"></view>
                         <view class="lt-right">

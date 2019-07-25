@@ -165,9 +165,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 19,
 					"name": "支付结果",
-					"pathName": "pages/paystatus/paystatus",
+					"pathName": "pages/activity/buyvip/buyvip",
 					"query": "",
 					"scene": null
 				},
@@ -182,7 +182,7 @@
 					"id": 21,
 					"name": "领券中心",
 					"pathName": "pages/coupon/getcoupon/getcoupon",
-					"query": "scene=id%3D30",
+					"query": "scene=id%3D23",
 					"scene": null
 				},
 				{
@@ -357,7 +357,7 @@
 					"id": 46,
 					"name": "须知",
 					"pathName": "pages/my/notice/notice",
-					"query": "iden=2",
+					"query": "iden=3",
 					"scene": null
 				},
 				{
@@ -540,7 +540,7 @@
 					"id": 72,
 					"name": "升级须知",
 					"pathName": "pages/notice/notice",
-					"query": "scene=MMEQME",
+					"query": "scene=EE",
 					"scene": 1011
 				},
 				{

@@ -10,7 +10,8 @@ Page({
         ident: 0,
         refe_type: 0,
         parent_id: '',
-        title:""
+        title:"",
+        navHight:app.globalData.topHeadHeight
     },
 
     /**

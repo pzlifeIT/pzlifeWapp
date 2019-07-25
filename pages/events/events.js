@@ -10,7 +10,8 @@ Page({
         num: 1,
         data: {},
         scene: {},
-        enScene: ''
+        enScene: '',
+        navHight:app.globalData.topHeadHeight
     },
 
     /**

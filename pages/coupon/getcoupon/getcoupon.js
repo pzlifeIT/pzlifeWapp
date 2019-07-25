@@ -12,7 +12,8 @@ Page({
         scene: {},
         page: 1,
         page_num: 10,
-        reach: false
+        reach: false,
+        navHight:app.globalData.topHeadHeight
     },
     goUse: function (e) {
         let type = e.currentTarget.dataset.urltype;
@@ -82,7 +83,7 @@ Page({
         app.wxrequest({
             url: "user/gethdcoupon",
             data: {
-                coupon_hd_id: that.data.scene.id,
+                coupon_hd_id: that.data.scene.id || 0,
                 page: that.data.page || 1,
                 page_num: that.data.page_num || 10
             },
