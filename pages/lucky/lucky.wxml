@@ -1,6 +1,6 @@
 <!--pages/lucky/lucky.wxml-->
 <home  page-name="幸运转转转"></home>
-<view class="lucky {{bounced?'ovhidden':''}}">
+<view class="lucky {{bounced?'ovhidden':''}}" style="margin-top: {{navHight * 2}}rpx">
 <view class="dial">
   <image  class="dialBack" lazy-load="{{true}}" src="{{imgHost}}dialBack.png" alt="" />
   <navigator url="/pages/lucky/rule/rule" class="rule" >抽奖规则说明</navigator>

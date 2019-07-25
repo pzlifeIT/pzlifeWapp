@@ -22,7 +22,8 @@ Page({
         bounced_text: '',
         isrotat: false,
         isExchange: false,
-        exchangeIndex: 0
+        exchangeIndex: 0,
+        navHight: app.globalData.topHeadHeight
     },
 
     /**
@@ -32,6 +33,7 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
+        console.log(this.data.navHight)
         this.getLuckGoods()
     },
     zhuanpan: function(n) {
