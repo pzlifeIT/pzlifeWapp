@@ -536,6 +536,9 @@ page {
     background-color: #ff6fac;
     border-radius: 18rpx;
     color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     z-index: 2;
 }
 
