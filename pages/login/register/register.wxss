@@ -18,8 +18,8 @@ page{
 	margin-bottom: 100rpx;
 }
 image{
-	width: 266rpx;
-	height: 122rpx;
+	width: 204rpx;
+	height: 204rpx;
 }
 .phone{
 	width: 710rpx;

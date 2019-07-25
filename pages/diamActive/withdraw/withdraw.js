@@ -13,16 +13,16 @@ Page({
         invoice: 0,
         disabled: true,
         money: "",
-        has_invoice:0.1,
-        no_invoice:0.06,
-        trueMoney:0,
-        commission:0.00
+        has_invoice: 0.1,
+        no_invoice: 0.06,
+        trueMoney: 0,
+        commission: 0.00
     },
     clear: function () {
         console.log(123)
         this.setData({
             money: '',
-            trueMoney:0
+            trueMoney: 0
         })
     },
     /**
@@ -33,7 +33,7 @@ Page({
             cardInfo = that.data.cardInfo,
             status = this.data.invoice,
             money = parseFloat(this.data.money);
-            money = Math.floor( money* 100) / 100
+        money = Math.floor(money * 100) / 100
 
         console.log(that.data.money)
         console.log(that.data.userInfo.bounty)
@@ -44,9 +44,9 @@ Page({
             })
             return
         }
-        if (parseFloat(that.data.money) <= 0){
+        if (parseFloat(that.data.money) <= 0) {
             app.toast({
-                title:"提现金额不能为0"
+                title: "提现金额不能为0"
             })
             return
         }
@@ -85,11 +85,11 @@ Page({
                     app.toast({
                         title: "未查询到该银行卡"
                     })
-                }else if (res == 3009) {
+                } else if (res == 3009) {
                     app.toast({
                         title: "错误代码:3009,请联系客服"
                     })
-                }else if (res == 3008) {
+                } else if (res == 3008) {
                     app.toast({
                         title: "该银行卡暂不可用"
                     })
@@ -107,14 +107,14 @@ Page({
             return
         }
         let money = parseFloat(e.detail.value)
-            money = Math.floor(money * 100) / 100
+        money = Math.floor(money * 100) / 100
         this.setData({
             money: e.detail.value,
-            trueMoney:money
+            trueMoney: money
         })
         if (e.detail.value == 0 || e.detail.value == '') {
             this.setData({
-                trueMoney:0
+                trueMoney: 0
             })
         }
         if (parseFloat(e.detail.value) > parseFloat(this.data.commission)) {
@@ -143,7 +143,7 @@ Page({
             url: "selectCard/selectCard"
         })
     },
-    getUserInfo: function() {
+    getUserInfo: function () {
         let that = this
         app.wxrequest({
             url: "user/getuser",
@@ -207,6 +207,6 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return app.share()
     }
 })

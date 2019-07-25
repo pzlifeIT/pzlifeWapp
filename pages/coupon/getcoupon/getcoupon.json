@@ -1,6 +1,7 @@
 {
-  "usingComponents": {},
-	"navigationBarTitleText": "领券中心",
-	"enablePullDownRefresh":true,
-	"backgroundColor": "#f0145a"
+	"usingComponents": {
+		"home":"/components/home/home"
+	},
+	"navigationStyle": "custom",
+	"component":true
 }

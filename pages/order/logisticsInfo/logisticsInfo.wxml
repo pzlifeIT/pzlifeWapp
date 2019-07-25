@@ -30,3 +30,9 @@
 		</view>
 	</view>
 </view>
+<view class="exp-info" wx:else>
+	<view class="pop">
+		<image class="car" lazy-load src="{{imgHost}}car.png"></image>
+		<view class="text">暂无物流更新信息</view>
+	</view>
+</view>

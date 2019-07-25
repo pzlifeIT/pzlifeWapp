@@ -52,7 +52,6 @@ App({
         let that = this
         wx.getSystemInfo({
             success(res) {
-
                 that.globalData.topHeadHeight = res.statusBarHeight + 46;
             }
         })
@@ -270,15 +269,12 @@ App({
             }
             obj.data.con_id = that.globalData.con_id
         }
-        if (!obj.noloading) {
-            wx.showLoading({ title: '加载中' })
-        }
+        obj.noloading ? '' : wx.showLoading({ title: '加载中' })
+
         obj.host = obj.host || 1
-        if (obj.host == 2) {
-            url = config.payHost
-        } else {
-            url = config.apiHost
-        }
+
+        obj.host == 2 ? url = config.payHost : url = config.apiHost
+
         wx.request({
             url: url + obj.url,
             data: obj.data || {},
@@ -295,7 +291,6 @@ App({
                         typeof obj.success == 'function' ? obj.success(result) : ''
                     } else {
                         if (result.code == 5000) {
-                            if (obj.nologin) return
                             that.login()
                         } else {
                             typeof obj.error == 'function' ? obj.error(result.code) : ''

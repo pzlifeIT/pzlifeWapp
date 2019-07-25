@@ -37,7 +37,7 @@ Page({
                         list: list,
                         no_bonus: res.no_bonus,
                         had_bonus: res.had_bonus,
-                        page: that.page + 1
+                        page: that.data.page + 1
                     })
                 }
             },

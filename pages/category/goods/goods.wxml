@@ -1,6 +1,6 @@
 <!--pages/category/goods/goods.wxml-->
 <home page-name="{{sub_name}}"></home>
-<view class='goods'>
+<view class='goods' style="margin-top: {{navHight * 2}}rpx">
     <block wx:for='{{goodsList}}'>
         <navigator url='/pages/goods/detail?goodid={{item.id}}' wx:for='{{item}}' wx:key='{{item.id}}'>
             <view class='one_goods'>
@@ -10,7 +10,10 @@
                 <text class='title'>{{item.goods_name}}</text>
                 <text class='subtitle'>{{item.subtitle}}</text>
                 <text class='price'>￥{{item.min_retail_price}}</text>
-                <text class="vipprice">钻石再补贴 {{item.min_brokerage}}</text>
+                <view class='pr'>
+                <text class="vipprice">钻石再补贴</text> {{item.min_brokerage}}
+                </view>
+                
             </view>
         </navigator>
     </block>

@@ -14,6 +14,9 @@ Page({
      */
     onLoad: function (options) {
         this.getUserQrcode()
+        wx.setNavigationBarTitle({
+            title:"创业店主邀请码"
+        })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -51,48 +54,6 @@ Page({
             urls: [img]
         })
     },
-    // saveImg: function (e) {
-    //     console.log(e)
-    //     let img = e.currentTarget.dataset.img;
-    //     wx.authorize({
-    //         scope: "scope.writePhotosAlbum",
-    //         success(res) {
-    //             console.log(res)
-    //             console.log("授权了")
-    //             wx.downloadFile({
-    //                 url: img,
-    //                 success(res) {
-    //                     console.log("下载成功")
-    //                     wx.saveImageToPhotosAlbum({
-    //                         filePath:res.tempFilePath,
-    //                         success(res){
-    //                             console.log("保存成功")
-    //                             app.toast({
-    //                                 title:"保存成功，请进入相册查看"
-    //                             })
-    //                         }
-    //                     })
-    //                 }
-    //             })
-    //         },
-    //         fail(res) {
-    //             console.log(res)
-    //             app.modal({
-    //                 content: "您未授权保存到相册，请点击确定打开权限",
-    //                 success(res) {
-    //                     wx.openSetting({
-    //                         success(res){
-    //                             app.toast({
-    //                                 title: "请再次长按图片保存"
-    //                             })
-    //                         }
-    //                     })
-    //                 }
-    //             })
-    //
-    //         }
-    //     })
-    // },
     /**
      * 生命周期函数--监听页面显示
      */
@@ -125,13 +86,6 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
 
     }
 })

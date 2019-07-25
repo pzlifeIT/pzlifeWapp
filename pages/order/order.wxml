@@ -1,7 +1,7 @@
 <!--pages/order/order.wxml-->
 <home  page-name="我的订单"></home>
-<view class="order">
-    <view class="or-header">
+<view class="order" style="margin-top: {{navHight * 2}}rpx">
+    <view class="or-header" style="top:{{navHight * 2}}rpx">
         <view class="or-head-li {{status == ''?'active':''}}" bindtap="headtap" data-num="">全部</view>
         <view class="or-head-li {{status == 1?'active':''}}" bindtap="headtap" data-num="1">待付款</view>
         <view class="or-head-li {{status == 4?'active':''}}" bindtap="headtap" data-num="4">待发货</view>
@@ -59,6 +59,10 @@
             <view class="jf" wx:if="{{user_identity != 1}}">
                 <text class="jf-text">钻石再补贴</text>
                 <text class="jf-num">￥{{item1.commission}}</text>
+            </view>
+            <view class="jf">
+                <text class="jf-text">优惠金额</text>
+                <text class="jf-num">￥{{item1.discount_money}}</text>
             </view>
             <view class="or-footer">
                 <view class="footer-left">

@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "幸运九宫格"
+  "usingComponents": {
+    "home":"/components/home/home"
+  },
+  "navigationStyle": "custom",
+  "component":true
 }

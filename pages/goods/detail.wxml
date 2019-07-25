@@ -1,6 +1,6 @@
 <!-- pages/goods/detail.wxml -->
 <home  page-name="商品详情"></home>
-<view class="detail">
+<view class="detail" style="margin-top: {{navHight * 2}}rpx">
     <view class="detail-swiper">
         <swiper autoplay='true' interval='3000' bindchange="changeSwiper" circular='true'>
             <block>
@@ -177,28 +177,29 @@
             </view>
         </view>
     </view>
-    <!-- 底部固定区域 -->
-    <view class='footer'>
-        <navigator class='home' url="../index/index" open-type="switchTab">
-            <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_03.png"/>
-            <text class="ft-text">首页</text>
-        </navigator>
-        <view class='kefu' bindtap="call">
-            <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_05.png"/>
-            <text class="ft-text">客服</text>
+
+</view>
+<!-- 底部固定区域 -->
+<view class='footer'>
+    <navigator class='home' url="../index/index" open-type="switchTab">
+        <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_03.png"/>
+        <text class="ft-text">首页</text>
+    </navigator>
+    <view class='kefu' bindtap="call">
+        <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_05.png"/>
+        <text class="ft-text">客服</text>
+    </view>
+    <navigator url="../cart/cart" open-type="switchTab">
+        <view class='cart'>
+            <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_07.png"/>
+            <text class="ft-text">购物车</text>
+            <text class="cartNum" wx:if="{{cartNum > 0}}">{{cartNum}}</text>
         </view>
-        <navigator url="../cart/cart" open-type="switchTab">
-            <view class='cart'>
-                <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_07.png"/>
-                <text class="ft-text">购物车</text>
-                <text class="cartNum" wx:if="{{cartNum > 0}}">{{cartNum}}</text>
-            </view>
-        </navigator>
-        <view bindtap="buyGood" class='buy'>
-            <text>立即购买</text>
-        </view>
-        <view bindtap="joinCart" class='join_cart'>
-            <text>加入购物车</text>
-        </view>
+    </navigator>
+    <view bindtap="buyGood" class='buy'>
+        <text>立即购买</text>
+    </view>
+    <view bindtap="joinCart" class='join_cart'>
+        <text>加入购物车</text>
     </view>
 </view>

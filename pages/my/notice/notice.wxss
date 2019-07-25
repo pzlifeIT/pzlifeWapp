@@ -41,7 +41,7 @@ image{
 }
 .h-footer{
     width: 750rpx;
-    height: 1379rpx;
+    height: 1822rpx;
 }
 .c-shang{
     width: 750rpx;
@@ -57,7 +57,7 @@ image{
 }
 .c-bottom{
     width: 750rpx;
-    height: 994rpx;
+    height: 1361rpx;
 }
 .footer{
     width: 750rpx;

@@ -20,7 +20,7 @@ Page({
     /**
      * 全选
      */
-    selectAll: function() {
+    selectAll: function () {
         let valid = this.data.valid,
             selectAll = !this.data.selectAll
         for (let i = 0; i < valid.length; i++) {
@@ -41,7 +41,7 @@ Page({
     /**
      * 选择店铺
      */
-    selectShop: function(e) {
+    selectShop: function (e) {
         let valid = e.currentTarget.dataset.valid,
             validIndex = e.currentTarget.dataset.validIndex,
             selectShop = !valid[validIndex].selectStatus,
@@ -70,7 +70,7 @@ Page({
     /**
      * 选择商品
      */
-    selectGoods: function(e) {
+    selectGoods: function (e) {
         let goodsIndex = e.currentTarget.dataset.goodsIndex,
             goods = e.currentTarget.dataset.goods,
             selectStatus = !goods[goodsIndex].selectStatus,
@@ -111,7 +111,7 @@ Page({
     /**
      * 计算总价
      */
-    getTotal: function(valid) {
+    getTotal: function (valid) {
         // valid = this.data.valid,
         let total = 0
         for (let i = 0; i < valid.length; i++) {
@@ -128,7 +128,7 @@ Page({
         })
     },
 
-    jian: function(e) {
+    jian: function (e) {
         let that = this
         const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标
         let goods = e.currentTarget.dataset.goods, //商品数据
@@ -167,7 +167,7 @@ Page({
                 });
                 that.getTotal(valid)
                 app.setCartNum()
-                    // that.getStorage()
+                // that.getStorage()
             },
             error(res) {
                 that.setData({
@@ -177,10 +177,16 @@ Page({
                     app.toast({
                         title: "con_id错误"
                     })
-                } else if (res == 3002) {
-                    app.toast({
-                        title: "con_id错误"
-                    })
+                } else if (res == 3005) {
+                    app.toast({title: "该商品为钻石会员及以上身份专享"})
+                } else if (res == 3006) {
+                    app.toast({title: "库存不足"})
+                } else if (res == 3007) {
+                    app.toast({title: "该商品为创业店主及以上身份专享"})
+                } else if (res == 3008) {
+                    app.toast({title: "该商品为合伙人及以上身份专享"})
+                } else {
+                    app.toast({title: "错误码：" + res})
                 }
             },
             fail(res) {
@@ -190,7 +196,7 @@ Page({
             }
         })
     },
-    jia: function(e) {
+    jia: function (e) {
         let that = this
         const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标
         let goods = e.currentTarget.dataset.goods, //商品数据
@@ -202,8 +208,8 @@ Page({
             validIndex = e.currentTarget.dataset.validIndex, //有效商品下标
             stock = goods[goodsIndex].stock,
             brokerage = goods[goodsIndex].brokerage
-            // console.log(e)
-            // 		return
+        // console.log(e)
+        // 		return
         if (num >= stock) {
             app.toast({
                 title: "库存不足"
@@ -235,24 +241,26 @@ Page({
                 });
                 that.getTotal(valid)
                 app.setCartNum()
-                    // that.getStorage()
+                // that.getStorage()
             },
             error(res) {
                 that.setData({
                     noClick: false
                 });
-                if (res == 3000) {
-                    app.toast({
-                        title: "未获取到数据"
-                    })
-                } else if (res == 3001) {
+                if (res == 3001) {
                     app.toast({
                         title: "con_id错误"
                     })
-                } else if (res == 3002) {
-                    app.toast({
-                        title: "缺少参数"
-                    })
+                } else if (res == 3005) {
+                    app.toast({title: "该商品为钻石会员及以上身份专享"})
+                } else if (res == 3006) {
+                    app.toast({title: "库存不足"})
+                } else if (res == 3007) {
+                    app.toast({title: "该商品为创业店主及以上身份专享"})
+                } else if (res == 3008) {
+                    app.toast({title: "该商品为合伙人及以上身份专享"})
+                } else {
+                    app.toast({title: "错误码：" + res})
                 }
             },
             fail(res) {
@@ -263,7 +271,7 @@ Page({
         })
 
     },
-    del: function(e) {
+    del: function (e) {
         console.log(e)
         let goods = e.currentTarget.dataset.goods,
             goodsIndex = e.currentTarget.dataset.goodsIndex,
@@ -275,7 +283,7 @@ Page({
             shop_id: shop_id
         })
     },
-    confirmDel: function() {
+    confirmDel: function () {
         let con_id = this.data.con_id,
             sku_id = this.data.sku_id,
             shop_id = this.data.shop_id,
@@ -305,38 +313,38 @@ Page({
             }
         })
     },
-    preventTouchMove: function(e) {
+    preventTouchMove: function (e) {
         //弹出层防止界面滑动
     },
-    hidemask: function(e) {
+    hidemask: function (e) {
         this.setData({
             mask: false
         })
     },
-    none: function(e) {
+    none: function (e) {
 
     },
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
-                imgHost: app.globalData.host.imgHost
-            })
-            // this.getCartGoodsList()
-            // this.getStorage()
+            imgHost: app.globalData.host.imgHost
+        })
+        // this.getCartGoodsList()
+        // this.getStorage()
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
     /**
      * 去结算
      */
-    buyGoods: function() {
+    buyGoods: function () {
         let valid = this.data.valid,
             len = valid.length,
             len1, x, y, skus = ''
@@ -363,7 +371,7 @@ Page({
     /**
      * 添加选择状态字段
      */
-    addText: function(data) {
+    addText: function (data) {
         for (let i = 0; i < data.length; i++) {
             data[i].selectStatus = true
             for (let j = 0; j < data[i].goods.length; j++) {
@@ -372,7 +380,7 @@ Page({
         }
         return data
     },
-    getCartGoodsList: function(con_id) {
+    getCartGoodsList: function (con_id) {
         let that = this
         app.wxrequest({
             url: "cart/getUserCart",
@@ -416,7 +424,7 @@ Page({
     /**
      * 获取con_id
      */
-    getStorage: function() {
+    getStorage: function () {
         let that = this
         wx.getStorage({
             key: "con_id",
@@ -447,7 +455,7 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
         this.getStorage()
         if (app.globalData.updateNum) {
             app.setCartNum()
@@ -460,35 +468,35 @@ Page({
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
         let that = this,
             share = app.share({
                 title: "购物车",

@@ -10,7 +10,8 @@ Page({
         ident: 0,
         refe_type: 0,
         parent_id: '',
-        title:""
+        title:"",
+        navHight:app.globalData.topHeadHeight
     },
 
     /**
@@ -88,9 +89,15 @@ Page({
             success(res) {
                 app.toast({
                     title: "升级成功！"
-                })
+                });
+                setTimeout(function () {
+                    wx.switchTab({
+                        url:"/pages/my/my"
+                    })
+                },1000)
             },
             error(res) {
+                console.log(res)
                 let text = ''
                 switch (parseInt(res)) {
                     case 3001:
@@ -115,7 +122,7 @@ Page({
                         text = '正在冷却期内无法升级';
                         break;
                     default:
-                        text = '错误码：' + res
+                        text = '错误码：' + parseInt(res)
                 }
                 app.toast({title: text})
             }

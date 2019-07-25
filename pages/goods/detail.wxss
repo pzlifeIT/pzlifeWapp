@@ -3,7 +3,7 @@
 page {
     background: #f7f7f7;
     /* height: 100%; */
-    overflow: auto;
+    /* overflow: auto; */
     overflow-scrolling: touch;
     -webkit-overflow-scrolling: touch;
 }
@@ -19,6 +19,7 @@ page {
     height: 100%;
     overflow: auto;
     margin-top: 140rpx;
+    /* margin-bottom: 100rpx; */
 }
 
 swiper {
@@ -630,9 +631,10 @@ font-size: 28rpx;
 }
 
 .re-one {
-    width: 226rpx;
+    width: 232rpx;
     /*height: 309rpx;*/
     display: inline-block;
+    margin-right: 20rpx;
 }
 
 .re-one image {

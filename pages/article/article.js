@@ -9,7 +9,8 @@ Page({
         list: [],
         page: 1,
         page_num: 10,
-        reach: true
+        reach: true,
+        navHight:app.globalData.topHeadHeight
     },
     getArticle() {
         let that = this

@@ -5,6 +5,7 @@ page{
 .banner{
     width: 750rpx;
     height: 240rpx;
+    margin-top: 140rpx;
 }
 .slider,.slider-img{
     width: 100%;

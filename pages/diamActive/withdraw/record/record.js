@@ -8,10 +8,10 @@ Page({
     data: {
         div: 1,
         imgHost: "",
-        reach:true,
-        page:1,
-        pageNum:10,
-        list:[]
+        reach: true,
+        page: 1,
+        pageNum: 10,
+        list: []
     },
     getRecord: function () {
         let that = this
@@ -41,12 +41,12 @@ Page({
             }
         })
     },
-    dispose:function(data){
-        for (let i = 0;i<data.length;i++){
-            data[i].bank_card = data[i].bank_card.substring(15,19)
+    dispose: function (data) {
+        for (let i = 0; i < data.length; i++) {
+            data[i].bank_card = data[i].bank_card.substring(15, 19)
         }
         // console.log(data)
-    },    /**
+    }, /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
@@ -55,20 +55,20 @@ Page({
         })
         this.getRecord()
     },
-    gomy:function(){
-      wx.switchTab({
-          url:"/pages/my/my"
-      })
+    gomy: function () {
+        wx.switchTab({
+            url: "/pages/my/my"
+        })
     },
-    gocardbag:function(){
-      wx.navigateTo({
-          url:"/pages/boss/cardBag/cardBag"
-      })
+    gocardbag: function () {
+        wx.navigateTo({
+            url: "/pages/boss/cardBag/cardBag"
+        })
     },
-    goDiamAc:function(){
-      wx.navigateTo({
-          url:"/pages/diamActive/diamActive"
-      })
+    goDiamAc: function () {
+        wx.navigateTo({
+            url: "/pages/diamActive/diamActive"
+        })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -109,10 +109,10 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-        if (!this.data.reach){
+        if (!this.data.reach) {
             return
         }
-            this.getRecord()
+        this.getRecord()
 
     },
 
@@ -120,6 +120,6 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return app.share()
     }
 })

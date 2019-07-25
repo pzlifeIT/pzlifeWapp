@@ -14,7 +14,8 @@ Page({
 		],
 		uid: "",
 		imgHost:'',
-		navH:0
+		navH:0,
+		navHight:app.globalData.topHeadHeight
 	},
 	button: function() {
 		let maks = !this.data.mask

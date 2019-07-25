@@ -10,7 +10,8 @@ Page({
         page: 1,
         reach: true,
         goodsList: [],
-        sub_name: ""
+        sub_name: "",
+        navHight:app.globalData.topHeadHeight
     },
 
     /**

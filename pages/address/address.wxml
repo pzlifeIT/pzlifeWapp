@@ -16,10 +16,10 @@
                 <view class="al-o-btn din fr">
                     <navigator url="installAddress/installAddress?id={{item.id}}" class="al-btn-amend din">
                         <!-- <view class="al-btn-amend din" bindtap="redirect" data-id="{{item.id}}" > -->
-                        <image lazy-load="true" src="{{imgHost}}xie.png"/>
+                        <image lazy-load="true" src="{{imgHost}}edit.png"/>
                         <!-- </view> -->
                     </navigator>
-                    <!-- <view  class="al-btn-del din"><image lazy-load="true" src="http://pnkp5i8sb.bkt.clouddn.com/del.png" /></view> -->
+                     <view bindtap="delete"  class="al-btn-del din"><image lazy-load="true" src="{{imgHost}}delete.png" /></view>
                 </view>
             </view>
         </view>

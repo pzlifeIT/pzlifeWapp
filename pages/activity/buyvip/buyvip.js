@@ -17,7 +17,8 @@ Page({
         uid: "",
         ident: 1,
         imgHost: '',
-        navH: 0
+        navH: 0,
+        navHight:app.globalData.topHeadHeight
     },
     preventTouchMove: function() {
         //防止用户操作弹出层外界面

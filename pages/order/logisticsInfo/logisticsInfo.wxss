@@ -142,4 +142,19 @@ page{
 	left: 25rpx;
 	top: 10%;
 }
-
+.pop{
+	margin-top: 246rpx;
+}
+.car{
+	width: 237rpx;
+	height: 183rpx;
+}
+.text{
+	font-size: 28rpx;
+	font-family: "Microsoft YaHei";
+	color: rgb(136, 136, 136);
+	text-transform: uppercase;
+	line-height: 1.2;
+	margin-top: 30rpx;
+	text-align: center;
+}

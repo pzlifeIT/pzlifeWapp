@@ -17,7 +17,8 @@ Page({
         uid: "",
         imgHost: '',
         poptype: true,
-        navH:0
+        navH:0,
+        navHight:app.globalData.topHeadHeight
     },
     cha: function() {
         let isvip = !this.data.isvip

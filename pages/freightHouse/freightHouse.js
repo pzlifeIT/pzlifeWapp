@@ -60,7 +60,7 @@ Page({
         })
         this.getShopGoods()
     },
-    getShopGoods: function() {
+    getShopGoods: function () {
         let that = this
         app.wxrequest({
             url: 'shopmanage/getShopGoods',
@@ -70,7 +70,7 @@ Page({
                 page: that.data.page,
                 pagenum: 10
             },
-            success: function(res) {
+            success: function (res) {
                 if (res.goods_list.length < 10) {
                     that.setData({
                         reach: false
@@ -95,9 +95,9 @@ Page({
                 type: data.type,
                 goods_id: data.goods_id
             },
-            success: function(res) {
+            success: function (res) {
                 that.searchfinish()
-                app.toast({ title: '操作成功' })
+                app.toast({title: '操作成功'})
 
             }
         })
@@ -119,7 +119,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
@@ -128,42 +128,42 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
         this.getShopGoods()
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
         if (!this.data.reach) return
         this.getShopGoods()
     },
@@ -171,7 +171,7 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
-
+    onShareAppMessage: function () {
+        return app.share()
     }
 })

@@ -1,0 +1,43 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="coupon-list">
+    <block wx:for="{{list}}">
+        <view class="coupon">
+            <view class="left">
+                <view class="left-top">
+                    <view class="lt-left {{item.price >= 100 ? 'lo' : ''}}">
+                        <text class="price">{{item.price}}</text>
+                        <text class="symbol">￥</text>
+                    </view>
+                    <view class="lt-mid"></view>
+                    <view class="lt-right {{item.price >= 100 ? 'long' : ''}}">
+                        <view class="coupon-title" wx:if="{{item.level == 1}}">单品券</view>
+                        <view class="coupon-title" wx:if="{{item.level == 2}}">专题券</view>
+                        <view class="coupon-desc">{{item.title}}</view>
+                    </view>
+                </view>
+                <view class="left-bottom">
+                    有效期：{{item.create_time}}--{{item.end_time}}
+                </view>
+                <radio-group class="radio" bindchange="radio">
+                    <radio color="#53b23a" value="{{item.id}}-{{item.price}}"/>
+                </radio-group>
+            </view>
+        </view>
+    </block>
+    <view class="empty"></view>
+    <view class="footer">
+        <view class="no">
+            暂不使用优惠券
+            <radio-group class="radio no-radio" bindchange="radio">
+                <radio color="#53b23a" value="-"/>
+            </radio-group>
+        </view>
+    </view>
+</view>
+<!-- 无优惠券 -->
+<view class="not" wx:if="{{coupon.length == 0}}">
+    <view class="not-coupon">
+        <image lazy-load="true" src="{{imgHost}}not.png"></image>
+        <view class="not-text">暂无优惠券</view>
+    </view>
+</view>

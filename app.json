@@ -87,7 +87,8 @@
         "pages/lucky/lucky",
         "pages/lucky/getLuckyGood/getLuckyGood",
         "pages/lucky/myPrize/myPrize",
-        "pages/lucky/rule/rule"
+        "pages/lucky/rule/rule",
+        "pages/comfirOrder/selectCoupon/selectCoupon"
     ],
     "window": {
         "backgroundTextStyle": "dark",
