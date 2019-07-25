@@ -81,6 +81,9 @@ Page({
                 })
             },
             error: code => {
+                this.setData({
+                    isrotat: false
+                })
                 if (code == 3004) {
                     app.toast({ title: '奖品内容变更,将自动刷新' });
                     setTimeout(() => {
@@ -95,6 +98,11 @@ Page({
                     3008: '奖品已全部抽完'
                 }
                 app.toast({ title: err[code] || '意料之外的错误' });
+            },
+            fail: () => {
+                this.setData({
+                    isrotat: false
+                })
             }
         })
     },
@@ -136,7 +144,7 @@ Page({
                     General_debris: res.General_debris || {}
                 })
             },
-            error(code) {
+            error() {
                 app.toast({ title: '意料之外的错误' });
             }
         })
@@ -174,13 +182,21 @@ Page({
                     isExchange: false
                 })
             },
-            error(code) {
+            error: code => {
+                this.setData({
+                    isExchange: false
+                })
                 let err = {
                     3003: '您不具有该碎片',
                     3004: '您暂时无法兑换该碎片',
                     3005: '通用碎片数量不足'
                 }
                 app.toast({ title: err[code] || '意料之外的错误' });
+            },
+            fail: () => {
+                this.setData({
+                    isExchange: false
+                })
             }
         })
     },
