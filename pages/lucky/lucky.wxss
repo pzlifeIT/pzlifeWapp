@@ -28,6 +28,7 @@ page::-webkit-scrollbar {
     position: relative;
     width: 750rpx;
     height: auto;
+    min-height: 1240rpx;
     overflow: auto;
 }
 

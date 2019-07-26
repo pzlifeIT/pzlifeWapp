@@ -7,20 +7,20 @@
   <navigator url="/pages/lucky/myPrize/myPrize" class="wy-prize" >我抽的奖品></navigator>
   
   <view class="wrapper" >
-    <view class="marquee" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}}"  ></view>
+    <view class="marquee" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}}" wx:key="*this"  ></view>
     <view class="panel " >
-      <view wx:for="{{list}}"  class="sector"></view>
+      <view wx:for="{{list}}" wx:key="*this"  class="sector"></view>
       </view>
     <view class="panel-within ">
-      <view  wx:for="{{list}}" class="sector"></view>
+      <view  wx:for="{{list}}" wx:key="*this" class="sector"></view>
     </view> 
     <view class="goodsList" >
-      <view wx:for="{{goodList}}" class="li">
+      <view wx:for="{{goodList}}" wx:key="*this" class="li">
         <text class="gl-title" >{{item.title}}</text>
         <text wx:if="{{item.debris > 1}}" >碎片1个</text>
         <text wx:if="{{item.kind === 4}}" >{{item.relevance}}积分</text>
         <image class="panel-img" lazy-load="{{true}}" src="{{item.image}}" />
-      </view>
+      </view> 
     </view>
     <view class="ring" ></view>
     <view class="Pointer"  animation="{{animation}}" ></view>
@@ -29,7 +29,7 @@
   <view class="debris-box">
     <view class="debris-header" >集满任意商品碎片，即可包邮到家</view>
     <view class="debris-list" >
-      <view class="debris-li fl" wx:for="{{userHdLucky}}" >
+      <view class="debris-li fl" wx:for="{{userHdLucky}}"  wx:key="*this">
         <image class="debris-img" lazy-load="{{true}}" src="{{item.image}}" />
         <text class="debris-val" wx:if="{{item.has < item.debris}}" >{{item.title}}</text>
         <text class="debris-val" data-id="{{item.id}}" bind:tap="synthetic" wx:else >合成</text>
