@@ -447,7 +447,7 @@ page::-webkit-scrollbar {
     content: '';
     display: block;
     top: -55rpx;
-    left: 79rpx;
+    left: 81rpx;
     width: 28rpx;
     height: 72rpx;
     border-width: 72rpx;
