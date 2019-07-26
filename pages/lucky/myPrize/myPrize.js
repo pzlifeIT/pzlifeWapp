@@ -98,15 +98,17 @@ Page({
             },
             success: () => {
                 app.toast({ title: tit });
-                this.setData({
-                    page: 1,
-                    winnings: [],
-                    reach: true,
-                    getId: '',
-                    notice: false
-                }, () => {
-                    this.getHdLucky()
-                })
+                setTimeout(() => {
+                    this.setData({
+                        page: 1,
+                        winnings: [],
+                        reach: true,
+                        getId: '',
+                        notice: false
+                    }, () => {
+                        this.getHdLucky()
+                    })
+                }, 1000)
             },
             error(code) {
                 let err = {
