@@ -62,20 +62,24 @@ Page({
         let json = {
             2: '规格:' + (j.goods_sku_name || ''),
             4: (j.relevance || '') + '积分',
-            5: '数量：X' + (j.debris || ''),
+            5: '数量：X' + j.debris,
         }
-        return j.need_debris === 1 ? json[j.kind] || '' : '数量：X' + j.debris || '';
+        console.log(json[5])
+        return j.need_debris === 1 ? json[j.kind] || '' : '数量：X' + j.debris;
     },
     getState(j = {}) {
         let n = 1,
-            json = { 1: 3, 2: 4, 3: 5, 5: 1 };
+            json = { 1: 3, 2: 4, 3: 5, 4: 7, 5: 1 };
         n = j.status === 1 && (j.need_debris === 1 ? json[j.kind] : 1);
         j.status === 2 && (n = 2);
         j.status === 3 && (n = 6);
         return n
     },
     getCoupons(e) {
-        this.receivePrize(e.currentTarget.dataset.id, '领取成功')
+        this.receivePrize(e.currentTarget.dataset.id, '领取成功,请前往个人中心优惠券查看')
+    },
+    getIntegral(e) {
+        this.receivePrize(e.currentTarget.dataset.id, '领取成功,请前往个人中心积分查看')
     },
     showNotice(e) {
         this.setData({

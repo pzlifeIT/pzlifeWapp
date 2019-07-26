@@ -8,10 +8,14 @@ page {
     background-color: #f7f7f7;
 }
 
+page::-webkit-scrollbar {
+    display: none;
+}
+
 .lucky {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: auto;
     background-color: #f7f7f7;
 }
@@ -334,6 +338,12 @@ page {
 .goodsList .li text {
     text-align: center;
     display: block;
+}
+
+.goodsList .li .gl-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .goodsList .li:nth-child(odd) {

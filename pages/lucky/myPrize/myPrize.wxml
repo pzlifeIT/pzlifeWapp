@@ -6,7 +6,7 @@
       <view class="mp-li-con din fl" >
           <text class="con-tit" >{{item.goods_name}}</text>
           <text class="con-size" >{{item.subTit}}</text>
-          <text class="con-time">{{item.create_time}}</text>
+          <text class="con-time">{{item.update_time || item.create_time}}</text>
       </view>
       <view class="mp-li-status din fl" >
           <view class="status-btn got" wx:if="{{item.state === 1}}">已获得</view>
@@ -15,6 +15,7 @@
           <navigator url="/pages/lucky/getLuckyGood/getLuckyGood?id={{item.id}}" class="status-btn look" wx:if="{{item.state === 4}}">去领取</navigator>
           <view class="status-btn look" data-id="{{item.id}}" bind:tap="showNotice" wx:if="{{item.state === 5}}">去领取</view>
           <view class="status-btn failure" wx:if="{{item.state === 6}}">已失效</view>
+          <view class="status-btn look" data-id="{{item.id}}" bind:tap="getIntegral" wx:if="{{item.state === 7}}">去领取</view>
       </view>
     </view>
   </view>
