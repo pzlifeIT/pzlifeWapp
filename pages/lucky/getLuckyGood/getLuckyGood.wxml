@@ -1,4 +1,4 @@
-<navigator url="/pages/comfirOrder/address/address" class='addres nullad' wx:if="{{siteid == ''}}" bindtap="selsite"  >
+<navigator url="/pages/comfirOrder/address/address" class='addres nullad' wx:if="{{siteid == ''}}"  >
   <view >
     <text class="ad-hint din" >你的收货地址为空，点击添加收货地址</text>
     <image lazy-load="true" class="jt" src="{{imgHost}}jt_18.png" />
