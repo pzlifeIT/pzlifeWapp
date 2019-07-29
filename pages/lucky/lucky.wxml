@@ -60,6 +60,7 @@
 <view class="bounced" wx:if="{{bounced}}">
   <view class="bouncedBack" bind:tap="cancelBounced" ></view>
   <view class="winning" wx:if="{{bounced_text === 'winning'}}">
+    <view class="wg-hide" bind:tap="cancelBounced"></view>
     <view class="wg-head">
       <text class="wg-head-text">中奖啦!</text>
       <view class="wg-ellipse-right" ></view>
