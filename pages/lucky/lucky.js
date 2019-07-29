@@ -18,12 +18,13 @@ Page({
         imgHost: '',
         luckyGood: {},
         syntheticGood: {},
-        bounced: false,
-        bounced_text: '',
+        bounced: true,
+        bounced_text: 'winning',
         isrotat: false,
         isExchange: false,
         exchangeIndex: 0,
-        navHight: app.globalData.topHeadHeight
+        navHight: app.globalData.topHeadHeight,
+        timekey: 0
     },
 
     /**
@@ -71,7 +72,7 @@ Page({
             url: "OfflineActivities/luckydraw",
             data: {
                 hd_id: this.data.hd_id,
-                timekey: new Date().getTime()
+                timekey: this.data.timekey
             },
             success: res => {
                 this.setData({
@@ -122,7 +123,8 @@ Page({
             success: res => {
                 this.setData({
                     hd_id: res.hd_id,
-                    goodList: res.LuckGoods
+                    goodList: res.LuckGoods,
+                    timekey: new Date().getTime()
                 })
             },
             error() {

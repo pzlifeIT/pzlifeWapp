@@ -68,7 +68,10 @@
     <view class="wg-hint" >恭喜你，获得</view>
     <view class="wg-prize" wx:if="{{luckyGood.need_debris > 1}}" >{{luckyGood.goods_name}}碎片1个！</view>
     <view class="wg-prize" wx:else>{{luckyGood.goods_name}}</view>
-    <view class="wg-btn" bindtap="cancelBounced" >我知道了</view>
+    <view class="wg-btn-list">
+      <navigator url="/pages/index/index" open-type="switchTab"  class="wg-btn din" >去首页</navigator>
+      <navigator  url="/pages/lucky/myPrize/myPrize" class="wg-btn ml din" bindtap="cancelBounced" >去查看</navigator>
+    </view>
   </view>
   <view class="exchange" wx:if="{{bounced_text === 'exchange'}}">
     <view class="ec-head">通用碎片兑换</view>

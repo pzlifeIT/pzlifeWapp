@@ -705,16 +705,27 @@ page::-webkit-scrollbar {
     color: #7f7c7f;
 }
 
+.wg-btn-list {
+    display: flex;
+    margin-top: 20rpx;
+    justify-content: center;
+    align-items: center;
+}
+
 .wg-btn {
     width: 233rpx;
     height: 77rpx;
-    margin: 20rpx auto 0;
+    /* margin-left: 20rpx; */
     text-align: center;
     line-height: 77rpx;
     font-size: 39rpx;
     color: #fff;
     background-color: #fc4351;
     border-radius: 35rpx;
+}
+
+.wg-btn.ml {
+    margin-left: 20rpx;
 }
 
 .exchange {

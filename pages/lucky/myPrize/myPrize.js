@@ -71,7 +71,7 @@ Page({
         let n = 1,
             json = { 1: 3, 2: 4, 3: 5, 4: 7, 5: 1 };
         n = j.status === 1 && (j.need_debris === 1 ? json[j.kind] : 1);
-        j.status === 2 && (n = 2);
+        j.status === 2 && (n = j.kind === 5 ? 2 : 8);
         j.status === 3 && (n = 6);
         return n
     },
