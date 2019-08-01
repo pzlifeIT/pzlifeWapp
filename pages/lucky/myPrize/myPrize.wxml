@@ -1,0 +1,41 @@
+<!--pages/lucky/myPrize/myPrize.wxml-->
+<view class="my-prize" wx:if="{{winnings.length > 0}}" >
+  <view wx:for="{{winnings}}">
+    <view class="mp-li" wx:for="{{item}}"  >
+      <image class="mp-li-img din fl" lazy-load="{{true}}" src="{{item.image_path}}" />
+      <view class="mp-li-con din fl" >
+          <text class="con-tit" >{{item.goods_name}}</text>
+          <text class="con-size" >{{item.subTit}}</text>
+          <text class="con-time">{{item.create_time}}</text>
+      </view>
+      <view class="mp-li-status din fl" >
+          <view class="status-btn got" wx:if="{{item.state === 1}}">已获得</view>
+          <view class="status-btn got"  wx:if="{{item.state === 2}}" >已领取</view>
+          <view class="status-btn look" data-id="{{item.id}}" bind:tap="getCoupons" wx:if="{{item.state === 3}}">去领取</view>
+          <navigator url="/pages/lucky/getLuckyGood/getLuckyGood?id={{item.id}}" class="status-btn look" wx:if="{{item.state === 4}}">去领取</navigator>
+          <view class="status-btn look" data-id="{{item.id}}" bind:tap="showNotice" wx:if="{{item.state === 5}}">去领取</view>
+          <view class="status-btn failure" wx:if="{{item.state === 6}}">已失效</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="my-prize mp-no" wx:else>
+  <view >
+  <image class="mp-no-image" lazy-load="{{true}}"  src="{{imgHost}}prize.png" alt="" /></view>
+  <text class="mp-no-text">暂无中奖记录</text>
+  <navigator class="mp-no-btn" >前往大转盘活动</navigator>
+</view>
+
+<view class="pop p" catchtouchmove='preventTouchMove' wx:if="{{notice}}">
+    <view class="kg">
+        <scroll-view scroll-y class="notice">
+            <image class="img-top" lazy-load="true" src="{{imgHost}}domiboss_03.jpg"></image>
+            <image class="img-bottom" lazy-load="true" src="{{imgHost}}domiboss_05.jpg"></image>
+        </scroll-view>
+        <checkbox-group bindchange="change">
+            <view class="check">
+                <checkbox class="ch" value="1">同意</checkbox>
+            </view>
+        </checkbox-group>
+    </view>
+</view>

@@ -35,7 +35,6 @@ App({
     getWxRoute: function() {
         let pages = getCurrentPages(),
             prevpage = pages[pages.length - 1];
-        //如果当前页不是login页面，那就把当前页的路由存进全局变量
         if (prevpage.route.indexOf('/login') == -1) {
             this.globalData.routePage = prevpage.route
             this.globalData.wxoptions = ''
@@ -53,7 +52,6 @@ App({
         let that = this
         wx.getSystemInfo({
             success(res) {
-          
                 that.globalData.topHeadHeight = res.statusBarHeight + 46;
             }
         })
@@ -271,15 +269,12 @@ App({
             }
             obj.data.con_id = that.globalData.con_id
         }
-        if (!obj.noloading) {
-            wx.showLoading({ title: '加载中' })
-        }
+        obj.noloading ? '' : wx.showLoading({ title: '加载中' })
+
         obj.host = obj.host || 1
-        if (obj.host == 2) {
-            url = config.payHost
-        } else {
-            url = config.apiHost
-        }
+
+        obj.host == 2 ? url = config.payHost : url = config.apiHost
+
         wx.request({
             url: url + obj.url,
             data: obj.data || {},
@@ -296,7 +291,6 @@ App({
                         typeof obj.success == 'function' ? obj.success(result) : ''
                     } else {
                         if (result.code == 5000) {
-                            if (obj.nologin) return
                             that.login()
                         } else {
                             typeof obj.error == 'function' ? obj.error(result.code) : ''
@@ -386,7 +380,7 @@ App({
         if (opt.query.pid) {
             this.globalData.pid = opt.query.pid
         }
-       
+
         this.getconid()
         this.globalData.host = config
         this.getUserRead(this.globalData.pid)
@@ -396,7 +390,7 @@ App({
     disScene(scene) {
         let href = decodeURIComponent(scene),
             list = {};
-            console.log(href)
+        console.log(href)
         if (href.indexOf('&') != -1) {
             let arr = href.split('&'),
                 len = arr.length
@@ -414,7 +408,7 @@ App({
         }
         return list
     },
-    base64:function(str){
+    base64: function(str) {
         let keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
         let output = "";
         let chr1, chr2, chr3, enc1, enc2, enc3, enc4;
@@ -437,14 +431,14 @@ App({
         }
         return output;
     },
-    _utf8_encode:function(string){
-        string = string.replace(/\r\n/g,"\n");
+    _utf8_encode: function(string) {
+        string = string.replace(/\r\n/g, "\n");
         let utftext = "";
         for (let n = 0; n < string.length; n++) {
             let c = string.charCodeAt(n);
             if (c < 128) {
                 utftext += String.fromCharCode(c);
-            } else if((c > 127) && (c < 2048)) {
+            } else if ((c > 127) && (c < 2048)) {
                 utftext += String.fromCharCode((c >> 6) | 192);
                 utftext += String.fromCharCode((c & 63) | 128);
             } else {

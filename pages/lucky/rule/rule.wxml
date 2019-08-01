@@ -1,0 +1,19 @@
+<!--pages/lucky/rule/rule.wxml-->
+<home  page-name="抽奖活动规则："></home>
+<view class="rule" >
+  <view class="rule-headr" >抽奖活动规则：</view>
+  <view class="rule-li" data-index="1、" >每天登录即可参与抽奖,中奖率100%
+  </view>
+  <view class="rule-li" data-index="2、" >通用碎片可以通用于所有抽奖的任意奖品碎片,前提必须要有该奖品碎片1个以上;1个通用碎片兑换1个奖品碎片;
+  </view>
+  <view class="rule-li" data-index="3、" >碎片集满,点击碎片即可合成商品券,进行商品购物;点击通用碎片选择兑换的商品碎片。
+  </view>
+  <view class="rule-li" data-index="4、" >抽纸、酸奶、钻石会员、免费体检和宝宝天赋检测为碎片类奖品,只要集齐对应商品的碎片即可免费领取此商品,无需邮费等任何费用
+  </view>
+  <view class="rule-li" data-index="5、" >每天抽奖可大大增加抽中宝宝天赋检测的中奖几率哦
+  </view>
+  <view class="rule-li" data-index="6、" >若经举报或者平台技术监测发现用户存在作弊行为(包括但不限于洗钱、虚假交易、赌博、恶意套现、作弊等),则用户在本次活动中的资格将自动取消,已经获得的优惠券亦将自动失效,如已使用该优惠券消费,平台有权不发货并退款。若用户的作弊行为给其他用户、合作伙伴或平台造成损失,用户需要承担相应的法律责任
+  </view>
+  <view class="rule-li"  data-index="7、">免费体检和宝宝天赋检测,需要联系客服电话(同微信):15502123212,进行预约
+  </view>
+</view>

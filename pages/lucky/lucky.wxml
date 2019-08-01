@@ -1,0 +1,111 @@
+<!--pages/lucky/lucky.wxml-->
+<home  page-name="幸运转转转"></home>
+<view class="lucky {{bounced?'ovhidden':''}}">
+<view class="dial">
+  <image  class="dialBack" lazy-load="{{true}}" src="{{imgHost}}dialBack.png" alt="" />
+  <navigator url="/pages/lucky/rule/rule" class="rule" >抽奖规则说明</navigator>
+  <navigator url="/pages/lucky/myPrize/myPrize" class="wy-prize" >我抽的奖品></navigator>
+  
+  <view class="wrapper" >
+    <view class="marquee" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}}"  ></view>
+    <view class="panel " >
+      <view wx:for="{{list}}"  class="sector"></view>
+      </view>
+    <view class="panel-within ">
+      <view  wx:for="{{list}}" class="sector"></view>
+    </view> 
+    <view class="goodsList" >
+      <view wx:for="{{goodList}}" class="li">
+        <text >{{item.title}}</text>
+        <text wx:if="{{item.debris > 1}}" >碎片1个</text>
+        <text wx:if="{{item.kind === 4}}" >{{item.relevance}}积分</text>
+        <image class="panel-img" lazy-load="{{true}}" src="{{item.image}}" />
+      </view>
+    </view>
+    <view class="ring" ></view>
+    <view class="Pointer"  animation="{{animation}}" ></view>
+    <view class="btn" bindtap="luckydraw" ><text > {{btn}}</text></view>
+  </view>
+  <view class="debris-box">
+    <view class="debris-header" >集满任意商品碎片，即可包邮到家</view>
+    <view class="debris-list" >
+      <view class="debris-li fl" wx:for="{{userHdLucky}}" >
+        <image class="debris-img" lazy-load="{{true}}" src="{{item.image}}" />
+        <text class="debris-val" wx:if="{{item.has < item.debris}}" >{{item.title}}</text>
+        <text class="debris-val" data-id="{{item.id}}" bind:tap="synthetic" wx:else >合成</text>
+        <text class="debris-num">{{item.has}}/{{item.debris}}</text>
+      </view>
+      <view class="debris-li fl" wx:if="{{!!General_debris.id}}" bind:tap="showExchange"  >
+        <image class="debris-img" lazy-load="{{true}}" src="{{General_debris.image}}" />
+        <text class="debris-val" >{{General_debris.title}}</text>
+        <text class="debris-num">{{General_debris.has}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="hot-header"></view>
+<!-- <view class="hot-header">爆款专区</view> -->
+<!-- <view  class="hot-list">
+  <view class="hot-li" >
+    <image class="hot-img din fl" src="" /> 
+    <view class="hot-con din fl" >
+      <text class="hot-con-header" >大标题灰思宏购货够仪和大标题不要垂头丧气，因为显矮啊哈哈</text>
+      <text class="hot-money" >￥265.22</text>
+      <text class="hot-diamond din fl" >钻石再补贴</text>
+      <text class="hot-diamond-moeny din fl" >55.5</text>
+      <text class="hot-sales din fr" >销量: 99999+</text> 
+    </view>
+  </view>
+</view> -->
+<view class="bounced" wx:if="{{bounced}}">
+  <view class="bouncedBack" bind:tap="cancelBounced" ></view>
+  <view class="winning" wx:if="{{bounced_text === 'winning'}}">
+    <view class="wg-head">
+      <text class="wg-head-text">中奖啦!</text>
+      <view class="wg-ellipse-right" ></view>
+      <view class="wg-ellipse-left" ></view>
+    </view>
+    <view class="wg-hint" >恭喜你，获得</view>
+    <view class="wg-prize" wx:if="{{luckyGood.need_debris > 1}}" >{{luckyGood.goods_name}}碎片1个！</view>
+    <view class="wg-prize" wx:else>{{luckyGood.goods_name}}</view>
+    <view class="wg-btn" bindtap="cancelBounced" >我知道了</view>
+  </view>
+  <view class="exchange" wx:if="{{bounced_text === 'exchange'}}">
+    <view class="ec-head">通用碎片兑换</view>
+    <view class="ec-hint">把通用碎片兑换为：</view>
+    <view class="ex-list">
+      <view class="ec-li" wx:for="{{CanExchange}}" bind:tap="selExchange" data-index="{{index}}" >
+        <view class="ec-cos" wx:if="{{exchangeIndex !== index}}"></view>
+        <image class="ec-img" src="{{item.image}}" />
+        <text class="ec-text" >{{item.title}}</text>
+      </view>
+      
+    </view>
+    <view class="ec-btn" bind:tap="exchange">立即兑换</view>
+    <view class="ec-cancel" bind:tap="cancelBounced">取消</view>
+  </view>
+  <view class="ec-confirm" wx:if="{{false}}">
+    <view class="ec-hint2" >确认将通用碎片转化为</view>
+    <view class="ec-prize">抽纸商品碎片 x1？</view>
+     <view class="ec-btn">确认兑换</view>
+    <view class="ec-cancel">取消</view>
+  </view>
+  <view class="debris-compound" wx:if="{{bounced_text === 'dialcompound'}}">
+    <image class="dc-back" lazy-load="{{true}}" src="{{imgHost}}dialcompound.png" />
+    <view class="dc-content" >
+      <image class="dialleft fl" lazy-load="{{true}}" src="{{imgHost}}dialleft.png" />
+      <view class="dc-img din fl" >
+        <image lazy-load="{{true}}" src="{{syntheticGood.image}}" />
+      </view>
+      <view class="dc-info din fl">
+        <text class="dc-info-name" >{{syntheticGood.title}}</text>
+        <text class="dc-info-tit" >请前往我的奖品里面查看</text>
+      </view>
+      <image class="dialright fl" lazy-load="{{true}}" src="{{imgHost}}dialright.png" />
+      <view class="dc-operation din fl" >
+        <navigator url="/pages/lucky/myPrize/myPrize" class="dc-btn"  >查看</navigator>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

@@ -84,9 +84,13 @@
         "pages/notice/notice",
         "pages/article/article",
         "pages/article/detail/detail",
-        "pages/comfirOrder/selectCoupon/selectCoupon",
         "pages/circle/circle",
-        "pages/commission/commission"
+        "pages/commission/commission",
+        "pages/lucky/lucky",
+        "pages/lucky/getLuckyGood/getLuckyGood",
+        "pages/lucky/myPrize/myPrize",
+        "pages/lucky/rule/rule",
+        "pages/comfirOrder/selectCoupon/selectCoupon"
     ],
     "window": {
         "backgroundTextStyle": "dark",
