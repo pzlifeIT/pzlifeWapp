@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 21,
+			"current": 49,
 			"list": [
 				{
 					"id": 0,
@@ -555,6 +555,20 @@
 					"name": "选择优惠券",
 					"pathName": "pages/comfirOrder/selectCoupon/selectCoupon",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "chuangtye",
+					"pathName": "pages/circle/circle",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 76,
+					"name": "佣金收益",
+					"pathName": "pages/commission/commission",
+					"query": "etype=1",
 					"scene": null
 				}
 			]

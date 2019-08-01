@@ -55,7 +55,7 @@
 }
 .img-bottom{
     width: 700rpx;
-    height:1237rpx;
+    height:1310rpx;
     display: block;
 }
 .check{

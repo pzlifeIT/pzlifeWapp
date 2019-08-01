@@ -15,7 +15,11 @@ Page({
         yan: true,
         yan_all: true,
         progress: '',
-        couponNum:0
+        couponNum: 0,
+        yan1: true,
+        yan1_all: true,
+        no_price:0,
+        can_price:0
     },
     getTaskProgress: function () {
         let that = this
@@ -34,10 +38,22 @@ Page({
             yan_all: yanAll
         })
     },
+    yan1All: function () {
+        let yanAll = !this.data.yan1_all
+        this.setData({
+            yan1_all: yanAll
+        })
+    },
     yan: function () {
         let yan = !this.data.yan
         this.setData({
             yan: yan
+        })
+    },
+    yan1: function () {
+        let yan = !this.data.yan1
+        this.setData({
+            yan1: yan
         })
     },
     notice: function (e) {
@@ -195,7 +211,17 @@ Page({
             app.toast({title: "请先登录"})
         }
     },
-
+    gotocommiss: function (e) {
+        let etype = e.currentTarget.dataset.etype;
+        let hidden = e.currentTarget.dataset.hidden;
+        if (etype == 2 && this.data.userInfo.user_market < 2){
+            app.toast({title:"请先升级为永久兼职市场经理"})
+            return
+        }
+        wx.navigateTo({
+            url: "/pages/commission/commission?etype=" + etype+'&hidden='+hidden
+        })
+    },
 
     myQr: function () {
         if (this.data.con_id) {
@@ -353,7 +379,7 @@ Page({
     bountyWithdraw: function () {
         if (this.data.con_id) {
             wx.navigateTo({
-                url: "/pages/diamActive/withdraw/withdraw"
+                url: "/pages/boss/withdraw/withdraw"
             })
         } else {
             app.toast({
@@ -425,6 +451,11 @@ Page({
             })
         }
     },
+    goCircle:function(){
+      wx.navigateTo({
+          url:"/pages/circle/circle"
+      })
+    },
     buyDiam: function () {
         console.log(123)
         wx.switchTab({
@@ -452,7 +483,7 @@ Page({
             success(res) {
                 let num = that.disCoupon(res.data)
                 that.setData({
-                    couponNum:num
+                    couponNum: num
                 })
             }
         })
@@ -460,7 +491,7 @@ Page({
     disCoupon: function (data) {
         let arr = [];
         for (let i = 0; i < data.length; i++) {
-            if (data[i].is_use == 2){
+            if (data[i].is_use == 2) {
                 arr.push(data[i])
             }
         }
@@ -488,9 +519,22 @@ Page({
                 that.getBoss()
                 that.getTaskProgress()
                 that.getCountUserCoupon()
+                that.getMoney()
             }
         })
 
+    },
+    getMoney: function () {
+        let that = this
+        app.wxrequest({
+            url: "user/getUserBusinessMoneyTotal",
+            success(res) {
+                that.setData({
+                    no_price: res.no_price,
+                    can_price: res.can_price
+                })
+            }
+        })
     },
     /**
      * 生命周期函数--监听页面隐藏
@@ -519,6 +563,7 @@ Page({
             that.getBoss()
             that.getTaskProgress()
             that.getCountUserCoupon()
+            that.getMoney()
             wx.hideNavigationBarLoading() //完成停止加载
             wx.stopPullDownRefresh({}) //停止下拉刷新
         }, 1500);

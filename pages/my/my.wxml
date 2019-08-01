@@ -179,17 +179,7 @@
 <!-- 资产中心 -->
 <view class="userCost">
     <view class="cost-title">资产中心</view>
-    <view class="cost-line"
-          wx:if="{{userInfo.user_identity == 3 || userInfo.user_identity == 4 }}">
-        <!-- <view class="line-one" bindtap="goearn" data-earn="2" data-all="{{boss.bonus_all}}" data-entered="{{boss.bonus}}" data-enter="{{boss.no_bonus}}">
-                <view class="one-content">
-                    <view class="one-title">经营性收益余额
-                        <text>(元)</text>
-                    </view>
-                    <view class="one-price" wx:if="{{boss.bonus}}">{{boss.bonus}}</view>
-                    <view class="one-price" wx:else>0</view>
-                </view>
-            </view> -->
+    <view class="cost-line" wx:if="{{userInfo.user_identity == 3 || userInfo.user_identity == 4 }}">
         <view class="line-one wid50" bindtap="gototalcommiss" data-hidden="{{yan_all ? 1 : 2}}" data-ent="1">
             <view class="one-content">
                 <view class="one-title">
@@ -221,15 +211,39 @@
                 <view class="one-price">{{yan ? boss.commission : '*******'}}</view>
             </view>
         </view>
-        <!-- <view class="line-one"  bindtap="join">
-                <view class="one-content cont-no">
-                    <view class="one-title">招商代理金额
-                        <text>(元)</text>
+    </view>
+    <view class="cost-line" wx:if="{{userInfo.user_identity == 3}}">
+        <view class="line-one wid50" bindtap="gotocommiss" data-etype="1" data-hidden="{{yan1_all ? 1:2}}">
+            <view class="one-content">
+                <view class="one-title">
+                    可分佣收益
+                    <text>(元)</text>
+                    <view class="yan-d" wx:if="{{yan1_all}}" catchtap="yan1All">
+                        <image class="yan" lazy-load="true" src="{{imgHost}}eyes_black.png"></image>
                     </view>
-                    <view class="one-price" wx:if="{{boss.merchants}}">{{boss.merchants}}</view>
-                    <view class="one-price" wx:else>0</view>
+                    <view class="yan-d" wx:else catchtap="yan1All">
+                        <image class="yan" lazy-load="true" src="{{imgHost}}eyes_black_close.png"></image>
+                    </view>
                 </view>
-            </view> -->
+                <view class="one-price">{{yan1_all ? can_price : '*******'}}
+                </view>
+            </view>
+        </view>
+        <view class="line-one wid50" bindtap="gotocommiss" data-hidden="{{yan1 ? 1 : 2}}" data-etype=" 2">
+            <view class="one-content">
+                <view class="one-title">
+                    不可分佣收益
+                    <text>(元)</text>
+                    <view class="yan-d" catchtap="yan1" wx:if="{{yan1}}">
+                        <image class="yan" lazy-load="true" src="{{imgHost}}eyes_black.png"></image>
+                    </view>
+                    <view class="yan-d" catchtap="yan1" wx:else>
+                        <image class="yan" lazy-load="true" src="{{imgHost}}eyes_black_close.png"></image>
+                    </view>
+                </view>
+                <view class="one-price">{{yan1 ? no_price : '*******'}}</view>
+            </view>
+        </view>
     </view>
     <view class="cost-line">
         <view class="line-one" bindtap="money">
@@ -302,20 +316,24 @@
     </view>
 </view>
 <!-- 买主权益 -->
-<view class="userCost" wx:if="{{1 == 2}}">
+<view class="userCost" wx:if="{{userInfo.user_identity == 3}}">
     <view class="cost-title">买主权益</view>
     <view class="equity">
-        <view class="equity-one">
-            <image lazy-load="true" src="{{imgHost}}mzqy_03.png"></image>
-            <view class="equity-title">买主要求</view>
-        </view>
-        <view class="equity-one">
-            <image lazy-load="true" src="{{imgHost}}mzqy_05.png"></image>
-            <view class="equity-title">关注店铺</view>
-        </view>
-        <view class="equity-one last">
-            <image lazy-load="true" src="{{imgHost}}mzqy_07.png"></image>
-            <view class="equity-title">关注收藏</view>
+        <!--<view class="equity-one">-->
+            <!--<image lazy-load="true" src="{{imgHost}}mzqy_03.png"></image>-->
+            <!--<view class="equity-title">买主要求</view>-->
+        <!--</view>-->
+        <!--<view class="equity-one">-->
+            <!--<image lazy-load="true" src="{{imgHost}}mzqy_05.png"></image>-->
+            <!--<view class="equity-title">关注店铺</view>-->
+        <!--</view>-->
+        <!--<view class="equity-one last">-->
+            <!--<image lazy-load="true" src="{{imgHost}}mzqy_07.png"></image>-->
+            <!--<view class="equity-title">关注收藏</view>-->
+        <!--</view>-->
+        <view class="equity-one last" bindtap="goCircle">
+            <image lazy-load="true" src="{{imgHost}}ren.png"></image>
+            <view class="equity-title">创业圈</view>
         </view>
     </view>
 </view>
@@ -343,18 +361,11 @@
             <image lazy-load="true" src="{{imgHost}}hdgl_03.png"></image>
             <view class="equity-title">活动收益</view>
         </view>
-        <!--<view class="equity-one" bindtap="addCard">-->
-            <!--<image lazy-load="true" src="{{imgHost}}hdgl_05.png"></image>-->
-            <!--<view class="equity-title">添加银行卡</view>-->
-        <!--</view>-->
         <view class="equity-one" bindtap="toShangpiao">
             <image lazy-load="true" src="{{imgHost}}hdgl_15.png"></image>
             <view class="equity-title">转商券</view>
         </view>
-        <!--<view class="equity-one" bindtap="bountyWithdraw">-->
-        <!--<image lazy-load="true" src="{{imgHost}}hdgl_13.png"></image>-->
-        <!--<view class="equity-title">提现</view>-->
-        <!--</view>-->
+
         <!--<view class="equity-one" bindtap="instr">-->
             <!--<image lazy-load="true" src="{{imgHost}}hdgl_14.png"></image>-->
             <!--<view class="equity-title" style="color: #e61f18;">操作指南</view>-->
@@ -365,6 +376,14 @@
 <view class="userCost">
     <view class="cost-title">常用设置</view>
     <view class="equity">
+        <view class="equity-one" bindtap="bountyWithdraw">
+            <image lazy-load="true" src="{{imgHost}}hdgl_13.png"></image>
+            <view class="equity-title">提现</view>
+        </view>
+        <view class="equity-one" bindtap="addCard">
+            <image lazy-load="true" src="{{imgHost}}hdgl_05.png"></image>
+            <view class="equity-title">添加银行卡</view>
+        </view>
         <view class="equity-one" bindtap="toaddress" hover-class="other-navigator-hover">
             <image lazy-load="true" src="{{imgHost}}cysz_06.png"></image>
             <view class="equity-title">我的地址</view>
@@ -377,19 +396,16 @@
             <image lazy-load="true" src="{{imgHost}}cysz_03.png"></image>
             <view class="equity-title">修改密码</view>
         </view>
-    </view>
-    <view class="equity">
         <view class="equity-one" bindtap="call">
             <image lazy-load="true" src="{{imgHost}}cysz_14.png"></image>
             <view class="equity-title">客服电话</view>
         </view>
-        <!--<view class="equity-one" bindtap="gosxy">-->
-            <!--<image lazy-load="true" src="{{imgHost}}cysz_08.png"></image>-->
-            <!--<view class="equity-title">创业店主邀请码</view>-->
-        <!--</view>-->
-        <view class="equity-one" bindtap="goOpenShop" wx:if="{{userInfo.user_market != 0}}">
+        <view class="equity-one" bindtap="goOpenShop" wx:if="{{userInfo.user_market == 2 || userInfo.user_market == 3 || userInfo.user_market == 4}}">
             <image lazy-load="true" src="{{imgHost}}yq4.png"></image>
             <view class="equity-title">开店邀请</view>
         </view>
+    </view>
+    <view class="equity">
+
     </view>
 </view>

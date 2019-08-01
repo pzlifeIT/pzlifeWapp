@@ -64,7 +64,7 @@
     <!-- 选择规格弹出层 -->
     <view class="popout" wx:if='{{showModel}}'>
         <view class='mask' catchtouchmove='preventTouchMove' bindtap='hideModel'></view>
-        <view class='pop'>
+        <view class='pop' style="bottom: {{isIphoneX ? 166 : 98}}rpx;">
             <view class='goods_data'>
                 <view class='goods_thumb fl'>
                     <image lazy-load="true" bindtap="previewImage" data-img="{{goodData.sku_image}}"
@@ -180,7 +180,7 @@
 
 </view>
 <!-- 底部固定区域 -->
-<view class='footer'>
+<view class='footer' style="padding-bottom: {{isIphoneX ? '68' : '0'}}rpx;">
     <navigator class='home' url="../index/index" open-type="switchTab">
         <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_03.png"/>
         <text class="ft-text">首页</text>

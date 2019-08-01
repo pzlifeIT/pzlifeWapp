@@ -84,7 +84,9 @@
         "pages/notice/notice",
         "pages/article/article",
         "pages/article/detail/detail",
-        "pages/comfirOrder/selectCoupon/selectCoupon"
+        "pages/comfirOrder/selectCoupon/selectCoupon",
+        "pages/circle/circle",
+        "pages/commission/commission"
     ],
     "window": {
         "backgroundTextStyle": "dark",

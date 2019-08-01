@@ -86,7 +86,17 @@ Page({
                 that.setData({
                     ident: 2,
                     pop: false
+                });
+                app.modal({
+                    title:"是否去个人中心",
+                    context:"点击确定将跳转到个人中心",
+                    success(res){
+                        wx.switchTab({
+                            url:"/pages/my/my"
+                        })
+                    }
                 })
+
             },
             fail(res) {
                 app.toast({
