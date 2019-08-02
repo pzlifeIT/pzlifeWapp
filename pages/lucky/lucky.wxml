@@ -1,26 +1,26 @@
 <!--pages/lucky/lucky.wxml-->
 <home  page-name="幸运转转转"></home>
-<view class="lucky {{bounced?'ovhidden':''}}">
+<view class="lucky {{bounced?'ovhidden':''}}" style="margin-top: {{navHight * 2}}rpx">
 <view class="dial">
   <image  class="dialBack" lazy-load="{{true}}" src="{{imgHost}}dialBack.png" alt="" />
   <navigator url="/pages/lucky/rule/rule" class="rule" >抽奖规则说明</navigator>
   <navigator url="/pages/lucky/myPrize/myPrize" class="wy-prize" >我抽的奖品></navigator>
   
   <view class="wrapper" >
-    <view class="marquee" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}}"  ></view>
+    <view class="marquee" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}}" wx:key="*this"  ></view>
     <view class="panel " >
-      <view wx:for="{{list}}"  class="sector"></view>
+      <view wx:for="{{list}}" wx:key="*this"  class="sector"></view>
       </view>
     <view class="panel-within ">
-      <view  wx:for="{{list}}" class="sector"></view>
+      <view  wx:for="{{list}}" wx:key="*this" class="sector"></view>
     </view> 
     <view class="goodsList" >
-      <view wx:for="{{goodList}}" class="li">
-        <text >{{item.title}}</text>
+      <view wx:for="{{goodList}}" wx:key="*this" class="li">
+        <text class="gl-title" >{{item.title}}</text>
         <text wx:if="{{item.debris > 1}}" >碎片1个</text>
         <text wx:if="{{item.kind === 4}}" >{{item.relevance}}积分</text>
         <image class="panel-img" lazy-load="{{true}}" src="{{item.image}}" />
-      </view>
+      </view> 
     </view>
     <view class="ring" ></view>
     <view class="Pointer"  animation="{{animation}}" ></view>
@@ -29,7 +29,7 @@
   <view class="debris-box">
     <view class="debris-header" >集满任意商品碎片，即可包邮到家</view>
     <view class="debris-list" >
-      <view class="debris-li fl" wx:for="{{userHdLucky}}" >
+      <view class="debris-li fl" wx:for="{{userHdLucky}}"  wx:key="*this">
         <image class="debris-img" lazy-load="{{true}}" src="{{item.image}}" />
         <text class="debris-val" wx:if="{{item.has < item.debris}}" >{{item.title}}</text>
         <text class="debris-val" data-id="{{item.id}}" bind:tap="synthetic" wx:else >合成</text>
@@ -60,6 +60,7 @@
 <view class="bounced" wx:if="{{bounced}}">
   <view class="bouncedBack" bind:tap="cancelBounced" ></view>
   <view class="winning" wx:if="{{bounced_text === 'winning'}}">
+    <view class="wg-hide" bind:tap="cancelBounced"></view>
     <view class="wg-head">
       <text class="wg-head-text">中奖啦!</text>
       <view class="wg-ellipse-right" ></view>
@@ -68,7 +69,10 @@
     <view class="wg-hint" >恭喜你，获得</view>
     <view class="wg-prize" wx:if="{{luckyGood.need_debris > 1}}" >{{luckyGood.goods_name}}碎片1个！</view>
     <view class="wg-prize" wx:else>{{luckyGood.goods_name}}</view>
-    <view class="wg-btn" bindtap="cancelBounced" >我知道了</view>
+    <view class="wg-btn-list">
+      <navigator url="/pages/index/index" open-type="switchTab"  class="wg-btn din" >去首页</navigator>
+      <navigator  url="/pages/lucky/myPrize/myPrize" class="wg-btn ml din" bindtap="cancelBounced" >去查看</navigator>
+    </view>
   </view>
   <view class="exchange" wx:if="{{bounced_text === 'exchange'}}">
     <view class="ec-head">通用碎片兑换</view>
@@ -100,10 +104,11 @@
       <view class="dc-info din fl">
         <text class="dc-info-name" >{{syntheticGood.title}}</text>
         <text class="dc-info-tit" >请前往我的奖品里面查看</text>
+        
       </view>
       <image class="dialright fl" lazy-load="{{true}}" src="{{imgHost}}dialright.png" />
       <view class="dc-operation din fl" >
-        <navigator url="/pages/lucky/myPrize/myPrize" class="dc-btn"  >查看</navigator>
+        <navigator url="/pages/lucky/myPrize/myPrize" class="dc-btn">查看</navigator>
       </view>
     </view>
   </view>

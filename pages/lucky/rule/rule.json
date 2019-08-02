@@ -1,7 +1,4 @@
 {
-    "usingComponents": {
-        "home": "/components/home/home"
-    },
-    "navigationStyle": "custom",
-    "component": true
+    "usingComponents": {},
+    "navigationBarTitleText": "抽奖活动规则"
 }

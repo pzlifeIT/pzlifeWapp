@@ -22,7 +22,9 @@ Page({
         bounced_text: '',
         isrotat: false,
         isExchange: false,
-        exchangeIndex: 0
+        exchangeIndex: 0,
+        navHight: app.globalData.topHeadHeight,
+        timekey: 0
     },
 
     /**
@@ -69,7 +71,7 @@ Page({
             url: "OfflineActivities/luckydraw",
             data: {
                 hd_id: this.data.hd_id,
-                timekey: new Date().getTime()
+                timekey: this.data.timekey
             },
             success: res => {
                 this.setData({
@@ -79,6 +81,9 @@ Page({
                 })
             },
             error: code => {
+                this.setData({
+                    isrotat: false
+                })
                 if (code == 3004) {
                     app.toast({ title: '奖品内容变更,将自动刷新' });
                     setTimeout(() => {
@@ -90,9 +95,15 @@ Page({
                     3003: '已参与抽奖 ',
                     3005: '操作失败',
                     3006: '活动过期，请刷新页面',
-                    3008: '奖品已全部抽完'
+                    3008: '奖品已全部抽完',
+                    3009: '今天抽奖次数已用完'
                 }
                 app.toast({ title: err[code] || '意料之外的错误' });
+            },
+            fail: () => {
+                this.setData({
+                    isrotat: false
+                })
             }
         })
     },
@@ -112,7 +123,8 @@ Page({
             success: res => {
                 this.setData({
                     hd_id: res.hd_id,
-                    goodList: res.LuckGoods
+                    goodList: res.LuckGoods,
+                    timekey: new Date().getTime()
                 })
             },
             error() {
@@ -134,7 +146,7 @@ Page({
                     General_debris: res.General_debris || {}
                 })
             },
-            error(code) {
+            error() {
                 app.toast({ title: '意料之外的错误' });
             }
         })
@@ -166,19 +178,27 @@ Page({
             },
             success: res => {
                 app.toast({ title: '兑换成功' });
-                this.cancelExchange()
+                this.cancelBounced()
                 this.getUserHdLucky()
                 this.setData({
                     isExchange: false
                 })
             },
-            error(code) {
+            error: code => {
+                this.setData({
+                    isExchange: false
+                })
                 let err = {
                     3003: '您不具有该碎片',
                     3004: '您暂时无法兑换该碎片',
                     3005: '通用碎片数量不足'
                 }
                 app.toast({ title: err[code] || '意料之外的错误' });
+            },
+            fail: () => {
+                this.setData({
+                    isExchange: false
+                })
             }
         })
     },
@@ -268,6 +288,9 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function() {
-
+        return app.share({
+            title: '幸运转转转',
+            path: '/pages/lucky/lucky'
+        })
     }
 })

@@ -1,3 +1,7 @@
+/* view::-webkit-scrollbar {
+    color: transparent;
+} */
+
 .container {
     height: 100%;
     display: flex;
