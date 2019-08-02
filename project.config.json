@@ -38,16 +38,9 @@
             "currentL": -1,
             "list": []
         },
-        "miniprogram": { <<
-            <<
-            << < HEAD "current": 77,
-            ===
-            ===
-            =
-            "current": 49,
-            >>>
-            >>>
-            > cb323c08ecb51d06ae725d3e580a0af8e12c1171 "list": [{
+        "miniprogram": {
+            "current": 77,
+            "list": [{
                     "id": 0,
                     "name": "goods",
                     "pathName": "pages/goods/detail",
@@ -565,23 +558,13 @@
                 },
                 {
                     "id": -1,
-                    <<
-                    <<
-                    << < HEAD "name": "抽奖",
+                    "name": "抽奖",
                     "pathName": "pages/lucky/lucky",
-                    ===
-                    ===
-                    =
-                    "name": "chuangtye",
-                    "pathName": "pages/circle/circle",
-                    >>>
-                    >>>
-                    > cb323c08ecb51d06ae725d3e580a0af8e12c1171 "query": "",
+                    "query": "",
                     "scene": null
                 },
-                { <<
-                    <<
-                    << < HEAD "id": -1,
+                {
+                    "id": -1,
                     "name": "我的奖品",
                     "pathName": "pages/lucky/myPrize/myPrize",
                     "query": "",
@@ -591,16 +574,7 @@
                     "id": -1,
                     "name": "规则",
                     "pathName": "pages/lucky/rule/rule",
-                    ===
-                    ===
-                    =
-                    "id": 76,
-                    "name": "佣金收益",
-                    "pathName": "pages/commission/commission",
-                    "query": "etype=1",
-                    >>>
-                    >>>
-                    > cb323c08ecb51d06ae725d3e580a0af8e12c1171 "scene": null
+                    "scene": null
                 }
             ]
         }
