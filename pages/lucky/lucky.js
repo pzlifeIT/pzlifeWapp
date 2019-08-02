@@ -34,7 +34,6 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost
         })
-        console.log(this.data.navHight)
         this.getLuckGoods()
     },
     zhuanpan: function(n) {
@@ -96,7 +95,8 @@ Page({
                     3003: '已参与抽奖 ',
                     3005: '操作失败',
                     3006: '活动过期，请刷新页面',
-                    3008: '奖品已全部抽完'
+                    3008: '奖品已全部抽完',
+                    3009: '今天抽奖次数已用完'
                 }
                 app.toast({ title: err[code] || '意料之外的错误' });
             },
@@ -288,6 +288,9 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function() {
-
+        return app.share({
+            title: '幸运转转转',
+            path: '/pages/lucky/lucky'
+        })
     }
 })
