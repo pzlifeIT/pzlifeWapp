@@ -23,7 +23,8 @@ Page({
         payStatus: false,
         coupon: '',
         couponText: '',
-        couponTitle: ''
+        couponTitle: '',
+        isIphoneX:false
     },
     hideModel: function (e) {
         this.setData({
@@ -122,7 +123,8 @@ Page({
             skus: options.skus,
             siteid: app.globalData.addressId,
             num: options.num || 1,
-            quick: options.quick || 0
+            quick: options.quick || 0,
+            isIphoneX:app.isIphoneX()
         })
     },
     /**

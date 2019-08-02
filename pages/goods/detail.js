@@ -22,7 +22,8 @@ Page({
         cartNum: 0,
         recommend: [],
         navH: 0,
-        navHight:app.globalData.topHeadHeight
+        navHight:app.globalData.topHeadHeight,
+        isIphoneX:false
     },
     showModel: function () {
         this.setData({
@@ -284,7 +285,8 @@ Page({
             goodid: options.goodid,
             imgHost: app.globalData.host.imgHost,
             identity: app.globalData.userInfo.user_identity || 0,
-            navH: app.globalData.topHeadHeight
+            navH: app.globalData.topHeadHeight,
+            isIphoneX:app.isIphoneX()
         })
         this.getGoodInfo(options.goodid)
         this.getgoodsrecommend(options.goodid)
@@ -445,7 +447,7 @@ Page({
             share = app.share({
                 title: that.data.goodInfo.goods_data.goods_name,
                 path: '/pages/goods/detail?goodid=' + that.data.goodid,
-                imageUrl: that.data.goodInfo.goods_data.image,
+                imageUrl: that.data.goodInfo.goods_data.share_image,
             })
         return share
     }

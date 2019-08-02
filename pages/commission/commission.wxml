@@ -1,0 +1,87 @@
+<!--pages/boss/earnings/earnings.wxml-->
+<view class="circle-header">
+    <view class="ch-statistics">
+        <view class="ch-total" wx:if="{{etype == 1}}">
+            <text class="ct-text db unit " >可分佣收益总额</text>
+            <text class="ct-num db">{{hidden == 1 ? total : '*****'}}</text>
+            <view class="yan-d" wx:if="{{hidden == 1}}" bindtap="hidden">
+                <image class="yan" src="{{imgHost}}eyes.png" lazy-load="true" ></image>
+            </view>
+            <view class="yan-d"  wx:else bindtap="hidden">
+                <image class="yan" src="{{imgHost}}eyes_close.png" lazy-load="true"></image>
+            </view>
+        </view>
+        <view class="ch-total"  wx:elif="{{etype == 2}}">
+            <text class="ct-text db unit ">不可分佣收益总额</text>
+            <text class="ct-num db et">{{hidden == 1 ? total : '*****'}}</text>
+            <view class="yan-d" wx:if="{{hidden == 1}}" bindtap="hidden">
+                <image class="yan" src="{{imgHost}}eyes.png" lazy-load="true" ></image>
+            </view>
+            <view class="yan-d"  wx:else bindtap="hidden">
+                <image class="yan" src="{{imgHost}}eyes_close.png" lazy-load="true"></image>
+            </view>
+        </view>
+        <block wx:if="{{etype == 1}}">
+            <view class="div">
+                <view class="ch-half ch-left {{div == 1 ?'selected':''}}" bindtap="clickDiv" data-div="1">
+                    <text class="db ch-name">个人消费收益</text>
+                    <text class="db ch-num">{{own || 0}}</text>
+                </view>
+                <view class="ch-half ch-center {{div == 2 ?'selected':''}}" bindtap="clickDiv" data-div="2">
+                    <text class="db ch-name ">直属普通会员收益</text>
+                    <text class="db ch-num">{{vip || 0}}</text>
+                </view>
+                <view class="ch-half ch-right {{div == 3 ?'selected':''}}" bindtap="clickDiv" data-div="3">
+                    <text class="db ch-name ">直属钻石会员收益</text>
+                    <text class="db ch-num">{{dimond || 0}}</text>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="bottom-wire"></view>
+</view>
+<view class="redHint" wx:if="{{commiss.length > 0}}">
+    <view class="redText" wx:if="{{div == 1}}">
+        <view class="red-left">个人消费收益合计</view>
+        <view class="red-right">{{own || 0}} 元</view>
+    </view>
+    <view class="redText" wx:if="{{div == 2}}">
+        <view class="red-left">直属普通会员消费收益合计</view>
+        <view class="red-right">{{vip || 0}} 元</view>
+    </view>
+    <view class="redText" wx:if="{{div == 3}}">
+        <view class="red-left">直属钻石会员消费收益合计</view>
+        <view class="red-right">{{dimond || 0}} 元</view>
+    </view>
+</view>
+<view class="list " wx:if="{{commiss.length > 0}}">
+    <block wx:for="{{commiss}}">
+        <view class="list-one" wx:for="{{item}}">
+            <view class="touxiang">
+                <image src="{{item.avatar}}"></image>
+            </view>
+            <view class="one-info">
+                <view class="shouyi">订单收益
+                    <text class="order-money {{div == 2 ? 'drz-money':''}}">+{{item.price}} 元</text>
+                </view>
+                <view class="one-title">{{item.nick_name}}
+                    <!--<text>{{item.create_time}}</text>-->
+                </view>
+                <block wx:if="{{div == 1}}">
+                    <navigator url="/pages/order/orderDetail/orderDetail?orderno={{item.order_no}}">
+                        <view class="order">订单号:
+                            <text>{{item.order_no}}</text>
+                            <image src="{{imgHost}}jt_18.png"></image>
+                        </view>
+                    </navigator>
+                </block>
+            </view>
+        </view>
+    </block>
+</view>
+<view class="not" wx:if="{{commiss.length <= 0}}">
+    <view class="not-case">
+        <image lazy-load="true" src="{{imgHost}}yhq.png"></image>
+        <view class="text">暂无明细</view>
+    </view>
+</view>

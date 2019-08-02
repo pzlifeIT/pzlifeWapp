@@ -17,9 +17,9 @@ Page({
     onLoad: function (options) {
         this.setData({
             imgHost: app.globalData.host.imgHost,
-            pid:options.scene
+            pid:options.scene || app.globalData.pid
         })
-        
+        app.getUserInfo();
         console.log(options.scene)
     },
     test:function(id){

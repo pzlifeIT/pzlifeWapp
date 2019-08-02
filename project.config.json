@@ -1,583 +1,608 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"autoAudits": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.4.3",
-	"appid": "wxa8c604ce63485956",
-	"projectname": "pzlifeWapp",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 77,
-			"list": [
-				{
-					"id": 0,
-					"name": "goods",
-					"pathName": "pages/goods/detail",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "cart",
-					"pathName": "pages/cart/cart",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "确认订单",
-					"pathName": "pages/comfirOrder/comfirOrder",
-					"query": ""
-				},
-				{
-					"id": 3,
-					"name": "我的订单",
-					"pathName": "pages/order/order",
-					"query": "",
-					"scene": 1001
-				},
-				{
-					"id": 4,
-					"name": "orderDetail",
-					"pathName": "pages/shiftMoney/shiftMoney",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "login",
-					"pathName": "pages/login/login",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "logi",
-					"pathName": "pages/login/register/register",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "captcha",
-					"pathName": "pages/login/captchaLogin/captchaLogin",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "pass",
-					"pathName": "pages/login/passLogin/passLogin",
-					"query": ""
-				},
-				{
-					"id": 10,
-					"name": "pay",
-					"pathName": "pages/paystatus/paystatus",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "search",
-					"pathName": "pages/search/search",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "info",
-					"pathName": "pages/my/myInfo/myInfo",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "注册",
-					"pathName": "pages/login/register/register",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "my",
-					"pathName": "pages/my/my",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "cart",
-					"pathName": "pages/cart/cart",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "newpass",
-					"pathName": "pages/my/newpassword/newpassword",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 16,
-					"name": "优惠券",
-					"pathName": "pages/coupon/coupon",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "商券",
-					"pathName": "pages/my/case/case",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "积分",
-					"pathName": "pages/my/integ/integ",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 19,
-					"name": "支付结果",
-					"pathName": "pages/activity/buyvip/buyvip",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "收藏",
-					"pathName": "pages/collect/collect",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 21,
-					"name": "领券中心",
-					"pathName": "pages/coupon/getcoupon/getcoupon",
-					"query": "scene=id%3D23",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "店铺管理",
-					"pathName": "pages/boss/boss",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "新建优惠券",
-					"pathName": "pages/boss/addcoupon/addcoupon",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "活动",
-					"pathName": "pages/activity/activity",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "购买钻石会员",
-					"pathName": "pages/activity/buyvip/buyvip",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 26,
-					"name": "1",
-					"pathName": "pages/diamActive/diamActive",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 26,
-					"name": "goodslist",
-					"pathName": "pages/category/goods/goods",
-					"query": "sub_id=51",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "分类",
-					"pathName": "pages/category/category",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "商品列表",
-					"pathName": "pages/category/goods/goods",
-					"query": "sub_id=53",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "地址",
-					"pathName": "pages/address/address",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "钻石卡列表",
-					"pathName": "pages/diamondlist/diamondlist",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 32,
-					"name": "首页",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "jiameng",
-					"pathName": "pages/boss/join/join",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "商券",
-					"pathName": "pages/boss/case/case",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 35,
-					"name": "商券",
-					"pathName": "pages/boss/earnings/earnings",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "会员",
-					"pathName": "pages/boss/join/join",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 38,
-					"name": "买主",
-					"pathName": "pages/boss/circle/circle",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "shejiao",
-					"pathName": "pages/boss/circle/circle",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 39,
-					"name": "个人中心",
-					"pathName": "pages/my/my",
-					"query": "id=2",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "会员-收益",
-					"pathName": "pages/my/earnings/earnings",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "会员-佣金",
-					"pathName": "pages/my/commission/commission",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "店管-佣金",
-					"pathName": "pages/boss/commission/commission",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "转入商券",
-					"pathName": "pages/shiftMoney/shiftMoney",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "提出申请",
-					"pathName": "pages/shiftMoney/shiftSuccess/shiftSuccess",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "商券申请纪录",
-					"pathName": "pages/shiftMoney/record/record",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 46,
-					"name": "须知",
-					"pathName": "pages/my/notice/notice",
-					"query": "iden=3",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "佣金余额",
-					"pathName": "pages/my/commission/commission",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "扫码开店",
-					"pathName": "pages/openShop/openShop",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 49,
-					"name": "合伙人须知",
-					"pathName": "pages/openShop/notice/notice",
-					"query": "scene=EE",
-					"scene": 1011
-				},
-				{
-					"id": -1,
-					"name": "填写开店信息",
-					"pathName": "pages/openShop/writeInfo/writeInfo",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "提交成功",
-					"pathName": "pages/openShop/submitStatus/submitStatus",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 52,
-					"name": "选择付款方式",
-					"pathName": "pages/openShop/payWay/payWay",
-					"query": "ptype=1",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "收藏",
-					"pathName": "pages/collect/collect",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "活动收益",
-					"pathName": "pages/my/activeEarn/activeEarn",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "钻石合伙人",
-					"pathName": "pages/diamActive/diamActive",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "操作指南",
-					"pathName": "pages/my/instructions/instructions",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "奖励金转商券",
-					"pathName": "pages/diamActive/shiftMoney/shiftMoney",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 58,
-					"name": "奖励金转商券记录",
-					"pathName": "pages/diamActive/shiftMoney/record/record",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "奖励金提现",
-					"pathName": "pages/diamActive/withdraw/withdraw",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "佣金提现",
-					"pathName": "pages/boss/withdraw/withdraw",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 61,
-					"name": "商品详情",
-					"pathName": "pages/goods/detail",
-					"query": "goodid=1269",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "商品分类",
-					"pathName": "pages/category/category",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 63,
-					"name": "getvip",
-					"pathName": "pages/diamActive/diamActive",
-					"query": "",
-					"scene": 1036,
-					"referrerInfo": {}
-				},
-				{
-					"id": -1,
-					"name": "button",
-					"pathName": "pages/button/button",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 65,
-					"name": "huodong ",
-					"pathName": "pages/events/events",
-					"query": "scene=id%3D5%26pid%3D24858",
-					"scene": 1047
-				},
-				{
-					"id": 66,
-					"name": "活动商品",
-					"pathName": "pages/events/detail/detail",
-					"query": "goodsid=1514",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "zhuanpan ",
-					"pathName": "pages/lotto/lotto",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "log",
-					"pathName": "pages/lotto/log/log",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "goumeizuanshi",
-					"pathName": "pages/my/getVip/getVip",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "任务进度",
-					"pathName": "pages/task/task",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "任务详情",
-					"pathName": "pages/task/taskdetails/taskdetails",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 72,
-					"name": "升级须知",
-					"pathName": "pages/notice/notice",
-					"query": "scene=EE",
-					"scene": 1011
-				},
-				{
-					"id": 73,
-					"name": "1",
-					"pathName": "pages/article/article",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "选择优惠券",
-					"pathName": "pages/comfirOrder/selectCoupon/selectCoupon",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "抽奖",
-					"pathName": "pages/lucky/lucky",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "我的奖品",
-					"pathName": "pages/lucky/myPrize/myPrize",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "规则",
-					"pathName": "pages/lucky/rule/rule",
-					"scene": null
-				}
-			]
-		}
-	}
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": []
+    },
+    "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
+        "newFeature": true,
+        "autoAudits": false
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.4.3",
+    "appid": "wxa8c604ce63485956",
+    "projectname": "pzlifeWapp",
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "isGameTourist": false,
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "search": {
+            "current": -1,
+            "list": []
+        },
+        "conversation": {
+            "current": -1,
+            "list": []
+        },
+        "plugin": {
+            "current": -1,
+            "list": []
+        },
+        "game": {
+            "currentL": -1,
+            "list": []
+        },
+        "miniprogram": { <<
+            <<
+            << < HEAD "current": 77,
+            ===
+            ===
+            =
+            "current": 49,
+            >>>
+            >>>
+            > cb323c08ecb51d06ae725d3e580a0af8e12c1171 "list": [{
+                    "id": 0,
+                    "name": "goods",
+                    "pathName": "pages/goods/detail",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "cart",
+                    "pathName": "pages/cart/cart",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "确认订单",
+                    "pathName": "pages/comfirOrder/comfirOrder",
+                    "query": ""
+                },
+                {
+                    "id": 3,
+                    "name": "我的订单",
+                    "pathName": "pages/order/order",
+                    "query": "",
+                    "scene": 1001
+                },
+                {
+                    "id": 4,
+                    "name": "orderDetail",
+                    "pathName": "pages/shiftMoney/shiftMoney",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "login",
+                    "pathName": "pages/login/login",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "logi",
+                    "pathName": "pages/login/register/register",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "captcha",
+                    "pathName": "pages/login/captchaLogin/captchaLogin",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "pass",
+                    "pathName": "pages/login/passLogin/passLogin",
+                    "query": ""
+                },
+                {
+                    "id": 10,
+                    "name": "pay",
+                    "pathName": "pages/paystatus/paystatus",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "search",
+                    "pathName": "pages/search/search",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "info",
+                    "pathName": "pages/my/myInfo/myInfo",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "注册",
+                    "pathName": "pages/login/register/register",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "my",
+                    "pathName": "pages/my/my",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "cart",
+                    "pathName": "pages/cart/cart",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "newpass",
+                    "pathName": "pages/my/newpassword/newpassword",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 16,
+                    "name": "优惠券",
+                    "pathName": "pages/coupon/coupon",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "商券",
+                    "pathName": "pages/my/case/case",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "积分",
+                    "pathName": "pages/my/integ/integ",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 19,
+                    "name": "支付结果",
+                    "pathName": "pages/activity/buyvip/buyvip",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "收藏",
+                    "pathName": "pages/collect/collect",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 21,
+                    "name": "领券中心",
+                    "pathName": "pages/coupon/getcoupon/getcoupon",
+                    "query": "scene=id%3D23",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "店铺管理",
+                    "pathName": "pages/boss/boss",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "新建优惠券",
+                    "pathName": "pages/boss/addcoupon/addcoupon",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "活动",
+                    "pathName": "pages/activity/activity",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "购买钻石会员",
+                    "pathName": "pages/activity/buyvip/buyvip",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 26,
+                    "name": "1",
+                    "pathName": "pages/diamActive/diamActive",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 26,
+                    "name": "goodslist",
+                    "pathName": "pages/category/goods/goods",
+                    "query": "sub_id=51",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "分类",
+                    "pathName": "pages/category/category",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "商品列表",
+                    "pathName": "pages/category/goods/goods",
+                    "query": "sub_id=53",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "地址",
+                    "pathName": "pages/address/address",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "钻石卡列表",
+                    "pathName": "pages/diamondlist/diamondlist",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 32,
+                    "name": "首页",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "jiameng",
+                    "pathName": "pages/boss/join/join",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "商券",
+                    "pathName": "pages/boss/case/case",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 35,
+                    "name": "商券",
+                    "pathName": "pages/boss/earnings/earnings",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "会员",
+                    "pathName": "pages/boss/join/join",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 38,
+                    "name": "买主",
+                    "pathName": "pages/boss/circle/circle",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "shejiao",
+                    "pathName": "pages/boss/circle/circle",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 39,
+                    "name": "个人中心",
+                    "pathName": "pages/my/my",
+                    "query": "id=2",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "会员-收益",
+                    "pathName": "pages/my/earnings/earnings",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "会员-佣金",
+                    "pathName": "pages/my/commission/commission",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "店管-佣金",
+                    "pathName": "pages/boss/commission/commission",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "转入商券",
+                    "pathName": "pages/shiftMoney/shiftMoney",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "提出申请",
+                    "pathName": "pages/shiftMoney/shiftSuccess/shiftSuccess",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "商券申请纪录",
+                    "pathName": "pages/shiftMoney/record/record",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 46,
+                    "name": "须知",
+                    "pathName": "pages/my/notice/notice",
+                    "query": "iden=3",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "佣金余额",
+                    "pathName": "pages/my/commission/commission",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "扫码开店",
+                    "pathName": "pages/openShop/openShop",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 49,
+                    "name": "合伙人须知",
+                    "pathName": "pages/openShop/notice/notice",
+                    "query": "scene=EE",
+                    "scene": 1011
+                },
+                {
+                    "id": -1,
+                    "name": "填写开店信息",
+                    "pathName": "pages/openShop/writeInfo/writeInfo",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "提交成功",
+                    "pathName": "pages/openShop/submitStatus/submitStatus",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 52,
+                    "name": "选择付款方式",
+                    "pathName": "pages/openShop/payWay/payWay",
+                    "query": "ptype=1",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "收藏",
+                    "pathName": "pages/collect/collect",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "活动收益",
+                    "pathName": "pages/my/activeEarn/activeEarn",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "钻石合伙人",
+                    "pathName": "pages/diamActive/diamActive",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "操作指南",
+                    "pathName": "pages/my/instructions/instructions",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "奖励金转商券",
+                    "pathName": "pages/diamActive/shiftMoney/shiftMoney",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 58,
+                    "name": "奖励金转商券记录",
+                    "pathName": "pages/diamActive/shiftMoney/record/record",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "奖励金提现",
+                    "pathName": "pages/diamActive/withdraw/withdraw",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "佣金提现",
+                    "pathName": "pages/boss/withdraw/withdraw",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 61,
+                    "name": "商品详情",
+                    "pathName": "pages/goods/detail",
+                    "query": "goodid=1269",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "商品分类",
+                    "pathName": "pages/category/category",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 63,
+                    "name": "getvip",
+                    "pathName": "pages/diamActive/diamActive",
+                    "query": "",
+                    "scene": 1036,
+                    "referrerInfo": {}
+                },
+                {
+                    "id": -1,
+                    "name": "button",
+                    "pathName": "pages/button/button",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 65,
+                    "name": "huodong ",
+                    "pathName": "pages/events/events",
+                    "query": "scene=id%3D5%26pid%3D24858",
+                    "scene": 1047
+                },
+                {
+                    "id": 66,
+                    "name": "活动商品",
+                    "pathName": "pages/events/detail/detail",
+                    "query": "goodsid=1514",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "zhuanpan ",
+                    "pathName": "pages/lotto/lotto",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "log",
+                    "pathName": "pages/lotto/log/log",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "goumeizuanshi",
+                    "pathName": "pages/my/getVip/getVip",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "任务进度",
+                    "pathName": "pages/task/task",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "任务详情",
+                    "pathName": "pages/task/taskdetails/taskdetails",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 72,
+                    "name": "升级须知",
+                    "pathName": "pages/notice/notice",
+                    "query": "scene=EE",
+                    "scene": 1011
+                },
+                {
+                    "id": 73,
+                    "name": "1",
+                    "pathName": "pages/article/article",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "选择优惠券",
+                    "pathName": "pages/comfirOrder/selectCoupon/selectCoupon",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    <<
+                    <<
+                    << < HEAD "name": "抽奖",
+                    "pathName": "pages/lucky/lucky",
+                    ===
+                    ===
+                    =
+                    "name": "chuangtye",
+                    "pathName": "pages/circle/circle",
+                    >>>
+                    >>>
+                    > cb323c08ecb51d06ae725d3e580a0af8e12c1171 "query": "",
+                    "scene": null
+                },
+                { <<
+                    <<
+                    << < HEAD "id": -1,
+                    "name": "我的奖品",
+                    "pathName": "pages/lucky/myPrize/myPrize",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "规则",
+                    "pathName": "pages/lucky/rule/rule",
+                    ===
+                    ===
+                    =
+                    "id": 76,
+                    "name": "佣金收益",
+                    "pathName": "pages/commission/commission",
+                    "query": "etype=1",
+                    >>>
+                    >>>
+                    > cb323c08ecb51d06ae725d3e580a0af8e12c1171 "scene": null
+                }
+            ]
+        }
+    }
 }

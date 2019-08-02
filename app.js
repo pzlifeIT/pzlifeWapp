@@ -470,5 +470,14 @@ App({
             }
         })
 
+    },
+    isIphoneX(){
+        let type = wx.getSystemInfoSync();
+        console.log(type)
+        if (type.model.indexOf('iPhone X') != -1){
+            return true
+        } else {
+            return false
+        }
     }
 })

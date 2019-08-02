@@ -129,7 +129,7 @@
 }
 .img-bottom{
     width: 700rpx;
-    height:1237rpx;
+    height:1301rpx;
     display: block;
 }
 .check{
