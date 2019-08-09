@@ -18,8 +18,8 @@ Page({
         couponNum: 0,
         yan1: true,
         yan1_all: true,
-        no_price:0,
-        can_price:0
+        no_price: 0,
+        can_price: 0
     },
     getTaskProgress: function () {
         let that = this
@@ -123,6 +123,15 @@ Page({
             }
         })
     },
+    goMyVoice: function () {
+        if (this.data.con_id) {
+            wx.navigateTo({
+                url: "/pages/myVoice/myVoice"
+            })
+        } else {
+            app.toast({title: "请先登录"})
+        }
+    },
     getUser: function () {
         let that = this
         app.wxrequest({
@@ -214,12 +223,12 @@ Page({
     gotocommiss: function (e) {
         let etype = e.currentTarget.dataset.etype;
         let hidden = e.currentTarget.dataset.hidden;
-        if (etype == 2 && this.data.userInfo.user_market < 2){
-            app.toast({title:"请先升级为永久兼职市场经理"})
+        if (etype == 2 && this.data.userInfo.user_market < 2) {
+            app.toast({title: "请先升级为永久兼职市场经理"})
             return
         }
         wx.navigateTo({
-            url: "/pages/commission/commission?etype=" + etype+'&hidden='+hidden
+            url: "/pages/commission/commission?etype=" + etype + '&hidden=' + hidden
         })
     },
 
@@ -451,10 +460,10 @@ Page({
             })
         }
     },
-    goCircle:function(){
-      wx.navigateTo({
-          url:"/pages/circle/circle"
-      })
+    goCircle: function () {
+        wx.navigateTo({
+            url: "/pages/circle/circle"
+        })
     },
     buyDiam: function () {
         console.log(123)

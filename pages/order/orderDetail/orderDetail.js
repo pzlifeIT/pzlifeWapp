@@ -10,7 +10,7 @@ Page({
         order_info: {},
         imgHost: '',
         user_identity: 0,
-        navHight:app.globalData.topHeadHeight
+        navHight: app.globalData.topHeadHeight
     },
 
     /**
@@ -21,7 +21,7 @@ Page({
             phoneNumber: '15502123212'
         })
     },
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
             orderno: options.orderno,
             imgHost: app.globalData.host.imgHost,
@@ -31,14 +31,27 @@ Page({
             orderno: options.orderno
         })
     },
-    disOrderInfo: function(data) {
+    disOrderInfo: function (data) {
         let info = data
         info.order_status_text = this.getorder_status(info.order_status)
         info.deduction_money = parseFloat(info.deduction_money)
         info.third_money = parseFloat(info.third_money)
         return info
     },
-    getorder_status: function(n) {
+    goDetail: function (e) {
+        let id = e.currentTarget.dataset.goodsid;
+        let type = e.currentTarget.dataset.type;
+        if (type ==  1){
+            wx.navigateTo({
+                url:'/pages/goods/detail?goodid='+id
+            })
+        } else if (type == 2){
+            wx.navigateTo({
+                url:'/pages/voiceDetail/voiceDetail?goodid='+id
+            })
+        }
+    },
+    getorder_status: function (n) {
         let text = ''
         switch (parseInt(n)) {
             case 1:
@@ -76,25 +89,25 @@ Page({
         }
         return text
     },
-    getUserOrderInfo: function(data) {
+    getUserOrderInfo: function (data) {
         let that = this
         app.wxrequest({
             url: 'order/getUserOrderInfo',
             data: {
                 order_no: data.orderno
             },
-            success: function(res) {
+            success: function (res) {
                 let info = that.disOrderInfo(res.order_info)
                 that.setData({
                     order_info: info
                 })
             },
-            error: function(code) {
+            error: function (code) {
 
             }
         })
     },
-    gopay: function(e) {
+    gopay: function (e) {
         console.log(e.currentTarget.dataset.orderno)
         let that = this
         app.wxpay({
@@ -111,21 +124,21 @@ Page({
                 })
             },
             fail(res) {
-                app.toast({ title: '支付失败' })
+                app.toast({title: '支付失败'})
             }
         })
     },
-    cancelorder: function(e) {
+    cancelorder: function (e) {
         let that = this
         app.modal({
             content: '是否取消订单',
-            success: function() {
+            success: function () {
                 app.wxrequest({
                     url: 'order/cancelorder',
                     data: {
                         order_no: e.currentTarget.dataset.orderno
                     },
-                    success: function(res) {
+                    success: function (res) {
                         that.setData({
                             page: 1,
                             reach: true,
@@ -135,27 +148,27 @@ Page({
                             orderStatus: that.data.status
                         })
 
-                        app.toast({ title: '取消成功！', duration: 1500 })
+                        app.toast({title: '取消成功！', duration: 1500})
                     },
-                    error: function(code) {
-                        app.toast({ title: '取消失败' })
+                    error: function (code) {
+                        app.toast({title: '取消失败'})
                     }
                 })
             },
-            cancel: function() {
+            cancel: function () {
 
             }
         })
 
     },
-    gologistics: function(e) {
+    gologistics: function (e) {
         let that = this,
             orderno = e.currentTarget.dataset.orderno
         wx.navigateTo({
             url: '/pages/order/logisticslist/logisticslist?orderno=' + orderno
         })
     },
-    confirmOrder: function(e) {
+    confirmOrder: function (e) {
         let that = this
         let orderno = e.currentTarget.dataset.orderno
         app.wxrequest({
@@ -163,7 +176,7 @@ Page({
             data: {
                 order_no: orderno
             },
-            success: function(res) {
+            success: function (res) {
                 that.setData({
                     page: 1,
                     reach: true,
@@ -178,49 +191,49 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
         console.log(1111)
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
 
     }
 })

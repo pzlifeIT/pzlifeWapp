@@ -1,0 +1,92 @@
+/* pages/voiceList/voiceList.wxss */
+page{
+    background: #F7F7F7;
+}
+.banner,swiper,.img{
+    width: 750rpx;
+    height: 433rpx;
+}
+.img{
+    background: #389eec;
+}
+.list{
+    width: 750rpx;
+    height: auto;
+    overflow: auto;
+}
+.voice {
+    width: 750rpx;
+    height: auto;
+    overflow: hidden;
+    margin-top: 10rpx;
+    background: #FFFFFF;
+    display: flex;
+    position: relative;
+}
+.voice-logo{
+    width: 181rpx;
+    height: 100%;
+}
+.logo{
+    width: 140rpx;
+    height: 140rpx;
+    margin: 30rpx 0 0 22rpx;
+    background: #389eec;
+    border-radius: 10rpx;
+}
+.voice-info{
+    width: 569rpx;
+    height: 100%;
+    padding-top: 30rpx;
+    box-sizing: border-box;
+}
+.name{
+    font-size: 34rpx;
+    color: #191919;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+}
+.sub_name{
+    font-size: 30rpx;
+    color: #666666;
+    margin-left: 10rpx;
+}
+.time{
+    margin-top: 10rpx;
+    display: flex;
+    justify-content: left;
+}
+.valid{
+    font-size: 32rpx;
+    color: #000;
+    font-weight: bold;
+}
+.valid-time{
+    font-size: 30rpx;
+    color: #666666;
+    line-height: 60rpx;
+}
+.icon-time{
+    width: 34rpx;
+    height: 34rpx;
+    margin-right: 10rpx;
+}
+text:nth-of-type(1){
+    color: #E61F18;
+    font-size: 32rpx;
+}
+text:nth-of-type(2){
+    display: inline-block;
+    width: 130rpx;
+    height: 30rpx;
+    background: #E61F18;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 30rpx;
+    font-size: 24rpx;
+    margin: 0 10rpx 0 29rpx;
+}
+text:nth-of-type(3){
+    color: #E61F18;
+    font-size: 26rpx;
+}

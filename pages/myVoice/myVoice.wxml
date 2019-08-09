@@ -1,0 +1,34 @@
+<!--pages/myVoice/myVoice.wxml-->
+<!--pages/coupon/coupon.wxml-->
+<view class="head">
+    <view class="state-text {{head == 1 ?'active':''}}" bindtap="select" data-num="1">未过期</view>
+    <view class="state-text {{head == 2 ?'active':''}}" bindtap="select" data-num="2">已失效</view>
+    <i class="line"><s></s></i>
+</view>
+<view class="list">
+    <block wx:for="{{list}}" wx:for-item="audios" wx:for-index="index" wx:key="{{index}}">
+        <block wx:for="{{audios}}" >
+            <view class="voice" bindtap="playVoice" data-audio="{{item.audio.audio}}" data-name="{{item.audio.name}}">
+                <view class="voice-logo">
+                    <image class="logo" lazy-load src="{{imgHost}}image_03.jpg"></image>
+                </view>
+                <view class="voice-info">
+                    <view class="info-left">
+                        <view class="name">{{item.audio.name}}</view>
+                        <!--<view class="sub_name">系列</view>-->
+                        <view class="time">
+                            <image lazy-load class="icon-time" src="{{imgHost}}time.png"></image>
+                            {{item.audio.audio_length_text}}
+                        </view>
+                    </view>
+                    <view class="info-right">
+                        <view class="valid">有效期</view>
+                        <view class="valid-time">{{item.create_time}}至{{item.end_time}}</view>
+                    </view>
+                </view>
+                <image wx:if="{{head == 2}}" class="lose" lazy-load src="{{imgHost}}lose.png"></image>
+            </view>
+        </block>
+    </block>
+</view>
+

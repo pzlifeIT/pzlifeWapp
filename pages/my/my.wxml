@@ -17,11 +17,11 @@
             <image lazy-load="true" src="{{userInfo.avatar}}"/>
         </view>
     </navigator>
-        <view class="din fl name-iden">
-            <view class="userLogin">{{userInfo.nick_name}}</view>
-            <view class="ident" wx:if="{{userInfo.user_identity != 1}}" bindtap="notice" data-identity="2">钻石会员</view>
-            <view class="ident" wx:else>普通会员</view>
-        </view>
+    <view class="din fl name-iden">
+        <view class="userLogin">{{userInfo.nick_name}}</view>
+        <view class="ident" wx:if="{{userInfo.user_identity != 1}}" bindtap="notice" data-identity="2">钻石会员</view>
+        <view class="ident" wx:else>普通会员</view>
+    </view>
 
 
     <!--合伙人-->
@@ -51,9 +51,9 @@
             </view>
         </navigator>
         <navigator
-                   url="/pages/boss/boss?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
-                   open-type="navigate">
-            <view class="flex " > 进入店铺管理
+                url="/pages/boss/boss?name={{userInfo.nick_name}}&head={{userInfo.avatar}}" hover-class="none"
+                open-type="navigate">
+            <view class="flex "> 进入店铺管理
                 <image src="{{imgHost}}jt_b_03.png"></image>
             </view>
         </navigator>
@@ -115,7 +115,8 @@
     <!--</view>-->
 </view>
 
-<view class="userCost user_ident" wx:if="{{userInfo.user_identity == 3 || userInfo.user_identity == 4 || userInfo.user_market == 1 || userInfo.user_market == 2 || userInfo.user_market == 3 || userInfo.user_market == 4}}">
+<view class="userCost user_ident"
+      wx:if="{{userInfo.user_identity == 3 || userInfo.user_identity == 4 || userInfo.user_market == 1 || userInfo.user_market == 2 || userInfo.user_market == 3 || userInfo.user_market == 4}}">
     <view class="cost-title">我的经营身份</view>
     <view class="ident-line">
         <!--创业店主-->
@@ -128,7 +129,8 @@
             <view class="equity-title color">创业店主</view>
         </view>
         <!--市场经理-->
-        <view class="equity-one ident-one" wx:if="{{userInfo.user_market == 1 || userInfo.user_market == 2}}" bindtap="notice" data-identity="3">
+        <view class="equity-one ident-one" wx:if="{{userInfo.user_market == 1 || userInfo.user_market == 2}}"
+              bindtap="notice" data-identity="3">
             <image lazy-load="true" src="{{imgHost}}jl_color.png" style="width: 40rpx;height: 45rpx;"></image>
             <view class="equity-title" wx:if="{{userInfo.user_market == 1}}">兼职市场经理(体验)</view>
             <view class="equity-title" wx:elif="{{userInfo.user_market == 2}}">兼职市场经理</view>
@@ -141,17 +143,18 @@
 
     <view class="ident-line">
         <!--合伙人-->
-        <view class="equity-one ident-one"  wx:if="{{userInfo.user_identity == 4}}" bindtap="notice" data-identity="4">
+        <view class="equity-one ident-one" wx:if="{{userInfo.user_identity == 4}}" bindtap="notice" data-identity="4">
             <image lazy-load="true" src="{{imgHost}}boss_color.png" style="width: 49rpx;height: 47rpx;"></image>
             <view class="equity-title {{userInfo.user_identity == 4 ? '':'color'}}">合伙人</view>
         </view>
-        <view class="equity-one ident-one" bindtap="noUpgrade"  wx:else >
+        <view class="equity-one ident-one" bindtap="noUpgrade" wx:else>
             <image lazy-load="true" src="{{imgHost}}boss_nocolor.png" style="width: 49rpx;height: 47rpx;"></image>
             <view class="equity-title color">合伙人</view>
         </view>
         <!--市场总监-->
-        <view class="equity-one ident-one" wx:if="{{userInfo.user_market == 3 || userInfo.user_market == 4}}" bindtap="notice" data-identity="4">
-            <view class="mask" >
+        <view class="equity-one ident-one" wx:if="{{userInfo.user_market == 3 || userInfo.user_market == 4}}"
+              bindtap="notice" data-identity="4">
+            <view class="mask">
                 <image lazy-load="true" src="{{imgHost}}zj_color.png"
                        style="width: 41rpx;height: 45rpx;margin-top: 20rpx;"></image>
                 <text class="zj-title">兼职市场总监</text>
@@ -163,10 +166,10 @@
             </view>
         </view>
         <view class="equity-one ident-one" wx:else bindtap="noUpgrade">
-            <view class="mask" >
+            <view class="mask">
                 <image lazy-load="true" src="{{imgHost}}zj_nocolor.png"
                        style="width: 41rpx;height: 45rpx;margin-top: 20rpx;"></image>
-                <text class="zj-title color" >兼职市场总监</text>
+                <text class="zj-title color">兼职市场总监</text>
             </view>
             <view class="equity-title ident-number">
                 <text class="number color">1</text>
@@ -212,6 +215,7 @@
             </view>
         </view>
     </view>
+
     <view class="cost-line" wx:if="{{userInfo.user_identity == 3}}">
         <view class="line-one wid50" bindtap="gotocommiss" data-etype="1" data-hidden="{{yan1_all ? 1:2}}">
             <view class="one-content">
@@ -245,6 +249,7 @@
             </view>
         </view>
     </view>
+
     <view class="cost-line">
         <view class="line-one" bindtap="money">
             <view class="one-content">
@@ -316,27 +321,35 @@
     </view>
 </view>
 <!-- 买主权益 -->
-<view class="userCost" wx:if="{{userInfo.user_identity == 3}}">
+
+<view class="userCost">
     <view class="cost-title">买主权益</view>
     <view class="equity">
         <!--<view class="equity-one">-->
-            <!--<image lazy-load="true" src="{{imgHost}}mzqy_03.png"></image>-->
-            <!--<view class="equity-title">买主要求</view>-->
+        <!--<image lazy-load="true" src="{{imgHost}}mzqy_03.png"></image>-->
+        <!--<view class="equity-title">买主要求</view>-->
         <!--</view>-->
         <!--<view class="equity-one">-->
-            <!--<image lazy-load="true" src="{{imgHost}}mzqy_05.png"></image>-->
-            <!--<view class="equity-title">关注店铺</view>-->
+        <!--<image lazy-load="true" src="{{imgHost}}mzqy_05.png"></image>-->
+        <!--<view class="equity-title">关注店铺</view>-->
         <!--</view>-->
         <!--<view class="equity-one last">-->
-            <!--<image lazy-load="true" src="{{imgHost}}mzqy_07.png"></image>-->
-            <!--<view class="equity-title">关注收藏</view>-->
+        <!--<image lazy-load="true" src="{{imgHost}}mzqy_07.png"></image>-->
+        <!--<view class="equity-title">关注收藏</view>-->
         <!--</view>-->
-        <view class="equity-one last" bindtap="goCircle">
-            <image lazy-load="true" src="{{imgHost}}ren.png"></image>
-            <view class="equity-title">创业圈</view>
+        <block wx:if="{{userInfo.user_identity == 3}}">
+            <view class="equity-one last" bindtap="goCircle">
+                <image lazy-load="true" src="{{imgHost}}ren.png"></image>
+                <view class="equity-title">创业圈</view>
+            </view>
+        </block>
+        <view class="equity-one last" bindtap="goMyVoice">
+            <image lazy-load="true" src="{{imgHost}}audio.png"></image>
+            <view class="equity-title">我的音频</view>
         </view>
     </view>
 </view>
+
 <!--<view class="userCost" wx:if="{{userInfo.user_identity !=1}}">-->
 <!--<view class="cost-title">活动管理</view>-->
 <!--<view class="equity">-->
@@ -367,8 +380,8 @@
         </view>
 
         <!--<view class="equity-one" bindtap="instr">-->
-            <!--<image lazy-load="true" src="{{imgHost}}hdgl_14.png"></image>-->
-            <!--<view class="equity-title" style="color: #e61f18;">操作指南</view>-->
+        <!--<image lazy-load="true" src="{{imgHost}}hdgl_14.png"></image>-->
+        <!--<view class="equity-title" style="color: #e61f18;">操作指南</view>-->
         <!--</view>-->
     </view>
 </view>
@@ -400,7 +413,8 @@
             <image lazy-load="true" src="{{imgHost}}cysz_14.png"></image>
             <view class="equity-title">客服电话</view>
         </view>
-        <view class="equity-one" bindtap="goOpenShop" wx:if="{{userInfo.user_market == 2 || userInfo.user_market == 3 || userInfo.user_market == 4}}">
+        <view class="equity-one" bindtap="goOpenShop"
+              wx:if="{{userInfo.user_market == 2 || userInfo.user_market == 3 || userInfo.user_market == 4}}">
             <image lazy-load="true" src="{{imgHost}}yq4.png"></image>
             <view class="equity-title">开店邀请</view>
         </view>

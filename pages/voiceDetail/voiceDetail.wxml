@@ -1,0 +1,222 @@
+<!--pages/voiceDetail/voiceDetail.wxml-->
+<view class="voice">
+    <swiper autoplay circular>
+        <block wx:for="{{goods_banner}}">
+            <swiper-item>
+                <image class="img" src="{{item.image_path}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!--播放样式组件-->
+    <!--<voice class="voice-play"></voice>-->
+</view>
+<view class='desc'>
+    <view class='text'>
+        <text class='title'>{{goods_data.goods_name}}</text>
+        <text class='subtitle'>{{goods_data.subtitle}}</text>
+    </view>
+    <view class='price'>
+        <view class="price-num">
+            <text class="din fl">￥{{goods_data.min_retail_price}}</text>
+            <text class="din fl"
+                  wx:if="{{goods_data.min_retail_price != goods_data.max_retail_price}}">-￥{{goods_data.max_retail_price}}
+            </text>
+        </view>
+        <view class="vipprice">
+            <text class="butie">钻石再补贴</text>
+            {{goods_data.min_brokerage}}
+            <text class="din" wx:if="{{goods_data.min_brokerage != goods_data.max_brokerage}}">-￥{{goods_data.max_brokerage}}
+            </text>
+        </view>
+    </view>
+    <view class="button-select" bindtap="selectVoice">
+        选择试听
+        <image lazy-load class="select-jt" src="{{imgHost}}jt_black.png"></image>
+    </view>
+    <!--<view class='collect'>-->
+    <!--<icon type=''></icon>-->
+    <!--<text>收藏</text>-->
+    <!--</view>-->
+    <view class='putaway din fr' wx:if="{{identity == 4 & status == 2}}" bindtap="putaway">
+        <i class="fl"></i>
+        <text class="fr">上架到我的店铺</text>
+    </view>
+</view>
+<view class='content'>
+
+    <view class='spec' bindtap='showModel'>
+        <text class='fix'>选择：</text>
+        <text class='fix_desc'>1天;x1</text>
+        <!--<text class='fix_desc' wx:else>请选择规格</text>-->
+    </view>
+    <!--<view class='spec'>-->
+        <!--<text class='fix'>身份：</text>-->
+        <!--<text class='fix_desc'>只限钻石会员购买</text>-->
+    <!--</view>-->
+    <!-- <view class='ticket'>
+    <text class='fix'>领券：</text><text class='fix_desc'>全场满39减9</text>
+  </view> -->
+    <view class='integral'>
+        <text class='fix' decode="{{true}}">积分：</text>
+        <text class='fix_desc'>
+            <text>赠送{{goods_data.min_integral_active}}</text>
+            <text wx:if="{{goods_data.min_integral_active != goods_data.max_integral_active}}">-{{goods_data.max_integral_active}}
+            </text>
+            <text>积分</text>
+        </text>
+    </view>
+</view>
+<!-- 选择规格弹出层 -->
+<view class="popout" wx:if='{{showModel}}'>
+    <view class='mask' catchtouchmove='preventTouchMove' bindtap='hideModel'></view>
+    <view class='pop' style="bottom: {{isIphoneX ? 166 : 98}}rpx;">
+        <view class='goods_data'>
+            <view class='goods_thumb fl'>
+                <image lazy-load="true" bindtap="previewImage" data-img="{{goodData.sku_image}}"
+                       src='{{goodData.sku_image}}' ></image>
+            </view>
+            <view class='goods_desc fl' wx:if="{{repertory}}">
+                <text class='pop_price' wx:if="{{buy}}">价格：￥{{skuInfo.retail_price}}</text>
+                <text class='pop_price' wx:else>价格：￥{{goods_data.min_retail_price}}
+                    <text
+                            wx:if="{{goods_data.min_retail_price != goods_data.max_retail_price}}">-￥{{goods_data.max_retail_price}}
+                    </text>
+                </text>
+                <text class='selected' wx:if="{{buy}}">已选择：{{skuInfo.name}}</text>
+                <text class='selected' wx:else>未选择规格</text>
+                <text class='present' wx:if="{{buy}}">赠送积分：{{skuInfo.integral_active}}积分</text>
+                <text class='present' wx:else>
+                    <text> 赠送积分：</text>
+                    <text>{{goods_data.min_integral_active}}</text>
+                    <text wx:if="{{goods_data.min_integral_active != goods_data.max_integral_active}}">-{{goods_data.max_integral_active}}
+                    </text>
+                    <text>积分</text>
+                </text>
+                <text class="present" wx:if="{{buy}}">钻石再补贴: ￥{{skuInfo.brokerage}}</text>
+                <text class="present" wx:else>
+                    <text>钻石再补贴: ￥{{goods_data.min_brokerage}}</text>
+                    <text class="din"
+                          wx:if="{{goods_data.min_brokerage != goods_data.max_brokerage}}">-￥{{goods_data.max_brokerage}}
+                    </text>
+                </text>
+            </view>
+            <view class='goods_desc fl' wx:else>
+                <text class='pop_price'>暂无库存</text>
+            </view>
+        </view>
+        <view class='param'>
+            <!--<view wx:for="{{goods_sku}}" wx:for-index="idx" wx:key="{{item.id}}">-->
+            <!--<view class='spec_name'>-->
+            <!--<text>{{item.name}}</text>-->
+            <!--</view>-->
+            <view class='attr'>
+                <block wx:for="{{goods_sku}}" wx:for-index="indx">
+                    <view class='attr_name {{ item.id == attr[0] ? "active" : "" }}' wx:key="{{item.id}}"
+                          bindtap='selectAttr' data-indx='{{indx}}' data-id="{{item.id}}" data-attr="{{attr[indx]}}">
+                        {{item.name}}
+                    </view>
+                </block>
+            </view>
+            <!--</view>-->
+        </view>
+        <view class='amount'>
+            <view class='num_title'>数量</view>
+            <view class='amount_num'>
+                <view class='jian' bindtap='jian'>-</view>
+                <input class='num' disabled type='text' value='{{buyNum}}' bindinput='getnum'/>
+                <view class='jia' bindtap='jia'>+</view>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 领券弹出层 -->
+<view wx:if="{{selectVoice}}" class="popout">
+    <view class='mask' catchtouchmove='preventTouchMove' bindtap='hideSelect'></view>
+    <view class='coupon_pop'>
+        <view class='pop_title'>
+            <text>选择播放音频</text>
+        </view>
+        <scroll-view scroll-y class='coupon'>
+            <block wx:for="{{goods_sku}}" wx:for-item="sku" wx:for-index="skuIndex">
+                <view class="sku">
+                    <view class="sku-title">{{sku.name}}</view>
+                    <block wx:for="{{sku.audios}}" wx:for-index="index">
+                        <view class="voice-name">
+                            <image lazy-load bindtap="stopplay" wx:if="{{idx == item.id && sku.id == sku_id}}" data-audio="{{item.audio}}"
+                                   data-time="{{item.audition_time}}" data-idx="{{item.id}}" data-sku="{{sku.id}}" class="stop-play"
+                                   src="{{imgHost}}zanting.png"></image>
+                            <image lazy-load bindtap="play" wx:else data-audio="{{item.audio}}"
+                                   data-time="{{item.audition_time}}" data-idx="{{item.id}}" class="stop-play" data-sku="{{sku.id}}"
+                                   src="{{imgHost}}bofang.png"></image>
+                            {{item.name}}
+                        </view>
+                    </block>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+</view>
+<!--为你推荐-->
+<view class="recommend" wx:if="{{recommend.length > 0}}">
+    <view class="re-title">为你推荐</view>
+    <scroll-view class="re-goods" scroll-x="true">
+        <block wx:for="{{recommend}}">
+            <view class="re-one" bindtap="recommendGoods" data-goodsid="{{item.id}}" data-type="{{item.goods_type}}">
+                <image src="{{item.image}}"></image>
+                <view class="goods_name">{{item.goods_name}}</view>
+                <view class="re-price">￥{{item.min_retail_price}}</view>
+                <view class="vip_money">
+                    <text class="vip-text">钻石再补贴</text>
+                    <text class="vip-money">{{item.min_brokerage}}</text>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>
+<!--商品详情-->
+<view class='goods_content'>
+    <view class='tab'>
+        <!-- <view class='one active'><text>商品评价</text></view>
+      <view class='two'><text>搭配知道</text></view>
+      <view class='three'><text>使用指南</text></view> -->
+        <view class='four active'>
+            <text>商品详情</text>
+        </view>
+    </view>
+    <!-- <view class='one_cont'>
+      <view class='one_top'>
+      </view>
+    </view>
+    <view class='two_cont'>
+    </view>
+    <view class='three_cont'>
+    </view> -->
+    <view class='four_cont'>
+        <view class='detail_img'>
+            <image lazy-load="true" wx:for="{{goods_details}}" class='imgDetails' bindtap="previewImage"
+                   data-img="{{item.image_path+'?imageMogr2/thumbnail/750x'}}"
+                   src="{{item.image_path+'?imageMogr2/thumbnail/750x'}}" mode="widthFix"></image>
+        </view>
+    </view>
+</view>
+<!-- 底部固定区域 -->
+<view class='footer' style="padding-bottom: {{isIphoneX ? '68' : '0'}}rpx;">
+    <navigator class='home' url="../index/index" open-type="switchTab">
+        <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_03.png"/>
+        <text class="ft-text">首页</text>
+    </navigator>
+    <view class='kefu' bindtap="call">
+        <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_05.png"/>
+        <text class="ft-text">客服</text>
+    </view>
+    <navigator url="../cart/cart" open-type="switchTab">
+        <view class='cart'>
+            <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_07.png"/>
+            <text class="ft-text">购物车</text>
+            <text class="cartNum" wx:if="{{cartNum > 0}}">{{cartNum}}</text>
+        </view>
+    </navigator>
+    <view bindtap="buyGood" class='buy'>
+        <text>立即购买</text>
+    </view>
+</view>

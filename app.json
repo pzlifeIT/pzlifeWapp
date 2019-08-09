@@ -90,7 +90,12 @@
         "pages/lucky/getLuckyGood/getLuckyGood",
         "pages/lucky/myPrize/myPrize",
         "pages/lucky/rule/rule",
-        "pages/comfirOrder/selectCoupon/selectCoupon"
+        "pages/comfirOrder/selectCoupon/selectCoupon",
+        "pages/myVoice/myVoice",
+        "pages/voiceList/voiceList",
+        "pages/voiceDetail/voiceDetail",
+        "pages/voiceComfirOrder/voiceComfirOrder",
+        "pages/playVoice/playVoice"
     ],
     "window": {
         "backgroundTextStyle": "dark",

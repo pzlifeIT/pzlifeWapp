@@ -288,11 +288,7 @@ Page({
             attr = this.data.attr;
         console.log(e)
         console.log(name)
-        // if (attr[ind] == id) {
-        //     attr[ind] = 0
-        // } else {
         attr[ind] = id
-        // }
         if (name.indexOf("配送") != -1) {
             app.toast({title: "当前规格只能配送到家"})
             this.setData({

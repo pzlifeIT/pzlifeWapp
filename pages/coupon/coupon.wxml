@@ -26,7 +26,7 @@
                 <view class="left-circle"></view>
                 <view class="right-circle {{item.is_use == 2 ? '':'bg-used'}}"></view>
             </view>
-            <view class="right" bindtap="goUse" data-couponid="{{item.gs_id}}" data-type="{{item.level}}" wx:if="{{item.is_use == 2}}">立即使用</view>
+            <view class="right" bindtap="goUse" data-couponid="{{item.gs_id}}" data-type="{{item.level}}" data-goodstype="{{item.goods_type}}" wx:if="{{item.is_use == 2}}">立即使用</view>
             <view class="right nused bg-used noe" wx:elif="{{item.is_use == 1}}">已使用</view>
         </view>
     </block>

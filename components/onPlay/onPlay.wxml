@@ -1,0 +1,20 @@
+<!--components/onPlay/onPlay.wxml-->
+<view class="play-com">
+    <view class="continue">
+        <text class="duration">{{currentTime}}</text>
+        <slider class="progress" min="0" max="{{duration || 100}}" step="1" block-size="12" activeColor="#e61f18" value="{{current}}"  bindchanging="slider" />
+        <!--<progress class="progress" border-radius="20" percent="{{time}}" stroke-width="2" activeColor="#e61f18" active active-mode="forwards" />-->
+        <text class="duration">{{his}}</text>
+    </view>
+    <view class="buttons">
+        <block wx:if="{{isWhile}}">
+        <image class="icon1" bindtap="doWhile" lazy-load src="{{imgHost}}while.png" wx:if="{{while}}"></image>
+        <image class="icon1" bindtap="doWhile" lazy-load src="{{imgHost}}dowhile.png" wx:else></image>
+        </block>
+        <image wx:if="{{isPre}}" class="icon2" lazy-load src="{{imgHost}}next.png"></image>
+        <image class="icon3" bindtap="play" lazy-load src="{{imgHost}}stopplay.png" wx:if="{{isPlay}}"></image>
+        <image class="icon3" bindtap="stopplay" lazy-load src="{{imgHost}}play.png" wx:else></image>
+        <image wx:if="{{isNext}}" class="icon4" lazy-load src="{{imgHost}}pre.png"></image>
+        <image wx:if="{{isTimeOut}}" class="icon5" lazy-load src="{{imgHost}}timeout.png"></image>
+    </view>
+</view>

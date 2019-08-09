@@ -2,8 +2,8 @@
 <home page-name="{{sub_name}}"></home>
 <view class='goods' style="margin-top: {{navHight * 2}}rpx">
     <block wx:for='{{goodsList}}'>
-        <navigator url='/pages/goods/detail?goodid={{item.id}}' wx:for='{{item}}' wx:key='{{item.id}}'>
-            <view class='one_goods'>
+        <block wx:for='{{item}}' wx:key='{{item.id}}'>
+            <view class='one_goods' bindtap="goDetail" data-goodid="{{item.id}}" data-goodtype="{{item.goods_type}}">
                 <view class='img'>
                     <image class='goods_img' src='{{item.image+"?imageMogr2/thumbnail/370x"}}' lazy-load="true"></image>
                 </view>
@@ -15,7 +15,7 @@
                 </view>
                 
             </view>
-        </navigator>
+        </block>
     </block>
 </view>
 

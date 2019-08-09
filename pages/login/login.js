@@ -15,10 +15,11 @@ Page({
             iv = e.detail.iv ? e.detail.iv : '',
             that = this,
             route = app.globalData.routePage;
+        that.getUserRead(encrypteddata, iv);
         wx.login({
             success(res) {
                 if (res.code) {
-                    that.getUserRead(encrypteddata, iv);
+
                     app.wxrequest({
                         url: "user/loginuserbywx",
                         data: { code: res.code, buid: app.globalData.pid, encrypteddata: encrypteddata, iv: iv },

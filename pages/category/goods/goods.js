@@ -11,7 +11,7 @@ Page({
         reach: true,
         goodsList: [],
         sub_name: "",
-        navHight:app.globalData.topHeadHeight
+        navHight: app.globalData.topHeadHeight
     },
 
     /**
@@ -31,7 +31,19 @@ Page({
             title: options.sub_name || "商品列表"
         })
     },
-
+    goDetail: function (e) {
+        let type = e.currentTarget.dataset.goodtype;
+        let id = e.currentTarget.dataset.goodid;
+        if (type == 1) {
+            wx.navigateTo({
+                url: '/pages/goods/detail?goodid=' + id
+            })
+        } else if (type == 2) {
+            wx.navigateTo({
+                url: "/pages/voiceDetail/voiceDetail?goodid=" + id
+            })
+        }
+    },
     /**
      * 获取专题商品
      */
@@ -116,7 +128,8 @@ Page({
             sub_id = this.data.sub_id,
             share = app.share({
                 title: this.data.sub_name || '商品列表',
-                path: '/pages/category/goods/goods?sub_id=' + sub_id + "&sub_name=" + this.data.sub_name
+                path: '/pages/category/goods/goods?sub_id=' + sub_id + "&sub_name=" + this.data.sub_name,
+                imageUrl: ''
             })
         return share
     }

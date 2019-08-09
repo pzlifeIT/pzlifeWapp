@@ -27,7 +27,7 @@
                 <view class="right" bindtap="getCoupon" data-couponid="{{item.id}}" wx:if="{{item.is_have == 2}}">
                     立即领取
                 </view>
-                <view class="right bcolor" bindtap="goUse" data-urltype="{{item.level}}" data-typeid="{{item.gs_id}}" wx:if="{{item.is_have == 1}}">
+                <view class="right bcolor" bindtap="goUse" data-urltype="{{item.level}}" data-typeid="{{item.gs_id}}" wx:if="{{item.is_have == 1}}" data-goodstype="{{item.goods_type}}">
                     立即使用
                 </view>
             </view>

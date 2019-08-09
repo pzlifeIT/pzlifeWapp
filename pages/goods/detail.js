@@ -311,10 +311,18 @@ Page({
         })
     },
     recommendGoods: function (e) {
-        let id = e.currentTarget.dataset.goodsid
-        wx.navigateTo({
-            url: "/pages/goods/detail?goodid=" + id
-        })
+        let id = e.currentTarget.dataset.goodsid;
+        let type = e.currentTarget.dataset.type;
+        if (type == 1){
+            wx.navigateTo({
+                url: "/pages/goods/detail?goodid=" + id
+            })
+        } else if (type == 2){
+            wx.navigateTo({
+                url: "/pages/voiceDetail/voiceDetail?goodid=" + id
+            })
+        }
+
     },
     /**
      * 获取商品详情
@@ -369,7 +377,7 @@ Page({
         if (this.data.identity != 4) return
         let t = this
         app.wxrequest({
-            url: 'shopmanage/getGoodsAway',
+            url: 'shopMmanage/getGoodsAway',
             data: {
                 goods_id: t.data.goodid
             },

@@ -126,7 +126,7 @@ margin-top: 20rpx;
 
 .goods_desc .rebate_money {
     font-size: 26rpx;
-    color: #f99f36;
+    color: #e61f18;
 }
 
 .goods_data .sum {

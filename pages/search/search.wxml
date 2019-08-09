@@ -53,8 +53,7 @@
 <view class="nest" wx:if="{{goodsList.length>=1 && search!=''}}">
     <block  wx:for='{{goodsList}}'>
         <view class='goods' wx:for="{{item}}" wx:key="{{item.id}}">
-            <navigator url='/pages/goods/detail?goodid={{item.id}}'>
-                <view class='one_goods'>
+                <view class='one_goods' bindtap="goDetail" data-type="{{item.goods_type}}" data-id="{{item.id}}">
                     <view class='img'>
                         <image class='goods_img' src='{{item.image+"?imageMogr2/thumbnail/370x"}}'></image>
                     </view>
@@ -63,7 +62,6 @@
                     <text class='price'>￥{{item.min_retail_price}}</text>
                     <view class="vipprice">钻石再补贴 {{item.min_brokerage}}</view>
                 </view>
-            </navigator>
         </view>
     </block>
 </view>

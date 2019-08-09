@@ -18,17 +18,26 @@ Page({
     goUse: function (e) {
         let type = e.currentTarget.dataset.urltype;
         let typeId = e.currentTarget.dataset.typeid;
-        if (type == 1) {
+        let goods_type = e.currentTarget.dataset.goodstype;
+        if (type == 1 && goods_type == 2){
             wx.navigateTo({
-                url: "/pages/goods/detail?goodid=" + typeId
-            })
-        } else if (type == 2) {
-            wx.navigateTo({
-                url: "/pages/category/goods/goods?sub_id=" + typeId
-            })
+                url:"/pages/voiceDetail/voiceDetail?goodid="+typeId
+            });
+            return
         }else {
-            app.toast({title:"优惠券类型错误"})
+            if (type == 1 ) {
+                wx.navigateTo({
+                    url: "/pages/goods/detail?goodid=" + typeId
+                })
+            } else if (type == 2) {
+                wx.navigateTo({
+                    url: "/pages/category/goods/goods?sub_id=" + typeId
+                })
+            }else {
+                app.toast({title:"优惠券类型错误"})
+            }
         }
+
     },
     /**
      * 领取优惠券

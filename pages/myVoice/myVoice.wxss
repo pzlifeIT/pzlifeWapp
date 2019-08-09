@@ -1,0 +1,144 @@
+
+page{
+    width: 100%;
+    /* height: 100%; */
+    background: #F7F7F7;
+}
+.head{
+    width: 100%;
+    height: 86rpx;
+    background: #fff;
+    margin-bottom: 10rpx;
+    border-top: 1rpx solid #f7f7f7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.state-text{
+    height: 86rpx;
+    width: 50%;
+    float: left;
+    text-align: center;
+    line-height: 86rpx;
+    color: #404040;
+    font-size: 30rpx;
+}
+.active{
+    color: #E61F18;
+}
+.line{
+    width: 50%;
+    height: 2rpx;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+}
+.line s{
+    width: 134rpx;
+    height: 2rpx;
+    margin: 0 auto;
+    background: #E61F18;
+    display: block;
+}
+.state-text:nth-of-type(1).active~.line{
+    transform: translate3d(0,0,0);
+}
+.state-text:nth-of-type(2).active~.line{
+    transform: translate3d(100%,0,0);
+}
+.state-text:nth-of-type(3).active~.line{
+    transform: translate3d(200%,0,0);
+}
+.list{
+    width: 750rpx;
+    height: auto;
+    overflow: auto;
+    margin-top: 86rpx;
+}
+.voice {
+    width: 750rpx;
+    height: auto;
+    overflow: hidden;
+    margin-top: 10rpx;
+    background: #FFFFFF;
+    display: flex;
+    position: relative;
+}
+.voice-logo{
+    width: 181rpx;
+    height: 100%;
+}
+.logo{
+    width: 140rpx;
+    height: 140rpx;
+    margin: 30rpx 0 0 22rpx;
+    background: #389eec;
+    border-radius: 10rpx;
+}
+.voice-info{
+    width: 569rpx;
+    height: 100%;
+    padding-top: 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.info-left{
+    width: 569rpx;
+}
+.name{
+    width: 374rpx;
+    font-size: 34rpx;
+    color: #191919;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.sub_name{
+  width: 374rpx;
+  overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.sub_name,.time{
+    font-size: 30rpx;
+    color: #666666;
+    margin-left: 10rpx;
+    height: 40rpx;
+}
+.time{
+    display: flex;
+    justify-content: left;
+    margin-top: 46rpx;
+}
+.valid{
+    font-size: 32rpx;
+    color: #000;
+    font-weight: bold;
+}
+.valid-time{
+    font-size: 30rpx;
+    color: #666666;
+    line-height: 60rpx;
+}
+.icon-time{
+    width: 34rpx;
+    height: 34rpx;
+    margin-right: 10rpx;
+    
+}
+.lose{
+    width: 194rpx;
+    height: 112rpx;
+    position: absolute;
+    top: 47rpx;
+    left: 378rpx;
+    transform: rotate(-35deg);
+    z-index: 10;
+}

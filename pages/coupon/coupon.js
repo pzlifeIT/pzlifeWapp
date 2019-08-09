@@ -24,6 +24,13 @@ Page({
     goUse: function (e) {
         let id = e.currentTarget.dataset.couponid;
         let type = e.currentTarget.dataset.type;
+        let goods_type = e.currentTarget.dataset.goodstype;
+        if (type == 1 && goods_type == 2){
+            wx.navigateTo({
+                url:"/pages/voiceDetail/voiceDetail?goodid="+id
+            });
+            return
+        }
         if (type == 1){
             wx.navigateTo({
                 url:"/pages/goods/detail?goodid="+id

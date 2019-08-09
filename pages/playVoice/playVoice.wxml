@@ -1,0 +1,7 @@
+<!--pages/playVoice/playVoice.wxml-->
+<!--<audio class="audio" controls src="https://audioplay-1254432228.cos.ap-shanghai.myqcloud.com/0120806d9da65b553678cbc82def68ef79ee3f3d.mp3"></audio>-->
+<view class="name">{{name}}</view>
+<view class="center">
+    <image class="bg" lazy-load src="{{imgHost}}beijing_03_02.jpg"></image>
+    <voice class="voice" voice="{{audio}}" bind:getVoice="getVoice" ></voice>
+</view>

@@ -164,7 +164,7 @@ Page({
     onShareAppMessage: function() {
         let that = this,
             share = app.share({
-                title: "钻石合伙人召集令",
+                title: "邀请钻石会员",
                 path: '/pages/diamActive/diamActive',
                 imageUrl: "https://webimages.pzlive.vip/gz_02.png"
             })

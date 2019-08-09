@@ -139,7 +139,7 @@
         <view class="re-title">为你推荐</view>
         <scroll-view class="re-goods" scroll-x="true">
             <block wx:for="{{recommend}}">
-                <view class="re-one" bindtap="recommendGoods" data-goodsid="{{item.id}}">
+                <view class="re-one" bindtap="recommendGoods" data-goodsid="{{item.id}}" data-type="{{item.goods_type}}">
                     <image src="{{item.image}}"></image>
                     <view class="goods_name">{{item.goods_name}}</view>
                     <view class="re-price">￥{{item.min_retail_price}}</view>
