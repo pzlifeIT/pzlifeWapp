@@ -8,7 +8,7 @@
         </block>
     </swiper>
     <!--播放样式组件-->
-    <!--<play class="voice-play" voice="{{goodData.audio}}" ></play>-->
+    <play class="voice-play" voice="{{goodData.audio}}" ></play>
 </view>
 <view class='desc'>
     <view class='text'>

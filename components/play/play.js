@@ -57,8 +57,7 @@ Component({
         this.setData({
             audio: this.properties.voice
         })
-        voice.src = this.properties.voice
-        console.log(voice.src);
+        voice.src = this.properties.voice;
         setTimeout(function () {
             console.log(voice.duration)
             let t = Math.floor(voice.duration % 3600);
@@ -67,7 +66,6 @@ Component({
                 his: Math.floor(voice.duration / 3600) + ':' + Math.floor(t / 60) + ':' + t % 60
             })
         }, 1000)
-        this.playVoice()
         //监听播放
         voice.onPlay(()=>{
             console.log('正在播放');
@@ -137,10 +135,8 @@ Component({
         playVoice: function () {
             let that = this,
                 time;
-            //获取音频
-            // voice.src = that.data.audio;
             //播放
-            voice.play()
+            voice.play();
             console.log(voice.duration) // 0
             //利用定时器获取音频时长
             setTimeout(function () {
