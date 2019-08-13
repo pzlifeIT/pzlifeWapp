@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 21,
+			"current": 77,
 			"list": [
 				{
 					"id": 0,
@@ -200,7 +200,7 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 24,
 					"name": "活动",
 					"pathName": "pages/activity/activity",
 					"query": "",
@@ -572,10 +572,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 77,
 					"name": "voicedetail",
 					"pathName": "pages/voiceDetail/voiceDetail",
-					"query": "scene=EE",
+					"query": "goodid=1622",
 					"scene": null
 				},
 				{

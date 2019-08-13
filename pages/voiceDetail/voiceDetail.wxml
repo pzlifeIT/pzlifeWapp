@@ -8,12 +8,12 @@
         </block>
     </swiper>
     <!--播放样式组件-->
-    <!--<voice class="voice-play"></voice>-->
+    <!--<play class="voice-play" voice="{{goodData.audio}}" ></play>-->
 </view>
 <view class='desc'>
     <view class='text'>
-        <text class='title'>{{goods_data.goods_name}}</text>
-        <text class='subtitle'>{{goods_data.subtitle}}</text>
+        <view class='title'>{{goods_data.goods_name}}</view>
+        <view class='subtitle'>{{goods_data.subtitle}}</view>
     </view>
     <view class='price'>
         <view class="price-num">
@@ -76,28 +76,20 @@
                        src='{{goodData.sku_image}}' ></image>
             </view>
             <view class='goods_desc fl' wx:if="{{repertory}}">
-                <text class='pop_price' wx:if="{{buy}}">价格：￥{{skuInfo.retail_price}}</text>
-                <text class='pop_price' wx:else>价格：￥{{goods_data.min_retail_price}}
-                    <text
-                            wx:if="{{goods_data.min_retail_price != goods_data.max_retail_price}}">-￥{{goods_data.max_retail_price}}
-                    </text>
-                </text>
-                <text class='selected' wx:if="{{buy}}">已选择：{{skuInfo.name}}</text>
+                <text class='pop_price' wx:if="{{buy}}">价格：￥{{goodData.retail_price}}</text>
+                <text class='pop_price' wx:else>价格：￥{{goods_data.min_retail_price}}<text wx:if="{{goods_data.min_retail_price != goods_data.max_retail_price}}">-￥{{goods_data.max_retail_price}}</text></text>
+                <text class='selected' wx:if="{{buy}}">已选择：{{goodData.name}}</text>
                 <text class='selected' wx:else>未选择规格</text>
-                <text class='present' wx:if="{{buy}}">赠送积分：{{skuInfo.integral_active}}积分</text>
+                <text class='present' wx:if="{{buy}}">赠送积分：{{goodData.integral_active}}积分</text>
                 <text class='present' wx:else>
                     <text> 赠送积分：</text>
                     <text>{{goods_data.min_integral_active}}</text>
-                    <text wx:if="{{goods_data.min_integral_active != goods_data.max_integral_active}}">-{{goods_data.max_integral_active}}
-                    </text>
+                    <text wx:if="{{goods_data.min_integral_active != goods_data.max_integral_active}}">-{{goods_data.max_integral_active}}</text>
                     <text>积分</text>
                 </text>
-                <text class="present" wx:if="{{buy}}">钻石再补贴: ￥{{skuInfo.brokerage}}</text>
+                <text class="present" wx:if="{{buy}}">钻石再补贴: ￥{{goodData.brokerage}}</text>
                 <text class="present" wx:else>
-                    <text>钻石再补贴: ￥{{goods_data.min_brokerage}}</text>
-                    <text class="din"
-                          wx:if="{{goods_data.min_brokerage != goods_data.max_brokerage}}">-￥{{goods_data.max_brokerage}}
-                    </text>
+                    <text>钻石再补贴: ￥{{goods_data.min_brokerage}}</text><text class="din" wx:if="{{goods_data.min_brokerage != goods_data.max_brokerage}}">-￥{{goods_data.max_brokerage}}</text>
                 </text>
             </view>
             <view class='goods_desc fl' wx:else>

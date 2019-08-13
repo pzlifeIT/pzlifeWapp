@@ -23,24 +23,30 @@ page {
 }
 
 .member01 {
-    height: 1126rpx;
+    height: 1000rpx;
 }
 
 .member02 {
-    height: 759rpx;
+    height: 1000rpx;
+}
+.member03{
+    height: 1010rpx;
 }
 
 .buy {
-    width: 750rpx;
+    width: 612rpx;
     height: 92rpx;
-    background: #ffcb0f;
+    background: #E61F18;
     text-align: center;
     line-height: 92rpx;
-    font-size: 30rpx;
-    color: #292929;
+    font-size: 36rpx;
+    color: #fff;
     font-weight: bold;
     position: fixed;
-    bottom: 0;
+    bottom: 40rpx;
+    left: 69rpx;
+    border-radius: 40rpx;
+    box-shadow: 0 -5rpx 10rpx rgba(0, 0, 0, 0.2) inset;
 }
 
 .mask {

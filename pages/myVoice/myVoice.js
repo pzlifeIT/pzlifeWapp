@@ -28,11 +28,13 @@ Page({
     playVoice: function (e) {
         let audio = e.currentTarget.dataset.audio;
         let name = e.currentTarget.dataset.name;
-        if (this.data.head == 2){
+        let time = e.currentTarget.dataset.time;
+        let id = e.currentTarget.dataset.id;
+        if (this.data.head == 2) {
             return
         }
         wx.navigateTo({
-            url: '/pages/playVoice/playVoice?audio=' + audio + "&name=" + name
+            url: '/pages/playVoice/playVoice?audio=' + audio + "&name=" + name + "&time=" + time + "&id="+id
         })
     },
     /**
@@ -63,6 +65,7 @@ Page({
                     let list = that.data.list
                     that.disTime(res.audioList)
                     list.push(res.audioList)
+                    console.log(list)
                     that.setData({
                         list: list,
                         page: that.data.page + 1
@@ -89,9 +92,10 @@ Page({
     },
     disTime: function (data) {
         for (let i = 0; i < data.length; i++) {
+            data[i]._end_time = data[i].end_time
             data[i].end_time = data[i].end_time.split(' ')[0].replace(/-/g, '.')
             data[i].create_time = data[i].create_time.split(' ')[0].replace(/-/g, '.')
-
+            data[i].update_time = data[i].update_time.split(' ')[0].replace(/-/g, '.')
         }
         return data
     },
@@ -136,12 +140,5 @@ Page({
     onReachBottom: function () {
         if (!this.data.reach) return
         this.getMyVoice()
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
     }
 })

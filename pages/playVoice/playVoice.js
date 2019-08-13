@@ -8,7 +8,9 @@ Page({
     data: {
         imgHost: '',
         name:'',
-        audio:''
+        audio:'',
+        time:'',
+        id:''
     },
 
     /**
@@ -18,7 +20,9 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost,
             audio:options.audio,
-            name:options.name
+            name:options.name,
+            time:options.time,
+            id:options.id
         })
     },
 
@@ -61,13 +65,6 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
 
     }
 })

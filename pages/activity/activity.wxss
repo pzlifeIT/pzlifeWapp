@@ -18,11 +18,14 @@ page {
 }
 
 .nomember01 {
-    height: 1061rpx;
+    height: 1005rpx;
 }
 
 .nomember02 {
-    height: 1238rpx;
+    height: 1005rpx;
+}
+.nomember03{
+    height: 860rpx;
 }
 
 .mask {

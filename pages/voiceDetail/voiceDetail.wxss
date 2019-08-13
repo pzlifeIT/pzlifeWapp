@@ -1,4 +1,7 @@
 /* pages/voiceDetail/voiceDetail.wxss */
+.voice{
+  position: relative;
+}
 .voice,.img,swiper {
     width: 750rpx;
     height: 749rpx;
@@ -17,6 +20,7 @@
     position: absolute;
     bottom: 36rpx;
     z-index: 99;
+    background: rgba(0, 0, 0, .5)
 }
 .desc {
     width: 750rpx;
@@ -30,7 +34,7 @@
 }
 
 .desc .text {
-    width: 550rpx;
+    width: 510rpx;
     float: left;
     margin: 20rpx;
 }
@@ -94,6 +98,12 @@
     font-size: 36rpx;
     color: #101010;
     margin-bottom: 17rpx;
+    max-width: 510rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
 }
 
 .desc .subtitle {
@@ -665,13 +675,14 @@
 .voice-name{
     font-size: 30rpx;
     color: #000;
-    height: 70rpx;
+    height: auto;
     border-bottom: 1rpx solid #d8d8d8;
     line-height: 70rpx;
     display: flex;
     align-items: center;
     padding-left: 26rpx;
     box-sizing: border-box;
+    overflow: auto;
 }
 .stop-play{
     width: 54rpx;
@@ -679,7 +690,7 @@
     margin-right: 16rpx;
 }
 .button-select{
-    width: 150rpx;
+    width: 176rpx;
     height: 60rpx;
     position: absolute;
     right: 31rpx;

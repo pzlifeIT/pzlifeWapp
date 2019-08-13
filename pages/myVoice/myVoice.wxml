@@ -8,7 +8,7 @@
 <view class="list">
     <block wx:for="{{list}}" wx:for-item="audios" wx:for-index="index" wx:key="{{index}}">
         <block wx:for="{{audios}}" >
-            <view class="voice" bindtap="playVoice" data-audio="{{item.audio.audio}}" data-name="{{item.audio.name}}">
+            <view class="voice" bindtap="playVoice" data-audio="{{item.audio.audio}}" data-name="{{item.audio.name}}" data-time="{{item._end_time}}" data-id="{{item.audio_id}}">
                 <view class="voice-logo">
                     <image class="logo" lazy-load src="{{imgHost}}image_03.jpg"></image>
                 </view>
@@ -23,7 +23,7 @@
                     </view>
                     <view class="info-right">
                         <view class="valid">有效期</view>
-                        <view class="valid-time">{{item.create_time}}至{{item.end_time}}</view>
+                        <view class="valid-time">{{item.update_time}}至{{item.end_time}}</view>
                     </view>
                 </view>
                 <image wx:if="{{head == 2}}" class="lose" lazy-load src="{{imgHost}}lose.png"></image>

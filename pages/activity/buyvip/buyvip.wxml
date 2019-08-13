@@ -1,15 +1,16 @@
 <!--pages/activity/buyvip/buyvip.wxml-->
 <home page-name="购买钻石会员"></home>
-<swiper class='pz-swiper' autoplay='true' indicator-dots="true" circular='true'  style="margin-top: {{navHight * 2}}rpx">
-	<block wx:for="{{imgUrls}}">
-		<swiper-item>
-			<image lazy-load="true" src="{{item}}" class="slide-image" />
-		</swiper-item>
-	</block>
-</swiper>
-<view class="bg">
-	<image class="member01" lazy-load="true" src="{{imgHost}}member01.png"></image>
-	<image class="member02" lazy-load="true" src="{{imgHost}}member02.png"></image>
+<!--<swiper class='pz-swiper' autoplay='true' indicator-dots="true" circular='true'  style="margin-top: {{navHight * 2}}rpx">-->
+	<!--<block wx:for="{{imgUrls}}">-->
+		<!--<swiper-item>-->
+			<!--<image lazy-load="true" src="{{item}}" class="slide-image" />-->
+		<!--</swiper-item>-->
+	<!--</block>-->
+<!--</swiper>-->
+<view class="bg" style="margin-top: {{navHight * 2}}rpx">
+	<image class="member01" lazy-load="true" src="{{imgHost}}gmzsjl_05.jpg"></image>
+	<image class="member02" lazy-load="true" src="{{imgHost}}gmzsjl_08.jpg"></image>
+	<image class="member03" lazy-load="true" src="{{imgHost}}gmzsjl_07.jpg"></image>
 	<view class="buy" bindtap="buy">立即购买</view>
 </view>
 

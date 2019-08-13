@@ -3,5 +3,5 @@
     "voice":"/components/onPlay/onPlay"
   },
   "component":true,
-  "navigationBarTitleText": "音频详情"
+  "navigationBarTitleText": "音频播放"
 }

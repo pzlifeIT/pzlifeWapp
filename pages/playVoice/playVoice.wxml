@@ -3,5 +3,5 @@
 <view class="name">{{name}}</view>
 <view class="center">
     <image class="bg" lazy-load src="{{imgHost}}beijing_03_02.jpg"></image>
-    <voice class="voice" voice="{{audio}}" bind:getVoice="getVoice" ></voice>
+    <voice class="voice" voice="{{audio}}" bind:getVoice="getVoice" voiceName="{{name}}" time="{{time}}" voiceId="{{id}}" ></voice>
 </view>

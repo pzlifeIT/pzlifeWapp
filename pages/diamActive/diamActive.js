@@ -11,7 +11,8 @@ Page({
         ident: 0,
         stype: 0,
         pop: false,
-        navHight:app.globalData.topHeadHeight
+        navHeight:app.globalData.topHeadHeight,
+        hint:false
     },
     preventTouchMove: function() {
 
@@ -85,18 +86,9 @@ Page({
             success(res) {
                 that.setData({
                     ident: 2,
-                    pop: false
+                    pop: false,
+                    hint:true
                 });
-                app.modal({
-                    title:"是否去个人中心",
-                    context:"点击确定将跳转到个人中心",
-                    success(res){
-                        wx.switchTab({
-                            url:"/pages/my/my"
-                        })
-                    }
-                })
-
             },
             fail(res) {
                 app.toast({
@@ -114,6 +106,16 @@ Page({
                 })
             }
         })
+    },
+    stand:function(){
+      this.setData({
+          hint:false
+      })
+    },
+    goIndex:function(){
+      wx.switchTab({
+          url:"/pages/index/index"
+      })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

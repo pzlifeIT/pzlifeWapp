@@ -1,7 +1,5 @@
-<home page-name="钻石合伙人"></home>
-<image lazy-load="true" class="first" src="{{imgHost}}guiz02.png" style="margin-top: {{navHight * 2}}rpx"></image>
-<image lazy-load="true" class="second" src="{{imgHost}}guiz03.png"></image>
-
+<home page-name="邀请钻石会员"></home>
+<image lazy-load="true" class="first" src="{{imgHost}}yqzshy_02.jpg" style="margin-top: {{navHeight * 2}}rpx"></image>
 <view class="mask" wx:if="{{mask && ident != 0}}" catchtouchmove='preventTouchMove'>
     <image lazy-load="true" class="shou" src="{{imgHost}}shou.png"></image>
     <view class="center">
@@ -31,5 +29,13 @@
                 <checkbox class="ch" value="1">同意</checkbox>
             </view>
         </checkbox-group>
+    </view>
+</view>
+<view class="mask ms" wx:if="{{hint}}" catchtouchmove='preventTouchMove'>
+    <image lazy-load="true" class="hint" src="{{imgHost}}tan.jpg"></image>
+    <view class="wk">
+        <view class="hint-text">终身享受75%的钻石再补贴，复利补贴享不停！</view>
+        <view class="left" bindtap="stand">留在此页</view>
+        <view class="right" bindtap="goIndex">去首页</view>
     </view>
 </view>

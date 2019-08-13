@@ -33,7 +33,7 @@
         </view>
     </view>
     <!--两块div-->
-    <view class="" wx:if="{{sub.is_show == 1}}" style="order: {{sub.model_order}}">
+    <view class="box" wx:if="{{sub.is_show == 1}}" style="order: {{sub.model_order}}">
         <view class="double-div">
             <view class="div-left" wx:for="{{sub.son}}">
                 <image lazy-load="true" bindtap="goUrl" data-jump="{{item.jump_type}}"

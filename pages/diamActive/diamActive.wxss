@@ -1,13 +1,13 @@
 /* pages/diamActive/diamActive.wxss */
 .first{
     width: 750rpx;
-    height: 804rpx;
+    height: 1187rpx;
     display: block;
     margin-top: 140rpx;
 }
 .second{
     width: 750rpx;
-    height: 868rpx;
+    height: 622rpx;
     display: block;
     /*margin-bottom: 92rpx;*/
 }
@@ -150,3 +150,48 @@
     height: 100%;
     transform:scale(0.7);
 }
+.hint{
+    width:640rpx;
+    height: 515rpx;
+}
+.wk{
+    width: 640rpx;
+    height: 243rpx;
+    border-bottom-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+    background: #FFFFFF;
+}
+.hint-text{
+    font-size: 30rpx;
+    color: #000000;
+    text-transform: uppercase;
+    line-height: 1.583;
+    text-align: center;
+    margin: 20rpx 0;
+}
+.ms{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background: rgba(0,0,0,.1);
+}
+.left,.right{
+    width: 260rpx;
+    height: 88rpx;
+    text-align: center;
+    line-height: 88rpx;
+    float: left;
+    font-size: 32rpx;
+    margin-top: 30rpx;
+}
+.left{
+    color: #000;
+    border: 1rpx solid #000;
+    margin-left: 44rpx;
+    margin-right: 34rpx;
+}
+.right{
+    color: #E61F18;
+    border: 1rpx solid #e61f18;
+}
+

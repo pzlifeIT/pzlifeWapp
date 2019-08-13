@@ -113,10 +113,11 @@ Page({
                 skuInfo.name = sku[i].name
                 skuInfo.brokerage = sku[i].brokerage
                 skuInfo.integral_active = sku[i].integral_active
+                skuInfo.sku_image = this.data.goods_data.image
             }
         }
         this.setData({
-            skuInfo: skuInfo,
+            goodData: skuInfo,
             buy: true
         })
     },
@@ -179,6 +180,12 @@ Page({
             })
             return
         }
+        if (this.data.attr.length <= 0) {
+            app.toast({
+                title: '请选择规格'
+            })
+            return
+        }
         let that = this
         app.judgelogin({
             success(res) {
@@ -206,19 +213,21 @@ Page({
             success(res) {
                 console.log(res)
                 goodData.sku_image = res.goods_data.image
+                goodData.audio = res.goods_sku[0].audios[0].audio
                 if (res.goods_sku.length == 1) {
-                    goodData.sku_price = res.goods_sku[0].retail_price
-                    goodData.sku_image = res.goods_sku[0].sku_image
+                    goodData.retail_price = res.goods_sku[0].retail_price
                     goodData.integral_active = res.goods_sku[0].integral_active
-                    goodData.sku_name = res.goods_sku[0].sku_name
+                    goodData.name = res.goods_sku[0].name
                     goodData.id = res.goods_sku[0].id
                     goodData.brokerage = res.goods_sku[0].brokerage
                     buy = true
+                    attr[0] = res.goods_sku[0].id
                     // attr.push(res.goods_spec[0].list[0].id)
                     if (parseInt(res.goods_sku[0].stock) < 1) {
                         repertory = false
                     }
                 }
+                console.log(goodData)
                 that.setData({
                     goods_banner: res.goods_banner,
                     goods_data: res.goods_data,
@@ -345,8 +354,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-        this.getVoiceDetail()
-        this.getgoodsrecommend()
+
     },
 
     /**
@@ -359,6 +367,8 @@ Page({
         })
         this.getCartNum()
         this.getGoodsAway()
+        this.getVoiceDetail()
+        this.getgoodsrecommend()
     },
 
     /**

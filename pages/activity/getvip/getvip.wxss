@@ -23,11 +23,14 @@ page {
 }
 
 .member01 {
-    height: 1126rpx;
+    height: 1000rpx;
 }
 
 .member02 {
-    height: 759rpx;
+    height: 1000rpx;
+}
+.member03{
+    height: 1010rpx;
 }
 
 .buy {
