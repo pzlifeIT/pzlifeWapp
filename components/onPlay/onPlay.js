@@ -10,19 +10,19 @@ Component({
     properties: {
         isWhile: {
             type: Boolean,
-            value: true
+            value: false
         },
         isPre: {
             type: Boolean,
-            value: true
+            value: false
         },
         isNext: {
             type: Boolean,
-            value: true
+            value: false
         },
         isTimeOut: {
             type: Boolean,
-            value: true
+            value: false
         },
         voice: {
             type: String,
