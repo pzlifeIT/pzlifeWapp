@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "play":"/components/play/play"
+    "voice":"/components/onPlay/onPlay"
   },
   "component":true,
   "navigationBarTitleText": "音频详情"

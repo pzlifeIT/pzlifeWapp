@@ -8,8 +8,9 @@
         </block>
     </swiper>
     <!--播放样式组件-->
-    <play class="voice-play" voice="{{goodData.audio}}" ></play>
+    <voice class="voice-play" voice="{{goodData.audio}}"  voiceName="{{goodData.name}}" ></voice>
 </view>
+
 <view class='desc'>
     <view class='text'>
         <view class='title'>{{goods_data.goods_name}}</view>
@@ -18,8 +19,7 @@
     <view class='price'>
         <view class="price-num">
             <text class="din fl">￥{{goods_data.min_retail_price}}</text>
-            <text class="din fl"
-                  wx:if="{{goods_data.min_retail_price != goods_data.max_retail_price}}">-￥{{goods_data.max_retail_price}}
+            <text class="din fl" wx:if="{{goods_data.min_retail_price != goods_data.max_retail_price}}">-￥{{goods_data.max_retail_price}}
             </text>
         </view>
         <view class="vipprice">

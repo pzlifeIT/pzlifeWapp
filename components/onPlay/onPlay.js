@@ -59,7 +59,7 @@ Component({
             audio: this.properties.voice,
             voiceName:this.properties.voiceName
         })
-        // voice.src = this.properties.voice;
+        voice.src = this.properties.voice;
         console.log(background.src)
         //如果当前播放的音频和
         if (background.src != this.properties.voice) {
