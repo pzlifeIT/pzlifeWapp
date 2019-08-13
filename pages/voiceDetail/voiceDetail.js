@@ -292,6 +292,7 @@ Page({
             sku_id:''
         })
     },
+    
     getgoodsrecommend: function () {
         let that = this
         app.wxrequest({
