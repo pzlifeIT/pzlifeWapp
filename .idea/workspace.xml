@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
       <change beforePath="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,20 +150,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="785">
-              <caret line="277" column="25" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="25" />
+            <state relative-caret-position="617">
+              <caret line="279" column="3" lean-forward="true" selection-start-line="279" selection-start-column="3" selection-end-line="279" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+            <state relative-caret-position="365">
+              <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#view#0;n#!!top" expanded="true" />
               </folding>
@@ -294,8 +292,8 @@
         <option value="$PROJECT_DIR$/components/onPlay/onPlay.wxss" />
         <option value="$PROJECT_DIR$/pages/order/order.wxml" />
         <option value="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.js" />
-        <option value="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml" />
         <option value="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxss" />
+        <option value="$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml" />
       </list>
     </option>
   </component>
@@ -497,7 +495,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1326318000" />
+    <option name="totallyTimeSpent" value="1326327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -886,8 +884,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+        <state relative-caret-position="365">
+          <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#view#0;n#!!top" expanded="true" />
           </folding>
@@ -896,8 +894,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/order/orderDetail/orderDetail.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="785">
-          <caret line="277" column="25" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="25" />
+        <state relative-caret-position="617">
+          <caret line="279" column="3" lean-forward="true" selection-start-line="279" selection-start-column="3" selection-end-line="279" selection-end-column="3" />
         </state>
       </provider>
     </entry>

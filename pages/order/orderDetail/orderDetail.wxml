@@ -79,8 +79,7 @@
     </view>
     <view class="or-footer">
         <view class="footer-left">
-            <text class="sum">共付：
-                <text class="total">￥{{order_info.pay_money}}</text>
+            <text class="sum">共付：<text class="total">￥{{order_info.pay_money}}</text>
             </text>
         </view>
     </view>
