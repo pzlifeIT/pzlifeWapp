@@ -213,7 +213,6 @@ Page({
             success(res) {
                 console.log(res)
                 goodData.sku_image = res.goods_data.image
-                goodData.audio = res.goods_sku[0].audios[0].audio
                 if (res.goods_sku.length == 1) {
                     goodData.retail_price = res.goods_sku[0].retail_price
                     goodData.integral_active = res.goods_sku[0].integral_active

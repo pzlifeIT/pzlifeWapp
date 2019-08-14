@@ -38,7 +38,7 @@
                             </view>
                             <view class='goods-info'>
                                 <text class='goods-title'>{{item.goods_name}}</text>
-                                <text class='goods-subtitle'>{{item.sku_json}}</text>
+                                <text class='goods-subtitle' wx:if="{{item.goods_type == 1}}">{{item.sku_json}}</text>
                             </view>
                             <view class='price-num'>
                                 <text class='price'>￥{{item.goods_price}}</text>
