@@ -197,9 +197,17 @@ Page({
     play: function (e) {
         let idx = e.currentTarget.dataset.idx;
         let audio = e.currentTarget.dataset.audio;
+        let time = e.currentTarget.dataset.time;
         console.log(audio)
         OrderAudio.src = audio;
         OrderAudio.play();
+       let inter = setInterval(function () {
+            let currentTime = OrderAudio.currentTime
+            if (currentTime >= time){
+                OrderAudio.stop();
+                clearInterval(inter)
+            }
+        },1000)
         this.setData({
             idx:idx
         })

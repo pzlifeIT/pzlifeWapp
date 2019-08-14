@@ -41,7 +41,7 @@
         <view class="jf audio">
             <image lazy-load bindtap="stopplay" wx:if="{{idx == item.id}}" data-audio="{{item.audio}}" data-idx="{{item.id}}" class="stop-play"
                    src="{{imgHost}}zanting.png"></image>
-            <image lazy-load bindtap="play" wx:else data-audio="{{item.audio}}" data-idx="{{item.id}}" class="stop-play"
+            <image lazy-load bindtap="play" wx:else data-audio="{{item.audio}}" data-idx="{{item.id}}" data-time="{{item.audition_time}}" class="stop-play"
                    src="{{imgHost}}bofang.png"></image>
             <text class="jf-text audio-text">{{item.name}}</text>
         </view>
