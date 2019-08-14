@@ -43,7 +43,7 @@
                    src="{{imgHost}}zanting.png"></image>
             <image lazy-load bindtap="play" wx:else data-audio="{{item.audio}}" data-idx="{{item.id}}" class="stop-play"
                    src="{{imgHost}}bofang.png"></image>
-            <text class="jf-text">{{item.name}}</text>
+            <text class="jf-text audio-text">{{item.name}}</text>
         </view>
     </block>
     <view class="jf">

@@ -263,11 +263,19 @@ page {
     float: none;
     display: flex;
     align-items: center;
+    height: auto;
 }
 .stop-play{
     width: 54rpx;
     height: 54rpx;
     margin-right: 16rpx;
+}
+.audio-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
 }
 /* 
 .obligation {
