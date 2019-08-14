@@ -1,7 +1,6 @@
 // components/onPlay/play.js
 const app = getApp();
 let timer = null;
-const voice = wx.createInnerAudioContext();
 const background = wx.getBackgroundAudioManager();
 Component({
     /**
@@ -59,7 +58,7 @@ Component({
             audio: this.properties.voice,
             voiceName:this.properties.voiceName
         })
-        voice.src = this.properties.voice;
+        background.src = this.properties.voice;
         console.log(background.src)
         //如果当前播放的音频和
         if (background.src != this.properties.voice) {
@@ -67,7 +66,6 @@ Component({
         }
         title = this.properties.voiceName;
         background.title = title;
-
         setTimeout(function () {
             console.log(background.duration);
             let t = Math.floor(background.duration % 3600);
@@ -156,9 +154,7 @@ Component({
         playVoice: function () {
             let that = this,
                 time;
-            // background.src = that.data.audio;
-            // background.title = that.data.voiceName;
-            // voice.play();
+            background.title = that.data.voiceName
             background.play();
             console.log(background.duration)
             setTimeout(function () {
@@ -207,7 +203,6 @@ Component({
             this.setData({
                 current: e.detail.value
             }, function () {
-                // voice.seek(e.detail.value);
                 background.seek(e.detail.value)
             })
         },
