@@ -1,5 +1,6 @@
 // pages/order/orderDetail/orderDetail.js
-const app = getApp()
+const app = getApp();
+const OrderAudio = wx.createInnerAudioContext();
 Page({
 
     /**
@@ -10,7 +11,8 @@ Page({
         order_info: {},
         imgHost: '',
         user_identity: 0,
-        navHight: app.globalData.topHeadHeight
+        navHight: app.globalData.topHeadHeight,
+        idx:0
     },
 
     /**
@@ -33,21 +35,25 @@ Page({
     },
     disOrderInfo: function (data) {
         let info = data
+        if (info.order_child.length == 1 && info.order_child[0].order_goods.length == 1 && info.order_child[0].order_goods[0].goods_type == 2) {
+            info.skuArr = info.order_child[0].order_goods[0].sku_json
+        }
         info.order_status_text = this.getorder_status(info.order_status)
         info.deduction_money = parseFloat(info.deduction_money)
         info.third_money = parseFloat(info.third_money)
+        console.log(info)
         return info
     },
     goDetail: function (e) {
         let id = e.currentTarget.dataset.goodsid;
         let type = e.currentTarget.dataset.type;
-        if (type ==  1){
+        if (type == 1) {
             wx.navigateTo({
-                url:'/pages/goods/detail?goodid='+id
+                url: '/pages/goods/detail?goodid=' + id
             })
-        } else if (type == 2){
+        } else if (type == 2) {
             wx.navigateTo({
-                url:'/pages/voiceDetail/voiceDetail?goodid='+id
+                url: '/pages/voiceDetail/voiceDetail?goodid=' + id
             })
         }
     },
@@ -188,11 +194,42 @@ Page({
             }
         })
     },
+    play: function (e) {
+        let idx = e.currentTarget.dataset.idx;
+        let audio = e.currentTarget.dataset.audio;
+        console.log(audio)
+        OrderAudio.src = audio;
+        OrderAudio.play();
+        this.setData({
+            idx:idx
+        })
+    },
+    stopplay: function () {
+        OrderAudio.pause()
+        this.setData({
+            idx:0
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
+        OrderAudio.onPlay(() => {
+            console.log('正在播放')
 
+        })
+        OrderAudio.onPause(() => {
+            console.log('暂停播放')
+            this.setData({
+                idx:0
+            })
+        })
+        OrderAudio.onStop(() => {
+            console.log('停止播放')
+            this.setData({
+                idx:0
+            })
+        })
     },
 
     /**
@@ -213,7 +250,7 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
-
+        OrderAudio.stop();
     },
 
     /**

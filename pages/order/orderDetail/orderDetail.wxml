@@ -1,63 +1,106 @@
 <!--pages/order/orderDetail/orderDetail.wxml-->
-<home  page-name="订单详情"></home>
-<view class="address" style="margin-top: {{navHight * 2}}rpx">
-	<view class="address-info">
-		<text class="info-text">收货人：</text>
-		<text class="info-name-phone">{{order_info.linkman}} {{order_info.linkphone}}</text>
-	</view>
-	<view class="address-detail">
-		<text class="detail-text">收货地址：</text>
-		<text class="detail-info">{{order_info.province_name}} {{order_info.city_name}} {{order_info.area_name}} {{order_info.address}}</text>
-	</view>
+<home page-name="订单详情"></home>
+<view style="width: 750rpx;height: {{navHight * 2}}rpx"></view>
+<view class="address" wx:if="{{order_info.order_child[0].order_goods[0].goods_type == 1}}">
+    <view class="address-info">
+        <text class="info-text">收货人：</text>
+        <text class="info-name-phone">{{order_info.linkman}} {{order_info.linkphone}}</text>
+    </view>
+    <view class="address-detail">
+        <text class="detail-text">收货地址：</text>
+        <text class="detail-info">{{order_info.province_name}} {{order_info.city_name}} {{order_info.area_name}}
+            {{order_info.address}}
+        </text>
+    </view>
 </view>
 <view class='obligation'>
-  <view class='order-number'><text class='number'>订单号：{{order_info.order_no}}</text><text class='status'>{{order_info.order_status_text}}</text></view>
-  <view class='one-goods' wx:for="{{order_info.order_child}}">
-		<view class="goods-wai" wx:for="{{item.order_goods}}" bindtap="goDetail" data-goodsid="{{item.goods_id}}" data-type="{{item.goods_type}}">
-			<view class='goods-image'><image lazy-load="true" src='{{item.sku_image}}'></image></view>
-			<view class='goods-info'>
-				<text class='goods-title'>{{item.goods_name}}</text>
-				<text class='goods-subtitle'>{{item.sku_json}}</text>
-			</view>
-			<view class='price-num'>
-				<text class='price'>￥{{item.goods_price}}</text>
-				<text class='num'>x{{item.goods_num}}</text>
-			</view>
-		</view>
-  </view>
-	<view class="jf">
-		<text class="jf-text">送积分</text><text class="jf-num">{{order_info.integral}}</text>
-	</view>
-	<view class="jf">
-		<text class="jf-text">含运费</text><text class="jf-num">￥{{order_info.express_money}}</text>
-  </view>
-  	<view class="jf"  wx:if="{{user_identity != 1}}">
-		<text class="jf-text">钻石再补贴</text><text class="jf-num">￥{{order_info.commission}}</text>
-	</view>
-	<view class="jf">
-		<text class="jf-text">优惠金额</text><text class="jf-num">￥{{order_info.discount_money}}</text>
-	</view>
-	<view class="jf">
-		<text class="jf-text">支付方式：</text><text class="jf-num rest"><text wx:if="{{order_info.deduction_money > 0}}" >商券支付{{order_info.deduction_money}}元</text>   <text wx:if="{{order_info.third_money > 0}}" >微信支付{{order_info.third_money}}元</text></text>
-	</view>
-	<view class="jf">
-		<text class="jf-text">订单编号：</text><text class="jf-num rest">{{order_info.order_no}}</text>
-	</view>
-	<view class="jf">
-		<text class="jf-text">创建时间：</text><text class="jf-num rest">{{order_info.create_time}}</text>
-	</view>
-	<view class="or-footer">
-		<view class="footer-left"><text class="sum">共付：<text class="total">￥{{order_info.pay_money}}</text></text></view>
-	</view>
+    <view class='order-number'>
+        <text class='number'>订单号：{{order_info.order_no}}</text>
+        <text class='status'>{{order_info.order_status_text}}</text>
+    </view>
+    <view class='one-goods' wx:for="{{order_info.order_child}}">
+        <view class="goods-wai" wx:for="{{item.order_goods}}" bindtap="goDetail" data-goodsid="{{item.goods_id}}"
+              data-type="{{item.goods_type}}">
+            <view class='goods-image'>
+                <image lazy-load="true" src='{{item.sku_image}}'></image>
+            </view>
+            <view class='goods-info'>
+                <text class='goods-title'>{{item.goods_name}}</text>
+                <text class='goods-subtitle' wx:if="{{item.goods_type == 1}}">{{item.sku_json}}</text>
+            </view>
+            <view class='price-num'>
+                <text class='price'>￥{{item.goods_price}}</text>
+                <text class='num'>x{{item.goods_num}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="jf" wx:if="{{order_info.order_child[0].order_goods[0].goods_type == 2}}">
+        <text class="jf-text">该订单包含以下音频:</text>
+    </view>
+    <block wx:for="{{order_info.skuArr}}">
+        <view class="jf audio">
+            <image lazy-load bindtap="stopplay" wx:if="{{idx == item.id}}" data-audio="{{item.audio}}" data-idx="{{item.id}}" class="stop-play"
+                   src="{{imgHost}}zanting.png"></image>
+            <image lazy-load bindtap="play" wx:else data-audio="{{item.audio}}" data-idx="{{item.id}}" class="stop-play"
+                   src="{{imgHost}}bofang.png"></image>
+            <text class="jf-text">{{item.name}}</text>
+        </view>
+    </block>
+    <view class="jf">
+        <text class="jf-text">送积分</text>
+        <text class="jf-num">{{order_info.integral}}</text>
+    </view>
+    <view class="jf">
+        <text class="jf-text">含运费</text>
+        <text class="jf-num">￥{{order_info.express_money}}</text>
+    </view>
+    <view class="jf" wx:if="{{user_identity != 1}}">
+        <text class="jf-text">钻石再补贴</text>
+        <text class="jf-num">￥{{order_info.commission}}</text>
+    </view>
+    <view class="jf">
+        <text class="jf-text">优惠金额</text>
+        <text class="jf-num">￥{{order_info.discount_money}}</text>
+    </view>
+    <view class="jf">
+        <text class="jf-text">支付方式：</text>
+        <text class="jf-num rest">
+            <text wx:if="{{order_info.deduction_money > 0}}">商券支付{{order_info.deduction_money}}元</text>
+            <text wx:if="{{order_info.third_money > 0}}">微信支付{{order_info.third_money}}元</text>
+        </text>
+    </view>
+    <view class="jf">
+        <text class="jf-text">订单编号：</text>
+        <text class="jf-num rest">{{order_info.order_no}}</text>
+    </view>
+    <view class="jf">
+        <text class="jf-text">创建时间：</text>
+        <text class="jf-num rest">{{order_info.create_time}}</text>
+    </view>
+    <view class="or-footer">
+        <view class="footer-left">
+            <text class="sum">共付：
+                <text class="total">￥{{order_info.pay_money}}</text>
+            </text>
+        </view>
+    </view>
 </view>
-<view class="foot-back" ></view>
+<view class="foot-back"></view>
 <view class="footer-right">
-      <view bindtap="call" class="call din fl" >
-        <image lazy-load="true" class="pzkefu" src="{{imgHost}}pzkefu.png?imageMogr2/thumbnail/64x" />
+    <view bindtap="call" class="call din fl">
+        <image lazy-load="true" class="pzkefu" src="{{imgHost}}pzkefu.png?imageMogr2/thumbnail/64x"/>
         <text class="call-text fr">联系客服</text>
-      </view>
-			<view bindtap="gopay" data-orderno="{{order_info.order_no}}" class="or-btn red" wx:if="{{order_info.order_status == 1}}">去付款</view>
-      <view bindtap="cancelorder" data-orderno="{{order_info.order_no}}" class="or-btn black" wx:if="{{order_info.order_status == 1}}">取消订单</view>
-      <view bindtap="gologistics" data-orderno="{{order_info.order_no}}" class="or-btn black" wx:if="{{order_info.order_status == 5 || order_info.order_status == 6}}">查看物流</view>
-      <view bindtap="confirmOrder" data-orderno="{{order_info.order_no}}" class="or-btn red" wx:if="{{order_info.order_status == 5}}">确认收货</view>
+    </view>
+    <view bindtap="gopay" data-orderno="{{order_info.order_no}}" class="or-btn red"
+          wx:if="{{order_info.order_status == 1}}">去付款
+    </view>
+    <view bindtap="cancelorder" data-orderno="{{order_info.order_no}}" class="or-btn black"
+          wx:if="{{order_info.order_status == 1}}">取消订单
+    </view>
+    <view bindtap="gologistics" data-orderno="{{order_info.order_no}}" class="or-btn black"
+          wx:if="{{order_info.order_status == 5 || order_info.order_status == 6}}">查看物流
+    </view>
+    <view bindtap="confirmOrder" data-orderno="{{order_info.order_no}}" class="or-btn red"
+          wx:if="{{order_info.order_status == 5}}">确认收货
+    </view>
 </view>
