@@ -8,7 +8,27 @@
         </block>
     </swiper>
     <!--播放样式组件-->
-    <!--<play class="voice-play" voice="{{goodData.audio}}" ></play>-->
+    <!--<view class="voice-play">-->
+        <!--<view class="play-com">-->
+            <!--<view class="continue">-->
+                <!--<text class="duration">{{currentTime}}</text>-->
+                <!--<slider class="progress" min="0" max="{{duration || 100}}" step="1" block-size="12" activeColor="#e61f18" value="{{current}}"  bindchanging="slider" />-->
+                <!--&lt;!&ndash;<progress class="progress" border-radius="20" percent="{{time}}" stroke-width="2" activeColor="#e61f18" active active-mode="forwards" />&ndash;&gt;-->
+                <!--<text class="duration">{{his}}</text>-->
+            <!--</view>-->
+            <!--<view class="buttons">-->
+                <!--<block wx:if="{{isWhile}}">-->
+                    <!--<image class="icon1" bindtap="while" lazy-load src="{{imgHost}}while.png" wx:if="{{while}}"></image>-->
+                    <!--<image class="icon1" bindtap="doWhile" lazy-load src="{{imgHost}}dowhile.png" wx:else></image>-->
+                <!--</block>-->
+                <!--<image wx:if="{{isPre}}" class="icon2" lazy-load src="{{imgHost}}next.png"></image>-->
+                <!--<image class="icon3" bindtap="playButton" lazy-load src="{{imgHost}}stopplay.png" wx:if="{{isPlay}}"></image>-->
+                <!--<image class="icon3" bindtap="stopPlayButton" lazy-load src="{{imgHost}}play.png" wx:else></image>-->
+                <!--<image wx:if="{{isNext}}" class="icon4" lazy-load src="{{imgHost}}pre.png"></image>-->
+                <!--<image wx:if="{{isTimeOut}}" bindtap="setTimeOut" class="icon5" lazy-load src="{{imgHost}}timeout.png"></image>-->
+            <!--</view>-->
+        <!--</view>-->
+    <!--</view>-->
 </view>
 <view class='desc'>
     <view class='text'>
@@ -210,5 +230,34 @@
     </navigator>
     <view bindtap="buyGood" class='buy'>
         <text>立即购买</text>
+    </view>
+</view>
+<!--定时-->
+<view class="mask df" wx:if="{{timeOut}}">
+    <view class="mask-center">
+        <image src="{{imgHost}}timeout_03.jpg" lazy-load class="mask-img"></image>
+        <view class="mask-select">
+            <radio-group bindchange="selectTimeOut">
+                <view class="radio">
+                    <radio value="0"  color="#e61f18"/>不开启
+                </view>
+                <view class="radio">
+                    <radio value="30"  color="#e61f18"/>30分钟
+                </view>
+                <view class="radio">
+                    <radio value="60" color="#e61f18"/>1小时
+                </view>
+                <view class="radio">
+                    <radio value="180" color="#e61f18"/>3小时
+                </view>
+                <view class="radio">
+                    <radio value="300" color="#e61f18"/>5小时
+                </view>
+            </radio-group>
+            <view class="mask-button">
+                <view class="mask-left" bindtap="confirm">确定</view>
+                <view class="mask-right" bindtap="cancel">取消</view>
+            </view>
+        </view>
     </view>
 </view>

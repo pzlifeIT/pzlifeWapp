@@ -1,7 +1,9 @@
 // pages/voiceDetail/voiceDetail.js
 const innerAudioContent = wx.createInnerAudioContext();
+const BackgroundAudioManager = wx.getBackgroundAudioManager();
 const app = getApp();
-let inte = null
+let inte = null;
+let inter = null;
 Page({
 
     /**
@@ -27,9 +29,19 @@ Page({
         indx: 0,
         skuInfo: {},
         goods_id: 0,
-        identity:0,
-        cartNum:0,
-        sku_id:''
+        identity: 0,
+        cartNum: 0,
+        sku_id: '',
+        isWhile: true,
+        isPre: true,
+        isNext: true,
+        isTimeOut: true,
+        isPlay: true,
+        his: '0:0:0',
+        currentTime: '0:0:0',
+        while: true,
+        time: 0,
+        timeOut: false
     },
 
     /**
@@ -211,13 +223,16 @@ Page({
                 source: 4
             },
             success(res) {
-                console.log(res)
                 goodData.sku_image = res.goods_data.image
+                goodData.audio_name = res.goods_sku[0].audios[0].name
+                goodData.audio = res.goods_sku[0].audios[0].audio
+                goodData.id = res.goods_sku[0].audios[0].id
+                goodData.audition_time = res.goods_sku[0].audios[0].audition_time;
                 if (res.goods_sku.length == 1) {
                     goodData.retail_price = res.goods_sku[0].retail_price
                     goodData.integral_active = res.goods_sku[0].integral_active
-                    goodData.name = res.goods_sku[0].name
                     goodData.id = res.goods_sku[0].id
+                    goodData.name = res.goods_sku[0].name
                     goodData.brokerage = res.goods_sku[0].brokerage
                     buy = true
                     attr[0] = res.goods_sku[0].id
@@ -237,6 +252,8 @@ Page({
                     buy: buy,
                     repertory: repertory,
                     attr: attr
+                }, function () {
+                    that.backgroundAudio()
                 })
             },
             error(res) {
@@ -265,20 +282,20 @@ Page({
         })
         that.setData({
             idx: idx,
-            sku_id:skuid
+            sku_id: skuid
         });
         //获取当前播放位置
         inte = setInterval(function () {
-            if (innerAudioContent.currentTime >= time){
+            if (innerAudioContent.currentTime >= time) {
                 innerAudioContent.stop();
-                app.toast({title:"试听结束"});
+                app.toast({title: "试听结束"});
                 that.setData({
-                    idx:'',
-                    sku_id:''
+                    idx: '',
+                    sku_id: ''
                 })
                 clearInterval(inte)
             }
-        },1000);
+        }, 1000);
         innerAudioContent.onError(function (res) {
             console.log(res)
         })
@@ -288,7 +305,7 @@ Page({
         clearInterval(inte)
         this.setData({
             idx: '',
-            sku_id:''
+            sku_id: ''
         })
     },
     getgoodsrecommend: function () {
@@ -310,11 +327,11 @@ Page({
     recommendGoods: function (e) {
         let id = e.currentTarget.dataset.goodsid
         let type = e.currentTarget.dataset.type;
-        if (type == 1){
+        if (type == 1) {
             wx.navigateTo({
                 url: "/pages/goods/detail?goodid=" + id
             })
-        } else if (type == 2){
+        } else if (type == 2) {
             wx.navigateTo({
                 url: "/pages/voiceDetail/voiceDetail?goodid=" + id
             })
@@ -355,7 +372,165 @@ Page({
     onReady: function () {
 
     },
+    backgroundAudio: function () {
+        let that = this;
+        BackgroundAudioManager.onPlay(() => {
+            console.log('播放ing')
+            //获取音频长度
+            let duration = Math.floor(BackgroundAudioManager.duration % 3600);
+            //判断当前用户有没有听全部的资格，如果有就让她听全部，如果没有，就只能听试听的部分
+            if (that.checkPlayAudio()) { //不做判断
+                //获取当前播放位置,每秒获取一次
+                inter = setInterval(function () {
+                    let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
+                    //判断试听时间
+                    that.setData({
+                        current: BackgroundAudioManager.currentTime,
+                        currentTime: Math.floor(BackgroundAudioManager.currentTime / 3600) + ':' + Math.floor(currentTime / 60) + ':' + currentTime % 60
+                    })
+                }, 1000);
+            } else {
+                //将当前播放位置与试听时间比较
+                inter = setInterval(function () {
+                    let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
+                    //判断试听时间
+                    if (BackgroundAudioManager.currentTime >= that.data.goodData.audition_time) {
+                        app.toast({title: "试听结束"});
+                        BackgroundAudioManager.stop()
+                    }
+                    that.setData({
+                        current: BackgroundAudioManager.currentTime,
+                        currentTime: Math.floor(BackgroundAudioManager.currentTime / 3600) + ':' + Math.floor(currentTime / 60) + ':' + currentTime % 60
+                    })
+                }, 1000);
+            }
 
+            that.setData({
+                isPlay: false,
+                duration: BackgroundAudioManager.duration,
+                his: Math.floor(BackgroundAudioManager.duration / 3600) + ':' + Math.floor(duration / 60) + ':' + duration % 60
+            })
+        })
+        BackgroundAudioManager.onError((res) => {
+            console.log(res)
+        })
+        BackgroundAudioManager.onPause(() => {
+            console.log('暂停')
+            that.setData({
+                isPlay: true
+            })
+            clearInterval(inter)
+        })
+        BackgroundAudioManager.onStop(() => {
+            that.setData({
+                isPlay: true,
+                current: 0,
+                currentTime: '0:0:0'
+            })
+            clearInterval(inter)
+            console.log('停止')
+        })
+        BackgroundAudioManager.onEnded(() => {
+            that.setData({
+                isPlay: true,
+                current: 0,
+                currentTime: '0:0:0'
+            })
+            clearInterval(inter)
+            console.log('播放完成')
+        })
+    },
+    playButton: function () {
+        //播放
+        BackgroundAudioManager.src = this.data.goodData.audio;
+        BackgroundAudioManager.title = this.data.goodData.audio_name;
+        BackgroundAudioManager.play()
+    },
+    stopPlayButton: function () {
+        //暂停
+        BackgroundAudioManager.pause()
+    },
+    checkPlayAudio: function () {
+        let that = this
+        app.wxrequest({
+            url: "audio/checkUserAudio",
+            data: {
+                audio_id: that.data.goodData.id
+            },
+            success(res) {
+                if (res.checked == 1) {
+                    return true
+                } else {
+                    return false
+                }
+            },
+            error(res) {
+                console.log(res);
+                return false
+            }
+        })
+    },
+    while: function () {
+        if (!this.checkPlayAudio()) {
+            app.toast({title: '未购买无法开启循环'});
+            return
+        }
+        app.toast({title: '开启循环'});
+        this.setData({
+            while: false
+        })
+        let that = this;
+        BackgroundAudioManager.onEnded(() => {
+            that.playButton()
+        })
+    },
+    doWhile: function () {
+        app.toast({title: "关闭循环"});
+        this.setData({
+            while: true
+        })
+    },
+    setTimeOut: function () {
+        if (!this.checkPlayAudio()){
+            app.toast({title:'请先购买'});
+            return
+        }
+        this.setData({
+            timeOut: true
+        })
+    },
+    selectTimeOut: function (e) {
+        let value = e.detail.value;
+        console.log(value);
+        this.setData({
+            time: value
+        })
+    },
+    //确认定时
+    confirm: function () {
+        //判断有没有听得资格
+        if (!this.checkPlayAudio()){
+            app.toast({title:'请先购买'});
+            return
+        }
+        //直接用定时器关闭
+        let timeOut = this.data.time;
+        let msTimeOut = parseInt(timeOut) * 60 * 1000;
+        console.log(msTimeOut)
+        app.toast({title:"设置定时成功"});
+        this.setData({
+            timeOut: false
+        })
+        setTimeout(function () {
+            BackgroundAudioManager.stop()
+        },msTimeOut);
+
+    },
+    cancel: function () {
+        this.setData({
+            timeOut: false
+        })
+    },
     /**
      * 生命周期函数--监听页面显示
      */

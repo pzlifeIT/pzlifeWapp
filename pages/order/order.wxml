@@ -34,7 +34,7 @@
                     <view class='one-goods'>
                         <view class="goods-wai">
                             <view class='goods-image'>
-                                <image lazy-load="true" src='{{item.sku_image}}'></image>
+                                <image lazy-load="true" src='{{item.sku_image == "" ? "https://webimages.pzlive.vip/beijing_03_02.jpg" : item.sku_image }}'></image>
                             </view>
                             <view class='goods-info'>
                                 <text class='goods-title'>{{item.goods_name}}</text>
@@ -52,7 +52,7 @@
                 <text class="jf-text">送积分</text>
                 <text class="jf-num">{{item1.integral}}</text>
             </view>
-            <view class="jf">
+            <view class="jf" wx:if="{{item1.order_child[0].order_goods[0].goods_type == 1}}">
                 <text class="jf-text">含运费</text>
                 <text class="jf-num">￥{{item1.express_money}}</text>
             </view>
@@ -82,9 +82,11 @@
                     <view bindtap="cancelorder" data-orderno="{{item1.order_no}}" class="or-btn black"
                           wx:if="{{item1.order_status == 1}}">取消订单
                     </view>
+                    <block wx:if="{{item1.order_child[0].order_goods[0].goods_type == 1}}">
                     <view bindtap="gologistics" data-orderno="{{item1.order_no}}" class="or-btn black"
                           wx:if="{{item1.order_status == 5 || item1.order_status == 6}}">查看物流
                     </view>
+                    </block>
                     <view bindtap="confirmOrder" data-orderno="{{item1.order_no}}" class="or-btn red"
                           wx:if="{{item1.order_status == 5}}">确认收货
                     </view>

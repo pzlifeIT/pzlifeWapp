@@ -37,6 +37,7 @@ Page({
         let info = data
         if (info.order_child.length == 1 && info.order_child[0].order_goods.length == 1 && info.order_child[0].order_goods[0].goods_type == 2) {
             info.skuArr = info.order_child[0].order_goods[0].sku_json
+            info.goods_type = 2
         }
         info.order_status_text = this.getorder_status(info.order_status)
         info.deduction_money = parseFloat(info.deduction_money)

@@ -575,7 +575,7 @@
 					"id": 77,
 					"name": "voicedetail",
 					"pathName": "pages/voiceDetail/voiceDetail",
-					"query": "goodid=1622",
+					"query": "goodid=1611",
 					"scene": null
 				},
 				{
