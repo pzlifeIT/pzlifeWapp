@@ -10,19 +10,19 @@ Component({
     properties: {
         isWhile: {
             type: Boolean,
-            value: false
+            value: true
         },
         isPre: {
             type: Boolean,
-            value: false
+            value: true
         },
         isNext: {
             type: Boolean,
-            value: false
+            value: true
         },
         isTimeOut: {
             type: Boolean,
-            value: false
+            value: true
         },
         voice: {
             type: String,
@@ -113,7 +113,9 @@ Component({
                 isPlay: false
             })
         });
-
+        background.onWaiting(()=>{
+            app.toast({title:"努力加载中..."})
+        })
     },
     attached: function () {
 
@@ -166,7 +168,7 @@ Component({
                 let t = Math.floor(background.duration % 3600);
                 that.setData({
                     duration: background.duration,
-                    his: Math.floor(background.duration / 3600) + ':' + Math.floor(t / 60) + ':' + t % 60
+                    his: Math.floor(background.duration / 3600) + ':' + Math.floor(t / 60) + ':' + t % 60 || '0:0:0'
                 })
             }, 1000)
             background.onError((res) => {
@@ -176,7 +178,7 @@ Component({
                 let current = Math.floor(background.currentTime % 3600);
                 that.setData({
                     current: background.currentTime,
-                    currentTime: Math.floor(background.currentTime / 3600) + ':' + Math.floor(current / 60) + ':' + current % 60
+                    currentTime: Math.floor(background.currentTime / 3600) + ':' + Math.floor(current / 60) + ':' + current % 60 || '0:0:0'
                 })
                 time = that.data.time + 1;
                 if (background.currentTime >= background.duration) {

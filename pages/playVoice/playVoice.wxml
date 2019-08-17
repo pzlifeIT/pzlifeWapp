@@ -3,5 +3,56 @@
 <view class="name">{{name}}</view>
 <view class="center">
     <image class="bg" lazy-load src="{{imgHost}}beijing_03_02.jpg"></image>
-    <voice class="voice" voice="{{audio}}" bind:getVoice="getVoice" voiceName="{{name}}" time="{{time}}" voiceId="{{id}}" ></voice>
+    <!--<voice class="voice" voice="{{audio}}" bind:getVoice="getVoice" voiceName="{{name}}" time="{{time}}" voiceId="{{id}}" ></voice>-->
+    <view class="voice-play">
+        <view class="play-com">
+            <view class="continue">
+                <text class="duration">{{currentTime}}</text>
+                <slider class="progress" min="0" max="{{durationTime || 100}}" step="1" block-size="12" activeColor="#e61f18" value="{{current}}"  bindchanging="slider" bindchange="clickSlider" />
+                <!--<progress class="progress" border-radius="20" percent="{{time}}" stroke-width="2" activeColor="#e61f18" active active-mode="forwards" />-->
+                <text class="duration">{{duration}}</text>
+            </view>
+            <view class="buttons">
+                <block wx:if="{{isWhile}}">
+                    <image class="icon1" bindtap="while" data-while="2" lazy-load src="{{imgHost}}while.png" wx:if="{{while == 1}}"></image>
+                    <image class="icon1" bindtap="while" data-while="3" lazy-load src="{{imgHost}}dowhile.png" wx:elif="{{while == 2}}"></image>
+                    <image class="icon1 listWhile" bindtap="while" data-while="1" lazy-load src="{{imgHost}}listwhile.png" wx:elif="{{while == 3}}"></image>
+                </block>
+                <image wx:if="{{isPre}}" bindtap="pre" class="icon2" lazy-load src="{{imgHost}}next.png"></image>
+                <image class="icon3" bindtap="playButton" lazy-load src="{{imgHost}}stopplay.png" wx:if="{{isPlay}}"></image>
+                <image class="icon3" bindtap="stopPlayButton" lazy-load src="{{imgHost}}play.png" wx:else></image>
+                <image wx:if="{{isNext}}" bindtap="next" class="icon4" lazy-load src="{{imgHost}}pre.png"></image>
+                <image wx:if="{{isTimeOut}}" bindtap="setTimeOut" class="icon5" lazy-load src="{{imgHost}}timeout.png"></image>
+            </view>
+        </view>
+    </view>
+</view>
+<!--{{while}}-->
+<view class="mask df" wx:if="{{timeOut}}">
+    <view class="mask-center">
+        <image src="{{imgHost}}timeout_03.jpg" lazy-load class="mask-img"></image>
+        <view class="mask-select">
+            <radio-group bindchange="selectTimeOut">
+                <view class="radio">
+                    <radio value="0"  color="#e61f18"/>不开启
+                </view>
+                <view class="radio">
+                    <radio value="30"  color="#e61f18"/>30分钟
+                </view>
+                <view class="radio">
+                    <radio value="60" color="#e61f18"/>1小时
+                </view>
+                <view class="radio">
+                    <radio value="180" color="#e61f18"/>3小时
+                </view>
+                <view class="radio">
+                    <radio value="300" color="#e61f18"/>5小时
+                </view>
+            </radio-group>
+            <view class="mask-button">
+                <view class="mask-left" bindtap="confirm">确定</view>
+                <view class="mask-right" bindtap="cancel">取消</view>
+            </view>
+        </view>
+    </view>
 </view>

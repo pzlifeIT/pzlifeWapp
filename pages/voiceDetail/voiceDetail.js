@@ -39,9 +39,10 @@ Page({
         isPlay: true,
         his: '0:0:0',
         currentTime: '0:0:0',
-        while: true,
+        while: 1,
         time: 0,
-        timeOut: false
+        timeOut: false,
+        check:false
     },
 
     /**
@@ -116,7 +117,9 @@ Page({
         let attr = this.data.attr;
         let buy = true;
         let sku = this.data.goods_sku;
-        let skuInfo = {}
+        let skuInfo = {};
+        let that = this;
+        let sku_id = 0
         console.log(attr)
         //获取sku信息
         for (let i = 0; i < sku.length; i++) {
@@ -125,12 +128,24 @@ Page({
                 skuInfo.name = sku[i].name
                 skuInfo.brokerage = sku[i].brokerage
                 skuInfo.integral_active = sku[i].integral_active
+                skuInfo.audio = sku[i].audios[0].audio
+                skuInfo.audio_name = sku[i].audios[0].name
+                skuInfo.audition_time = sku[i].audios[0].audition_time
                 skuInfo.sku_image = this.data.goods_data.image
+                skuInfo.sku_audios = sku[i].audios
+                skuInfo.id = sku[i].audios[0].id
+                skuInfo.duration = sku[i].audios[0].audio_length_text
+                skuInfo.durationTime = sku[i].audios[0].audio_length
+                skuInfo.audio_id = sku[i].audios[0].id
             }
         }
+        console.log(skuInfo);
+        BackgroundAudioManager.stop();
         this.setData({
             goodData: skuInfo,
             buy: true
+        },function () {
+            that.checkPlayAudio();
         })
     },
 
@@ -226,13 +241,17 @@ Page({
                 goodData.sku_image = res.goods_data.image
                 goodData.audio_name = res.goods_sku[0].audios[0].name
                 goodData.audio = res.goods_sku[0].audios[0].audio
-                goodData.id = res.goods_sku[0].audios[0].id
+                goodData.audio_id = res.goods_sku[0].audios[0].id
                 goodData.audition_time = res.goods_sku[0].audios[0].audition_time;
+                goodData.sku_audios = res.goods_sku[0].audios
+                goodData.duration = res.goods_sku[0].audios[0].audio_length_text
+                goodData.durationTime = res.goods_sku[0].audios[0].audio_length
                 if (res.goods_sku.length == 1) {
                     goodData.retail_price = res.goods_sku[0].retail_price
                     goodData.integral_active = res.goods_sku[0].integral_active
                     goodData.id = res.goods_sku[0].id
                     goodData.name = res.goods_sku[0].name
+                    goodData.audio_id = res.goods_sku[0].audios[0].id
                     goodData.brokerage = res.goods_sku[0].brokerage
                     buy = true
                     attr[0] = res.goods_sku[0].id
@@ -253,7 +272,8 @@ Page({
                     repertory: repertory,
                     attr: attr
                 }, function () {
-                    that.backgroundAudio()
+                    that.backgroundAudio();
+                    that.checkPlayAudio();
                 })
             },
             error(res) {
@@ -354,9 +374,9 @@ Page({
         if (this.data.identity != 4) return
         let t = this
         app.wxrequest({
-            url: 'shopMmanage/getGoodsAway',
+            url: 'shopManage/getGoodsAway',
             data: {
-                goods_id: t.data.goodid
+                goods_id: t.data.goods_id
             },
             success(res) {
 
@@ -374,12 +394,31 @@ Page({
     },
     backgroundAudio: function () {
         let that = this;
+        BackgroundAudioManager.onError((res) => {
+            console.log(res)
+        });
+        BackgroundAudioManager.onPause(() => {
+            console.log('暂停')
+            that.setData({
+                isPlay: true
+            });
+            clearInterval(inter)
+        });
+        BackgroundAudioManager.onNext(() => {
+            that.next()
+        });
+        BackgroundAudioManager.onPrev(() => {
+            that.pre()
+        });
         BackgroundAudioManager.onPlay(() => {
             console.log('播放ing')
             //获取音频长度
             let duration = Math.floor(BackgroundAudioManager.duration % 3600);
             //判断当前用户有没有听全部的资格，如果有就让她听全部，如果没有，就只能听试听的部分
-            if (that.checkPlayAudio()) { //不做判断
+            // that.checkPlayAudio()
+            console.log(that.data.check)
+            // return
+            if (that.data.check) { //不做判断
                 //获取当前播放位置,每秒获取一次
                 inter = setInterval(function () {
                     let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
@@ -391,7 +430,9 @@ Page({
                 }, 1000);
             } else {
                 //将当前播放位置与试听时间比较
+                let i = 1
                 inter = setInterval(function () {
+                    i++
                     let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
                     //判断试听时间
                     if (BackgroundAudioManager.currentTime >= that.data.goodData.audition_time) {
@@ -404,45 +445,45 @@ Page({
                     })
                 }, 1000);
             }
-
             that.setData({
                 isPlay: false,
                 duration: BackgroundAudioManager.duration,
                 his: Math.floor(BackgroundAudioManager.duration / 3600) + ':' + Math.floor(duration / 60) + ':' + duration % 60
             })
-        })
-        BackgroundAudioManager.onError((res) => {
-            console.log(res)
-        })
-        BackgroundAudioManager.onPause(() => {
-            console.log('暂停')
-            that.setData({
-                isPlay: true
-            })
-            clearInterval(inter)
-        })
+        });
         BackgroundAudioManager.onStop(() => {
+            //在这里判断是否开启了循环
             that.setData({
                 isPlay: true,
                 current: 0,
                 currentTime: '0:0:0'
             })
-            clearInterval(inter)
+            clearInterval(inter);
             console.log('停止')
-        })
+        });
         BackgroundAudioManager.onEnded(() => {
+            if(that.data.while == 3){
+                console.log('进来了')
+                console.log(BackgroundAudioManager.src)
+                that.listWhile();
+                return
+            }else if (that.data.while == 2){
+                that.playButton()
+                return
+            }
             that.setData({
                 isPlay: true,
                 current: 0,
                 currentTime: '0:0:0'
-            })
-            clearInterval(inter)
+            });
+            clearInterval(inter);
             console.log('播放完成')
         })
     },
     playButton: function () {
         //播放
         BackgroundAudioManager.src = this.data.goodData.audio;
+        console.log(this.data.goodData.audio);
         BackgroundAudioManager.title = this.data.goodData.audio_name;
         BackgroundAudioManager.play()
     },
@@ -455,34 +496,86 @@ Page({
         app.wxrequest({
             url: "audio/checkUserAudio",
             data: {
-                audio_id: that.data.goodData.id
+                audio_id: that.data.goodData.audio_id
             },
             success(res) {
-                if (res.checked == 1) {
-                    return true
-                } else {
-                    return false
-                }
+                   if (res.checked == 1){
+                       that.setData({
+                           check:true
+                       })
+                   } else {
+                       that.setData({
+                           check:false
+                       })
+                   }
             },
             error(res) {
                 console.log(res);
-                return false
             }
         })
     },
-    while: function () {
-        if (!this.checkPlayAudio()) {
+
+    while: function (e) {
+        if (!this.data.check) {
             app.toast({title: '未购买无法开启循环'});
             return
         }
-        app.toast({title: '开启循环'});
-        this.setData({
-            while: false
-        })
+        let whileType = e.currentTarget.dataset.while;
+        let sku_audios = this.data.goodData.sku_audios;
         let that = this;
-        BackgroundAudioManager.onEnded(() => {
-            that.playButton()
+        if (sku_audios.length <= 0) {
+            app.toast({title: '请选择需要循环的规格'})
+            return
+        }
+
+        if (whileType == 1) {
+            app.toast({title: '关闭循环'});
+        } else if (whileType == 2) {
+            app.toast({title: '开启单曲循环'});
+            // BackgroundAudioManager.onEnded(() => { //单曲循环 正常播放完成才会循环
+            //     that.playButton()
+            // })
+        } else if (whileType == 3) {
+            app.toast({title: '开启列表循环'});
+            BackgroundAudioManager.onEnded(() => {
+                that.listWhile()
+            })
+        }
+        this.setData({
+            while: whileType
+        });
+    },
+    listWhile: function () {
+        let sku_audios = this.data.goodData.sku_audios;
+        let nowPlay = this.data.goodData.audio;
+        let that = this
+        let index = 0
+        let goodData = this.data.goodData
+        for (let i = 0; i < sku_audios.length; i++) {
+            if (nowPlay == sku_audios[i].audio) {
+                if (i+1 >= sku_audios.length){
+                    index = 0
+                }else {
+                    index = i + 1
+                }
+
+            }
+        }
+        let playAudio = sku_audios[index].audio;
+        let playName = sku_audios[index].name;
+        let duration = sku_audios[index].audio_length_text;
+        let durationTime = sku_audios[index].audio_length;
+        console.log(playAudio);
+        goodData.audio = playAudio;
+        goodData.audio_name = playName;
+        goodData.duration = duration;
+        goodData.durationTime = durationTime
+        this.setData({
+            goodData:goodData
         })
+        BackgroundAudioManager.src = playAudio;
+        BackgroundAudioManager.title = playName;
+        BackgroundAudioManager.play();
     },
     doWhile: function () {
         app.toast({title: "关闭循环"});
@@ -491,8 +584,8 @@ Page({
         })
     },
     setTimeOut: function () {
-        if (!this.checkPlayAudio()){
-            app.toast({title:'请先购买'});
+        if (!this.data.check) {
+            app.toast({title: '请先购买'});
             return
         }
         this.setData({
@@ -509,26 +602,142 @@ Page({
     //确认定时
     confirm: function () {
         //判断有没有听得资格
-        if (!this.checkPlayAudio()){
-            app.toast({title:'请先购买'});
+        if (!this.data.check) {
+            app.toast({title: '请先购买'});
             return
         }
         //直接用定时器关闭
         let timeOut = this.data.time;
         let msTimeOut = parseInt(timeOut) * 60 * 1000;
-        console.log(msTimeOut)
-        app.toast({title:"设置定时成功"});
+        if (timeOut == 0) {
+            app.toast({title: '设置成功'});
+            this.setData({
+                timeOut: false
+            });
+            return
+        }
+        app.toast({title: "设置定时成功"});
         this.setData({
             timeOut: false
         })
         setTimeout(function () {
             BackgroundAudioManager.stop()
-        },msTimeOut);
+        }, msTimeOut);
 
     },
     cancel: function () {
         this.setData({
             timeOut: false
+        })
+    },
+    next: function () {
+        //获取当前sku包
+        let sku_audios = this.data.goodData.sku_audios;
+        let goodData = this.data.goodData;
+        console.log(sku_audios)
+        //获取当前播放的音频
+        let nowPlay = BackgroundAudioManager.src;
+        console.log(nowPlay)
+        let index = 0;
+        if (sku_audios.length == 1) {
+            app.toast({title: "当前只有一份音频"});
+            return
+        }
+        if (sku_audios.length <= 0) {
+            app.toast({title: '请选择需要播放的规格'})
+            return
+        }
+        for (let i = 0; i < sku_audios.length; i++) {
+            //找到当前播放的下标
+            if (nowPlay == sku_audios[i].audio) {
+                if (i == sku_audios.length - 1) { // 最后一首
+                    index = 0;
+                } else {
+                    index = (i + 1) >= sku_audios.length ? (sku_audios.length - 1) : (i + 1);
+                }
+                break;
+            } else { //如果没播放
+                index = 1;
+            }
+        }
+        let playAudio = this.data.goodData.sku_audios[index].audio;
+        let playName = this.data.goodData.sku_audios[index].name;
+        let duration = this.data.goodData.sku_audios[index].audio_length_text
+        let durationTime = sku_audios[index].audio_length;
+        console.log(playAudio);
+        goodData.audio = playAudio;
+        goodData.audio_name = playName;
+        goodData.duration = duration;
+        goodData.durationTime = durationTime
+        this.setData({
+            goodData: goodData
+        })
+        BackgroundAudioManager.src = playAudio;
+        BackgroundAudioManager.title = playName;
+        BackgroundAudioManager.play();
+    },
+    pre: function () {
+        let sku_audios = this.data.goodData.sku_audios;
+        let nowPlay = BackgroundAudioManager.src;
+        let goodData = this.data.goodData;
+        let index = 0;
+        if (sku_audios.length == 1) {
+            app.toast({title: "当前只有一份音频"});
+            return
+        }
+        if (sku_audios.length <= 0) {
+            app.toast({title: '请选择需要播放的规格'})
+            return
+        }
+        for (let i = 0; i < sku_audios.length; i++) {
+            if (nowPlay == sku_audios[i].audio) {
+                if (i == 0) { //如果是第一首
+                    index = sku_audios.length - 1
+                } else {
+                    index = (i - 1) <= 0 ? 0 : (i - 1)
+                }
+                break;
+            } else {
+                index = (sku_audios.length - 1) <= 0 ? 0 : (sku_audios.length - 1)
+            }
+        }
+        let playAudio = this.data.goodData.sku_audios[index].audio;
+        let playName = this.data.goodData.sku_audios[index].name;
+        let duration = this.data.goodData.sku_audios[index].audio_length_text
+        let durationTime = sku_audios[index].audio_length;
+        console.log(playAudio);
+        goodData.audio = playAudio;
+        goodData.audio_name = playName;
+        goodData.duration = duration;
+        goodData.durationTime = durationTime
+        this.setData({
+            goodData: goodData
+        })
+        BackgroundAudioManager.src = playAudio;
+        BackgroundAudioManager.title = playName;
+        BackgroundAudioManager.play();
+    },
+    slider: function (e) {
+        if(!this.data.check){
+            app.toast({title:"请先购买"});
+            return;
+        }
+        this.setData({
+            current:e.detail.value
+        },function () {
+            BackgroundAudioManager.seek(e.detail.value)
+        })
+    },
+    clickSlider:function(e){
+        if(!this.data.check){
+            app.toast({title:"请先购买"});
+            return;
+        }
+        console.log(e)
+        this.setData({
+            current: e.detail.value
+        }, function () {
+            BackgroundAudioManager.seek(e.detail.value)
         })
     },
     /**
@@ -556,6 +765,9 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
+        if (!this.data.check) {
+            BackgroundAudioManager.stop()
+        }
         innerAudioContent.stop()
     },
 

@@ -228,7 +228,8 @@ Page({
         let that = this,
             share = app.share({
                 title: "恭喜获得钻石会员卡",
-                path: '/pages/activity/activity'
+                path: '/pages/activity/activity',
+                imageUrl:""
             })
         return share
     }

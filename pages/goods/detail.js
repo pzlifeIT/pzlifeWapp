@@ -377,7 +377,7 @@ Page({
         if (this.data.identity != 4) return
         let t = this
         app.wxrequest({
-            url: 'shopMmanage/getGoodsAway',
+            url: 'shopManage/getGoodsAway',
             data: {
                 goods_id: t.data.goodid
             },

@@ -206,7 +206,7 @@ Page({
             let currentTime = OrderAudio.currentTime
             if (currentTime >= time){
                 OrderAudio.stop();
-                app.toast({title:"试听结束，如已购买请去个人中心-我的音频收听",duration:3000})
+                app.toast({title:"试听结束，如已购买请去个人中心-我的音频收听",duration:4000});
                 clearInterval(inter)
             }
         },1000)

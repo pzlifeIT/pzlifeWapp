@@ -168,7 +168,7 @@ Page({
             share = app.share({
                 title: "邀请钻石会员",
                 path: '/pages/diamActive/diamActive',
-                imageUrl: "https://webimages.pzlive.vip/gz_02.png"
+                imageUrl: ""
             })
         return share
     }

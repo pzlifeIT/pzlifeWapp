@@ -30,11 +30,14 @@ Page({
         let name = e.currentTarget.dataset.name;
         let time = e.currentTarget.dataset.time;
         let id = e.currentTarget.dataset.id;
+        let duration = e.currentTarget.dataset.duration;
+        let audio_length = e.currentTarget.dataset.audiolength
+        console.log(e)
         if (this.data.head == 2) {
             return
         }
         wx.navigateTo({
-            url: '/pages/playVoice/playVoice?audio=' + audio + "&name=" + name + "&time=" + time + "&id="+id
+            url: '/pages/playVoice/playVoice?audio=' + audio + "&name=" + name + "&time=" + time + "&id=" + id + "&duration=" + duration+"&audio_length="+audio_length
         })
     },
     /**

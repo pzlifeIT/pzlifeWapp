@@ -8,27 +8,28 @@
         </block>
     </swiper>
     <!--播放样式组件-->
-    <!--<view class="voice-play">-->
-        <!--<view class="play-com">-->
-            <!--<view class="continue">-->
-                <!--<text class="duration">{{currentTime}}</text>-->
-                <!--<slider class="progress" min="0" max="{{duration || 100}}" step="1" block-size="12" activeColor="#e61f18" value="{{current}}"  bindchanging="slider" />-->
-                <!--&lt;!&ndash;<progress class="progress" border-radius="20" percent="{{time}}" stroke-width="2" activeColor="#e61f18" active active-mode="forwards" />&ndash;&gt;-->
-                <!--<text class="duration">{{his}}</text>-->
-            <!--</view>-->
-            <!--<view class="buttons">-->
-                <!--<block wx:if="{{isWhile}}">-->
-                    <!--<image class="icon1" bindtap="while" lazy-load src="{{imgHost}}while.png" wx:if="{{while}}"></image>-->
-                    <!--<image class="icon1" bindtap="doWhile" lazy-load src="{{imgHost}}dowhile.png" wx:else></image>-->
-                <!--</block>-->
-                <!--<image wx:if="{{isPre}}" class="icon2" lazy-load src="{{imgHost}}next.png"></image>-->
-                <!--<image class="icon3" bindtap="playButton" lazy-load src="{{imgHost}}stopplay.png" wx:if="{{isPlay}}"></image>-->
-                <!--<image class="icon3" bindtap="stopPlayButton" lazy-load src="{{imgHost}}play.png" wx:else></image>-->
-                <!--<image wx:if="{{isNext}}" class="icon4" lazy-load src="{{imgHost}}pre.png"></image>-->
-                <!--<image wx:if="{{isTimeOut}}" bindtap="setTimeOut" class="icon5" lazy-load src="{{imgHost}}timeout.png"></image>-->
-            <!--</view>-->
-        <!--</view>-->
-    <!--</view>-->
+    <view class="voice-play">
+        <view class="play-com">
+            <view class="continue">
+                <text class="duration">{{currentTime}}</text>
+                <slider class="progress" min="0" max="{{goodData.durationTime || 100}}" step="1" block-size="12" activeColor="#e61f18" value="{{current}}"  bindchanging="slider" bindchange="clickSlider"/>
+                <!--<progress class="progress" border-radius="20" percent="{{time}}" stroke-width="2" activeColor="#e61f18" active active-mode="forwards" />-->
+                <text class="duration">{{goodData.duration}}</text>
+            </view>
+            <view class="buttons">
+                <block wx:if="{{isWhile}}">
+                    <image class="icon1" bindtap="while" data-while="2" lazy-load src="{{imgHost}}while.png" wx:if="{{while == 1}}"></image>
+                    <image class="icon1" bindtap="while" data-while="3" lazy-load src="{{imgHost}}dowhile.png" wx:elif="{{while == 2}}"></image>
+                    <image class="icon1 listWhile" bindtap="while" data-while="1" lazy-load src="{{imgHost}}listwhile.png" wx:elif="{{while == 3}}"></image>
+                </block>
+                <image wx:if="{{isPre}}" bindtap="pre" class="icon2" lazy-load src="{{imgHost}}next.png"></image>
+                <image class="icon3" bindtap="playButton" lazy-load src="{{imgHost}}stopplay.png" wx:if="{{isPlay}}"></image>
+                <image class="icon3" bindtap="stopPlayButton" lazy-load src="{{imgHost}}play.png" wx:else></image>
+                <image wx:if="{{isNext}}" bindtap="next" class="icon4" lazy-load src="{{imgHost}}pre.png"></image>
+                <image wx:if="{{isTimeOut}}" bindtap="setTimeOut" class="icon5" lazy-load src="{{imgHost}}timeout.png"></image>
+            </view>
+        </view>
+    </view>
 </view>
 <view class='desc'>
     <view class='text'>
@@ -49,7 +50,7 @@
             </text>
         </view>
     </view>
-    <view class="button-select" bindtap="selectVoice">
+    <view class="button-select" bindtap="selectVoice" wx:if="{{goods_sku.length > 1 || goods_sku[0].audios.length > 1 }}">
         选择试听
         <image lazy-load class="select-jt" src="{{imgHost}}jt_black.png"></image>
     </view>

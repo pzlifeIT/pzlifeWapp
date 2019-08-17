@@ -8,7 +8,7 @@
 <view class="list">
     <block wx:for="{{list}}" wx:for-item="audios" wx:for-index="index" wx:key="{{index}}">
         <block wx:for="{{audios}}" >
-            <view class="voice" bindtap="playVoice" data-audio="{{item.audio.audio}}" data-name="{{item.audio.name}}" data-time="{{item._end_time}}" data-id="{{item.audio_id}}">
+            <view class="voice" bindtap="playVoice" data-audio="{{item.audio.audio}}" data-name="{{item.audio.name}}" data-time="{{item._end_time}}" data-audioLength="{{item.audio.audio_length}}" data-duration="{{item.audio.audio_length_text}}" data-id="{{item.audio_id}}">
                 <view class="voice-logo">
                     <image class="logo" lazy-load src="{{imgHost}}image_03.jpg"></image>
                 </view>
