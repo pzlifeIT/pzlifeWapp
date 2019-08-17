@@ -2,6 +2,7 @@
 const app = getApp();
 const BackgroundAudioManager = wx.getBackgroundAudioManager();
 let inter = null;
+let interval = null;
 Page({
 
     /**
@@ -21,12 +22,12 @@ Page({
         time: 0,
         timeOut: false,
         list: [],
-        currentTime:'0:0:0',
-        his:'0:0:0',
-        duration:'',
-        current:0,
-        durationTime:0,
-        audio_length:0
+        currentTime: '0:0:0',
+        his: '0:0:0',
+        duration: '',
+        current: 0,
+        durationTime: 0,
+        audio_length: 0
     },
     /**
      * 获取所有音频
@@ -59,6 +60,19 @@ Page({
         return arr
     },
     backgroundAudio: function () {
+        console.log('我运行了')
+        setTimeout(function () {
+            let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
+            let duration = Math.floor(BackgroundAudioManager.duration % 3600);
+            that.setData({
+                current: BackgroundAudioManager.currentTime,
+                currentTime: Math.floor(BackgroundAudioManager.currentTime / 3600) + ':' + Math.floor(currentTime / 60) + ':' + currentTime % 60,
+                durationTime: BackgroundAudioManager.duration,
+                his: Math.floor(BackgroundAudioManager.duration / 3600) + ':' + Math.floor(duration / 60) + ':' + duration % 60,
+                isPlay:false
+            })
+        }, 1000)
+        this.playButton()
         let that = this;
         BackgroundAudioManager.onError((res) => {
             console.log(res)
@@ -69,6 +83,7 @@ Page({
                 isPlay: true
             })
             clearInterval(inter)
+            clearInterval(interval)
         })
         BackgroundAudioManager.onStop(() => {
             //在这里判断是否开启了循环
@@ -78,15 +93,16 @@ Page({
                 currentTime: '0:0:0'
             })
             clearInterval(inter)
+            clearInterval(interval)
             console.log('停止')
         })
         BackgroundAudioManager.onEnded(() => {
-            if(that.data.while == 3){
+            if (that.data.while == 3) {
                 console.log('进来了')
                 console.log(BackgroundAudioManager.src)
                 that.listWhile();
                 return
-            }else if (that.data.while == 2){
+            } else if (that.data.while == 2) {
                 that.playButton()
                 return
             }
@@ -96,6 +112,7 @@ Page({
                 currentTime: '0:0:0'
             })
             clearInterval(inter)
+            clearInterval(interval)
             console.log('播放完成')
         })
         BackgroundAudioManager.onNext(() => {
@@ -107,20 +124,16 @@ Page({
         BackgroundAudioManager.onPlay(() => {
             console.log('播放ing')
             //获取音频长度
-            let duration = Math.floor(BackgroundAudioManager.duration % 3600);
             //获取当前播放位置,每秒获取一次
             inter = setInterval(function () {
                 let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
-                //判断试听时间
                 that.setData({
                     current: BackgroundAudioManager.currentTime,
                     currentTime: Math.floor(BackgroundAudioManager.currentTime / 3600) + ':' + Math.floor(currentTime / 60) + ':' + currentTime % 60
                 })
             }, 1000);
             that.setData({
-                isPlay: false,
-                // durationTime: BackgroundAudioManager.duration,
-                his: Math.floor(BackgroundAudioManager.duration / 3600) + ':' + Math.floor(duration / 60) + ':' + duration % 60
+                isPlay: false
             })
         })
 
@@ -128,10 +141,25 @@ Page({
     },
     playButton: function () {
         //播放
+        let that = this;
+        console.log('播放了')
         BackgroundAudioManager.src = this.data.audio;
         console.log(this.data.audio);
         BackgroundAudioManager.title = this.data.name;
-        BackgroundAudioManager.play()
+        BackgroundAudioManager.play();
+        BackgroundAudioManager.onPlay(() => {
+            console.log('正在播放了')
+            that.setData({
+                isPlay: false
+            })
+        })
+        interval = setInterval(function () {
+            let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
+            that.setData({
+                current: BackgroundAudioManager.currentTime,
+                currentTime: Math.floor(BackgroundAudioManager.currentTime / 3600) + ':' + Math.floor(currentTime / 60) + ':' + currentTime % 60
+            })
+        }, 1000);
     },
     stopPlayButton: function () {
         //暂停
@@ -146,13 +174,16 @@ Page({
         });
         if (whileType == 1) {
             app.toast({title: '关闭循环'});
+            app.globalData.whileState = whileType
         } else if (whileType == 2) {
             app.toast({title: '开启单曲循环'});
+            app.globalData.whileState = whileType
             // BackgroundAudioManager.onEnded(() => { //单曲循环 正常播放完成才会循环
 
             // })
         } else if (whileType == 3) {
             app.toast({title: '开启列表循环'});
+            app.globalData.whileState = whileType
         }
 
     },
@@ -164,9 +195,9 @@ Page({
         console.log(nowPlay)
         for (let i = 0; i < sku_audios.length; i++) {
             if (nowPlay == sku_audios[i].audio) {
-                if (i+1 >= sku_audios.length){
+                if (i + 1 >= sku_audios.length) {
                     index = 0
-                }else {
+                } else {
                     index = i + 1
                 }
 
@@ -178,10 +209,8 @@ Page({
         let durationTime = sku_audios[index].audio_length;
         console.log(playAudio);
         this.setData({
-            name:playName,
-            duration:duration,
-            audio:playAudio,
-            durationTime:durationTime
+            name: playName,
+            audio: playAudio
         })
         BackgroundAudioManager.src = playAudio;
         BackgroundAudioManager.title = playName;
@@ -195,8 +224,9 @@ Page({
     selectTimeOut: function (e) {
         let value = e.detail.value;
         console.log(value);
+        app.globalData.timeOutState = value;
         this.setData({
-            time: value
+            time:value
         })
     },
     //确认定时
@@ -204,6 +234,7 @@ Page({
         //直接用定时器关闭
         let timeOut = this.data.time;
         let msTimeOut = parseInt(timeOut) * 60 * 1000;
+        //记录初次定时的时间,到现在定时的时间,过去了多久,然后用设定的时间减去过去的时间就是剩下的时间
         if (timeOut == 0) {
             app.toast({title: '设置成功'});
             this.setData({
@@ -261,10 +292,10 @@ Page({
         let durationTime = sku_audios[index].audio_length;
         console.log(playAudio);
         this.setData({
-            name:playName,
-            duration:duration,
-            audio:playAudio,
-            durationTime:durationTime
+            name: playName,
+            // duration: duration,
+            audio: playAudio,
+            // durationTime: durationTime
         })
         BackgroundAudioManager.src = playAudio;
         BackgroundAudioManager.title = playName;
@@ -301,10 +332,10 @@ Page({
         let durationTime = sku_audios[index].audio_length;
         console.log(playAudio);
         this.setData({
-            name:playName,
-            duration:duration,
-            audio:playAudio,
-            durationTime:durationTime
+            name: playName,
+            // duration: duration,
+            audio: playAudio,
+            // durationTime: durationTime
         })
         BackgroundAudioManager.src = playAudio;
         BackgroundAudioManager.title = playName;
@@ -318,7 +349,7 @@ Page({
             BackgroundAudioManager.seek(e.detail.value)
         })
     },
-    clickSlider:function(e){
+    clickSlider: function (e) {
         console.log(e)
         this.setData({
             current: e.detail.value
@@ -332,10 +363,12 @@ Page({
     onLoad: function (options) {
         this.setData({
             imgHost: app.globalData.host.imgHost,
-            audio:options.audio,
-            name:options.name,
-            duration:options.duration,
-            durationTime:options.audio_length
+            audio: options.audio,
+            name: options.name,
+            duration: options.duration,
+            // durationTime: options.audio_length,
+            while:app.globalData.whileState,
+            time:app.globalData.timeOutState
         })
         this.getVoiceList()
     },
@@ -344,7 +377,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+        this.backgroundAudio()
     },
 
     /**
@@ -361,7 +394,7 @@ Page({
      * 生命周期函数--监听页面隐藏
      */
     onHide: function () {
-
+        this.backgroundAudio()
     },
 
     /**

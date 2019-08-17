@@ -67,7 +67,6 @@ Component({
         }
         title = this.properties.voiceName;
         background.title = title;
-
         setTimeout(function () {
             console.log(background.duration);
             let t = Math.floor(background.duration % 3600);

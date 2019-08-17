@@ -10,7 +10,7 @@
                 <text class="duration">{{currentTime}}</text>
                 <slider class="progress" min="0" max="{{durationTime || 100}}" step="1" block-size="12" activeColor="#e61f18" value="{{current}}"  bindchanging="slider" bindchange="clickSlider" />
                 <!--<progress class="progress" border-radius="20" percent="{{time}}" stroke-width="2" activeColor="#e61f18" active active-mode="forwards" />-->
-                <text class="duration">{{duration}}</text>
+                <text class="duration">{{his}}</text>
             </view>
             <view class="buttons">
                 <block wx:if="{{isWhile}}">
@@ -34,19 +34,24 @@
         <view class="mask-select">
             <radio-group bindchange="selectTimeOut">
                 <view class="radio">
-                    <radio value="0"  color="#e61f18"/>不开启
+                    <radio value="0"  color="#e61f18" wx:if="{{time == 0}}" checked />
+                    <radio value="0"  color="#e61f18" wx:else />不开启
                 </view>
                 <view class="radio">
-                    <radio value="30"  color="#e61f18"/>30分钟
+                    <radio value="30"  color="#e61f18" wx:if="{{time == 30}}" checked />
+                    <radio value="30"  color="#e61f18" wx:else />30分钟
                 </view>
                 <view class="radio">
-                    <radio value="60" color="#e61f18"/>1小时
+                    <radio value="60" color="#e61f18" wx:if="{{time == 60}}" checked />
+                    <radio value="60" color="#e61f18" wx:else />1小时
                 </view>
                 <view class="radio">
-                    <radio value="180" color="#e61f18"/>3小时
+                    <radio value="180" color="#e61f18" wx:if="{{time == 180}}" checked />
+                    <radio value="180" color="#e61f18" wx:else />3小时
                 </view>
                 <view class="radio">
-                    <radio value="300" color="#e61f18"/>5小时
+                    <radio value="300" color="#e61f18" wx:if="{{time == 300}}" checked />
+                    <radio value="300" color="#e61f18" wx:else />5小时
                 </view>
             </radio-group>
             <view class="mask-button">

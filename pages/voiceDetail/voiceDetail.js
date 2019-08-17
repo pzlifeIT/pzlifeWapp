@@ -4,6 +4,7 @@ const BackgroundAudioManager = wx.getBackgroundAudioManager();
 const app = getApp();
 let inte = null;
 let inter = null;
+let interval = null;
 Page({
 
     /**
@@ -52,7 +53,8 @@ Page({
         this.setData({
             imgHost: app.globalData.host.imgHost,
             isIphoneX: app.isIphoneX(),
-            goods_id: options.goodid
+            goods_id: options.goodid,
+            // while: app.globalData.whileState
         })
 
     },
@@ -403,6 +405,7 @@ Page({
                 isPlay: true
             });
             clearInterval(inter)
+            clearInterval(interval)
         });
         BackgroundAudioManager.onNext(() => {
             that.next()
@@ -459,6 +462,7 @@ Page({
                 currentTime: '0:0:0'
             })
             clearInterval(inter);
+            clearInterval(interval);
             console.log('停止')
         });
         BackgroundAudioManager.onEnded(() => {
@@ -477,6 +481,7 @@ Page({
                 currentTime: '0:0:0'
             });
             clearInterval(inter);
+            clearInterval(interval);
             console.log('播放完成')
         })
     },
@@ -530,13 +535,16 @@ Page({
 
         if (whileType == 1) {
             app.toast({title: '关闭循环'});
+            // app.globalData.whileState = whileType
         } else if (whileType == 2) {
             app.toast({title: '开启单曲循环'});
+            // app.globalData.whileState = whileType
             // BackgroundAudioManager.onEnded(() => { //单曲循环 正常播放完成才会循环
             //     that.playButton()
             // })
         } else if (whileType == 3) {
             app.toast({title: '开启列表循环'});
+            // app.globalData.whileState = whileType
             BackgroundAudioManager.onEnded(() => {
                 that.listWhile()
             })
@@ -740,6 +748,23 @@ Page({
             BackgroundAudioManager.seek(e.detail.value)
         })
     },
+    getNowPlay:function(){
+        let that = this
+      let nowPlay = BackgroundAudioManager.src
+      if (nowPlay){
+         console.log('播放中')
+          interval = setInterval(function () {
+              let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
+              that.setData({
+                  current: BackgroundAudioManager.currentTime,
+                  currentTime: Math.floor(BackgroundAudioManager.currentTime / 3600) + ':' + Math.floor(currentTime / 60) + ':' + currentTime % 60
+              })
+          }, 1000);
+          this.setData({
+              isPlay:false
+          })
+      }
+    },
     /**
      * 生命周期函数--监听页面显示
      */
@@ -752,6 +777,7 @@ Page({
         this.getGoodsAway()
         this.getVoiceDetail()
         this.getgoodsrecommend()
+        // this.getNowPlay()
     },
 
     /**

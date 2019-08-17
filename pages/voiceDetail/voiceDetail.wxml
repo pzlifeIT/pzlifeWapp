@@ -12,9 +12,9 @@
         <view class="play-com">
             <view class="continue">
                 <text class="duration">{{currentTime}}</text>
-                <slider class="progress" min="0" max="{{goodData.durationTime || 100}}" step="1" block-size="12" activeColor="#e61f18" value="{{current}}"  bindchanging="slider" bindchange="clickSlider"/>
+                <slider class="progress" min="0" max="{{duration || 100}}" step="1" block-size="12" activeColor="#e61f18" value="{{current}}"  bindchanging="slider" bindchange="clickSlider"/>
                 <!--<progress class="progress" border-radius="20" percent="{{time}}" stroke-width="2" activeColor="#e61f18" active active-mode="forwards" />-->
-                <text class="duration">{{goodData.duration}}</text>
+                <text class="duration">{{his}}</text>
             </view>
             <view class="buttons">
                 <block wx:if="{{isWhile}}">

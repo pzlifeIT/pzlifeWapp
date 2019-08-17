@@ -19,7 +19,10 @@ App({
         updateNum: true,
         topHeadHeight: 0,
         routePage: "",
-        wxoptions: ''
+        wxoptions: '',
+        playState:false,
+        whileState:1,
+        timeOutState:0
     },
     getIndex: function(route = '') {
         let pages = getCurrentPages();
