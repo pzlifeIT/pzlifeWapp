@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 76,
 			"list": [
 				{
 					"id": 0,
@@ -357,7 +357,7 @@
 					"id": 46,
 					"name": "须知",
 					"pathName": "pages/my/notice/notice",
-					"query": "iden=3",
+					"query": "iden=4",
 					"scene": null
 				},
 				{
@@ -565,10 +565,10 @@
 					"scene": null
 				},
 				{
-					"id": 77,
+					"id": 76,
 					"name": "voicedetail",
 					"pathName": "pages/voiceDetail/voiceDetail",
-					"query": "goodid=1611",
+					"query": "goodid=1619",
 					"scene": null
 				},
 				{

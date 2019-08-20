@@ -143,9 +143,11 @@ Page({
         //播放
         let that = this;
         console.log('播放了')
-        BackgroundAudioManager.src = this.data.audio;
-        console.log(this.data.audio);
-        BackgroundAudioManager.title = this.data.name;
+        if (BackgroundAudioManager.src != this.data.audio){
+            BackgroundAudioManager.src = this.data.audio;
+            console.log(this.data.audio);
+            BackgroundAudioManager.title = this.data.name;
+        }
         BackgroundAudioManager.play();
         BackgroundAudioManager.onPlay(() => {
             console.log('正在播放了')
@@ -179,7 +181,7 @@ Page({
             app.toast({title: '开启单曲循环'});
             app.globalData.whileState = whileType
             // BackgroundAudioManager.onEnded(() => { //单曲循环 正常播放完成才会循环
-
+            //     that.playButton()
             // })
         } else if (whileType == 3) {
             app.toast({title: '开启列表循环'});
@@ -385,7 +387,9 @@ Page({
      */
     onShow: function () {
         //
-        BackgroundAudioManager.src = this.data.audio;
+        if (this.data.audio != BackgroundAudioManager.src){
+            BackgroundAudioManager.src = this.data.audio;
+        }
         BackgroundAudioManager.title = this.data.name
         this.backgroundAudio()
     },

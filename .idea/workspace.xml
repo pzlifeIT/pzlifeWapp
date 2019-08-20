@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/pages/voiceDetail/voiceDetail.js" line="450" />
+    <bookmark url="file://$PROJECT_DIR$/pages/voiceDetail/voiceDetail.js" line="465" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a3ea87f-a0b8-4c04-bfb8-416b69fad7ec" name="默认的" comment="默认的">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/onPlay/onPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/onPlay/onPlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/notice/notice.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/notice/notice.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/openShop/notice/notice.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/openShop/notice/notice.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/openShop/notice/notice.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/openShop/notice/notice.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/playVoice/playVoice.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/playVoice/playVoice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/playVoice/playVoice.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/playVoice/playVoice.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/voiceDetail/voiceDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/voiceDetail/voiceDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/voiceDetail/voiceDetail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/voiceDetail/voiceDetail.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,13 +40,13 @@
     <session id="-1486475198">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="32" />
+          <entry key="project.closed" value="33" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="11" />
           <entry key="project.open.time.11" value="9" />
           <entry key="project.open.time.12" value="3" />
-          <entry key="project.open.time.13" value="8" />
+          <entry key="project.open.time.13" value="9" />
           <entry key="project.open.time.14" value="7" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="1" />
@@ -56,18 +59,18 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="67" />
+          <entry key="project.opened" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="htm" value="2" />
           <entry key="html" value="2" />
-          <entry key="js" value="625" />
+          <entry key="js" value="627" />
           <entry key="json" value="147" />
           <entry key="php" value="4" />
           <entry key="ts" value="1" />
-          <entry key="wxml" value="504" />
+          <entry key="wxml" value="506" />
           <entry key="wxs" value="2" />
           <entry key="wxss" value="279" />
         </counts>
@@ -75,9 +78,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="279" />
-          <entry key="HTML" value="507" />
+          <entry key="HTML" value="509" />
           <entry key="JSON" value="147" />
-          <entry key="JavaScript" value="625" />
+          <entry key="JavaScript" value="627" />
           <entry key="PHP" value="4" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="TypeScript" value="1" />
@@ -87,34 +90,29 @@
         <counts>
           <entry key="htm" value="36" />
           <entry key="html" value="45" />
-          <entry key="js" value="79485" />
+          <entry key="js" value="80035" />
           <entry key="json" value="495" />
-          <entry key="wxml" value="42169" />
+          <entry key="wxml" value="42209" />
           <entry key="wxss" value="37111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="37111" />
-          <entry key="HTML" value="42250" />
+          <entry key="HTML" value="42290" />
           <entry key="JSON" value="495" />
-          <entry key="JavaScript" value="79485" />
+          <entry key="JavaScript" value="80035" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/voiceDetail/voiceDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="452" column="24" selection-start-line="452" selection-start-column="16" selection-end-line="452" selection-end-column="24" />
-              <folding>
-                <element signature="e#15210#15311#0" />
-                <element signature="e#15549#15678#0" />
-                <element signature="e#16355#16423#0" />
-              </folding>
+            <state relative-caret-position="308">
+              <caret line="398" column="96" selection-start-line="398" selection-start-column="96" selection-end-line="398" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -122,17 +120,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="24" column="20" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="644">
+              <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/playVoice/playVoice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="236" column="57" lean-forward="true" selection-start-line="236" selection-start-column="57" selection-end-line="236" selection-end-column="57" />
+            <state relative-caret-position="289">
+              <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -140,7 +138,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/myVoice/myVoice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
+            <state relative-caret-position="980">
               <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
             </state>
           </provider>
@@ -158,7 +156,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/onPlay/onPlay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
+            <state relative-caret-position="2184">
               <caret line="78" column="25" lean-forward="true" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
             </state>
           </provider>
@@ -167,8 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/voiceDetail/voiceDetail.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+            <state relative-caret-position="532">
+              <caret line="25" column="136" lean-forward="true" selection-start-line="25" selection-start-column="136" selection-end-line="25" selection-end-column="136" />
             </state>
           </provider>
         </entry>
@@ -176,8 +174,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/playVoice/playVoice.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+            <state relative-caret-position="672">
+              <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -185,7 +183,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/voiceDetail/voiceDetail.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
+            <state relative-caret-position="13132">
               <caret line="469" selection-start-line="469" selection-end-line="477" selection-end-column="1" />
             </state>
           </provider>
@@ -194,7 +192,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/playVoice/playVoice.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
+            <state relative-caret-position="2576">
               <caret line="92" column="17" lean-forward="true" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
             </state>
           </provider>
@@ -263,8 +261,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/myVoice/myVoice.json" />
-        <option value="$PROJECT_DIR$/pages/voiceComfirOrder/voiceComfirOrder.json" />
         <option value="$PROJECT_DIR$/pages/events/detail/detail.js" />
         <option value="$PROJECT_DIR$/pages/my/my.js" />
         <option value="$PROJECT_DIR$/pages/my/my.wxml" />
@@ -309,11 +305,13 @@
         <option value="$PROJECT_DIR$/pages/myVoice/myVoice.wxml" />
         <option value="$PROJECT_DIR$/pages/myVoice/myVoice.js" />
         <option value="$PROJECT_DIR$/components/onPlay/onPlay.js" />
+        <option value="$PROJECT_DIR$/pages/my/notice/notice.wxml" />
+        <option value="$PROJECT_DIR$/pages/openShop/notice/notice.wxml" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/pages/voiceDetail/voiceDetail.js" />
-        <option value="$PROJECT_DIR$/pages/voiceDetail/voiceDetail.wxml" />
         <option value="$PROJECT_DIR$/pages/playVoice/playVoice.wxml" />
+        <option value="$PROJECT_DIR$/pages/voiceDetail/voiceDetail.wxml" />
         <option value="$PROJECT_DIR$/pages/playVoice/playVoice.js" />
+        <option value="$PROJECT_DIR$/pages/voiceDetail/voiceDetail.js" />
       </list>
     </option>
   </component>
@@ -363,30 +361,12 @@
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="onPlay" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="diamActive" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pzlifeWapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="myVoice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pzlifeWapp" type="b2602c69:ProjectViewProjectNode" />
@@ -516,12 +496,13 @@
       <workItem from="1565052994528" duration="92442000" />
       <workItem from="1565341325110" duration="2372000" />
       <workItem from="1565572406008" duration="38815000" />
-      <workItem from="1565919740004" duration="40509000" />
+      <workItem from="1565919740004" duration="41112000" />
+      <workItem from="1566176021766" duration="11030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1412210000" />
+    <option name="totallyTimeSpent" value="1423843000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -564,20 +545,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/paystatus/paystatus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/search/search.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="55" column="57" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/voiceComfirOrder/voiceComfirOrder.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -732,9 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#image#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -784,9 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="24" column="135" selection-start-line="24" selection-start-column="135" selection-end-line="24" selection-end-column="135" />
-          <folding>
-            <element signature="n#style#0;n#view#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,17 +814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/voiceDetail/voiceDetail.wxss">
+    <entry file="file://$PROJECT_DIR$/pages/myVoice/myVoice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="469" selection-start-line="469" selection-end-line="477" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/playVoice/playVoice.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="92" column="17" lean-forward="true" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
+        <state relative-caret-position="980">
+          <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -874,57 +828,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/myVoice/myVoice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/onPlay/onPlay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
+        <state relative-caret-position="2184">
           <caret line="78" column="25" lean-forward="true" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/voiceDetail/voiceDetail.wxml">
+    <entry file="file://$PROJECT_DIR$/pages/voiceDetail/voiceDetail.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+        <state relative-caret-position="13132">
+          <caret line="469" selection-start-line="469" selection-end-line="477" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/voiceDetail/voiceDetail.js">
+    <entry file="file://$PROJECT_DIR$/pages/playVoice/playVoice.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="452" column="24" selection-start-line="452" selection-start-column="16" selection-end-line="452" selection-end-column="24" />
-          <folding>
-            <element signature="e#15210#15311#0" />
-            <element signature="e#15549#15678#0" />
-            <element signature="e#16355#16423#0" />
-          </folding>
+        <state relative-caret-position="2576">
+          <caret line="92" column="17" lean-forward="true" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/openShop/notice/notice.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="91" selection-start-line="7" selection-start-column="91" selection-end-line="7" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/notice/notice.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="11" column="91" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="11" selection-end-column="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="644">
+          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/playVoice/playVoice.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        <state relative-caret-position="672">
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/voiceDetail/voiceDetail.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="25" column="136" lean-forward="true" selection-start-line="25" selection-start-column="136" selection-end-line="25" selection-end-column="136" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/playVoice/playVoice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="236" column="57" lean-forward="true" selection-start-line="236" selection-start-column="57" selection-end-line="236" selection-end-column="57" />
+        <state relative-caret-position="289">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/voiceDetail/voiceDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="398" column="96" selection-start-line="398" selection-start-column="96" selection-end-line="398" selection-end-column="96" />
         </state>
       </provider>
     </entry>

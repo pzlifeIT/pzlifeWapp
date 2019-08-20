@@ -43,7 +43,7 @@ Page({
         while: 1,
         time: 0,
         timeOut: false,
-        check:false
+        check: false
     },
 
     /**
@@ -56,7 +56,7 @@ Page({
             goods_id: options.goodid,
             // while: app.globalData.whileState
         })
-
+        app.globalData.goods_id = options.goodid
     },
     call: function () {
         wx.makePhoneCall({
@@ -146,7 +146,7 @@ Page({
         this.setData({
             goodData: skuInfo,
             buy: true
-        },function () {
+        }, function () {
             that.checkPlayAudio();
         })
     },
@@ -395,6 +395,23 @@ Page({
 
     },
     backgroundAudio: function () {
+        console.log("我运行了")
+        if (BackgroundAudioManager.src && BackgroundAudioManager.src == this.data.goodData.audio) {
+            this.setData({
+                isPlay: false
+            })
+            BackgroundAudioManager.onTimeUpdate(() => {
+                let duration = Math.floor(BackgroundAudioManager.duration % 3600);
+                let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
+                that.setData({
+                    duration: BackgroundAudioManager.duration,
+                    his: Math.floor(BackgroundAudioManager.duration / 3600) + ':' + Math.floor(duration / 60) + ':' + duration % 60,
+                    current: BackgroundAudioManager.currentTime,
+                    currentTime: Math.floor(BackgroundAudioManager.currentTime / 3600) + ':' + Math.floor(currentTime / 60) + ':' + currentTime % 60
+                })
+            })
+        }
+
         let that = this;
         BackgroundAudioManager.onError((res) => {
             console.log(res)
@@ -433,9 +450,7 @@ Page({
                 }, 1000);
             } else {
                 //将当前播放位置与试听时间比较
-                let i = 1
                 inter = setInterval(function () {
-                    i++
                     let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
                     //判断试听时间
                     if (BackgroundAudioManager.currentTime >= that.data.goodData.audition_time) {
@@ -466,35 +481,42 @@ Page({
             console.log('停止')
         });
         BackgroundAudioManager.onEnded(() => {
-            if(that.data.while == 3){
+            if (that.data.while == 3) {
                 console.log('进来了')
                 console.log(BackgroundAudioManager.src)
                 that.listWhile();
                 return
-            }else if (that.data.while == 2){
+            } else if (that.data.while == 2) {
                 that.playButton()
                 return
+            } else if (that.data.while == 1) {
+                console.log('关闭循环')
+                that.setData({
+                    isPlay: true,
+                    current: 0,
+                    currentTime: '0:0:0'
+                });
+                clearInterval(inter);
+                clearInterval(interval);
+                console.log('播放完成')
             }
-            that.setData({
-                isPlay: true,
-                current: 0,
-                currentTime: '0:0:0'
-            });
-            clearInterval(inter);
-            clearInterval(interval);
-            console.log('播放完成')
         })
     },
     playButton: function () {
         //播放
-        BackgroundAudioManager.src = this.data.goodData.audio;
-        console.log(this.data.goodData.audio);
-        BackgroundAudioManager.title = this.data.goodData.audio_name;
+        if (this.data.goodData.audio != BackgroundAudioManager.src) {
+            BackgroundAudioManager.src = this.data.goodData.audio;
+            console.log(this.data.goodData.audio);
+            BackgroundAudioManager.title = this.data.goodData.audio_name;
+        }
         BackgroundAudioManager.play()
     },
     stopPlayButton: function () {
         //暂停
         BackgroundAudioManager.pause()
+        this.setData({
+            isPlay: true
+        })
     },
     checkPlayAudio: function () {
         let that = this
@@ -504,15 +526,15 @@ Page({
                 audio_id: that.data.goodData.audio_id
             },
             success(res) {
-                   if (res.checked == 1){
-                       that.setData({
-                           check:true
-                       })
-                   } else {
-                       that.setData({
-                           check:false
-                       })
-                   }
+                if (res.checked == 1) {
+                    that.setData({
+                        check: true
+                    })
+                } else {
+                    that.setData({
+                        check: false
+                    })
+                }
             },
             error(res) {
                 console.log(res);
@@ -532,26 +554,48 @@ Page({
             app.toast({title: '请选择需要循环的规格'})
             return
         }
-
         if (whileType == 1) {
             app.toast({title: '关闭循环'});
+            this.setData({
+                while: whileType
+            }, function () {
+                BackgroundAudioManager.onEnded(() => {
+                    console.log('关闭循环')
+                    that.setData({
+                        isPlay: true,
+                        current: 0,
+                        currentTime: '0:0:0'
+                    });
+                    clearInterval(inter);
+                    clearInterval(interval);
+                    console.log('播放完成')
+                })
+            })
             // app.globalData.whileState = whileType
         } else if (whileType == 2) {
             app.toast({title: '开启单曲循环'});
             // app.globalData.whileState = whileType
-            // BackgroundAudioManager.onEnded(() => { //单曲循环 正常播放完成才会循环
-            //     that.playButton()
-            // })
+            this.setData({
+                while: whileType
+            }, function () {
+                BackgroundAudioManager.onEnded(() => { //单曲循环 正常播放完成才会循环
+                    that.playButton()
+                })
+            })
+
         } else if (whileType == 3) {
             app.toast({title: '开启列表循环'});
+            this.setData({
+                while: whileType
+            }, function () {
+                BackgroundAudioManager.onEnded(() => {
+                    that.listWhile()
+                })
+            });
             // app.globalData.whileState = whileType
-            BackgroundAudioManager.onEnded(() => {
-                that.listWhile()
-            })
+
         }
-        this.setData({
-            while: whileType
-        });
+
     },
     listWhile: function () {
         let sku_audios = this.data.goodData.sku_audios;
@@ -561,9 +605,9 @@ Page({
         let goodData = this.data.goodData
         for (let i = 0; i < sku_audios.length; i++) {
             if (nowPlay == sku_audios[i].audio) {
-                if (i+1 >= sku_audios.length){
+                if (i + 1 >= sku_audios.length) {
                     index = 0
-                }else {
+                } else {
                     index = i + 1
                 }
 
@@ -579,7 +623,7 @@ Page({
         goodData.duration = duration;
         goodData.durationTime = durationTime
         this.setData({
-            goodData:goodData
+            goodData: goodData
         })
         BackgroundAudioManager.src = playAudio;
         BackgroundAudioManager.title = playName;
@@ -726,19 +770,19 @@ Page({
         BackgroundAudioManager.play();
     },
     slider: function (e) {
-        if(!this.data.check){
-            app.toast({title:"请先购买"});
+        if (!this.data.check) {
+            app.toast({title: "请先购买"});
             return;
         }
         this.setData({
-            current:e.detail.value
-        },function () {
+            current: e.detail.value
+        }, function () {
             BackgroundAudioManager.seek(e.detail.value)
         })
     },
-    clickSlider:function(e){
-        if(!this.data.check){
-            app.toast({title:"请先购买"});
+    clickSlider: function (e) {
+        if (!this.data.check) {
+            app.toast({title: "请先购买"});
             return;
         }
         console.log(e)
@@ -748,22 +792,22 @@ Page({
             BackgroundAudioManager.seek(e.detail.value)
         })
     },
-    getNowPlay:function(){
+    getNowPlay: function () {
         let that = this
-      let nowPlay = BackgroundAudioManager.src
-      if (nowPlay){
-         console.log('播放中')
-          interval = setInterval(function () {
-              let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
-              that.setData({
-                  current: BackgroundAudioManager.currentTime,
-                  currentTime: Math.floor(BackgroundAudioManager.currentTime / 3600) + ':' + Math.floor(currentTime / 60) + ':' + currentTime % 60
-              })
-          }, 1000);
-          this.setData({
-              isPlay:false
-          })
-      }
+        let nowPlay = BackgroundAudioManager.src
+        if (nowPlay) {
+            console.log('播放中')
+            interval = setInterval(function () {
+                let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
+                that.setData({
+                    current: BackgroundAudioManager.currentTime,
+                    currentTime: Math.floor(BackgroundAudioManager.currentTime / 3600) + ':' + Math.floor(currentTime / 60) + ':' + currentTime % 60
+                })
+            }, 1000);
+            this.setData({
+                isPlay: false
+            })
+        }
     },
     /**
      * 生命周期函数--监听页面显示

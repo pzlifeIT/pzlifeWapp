@@ -22,7 +22,9 @@ App({
         wxoptions: '',
         playState:false,
         whileState:1,
-        timeOutState:0
+        timeOutState:0,
+        detailWhileState:1,
+        detailTimeOutState:0
     },
     getIndex: function(route = '') {
         let pages = getCurrentPages();

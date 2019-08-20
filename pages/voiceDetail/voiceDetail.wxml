@@ -18,15 +18,15 @@
             </view>
             <view class="buttons">
                 <block wx:if="{{isWhile}}">
-                    <image class="icon1" bindtap="while" data-while="2" lazy-load src="{{imgHost}}while.png" wx:if="{{while == 1}}"></image>
-                    <image class="icon1" bindtap="while" data-while="3" lazy-load src="{{imgHost}}dowhile.png" wx:elif="{{while == 2}}"></image>
-                    <image class="icon1 listWhile" bindtap="while" data-while="1" lazy-load src="{{imgHost}}listwhile.png" wx:elif="{{while == 3}}"></image>
+                    <image class="icon1" lazy-load  bindtap="while" data-while="2" lazy-load src="{{imgHost}}while.png" wx:if="{{while == 1}}"></image>
+                    <image class="icon1" lazy-load  bindtap="while" data-while="3" lazy-load src="{{imgHost}}dowhile.png" wx:elif="{{while == 2}}"></image>
+                    <image class="icon1 listWhile" lazy-load  bindtap="while" data-while="1" lazy-load src="{{imgHost}}listwhile.png" wx:elif="{{while == 3}}"></image>
                 </block>
-                <image wx:if="{{isPre}}" bindtap="pre" class="icon2" lazy-load src="{{imgHost}}next.png"></image>
-                <image class="icon3" bindtap="playButton" lazy-load src="{{imgHost}}stopplay.png" wx:if="{{isPlay}}"></image>
-                <image class="icon3" bindtap="stopPlayButton" lazy-load src="{{imgHost}}play.png" wx:else></image>
-                <image wx:if="{{isNext}}" bindtap="next" class="icon4" lazy-load src="{{imgHost}}pre.png"></image>
-                <image wx:if="{{isTimeOut}}" bindtap="setTimeOut" class="icon5" lazy-load src="{{imgHost}}timeout.png"></image>
+                <image wx:if="{{isPre}}" lazy-load  bindtap="pre" class="icon2" lazy-load src="{{imgHost}}next.png"></image>
+                <image class="icon3" lazy-load  bindtap="playButton" lazy-load src="{{imgHost}}stopplay.png" wx:if="{{isPlay}}"></image>
+                <image class="icon3" lazy-load  bindtap="stopPlayButton" lazy-load src="{{imgHost}}play.png" wx:else></image>
+                <image wx:if="{{isNext}}" lazy-load  bindtap="next" class="icon4" lazy-load src="{{imgHost}}pre.png"></image>
+                <image wx:if="{{isTimeOut}}" lazy-load  bindtap="setTimeOut" class="icon5" lazy-load src="{{imgHost}}timeout.png"></image>
             </view>
         </view>
     </view>

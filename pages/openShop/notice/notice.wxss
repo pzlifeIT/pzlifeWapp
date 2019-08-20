@@ -29,7 +29,7 @@ image{
 }
 .h-footer{
     width: 750rpx;
-    height: 1822rpx;
+    height: 1396rpx;
 }
 .footer{
     width: 750rpx;
