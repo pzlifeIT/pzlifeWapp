@@ -1,7 +1,7 @@
 //that.js
 const config = require('config/config.js')
 App({
-    onLaunch: function(opt) {
+    onLaunch: function (opt) {
         // 展示本地存储能力
         //本地缓存
         let that = this
@@ -20,13 +20,14 @@ App({
         topHeadHeight: 0,
         routePage: "",
         wxoptions: '',
-        playState:false,
-        whileState:1,
-        timeOutState:0,
-        detailWhileState:1,
-        detailTimeOutState:0
+        playState: false,
+        whileState: 1,
+        timeOutState: 0,
+        detailWhileState: 1,
+        detailTimeOutState: 0,
+        goods_id: ''
     },
-    getIndex: function(route = '') {
+    getIndex: function (route = '') {
         let pages = getCurrentPages();
         let index = 100;
         console.log(pages)
@@ -37,7 +38,7 @@ App({
         }
         return index
     },
-    getWxRoute: function() {
+    getWxRoute: function () {
         let pages = getCurrentPages(),
             prevpage = pages[pages.length - 1];
         if (prevpage.route.indexOf('/login') == -1) {
@@ -53,7 +54,7 @@ App({
             }
         }
     },
-    getTopHeadHeight: function() {
+    getTopHeadHeight: function () {
         let that = this
         wx.getSystemInfo({
             success(res) {
@@ -61,7 +62,7 @@ App({
             }
         })
     },
-    getconid: function() {
+    getconid: function () {
         let that = this
         wx.getStorage({
             key: "con_id",
@@ -72,7 +73,7 @@ App({
         });
         this.getUserInfo()
     },
-    setconid: function(conid = '') {
+    setconid: function (conid = '') {
         wx.setStorage({
             key: "con_id",
             data: conid
@@ -80,14 +81,14 @@ App({
         this.globalData.con_id = conid
         this.getUserInfo()
     },
-    toast: function(data = {}) {
+    toast: function (data = {}) {
         wx.showToast({
             title: data.title,
             icon: data.icon || "none",
             duration: data.duration || 2000
         })
     },
-    share: function(data = {}) {
+    share: function (data = {}) {
         console.log(data.imageUrl)
         if (!data.path) {
             data.path = '/pages/index/index'
@@ -102,19 +103,19 @@ App({
             title: data.title || '776品质生活广场',
             path: data.path,
             imageUrl: data.imageUrl == undefined ? 'https://webimages.pzlive.vip/share.jpg' : data.imageUrl,
-            success: function(shareTickets) {
+            success: function (shareTickets) {
 
             },
-            fail: function(res) {
+            fail: function (res) {
 
             },
-            complete: function(res) {
+            complete: function (res) {
 
             }
         }
         return sharejson
     },
-    getUserInfo: function() {
+    getUserInfo: function () {
         let that = this
         this.wxrequest({
             url: "user/getuser",
@@ -124,7 +125,7 @@ App({
             }
         })
     },
-    judgelogin: function(obj = {}) {
+    judgelogin: function (obj = {}) {
         this.wxrequest({
             url: "user/getuser",
             success(res) {
@@ -132,22 +133,23 @@ App({
             }
         })
     },
-    indexmain: function(id = '') {
+    indexmain: function (id = '') {
         this.wxrequest({
             url: 'user/indexmain',
             data: {
                 buid: id
             },
             nologin: true,
-            success: function(res) {}
+            success: function (res) {
+            }
         })
     },
-    setCartNum: function(id) {
+    setCartNum: function (id) {
         let that = this
         that.wxrequest({
             url: 'cart/getUserCartNum',
             nologin: true,
-            success: function(res) {
+            success: function (res) {
                 let n = res.total
                 that.globalData.updateNum = false
                 if (n == 0) {
@@ -163,7 +165,7 @@ App({
             }
         })
     },
-    modal: function(data = {}) {
+    modal: function (data = {}) {
         wx.showModal({
             title: data.title || '',
             content: data.content || '',
@@ -180,7 +182,7 @@ App({
             }
         })
     },
-    login: function() {
+    login: function () {
         let that = this
         this.modal({
             title: "请先登录",
@@ -193,7 +195,7 @@ App({
             }
         })
     },
-    wxpay: function(data = {}) {
+    wxpay: function (data = {}) {
         let that = this
         wx.login({
             success(res) {
@@ -262,7 +264,7 @@ App({
             }
         })
     },
-    wxrequest: function(obj = {}) {
+    wxrequest: function (obj = {}) {
         let that = this,
             url = ''
         obj.data = obj.data || {}
@@ -273,7 +275,7 @@ App({
             }
             obj.data.con_id = that.globalData.con_id
         }
-        obj.noloading ? '' : wx.showLoading({ title: '加载中' })
+        obj.noloading ? '' : wx.showLoading({title: '加载中'})
 
         obj.host = obj.host || 1
 
@@ -307,14 +309,14 @@ App({
             },
             fail(err) {
                 wx.hideLoading()
-                that.toast({ title: '网络错误' })
+                that.toast({title: '网络错误'})
                 if (typeof obj.fail == 'function') {
                     obj.fail(err)
                 }
             }
         })
     },
-    networkerror: function(code = 0) {
+    networkerror: function (code = 0) {
         let text = ''
         switch (parseInt(code)) {
             case 201:
@@ -375,9 +377,9 @@ App({
             default:
                 text = '意料之外的网络错误'
         }
-        this.toast({ title: text })
+        this.toast({title: text})
     },
-    onShow: function(opt) {
+    onShow: function (opt) {
         if (opt.query.scene) {
             this.globalData.pid = this.disScene(opt.query.scene).pid
         }
@@ -412,7 +414,7 @@ App({
         }
         return list
     },
-    base64: function(str) {
+    base64: function (str) {
         let keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
         let output = "";
         let chr1, chr2, chr3, enc1, enc2, enc3, enc4;
@@ -435,7 +437,7 @@ App({
         }
         return output;
     },
-    _utf8_encode: function(string) {
+    _utf8_encode: function (string) {
         string = string.replace(/\r\n/g, "\n");
         let utftext = "";
         for (let n = 0; n < string.length; n++) {
@@ -467,8 +469,11 @@ App({
                             view_uid: pid
                         },
                         nocon: true,
-                        success() {
-
+                        success(res) {
+                            console.log(res)
+                        },
+                        error(res) {
+                            console.log(res)
                         }
                     })
                 }
@@ -476,10 +481,10 @@ App({
         })
 
     },
-    isIphoneX(){
+    isIphoneX() {
         let type = wx.getSystemInfoSync();
         console.log(type)
-        if (type.model.indexOf('iPhone X') != -1){
+        if (type.model.indexOf('iPhone X') != -1) {
             return true
         } else {
             return false

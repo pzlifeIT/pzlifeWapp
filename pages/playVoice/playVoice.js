@@ -236,6 +236,7 @@ Page({
         //直接用定时器关闭
         let timeOut = this.data.time;
         let msTimeOut = parseInt(timeOut) * 60 * 1000;
+        let that = this
         //记录初次定时的时间,到现在定时的时间,过去了多久,然后用设定的时间减去过去的时间就是剩下的时间
         if (timeOut == 0) {
             app.toast({title: '设置成功'});
@@ -250,6 +251,10 @@ Page({
         })
         setTimeout(function () {
             BackgroundAudioManager.stop()
+            that.setData({
+                time:0
+            })
+            app.globalData.timeOutState = 0;
         }, msTimeOut);
 
     },

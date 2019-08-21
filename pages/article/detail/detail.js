@@ -6,7 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        url:""
+        url: ""
     },
 
     /**
@@ -15,10 +15,14 @@ Page({
     onLoad: function (options) {
         console.log(options)
         this.setData({
-            url:decodeURIComponent(options.url)
+            url: decodeURIComponent(options.url)
         })
     },
-
+    getUserInfo: function () {
+        setTimeout(function () {
+            app.judgelogin()
+        }, 30000)
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -30,7 +34,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this.getUserInfo()
     },
 
     /**
@@ -66,9 +70,9 @@ Page({
      */
     onShareAppMessage: function () {
         return app.share({
-            title:"文章详情",
-            path:"/pages/article/detail/detail?url=" + encodeURIComponent(this.data.url),
-            imageUrl:""
+            title: "文章详情",
+            path: "/pages/article/detail/detail?url=" + encodeURIComponent(this.data.url),
+            imageUrl: ""
         })
     }
 })

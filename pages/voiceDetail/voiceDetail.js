@@ -43,7 +43,8 @@ Page({
         while: 1,
         time: 0,
         timeOut: false,
-        check: false
+        check: false,
+        globalGoodsId:''
     },
 
     /**
@@ -54,9 +55,9 @@ Page({
             imgHost: app.globalData.host.imgHost,
             isIphoneX: app.isIphoneX(),
             goods_id: options.goodid,
-            // while: app.globalData.whileState
+            globalGoodsId: app.globalData.goods_id
         })
-        app.globalData.goods_id = options.goodid
+
     },
     call: function () {
         wx.makePhoneCall({
@@ -396,11 +397,13 @@ Page({
     },
     backgroundAudio: function () {
         console.log("我运行了")
+        console.log(this.data.goodData.audio)
         if (BackgroundAudioManager.src && BackgroundAudioManager.src == this.data.goodData.audio) {
             this.setData({
                 isPlay: false
             })
             BackgroundAudioManager.onTimeUpdate(() => {
+                console.log('update_time')
                 let duration = Math.floor(BackgroundAudioManager.duration % 3600);
                 let currentTime = Math.floor(BackgroundAudioManager.currentTime % 3600);
                 that.setData({
@@ -592,10 +595,7 @@ Page({
                     that.listWhile()
                 })
             });
-            // app.globalData.whileState = whileType
-
         }
-
     },
     listWhile: function () {
         let sku_audios = this.data.goodData.sku_audios;
@@ -661,6 +661,7 @@ Page({
         //直接用定时器关闭
         let timeOut = this.data.time;
         let msTimeOut = parseInt(timeOut) * 60 * 1000;
+        let that = this
         if (timeOut == 0) {
             app.toast({title: '设置成功'});
             this.setData({
@@ -674,6 +675,9 @@ Page({
         })
         setTimeout(function () {
             BackgroundAudioManager.stop()
+            that.setData({
+                time:0
+            })
         }, msTimeOut);
 
     },

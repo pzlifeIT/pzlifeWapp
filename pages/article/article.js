@@ -13,6 +13,8 @@ Page({
         navHight:app.globalData.topHeadHeight
     },
     getArticle() {
+        console.log('yunxing ')
+        // return
         let that = this
         app.wxrequest({
             url: "wechattweets/getWeChatGraphicMaterialList",
@@ -20,6 +22,7 @@ Page({
                 page: that.data.page || 1,
                 page_num: that.data.page_num || 10
             },
+            nocon:true,
             success(res) {
                 if (res.WeChatList.length < 10) {
                     that.setData({
@@ -44,11 +47,16 @@ Page({
             url: "detail/detail?url=" + encodeURIComponent(url)
         })
     },
+    getUserInfo:function(){
+     setTimeout(function () {
+         app.judgelogin()
+     },30000)
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.getArticle()
+
     },
 
     /**
@@ -62,7 +70,9 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        console.log(123)
+        this.getArticle()
+        this.getUserInfo()
     },
 
     /**

@@ -503,14 +503,10 @@ box-sizing: border-box;
     font-size: 26rpx;
     font-weight: bold;
     line-height: 40rpx;
-    margin: 127rpx 0 0 0;
     float: right;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    right: 0;
-    top: 0rpx;
     padding: 0 15rpx;
     box-sizing: border-box;
     min-width: 240rpx;
@@ -523,4 +519,11 @@ box-sizing: border-box;
 }
 .mar{
     margin: 114rpx auto;
+}
+.run{
+    width: 750rpx;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
