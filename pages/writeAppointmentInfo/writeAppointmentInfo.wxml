@@ -1,0 +1,86 @@
+<!--pages/writeAppointmentInfo/writeAppointmentInfo.wxml-->
+<view class="top-line {{state}}">
+    <s></s>
+</view>
+<view bindtouchstart="touchStart" bindtouchend="touchEnd">
+    <block wx:if="{{screen == 1}}">
+        <view class="input-li {{turn == 'left'?'animation-slide-right':'animation-slide-left'}}">
+            <view class="center-li">
+                <view class="input-title">预约事项</view>
+                <input class="input" type="text" placeholder="上海医保/医疗卡号(如有请填写)" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="挂号医院名称" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="挂号科室" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="专家姓名" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="预约时间" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="预约时间段" placeholder-class="in-pla"/>
+                <view class="input view-center">
+                    <view class="view">若实际预约时间不在您的预约时间段内是否接受调成最近期可预约时间</view>
+                    <picker class="select" range="{{yesOrNo}}" bindchange="bindPickerChange" value="{{index}}">
+                        {{yesOrNo[index]}}
+                        <text class="jt"></text>
+                    </picker>
+                </view>
+                <input class="input" type="text" placeholder="外院治疗情况" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="取报告条码" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="需要取报告时间" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="需要取报告地点" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="需要陪护时间" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="需要陪护地点" placeholder-class="in-pla"/>
+            </view>
+        </view>
+        <view class="next" bindtap="next">下一步</view>
+    </block>
+    <block wx:elif="{{screen == 2}}">
+        <view class="input-li {{turn == 'left'?'animation-slide-right':'animation-slide-left'}}">
+            <view class="center-li">
+                <view class="input-title">联系人信息</view>
+                <input class="input" type="text" placeholder="就诊人姓名" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="就诊人手机号" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="身份证号" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="性别" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="年龄" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="紧急联系人姓名" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="紧急联系人手机号" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="邮箱" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="诉求" placeholder-class="in-pla"/>
+            </view>
+        </view>
+        <view class="prev" bindtap="prev">上一步</view>
+        <view class="next" bindtap="next">下一步</view>
+    </block>
+    <block wx:elif="{{screen == 3}}">
+        <view class="input-li {{turn == 'left'?'animation-slide-right':'animation-slide-left'}}">
+            <view class="center-li no-flex">
+                <view class="padding">
+                    <view class="input-title">证件图片信息</view>
+                    <!--<camera></camera>-->
+                    <view class="img-cam">
+                        <view class="img" catchtap="takePhoto" data-num="1"><image wx:if="{{first}}" class="photo" lazy-load src="{{first}}" ></image><image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image></view>
+                        <view class="img-text">身份证正面复印件</view>
+                    </view>
+                    <view class="img-cam right">
+                        <view class="img" bindtap="takePhoto" data-num="2"><image lazy-load src="{{second}}" class="photo" wx:if="{{second}}"></image><image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image></view>
+                        <view class="img-text">身份证正面复印件</view>
+                    </view>
+                    <view class="img-cam">
+                        <view class="img" bindtap="takePhoto" data-num="3"><image lazy-load src="{{third}}" class="photo" wx:if="{{third}}"></image><image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image></view>
+                    </view>
+                    <view class="img-cam right">
+                        <view class="img" bindtap="takePhoto" data-num="4"><image lazy-load src="{{fourth}}" class="photo" wx:if="{{fourth}}"></image><image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image></view>
+                    </view>
+                    <view class="img-text">2张两寸（3.5CM * 4.5CM）白底彩照</view>
+                    <view class="img-cam">
+                        <view class="img" bindtap="takePhoto" data-num="5"><image lazy-load src="{{fifth}}" class="photo" wx:if="{{fifth}}"></image><image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image></view>
+                        <view class="img-text">儿童户口本</view>
+                    </view>
+                    <view class="img-cam right">
+                        <view class="img" bindtap="takePhoto" data-num="6"><image lazy-load src="{{sixth}}" class="photo" wx:if="{{sixth}}"></image><image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image></view>
+                        <view class="img-text">出生证明</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="prev" bindtap="prev">上一步</view>
+        <view class="next" bindtap="next">提交</view>
+    </block>
+</view>

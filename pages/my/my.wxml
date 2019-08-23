@@ -9,7 +9,7 @@
     </navigator>
     <image lazy-load="true" class="userBack" src="{{imgHost}}myback_02.png"/>
 </view>
-<view class="userheader haveHeader" wx:if="{{loginStatus}}">
+<view class="userheader haveHeader {{userInfo.user_market != 0 ? 'lowHeader':''}}" wx:if="{{loginStatus}}">
 
     <navigator url='/pages/my/myInfo/myInfo?name={{userInfo.nick_name}}&phone={{userInfo.mobile}}' hover-class="none"
                open-type="navigate">

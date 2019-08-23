@@ -106,6 +106,7 @@ page {
 
 .cate_three {
     width: 166rpx;
+    height: 186rpx;
     float: left;
     margin: 5rpx 5rpx;
 }

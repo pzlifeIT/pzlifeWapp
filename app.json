@@ -95,7 +95,9 @@
         "pages/voiceList/voiceList",
         "pages/voiceDetail/voiceDetail",
         "pages/voiceComfirOrder/voiceComfirOrder",
-        "pages/playVoice/playVoice"
+        "pages/playVoice/playVoice",
+        "pages/writeAppointmentInfo/writeAppointmentInfo",
+        "pages/writeTravelInfo/writeTravelInfo"
     ],
     "window": {
         "backgroundTextStyle": "dark",
