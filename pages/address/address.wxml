@@ -19,7 +19,7 @@
                         <image lazy-load="true" src="{{imgHost}}edit.png"/>
                         <!-- </view> -->
                     </navigator>
-                     <view bindtap="delete"  class="al-btn-del din"><image lazy-load="true" src="{{imgHost}}delete.png" /></view>
+                     <!--<view bindtap="delete"  class="al-btn-del din"><image lazy-load="true" src="{{imgHost}}delete.png" /></view>-->
                 </view>
             </view>
         </view>

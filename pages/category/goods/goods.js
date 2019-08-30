@@ -11,7 +11,8 @@ Page({
         reach: true,
         goodsList: [],
         sub_name: "",
-        navHight: app.globalData.topHeadHeight
+        navHight: app.globalData.topHeadHeight,
+        shareImg:''
     },
 
     /**
@@ -25,10 +26,29 @@ Page({
         })
         if (sub_id) {
             this.getSubGoodsList(sub_id)
+            this.getShareImg(sub_id)
         }
         console.log(options)
         wx.setNavigationBarTitle({
             title: options.sub_name || "商品列表"
+        })
+    },
+    getShareImg(id) {
+        let that = this
+        app.wxrequest({
+            url: "category/getSubjectDetail",
+            data: {
+                    subject_id: id
+                },
+            nocon:true,
+            success(res){
+                that.setData({
+                    shareImg:res.data.subject_share_image
+                })
+            },
+            error(res){
+
+            }
         })
     },
     goDetail: function (e) {
@@ -129,7 +149,7 @@ Page({
             share = app.share({
                 title: this.data.sub_name || '商品列表',
                 path: '/pages/category/goods/goods?sub_id=' + sub_id + "&sub_name=" + this.data.sub_name,
-                imageUrl: ''
+                imageUrl: that.data.shareImg || ''
             })
         return share
     }

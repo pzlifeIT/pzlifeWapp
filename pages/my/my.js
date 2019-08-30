@@ -347,6 +347,18 @@ Page({
         }
 
     },
+
+    goshiftMoney() {
+        if (this.data.con_id) {
+            wx.navigateTo({
+                url: "/pages/shiftMoney/shiftMoney"
+            })
+        } else {
+            app.toast({
+                title: "请先登录"
+            })
+        }
+    },
     join: function () {
         wx.navigateTo({
             url: "/pages/my/join/join"
