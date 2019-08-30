@@ -1,0 +1,125 @@
+<!--pages/appointment/appointment.wxml-->
+<view>
+    <!--<block wx:if="{{screen == 1}}">-->
+    <view class="input-li {{turn == 'left'?'animation-slide-right':'animation-slide-left'}}">
+        <block wx:for="{{check}}">
+            <view class="center-li fw">
+                <view class="input-title margin-bottom">选择{{item.title}}</view>
+                <!--<view class="margin-top">-->
+                <block wx:for="{{air}}">
+                    <view class="name {{attr[index] == item.id ? 'active':''}}" bindtap="select" data-index="{{index}}"
+                          data-name="{{item.name}}" data-id="{{item.id}}" data-idcard="{{item.idcard}}"
+                          data-phone="{{item.phone}}" data-passport="{{item.passport}}">{{item.name}}
+                    </view>
+                </block>
+                <view class="add" bindtap="add">
+                    <text>+</text>
+                    新增
+                </view>
+                <!--</view>-->
+            </view>
+        </block>
+        <view class="center-li">
+            <view class="input-title">填写事项</view>
+            <block wx:for="{{text}}">
+                <input class="input" type="text" placeholder="{{item.title}}" bindinput="input"
+                       data-model="{{item.name}}" placeholder-class="in-pla"/>
+            </block>
+            <block wx:for="{{time}}">
+                <input class="input" type="text" placeholder="{{item.title}} 如:2019-09-01 10:30" bindinput="input"
+                       data-model="{{item.name}}" placeholder-class="in-pla"/>
+            </block>
+            <block wx:for="{{radio}}">
+                <input class="input" type="text" placeholder="{{item.title}} 请填写'是'或'否'" bindinput="input"
+                       data-model="{{item.name}}" placeholder-class="in-pla"/>
+            </block>
+
+            <block wx:for="{{textarea}}">
+                <input class="input" type="text" placeholder="{{item.title}}" maxlength="-1" bindinput="input"
+                       data-model="{{item.name}}" placeholder-class="in-pla"/>
+            </block>
+            <!--<block wx:for="{{arr}}">-->
+            <!--<input class="input" wx:if="{{item.type == 1}}" type="text" placeholder="{{item.title}}" bindinput="input" data-model="{{item.name_id}}" placeholder-class="in-pla" data-goodsid="{{item.goods_id}}" />-->
+            <!--<input class="input" wx:elif="{{item.type == 2}}" type="text" placeholder="{{item.title}} 如:2019-09-01 10:30" maxlength="-1" bindinput="input" data-model="{{item.name}}" placeholder-class="in-pla"/>-->
+            <!--<input class="input" wx:elif="{{item.type == 3}}" type="text" placeholder="{{item.title}}  请填写'是'或'否'" maxlength="-1" bindinput="input" data-model="{{item.name}}" placeholder-class="in-pla"/>-->
+            <!--<input class="input" wx:elif="{{item.type == 5}}" type="text" placeholder="{{item.title}}" maxlength="-1" bindinput="input" data-model="{{item.name}}" placeholder-class="in-pla"/>-->
+            <!--</block>-->
+
+        </view>
+        <view class="center-li no-flex" wx:if="{{img.length > 0 }}">
+            <view class="input-title">证件图片信息</view>
+            <!--<camera></camera>-->
+            <view class="padding">
+                <block wx:for="{{img}}">
+                    <view class="img-cam" wx:if="{{item.title == '出生证明'}}">
+                        <view class="img" catchtap="takePhoto" data-num="1">
+                            <image wx:if="{{first}}" class="photo" lazy-load src="{{first}}"></image>
+                            <image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image>
+                        </view>
+                        <view class="img-text">出生证明</view>
+                    </view>
+                    <view class="img-cam right" wx:if="{{item.title == '营业执照复印件盖公章'}}">
+                        <view class="img" catchtap="takePhoto" data-num="2">
+                            <image wx:if="{{second}}" class="photo" lazy-load src="{{second}}"></image>
+                            <image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image>
+                        </view>
+                        <view class="img-text">营业执照盖公章复印件</view>
+                    </view>
+                    <view class="img-cam" wx:if="{{item.title == '在职证明'}}">
+                        <view class="img" catchtap="takePhoto" data-num="3">
+                            <image wx:if="{{third}}" class="photo" lazy-load src="{{third}}"></image>
+                            <image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image>
+                        </view>
+                        <view class="img-text">在职证明</view>
+                    </view>
+                    <view class="img-cam" wx:if="{{item.title == '资产证明'}}">
+                        <view class="img" catchtap="takePhoto" data-num="4">
+                            <image wx:if="{{fourth}}" class="photo" lazy-load src="{{fourth}}"></image>
+                            <image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image>
+                        </view>
+                        <view class="img-text">资产证明</view>
+                    </view>
+                    <view class="img-cam" wx:if="{{item.title == '儿童出生证明'}}">
+                        <view class="img" catchtap="takePhoto" data-num="5">
+                            <image wx:if="{{fifth}}" class="photo" lazy-load src="{{fifth}}"></image>
+                            <image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image>
+                        </view>
+                        <view class="img-text">儿童出生证明</view>
+                    </view>
+                    <view class="img-cam" wx:if="{{item.title == '学生证'}}">
+                        <view class="img" catchtap="takePhoto" data-num="6">
+                            <image wx:if="{{sixth}}" class="photo" lazy-load src="{{sixth}}"></image>
+                            <image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image>
+                        </view>
+                        <view class="img-text">学生证</view>
+                    </view>
+                    <view class="img-cam" wx:if="{{item.title == '犯罪记录证明'}}">
+                        <view class="img" catchtap="takePhoto" data-num="7">
+                            <image wx:if="{{seventh}}" class="photo" lazy-load src="{{seventh}}"></image>
+                            <image class="jia" wx:else lazy-load src="{{imgHost}}jia.png"></image>
+                        </view>
+                        <view class="img-text">犯罪记录证明</view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <!--循环列表-->
+        <view class=" center-li no-flex" wx:for="{{imgs}}" wx:for-index="idx">
+            <view class="input-title">{{item.title}}</view>
+            <view class="padding df">
+                <!--循环图片-->
+                <view class="img mt pr" wx:for="{{item.image}}">
+                    <image class="photo" lazy-load src="{{item}}"></image>
+                    <view class="cu-tag bg-red pa" catchtap="DelImg" data-index="{{index}}">
+                        <text class="cuIcon-close"></text>
+                    </view>
+                </view>
+                <view class="img mt" catchtap="ChooseImage" data-name="{{item.name}}" data-idx="{{idx}}">
+                    <image class="jia" lazy-load src="{{imgHost}}jia.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="next" bindtap="submit">提交</view>
+    <!--</block>-->
+</view>

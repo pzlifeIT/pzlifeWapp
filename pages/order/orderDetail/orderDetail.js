@@ -12,7 +12,9 @@ Page({
         imgHost: '',
         user_identity: 0,
         navHight: app.globalData.topHeadHeight,
-        idx:0
+        idx: 0,
+        sheet_list:[],
+        form_list:[]
     },
 
     /**
@@ -202,22 +204,22 @@ Page({
         console.log(audio)
         OrderAudio.src = audio;
         OrderAudio.play();
-       let inter = setInterval(function () {
+        let inter = setInterval(function () {
             let currentTime = OrderAudio.currentTime
-            if (currentTime >= time){
+            if (currentTime >= time) {
                 OrderAudio.stop();
-                app.toast({title:"试听结束，如已购买请去个人中心-我的音频收听",duration:4000});
+                app.toast({title: "试听结束，如已购买请去个人中心-我的音频收听", duration: 4000});
                 clearInterval(inter)
             }
-        },1000)
+        }, 1000)
         this.setData({
-            idx:idx
+            idx: idx
         })
     },
     stopplay: function () {
         OrderAudio.pause()
         this.setData({
-            idx:0
+            idx: 0
         })
     },
     /**
@@ -231,22 +233,70 @@ Page({
         OrderAudio.onPause(() => {
             console.log('暂停播放')
             this.setData({
-                idx:0
+                idx: 0
             })
         })
         OrderAudio.onStop(() => {
             console.log('停止播放')
             this.setData({
-                idx:0
+                idx: 0
             })
         })
     },
+    isOrderSheet: function () {
+        let that = this
+        app.wxrequest({
+            url:"order/isOrderSheet",
+            data:{
+                order_no:that.data.orderno
+            },
+            success(res){
+                that.setData({
+                    sheet_list:res.sheet_list
+                })
+            },
+            error(res){
 
+            }
+        })
+    },
+    wirteInfo:function(e){
+        let order_no = e.currentTarget.dataset.orderno
+        wx.navigateTo({
+            // url:'/pages/writeAppointmentInfo/writeAppointmentInfo?orderno='+order_no
+            url:'/pages/appointment/appointment?orderno='+order_no
+        })
+    },
+    getOrderSheet:function(){
+        let that = this
+        app.wxrequest({
+            url:"order/getOrderSheet",
+            data:{
+                order_no:that.data.orderno
+            },
+            success(res){
+                that.setData({
+                    form_list:res.fromList
+                })
+            },
+            error(res){
+
+            }
+        })
+    },
+    readInfo:function(e){
+        let order_no = e.currentTarget.dataset.orderno
+        wx.navigateTo({
+            url:"/pages/readInfo/readInfo?orderno="+order_no
+        })
+    },
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
         console.log(1111)
+        this.isOrderSheet()
+        this.getOrderSheet()
     },
 
     /**

@@ -97,7 +97,10 @@
         "pages/voiceComfirOrder/voiceComfirOrder",
         "pages/playVoice/playVoice",
         "pages/writeAppointmentInfo/writeAppointmentInfo",
-        "pages/writeTravelInfo/writeTravelInfo"
+        "pages/writeTravelInfo/writeTravelInfo",
+        "pages/writeTravelInfo/addTravelInfo/addTravelInfo",
+        "pages/appointment/appointment",
+        "pages/readInfo/readInfo"
     ],
     "window": {
         "backgroundTextStyle": "dark",

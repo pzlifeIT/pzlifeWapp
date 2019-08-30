@@ -2,9 +2,11 @@
   <dictionary name="Administrator">
     <words>
       <w>ident</w>
+      <w>imgs</w>
       <w>inte</w>
       <w>premonth</w>
       <w>stype</w>
+      <w>textarea</w>
       <w>zhuanshijielong</w>
     </words>
   </dictionary>

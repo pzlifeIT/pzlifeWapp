@@ -7,10 +7,10 @@
         <view class="input-li {{turn == 'left'?'animation-slide-right':'animation-slide-left'}}">
             <view class="center-li fw">
                 <view class="input-title">乘机人信息</view>
-                <!--<block wx:if="{{list}}">-->
-                    <view class="name">蜡笔小新</view>
-                <!--</block>-->
-                <view class="add"><text>+</text>新增</view>
+                <block wx:for="{{list}}">
+                    <view class="name" bindtap="add" data-type="1" data-name="{{item.name}}" data-id="{{item.id}}" data-idcard="{{item.idcard}}" data-phone="{{item.phone}}" data-passport="{{item.passport}}">{{item.name}}</view>
+                </block>
+                <view class="add" bindtap="add"><text>+</text>新增</view>
             </view>
             <view class="center-li">
                 <view class="input-title">联系人信息 <text wx:if="{{!select}}" class="select-jt" bindtap="select"></text><text wx:else class="select-jt rotate" bindtap="select"></text></view>
@@ -24,10 +24,10 @@
                         <text>\n1607885320@qq.com</text>
                     </view>
                 </view>
-                <input class="input" type="text" placeholder="紧急联系人姓名" placeholder-class="in-pla" value="{{name}}" />
-                <input class="input" type="text" placeholder="紧急联系人手机号" placeholder-class="in-pla" value="{{mobile}}" />
-                <input class="input" type="text" placeholder="邮箱" placeholder-class="in-pla" value="{{mail}}" />
-                <input class="input" type="text" placeholder="诉求" placeholder-class="in-pla"/>
+                <input class="input" type="text" placeholder="紧急联系人姓名" placeholder-class="in-pla" value="{{name}}" bindinput="input" data-model="name" />
+                <input class="input" type="text" placeholder="紧急联系人手机号" placeholder-class="in-pla" value="{{mobile}}" bindtap="input" data-model="mobile" />
+                <input class="input" type="text" placeholder="邮箱" placeholder-class="in-pla" value="{{mail}}" bindinput="input" data-model="mail" />
+                <input class="input" type="text" placeholder="诉求" placeholder-class="in-pla" bindinput="input" data-model="appeal" />
             </view>
         </view>
         <view class="next" bindtap="next">下一步</view>

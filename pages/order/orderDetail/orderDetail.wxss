@@ -67,7 +67,7 @@ page {
     display: block;
     border-top: 1rpx solid #f7f7f7;
     width: 730rpx;
-    height: 136rpx;
+    /* height: 136rpx; */
     margin: 0 auto;
     padding: 20rpx 0;
 }

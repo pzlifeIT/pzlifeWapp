@@ -11,7 +11,8 @@ Page({
         reach: true,
         goodsList: [],
         sub_name: "",
-        navHight: app.globalData.topHeadHeight
+        navHight: app.globalData.topHeadHeight,
+        img:''
     },
 
     /**
@@ -21,7 +22,8 @@ Page({
         let sub_id = options.sub_id
         this.setData({
             sub_id: options.sub_id,
-            sub_name: options.sub_name || '商品列表'
+            sub_name: options.sub_name || '商品列表',
+            img:options.img
         })
         if (sub_id) {
             this.getSubGoodsList(sub_id)
@@ -129,7 +131,7 @@ Page({
             share = app.share({
                 title: this.data.sub_name || '商品列表',
                 path: '/pages/category/goods/goods?sub_id=' + sub_id + "&sub_name=" + this.data.sub_name,
-                imageUrl: ''
+                imageUrl: that.data.img
             })
         return share
     }

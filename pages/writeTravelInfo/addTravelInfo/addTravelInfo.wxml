@@ -1,0 +1,29 @@
+<!--pages/writeTravelInfo/addTravelInfo/addTravelInfo.wxml-->
+<view class="center">
+    <view class="center-li">
+        <view class="input-title">联系人信息
+            <text wx:if="{{!select}}" class="select-jt" bindtap="select"></text>
+            <text wx:else class="select-jt rotate" bindtap="select"></text>
+        </view>
+        <view class="input">
+            <text class="name">乘机人姓名</text>
+            <input class="in" type="text" placeholder="与乘机人证件一致" placeholder-class="in-pla" value="{{name}}" bindinput="input" data-model="name" />
+            <text class="icon">*</text>
+        </view>
+        <view class="input">
+            <text class="name">乘机人手机号</text>
+            <input class="in" type="number" placeholder="用于接收航班通知" placeholder-class="in-pla"  value="{{mobile}}" bindinput="input" data-model="mobile" />
+            <text class="icon">*</text>
+        </view>
+        <view class="input">
+            <text class="name">身份证号</text>
+            <input class="in" type="idcard" placeholder="与乘机人证件一致" placeholder-class="in-pla" value="{{idcard}}"  bindinput="input" data-model="idcard"/>
+            <text class="icon">*</text>
+        </view>
+        <view class="input">
+            <text class="name">护照号码</text>
+            <input class="in" type="text" placeholder="境外游必填" placeholder-class="in-pla" bindinput="input" value="{{passport}}" data-model="passport"/>
+        </view>
+    </view>
+    <button class="button" bindtap="{{type == 1 ? 'edit':'submit'}}" disabled="{{disable}}">确定</button>
+</view>

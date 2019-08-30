@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 79,
+			"current": 83,
 			"list": [
 				{
 					"id": 0,
@@ -589,6 +589,35 @@
 					"id": -1,
 					"name": "旅游信息",
 					"pathName": "pages/writeTravelInfo/writeTravelInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/writeTravelInfo/addTravelInfo/addTravelInfo",
+					"pathName": "pages/writeTravelInfo/addTravelInfo/addTravelInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/appointment/appointment",
+					"pathName": "pages/appointment/appointment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 82,
+					"name": "pages/order/orderDetail/orderDetail",
+					"pathName": "pages/order/orderDetail/orderDetail",
+					"query": "orderno=odr19082809531497575354",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/readInfo/readInfo",
+					"pathName": "pages/readInfo/readInfo",
+					"query": "orderno= odr19082917110254505155",
 					"scene": null
 				}
 			]

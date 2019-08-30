@@ -1,6 +1,7 @@
 /* pages/writeAppointmentInfo/writeAppointmentInfo.wxss */
 @import '/colorui/main.wxss';
 @import '/colorui/animation.wxss';
+@import "/colorui/icon.wxss";
 page{
     background: #F7F7F7;
     height: 100%;
@@ -16,7 +17,7 @@ page{
 }
 .top-line s{
     display: inline-block;
-    width: 50%;
+    width: 33%;
     height: 100%;
     background: #E61F18;
     position: absolute;
@@ -42,7 +43,6 @@ page{
     align-items: center;
     box-sizing: border-box;
     border-radius: 14rpx;
-    margin-bottom: 20rpx;
 }
 .input-title{
     width: 100%;
@@ -53,7 +53,6 @@ page{
     font-weight: bold;
     border-bottom: 1rpx dashed #c3c3c3;
     padding-left: 10rpx;
-    margin: 20rpx 0;
 }
 .input{
     width: 690rpx;
@@ -79,7 +78,25 @@ page{
     border-right: 1rpx solid #c3c3c3;
     display: inline-block;
 }
-
+.select{
+    height: 100%;
+    width: 20%;
+    text-align: left;
+    line-height: 80rpx;
+    color: #E61F18;
+    position: relative;
+    font-size: 32rpx;
+}
+.jt{
+    width: 0rpx;
+    height: 0rpx;
+    display: inline-block;
+    border: 18rpx solid;
+    border-color:transparent transparent   transparent #E61F18 ;
+    position: absolute;
+    top: 20rpx;
+    right: 18rpx;
+}
 .next{
     width: 300rpx;
     height: 90rpx;
@@ -111,11 +128,18 @@ page{
     transition: left 1s;
 }
 .a2>s{
-    left: 50%;
+    left: 33%;
+    transition: left 1s;
+}
+.a3>s{
+    left: 66%;
     transition: left 1s;
 }
 .padding{
     padding: 0 41rpx 31rpx 41rpx;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .img-cam{
     display: inline-block;
@@ -155,14 +179,79 @@ page{
     height: 100%;
     object-fit: cover;
 }
+.select-time{
+    width: 100%;
+    height: 100%;
+    line-height: 80rpx;
+}
+.quantum{
+    width: 45%;
+    height: 100%;
+    line-height: 80rpx;
+    display: inline-block;
+}
+.quantum:nth-of-type(2){
+    padding-left: 10rpx;
+    box-sizing: border-box;
+    text-align: right;
+}
+.cam-right{
+    float: right;
+}
+.imgs-upload{
+    width: 750rpx;
+    background: #FFFFFF;
+}
+.imgs-title{
+    font-size: 30rpx;
+}
+.mt{
+    margin-top: 20rpx;
+    display: inline-block;
+    margin-right: 20rpx;
+}
+.thumb{
+    width: 100%;
+    height: 100%;
+}
+.df{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.pr{
+    position: relative;
+}
+.pa{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 6rpx;
+    padding: 6rpx 12rpx;
+    /*height: auto;*/
+    background-color: rgba(0,0,0,.5);
+    width: 58rpx;
+    height: 50rpx;
+
+}
+.name{
+    max-height: 90rpx;
+    padding: 15rpx;
+    border: 1rpx #333 solid;
+    border-radius: 8rpx;
+    font-size: 30rpx;
+    margin-right: 10rpx;
+}
+
 .add{
     width: 200rpx;
-    height: 90rpx;
+    height: 70rpx;
     text-align: center;
-    line-height: 90rpx;
+    line-height: 70rpx;
     color: #fa9f36;
     border: 1rpx solid #fa9f36;
-    font-size: 36rpx;
+    font-size: 30rpx;
     background: #fff;
     border-radius: 8rpx;
     margin: 0 20rpx;
@@ -186,38 +275,10 @@ page{
     flex-wrap: wrap;
     flex-direction: unset;
 }
-.name{
-    max-height: 90rpx;
-    padding: 24rpx;
-    border: 1rpx #333 solid;
-    border-radius: 8rpx;
-    font-size: 34rpx;
+.margin-top{
+    margin-top: 20rpx;
 }
-.select-jt{
-    width: 27rpx;
-    height: 27rpx;
-    border-top: 2rpx solid #000;
-    border-right: 2rpx solid #000;
-    transform: rotate(135deg);
-    display: inline-block;
-    float: right;
-    margin: 20rpx 40rpx 0 0;
-}
-.rotate{
-    transform: rotate(-45deg);
-}
-.select-info{
-    position: relative;
-    width: 700rpx;
-    border: 1rpx solid #000;
-    padding: 16rpx;
-    border-radius: 10rpx;
-    box-shadow: 4rpx 5rpx 4rpx rgba(0,0,0,.2);
-}
-.info{
-    border-bottom: 1rpx dashed #666;
-    margin-top: 10rpx;
-    padding-bottom: 10rpx;
-    font-size: 34rpx;
-    padding-left: 30rpx;
+.active{
+    border: 1rpx solid #e61f18;
+    color: #e61f18;
 }

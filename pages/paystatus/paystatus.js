@@ -28,6 +28,26 @@ Page({
         })
         console.log(options.type)
         this.getsite(opt.siteid)
+        this.isOrderSheet(opt.orderno)
+    },
+    isOrderSheet:function(orderno){
+        let that = this
+        app.wxrequest({
+            url: "order/isOrderSheet",
+            data: {
+                order_no: orderno
+            },
+            success(res) {
+                if (res.sheet_list.length > 0){
+                    wx.navigateTo({
+                        url:'/pages/appointment/appointment?orderno='+orderno
+                    })
+                }
+            },
+            error(res) {
+
+            }
+        })
     },
     getsite: function (id) {
         let that = this

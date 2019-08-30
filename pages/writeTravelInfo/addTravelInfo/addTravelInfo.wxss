@@ -1,0 +1,83 @@
+/* pages/writeTravelInfo/addTravelInfo/addTravelInfo.wxss */
+.center{
+    width: 750rpx;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.center-li{
+    width: 730rpx;
+    height: auto;
+    background: #FFFFFF;
+    padding: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 14rpx;
+    margin-bottom: 20rpx;
+    margin-top: 20rpx;
+}
+.input-title{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: left;
+    font-size: 36rpx;
+    font-weight: bold;
+    border-bottom: 1rpx dashed #c3c3c3;
+    padding-left: 10rpx;
+    margin: 20rpx 0;
+}
+.input{
+    width: 690rpx;
+    height: 80rpx;
+    border: 1rpx solid #c3c3c3;
+    margin-top: 20rpx;
+    padding-left: 10rpx;
+    margin-bottom: 10rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name{
+    color: #333333;
+    font-size: 30rpx;
+    float: left;
+    display: inline-block;
+}
+.in{
+    width: 460rpx;
+    height: 100%;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+    float: left;
+}
+.in-pla{
+    font-size: 28rpx;
+    color: #b3b3b3;
+    text-align: left;
+}
+.icon{
+    margin-right: 20rpx;
+    color: #E61F18;
+    float: left;
+}
+.button{
+    width: 710rpx;
+    height: 88rpx;
+    border-radius: 8rpx;
+    letter-spacing: 50rpx;
+    background: #E61F18;
+    color: #F7F7F7;
+    font-size: 38rpx;
+    line-height: 88rpx;
+    text-align: center;
+    margin-top: 30rpx;
+}
+button[disabled]:not([type]){
+    background: #808080;
+    color: #F7F7F7;
+}

@@ -1,0 +1,25 @@
+<!--pages/readInfo/readInfo.wxml-->
+<!--<view wx:for="{{list}}">-->
+<!--<view wx:for="{{item}}" wx:for-index="k" wx:for-item="v">-->
+<!--{{k}} :-->
+<!--<block wx:if="{{v.length > 1}}">-->
+<!--<block wx:for="{{v}}" wx:for-item="vitem">-->
+<!--<block wx:if="{{vitem.length>1}}">-->
+<!--<block wx:for="{{vitem}}" > {{index}} : {{item}}</block>-->
+<!--</block>-->
+<!--</block>-->
+<!--</block>-->
+<!--<block wx:else>{{v}}</block>-->
+<!--</view>-->
+<!--</view>-->
+
+<view class="table">
+    <!--<view class="tr" wx:for="{{arr}}">{{item}}</view>-->
+    <view class="tr" wx:for="{{list}}">
+        <view wx:for="{{item}}" wx:for-index="k" wx:for-item="v">{{k}}:
+            <block>
+                {{v}}
+            </block>
+        </view>
+    </view>
+</view>

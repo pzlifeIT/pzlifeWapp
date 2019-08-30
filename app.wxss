@@ -1,8 +1,7 @@
 /* view::-webkit-scrollbar {
     color: transparent;
 } */
-@import 'colorui/main.wxss';
-@import 'colorui/animation.wxss';
+
 .container {
     height: 100%;
     display: flex;
