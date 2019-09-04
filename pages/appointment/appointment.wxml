@@ -4,7 +4,8 @@
     <view class="input-li {{turn == 'left'?'animation-slide-right':'animation-slide-left'}}">
         <block wx:for="{{check}}">
             <view class="center-li fw">
-                <view class="input-title margin-bottom">选择{{item.title}}</view>
+                <view class="input-title margin-bottom" wx:if="{{item.title == '乘机人信息'}}">点击选择{{item.title}}</view>
+                <view class="input-title margin-bottom" wx:else>{{item.title}}</view>
                 <!--<view class="margin-top">-->
                 <block wx:for="{{air}}">
                     <view class="name {{attr[index] == item.id ? 'active':''}}" bindtap="select" data-index="{{index}}"
@@ -26,11 +27,11 @@
                        data-model="{{item.name}}" placeholder-class="in-pla"/>
             </block>
             <block wx:for="{{time}}">
-                <input class="input" type="text" placeholder="{{item.title}} 如:2019-09-01 10:30" bindinput="input"
+                <input class="input" type="text" placeholder="{{item.title}} {{item.title == '预约时间段'?'如:2019-09-02 10:30--2019-09-03 10:30':'如: 2019-09-09'}}" bindinput="input"
                        data-model="{{item.name}}" placeholder-class="in-pla"/>
             </block>
             <block wx:for="{{radio}}">
-                <input class="input" type="text" placeholder="{{item.title}} 请填写'是'或'否'" bindinput="input"
+                <input class="input" type="text" placeholder="{{item.title}} {{item.title == '预约时间接受调节'?'请填写是或否':''}} " bindinput="input"
                        data-model="{{item.name}}" placeholder-class="in-pla"/>
             </block>
 
