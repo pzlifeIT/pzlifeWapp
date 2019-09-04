@@ -1,0 +1,4 @@
+<!--pages/addonitems/addonitems.wxml-->
+<view class="ex-rule">
+    <view class="ex-title">运费规则</view>
+</view>

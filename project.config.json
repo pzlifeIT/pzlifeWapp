@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 83,
+			"current": 84,
 			"list": [
 				{
 					"id": 0,
@@ -618,6 +618,13 @@
 					"name": "pages/readInfo/readInfo",
 					"pathName": "pages/readInfo/readInfo",
 					"query": "orderno= odr19082917110254505155",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/addonitems/addonitems",
+					"pathName": "pages/addonitems/addonitems",
+					"query": "orderno=odr19082917110254505155",
 					"scene": null
 				}
 			]

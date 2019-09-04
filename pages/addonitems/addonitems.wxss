@@ -1,0 +1,17 @@
+/* pages/addonitems/addonitems.wxss */
+page{
+    background-color: #f7f7f7;
+    height: 100%;
+}
+.ex-rule{
+    width: 750rpx;
+    padding: 18rpx 48rpx ;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+.ex-title{
+    font-size: 36rpx;
+    color: #000;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+}

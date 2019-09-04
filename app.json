@@ -100,7 +100,8 @@
         "pages/writeTravelInfo/writeTravelInfo",
         "pages/writeTravelInfo/addTravelInfo/addTravelInfo",
         "pages/appointment/appointment",
-        "pages/readInfo/readInfo"
+        "pages/readInfo/readInfo",
+        "pages/addonitems/addonitems"
     ],
     "window": {
         "backgroundTextStyle": "dark",
