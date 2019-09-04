@@ -40,7 +40,6 @@ page {
 .pic{
     width: 280rpx;
     height: 280rpx;
-    background-color: #389eec;
     border-radius: 10rpx;
 }
 .img-title{
