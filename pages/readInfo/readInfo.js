@@ -193,103 +193,136 @@ Page({
                     certificate_of_criminal_record = from[k];
                     break;
                 case '儿童户口本':
-                    child_household_register_image.push(from[k])
+                    if (from[k].length > 0) {
+                        child_household_register_image.push(from[k])
+                    }
                     break;
                 case '护照原件':
-                    passport_image.push(from[k]);
+                    if (from[k].length > 0) {
+                        passport_image.push(from[k]);
+                    }
                     break;
                 case '照片':
-                    photograph.push(from[k]);
+                    if (from[k].length > 0) {
+                        photograph.push(from[k]);
+                    }
                     break;
                 case '身份复印件':
-                    id_card_copies.push(from[k]);
+                    if (from[k].length > 0) {
+                        id_card_copies.push(from[k]);
+                    }
                     break;
                 case '户口本复印件':
-                    household_register_copies.push(from[k]);
+                    if (from[k].length > 0) {
+                        household_register_copies.push(from[k]);
+                    }
+
                     break;
                 case '签证申请表':
-                    visa_application_form.push(from[k]);
+                    if (from[k].length > 0) {
+                        visa_application_form.push(from[k]);
+                    }
                     break;
                 case '居住证':
-                    iqama.push(from[k]);
+                    if (from[k].length > 0) {
+                        iqama.push(from[k]);
+                    }
                     break;
                 case '半年社保':
-                    half_year_social_security.push(from[k]);
+                    if (from[k].length > 0) {
+                        half_year_social_security.push(from[k]);
+                    }
                     break;
                 case '工资流水':
-                    Wage_bill.push(from[k]);
+                    if (from[k].length > 0) {
+                        Wage_bill.push(from[k]);
+                    }
                     break;
                 case '半年银行卡对账单':
-                    half_bank_card_statement.push(from[k]);
+                    if (from[k].length > 0) {
+                        half_bank_card_statement.push(from[k]);
+                    }
                     break;
                 case '信用卡对账单':
-                    copy_of_credit_card_Statement.push(from[k]);
+                    if (from[k].length > 0) {
+                        copy_of_credit_card_Statement.push(from[k]);
+                    }
                     break;
                 case '半年税单':
-                    half_year_tax_bill.push(from[k]);
+                    if (from[k].length > 0) {
+                        half_year_tax_bill.push(from[k]);
+                    }
                     break;
                 case '结婚证复印件':
-                    marriage_certificate_copies.push(from[k]);
+                    if (from[k].length > 0) {
+                        marriage_certificate_copies.push(from[k]);
+                    }
                     break;
                 case '房产证复印件':
-                    house_property_copies.push(from[k]);
+                    if (from[k].length > 0) {
+                        house_property_copies.push(from[k]);
+                    }
                     break;
                 case '退休证原件':
-                    retirement_card.push(from[k]);
+                    if (from[k].length > 0) {
+                        retirement_card.push(from[k]);
+                    }
                     break;
                 case '退休证复印件':
-                    Retirement_card_copies.push(from[k]);
+                    if (from[k].length > 0) {
+                        Retirement_card_copies.push(from[k]);
+                    }
                     break;
             }
             this.setData({
-                airplane :airplane,
-                name:name,
-                idcard :idcard,
-                medicare_card :medicare_card,
-                mobile :mobile,
-                hospital_name :hospital_name,
-                registration_department :registration_department,
-                experts_name :experts_name,
-                appointment_time :appointment_time,
-                appointment_period :appointment_period,
-                is_adjustment :is_adjustment,
-                other_treatment :other_treatment,
-                anamnesis :anamnesis,
-                get_report_barcode :get_report_barcode,
-                get_report_time :get_report_time,
-                get_report_address :get_report_address,
-                need_escort_time:need_escort_time,
-                need_escort_place :need_escort_place,
-                sex :sex,
-                nick_name :nick_name,
-                age :age,
-                phone :phone,
-                passport_number :passport_number,
-                e_mail :e_mail,
-                appeal :appeal,
-                birth_certificate_image :birth_certificate_image,
-                incumbency_certification :incumbency_certification,
-                assets_certification :assets_certification,
-                child_birth_certificate_image :child_birth_certificate_image,
-                business_License_copies :business_License_copies,
-                student_identity_card :student_identity_card,
-                certificate_of_criminal_record :certificate_of_criminal_record,
-                child_household_register_image :child_household_register_image,
-                passport_image :passport_image,
-                photograph :photograph,
-                id_card_copies :id_card_copies,
-                household_register_copies :household_register_copies,
-                visa_application_form :visa_application_form,
-                iqama :iqama,
-                half_year_social_security :half_year_social_security,
-                Wage_bill :Wage_bill,
-                half_bank_card_statement :half_bank_card_statement,
-                copy_of_credit_card_Statement :copy_of_credit_card_Statement,
-                half_year_tax_bill :half_year_tax_bill,
-                marriage_certificate_copies :marriage_certificate_copies,
-                house_property_copies :house_property_copies,
-                retirement_card :retirement_card,
-                Retirement_card_copies :Retirement_card_copies
+                airplane: airplane,
+                name: name,
+                idcard: idcard,
+                medicare_card: medicare_card,
+                mobile: mobile,
+                hospital_name: hospital_name,
+                registration_department: registration_department,
+                experts_name: experts_name,
+                appointment_time: appointment_time,
+                appointment_period: appointment_period,
+                is_adjustment: is_adjustment,
+                other_treatment: other_treatment,
+                anamnesis: anamnesis,
+                get_report_barcode: get_report_barcode,
+                get_report_time: get_report_time,
+                get_report_address: get_report_address,
+                need_escort_time: need_escort_time,
+                need_escort_place: need_escort_place,
+                sex: sex,
+                nick_name: nick_name,
+                age: age,
+                phone: phone,
+                passport_number: passport_number,
+                e_mail: e_mail,
+                appeal: appeal,
+                birth_certificate_image: birth_certificate_image,
+                incumbency_certification: incumbency_certification,
+                assets_certification: assets_certification,
+                child_birth_certificate_image: child_birth_certificate_image,
+                business_License_copies: business_License_copies,
+                student_identity_card: student_identity_card,
+                certificate_of_criminal_record: certificate_of_criminal_record,
+                child_household_register_image: child_household_register_image,
+                passport_image: passport_image,
+                photograph: photograph,
+                id_card_copies: id_card_copies,
+                household_register_copies: household_register_copies,
+                visa_application_form: visa_application_form,
+                iqama: iqama,
+                half_year_social_security: half_year_social_security,
+                Wage_bill: Wage_bill,
+                half_bank_card_statement: half_bank_card_statement,
+                copy_of_credit_card_Statement: copy_of_credit_card_Statement,
+                half_year_tax_bill: half_year_tax_bill,
+                marriage_certificate_copies: marriage_certificate_copies,
+                house_property_copies: house_property_copies,
+                retirement_card: retirement_card,
+                Retirement_card_copies: Retirement_card_copies
             })
         }
         for (let i = 0; i < data.length; i++) {
@@ -297,7 +330,7 @@ Page({
             console.log(data[i].from['乘机人信息'])
             // if (data[i].from['乘机人信息']){}
         }
-        console.log(arr)
+        console.log(child_household_register_image)
         console.log(js)
         console.log(json)
         this.setData({

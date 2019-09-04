@@ -256,7 +256,9 @@
         <view class="title">儿童户口本</view>
         <view class="table-img imgs-list">
             <block wx:for="{{child_household_register_image}}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -266,7 +268,9 @@
         <view class="title">护照原件</view>
         <view class="table-img imgs-list">
             <block wx:for="{{passport_image}}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -276,7 +280,9 @@
         <view class="title">照片</view>
         <view class="table-img imgs-list">
             <block wx:for="{{photograph}}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -286,7 +292,9 @@
         <view class="title">身份证复印件</view>
         <view class="table-img imgs-list">
             <block wx:for="{{id_card_copies}}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -296,7 +304,9 @@
         <view class="title">户口本复印件</view>
         <view class="table-img imgs-list">
             <block wx:for="{{household_register_copies}}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -306,8 +316,9 @@
         <view class="title">签证申请表</view>
         <view class="table-img imgs-list">
             <block wx:for="{{visa_application_form}}">
-                <image class="pic" src="{{item}}"></image>
-            </block>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>            </block>
         </view>
     </view>
 </block>
@@ -316,8 +327,9 @@
         <view class="title">居住证</view>
         <view class="table-img imgs-list">
             <block wx:for="{{iqama}}">
-                <image class="pic" src="{{item}}"></image>
-            </block>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>            </block>
         </view>
     </view>
 </block>
@@ -326,7 +338,9 @@
         <view class="title">半年社保</view>
         <view class="table-img imgs-list">
             <block wx:for="{{half_year_social_security}}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -336,7 +350,9 @@
         <view class="title">工资流水</view>
         <view class="table-img imgs-list">
             <block wx:for="{{Wage_bill}}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -346,7 +362,9 @@
         <view class="title">半年银行卡对账单</view>
         <view class="table-img imgs-list">
             <block wx:for="{{half_bank_card_statement}}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -356,7 +374,9 @@
         <view class="title">信用卡对账单</view>
         <view class="table-img imgs-list">
             <block wx:for="{{copy_of_credit_card_Statement}}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -366,7 +386,9 @@
         <view class="title">半年税单</view>
         <view class="table-img imgs-list">
             <block wx:for="{{half_year_tax_bill}}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -376,7 +398,9 @@
         <view class="title">结婚证复印件</view>
         <view class="table-img imgs-list">
             <block wx:for="{{marriage_certificate_copies}}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -386,7 +410,9 @@
         <view class="title">房产证复印件</view>
         <view class="table-img imgs-list">
             <block wx:for="{{house_property_copies }}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -396,7 +422,9 @@
         <view class="title">退休证原件</view>
         <view class="table-img imgs-list">
             <block wx:for="{{retirement_card }}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
@@ -406,7 +434,9 @@
         <view class="title">退休证复印件</view>
         <view class="table-img imgs-list">
             <block wx:for="{{Retirement_card_copies }}">
-                <image class="pic" src="{{item}}"></image>
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
