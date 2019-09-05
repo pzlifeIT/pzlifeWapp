@@ -23,12 +23,34 @@ Page({
         recommend: [],
         navH: 0,
         navHight:app.globalData.topHeadHeight,
-        isIphoneX:false
+        isIphoneX:false,
+        from:'',
+        mask:false
     },
     showModel: function () {
         this.setData({
             showModel: true
         })
+    },
+    addOnItems:function() {
+        if (!this.data.showModel) {
+            this.setData({
+                showModel: true
+            })
+            return
+        }
+        if (!this.data.buy) {
+            app.toast({
+                title: '请选择规格'
+            })
+            return
+        }
+        if (parseInt(this.data.buyNum) < 1) {
+            app.toast({
+                title: '数量不能小于1'
+            })
+            return
+        }
     },
     changeSwiper: function (e) {
         this.setData({
@@ -286,7 +308,8 @@ Page({
             imgHost: app.globalData.host.imgHost,
             identity: app.globalData.userInfo.user_identity || 0,
             navH: app.globalData.topHeadHeight,
-            isIphoneX:app.isIphoneX()
+            isIphoneX:app.isIphoneX(),
+            from:options.from
         })
         this.getGoodInfo(options.goodid)
         this.getgoodsrecommend(options.goodid)

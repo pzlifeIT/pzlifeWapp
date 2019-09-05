@@ -1,4 +1,98 @@
 <!--pages/addonitems/addonitems.wxml-->
 <view class="ex-rule">
     <view class="ex-title">运费规则</view>
+    <view class="ex-content">
+        浙江满188包邮;
+        <text>\n</text>
+        湖北/广东/江西、上海、背景、撒大大\n\r
+        湖北/广东/江西、上海、背景、撒大大\n
+        湖北/广东/江西、上海、背景、撒大大\n
+        湖北/广东/江西、上海、背景、撒大大\n
+        湖北/广东/江西、上海、背景、撒大大\n
+        湖北/广东/江西、上海、背景、撒大大\n
+        湖北/广东/江西、上海、背景、撒大大\n
+    </view>
+</view>
+<view class="goods-list">
+    <block wx:for="1234">
+        <view class="one-goods" bindtap="goDetail" data-goods-id="1566" data-from="add">
+            <image class="goods-img" src="" lazy-load></image>
+            <view class="goods-info">
+                <view class="title">楚楚猫咪海派葱油拌面速食拌面方便面上海版面</view>
+            </view>
+            <view class="price-bu">
+                <view class="price">
+                    <text>￥</text>
+                    69.00
+                </view>
+                <view class="button" bindtap="showModel">选择凑单</view>
+            </view>
+        </view>
+    </block>
+</view>
+
+<view class="popout" wx:if='{{showModel}}'>
+    <view class='mask' catchtouchmove='preventTouchMove' bindtap='hideModel'></view>
+    <view class='pop' style="bottom: {{isIphoneX ? 166 : 0}}rpx;">
+        <view class='goods_data'>
+            <view class='goods_thumb fl'>
+                <image lazy-load="true" bindtap="previewImage" data-img="{{goodData.sku_image}}"
+                       src='{{goodData.sku_image}}' wx:if="{{buy}}"></image>
+                <image lazy-load="true" bindtap="previewImage" data-img="{{goodInfo.goods_data.image}}"
+                       src='{{goodInfo.goods_data.image}}' wx:else></image>
+            </view>
+            <view class='goods_desc fl' wx:if="{{repertory}}">
+                <text class='pop_price' wx:if="{{buy}}">价格：￥{{goodData.sku_price}}</text>
+                <text class='pop_price' wx:else>价格：￥{{goodInfo.goods_data.min_retail_price}}<text
+                        wx:if="{{goodInfo.goods_data.min_retail_price != goodInfo.goods_data.max_retail_price}}"> -￥{{goodInfo.goods_data.max_retail_price}}
+                </text></text>
+                <text class='selected' wx:if="{{buy}}">已选择：{{goodData.sku_name}}</text>
+                <text class='selected' wx:else>未选择规格</text>
+                <text class='present' wx:if="{{buy}}">赠送积分：{{goodData.integral_active}}积分</text>
+                <text class='present' wx:else>
+                    <text > 赠送积分：</text>
+                    <text>{{goodInfo.goods_data.min_integral_active}}</text><text wx:if="{{goodInfo.goods_data.min_integral_active != goodInfo.goods_data.max_integral_active}}">-{{goodInfo.goods_data.max_integral_active}}
+                </text><text>积分</text>
+                </text>
+                <text class="present" wx:if="{{buy}}">钻石再补贴: ￥{{goodData.brokerage}}</text>
+                <text class="present" wx:else>
+                    <text >钻石再补贴: ￥{{goodInfo.goods_data.min_brokerage}}</text><text class="din" wx:if="{{goodInfo.goods_data.min_brokerage != goodInfo.goods_data.max_brokerage}}"> -￥{{goodInfo.goods_data.max_brokerage}}</text>
+                </text>
+            </view>
+            <view class='goods_desc fl' wx:else>
+                <text class='pop_price'>暂无库存</text>
+            </view>
+        </view>
+        <view class='param'>
+            <view wx:for="{{goodInfo.goods_spec}}" wx:for-index="idx" wx:key="{{item.id}}">
+                <view class='spec_name'>
+                    <text>{{item.spe_name}}</text>
+                </view>
+                <view class='attr'>
+                    <view wx:for="{{item.list}}" wx:for-item="item1" data-i="{{item1.id}}" class='attr_name {{ item1.id == attr[idx]?"active":"" }}' wx:key="{{item1.id}}" bindtap='selectAttr' data-idx='{{idx}}' data-id="{{item1.id}}">
+                        {{item1.attr_name}}
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='amount'>
+            <view class='num_title'>数量</view>
+            <view class='amount_num'>
+                <view class='jian' bindtap='jian'>-</view>
+                <input class='num' disabled type='text' value='{{buyNum}}' bindinput='getnum'/>
+                <view class='jia' bindtap='jia'>+</view>
+            </view>
+        </view>
+        <view class="footer">
+            <view class="total-price"><text>总计金额：</text><text>￥69.00</text></view>
+            <view class="confirm">确认凑单</view>
+        </view>
+    </view>
+</view>
+<view class='pop-mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>
+    <view class='pop-hint' catchtap='none'>
+        <view class='hint'>已满足包邮条件</view>
+        <view class='collect' bindtap='hidemask'>去支付</view>
+        <view class='delete' bindtap="confirmDel">继续凑单</view>
+    </view>
 </view>
