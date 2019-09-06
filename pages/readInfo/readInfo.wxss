@@ -1,16 +1,78 @@
 /* pages/readInfo/readInfo.wxss */
 @import "/colorui/main.wxss";
-page{
+page {
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: #FFFFFF;
 }
 .table{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     width: 750rpx;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    border-radius: 8rpx;
+    background-color: #FFFFFF;
+    margin-top: 20rpx;
+}
+.table-img{
+    width: 750rpx;
+    display: flex;
+    justify-content: space-between;
+    padding: 10rpx 30rpx;
+    flex-wrap: wrap;
 }
 .tr{
-
+    width: 710rpx;
+    height: 80rpx;
+    border: 1rpx solid #c3c3c3;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+    border-radius: 8rpx;
+}
+.value{
+    font-weight: bold;
+    font-size: 34rpx;
+}
+.trement{
+    height: 150rpx;
+}
+.pic{
+    width: 280rpx;
+    height: 280rpx;
+    border-radius: 10rpx;
+}
+.img-title{
+    text-align: center;
+    font-size: 30rpx;
+}
+.title{
+    font-size: 40rpx;
+    font-weight: bold;
+    border-bottom: 1rpx dashed #c3c3c3;
+    padding: 0 30rpx;
+    width: 710rpx;
+    line-height: 60rpx;
+    margin: 0 auto;
+}
+.air{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30rpx;
+}
+.imgs{
+    width: 750rpx;
+    margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20rpx;
+}
+.imgs-list .pic{
+    margin-bottom: 20rpx;
+}
+.footer{
+    width: 750rpx;
+    height: 100rpx;
 }

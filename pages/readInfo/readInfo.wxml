@@ -12,14 +12,454 @@
 <!--<block wx:else>{{v}}</block>-->
 <!--</view>-->
 <!--</view>-->
+<view class="title">基本信息</view>
+<block wx:if="{{name}}">
+    <view class="table ">
+        <view class="tr">
+            <view>就诊人姓名：</view>
+            <view class="value">{{name}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{idcard}}">
+    <view class="table ">
+        <view class="tr">
+            <view>身份证号码：</view>
+            <view class="value">{{idcard}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{medicare_card}}">
+    <view class="table ">
+        <view class="tr">
+            <view>上海医保卡号：</view>
+            <view class="value">{{medicare_card}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{mobile}}">
+    <view class="table ">
+        <view class="tr">
+            <view>联系人电话：</view>
+            <view class="value">{{mobile}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{hospital_name}}">
+    <view class="table ">
+        <view class="tr">
+            <view>挂号医院名称：</view>
+            <view class="value">{{hospital_name}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{registration_department}}">
+    <view class="table ">
+        <view class="tr">
+            <view>挂号科室：</view>
+            <view class="value">{{registration_department}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{experts_name}}">
+    <view class="table ">
+        <view class="tr">
+            <view>专家姓名：</view>
+            <view class="value">{{experts_name}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{appointment_time}}">
+    <view class="table ">
+        <view class="tr">
+            <view>预约时间：</view>
+            <view class="value">{{appointment_time}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{appointment_period}}">
+    <view class="table ">
+        <view class="tr">
+            <view>预约时间段：</view>
+            <view class="value">{{appointment_period}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{is_adjustment}}">
+    <view class="table ">
+        <view class="tr">
+            <view>是否接受预约时间调节：</view>
+            <view class="value">{{is_adjustment}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{other_treatment}}">
+    <view class="table ">
+        <view class="tr trement">
+            <view>外院治疗情况：</view>
+            <view class="value">{{other_treatment}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{anamnesis}}">
+    <view class="table ">
+        <view class="tr trement">
+            <view>既往病史：</view>
+            <view class="value">{{anamnesis}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{get_report_barcode}}">
+    <view class="table ">
+        <view class="tr">
+            <view>取报告条码：</view>
+            <view class="value">{{get_report_barcode}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{get_report_time}}">
+    <view class="table ">
+        <view class="tr ">
+            <view>需要取报告时间：</view>
+            <view class="value">{{get_report_time}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{get_report_address}}">
+    <view class="table ">
+        <view class="tr ">
+            <view>需要取报告地点：</view>
+            <view class="value">{{get_report_address}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{need_escort_time}}">
+    <view class="table ">
+        <view class="tr ">
+            <view>需要陪护时间：</view>
+            <view class="value">{{need_escort_time}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{need_escort_place}}">
+    <view class="table ">
+        <view class="tr ">
+            <view>需要陪护地点：</view>
+            <view class="value">{{need_escort_place}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{sex}}">
+    <view class="table ">
+        <view class="tr ">
+            <view>性别：</view>
+            <view class="value">{{sex}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{nick_name}}">
+    <view class="table ">
+        <view class="tr ">
+            <view>姓名：</view>
+            <view class="value">{{nick_name}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{age}}">
+    <view class="table ">
+        <view class="tr ">
+            <view>年龄：</view>
+            <view class="value">{{age}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{phone}}">
+    <view class="table ">
+        <view class="tr ">
+            <view>手机号码：</view>
+            <view class="value">{{phone}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{passport_number}}">
+    <view class="table ">
+        <view class="tr ">
+            <view>护照号码：</view>
+            <view class="value">{{passport_number}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{e_mail}}">
+    <view class="table ">
+        <view class="tr ">
+            <view>邮箱：</view>
+            <view class="value">{{e_mail}}</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{appeal}}">
+    <view class="table ">
+        <view class="tr ">
+            <view>诉求：</view>
+            <view class="value">{{appeal}}</view>
+        </view>
+    </view>
+</block>
 
-<view class="table">
-    <!--<view class="tr" wx:for="{{arr}}">{{item}}</view>-->
-    <view class="tr" wx:for="{{list}}">
-        <view wx:for="{{item}}" wx:for-index="k" wx:for-item="v">{{k}}:
-            <block>
-                {{v}}
+<!--单图-->
+<view class="table-img">
+    <block wx:if="{{birth_certificate_image}}">
+        <view>
+            <image class="pic" lazy-load src="{{birth_certificate_image}}"></image>
+            <view class="img-title">出生证明</view>
+        </view>
+    </block>
+    <block wx:if="{{business_License_copies}}">
+        <view>
+            <image class="pic" lazy-load src="{{business_License_copies}}"></image>
+            <view class="img-title">营业执照复印件盖公章</view>
+        </view>
+    </block>
+    <block wx:if="{{incumbency_certification}}">
+        <view>
+            <image class="pic" lazy-load src="{{incumbency_certification}}"></image>
+            <view class="img-title">在职证明</view>
+        </view>
+    </block>
+    <block wx:if="{{assets_certification}}">
+        <view>
+            <image class="pic" lazy-load src="{{assets_certification}}"></image>
+            <view class="img-title">资产证明</view>
+        </view>
+    </block>
+    <block wx:if="{{child_birth_certificate_image}}">
+        <view>
+            <image class="pic" lazy-load src="{{child_birth_certificate_image}}"></image>
+            <view class="img-title">儿童出生证明</view>
+        </view>
+    </block>
+    <block wx:if="{{student_identity_card}}">
+        <view>
+            <image class="pic" lazy-load src="{{student_identity_card}}"></image>
+            <view class="img-title">学生证</view>
+        </view>
+    </block>
+    <block wx:if="{{certificate_of_criminal_record}}">
+        <view>
+            <image class="pic" lazy-load src="{{certificate_of_criminal_record}}"></image>
+            <view class="img-title">犯罪记录证明</view>
+        </view>
+    </block>
+</view>
+<block wx:if="{{child_household_register_image.length > 0}}">
+    <view class="imgs">
+        <view class="title">儿童户口本</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{child_household_register_image}}">
+                <block wx:for="{{item}}">
+                <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
             </block>
         </view>
     </view>
-</view>
+</block>
+<block wx:if="{{passport_image.length > 0}}">
+    <view class="imgs">
+        <view class="title">护照原件</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{passport_image}}">
+                <block wx:for="{{item}}">
+                <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{photograph.length > 0}}">
+    <view class="imgs">
+        <view class="title">照片</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{photograph}}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{id_card_copies.length > 0}}">
+    <view class="imgs">
+        <view class="title">身份证复印件</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{id_card_copies}}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{household_register_copies.length > 0}}">
+    <view class="imgs">
+        <view class="title">户口本复印件</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{household_register_copies}}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{visa_application_form.length > 0}}">
+    <view class="imgs">
+        <view class="title">签证申请表</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{visa_application_form}}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{iqama.length > 0}}">
+    <view class="imgs">
+        <view class="title">居住证</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{iqama}}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{half_year_social_security.length > 0}}">
+    <view class="imgs">
+        <view class="title">半年社保</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{half_year_social_security}}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{Wage_bill.length > 0}}">
+    <view class="imgs">
+        <view class="title">工资流水</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{Wage_bill}}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{half_bank_card_statement.length > 0}}">
+    <view class="imgs">
+        <view class="title">半年银行卡对账单</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{half_bank_card_statement}}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{copy_of_credit_card_Statement.length > 0}}">
+    <view class="imgs">
+        <view class="title">信用卡对账单</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{copy_of_credit_card_Statement}}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{half_year_tax_bill.length > 0}}">
+    <view class="imgs">
+        <view class="title">半年税单</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{half_year_tax_bill}}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{marriage_certificate_copies.length > 0}}">
+    <view class="imgs">
+        <view class="title">结婚证复印件</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{marriage_certificate_copies}}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{house_property_copies.length > 0}}">
+    <view class="imgs">
+        <view class="title">房产证复印件</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{house_property_copies }}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{retirement_card.length > 0}}">
+    <view class="imgs">
+        <view class="title">退休证原件</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{retirement_card }}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{Retirement_card_copies.length > 0}}">
+    <view class="imgs">
+        <view class="title">退休证复印件</view>
+        <view class="table-img imgs-list">
+            <block wx:for="{{Retirement_card_copies }}">
+                <block wx:for="{{item}}">
+                    <image lazy-load class="pic" src="{{item}}"></image>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{airplane.length > 0}}">
+    <view class="air">
+        <view class="title">乘机人信息</view>
+        <block wx:for="{{airplane}}" wx:for-item="json">
+            <block wx:for="{{json}}" wx:for-index="k" wx:for-item="v">
+            <view class="table" wx:if="{{k == 'name' || k == 'phone' || k == 'idcard' || k == 'passport'}}">
+                <view class="tr ">
+                    <view wx:if="{{k == 'name'}}">姓名：</view>
+                    <view wx:elif="{{k == 'phone'}}">手机号：</view>
+                    <view wx:elif="{{k == 'idcard'}}">身份证号：</view>
+                    <view wx:elif="{{k == 'passport'}}">护照号：</view>
+                    <view class="value" wx:if="{{k != 'id' || k != 'uid' || k!='create_time' || k != 'delete_time'}}">{{json[k]}}</view>
+                </view>
+            </view>
+            </block>
+        </block>
+    </view>
+</block>
+<view class="footer"></view>
+
+
+
