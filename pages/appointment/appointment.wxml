@@ -105,17 +105,17 @@
             </view>
         </view>
         <!--循环列表-->
-        <view class=" center-li no-flex" wx:for="{{imgs}}" wx:for-index="idx">
-            <view class="input-title">{{item.title}}</view>
+        <view class=" center-li no-flex" wx:for="{{imgs}}" wx:for-index="idx" wx:for-item="img">
+            <view class="input-title">{{img.title}}</view>
             <view class="padding df">
                 <!--循环图片-->
-                <view class="img mt pr" wx:for="{{item.image}}">
+                <view class="img mt pr" wx:for="{{img.image}}">
                     <image class="photo" lazy-load src="{{item}}"></image>
-                    <view class="cu-tag bg-red pa" catchtap="DelImg" data-index="{{index}}">
+                    <view class="cu-tag bg-red pa" catchtap="DelImg" data-index="{{index}}" data-idx="{{idx}}" data-name="{{img.name}}">
                         <text class="cuIcon-close"></text>
                     </view>
                 </view>
-                <view class="img mt" catchtap="ChooseImage" data-name="{{item.name}}" data-idx="{{idx}}">
+                <view class="img mt" catchtap="ChooseImage" data-name="{{img.name}}" data-idx="{{idx}}">
                     <image class="jia" lazy-load src="{{imgHost}}jia.png"></image>
                 </view>
             </view>

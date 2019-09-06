@@ -251,15 +251,22 @@ Page({
         });
     },
     DelImg(e) {
+        let idx = e.currentTarget.dataset.idx
+        let index = e.currentTarget.dataset.index
+        let name = e.currentTarget.dataset.name
+        console.log(this.data.imgs[idx])
         wx.showModal({
             content: '确定要删除吗？',
             cancelText: '取消',
             confirmText: '确定',
             success: res => {
                 if (res.confirm) {
-                    this.data.imgList.splice(e.currentTarget.dataset.index, 1);
+                   this.data.imgs[idx].image.splice(index,1)
+                    this.data[name].splice(index,1)
+                    // this.data.imgList.splice(e.currentTarget.dataset.index, 1);
                     this.setData({
-                        imgList: this.data.imgList
+                        imgs: this.data.imgs,
+                        [name]:this.data[name]
                     })
                 }
             }
@@ -330,43 +337,50 @@ Page({
             filePath: file,
             name: 'filename',
             success(res) {
-                console.log(JSON.parse(res.data))
-                let image_path = JSON.parse(res.data).image_path
-                switch (parseInt(num)) {
-                    case 1:
-                        birth_certificate_image = image_path;//出生证明
-                        break;
-                    case 2:
-                        business_License_copies = image_path;//营业执照
-                        break;
-                    case 3:
-                        incumbency_certification = image_path;//在职证明
-                        break;
-                    case 4:
-                        assets_certification = image_path;//资产
-                        break;
-                    case 5:
-                        child_birth_certificate_image = image_path;//儿童出生
-                        break;
-                    case 6:
-                        student_identity_card = image_path;//学生证
-                        break;
-                    case 7:
-                        console.log(image_path)
-                        certificate_of_criminal_record = image_path;//犯罪
-                        break;
-                    default:
-                        that.isImages(name, image_path)
+                if (parseInt(res.statusCode) === 200) {
+                    console.log(JSON.parse(res.data))
+                    let image_path = JSON.parse(res.data).image_path
+                    switch (parseInt(num)) {
+                        case 1:
+                            birth_certificate_image = image_path;//出生证明
+                            break;
+                        case 2:
+                            business_License_copies = image_path;//营业执照
+                            break;
+                        case 3:
+                            incumbency_certification = image_path;//在职证明
+                            break;
+                        case 4:
+                            assets_certification = image_path;//资产
+                            break;
+                        case 5:
+                            child_birth_certificate_image = image_path;//儿童出生
+                            break;
+                        case 6:
+                            student_identity_card = image_path;//学生证
+                            break;
+                        case 7:
+                            console.log(image_path)
+                            certificate_of_criminal_record = image_path;//犯罪
+                            break;
+                        default:
+                            that.isImages(name, image_path)
+                    }
+                    that.setData({
+                        birth_certificate_image: birth_certificate_image,
+                        business_License_copies: business_License_copies,
+                        incumbency_certification: incumbency_certification,
+                        assets_certification: assets_certification,
+                        child_birth_certificate_image: child_birth_certificate_image,
+                        student_identity_card: student_identity_card,
+                        certificate_of_criminal_record: certificate_of_criminal_record
+                    })
+                } else {
+                    app.networkerror(res.statusCode)
                 }
-                that.setData({
-                    birth_certificate_image: birth_certificate_image,
-                    business_License_copies: business_License_copies,
-                    incumbency_certification: incumbency_certification,
-                    assets_certification: assets_certification,
-                    child_birth_certificate_image: child_birth_certificate_image,
-                    student_identity_card: student_identity_card,
-                    certificate_of_criminal_record: certificate_of_criminal_record
-                })
+            },
+            fail(res){
+                app.toast({title:'上传失败fail'})
             }
         })
     },
@@ -451,56 +465,6 @@ Page({
             form[goods_id[0]].rassenger_information = this.data.airPlan
         }
         console.log(form)
-        // form[goods_id] = {
-        //     name: this.data.name,
-        //     idcard: this.data.idcard,
-        //     medicare_card: this.data.medicare_card,
-        //     mobile: this.data.mobile,
-        //     hospital_name: this.data.hospital_name,
-        //     registration_department: this.data.registration_department,
-        //     experts_name: this.data.experts_name,
-        //     appointment_time: this.data.appointment_time,
-        //     appointment_period: this.data.appointment_period,
-        //     is_adjustment: this.data.is_adjustment,
-        //     other_treatment: this.data.other_treatment,
-        //     anamnesis: this.data.anamnesis,
-        //     get_report_barcode: this.data.get_report_barcode,
-        //     get_report_time: this.data.get_report_time,
-        //     get_report_address: this.data.get_report_address,
-        //     need_escort_time: this.data.need_escort_time,
-        //     need_escort_place: this.data.need_escort_place,
-        //     sex: this.data.sex,
-        //     nick_name: this.data.nick_name,
-        //     age: this.data.age,
-        //     phone: this.data.phone,
-        //     passport_number: this.data.passport_number,
-        //     e_mail: this.data.e_mail,
-        //     appeal: this.data.appeal,
-        //     child_household_register_image: this.data.child_household_register_image,
-        //     birth_certificate_image: this.data.birth_certificate_image,
-        //     passport_image: this.data.passport_image,
-        //     photograph: this.data.photograph,
-        //     id_card_copies: this.data.id_card_copies,
-        //     household_register_copies: this.data.household_register_copies,
-        //     visa_application_form: this.data.visa_application_form,
-        //     business_License_copies: this.data.business_License_copies,
-        //     incumbency_certification: this.data.incumbency_certification,
-        //     assets_certification: this.data.assets_certification,
-        //     iqama: this.data.iqama,
-        //     half_year_social_security: this.data.half_year_social_security,
-        //     Wage_bill: this.data.Wage_bill,
-        //     half_bank_card_statement: this.data.half_bank_card_statement,
-        //     copy_of_credit_card_Statement: this.data.copy_of_credit_card_Statement,
-        //     half_year_tax_bill: this.data.half_year_tax_bill,
-        //     child_birth_certificate_image: this.data.child_birth_certificate_image,
-        //     student_identity_card: this.data.student_identity_card,
-        //     certificate_of_criminal_record: this.data.certificate_of_criminal_record,
-        //     marriage_certificate_copies: this.data.marriage_certificate_copies,
-        //     house_property_copies: this.data.house_property_copies,
-        //     retirement_card: this.data.retirement_card,
-        //     Retirement_card_copies: this.data.Retirement_card_copies,
-        //     rassenger_information:this.data.selectAir
-        // };
         app.wxrequest({
             url: "order/submitOrderSheet",
             data: {
