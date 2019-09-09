@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 73,
+			"current": 72,
 			"list": [
 				{
 					"id": 0,
@@ -357,7 +357,7 @@
 					"id": 46,
 					"name": "须知",
 					"pathName": "pages/my/notice/notice",
-					"query": "iden=4",
+					"query": "iden=2",
 					"scene": null
 				},
 				{
