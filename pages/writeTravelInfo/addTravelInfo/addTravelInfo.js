@@ -63,7 +63,6 @@ Page({
             app.toast({title: "请检查手机号"});
             return
         }
-
         app.wxrequest({
             url: 'user/addAirplanePassenger',
             data: {
@@ -81,6 +80,14 @@ Page({
                 }, 1500)
             },
             error(res) {
+                let text = ''
+                switch (parseInt(res)) {
+                    case 3001:
+                       text = '身份证号错误'
+                       break;
+                    case 3002:
+                        text = ''
+                }
                 app.toast({title: '错误码：' + res})
             }
 

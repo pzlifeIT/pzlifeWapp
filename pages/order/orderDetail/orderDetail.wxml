@@ -105,7 +105,7 @@
     <view bindtap="confirmOrder" data-orderno="{{order_info.order_no}}" class="or-btn red"
           wx:if="{{order_info.order_status == 5}}">确认收货
     </view>
-    <block wx:if="{{sheet_list}}">
+    <block wx:if="{{sheet_list.length > 0 && order_info.order_status != 1}}">
         <view bindtap="readInfo" data-orderno="{{order_info.order_no}}" wx:if="{{form_list.length >= 1}}" class="or-btn red">查看表单</view>
         <view bindtap="wirteInfo" data-orderno="{{order_info.order_no}}" wx:else class="or-btn red">填写表单</view>
     </block>
