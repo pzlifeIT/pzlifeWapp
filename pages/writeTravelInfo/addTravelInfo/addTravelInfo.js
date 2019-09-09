@@ -12,7 +12,7 @@ Page({
         idcard: '',
         disable: true,
         id: '',
-        type:0
+        type: 0
     },
 
     /**
@@ -26,8 +26,8 @@ Page({
                 mobile: options.phone || '',
                 idcard: options.idcard || '',
                 id: options.id || '',
-                type:options.type || '',
-                disable:false
+                type: options.type || '',
+                disable: false
             })
         }
     },
@@ -83,17 +83,17 @@ Page({
                 let text = ''
                 switch (parseInt(res)) {
                     case 3001:
-                       text = '身份证号错误'
-                       break;
-                    case 3002:
-                        text = ''
+                        text = '身份证号错误'
+                        break;
+                    default:
+                        text = '错误码：' + res
                 }
-                app.toast({title: '错误码：' + res})
+                app.toast({title: text})
             }
 
         })
     },
-    edit:function(){
+    edit: function () {
         let name = this.data.name;
         let mobile = this.data.mobile;
         let idcard = this.data.idcard;
@@ -111,7 +111,7 @@ Page({
                 phone: mobile,
                 idcard: idcard,
                 passport: passport,
-                id:id
+                id: id
             },
             success(res) {
                 app.toast({title: '修改成功'});
