@@ -117,7 +117,7 @@ Page({
         for (let i = 0; i < valid.length; i++) {
             for (let j = 0; j < valid[i].goods.length; j++) {
                 if (valid[i].goods[j].selectStatus) {
-                    total += valid[i].goods[j].buy_num * valid[i].goods[j].retail_price
+                    total += valid[i].goods[j].num * valid[i].goods[j].retail_price
                 }
             }
         }
@@ -132,7 +132,7 @@ Page({
         let that = this
         const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标
         let goods = e.currentTarget.dataset.goods, //商品数据
-            num = goods[goodsIndex].buy_num, //购买数量
+            num = goods[goodsIndex].num, //购买数量
             valid = this.data.valid,
             con_id = this.data.con_id,
             sku_id = goods[goodsIndex].id,
@@ -158,7 +158,7 @@ Page({
                 brokerage = parseFloat(brokerage / num)
                 num = num - 1
                 brokerage = parseFloat(brokerage * num)
-                goods[goodsIndex].buy_num = num
+                goods[goodsIndex].num = num
                 goods[goodsIndex].brokerage = parseFloat(brokerage.toFixed(2))
                 valid[validIndex].goods = goods
                 that.setData({
@@ -200,7 +200,7 @@ Page({
         let that = this
         const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标
         let goods = e.currentTarget.dataset.goods, //商品数据
-            num = goods[goodsIndex].buy_num, //购买数量
+            num = goods[goodsIndex].num, //购买数量
             valid = this.data.valid,
             con_id = this.data.con_id,
             sku_id = goods[goodsIndex].id,
@@ -232,7 +232,7 @@ Page({
                 brokerage = parseFloat(brokerage / num)
                 num = num + 1
                 brokerage = parseFloat(brokerage * num)
-                goods[goodsIndex].buy_num = num
+                goods[goodsIndex].num = num
                 goods[goodsIndex].brokerage = parseFloat(brokerage.toFixed(2))
                 valid[validIndex].goods = goods
                 that.setData({

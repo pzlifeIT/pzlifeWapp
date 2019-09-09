@@ -6,7 +6,7 @@
                 <radio-group bindtap="selectShop" data-valid-index="{{validIndex}}" data-valid="{{valid}}"
                              data-goods="{{item.goods}}">
                     <radio checked='' color='#e61f18' checked="{{item.selectStatus}}"/>
-                    <text>{{item.shop_name}}</text>
+                    <text>{{item.name}}</text>
                 </radio-group>
             </view>
             <view class='goods_data' wx:for="{{item.goods}}" wx:for-index="goodsIndex" wx:for-item="goods"
@@ -20,9 +20,9 @@
                 <navigator hover-class="none" url='/pages/goods/detail?goodid={{goods.goods_id}}'>
                     <view class='goods_img'>
                         <image lazy-load="true" src='{{goods.sku_image}}'></image>
-                        <view class='supplier_name'>
-                            <text>{{goods.supplier_name}}</text>
-                        </view>
+                        <!--<view class='supplier_name'>-->
+                            <!--<text>{{goods.supplier_name}}</text>-->
+                        <!--</view>-->
                     </view>
                     <view class='goods_desc'>
                         <text class='goods_title'>{{goods.goods_name}}</text>
@@ -37,7 +37,7 @@
                         <view class='jian' bindtap='jian' data-goods="{{item.goods}}" data-goods-index="{{goodsIndex}}"
                               data-valid-index="{{validIndex}}">-
                         </view>
-                        <input class='num' type='text' value='{{goods.buy_num}}' bindblur="wacthinput"
+                        <input class='num' type='text' value='{{goods.num}}' bindblur="wacthinput"
                                disabled="disabled"/>
                         <view class='jia' bindtap='jia' data-goods="{{item.goods}}" data-goods-index="{{goodsIndex}}"
                               data-valid-index="{{validIndex}}">+

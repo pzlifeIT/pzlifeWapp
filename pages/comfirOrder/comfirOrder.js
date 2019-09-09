@@ -24,7 +24,9 @@ Page({
         coupon: '',
         couponText: '',
         couponTitle: '',
-        isIphoneX:false
+        isIphoneX:false,
+        s:'00',
+        m:30
     },
     hideModel: function (e) {
         this.setData({
@@ -553,6 +555,27 @@ Page({
             })
         }
     },
+    timeout:function() {
+        console.log(123)
+        let second = 0
+        let m = 30
+        let that = this
+       let inter = setInterval(function () {
+            second--
+            if (parseInt(second) === 0) {
+                m--
+                if (parseInt(m) === 0){
+                    clearInterval(inter)
+                }
+                console.log(m)
+                console.log(second)
+               that.setData({
+                   s:parseInt(second),
+                   m:parseInt(m)
+               })
+            }
+        }, 1000)
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -564,6 +587,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function (o) {
+        this.timeout()
         if (this.data.payStatus) return;
         console.log('siteid', app.globalData.addressId)
 
