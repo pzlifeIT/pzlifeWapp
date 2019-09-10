@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 72,
 			"list": [
 				{
 					"id": 0,
@@ -357,7 +357,7 @@
 					"id": 46,
 					"name": "须知",
 					"pathName": "pages/my/notice/notice",
-					"query": "iden=4",
+					"query": "iden=2",
 					"scene": null
 				},
 				{
@@ -576,48 +576,6 @@
 					"name": "playVoice",
 					"pathName": "pages/playVoice/playVoice",
 					"query": "name=’我的音频‘",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "填写信息",
-					"pathName": "pages/writeAppointmentInfo/writeAppointmentInfo",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "旅游信息",
-					"pathName": "pages/writeTravelInfo/writeTravelInfo",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/writeTravelInfo/addTravelInfo/addTravelInfo",
-					"pathName": "pages/writeTravelInfo/addTravelInfo/addTravelInfo",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/appointment/appointment",
-					"pathName": "pages/appointment/appointment",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 82,
-					"name": "pages/order/orderDetail/orderDetail",
-					"pathName": "pages/order/orderDetail/orderDetail",
-					"query": "orderno=odr19082809531497575354",
-					"scene": null
-				},
-				{
-					"id": 83,
-					"name": "pages/readInfo/readInfo",
-					"pathName": "pages/readInfo/readInfo",
-					"query": "orderno=odr19082917110254505155",
 					"scene": null
 				}
 			]

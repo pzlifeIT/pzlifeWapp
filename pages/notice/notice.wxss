@@ -22,7 +22,7 @@ image{
 }
 .xia{
     width: 750rpx;
-    height: 852rpx;
+    height: 718rpx;
 }
 .h-shang{
     width: 750rpx;
@@ -88,4 +88,8 @@ image{
     text-align: center;
     line-height: 80rpx;
     
+}
+.h-footer-bottom{
+    width: 750rpx;
+    height: 652rpx;
 }

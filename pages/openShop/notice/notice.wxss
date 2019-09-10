@@ -62,3 +62,7 @@ image{
     bottom: 0;
     background-color: #FFFFFF;
 }
+.h-footer-bottom{
+    width: 750rpx;
+    height: 652rpx;
+}

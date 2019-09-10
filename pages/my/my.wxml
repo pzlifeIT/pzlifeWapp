@@ -359,7 +359,7 @@
         </view>
         <view class="equity-one" bindtap="toShangpiao">
             <image lazy-load="true" src="{{imgHost}}hdgl_15.png"></image>
-            <view class="equity-title">转商券</view>
+            <view class="equity-title">奖励金转商券</view>
         </view>
 
         <!--<view class="equity-one" bindtap="instr">-->
@@ -376,21 +376,21 @@
             <image lazy-load="true" src="{{imgHost}}hdgl_13.png"></image>
             <view class="equity-title">提现</view>
         </view>
+        <view class="equity-one" bindtap="goshiftMoney">
+            <image lazy-load="true" src="{{imgHost}}hdgl_13.png"></image>
+            <view class="equity-title">佣金转商券</view>
+        </view>
         <view class="equity-one" bindtap="addCard">
             <image lazy-load="true" src="{{imgHost}}hdgl_05.png"></image>
             <view class="equity-title">添加银行卡</view>
         </view>
-        <view class="equity-one" bindtap="toaddress" hover-class="other-navigator-hover">
+        <view class="equity-one" bindtap="toaddress">
             <image lazy-load="true" src="{{imgHost}}cysz_06.png"></image>
             <view class="equity-title">我的地址</view>
         </view>
         <view class="equity-one" bindtap="myQr">
             <image lazy-load="true" src="{{imgHost}}cysz_08.png"></image>
             <view class="equity-title">我的二维码</view>
-        </view>
-        <view class="equity-one last" bindtap="tonewpassword" hover-class="other-navigator-hover">
-            <image lazy-load="true" src="{{imgHost}}cysz_03.png"></image>
-            <view class="equity-title">修改密码</view>
         </view>
         <view class="equity-one" bindtap="call">
             <image lazy-load="true" src="{{imgHost}}cysz_14.png"></image>
@@ -400,6 +400,10 @@
               wx:if="{{userInfo.user_market == 2 || userInfo.user_market == 3 || userInfo.user_market == 4}}">
             <image lazy-load="true" src="{{imgHost}}yq4.png"></image>
             <view class="equity-title">开店邀请</view>
+        </view>
+        <view class="equity-one last" bindtap="tonewpassword" hover-class="other-navigator-hover">
+            <image lazy-load="true" src="{{imgHost}}cysz_03.png"></image>
+            <view class="equity-title">修改密码</view>
         </view>
     </view>
     <view class="equity">

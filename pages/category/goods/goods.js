@@ -12,7 +12,7 @@ Page({
         goodsList: [],
         sub_name: "",
         navHight: app.globalData.topHeadHeight,
-        img:''
+        shareImg:''
     },
 
     /**
@@ -22,15 +22,33 @@ Page({
         let sub_id = options.sub_id
         this.setData({
             sub_id: options.sub_id,
-            sub_name: options.sub_name || '商品列表',
-            img:options.img
+            sub_name: options.sub_name || '商品列表'
         })
         if (sub_id) {
             this.getSubGoodsList(sub_id)
+            this.getShareImg(sub_id)
         }
         console.log(options)
         wx.setNavigationBarTitle({
             title: options.sub_name || "商品列表"
+        })
+    },
+    getShareImg(id) {
+        let that = this
+        app.wxrequest({
+            url: "category/getSubjectDetail",
+            data: {
+                    subject_id: id
+                },
+            nocon:true,
+            success(res){
+                that.setData({
+                    shareImg:res.data.subject_share_image
+                })
+            },
+            error(res){
+
+            }
         })
     },
     goDetail: function (e) {
@@ -131,7 +149,7 @@ Page({
             share = app.share({
                 title: this.data.sub_name || '商品列表',
                 path: '/pages/category/goods/goods?sub_id=' + sub_id + "&sub_name=" + this.data.sub_name,
-                imageUrl: that.data.img
+                imageUrl: that.data.shareImg || ''
             })
         return share
     }
