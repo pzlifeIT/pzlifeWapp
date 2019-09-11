@@ -557,23 +557,26 @@ Page({
     },
     timeout:function() {
         console.log(123)
-        let second = 0
+        let second = 1
         let m = 30
         let that = this
        let inter = setInterval(function () {
             second--
-            if (parseInt(second) === 0) {
+            if (second == 0) {
                 m--
-                if (parseInt(m) === 0){
-                    clearInterval(inter)
+                if (m <= 0){
+                    m = 0
                 }
-                console.log(m)
-                console.log(second)
-               that.setData({
-                   s:parseInt(second),
-                   m:parseInt(m)
-               })
+                if (m == 0 && second == 0){
+                    clearInterval(inter)
+                    return
+                }
+                second = 59
             }
+           that.setData({
+               s:parseInt(second),
+               m:parseInt(m)
+           })
         }, 1000)
     },
     /**

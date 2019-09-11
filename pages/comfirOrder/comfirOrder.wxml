@@ -1,6 +1,6 @@
 <!--pages/comfirOrder/comfirOrder.wxml-->
 <view class="timeout">等待买家在
-    <text>{{m}}分{{s}}秒</text>
+    <text>{{m}} 分{{s}} 秒</text>
     内完成付款
 </view>
 <view class='addres nullad' wx:if="{{siteid == ''}}" bindtap="selsite">
@@ -28,18 +28,13 @@
     <image lazy-load="true" class='blue_red' src='{{imgHost}}add.png'></image>
 </view>
 <view class="stat coupon">
-    <view class="summation">
+    <view class="summation mb">
         <text class="sum_text">优惠券</text>
         <navigator url="selectCoupon/selectCoupon">
             <text class="sum_price select_coupon" wx:if="{{couponTitle == ''}}">选择优惠券</text>
             <text class="sum_price select_coupon" wx:else>已选择 {{couponTitle}} 元优惠券</text>
             <image class="jt" lazy-load src="{{imgHost}}jt_black.png"></image>
         </navigator>
-    </view>
-    <view class="summation">
-        <text class="sum_text">48小时发货，江浙沪满88包邮</text>
-        <text class="sum_price select_coupon">前往凑单</text>
-        <image class="jt" lazy-load src="{{imgHost}}jt_black.png"></image>
     </view>
 </view>
 <view class='goods'>
@@ -48,7 +43,12 @@
             <image lazy-load="true" class="icon-img fl" src="{{item.image}}"/>
             <text>{{item.name}}</text>
         </view>
-        <view wx:for="{{item.shop_list}}">
+        <view class="summation" wx:if="{{quick != 1}}">
+            <text class="sum_text">48小时发货，江浙沪满88包邮</text>
+            <text class="sum_price select_coupon">前往凑单</text>
+            <image class="jt" lazy-load src="{{imgHost}}jt_black.png"></image>
+        </view>
+        <!--<view wx:for="{{item.shop_list}}">-->
             <view wx:for="{{item.goods_list}}">
                 <view class='goods_info'>
                     <view class='goods_img'>
@@ -56,13 +56,13 @@
                     </view>
                     <view class='goods_detail'>
                         <text class='goods_title'>{{item.goods_name}}</text>
-                        <text class='goods_subtitle'>{{item.attr}}</text>
+                        <text class='goods_subtitle' wx:for="{{item.attr}}">{{item}}</text>
                         <text class='price'>￥{{item.retail_price}}</text>
                     </view>
                     <view class='sum'>x{{item.buySum}}</view>
                 </view>
             </view>
-        </view>
+        <!--</view>-->
     </view>
 </view>
 <view class='stat'>

@@ -149,7 +149,7 @@ page {
     padding-bottom: 290rpx;
 }
 
-.stat .summation {
+ .summation {
     width: 750rpx;
     height: 80rpx;
     margin-top: 1rpx;
@@ -161,7 +161,11 @@ page {
     overflow: hidden;
 }
 
-.stat .rebate {
+.mb{
+  margin-bottom: 10rpx;
+}
+
+ .rebate {
     height: 120rpx;
 }
 
