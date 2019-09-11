@@ -28,7 +28,7 @@
     <view class="bottom-wire"></view>
 </view>
 <view class="top" wx:if="{{div == 1}}">
-    <view class="top-left {{num == 1 ? 'active':''}}" bindtap="clickSelect" data-num="1">个人消费收益</view>
+    <view class="top-left {{num == 1 ? 'active':''}}" bindtap="clickSelect" data-num="1">本人消费收益</view>
     <view class="top-left {{num == 2 ? 'active' : ''}}" bindtap="clickSelect" data-num="2">会员消费收益</view>
     <view class="top-left {{num == 3 ? 'active' : ''}}" bindtap="clickSelect" data-num="3">渠道收益</view>
     <i class="line"><s></s></i>

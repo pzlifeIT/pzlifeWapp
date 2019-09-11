@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 72,
+			"current": 78,
 			"list": [
 				{
 					"id": 0,
@@ -576,6 +576,13 @@
 					"name": "playVoice",
 					"pathName": "pages/playVoice/playVoice",
 					"query": "name=’我的音频‘",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/orderDetail/orderDetail",
+					"pathName": "pages/order/orderDetail/orderDetail",
+					"query": "orderno= odr19091011234448494999",
 					"scene": null
 				}
 			]

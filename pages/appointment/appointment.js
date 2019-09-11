@@ -229,6 +229,7 @@ Page({
     },
     ChooseImage(e) {
         let name = e.currentTarget.dataset.name
+        name = name.replace(/\s*$/g,'')
         let imgList = this.data.imgList
         let index = e.currentTarget.dataset.idx;
         let imgs_name = this.data.imgs_name;
@@ -425,7 +426,7 @@ Page({
             case 'marriage_certificate_copies':
                 this.data.marriage_certificate_copies.push(img_path);
                 break;
-            case 'house_property_copies ':
+            case 'house_property_copies':
                 this.data.house_property_copies.push(img_path);
                 break;
             case 'retirement_card':
@@ -454,13 +455,14 @@ Page({
         //先把所有字段放进form里
         for (let i = 0; i < sheet.length; i++) {
             for (let k in data) {
-                if (sheet[i] == k) {
-                    console.log(this.data[sheet[i]])
-                    id[k] = this.data[sheet[i]]
+                if (sheet[i].replace(/\s*$/g,'') == k) {
+                    console.log(this.data[sheet[i].replace(/\s*$/g,'')])
+                    id[k] = this.data[sheet[i].replace(/\s*$/g,'')]
                 }
             }
         }
         form[goods_id[0]] = id
+        console.log(form)
         if (this.data.selectAir.length > 0) {
             form[goods_id[0]].rassenger_information = this.data.airPlan
         }

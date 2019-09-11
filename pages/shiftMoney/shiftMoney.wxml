@@ -10,7 +10,7 @@
     <text class="fr reality" >实际到账金额：{{reality}}元</text>
   </view>
 </view>
-<view class="sm-submit {{withdraw?'':'opa'}}" bindtap="transferBalance">确定提现</view>
+<view class="sm-submit {{withdraw?'':'opa'}}" bindtap="transferBalance">确认转入</view>
 <navigator url="./record/record" >
 <view class="fr record">申请记录<image lazy-load="true" class="img din fr" src="{{imgHost}}jt_18.png" alt="" /></view>
 </navigator>
