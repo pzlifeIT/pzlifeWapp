@@ -173,6 +173,7 @@ App({
             showCancel: data.showCancel || true,
             cancelColor: data.cancelColor || '',
             confirmText: data.confirmText || "确定",
+            cancelText: data.cancelText || "取消",
             success(res) {
                 if (res.confirm) {
                     typeof data.success == 'function' ? data.success() : ''

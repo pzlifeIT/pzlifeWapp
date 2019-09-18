@@ -149,7 +149,7 @@ page {
     padding-bottom: 290rpx;
 }
 
-.stat .summation {
+ .summation {
     width: 750rpx;
     height: 80rpx;
     margin-top: 1rpx;
@@ -161,7 +161,11 @@ page {
     overflow: hidden;
 }
 
-.stat .rebate {
+.mb{
+  margin-bottom: 10rpx;
+}
+
+ .rebate {
     height: 120rpx;
 }
 
@@ -631,4 +635,17 @@ radio-group {
 }
 .color{
     color: #E61F18;
+}
+.timeout{
+    width: 750rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    color: #000;
+    font-size: 32rpx;
+    background: #FFFFFF;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+}
+.timeout>text{
+    color: #e61f18;
 }

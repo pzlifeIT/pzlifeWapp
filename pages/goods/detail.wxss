@@ -692,3 +692,66 @@ margin-top: 20rpx;
     width: 750rpx;
     height: 68rpx;
 }
+.addon{
+    display: block;
+}
+.addon .join_cart{
+    float: right;
+}
+.pop-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-hint {
+    margin: auto auto;
+    background-color: #0d0d0d;
+    opacity: 1;
+    width: 608rpx;
+    height: 270rpx;
+    border-radius: 15rpx;
+}
+
+.pop-hint .hint {
+    width: 608rpx;
+    height: 150rpx;
+    text-align: center;
+    line-height: 150rpx;
+    font-size: 40rpx;
+    color: #efcb86;
+    background-color: #0d0d0d;
+    border-top-left-radius: 15rpx;
+    border-top-right-radius: 15rpx;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+
+.pop-hint .collect {
+    width: 50%;
+    height: 120rpx;
+    text-align: center;
+    line-height: 120rpx;
+    color: #efcb86;
+    font-size: 38rpx;
+    display: inline-block;
+    background-color: #0d0d0d;
+    border-bottom-left-radius: 15rpx;
+}
+
+.pop-hint .delete {
+    width: 50%;
+    height: 120rpx;
+    text-align: center;
+    line-height: 120rpx;
+    color: #000;
+    font-size: 38rpx;
+    display: inline-block;
+    border-bottom-right-radius: 15rpx;
+    background: #efcb86;
+}

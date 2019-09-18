@@ -22,7 +22,6 @@ radio {
     /* background-color: #ffffff; */
     float: left;
     margin-top: 9rpx;
-    margin-bottom: 90rpx;
 }
 
 .shop_name {
@@ -87,7 +86,7 @@ lose_title {
     font-size: 28rpx;
     color: #202020;
     display: block;
-    margin-bottom: 18rpx;
+    margin-bottom: 10rpx;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -98,7 +97,7 @@ lose_title {
     font-size: 24rpx;
     color: #888;
     display: block;
-    margin-bottom: 19rpx;
+    margin-bottom: 10rpx;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -120,7 +119,7 @@ height: 30rpx;
 font-size: 24rpx;
 text-align: center;
 border-radius: 2rpx;
-margin-top: 20rpx;
+margin-top: 16rpx;
 
 }
 

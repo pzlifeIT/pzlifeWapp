@@ -6,7 +6,7 @@
                 <radio-group bindtap="selectShop" data-valid-index="{{validIndex}}" data-valid="{{valid}}"
                              data-goods="{{item.goods}}">
                     <radio checked='' color='#e61f18' checked="{{item.selectStatus}}"/>
-                    <text>{{item.shop_name}}</text>
+                    <text>{{item.name}}</text>
                 </radio-group>
             </view>
             <view class='goods_data' wx:for="{{item.goods}}" wx:for-index="goodsIndex" wx:for-item="goods"
@@ -20,9 +20,9 @@
                 <navigator hover-class="none" url='/pages/goods/detail?goodid={{goods.goods_id}}'>
                     <view class='goods_img'>
                         <image lazy-load="true" src='{{goods.sku_image}}'></image>
-                        <view class='supplier_name'>
-                            <text>{{goods.supplier_name}}</text>
-                        </view>
+                        <!--<view class='supplier_name'>-->
+                        <!--<text>{{goods.supplier_name}}</text>-->
+                        <!--</view>-->
                     </view>
                     <view class='goods_desc'>
                         <text class='goods_title'>{{goods.goods_name}}</text>
@@ -37,7 +37,7 @@
                         <view class='jian' bindtap='jian' data-goods="{{item.goods}}" data-goods-index="{{goodsIndex}}"
                               data-valid-index="{{validIndex}}">-
                         </view>
-                        <input class='num' type='text' value='{{goods.buy_num}}' bindblur="wacthinput"
+                        <input class='num' type='text' value='{{goods.num}}' bindblur="wacthinput"
                                disabled="disabled"/>
                         <view class='jia' bindtap='jia' data-goods="{{item.goods}}" data-goods-index="{{goodsIndex}}"
                               data-valid-index="{{validIndex}}">+
@@ -77,34 +77,34 @@
             </view>
         </block>
     </view>
-
-    <!--<view style="width: 750rpx;height: 96rpx"></view>-->
-    <view class='footer' wx:if="{{valid.length>=1}}">
-        <view class='check'>
-            <radio-group bindtap="selectAll">
-                <radio class='all' color='#e61f18' checked="{{selectAll}}"/>
-                <text>全选</text>
-            </radio-group>
-            <view class='total'>
-                <text class='total_text'>合计：</text>
-                <text class='total_price'>￥{{total}}</text>
-            </view>
+</view>
+<view style="width: 750rpx;height: 96rpx"></view>
+<view class='footer' wx:if="{{valid.length>=1}}">
+    <view class='check'>
+        <radio-group bindtap="selectAll">
+            <radio class='all' color='#e61f18' checked="{{selectAll}}"/>
+            <text>全选</text>
+        </radio-group>
+        <view class='total'>
+            <text class='total_text'>合计：</text>
+            <text class='total_price'>￥{{total}}</text>
         </view>
-        <!-- <navigator url='/pages/comfirOrder/comfirOrder'> -->
-        <view bindtap="buyGoods" class='pay'>
-            <text>去结算</text>
-        </view>
-        <!-- </navigator> -->
     </view>
-    <view class='obscuration' wx:if="{{mask}}" catchtouchmove='preventTouchMove' bindtap='hidemask'></view>
-    <view class='mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>
-        <view class='pop' catchtap='none'>
-            <view class='hint'>是否删除该商品</view>
-            <view class='collect' bindtap='hidemask'>取消</view>
-            <view class='delete' bindtap="confirmDel">删除</view>
-        </view>
+    <!-- <navigator url='/pages/comfirOrder/comfirOrder'> -->
+    <view bindtap="buyGoods" class='pay'>
+        <text>去结算</text>
+    </view>
+    <!-- </navigator> -->
+</view>
+<view class='obscuration' wx:if="{{mask}}" catchtouchmove='preventTouchMove' bindtap='hidemask'></view>
+<view class='mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>
+    <view class='pop' catchtap='none'>
+        <view class='hint'>是否删除该商品</view>
+        <view class='collect' bindtap='hidemask'>取消</view>
+        <view class='delete' bindtap="confirmDel">删除</view>
     </view>
 </view>
+
 <!-- 空购物车 -->
 <view class='empty' wx:if="{{valid.length==0 && failure.length==0}}">
     <view class='msg'>

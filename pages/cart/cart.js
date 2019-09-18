@@ -15,7 +15,10 @@ Page({
         con_id: "",
         shop_id: 0,
         imgHost: '',
-        noClick: false
+        noClick: false,
+        isselect: 0,
+        s:[],
+        sg:[]
     },
     /**
      * 全选
@@ -46,13 +49,21 @@ Page({
             validIndex = e.currentTarget.dataset.validIndex,
             selectShop = !valid[validIndex].selectStatus,
             select = []
+        let isselect = this.data.isselect
+        let s = this.data.s
+        console.log(valid)
+        console.log(isselect)
+        // 只是改变商品的选择状态
         for (let i = 0; i < valid[validIndex].goods.length; i++) {
             valid[validIndex].goods[i].selectStatus = selectShop
-            select[i] = valid[validIndex].goods[i].selectStatus
+            // select[i] = valid[validIndex].goods[i].selectStatus
+            s[validIndex] = selectShop
         }
-        let status = true
-        let have = select.indexOf(status)
-        if (have < 0) { //如果没有false
+        let status = false
+        let have = s.indexOf(status)
+        console.log(s)
+        console.log(have)
+        if (have > -1) { //如果没有false
             this.setData({
                 selectAll: false
             })
@@ -76,19 +87,24 @@ Page({
             selectStatus = !goods[goodsIndex].selectStatus,
             validIndex = e.currentTarget.dataset.validIndex,
             valid = this.data.valid
+        let sg = this.data.sg
         console.log(goods)
         console.log(valid)
+        // 改变选中的商品状态
         goods[goodsIndex].selectStatus = selectStatus
+        // 将改变之后的商品放进有效商品
         valid[validIndex].goods = goods
         let select = []
         for (let i = 0; i < goods.length; i++) {
-            //必须所有的都是true全选才是true
             //把所有的状态都存进一个数组里，如果数组元素有一个是false就不能是true
-            select[i] = goods[i].selectStatus
+            // 将商品状态放进一个数组
+            select[i] = valid[validIndex].goods[i].selectStatus
+            sg[validIndex] = valid[validIndex].goods[i].selectStatus
         }
+        console.log(sg)
         let status = false
         let have = select.indexOf(status)
-        if (have < 0) { //如果没有false
+        if (have < 0 && selectStatus) { //如果没有false
             this.setData({
                 selectAll: true
             })
@@ -98,7 +114,7 @@ Page({
             })
         }
         let haveTrue = select.indexOf(false)
-        if (haveTrue >= 0) {
+        if (haveTrue >= 0 && !selectStatus) {
             valid[validIndex].selectStatus = false
         } else {
             valid[validIndex].selectStatus = true
@@ -117,7 +133,7 @@ Page({
         for (let i = 0; i < valid.length; i++) {
             for (let j = 0; j < valid[i].goods.length; j++) {
                 if (valid[i].goods[j].selectStatus) {
-                    total += valid[i].goods[j].buy_num * valid[i].goods[j].retail_price
+                    total += valid[i].goods[j].num * valid[i].goods[j].retail_price
                 }
             }
         }
@@ -132,7 +148,7 @@ Page({
         let that = this
         const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标
         let goods = e.currentTarget.dataset.goods, //商品数据
-            num = goods[goodsIndex].buy_num, //购买数量
+            num = goods[goodsIndex].num, //购买数量
             valid = this.data.valid,
             con_id = this.data.con_id,
             sku_id = goods[goodsIndex].id,
@@ -158,7 +174,7 @@ Page({
                 brokerage = parseFloat(brokerage / num)
                 num = num - 1
                 brokerage = parseFloat(brokerage * num)
-                goods[goodsIndex].buy_num = num
+                goods[goodsIndex].num = num
                 goods[goodsIndex].brokerage = parseFloat(brokerage.toFixed(2))
                 valid[validIndex].goods = goods
                 that.setData({
@@ -200,7 +216,7 @@ Page({
         let that = this
         const goodsIndex = e.currentTarget.dataset.goodsIndex //商品下标
         let goods = e.currentTarget.dataset.goods, //商品数据
-            num = goods[goodsIndex].buy_num, //购买数量
+            num = goods[goodsIndex].num, //购买数量
             valid = this.data.valid,
             con_id = this.data.con_id,
             sku_id = goods[goodsIndex].id,
@@ -232,7 +248,7 @@ Page({
                 brokerage = parseFloat(brokerage / num)
                 num = num + 1
                 brokerage = parseFloat(brokerage * num)
-                goods[goodsIndex].buy_num = num
+                goods[goodsIndex].num = num
                 goods[goodsIndex].brokerage = parseFloat(brokerage.toFixed(2))
                 valid[validIndex].goods = goods
                 that.setData({
@@ -275,25 +291,21 @@ Page({
         console.log(e)
         let goods = e.currentTarget.dataset.goods,
             goodsIndex = e.currentTarget.dataset.goodsIndex,
-            sku_id = goods[goodsIndex].id,
-            shop_id = goods[goodsIndex].track_id
+            sku_id = goods[goodsIndex].id
         this.setData({
             mask: true,
-            sku_id: sku_id,
-            shop_id: shop_id
+            sku_id: sku_id
         })
     },
     confirmDel: function () {
         let con_id = this.data.con_id,
             sku_id = this.data.sku_id,
-            shop_id = this.data.shop_id,
             that = this
         app.wxrequest({
             url: "cart/editUserCart",
             data: {
                 con_id: con_id,
-                del_skuid: sku_id,
-                del_shopid: shop_id
+                del_skuid: sku_id
             },
             success(res) {
                 that.setData({
