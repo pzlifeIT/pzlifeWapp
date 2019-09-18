@@ -135,6 +135,7 @@
     </view>
   </scroll-view> -->
     <!--为你推荐-->
+    <block wx:if="{{from != 'add'}}">
     <view class="recommend" wx:if="{{recommend.length > 0}}">
         <view class="re-title">为你推荐</view>
         <scroll-view class="re-goods" scroll-x="true">
@@ -151,6 +152,7 @@
             </block>
         </scroll-view>
     </view>
+    </block>
     <!--商品详情-->
     <view class='goods_content'>
         <view class='tab'>

@@ -21,7 +21,7 @@
                     <view class='goods_img'>
                         <image lazy-load="true" src='{{goods.sku_image}}'></image>
                         <!--<view class='supplier_name'>-->
-                            <!--<text>{{goods.supplier_name}}</text>-->
+                        <!--<text>{{goods.supplier_name}}</text>-->
                         <!--</view>-->
                     </view>
                     <view class='goods_desc'>
@@ -77,34 +77,34 @@
             </view>
         </block>
     </view>
-
-    <!--<view style="width: 750rpx;height: 96rpx"></view>-->
-    <view class='footer' wx:if="{{valid.length>=1}}">
-        <view class='check'>
-            <radio-group bindtap="selectAll">
-                <radio class='all' color='#e61f18' checked="{{selectAll}}"/>
-                <text>全选</text>
-            </radio-group>
-            <view class='total'>
-                <text class='total_text'>合计：</text>
-                <text class='total_price'>￥{{total}}</text>
-            </view>
+</view>
+<view style="width: 750rpx;height: 96rpx"></view>
+<view class='footer' wx:if="{{valid.length>=1}}">
+    <view class='check'>
+        <radio-group bindtap="selectAll">
+            <radio class='all' color='#e61f18' checked="{{selectAll}}"/>
+            <text>全选</text>
+        </radio-group>
+        <view class='total'>
+            <text class='total_text'>合计：</text>
+            <text class='total_price'>￥{{total}}</text>
         </view>
-        <!-- <navigator url='/pages/comfirOrder/comfirOrder'> -->
-        <view bindtap="buyGoods" class='pay'>
-            <text>去结算</text>
-        </view>
-        <!-- </navigator> -->
     </view>
-    <view class='obscuration' wx:if="{{mask}}" catchtouchmove='preventTouchMove' bindtap='hidemask'></view>
-    <view class='mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>
-        <view class='pop' catchtap='none'>
-            <view class='hint'>是否删除该商品</view>
-            <view class='collect' bindtap='hidemask'>取消</view>
-            <view class='delete' bindtap="confirmDel">删除</view>
-        </view>
+    <!-- <navigator url='/pages/comfirOrder/comfirOrder'> -->
+    <view bindtap="buyGoods" class='pay'>
+        <text>去结算</text>
+    </view>
+    <!-- </navigator> -->
+</view>
+<view class='obscuration' wx:if="{{mask}}" catchtouchmove='preventTouchMove' bindtap='hidemask'></view>
+<view class='mask' wx:if="{{mask}}" bindtap='hidemask' catchtouchmove='preventTouchMove'>
+    <view class='pop' catchtap='none'>
+        <view class='hint'>是否删除该商品</view>
+        <view class='collect' bindtap='hidemask'>取消</view>
+        <view class='delete' bindtap="confirmDel">删除</view>
     </view>
 </view>
+
 <!-- 空购物车 -->
 <view class='empty' wx:if="{{valid.length==0 && failure.length==0}}">
     <view class='msg'>

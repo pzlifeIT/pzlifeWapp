@@ -31,7 +31,7 @@ page{
     width: 345rpx;
     height: auto;
     background-color: #FFFFFF;
-    margin-bottom: 10rpx;
+    margin-bottom: 20rpx;
 }
 .goods-img{
     width: 100%;
@@ -54,6 +54,7 @@ page{
     -webkit-box-orient: vertical;
     -webkit-line-clamp:2;
     font-size: 28rpx;
+    min-height: 76rpx;
 }
 .price-bu{
     width: 100%;

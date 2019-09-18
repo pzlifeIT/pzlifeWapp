@@ -51,6 +51,37 @@ Page({
             })
             return
         }
+
+        let pages = getCurrentPages()
+        let page = pages[pages.length - 3]
+        let data = page.data
+        let goods = this.data.goodData
+        console.log(goods)
+        console.log(data)
+        this.addUserCart({
+            goods_skuid: this.data.goodData.id,
+            goods_num: this.data.buyNum,
+            parent_id: app.globalData.pid,
+            type:1
+        })
+        //将当前选中的skuid放进确认订单页的skuid中
+        let skus = data.skus.split(',')
+        skus.push(goods.id)
+        let skuStr = skus.join(',')
+        page.setData({
+            skus:skuStr
+        })
+        app.modal({
+            title: '凑单添加成功',
+            content:'是否继续凑单？',
+            cancelText:'继续凑单',
+            confirmText:"去支付",
+            success(){
+                wx.navigateBack({
+                    delta:2
+                })
+            }
+        })
     },
     changeSwiper: function (e) {
         this.setData({
@@ -264,7 +295,9 @@ Page({
                 })
                 app.globalData.updateNum = true
                 that.getCartNum()
-                app.toast({title: '加入购物车成功'})
+                if (!data.type){
+                    app.toast({title: '加入购物车成功'})
+                }
             },
             error: function (res) {
                 switch (parseInt(res)) {

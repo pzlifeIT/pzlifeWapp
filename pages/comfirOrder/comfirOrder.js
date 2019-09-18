@@ -24,9 +24,9 @@ Page({
         coupon: '',
         couponText: '',
         couponTitle: '',
-        isIphoneX:false,
-        s:'00',
-        m:30
+        isIphoneX: false,
+        s: '00',
+        m: 30
     },
     hideModel: function (e) {
         this.setData({
@@ -120,13 +120,14 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        this.timeout()
         this.setData({
             imgHost: app.globalData.host.imgHost,
             skus: options.skus,
             siteid: app.globalData.addressId,
             num: options.num || 1,
             quick: options.quick || 0,
-            isIphoneX:app.isIphoneX()
+            isIphoneX: app.isIphoneX()
         })
     },
     /**
@@ -182,10 +183,10 @@ Page({
                         app.toast({title: '商品库存不足'})
                         break;
                     case 3008:
-                        app.toast({title:"支付方式错误"})
+                        app.toast({title: "支付方式错误"})
                         break;
                     case 3009:
-                        app.toast({title:"创建订单失败"})
+                        app.toast({title: "创建订单失败"})
                         break;
                     case 3010:
                         app.modal({
@@ -199,10 +200,10 @@ Page({
                         });
                         break;
                     case 3011:
-                        app.toast({title:"创业店主及以上身份专享商品"});
+                        app.toast({title: "创业店主及以上身份专享商品"});
                         break;
                     case 3012:
-                        app.toast({title:"合伙人及以上身份专享商品"});
+                        app.toast({title: "合伙人及以上身份专享商品"});
                         break;
                     case 3013:
                         app.toast({
@@ -260,10 +261,10 @@ Page({
                         app.toast({title: '商品库存不够'})
                         break;
                     case 3008:
-                        app.toast({title:"支付方式错误"})
+                        app.toast({title: "支付方式错误"})
                         break;
                     case 3009:
-                        app.toast({title:"创建订单失败"})
+                        app.toast({title: "创建订单失败"})
                         break;
                     case 3010:
                         app.modal({
@@ -277,10 +278,10 @@ Page({
                         });
                         break;
                     case 3011:
-                        app.toast({title:"创业店主及以上身份专享商品"});
+                        app.toast({title: "创业店主及以上身份专享商品"});
                         break;
                     case 3012:
-                        app.toast({title:"合伙人及以上身份专享"});
+                        app.toast({title: "合伙人及以上身份专享"});
                         break;
                     case 3013:
                         app.toast({title: "优惠券不可用"});
@@ -377,7 +378,7 @@ Page({
                     total_goods_price: res.total_goods_price,
                     total_price: res.total_price,
                     balance: res.balance,
-                    discount_money:res.discount_money
+                    discount_money: res.discount_money
                 }
                 that.setData({
                     datalist: res.supplier_list,
@@ -427,10 +428,10 @@ Page({
                         });
                         break;
                     case 3011:
-                        app.toast({title:"创业店主及以上身份专享商品"});
+                        app.toast({title: "创业店主及以上身份专享商品"});
                         break;
                     case 3012:
-                        app.toast({title:"合伙人及以上身份专享商品"});
+                        app.toast({title: "合伙人及以上身份专享商品"});
                         break;
                     case 3013:
                         app.toast({title: "优惠券不可用"});
@@ -471,7 +472,7 @@ Page({
                     total_goods_price: res.total_goods_price,
                     total_price: res.total_price,
                     balance: res.balance,
-                    discount_money:res.discount_money
+                    discount_money: res.discount_money
                 }
                 that.setData({
                     datalist: res.supplier_list,
@@ -515,16 +516,16 @@ Page({
                         });
                         break;
                     case 3011:
-                        app.toast({title:"该商品为创业店主及以上身份专属"});
+                        app.toast({title: "该商品为创业店主及以上身份专属"});
                         break;
                     case 3012:
-                        app.toast({title:"该商品为合伙人及以上身份专属"});
+                        app.toast({title: "该商品为合伙人及以上身份专属"});
                         break;
                     case 3013:
                         app.toast({title: "优惠券不可用"});
                         break;
                     default:
-                        app.toast({title: '错误码：'+ code})
+                        app.toast({title: '错误码：' + code})
                 }
                 // if (!that.data.siteid){
                 //     that.getUserAddress({
@@ -555,29 +556,37 @@ Page({
             })
         }
     },
-    timeout:function() {
+    timeout: function () {
         console.log(123)
-        let second = 1
-        let m = 30
+        let second = 60
+        let m = 29
         let that = this
-       let inter = setInterval(function () {
+        let inter = setInterval(function () {
             second--
-            if (second == 0) {
+            if (second <= 0) {
                 m--
-                if (m <= 0){
+                if (m <= 0) {
                     m = 0
                 }
-                if (m == 0 && second == 0){
+                if (m <= 0 && second <= 0) {
                     clearInterval(inter)
                     return
                 }
                 second = 59
             }
-           that.setData({
-               s:parseInt(second),
-               m:parseInt(m)
-           })
+            that.setData({
+                s: parseInt(second),
+                m: parseInt(m)
+            })
         }, 1000)
+    },
+    addGoods: function (e) {
+        let skuid = e.currentTarget.dataset.sku,
+            supplierid = e.currentTarget.dataset.supplierid,
+            addressid = this.data.siteid
+        wx.navigateTo({
+            url: '/pages/addonitems/addonitems?skuid=' + skuid + '&supplierid=' + supplierid + '&addressid=' + addressid
+        })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -590,7 +599,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function (o) {
-        this.timeout()
+
         if (this.data.payStatus) return;
         console.log('siteid', app.globalData.addressId)
 
