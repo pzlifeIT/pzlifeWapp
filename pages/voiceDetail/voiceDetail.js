@@ -75,7 +75,7 @@ Page({
             url: 'shopmanage/autoShopGoods',
             data: {
                 type: 1,
-                goods_id: that.data.goodid
+                goods_id: that.data.goods_id
             },
             success: function (res) {
                 that.getGoodsAway()

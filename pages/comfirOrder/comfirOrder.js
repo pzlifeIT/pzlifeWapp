@@ -565,11 +565,21 @@ Page({
             second--
             if (second <= 0) {
                 m--
-                if (m <= 0) {
+                if (m < 0) {
                     m = 0
                 }
                 if (m <= 0 && second <= 0) {
                     clearInterval(inter)
+                    that.setData({
+                        s: parseInt(second),
+                        m: parseInt(m)
+                    });
+                    app.toast({title:"购买时间已结束，重新下单"})
+                    setTimeout(function () {
+                        wx.switchTab({
+                            url:"/pages/cart/cart"
+                        })
+                    },1000)
                     return
                 }
                 second = 59

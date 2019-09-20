@@ -17,17 +17,19 @@ Page({
         imgHost: '',
         noClick: false,
         isselect: 0,
-        s:[],
-        sg:[]
+        s: [],
+        sg: []
     },
     /**
      * 全选
      */
     selectAll: function () {
         let valid = this.data.valid,
-            selectAll = !this.data.selectAll
+            selectAll = !this.data.selectAll,
+            s = this.data.s
         for (let i = 0; i < valid.length; i++) {
             valid[i].selectStatus = selectAll
+            s[i] = selectAll
             for (let j = 0; j < valid[i].goods.length; j++) {
                 valid[i].goods[j].selectStatus = selectAll
                 if (valid[i].goods[j].selectStatus == true) {
@@ -37,7 +39,8 @@ Page({
         }
         this.setData({
             valid: valid,
-            selectAll: selectAll
+            selectAll: selectAll,
+            s: s
         });
         this.getTotal(valid)
     },
@@ -87,23 +90,28 @@ Page({
             selectStatus = !goods[goodsIndex].selectStatus,
             validIndex = e.currentTarget.dataset.validIndex,
             valid = this.data.valid
-        let sg = this.data.sg
-        console.log(goods)
-        console.log(valid)
+        let sg = []
         // 改变选中的商品状态
         goods[goodsIndex].selectStatus = selectStatus
         // 将改变之后的商品放进有效商品
         valid[validIndex].goods = goods
+        console.log(valid)
+        console.log(valid[validIndex].goods)
         let select = []
-        for (let i = 0; i < goods.length; i++) {
-            //把所有的状态都存进一个数组里，如果数组元素有一个是false就不能是true
-            // 将商品状态放进一个数组
-            select[i] = valid[validIndex].goods[i].selectStatus
-            sg[validIndex] = valid[validIndex].goods[i].selectStatus
+        for (let i = 0 ;i<valid.length;i++){
+            for (let j =0; j<valid[i].goods.length;j++){
+                select.push(valid[i].goods[j].selectStatus)
+                // sg.push(valid[validIndex].goods[j].selectStatus)
+            }
         }
-        console.log(sg)
+        // 商品对应供应商
+        for (let x = 0;x<valid[validIndex].goods.length;x++){
+            sg.push(valid[validIndex].goods[x].selectStatus)
+        }
+        console.log(select)
+        // return
         let status = false
-        let have = select.indexOf(status)
+        let have = select.indexOf(status) // 这里应该判断是不是所有的
         if (have < 0 && selectStatus) { //如果没有false
             this.setData({
                 selectAll: true
@@ -113,11 +121,11 @@ Page({
                 selectAll: false
             })
         }
-        let haveTrue = select.indexOf(false)
-        if (haveTrue >= 0 && !selectStatus) {
-            valid[validIndex].selectStatus = false
-        } else {
+        let haveTrue = sg.indexOf(true)
+        if (haveTrue >= 0) {
             valid[validIndex].selectStatus = true
+        } else {
+            valid[validIndex].selectStatus = false
         }
         this.setData({
             valid: valid

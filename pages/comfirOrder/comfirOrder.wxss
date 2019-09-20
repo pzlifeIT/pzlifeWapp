@@ -129,10 +129,13 @@ page {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
+.goods_detail .noblock{
+    display: inline-block;
+}
 .goods_detail .price {
     font-size: 30rpx;
     color: #e61f18;
+    display: block;
 }
 
 .sum {
