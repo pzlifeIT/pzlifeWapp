@@ -38,6 +38,10 @@ Page({
         })
     },
     headtap: function(e) {
+        wx.pageScrollTo({
+            scrollTop:0,
+            duration: 1
+        })
         let n = e.currentTarget.dataset.num
         this.setData({
             status: n,

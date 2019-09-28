@@ -98,14 +98,14 @@ Page({
         console.log(valid)
         console.log(valid[validIndex].goods)
         let select = []
-        for (let i = 0 ;i<valid.length;i++){
-            for (let j =0; j<valid[i].goods.length;j++){
+        for (let i = 0; i < valid.length; i++) {
+            for (let j = 0; j < valid[i].goods.length; j++) {
                 select.push(valid[i].goods[j].selectStatus)
                 // sg.push(valid[validIndex].goods[j].selectStatus)
             }
         }
         // 商品对应供应商
-        for (let x = 0;x<valid[validIndex].goods.length;x++){
+        for (let x = 0; x < valid[validIndex].goods.length; x++) {
             sg.push(valid[validIndex].goods[x].selectStatus)
         }
         console.log(select)
@@ -317,7 +317,8 @@ Page({
             },
             success(res) {
                 that.setData({
-                    mask: false
+                    mask: false,
+                    selectAll: true
                 });
                 app.toast({
                     title: "删除成功"

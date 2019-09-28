@@ -219,6 +219,10 @@ Page({
         })
     },
     confirm:function(){
+        if (!this.data.repertory) {
+            app.toast({title:"暂无库存"})
+            return
+        }
         if (!this.data.buy) {
             app.toast({
                 title: '请选择规格'

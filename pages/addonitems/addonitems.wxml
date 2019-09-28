@@ -9,7 +9,7 @@
     <block wx:for="{{list}}">
         <block wx:for="{{item}}">
             <view class="one-goods" bindtap="goDetail" data-goods-id="{{item.goods_id}}" data-from="add">
-                <image class="goods-img" src="https://imagesdev.pzlive.vip/{{item.image}}" lazy-load></image>
+                <image class="goods-img" src="{{item.image}}" lazy-load></image>
                 <view class="goods-info">
                     <view class="title">{{item.goods_name}}</view>
                 </view>
@@ -33,8 +33,8 @@
                 <image lazy-load="true" bindtap="previewImage" data-img="{{goods.sku_image}}"
                        src='{{goods.sku_image}}' wx:if="{{buy}}"></image>
                 <image lazy-load="true" bindtap="previewImage"
-                       data-img="https://imagesdev.pzlive.vip/{{goodData.image}}"
-                       src='https://imagesdev.pzlive.vip/{{goodData.image}}' wx:else></image>
+                       data-img="{{goodData.image}}"
+                       src='{{goodData.image}}' wx:else></image>
             </view>
             <view class='goods_desc fl' wx:if="{{repertory}}">
                 <text class='pop_price' wx:if="{{buy}}">价格：￥{{goods.sku_price}}</text>

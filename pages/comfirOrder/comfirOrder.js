@@ -1,5 +1,6 @@
 // pages/comfirOrder/comfirOrder.js
 const app = getApp();
+let inte = null
 Page({
 
     /**
@@ -26,7 +27,8 @@ Page({
         couponTitle: '',
         isIphoneX: false,
         s: '00',
-        m: 30
+        m: 30,
+        timeout: '30分00秒'
     },
     hideModel: function (e) {
         this.setData({
@@ -120,7 +122,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.timeout()
+        this.time()
         this.setData({
             imgHost: app.globalData.host.imgHost,
             skus: options.skus,
@@ -556,39 +558,44 @@ Page({
             })
         }
     },
-    timeout: function () {
-        console.log(123)
-        let second = 60
-        let m = 29
+    time: function () {
+        let second = this.timeTosecond('30:00')
         let that = this
-        let inter = setInterval(function () {
+        console.log(second)
+        inte = setInterval(function () {
             second--
             if (second <= 0) {
-                m--
-                if (m < 0) {
-                    m = 0
-                }
-                if (m <= 0 && second <= 0) {
-                    clearInterval(inter)
-                    that.setData({
-                        s: parseInt(second),
-                        m: parseInt(m)
-                    });
-                    app.toast({title:"购买时间已结束，重新下单"})
-                    setTimeout(function () {
-                        wx.switchTab({
-                            url:"/pages/cart/cart"
-                        })
-                    },1000)
-                    return
-                }
-                second = 59
+                second = 0
             }
+            let ms = that.formatTime(second)
+            // console.log(ms)
             that.setData({
-                s: parseInt(second),
-                m: parseInt(m)
+                timeout: ms
             })
+            if (second == 0) {
+                clearInterval(inte)
+                app.toast({title: '支付时间已截止，请重新下单'});
+                setTimeout(function () {
+                    wx.switchTab({
+                        url: "/pages/cart/cart"
+                    })
+                }, 1000)
+            }
         }, 1000)
+    },
+    formatTime: function (s) {
+        let min = Math.floor(Math.floor(s / 60) % 60);
+        let sec = Math.floor(parseInt(s % 60));
+        min = min < 10 ? '0' + min : min;
+        sec = sec < 10 ? '0' + sec : sec;
+        return min + '分' + sec + '秒'
+    },
+    timeTosecond: function (str) {
+        let arr = str.split(':');
+        let ms = parseInt(arr[0] * 60);
+        let ss = parseInt(arr[1]);
+        let seconds = ms + ss;
+        return seconds;
     },
     addGoods: function (e) {
         let skuid = e.currentTarget.dataset.sku,
@@ -644,7 +651,8 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
-
+        clearInterval(inte)
+        console.log('wozhixingle ')
     },
 
     /**

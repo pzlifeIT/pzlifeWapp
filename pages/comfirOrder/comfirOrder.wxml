@@ -1,6 +1,6 @@
 <!--pages/comfirOrder/comfirOrder.wxml-->
 <view class="timeout">等待买家在
-    <text>{{m}} 分{{s}} 秒</text>
+    <text>{{timeout}}</text>
     内完成付款
 </view>
 <view class='addres nullad' wx:if="{{siteid == ''}}" bindtap="selsite">
