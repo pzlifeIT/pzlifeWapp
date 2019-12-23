@@ -404,7 +404,7 @@ Page({
     getCartGoodsList: function (con_id) {
         let that = this
         app.wxrequest({
-            url: "cart/getUserCart",
+            url: "cart/getUserIntegralCart",
             data: {
                 con_id: con_id
             },

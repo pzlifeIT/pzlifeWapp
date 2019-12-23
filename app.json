@@ -101,7 +101,13 @@
         "pages/writeTravelInfo/addTravelInfo/addTravelInfo",
         "pages/appointment/appointment",
         "pages/readInfo/readInfo",
-        "pages/addonitems/addonitems"
+        "pages/addonitems/addonitems",
+        "pages/integShop/integShop",
+        "pages/integShop/goods/goods",
+        "pages/integShop/cart/cart",
+        "pages/integShop/confirmOrder/confirmOrder",
+        "pages/integShop/goodsDetail/goodsDetail",
+        "pages/integShop/voiceDetail/voiceDetail"
     ],
     "window": {
         "backgroundTextStyle": "dark",

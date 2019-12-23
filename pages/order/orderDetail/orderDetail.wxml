@@ -29,7 +29,7 @@
                 <text class='goods-subtitle' wx:if="{{item.goods_type == 1}}">{{item.sku_json}}</text>
             </view>
             <view class='price-num'>
-                <text class='price'>￥{{item.goods_price}}</text>
+                <text class='price'><text wx:if="{{order_info.order_type != 5}}">￥</text>{{item.goods_price}}</text>
                 <text class='num'>x{{item.goods_num}}</text>
             </view>
         </view>
@@ -46,6 +46,7 @@
             <text class="jf-text audio-text">{{item.name}}</text>
         </view>
     </block>
+    <block wx:if="{{order_info.order_type != 5}}">
     <view class="jf">
         <text class="jf-text">送积分</text>
         <text class="jf-num">{{order_info.integral}}</text>
@@ -69,6 +70,7 @@
             <text wx:if="{{order_info.third_money > 0}}">微信支付{{order_info.third_money}}元</text>
         </text>
     </view>
+    </block>
     <view class="jf">
         <text class="jf-text">订单编号：</text>
         <text class="jf-num rest">{{order_info.order_no}}</text>
@@ -78,8 +80,12 @@
         <text class="jf-num rest">{{order_info.create_time}}</text>
     </view>
     <view class="or-footer">
-        <view class="footer-left">
+        <view class="footer-left" wx:if="{{order_info.order_type != 5}}">
             <text class="sum">共付：<text class="total">￥{{order_info.pay_money}}</text>
+            </text>
+        </view>
+        <view class="footer-left" wx:else>
+            <text class="sum">积分：<text class="total">{{order_info.pay_money}}</text>
             </text>
         </view>
     </view>

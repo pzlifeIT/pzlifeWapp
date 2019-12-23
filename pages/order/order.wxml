@@ -41,13 +41,14 @@
                                 <text class='goods-subtitle' wx:if="{{item.goods_type == 1}}">{{item.sku_json}}</text>
                             </view>
                             <view class='price-num'>
-                                <text class='price'>￥{{item.goods_price}}</text>
+                                <text class='price'><text wx:if="{{item1.order_type != 5}}">￥</text>{{item.goods_price}}</text>
                                 <text class='num'>x{{item.goods_num}}</text>
                             </view>
                         </view>
                     </view>
                 </navigator>
             </view>
+            <block wx:if="{{item1.order_type != 5}}">
             <view class="jf">
                 <text class="jf-text">送积分</text>
                 <text class="jf-num">{{item1.integral}}</text>
@@ -64,11 +65,16 @@
                 <text class="jf-text">优惠金额</text>
                 <text class="jf-num">￥{{item1.discount_money}}</text>
             </view>
+            </block>
             <view class="or-footer">
                 <view class="footer-left">
-                    <text class="sum fr">
-                        <text class="din fl" >共付：</text> 
-                        <text class="total fr">￥{{item1.pay_money}}</text>
+                    <text class="sum fr" wx:if="{{item1.order_type != 5}}">
+                    <text class="din fl" >共付：</text>
+                    <text class="total fr">￥{{item1.pay_money}}</text>
+                </text>
+                    <text class="sum fr" wx:else>
+                        <text class="din fl" >积分：</text>
+                        <text class="total fr">{{item1.pay_money}}</text>
                     </text>
                 </view>
                 <view class="footer-right">

@@ -1,0 +1,35 @@
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+@import "/colorui/animation.wxss";
+page {
+    height: 100%;
+    overflow: hidden;
+}
+.bg{
+    background: #fff;
+}
+.tabbar{
+    width: 750rpx;
+    height: 100rpx;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+.item{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20rpx;
+    box-sizing: border-box;
+}
+.icon{
+    width: 40rpx;
+    height: 40rpx;
+}

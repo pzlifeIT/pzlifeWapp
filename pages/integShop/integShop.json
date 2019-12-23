@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cart": "/pages/integShop/components/cart/cart",
+    "cate": "/pages/integShop/components/cate/cate"
+  },
+  "navigationBarTitleText": "分类"
+}

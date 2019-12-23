@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
-	"appid": "wx1771b2e93c87e22c",
+	"appid": "wxa8c604ce63485956",
 	"projectname": "pzlifeWapp",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -36,6 +36,10 @@
 		},
 		"game": {
 			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -583,6 +587,12 @@
 					"name": "pages/order/orderDetail/orderDetail",
 					"pathName": "pages/order/orderDetail/orderDetail",
 					"query": "orderno= odr19091011234448494999",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/integShop/integShop",
+					"pathName": "pages/integShop/integShop",
 					"scene": null
 				}
 			]

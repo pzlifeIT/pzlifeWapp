@@ -1,0 +1,22 @@
+<!--pages/category/goods/goods.wxml-->
+<home page-name="{{sub_name}}"></home>
+<view class='goods' style="margin-top: {{navHight * 2}}rpx">
+    <block wx:for='{{goodsList}}'>
+        <block wx:for='{{item}}' wx:key='{{item.id}}'>
+            <view class='one_goods' bindtap="goDetail" data-goodid="{{item.id}}" data-goodtype="{{item.goods_type}}">
+                <view class='img'>
+                    <image class='goods_img' src='{{item.image+"?imageMogr2/thumbnail/370x"}}' lazy-load="true"></image>
+                </view>
+                <text class='title'>{{item.goods_name}}</text>
+                <text class='subtitle'>{{item.subtitle}}</text>
+                <text class='price'>{{item.min_integral_price}}积分</text>
+                <view class='pr'>
+                <!-- <text class="vipprice">钻石再补贴</text> {{item.min_brokerage}} -->
+                </view>
+                
+            </view>
+        </block>
+    </block>
+</view>
+
+

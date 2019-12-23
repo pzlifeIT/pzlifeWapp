@@ -1,0 +1,17 @@
+<block wx:if="{{page === 'cate'}}">
+	<cate class="bg"></cate>
+</block>
+<block wx:if="{{page === 'cart'}}">
+	<cart></cart>
+</block>
+
+<view class="tabbar">
+	<view class="item" bindtap="jump" data-page="cate">
+		<image class="icon" src="/pages/images/class.png"></image>
+		<view>分类</view>
+	</view>
+	<view class="item" bindtap="jump" data-page="cart">
+		<image class="icon" src="/pages/images/cart.png"></image>
+		<view>购物车</view>
+	</view>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/paystatus/paystatus.wxml-->
+<view class="status">
+	<view class="pay-status fail" wx:if="{{status == 2}}">兑换失败</view>
+	<view class="pay-status success" wx:if="{{status == 1}}">兑换成功</view>
+	<view class="botton {{status == 2?'mt':''}}">
+		<view class="bo-left" bindtap="goorder">查看订单</view>
+		<view class="bo-right" bindtap="gopay" wx:if="{{status == 2}}">重新兑换</view>
+		<view class="bo-right" bindtap="goindex"  wx:if="{{status == 1}}">返回首页</view>
+	</view>
+</view>
+<view class="order-address">
+	<view class="address">
+		<view class="name-phone">
+			<text class="name">{{site.name}}</text>
+			<text class="phone">{{site.mobile}}</text>
+		</view>
+		<view class="add-detail">{{site.province_name}} {{site.city_name}} {{site.area_name}} {{site.address}} </view>
+		<view class="money">
+			<text class="mon-text">积分：</text>
+			<text class="price">{{price}}</text>
+		</view>
+	</view>
+</view>
+<view class="hint" wx:if="{{status == 1}}">订单正在给您处理，请保持手机畅通，注意查收~</view>
+
+
+

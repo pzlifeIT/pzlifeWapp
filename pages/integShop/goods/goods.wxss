@@ -1,0 +1,81 @@
+/* pages/category/goods/goods.wxss */
+page{
+  background-color: rgb(247, 247, 247)
+}
+.goods{
+    overflow-y: auto;
+    margin-top: 144rpx;
+}
+.one_goods{
+  width: 368rpx;
+  height: 555rpx;
+  overflow: hidden;
+  float: left;
+  margin: 5rpx 3rpx;
+  background-color: rgb(255, 255, 255);
+	box-sizing: border-box;
+	background: #fff;
+	/* margin: 4rpx; */
+  /* padding-bottom: 4rpx; */
+}
+.one_goods .goods_img{
+  width: 100%;
+  height: 370rpx;
+	min-height: 2rpx;
+  
+}
+.img{
+  text-align: left;
+	background: #fff;
+  /* margin-top: 31rpx; */
+  
+}
+ text{
+  display: block;
+  text-align: left;
+	margin-left: 20rpx;
+
+}
+.one_goods .title{
+ font-size: 29rpx;
+ color: rgb(34, 34, 34);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.one_goods .subtitle{
+    height: 32rpx;
+  font-size: 24rpx;
+  color: rgb(182, 182, 182);
+  margin: 5rpx 0 5rpx 20rpx;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.one_goods .price{
+  font-size: 30rpx;
+  color: rgb(230, 31, 24);
+	margin-bottom: 5rpx;
+}
+.vipprice{
+	/* font-size: 24rpx;
+	color: #EAB700;
+	margin-bottom: 10rpx; */
+  display: inline-block;
+padding: 5rpx;
+background: #e61f18;
+color: #FFFFFF;
+width: 135rpx;
+height: 30rpx;
+font-size: 24rpx;
+text-align: center;
+border-radius: 2rpx;
+}
+.pr{
+  color: #e61f18;
+  font-size: 26rpx;
+margin-bottom: 5rpx
+}
+
+
+

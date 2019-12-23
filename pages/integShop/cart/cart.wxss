@@ -1,0 +1,372 @@
+/* pages/cart/cart.wxss */
+
+page {
+    background-color: #f7f7f7;
+    height: 100%;
+    width: 100%;
+}
+
+.cart-top {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+
+radio {
+    transform: scale(0.8);
+}
+
+.cart_goods,
+.lose {
+    width: 100%;
+    /* background-color: #ffffff; */
+    float: left;
+    margin-top: 9rpx;
+}
+
+.shop_name {
+    width: 100%;
+    height: 76rpx;
+    text-align: left;
+    color: #202020;
+    font-size: 30rpx;
+    line-height: 76rpx;
+    background: #fff;
+}
+
+radio-group,
+lose_title {
+    display: inline-block;
+}
+
+.goods_data {
+    width: 750rpx;
+    position: relative;
+    float: left;
+    margin-bottom: 2rpx;
+    background-color: #ffffff;
+}
+
+.goods_data .goods_img {
+    width: 172rpx;
+    height: 194rpx;
+    float: left;
+    margin-top: 10rpx;
+}
+
+.goods_img image {
+    width: 172rpx;
+    height: 160rpx;
+    /* background: palegoldenrod; */
+    display: block;
+}
+
+.goods_img .supplier_name {
+    width: 100%;
+    height: 34rpx;
+    text-align: center;
+    line-height: 34rpx;
+    background: #e61f18;
+    color: #ffffff;
+    font-size: 24rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.goods_data .goods_desc {
+    width: 250rpx;
+    padding-left: 19rpx;
+    float: left;
+    height: 216rpx;
+}
+
+.goods_desc .goods_title {
+    width: 100%;
+    font-size: 28rpx;
+    color: #202020;
+    display: block;
+    margin-bottom: 10rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.goods_desc .goods_subtitle {
+    width: 100%;
+    font-size: 24rpx;
+    color: #888;
+    display: block;
+    margin-bottom: 10rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.goods_desc .goods_price {
+    font-size: 30rpx;
+    color: #e61f18;
+    display: block;
+}
+
+.goods_desc .rebate {
+    display: inline-block;
+    padding: 5rpx;
+    background: #e61f18;
+    color: #FFFFFF;
+    width: 135rpx;
+    height: 30rpx;
+    font-size: 24rpx;
+    text-align: center;
+    border-radius: 2rpx;
+    margin-top: 16rpx;
+
+}
+
+.goods_desc .rebate_money {
+    font-size: 26rpx;
+    color: #e61f18;
+}
+
+.goods_data .sum {
+    position: absolute;
+    right: 10rpx;
+    top: 58rpx;
+    border: solid 1rpx #666;
+    border-radius: 8rpx;
+}
+
+.sum .jian,
+.jia {
+    height: 52rpx;
+    width: 82rpx;
+    text-align: center;
+    float: left;
+}
+
+
+/* .sum .jia{
+  border-top-right-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+.sum .jian{
+  border-top-left-radius: 15rpx;
+  border-bottom-left-radius: 15rpx;
+
+} */
+
+.sum .num {
+    float: left;
+    width: 78rpx;
+    height: 50rpx;
+    border-left: 1rpx solid #666;
+    border-right: 1rpx solid #666;
+    text-align: center;
+    font-size: 30rpx;
+    color: #202020;
+}
+
+.del {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    right: 30rpx;
+    bottom: 15rpx;
+}
+
+.del image {
+    width: 28rpx;
+    height: 34rpx;
+}
+
+.radio {
+    float: left;
+    text-align: center;
+    height: 216rpx;
+    line-height: 216rpx;
+}
+
+.lose {
+    /* padding-bottom: 90rpx; */
+}
+
+.lose_goods {
+    padding-top: 20rpx;
+}
+
+.lose .goods_data {
+    padding-top: 22rpx;
+}
+
+.lose_radio {
+    width: 58rpx;
+    height: 100%;
+    font-size: 22rpx;
+    color: #888;
+}
+
+.lose .lose_shop_name {
+    padding-left: 11rpx;
+    width: 739rpx;
+}
+
+.footer {
+    width: 100%;
+    height: 90rpx;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.check {
+    width: 528rpx;
+    text-align: left;
+    color: #404040;
+    font-size: 30rpx;
+    line-height: 90rpx;
+    display: inline-block;
+}
+
+.total {
+    float: right;
+    padding-right: 9rpx;
+}
+
+.total_price {
+    color: #e61f18;
+    font-size: 30rpx;
+}
+
+.pay {
+    width: 222rpx;
+    height: 92rpx;
+    background-color: #e61f18;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    line-height: 92rpx;
+    color: #fffefe;
+    font-size: 28rpx;
+}
+
+.obscuration {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop {
+    margin: auto auto;
+    background-color: #ffffff;
+    opacity: 1;
+    width: 608rpx;
+    height: 238rpx;
+    border-radius: 15rpx;
+}
+
+.pop .hint {
+    width: 608rpx;
+    height: 147rpx;
+    text-align: center;
+    line-height: 148rpx;
+    font-size: 30rpx;
+    color: #404040;
+    background-color: #ffffff;
+    border-top-left-radius: 15rpx;
+    border-top-right-radius: 15rpx;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+
+.pop .collect {
+    width: 301rpx;
+    height: 90rpx;
+    text-align: center;
+    line-height: 90rpx;
+    color: #e61f18;
+    font-size: 30rpx;
+    display: inline-block;
+    background-color: #ffffff;
+    border-bottom-left-radius: 15rpx;
+    border-right: 1rpx solid #e2e2e2;
+}
+
+.pop .delete {
+    width: 303rpx;
+    height: 90rpx;
+    text-align: center;
+    line-height: 90rpx;
+    color: #e61f18;
+    font-size: 30rpx;
+    display: inline-block;
+    border-bottom-right-radius: 15rpx;
+}
+
+.goods_data .lose_img {
+    height: 172rpx;
+}
+
+.empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg {
+    width: 220rpx;
+    height: 346rpx;
+}
+
+.masg .icon {
+    width: 100%;
+    /* text-align: center; */
+    display: flex;
+    justify-content: right;
+}
+
+.icon image {
+    width: 192rpx;
+    height: 192rpx;
+    margin-left: 14rpx;
+}
+
+.text {
+    color: #d6d6d6;
+    font-size: 28rpx;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 19rpx;
+}
+
+.go {
+    width: 220rpx;
+    height: 68rpx;
+    background-color: #e61f18;
+    border-radius: 2rpx;
+    font-size: 28rpx;
+    color: #fefefe;
+    text-align: center;
+    line-height: 68rpx;
+}
