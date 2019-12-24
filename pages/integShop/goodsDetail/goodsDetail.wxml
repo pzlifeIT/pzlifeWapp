@@ -104,43 +104,7 @@
             </view>
         </view>
     </view>
-    <!-- 领券弹出层 -->
-    <!-- <scroll-view class='coupon_pop'>
-    <view class='pop_title'><text>领券列表</text></view>
-    <view class='coupon'>
-      <view class='coupon_left'>
-        <view class='coupon_price'>
-          <text class='symbol'>￥</text><text class='sum'>18</text>
-        </view>
-        <view class='coupon_rule'><text>满39可用</text></view>
-      </view>
-      <view class='coupon_mid'>
-        <text class='coupon_title'>新人专属优惠券</text>
-        <text class='coupon_subtitle'>全场通用</text>
-        <text class='coupon_time'>2018.09.05-2019.11.06</text>
-      </view>
-      <view class='coupon_right'><text>点击领取</text></view>
-    </view>
-  </scroll-view> -->
-    <!--为你推荐-->
-    <block wx:if="{{from != 'add'}}">
-        <view class="recommend" wx:if="{{recommend.length > 0}}">
-            <view class="re-title">为你推荐</view>
-            <scroll-view class="re-goods" scroll-x="true">
-                <block wx:for="{{recommend}}">
-                    <view class="re-one" bindtap="recommendGoods" data-goodsid="{{item.id}}" data-type="{{item.goods_type}}">
-                        <image src="{{item.image}}"></image>
-                        <view class="goods_name">{{item.goods_name}}</view>
-                        <view class="re-price">￥{{item.min_retail_price}}</view>
-                        <view class="vip_money">
-                            <text class="vip-text">钻石再补贴</text>
-                            <text class="vip-money">{{item.min_brokerage}}</text>
-                        </view>
-                    </view>
-                </block>
-            </scroll-view>
-        </view>
-    </block>
+  
     <!--商品详情-->
     <view class='goods_content'>
         <view class='tab'>
@@ -184,7 +148,7 @@
         <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_05.png"/>
         <text class="ft-text">客服</text>
     </view>
-    <navigator url="../cart/cart" open-type="switchTab">
+    <navigator url="/pages/integShop/integShop?page=cart">
         <view class='cart'>
             <image lazy-load="true" class="dl-ficon" src="{{imgHost}}icon_07.png"/>
             <text class="ft-text">购物车</text>
@@ -192,10 +156,10 @@
         </view>
     </navigator>
     <view bindtap="buyGood" class='buy'>
-        <text>立即购买</text>
+        <text>立即兑换</text>
     </view>
     <view bindtap="joinCart" class='join_cart'>
-        <text>加入购物车</text>
+        <text>加入积分购物车</text>
     </view>
 </view>
 

@@ -11,7 +11,7 @@ Page({
     showModel: false,
     attr: [],
     price: '',
-    goodData: {},
+    goodData: {}, 
     buy: false,
     repertory: true,
     buyNum: 1,
